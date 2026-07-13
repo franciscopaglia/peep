@@ -28,6 +28,8 @@ Shavian is an alphabet for writing English **by sound rather than by traditional
 - 🌗 **Light & dark themes**, responsive layout, and a gentle animated hero.
 - 🐛 **Report a problem** — a friendly in-lesson button lets anyone flag a mistake without needing to understand the code.
 
+See the [**Roadmap**](./ROADMAP.md) for what's shipped and what's planned — video lessons, pronunciation helpers, richer sentence practice and more chapters.
+
 ## The curriculum
 
 Lessons live as plain **JSON data files** — the code just renders them — which makes the content easy to read, review, and extend.

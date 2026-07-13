@@ -53,8 +53,8 @@ export function Footer({
 
   return (
     <div className="bg-footer-bg border-t border-border mt-2">
-      <div className="max-w-[960px] mx-auto px-6 py-14 flex gap-12 flex-wrap justify-between">
-        <div className="max-w-[280px] flex flex-col gap-2.5">
+      <div className="max-w-[960px] mx-auto px-6 py-12 sm:py-14 flex gap-x-10 gap-y-9 flex-wrap">
+        <div className="w-full sm:w-auto sm:max-w-[280px] sm:mr-auto flex flex-col gap-2.5">
           <button
             className="bg-transparent border-none p-0 cursor-pointer font-extrabold text-xl tracking-tight text-foreground text-left"
             onClick={() => onSetView('landing')}

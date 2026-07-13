@@ -85,7 +85,7 @@ export function AlphabetChart({ className }: { className?: string }) {
 
 export function AlphabetReferenceTable({ className }: { className?: string }) {
   return (
-    <div className={cn('grid gap-2', className)} style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))' }}>
+    <div className={cn('grid gap-2', className)} style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 220px), 1fr))' }}>
       {SHAVIAN_ALPHABET.map((g) => (
         <div
           key={g.glyph}

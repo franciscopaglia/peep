@@ -72,11 +72,11 @@ export function Dashboard({
           </p>
         </div>
 
-        <div className="flex items-center gap-4 p-[18px] bg-card border border-border rounded-card shadow-sm">
+        <div className="flex flex-wrap items-center gap-4 p-[18px] bg-card border border-border rounded-card shadow-sm">
           <div className="w-14 h-14 flex-none rounded-card bg-accent-soft text-accent flex items-center justify-center text-xl font-bold">
             {current.glyph}
           </div>
-          <div className="flex-1 min-w-0 flex flex-col gap-2">
+          <div className="flex-1 min-w-[160px] flex flex-col gap-2">
             <div className="text-xs font-medium text-muted-foreground">
               Lesson {currentNo} of {LESSON_META.length}
             </div>

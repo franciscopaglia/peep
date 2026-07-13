@@ -86,8 +86,8 @@ export function Lesson({
   const showResultBar = status !== 'active';
 
   return (
-    <div className="max-w-[640px] mx-auto px-6 pt-7 pb-10 flex flex-col box-border" style={{ minHeight: 'calc(100vh - 74px)' }}>
-      <div className="flex items-center gap-4 mb-11">
+    <div className="max-w-[640px] mx-auto px-5 sm:px-6 pt-6 sm:pt-7 pb-10 flex flex-col box-border" style={{ minHeight: '100dvh' }}>
+      <div className="flex items-center gap-3 sm:gap-4 mb-9 sm:mb-11">
         <button
           className="w-9 h-9 border-none bg-transparent text-muted-foreground cursor-pointer flex-none flex items-center justify-center"
           onClick={onClose}
@@ -142,7 +142,7 @@ export function Lesson({
           <div className="w-full flex flex-col items-center gap-9" style={{ animation: 'shvSlideUp .3s ease' }}>
             <div className="text-center">
               {exercise.promptIsGlyph ? (
-                <div className="text-[72px] font-bold text-foreground mb-3.5">
+                <div className="text-[56px] sm:text-[72px] font-bold text-foreground mb-3.5">
                   {exercise.prompt}
                 </div>
               ) : (
@@ -206,7 +206,7 @@ export function Lesson({
         {isType && exercise.type === 'type' && (
           <div className="w-full flex flex-col items-center gap-7" style={{ animation: 'shvSlideUp .3s ease' }}>
             <div className="text-center">
-              <div className="text-[76px] font-bold text-foreground mb-3.5">
+              <div className="text-[56px] sm:text-[76px] font-bold text-foreground mb-3.5">
                 {exercise.prompt}
               </div>
               <div className="text-sm text-muted-foreground">{exercise.caption}</div>
@@ -344,7 +344,7 @@ export function Lesson({
             <div className="text-[15px] text-muted-foreground font-medium">
               Match each symbol to its word
             </div>
-            <div className="flex gap-9 w-full max-w-[420px] justify-center">
+            <div className="flex gap-5 sm:gap-9 w-full max-w-[420px] justify-center">
               <div className="flex flex-col gap-3">
                 {exercise.leftOrder.map((v) => {
                   const matched = matchedKeys.includes(v);

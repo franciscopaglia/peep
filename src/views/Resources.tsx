@@ -86,8 +86,8 @@ const RESOURCE_GROUPS: { id: string; label: string; items: Resource[] }[] = [
 
 export function Resources() {
   return (
-    <div className="max-w-[720px] mx-auto px-6 pt-[72px] pb-24 flex flex-col gap-4">
-      <h1 className="text-[40px] font-extrabold tracking-tight text-foreground m-0">
+    <div className="max-w-[720px] mx-auto px-6 pt-14 sm:pt-[72px] pb-24 flex flex-col gap-4">
+      <h1 className="text-3xl sm:text-[40px] font-extrabold tracking-tight text-foreground m-0">
         Resources
       </h1>
       <p className="text-lg leading-relaxed text-muted-foreground m-0 mb-3">
@@ -101,7 +101,7 @@ export function Resources() {
           </SectionLabel>
           <div
             className="grid gap-3.5"
-            style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}
+            style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))' }}
           >
             {group.items.map((r) => (
               <a

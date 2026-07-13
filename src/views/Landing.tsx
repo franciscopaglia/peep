@@ -77,11 +77,11 @@ export function Landing({
             background: 'linear-gradient(to bottom, transparent, var(--background))',
           }}
         />
-        <div className="relative z-10 max-w-[960px] mx-auto px-6 pt-[88px] pb-20 flex flex-col items-center text-center gap-6">
+        <div className="relative z-10 max-w-[960px] mx-auto px-6 pt-14 sm:pt-[88px] pb-16 sm:pb-20 flex flex-col items-center text-center gap-6">
           <div className="text-[13px] font-semibold tracking-wide uppercase text-accent bg-accent-soft px-3.5 py-1.5 rounded-full">
             A phonetic alphabet for English
           </div>
-          <h1 className="text-[52px] leading-[1.05] font-extrabold tracking-tight text-foreground m-0 max-w-[720px] text-balance">
+          <h1 className="text-[34px] sm:text-[52px] leading-[1.08] sm:leading-[1.05] font-extrabold tracking-tight text-foreground m-0 max-w-[720px] text-balance">
             Read &amp; write English in Shavian
           </h1>
           <p className="text-lg leading-snug text-muted-foreground m-0 max-w-[560px]">
@@ -95,7 +95,7 @@ export function Landing({
             </Button>
           </div>
           <div
-            className="mt-7 p-10 rounded-card border flex flex-col items-center gap-4"
+            className="mt-7 w-full max-w-[560px] p-6 sm:p-10 rounded-card border flex flex-col items-center gap-4"
             style={{
               background: 'color-mix(in srgb, var(--card) 55%, transparent)',
               borderColor: 'color-mix(in srgb, var(--border) 60%, transparent)',
@@ -105,10 +105,10 @@ export function Landing({
             }}
           >
             <SectionLabel>See it in Shavian</SectionLabel>
-            <div className="flex gap-5 flex-wrap justify-center items-end">
+            <div className="flex gap-4 sm:gap-5 flex-wrap justify-center items-end">
               {SHOWCASE_WORDS.map((w, i) => (
                 <div key={i} className="flex flex-col items-center gap-2">
-                  <span className="text-[44px] font-bold text-foreground">{w.glyph}</span>
+                  <span className="text-[34px] sm:text-[44px] font-bold text-foreground">{w.glyph}</span>
                   <span className="font-mono text-[13px] text-muted-foreground">{w.en}</span>
                 </div>
               ))}
@@ -121,12 +121,12 @@ export function Landing({
       </div>
 
       <div className="max-w-[960px] mx-auto px-6">
-        <SectionLabel className="pt-20 text-center">About Shavian & Peep</SectionLabel>
+        <SectionLabel className="pt-16 sm:pt-20 text-center">About Shavian & Peep</SectionLabel>
         <div className="flex gap-4 pt-7 flex-wrap justify-center">
           {FEATURE_CARDS.map((f) => (
             <div
               key={f.title}
-              className="flex-1 min-w-0 p-6 rounded-card bg-card border border-border shadow-sm flex flex-col items-center text-center gap-2.5"
+              className="flex-1 min-w-[240px] p-6 rounded-card bg-card border border-border shadow-sm flex flex-col items-center text-center gap-2.5"
             >
               <div className="w-11 h-11 flex-none rounded-btn bg-accent-soft text-accent flex items-center justify-center mb-1">
                 <f.icon size={22} />
@@ -137,7 +137,7 @@ export function Landing({
           ))}
         </div>
 
-        <div className="pt-[88px] flex flex-col items-center text-center">
+        <div className="pt-16 sm:pt-[88px] flex flex-col items-center text-center">
           <SectionLabel className="mb-7">How it works</SectionLabel>
           <div className="flex gap-4 flex-wrap justify-center">
             {STEP_CARDS.map((s) => (
@@ -152,12 +152,12 @@ export function Landing({
           </div>
         </div>
 
-        <div className="pt-[88px] flex flex-col items-center text-center">
+        <div className="pt-16 sm:pt-[88px] flex flex-col items-center text-center">
           <SectionLabel className="mb-7">Meet the letters</SectionLabel>
           <AlphabetChart />
         </div>
 
-        <div className="pt-[88px] flex flex-col items-center text-center gap-[18px]">
+        <div className="pt-16 sm:pt-[88px] flex flex-col items-center text-center gap-[18px]">
           <div className="text-[64px] font-bold text-accent leading-none">𐑖</div>
           <blockquote className="text-2xl leading-snug font-semibold tracking-tight text-foreground m-0 max-w-[640px] text-balance">
             “The English have no respect for their language, and will not teach their
@@ -168,9 +168,9 @@ export function Landing({
           </div>
         </div>
 
-        <div className="pt-[88px] pb-24">
-          <div className="bg-accent rounded-card p-14 flex flex-col items-center gap-5 text-center">
-            <h2 className="text-[32px] font-extrabold tracking-tight text-card m-0 max-w-[520px] text-balance">
+        <div className="pt-16 sm:pt-[88px] pb-24">
+          <div className="bg-accent rounded-card p-8 sm:p-14 flex flex-col items-center gap-5 text-center">
+            <h2 className="text-[26px] sm:text-[32px] font-extrabold tracking-tight text-card m-0 max-w-[520px] text-balance">
               Ready to read your first Shavian word?
             </h2>
             <Button variant="inverted" onClick={onOpenApp}>

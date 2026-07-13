@@ -25,17 +25,39 @@ export const CHAPTERS: Chapter[] = [
 ];
 
 function shuffle<T>(items: T[]): T[] {
-  const result = [...items];
-  for (let i = result.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [result[i], result[j]] = [result[j], result[i]];
+  if (items.length < 2) return [...items];
+  // Fisher-Yates, re-rolled until the order actually changes, so tiles and
+  // options never render in their authored order (where the answer, always
+  // listed first, could just be tapped straight through). Capped so a set of
+  // otherwise-identical items can't loop forever.
+  let result = [...items];
+  for (let attempt = 0; attempt < 20; attempt++) {
+    result = [...items];
+    for (let i = result.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [result[i], result[j]] = [result[j], result[i]];
+    }
+    if (result.some((value, i) => value !== items[i])) break;
   }
   return result;
 }
 
 export function shuffleExerciseOptions(exercise: Exercise): Exercise {
-  if (exercise.type !== 'choice') return exercise;
-  return { ...exercise, options: shuffle(exercise.options) };
+  if (exercise.type === 'choice') {
+    return { ...exercise, options: shuffle(exercise.options) };
+  }
+  if (exercise.type === 'build' || exercise.type === 'arrange') {
+    return { ...exercise, tiles: shuffle(exercise.tiles) };
+  }
+  if (exercise.type === 'match') {
+    // Shuffle each column independently so pairs never line up row-to-row.
+    return {
+      ...exercise,
+      leftOrder: shuffle(exercise.leftOrder),
+      rightOrder: shuffle(exercise.rightOrder),
+    };
+  }
+  return exercise;
 }
 
 export function getLessonExercises(id: number): Exercise[] {

@@ -111,12 +111,12 @@ function SourceNote({ href, label }: { href: string; label: string }) {
 
 export function About({ onOpenApp }: { onOpenApp: () => void }) {
   return (
-    <div className="max-w-[960px] mx-auto px-6 pt-[72px] pb-24 flex flex-col gap-5">
+    <div className="max-w-[960px] mx-auto px-6 pt-14 sm:pt-[72px] pb-24 flex flex-col gap-5">
       <div className="flex items-center gap-4">
         <div className="w-[52px] h-[52px] flex-none rounded-btn bg-accent-soft text-accent flex items-center justify-center">
           <Landmark size={26} />
         </div>
-        <h1 className="text-[40px] font-extrabold tracking-tight text-foreground m-0">
+        <h1 className="text-3xl sm:text-[40px] font-extrabold tracking-tight text-foreground m-0">
           About Shavian
         </h1>
       </div>
@@ -127,10 +127,13 @@ export function About({ onOpenApp }: { onOpenApp: () => void }) {
 
       <nav className="mt-4 p-5 rounded-card bg-card border border-border shadow-sm max-w-[720px]">
         <SectionLabel className="mb-3">On this page</SectionLabel>
-        <ul className="m-0 p-0 list-none flex flex-wrap gap-x-5 gap-y-2">
+        <ul className="m-0 p-0 list-none flex flex-col sm:flex-row sm:flex-wrap gap-x-5 gap-y-0.5 sm:gap-y-2">
           {TOC.map((t) => (
-            <li key={t.id} className="whitespace-nowrap">
-              <a href={`#${t.id}`} className="text-sm text-accent hover:underline">
+            <li key={t.id} className="sm:whitespace-nowrap border-b border-border/60 last:border-b-0 sm:border-b-0">
+              <a
+                href={`#${t.id}`}
+                className="block py-2 sm:py-0 text-sm text-accent hover:underline"
+              >
                 {t.label}
               </a>
             </li>
