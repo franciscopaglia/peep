@@ -1,0 +1,53 @@
+{
+  "id": 26,
+  "title": "R-Vowels: ARE OR",
+  "glyph": "𐑸𐑹",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Vowels that lean on R",
+      "body": "English has a whole family of vowels that blend straight into an “r” sound — car, for, hair, her. Shavian gives each of these its own single letter instead of spelling them vowel-plus-r. Let's meet the first two."
+    },
+    {
+      "type": "teach",
+      "title": "Meet are",
+      "body": "The letter for are is 𐑸, the sound in car and far."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑸",
+      "caption": "Sound it out — what does this say?",
+      "correct": "car",
+      "correctLabel": "car"
+    },
+    {
+      "type": "teach",
+      "title": "Meet or",
+      "body": "The letter for or is 𐑹, the sound in for and form."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑹",
+      "caption": "Sound it out — what does this say?",
+      "correct": "for",
+      "correctLabel": "for"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑓𐑸",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["far", "for", "fur", "fear"],
+      "correct": "far",
+      "correctLabel": "far"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑒𐑸": "car", "𐑓𐑹": "for", "𐑓𐑸": "far", "𐑓𐑹𐑥": "form" },
+      "leftOrder": ["𐑓𐑹𐑥", "𐑒𐑸", "𐑓𐑸", "𐑓𐑹"],
+      "rightOrder": ["for", "form", "car", "far"]
+    }
+  ]
+}

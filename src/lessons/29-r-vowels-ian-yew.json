@@ -1,0 +1,52 @@
+{
+  "id": 29,
+  "title": "R-Vowels: IAN YEW",
+  "glyph": "𐑾𐑿",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Meet yew",
+      "body": "The letter for yew is 𐑿, the sound in few and use."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑿",
+      "caption": "Sound it out — what does this say?",
+      "correct": "few",
+      "correctLabel": "few"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑿𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cute",
+      "correctLabel": "cute"
+    },
+    {
+      "type": "teach",
+      "title": "Meet ian",
+      "body": "The last letter of all: ian, 𐑾. It's the rarest letter in the alphabet, tucked into words like familiar. You won't need it often, but now you've seen the whole set."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which letter is ian?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑾", "𐑿", "𐑽", "𐑼"],
+      "correct": "𐑾",
+      "correctLabel": "𐑾"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑿𐑕",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["use", "yews", "ooze", "yes"],
+      "correct": "use",
+      "correctLabel": "use"
+    }
+  ]
+}

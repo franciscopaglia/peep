@@ -1,0 +1,199 @@
+{
+  "id": 16,
+  "title": "Long Vowels: EYE OH",
+  "glyph": "𐑲𐑴",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Meet ice",
+      "body": "The letter for ice is 𐑲, the sound in time and bike."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑚𐑲𐑒",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "bike",
+        "back",
+        "beak",
+        "book"
+      ],
+      "correct": "bike",
+      "correctLabel": "bike"
+    },
+    {
+      "type": "teach",
+      "title": "Meet oak",
+      "body": "The letter for oak is 𐑴, the sound in boat and road."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑴",
+      "caption": "What sound does this make?",
+      "optionIsGlyph": false,
+      "options": [
+        "OH as in boat",
+        "OO as in moon",
+        "EE as in see",
+        "EYE as in time"
+      ],
+      "correct": "OH as in boat",
+      "correctLabel": "OH as in boat"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑴𐑛",
+      "caption": "Type what this word says",
+      "correct": "road",
+      "correctLabel": "road"
+    },
+    {
+      "type": "build",
+      "prompt": "time",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑑",
+        "𐑲",
+        "𐑥",
+        "𐑰",
+        "𐑴"
+      ],
+      "answer": [
+        "𐑑",
+        "𐑲",
+        "𐑥"
+      ],
+      "correctLabel": "𐑑𐑲𐑥"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑲𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "ripe",
+      "correctLabel": "ripe"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑯𐑴𐑟",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "nose",
+        "rose",
+        "hose",
+        "dose"
+      ],
+      "correct": "nose",
+      "correctLabel": "nose"
+    },
+    {
+      "type": "build",
+      "prompt": "stone",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑕",
+        "𐑑",
+        "𐑴",
+        "𐑯",
+        "𐑫"
+      ],
+      "answer": [
+        "𐑕",
+        "𐑑",
+        "𐑴",
+        "𐑯"
+      ],
+      "correctLabel": "𐑕𐑑𐑴𐑯"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑴𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "boat",
+      "correctLabel": "boat"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑴",
+      "caption": "Sound it out — what does this say?",
+      "correct": "go",
+      "correctLabel": "go"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑲𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "like",
+      "correctLabel": "like"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑯𐑲𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "nine",
+      "correctLabel": "nine"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑴𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "rose",
+      "correctLabel": "rose"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑒𐑴𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["coat", "cot", "cut", "goat"],
+      "correct": "coat",
+      "correctLabel": "coat"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “time”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑑𐑲𐑥", "𐑑𐑦𐑥", "𐑑𐑱𐑥", "𐑛𐑲𐑥"],
+      "correct": "𐑑𐑲𐑥",
+      "correctLabel": "𐑑𐑲𐑥"
+    },
+    {
+      "type": "build",
+      "prompt": "kite",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑒", "𐑲", "𐑑", "𐑛", "𐑦"],
+      "answer": ["𐑒", "𐑲", "𐑑"],
+      "correctLabel": "𐑒𐑲𐑑"
+    },
+    {
+      "type": "build",
+      "prompt": "cold",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑒", "𐑴", "𐑤", "𐑛", "𐑑"],
+      "answer": ["𐑒", "𐑴", "𐑤", "𐑛"],
+      "correctLabel": "𐑒𐑴𐑤𐑛"
+    },
+    {
+      "type": "build",
+      "prompt": "smile",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑕", "𐑥", "𐑲", "𐑤", "𐑯"],
+      "answer": ["𐑕", "𐑥", "𐑲", "𐑤"],
+      "correctLabel": "𐑕𐑥𐑲𐑤"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑚𐑴𐑑": "boat", "𐑤𐑲𐑒": "like", "𐑯𐑲𐑯": "nine", "𐑮𐑴𐑟": "rose" },
+      "leftOrder": ["𐑮𐑴𐑟", "𐑚𐑴𐑑", "𐑯𐑲𐑯", "𐑤𐑲𐑒"],
+      "rightOrder": ["boat", "rose", "like", "nine"]
+    }
+  ]
+}

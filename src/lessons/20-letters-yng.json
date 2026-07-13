@@ -1,0 +1,214 @@
+{
+  "id": 20,
+  "title": "Letters: Y NG",
+  "glyph": "𐑘𐑙",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Meet yea",
+      "body": "The letter for yea is 𐑘, the “y” sound at the start of yes."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑘𐑧𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "yes",
+      "correctLabel": "yes"
+    },
+    {
+      "type": "teach",
+      "title": "Meet hung",
+      "body": "The letter for hung is 𐑙, the “ng” sound at the end of sing and wing. In English it never starts a word — you'll only ever find it at the end of a syllable."
+    },
+    {
+      "type": "build",
+      "prompt": "wing",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑢",
+        "𐑦",
+        "𐑙",
+        "𐑣",
+        "𐑘"
+      ],
+      "answer": [
+        "𐑢",
+        "𐑦",
+        "𐑙"
+      ],
+      "correctLabel": "𐑢𐑦𐑙"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑙",
+      "caption": "What sound does this make?",
+      "optionIsGlyph": false,
+      "options": [
+        "NG as in wing",
+        "N sound",
+        "G sound",
+        "W sound"
+      ],
+      "correct": "NG as in wing",
+      "correctLabel": "NG as in wing"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑢𐑧𐑑": "wet",
+        "𐑣𐑨𐑑": "hat",
+        "𐑘𐑧𐑕": "yes",
+        "𐑢𐑦𐑙": "wing"
+      },
+      "leftOrder": [
+        "𐑢𐑦𐑙",
+        "𐑢𐑧𐑑",
+        "𐑘𐑧𐑕",
+        "𐑣𐑨𐑑"
+      ],
+      "rightOrder": [
+        "hat",
+        "wing",
+        "wet",
+        "yes"
+      ]
+    },
+    {
+      "type": "build",
+      "prompt": "hat",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑣",
+        "𐑨",
+        "𐑑",
+        "𐑢",
+        "𐑘"
+      ],
+      "answer": [
+        "𐑣",
+        "𐑨",
+        "𐑑"
+      ],
+      "correctLabel": "𐑣𐑨𐑑"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑘𐑳𐑙",
+      "caption": "Sound it out — what does this say?",
+      "correct": "young",
+      "correctLabel": "young"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑤𐑪𐑙",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "long",
+        "log",
+        "lung",
+        "lawn"
+      ],
+      "correct": "long",
+      "correctLabel": "long"
+    },
+    {
+      "type": "build",
+      "prompt": "king",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑦",
+        "𐑙",
+        "𐑜",
+        "𐑘"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑦",
+        "𐑙"
+      ],
+      "correctLabel": "𐑒𐑦𐑙"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑦𐑙",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sing",
+      "correctLabel": "sing"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑦𐑙",
+      "caption": "Sound it out — what does this say?",
+      "correct": "ring",
+      "correctLabel": "ring"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑨𐑙",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bang",
+      "correctLabel": "bang"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑪𐑙",
+      "caption": "Sound it out — what does this say?",
+      "correct": "song",
+      "correctLabel": "song"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑘𐑧𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "yet",
+      "correctLabel": "yet"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑣𐑨𐑙",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["hang", "hung", "hong", "hag"],
+      "correct": "hang",
+      "correctLabel": "hang"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “wing”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑢𐑦𐑙", "𐑮𐑦𐑙", "𐑢𐑦𐑯", "𐑕𐑦𐑙"],
+      "correct": "𐑢𐑦𐑙",
+      "correctLabel": "𐑢𐑦𐑙"
+    },
+    {
+      "type": "build",
+      "prompt": "bring",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑚", "𐑮", "𐑦", "𐑙", "𐑑"],
+      "answer": ["𐑚", "𐑮", "𐑦", "𐑙"],
+      "correctLabel": "𐑚𐑮𐑦𐑙"
+    },
+    {
+      "type": "build",
+      "prompt": "gong",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑜", "𐑪", "𐑙", "𐑒", "𐑯"],
+      "answer": ["𐑜", "𐑪", "𐑙"],
+      "correctLabel": "𐑜𐑪𐑙"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑕𐑦𐑙": "sing", "𐑮𐑦𐑙": "ring", "𐑚𐑨𐑙": "bang", "𐑕𐑪𐑙": "song" },
+      "leftOrder": ["𐑕𐑪𐑙", "𐑕𐑦𐑙", "𐑚𐑨𐑙", "𐑮𐑦𐑙"],
+      "rightOrder": ["sing", "song", "ring", "bang"]
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "id": 17,
+  "title": "Long Vowels: OO",
+  "glyph": "𐑵",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Meet ooze",
+      "body": "The letter for ooze is 𐑵, the sound in moon. Round your lips and hold it — that's the last of the long vowels."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Tap the symbol for “oo” as in “moon”",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑵",
+        "𐑫",
+        "𐑳",
+        "𐑰"
+      ],
+      "correct": "𐑵",
+      "correctLabel": "𐑵"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑛𐑱": "day",
+        "𐑚𐑴𐑑": "boat",
+        "𐑥𐑵𐑯": "moon",
+        "𐑮𐑱𐑯": "rain"
+      },
+      "leftOrder": [
+        "𐑮𐑱𐑯",
+        "𐑛𐑱",
+        "𐑥𐑵𐑯",
+        "𐑚𐑴𐑑"
+      ],
+      "rightOrder": [
+        "day",
+        "rain",
+        "boat",
+        "moon"
+      ]
+    },
+    {
+      "type": "build",
+      "prompt": "true",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑑",
+        "𐑮",
+        "𐑵",
+        "𐑳",
+        "𐑰"
+      ],
+      "answer": [
+        "𐑑",
+        "𐑮",
+        "𐑵"
+      ],
+      "correctLabel": "𐑑𐑮𐑵"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑟𐑵",
+      "caption": "Sound it out — what does this say?",
+      "correct": "zoo",
+      "correctLabel": "zoo"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑚𐑵𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "boot",
+        "boat",
+        "bout",
+        "bolt"
+      ],
+      "correct": "boot",
+      "correctLabel": "boot"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑟𐑵": "zoo",
+        "𐑚𐑵𐑑": "boot",
+        "𐑑𐑮𐑵": "true",
+        "𐑥𐑵𐑯": "moon"
+      },
+      "leftOrder": [
+        "𐑚𐑵𐑑",
+        "𐑥𐑵𐑯",
+        "𐑟𐑵",
+        "𐑑𐑮𐑵"
+      ],
+      "rightOrder": [
+        "true",
+        "boot",
+        "moon",
+        "zoo"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑵𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "moon",
+      "correctLabel": "moon"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑵𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "soon",
+      "correctLabel": "soon"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑵",
+      "caption": "Sound it out — what does this say?",
+      "correct": "too",
+      "correctLabel": "too"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑵𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "root",
+      "correctLabel": "root"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑵𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "food",
+      "correctLabel": "food"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑵𐑤",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cool",
+      "correctLabel": "cool"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑵𐑥",
+      "caption": "Sound it out — what does this say?",
+      "correct": "room",
+      "correctLabel": "room"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑐𐑵𐑤",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["pool", "pull", "pole", "pill"],
+      "correct": "pool",
+      "correctLabel": "pool"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “spoon”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑕𐑐𐑵𐑯", "𐑕𐑵𐑯", "𐑕𐑐𐑵𐑥", "𐑕𐑑𐑵𐑯"],
+      "correct": "𐑕𐑐𐑵𐑯",
+      "correctLabel": "𐑕𐑐𐑵𐑯"
+    },
+    {
+      "type": "build",
+      "prompt": "tool",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑑", "𐑵", "𐑤", "𐑮", "𐑯"],
+      "answer": ["𐑑", "𐑵", "𐑤"],
+      "correctLabel": "𐑑𐑵𐑤"
+    },
+    {
+      "type": "build",
+      "prompt": "broom",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑚", "𐑮", "𐑵", "𐑥", "𐑤"],
+      "answer": ["𐑚", "𐑮", "𐑵", "𐑥"],
+      "correctLabel": "𐑚𐑮𐑵𐑥"
+    },
+    {
+      "type": "build",
+      "prompt": "blue",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑚", "𐑤", "𐑵", "𐑮", "𐑐"],
+      "answer": ["𐑚", "𐑤", "𐑵"],
+      "correctLabel": "𐑚𐑤𐑵"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑕𐑵𐑯": "soon", "𐑓𐑵𐑛": "food", "𐑒𐑵𐑤": "cool", "𐑮𐑵𐑥": "room" },
+      "leftOrder": ["𐑮𐑵𐑥", "𐑕𐑵𐑯", "𐑒𐑵𐑤", "𐑓𐑵𐑛"],
+      "rightOrder": ["soon", "room", "food", "cool"]
+    }
+  ]
+}

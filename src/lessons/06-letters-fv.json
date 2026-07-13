@@ -1,0 +1,204 @@
+{
+  "id": 6,
+  "title": "Letters: F V",
+  "glyph": "𐑓𐑝",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Meet fee",
+      "body": "The letter for fee is 𐑓. Say “f” — a hiss with no buzz, so it's unvoiced and tall."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which letter makes the “f” sound?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑓",
+        "𐑕",
+        "𐑝",
+        "𐑟"
+      ],
+      "correct": "𐑓",
+      "correctLabel": "𐑓"
+    },
+    {
+      "type": "teach",
+      "title": "Meet vow",
+      "body": "The letter for vow is 𐑝 — the voiced, deep partner of fee. Compare: 𐑓 𐑝. Say “vvv” and feel the buzz in your throat."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑝𐑨𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "vat",
+      "correctLabel": "vat"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑓𐑦𐑜",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "fig",
+        "fit",
+        "dig",
+        "pig"
+      ],
+      "correct": "fig",
+      "correctLabel": "fig"
+    },
+    {
+      "type": "build",
+      "prompt": "dip",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑛",
+        "𐑦",
+        "𐑐",
+        "𐑓",
+        "𐑝"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑦",
+        "𐑐"
+      ],
+      "correctLabel": "𐑛𐑦𐑐"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑪𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fog",
+      "correctLabel": "fog"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which letter makes the “v” sound?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑝",
+        "𐑓",
+        "𐑕",
+        "𐑟"
+      ],
+      "correct": "𐑝",
+      "correctLabel": "𐑝"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑓𐑪𐑜": "fog",
+        "𐑝𐑨𐑑": "vat",
+        "𐑓𐑦𐑜": "fig",
+        "𐑛𐑦𐑐": "dip"
+      },
+      "leftOrder": [
+        "𐑛𐑦𐑐",
+        "𐑓𐑪𐑜",
+        "𐑝𐑨𐑑",
+        "𐑓𐑦𐑜"
+      ],
+      "rightOrder": [
+        "fog",
+        "dip",
+        "fig",
+        "vat"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑦𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fit",
+      "correctLabel": "fit"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑨𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fat",
+      "correctLabel": "fat"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑦𐑚",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fib",
+      "correctLabel": "fib"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑦𐑓𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "gift",
+      "correctLabel": "gift"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑝𐑨𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["vat", "fat", "bat", "vet"],
+      "correct": "vat",
+      "correctLabel": "vat"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “fog”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑓𐑪𐑜", "𐑝𐑪𐑜", "𐑓𐑪𐑚", "𐑓𐑨𐑜"],
+      "correct": "𐑓𐑪𐑜",
+      "correctLabel": "𐑓𐑪𐑜"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑓𐑪𐑚",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["fob", "fog", "fib", "cob"],
+      "correct": "fob",
+      "correctLabel": "fob"
+    },
+    {
+      "type": "build",
+      "prompt": "fig",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑓", "𐑦", "𐑜", "𐑝", "𐑑"],
+      "answer": ["𐑓", "𐑦", "𐑜"],
+      "correctLabel": "𐑓𐑦𐑜"
+    },
+    {
+      "type": "build",
+      "prompt": "vat",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑝", "𐑨", "𐑑", "𐑓", "𐑚"],
+      "answer": ["𐑝", "𐑨", "𐑑"],
+      "correctLabel": "𐑝𐑨𐑑"
+    },
+    {
+      "type": "build",
+      "prompt": "gift",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑜", "𐑦", "𐑓", "𐑑", "𐑝"],
+      "answer": ["𐑜", "𐑦", "𐑓", "𐑑"],
+      "correctLabel": "𐑜𐑦𐑓𐑑"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑓𐑦𐑑": "fit", "𐑓𐑨𐑑": "fat", "𐑓𐑦𐑚": "fib", "𐑜𐑦𐑓𐑑": "gift" },
+      "leftOrder": ["𐑜𐑦𐑓𐑑", "𐑓𐑦𐑑", "𐑓𐑦𐑚", "𐑓𐑨𐑑"],
+      "rightOrder": ["fat", "gift", "fit", "fib"]
+    }
+  ]
+}

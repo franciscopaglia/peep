@@ -1,0 +1,48 @@
+{
+  "id": 27,
+  "title": "R-Vowels: AIR ERR",
+  "glyph": "𐑺𐑻",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Meet air",
+      "body": "The letter for air is 𐑺, the sound in hair and care."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑺",
+      "caption": "Sound it out — what does this say?",
+      "correct": "hair",
+      "correctLabel": "hair"
+    },
+    {
+      "type": "teach",
+      "title": "Meet err",
+      "body": "The letter for err is 𐑻, the sound in her and sir."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑻",
+      "caption": "Sound it out — what does this say?",
+      "correct": "her",
+      "correctLabel": "her"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑒𐑺",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["care", "car", "core", "cur"],
+      "correct": "care",
+      "correctLabel": "care"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑣𐑺": "hair", "𐑣𐑻": "her", "𐑒𐑺": "care", "𐑕𐑻": "sir" },
+      "leftOrder": ["𐑕𐑻", "𐑣𐑺", "𐑒𐑺", "𐑣𐑻"],
+      "rightOrder": ["hair", "sir", "her", "care"]
+    }
+  ]
+}

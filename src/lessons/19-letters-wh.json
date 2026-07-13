@@ -1,0 +1,187 @@
+{
+  "id": 19,
+  "title": "Letters: W H",
+  "glyph": "𐑢𐑣",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Meet woe",
+      "body": "The letter for woe is 𐑢, the “w” sound."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which letter makes the “w” sound?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑢",
+        "𐑣",
+        "𐑘",
+        "𐑙"
+      ],
+      "correct": "𐑢",
+      "correctLabel": "𐑢"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑧𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "wet",
+      "correctLabel": "wet"
+    },
+    {
+      "type": "teach",
+      "title": "Meet ha-ha",
+      "body": "The letter for ha-ha is 𐑣, the “h” sound — just a breath, with your throat wide open."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑣𐑨𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "hat",
+        "had",
+        "hot",
+        "hut"
+      ],
+      "correct": "hat",
+      "correctLabel": "hat"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑦𐑤",
+      "caption": "Sound it out — what does this say?",
+      "correct": "hill",
+      "correctLabel": "hill"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑢𐑧𐑤",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "well",
+        "wall",
+        "wool",
+        "will"
+      ],
+      "correct": "well",
+      "correctLabel": "well"
+    },
+    {
+      "type": "build",
+      "prompt": "home",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑣",
+        "𐑴",
+        "𐑥",
+        "𐑧",
+        "𐑫"
+      ],
+      "answer": [
+        "𐑣",
+        "𐑴",
+        "𐑥"
+      ],
+      "correctLabel": "𐑣𐑴𐑥"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑦𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "win",
+      "correctLabel": "win"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑪𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "hot",
+      "correctLabel": "hot"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑳𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "hut",
+      "correctLabel": "hut"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑰𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "week",
+      "correctLabel": "week"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑴𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "hope",
+      "correctLabel": "hope"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑢𐑦𐑥",
+      "caption": "Sound it out — what does this say?",
+      "correct": "swim",
+      "correctLabel": "swim"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑢𐑦𐑜",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["wig", "wag", "win", "web"],
+      "correct": "wig",
+      "correctLabel": "wig"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “hand”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑣𐑨𐑯𐑛", "𐑣𐑨𐑛", "𐑣𐑨𐑯", "𐑣𐑧𐑯𐑛"],
+      "correct": "𐑣𐑨𐑯𐑛",
+      "correctLabel": "𐑣𐑨𐑯𐑛"
+    },
+    {
+      "type": "build",
+      "prompt": "hike",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑣", "𐑲", "𐑒", "𐑦", "𐑑"],
+      "answer": ["𐑣", "𐑲", "𐑒"],
+      "correctLabel": "𐑣𐑲𐑒"
+    },
+    {
+      "type": "build",
+      "prompt": "wait",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑢", "𐑱", "𐑑", "𐑦", "𐑯"],
+      "answer": ["𐑢", "𐑱", "𐑑"],
+      "correctLabel": "𐑢𐑱𐑑"
+    },
+    {
+      "type": "build",
+      "prompt": "help",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑣", "𐑧", "𐑤", "𐑐", "𐑑"],
+      "answer": ["𐑣", "𐑧", "𐑤", "𐑐"],
+      "correctLabel": "𐑣𐑧𐑤𐑐"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑢𐑦𐑯": "win", "𐑣𐑪𐑑": "hot", "𐑢𐑰𐑒": "week", "𐑕𐑢𐑦𐑥": "swim" },
+      "leftOrder": ["𐑕𐑢𐑦𐑥", "𐑢𐑦𐑯", "𐑢𐑰𐑒", "𐑣𐑪𐑑"],
+      "rightOrder": ["win", "swim", "hot", "week"]
+    }
+  ]
+}

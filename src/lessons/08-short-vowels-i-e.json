@@ -1,0 +1,198 @@
+{
+  "id": 8,
+  "title": "Short Vowels: I E",
+  "glyph": "𐑦𐑧",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Officially: if",
+      "body": "You've seen 𐑦 a few times now — it's called if, the short “i” in sit and if."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which letter makes “i” as in “sit”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑦",
+        "𐑧",
+        "𐑨",
+        "𐑪"
+      ],
+      "correct": "𐑦",
+      "correctLabel": "𐑦"
+    },
+    {
+      "type": "teach",
+      "title": "Meet egg",
+      "body": "The letter for egg is 𐑧, the short “e” in bed. It looks a little like the bottom half of a Latin “e”."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑧𐑛",
+      "caption": "Type what this word says",
+      "correct": "bed",
+      "correctLabel": "bed"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑦𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "tip",
+      "correctLabel": "tip"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑧": "bed",
+        "𐑦": "sit",
+        "𐑑𐑦𐑐": "tip",
+        "𐑚𐑧𐑑": "bet"
+      },
+      "leftOrder": [
+        "𐑚𐑧𐑑",
+        "𐑧",
+        "𐑑𐑦𐑐",
+        "𐑦"
+      ],
+      "rightOrder": [
+        "sit",
+        "bet",
+        "bed",
+        "tip"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑧𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fed",
+      "correctLabel": "fed"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑕𐑧𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "set",
+        "sit",
+        "sat",
+        "seat"
+      ],
+      "correct": "set",
+      "correctLabel": "set"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑓𐑧𐑛": "fed",
+        "𐑕𐑧𐑑": "set",
+        "𐑚𐑧𐑛": "bed",
+        "𐑑𐑦𐑐": "tip"
+      },
+      "leftOrder": [
+        "𐑑𐑦𐑐",
+        "𐑓𐑧𐑛",
+        "𐑚𐑧𐑛",
+        "𐑕𐑧𐑑"
+      ],
+      "rightOrder": [
+        "bed",
+        "tip",
+        "set",
+        "fed"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑧𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bet",
+      "correctLabel": "bet"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑧𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "pet",
+      "correctLabel": "pet"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑧𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "get",
+      "correctLabel": "get"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑝𐑧𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "vet",
+      "correctLabel": "vet"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑧𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "beg",
+      "correctLabel": "beg"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑒𐑧𐑜",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["keg", "kid", "cog", "kick"],
+      "correct": "keg",
+      "correctLabel": "keg"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “bed”, not “bid”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑚𐑧𐑛", "𐑚𐑦𐑛", "𐑚𐑧𐑑", "𐑚𐑨𐑛"],
+      "correct": "𐑚𐑧𐑛",
+      "correctLabel": "𐑚𐑧𐑛"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑟𐑧𐑛",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["zed", "zip", "zap", "zit"],
+      "correct": "zed",
+      "correctLabel": "zed"
+    },
+    {
+      "type": "build",
+      "prompt": "peg",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑐", "𐑧", "𐑜", "𐑦", "𐑑"],
+      "answer": ["𐑐", "𐑧", "𐑜"],
+      "correctLabel": "𐑐𐑧𐑜"
+    },
+    {
+      "type": "build",
+      "prompt": "fez",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑓", "𐑧", "𐑟", "𐑕", "𐑛"],
+      "answer": ["𐑓", "𐑧", "𐑟"],
+      "correctLabel": "𐑓𐑧𐑟"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑚𐑧𐑑": "bet", "𐑐𐑧𐑑": "pet", "𐑜𐑧𐑑": "get", "𐑝𐑧𐑑": "vet" },
+      "leftOrder": ["𐑝𐑧𐑑", "𐑚𐑧𐑑", "𐑜𐑧𐑑", "𐑐𐑧𐑑"],
+      "rightOrder": ["get", "vet", "pet", "bet"]
+    }
+  ]
+}

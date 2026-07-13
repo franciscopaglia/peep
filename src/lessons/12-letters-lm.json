@@ -1,0 +1,206 @@
+{
+  "id": 12,
+  "title": "Letters: L M",
+  "glyph": "𐑤𐑥",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Meet lull",
+      "body": "The letter for lull is 𐑤 — a single downward stroke, easy to remember since it echoes a lowercase Latin “l”. It doesn't pair up voiced/voiceless like the last few lessons — it's naturally voiced on its own."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which letter makes the “l” sound?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑤",
+        "𐑮",
+        "𐑯",
+        "𐑥"
+      ],
+      "correct": "𐑤",
+      "correctLabel": "𐑤"
+    },
+    {
+      "type": "teach",
+      "title": "Meet mime",
+      "body": "The letter for mime is 𐑥, also naturally voiced with no unvoiced partner."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑨𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "map",
+      "correctLabel": "map"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑥",
+      "caption": "What sound does this make?",
+      "optionIsGlyph": false,
+      "options": [
+        "M sound",
+        "N sound",
+        "W sound",
+        "L sound"
+      ],
+      "correct": "M sound",
+      "correctLabel": "M sound"
+    },
+    {
+      "type": "build",
+      "prompt": "lamp",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑤",
+        "𐑨",
+        "𐑥",
+        "𐑐",
+        "𐑧"
+      ],
+      "answer": [
+        "𐑤",
+        "𐑨",
+        "𐑥",
+        "𐑐"
+      ],
+      "correctLabel": "𐑤𐑨𐑥𐑐"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑤𐑪𐑜",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "log",
+        "leg",
+        "lag",
+        "dog"
+      ],
+      "correct": "log",
+      "correctLabel": "log"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑪𐑚",
+      "caption": "Sound it out — what does this say?",
+      "correct": "mob",
+      "correctLabel": "mob"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑤𐑦𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "lit",
+        "let",
+        "lot",
+        "lip"
+      ],
+      "correct": "lit",
+      "correctLabel": "lit"
+    },
+    {
+      "type": "build",
+      "prompt": "mud",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑥",
+        "𐑳",
+        "𐑛",
+        "𐑤",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑥",
+        "𐑳",
+        "𐑛"
+      ],
+      "correctLabel": "𐑥𐑳𐑛"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑨𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "mad",
+      "correctLabel": "mad"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑦𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "lip",
+      "correctLabel": "lip"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑧𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "leg",
+      "correctLabel": "leg"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑳𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "mug",
+      "correctLabel": "mug"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑦𐑤𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "milk",
+      "correctLabel": "milk"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑤𐑪𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["lot", "let", "lit", "lat"],
+      "correct": "lot",
+      "correctLabel": "lot"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “map”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑥𐑨𐑐", "𐑤𐑨𐑐", "𐑥𐑪𐑐", "𐑥𐑨𐑚"],
+      "correct": "𐑥𐑨𐑐",
+      "correctLabel": "𐑥𐑨𐑐"
+    },
+    {
+      "type": "build",
+      "prompt": "lid",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑤", "𐑦", "𐑛", "𐑥", "𐑑"],
+      "answer": ["𐑤", "𐑦", "𐑛"],
+      "correctLabel": "𐑤𐑦𐑛"
+    },
+    {
+      "type": "build",
+      "prompt": "film",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑓", "𐑦", "𐑤", "𐑥", "𐑚"],
+      "answer": ["𐑓", "𐑦", "𐑤", "𐑥"],
+      "correctLabel": "𐑓𐑦𐑤𐑥"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑥𐑨𐑛": "mad", "𐑤𐑦𐑐": "lip", "𐑤𐑧𐑜": "leg", "𐑥𐑳𐑜": "mug" },
+      "leftOrder": ["𐑥𐑳𐑜", "𐑥𐑨𐑛", "𐑤𐑧𐑜", "𐑤𐑦𐑐"],
+      "rightOrder": ["mad", "mug", "lip", "leg"]
+    }
+  ]
+}

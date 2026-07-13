@@ -1,0 +1,211 @@
+{
+  "id": 7,
+  "title": "Letters: S Z",
+  "glyph": "𐑕𐑟",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Meet so",
+      "body": "The letter for so is 𐑕. Unvoiced again — a simple curve, a bit like the Latin letter S."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑨𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sad",
+      "correctLabel": "sad"
+    },
+    {
+      "type": "teach",
+      "title": "Meet zoo",
+      "body": "The letter for zoo is 𐑟 — the voiced, deep partner of so. It's even shaped like a reversed 𐑕! Say “zzz” and feel the buzz."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word means “zap”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑟𐑨𐑐",
+        "𐑟𐑨𐑑",
+        "𐑕𐑨𐑐",
+        "𐑟𐑦𐑐"
+      ],
+      "correct": "𐑟𐑨𐑐",
+      "correctLabel": "𐑟𐑨𐑐"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑦𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fizz",
+      "correctLabel": "fizz"
+    },
+    {
+      "type": "build",
+      "prompt": "gas",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑜",
+        "𐑨",
+        "𐑕",
+        "𐑟",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑜",
+        "𐑨",
+        "𐑕"
+      ],
+      "correctLabel": "𐑜𐑨𐑕"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑚𐑪𐑕": "boss",
+        "𐑒𐑦𐑕": "kiss",
+        "𐑛𐑦𐑜": "dig",
+        "𐑝𐑨𐑑": "vat"
+      },
+      "leftOrder": [
+        "𐑝𐑨𐑑",
+        "𐑚𐑪𐑕",
+        "𐑛𐑦𐑜",
+        "𐑒𐑦𐑕"
+      ],
+      "rightOrder": [
+        "kiss",
+        "vat",
+        "boss",
+        "dig"
+      ]
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which of these is the voiced (deep) version of 𐑕?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑟",
+        "𐑓",
+        "𐑝",
+        "𐑕"
+      ],
+      "correct": "𐑟",
+      "correctLabel": "𐑟"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑨𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sag",
+      "correctLabel": "sag"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑕𐑦𐑐",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "sip",
+        "zip",
+        "sit",
+        "sap"
+      ],
+      "correct": "sip",
+      "correctLabel": "sip"
+    },
+    {
+      "type": "build",
+      "prompt": "sob",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑕",
+        "𐑪",
+        "𐑚",
+        "𐑟",
+        "𐑜"
+      ],
+      "answer": [
+        "𐑕",
+        "𐑪",
+        "𐑚"
+      ],
+      "correctLabel": "𐑕𐑪𐑚"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑦𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sit",
+      "correctLabel": "sit"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑟𐑦𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "zip",
+      "correctLabel": "zip"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑨𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fast",
+      "correctLabel": "fast"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑪𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cost",
+      "correctLabel": "cost"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑟𐑦𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["zit", "sit", "zip", "fit"],
+      "correct": "zit",
+      "correctLabel": "zit"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “kiss”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑒𐑦𐑕", "𐑒𐑦𐑟", "𐑒𐑨𐑕", "𐑜𐑦𐑕"],
+      "correct": "𐑒𐑦𐑕",
+      "correctLabel": "𐑒𐑦𐑕"
+    },
+    {
+      "type": "build",
+      "prompt": "fist",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑓", "𐑦", "𐑕", "𐑑", "𐑟"],
+      "answer": ["𐑓", "𐑦", "𐑕", "𐑑"],
+      "correctLabel": "𐑓𐑦𐑕𐑑"
+    },
+    {
+      "type": "build",
+      "prompt": "task",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑑", "𐑨", "𐑕", "𐑒", "𐑟"],
+      "answer": ["𐑑", "𐑨", "𐑕", "𐑒"],
+      "correctLabel": "𐑑𐑨𐑕𐑒"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑕𐑦𐑑": "sit", "𐑟𐑦𐑐": "zip", "𐑓𐑨𐑕𐑑": "fast", "𐑒𐑪𐑕𐑑": "cost" },
+      "leftOrder": ["𐑒𐑪𐑕𐑑", "𐑕𐑦𐑑", "𐑓𐑨𐑕𐑑", "𐑟𐑦𐑐"],
+      "rightOrder": ["sit", "cost", "zip", "fast"]
+    }
+  ]
+}

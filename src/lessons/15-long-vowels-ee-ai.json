@@ -1,0 +1,180 @@
+{
+  "id": 15,
+  "title": "Long Vowels: EE AI",
+  "glyph": "𐑰𐑱",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Held a little longer",
+      "body": "Long vowels are stretched out, unlike their short cousins. Let's start with two."
+    },
+    {
+      "type": "teach",
+      "title": "Meet eat",
+      "body": "The letter for eat is 𐑰, the long “ee” in see. It looks like someone stretched out 𐑦 until it broke in the middle."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑰",
+      "caption": "Sound it out — what does this say?",
+      "correct": "see",
+      "correctLabel": "see"
+    },
+    {
+      "type": "teach",
+      "title": "Meet age",
+      "body": "The letter for age is 𐑱, the sound in day."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑱",
+      "caption": "What sound does this make?",
+      "optionIsGlyph": false,
+      "options": [
+        "AI as in day",
+        "EE as in see",
+        "OH as in boat",
+        "OO as in moon"
+      ],
+      "correct": "AI as in day",
+      "correctLabel": "AI as in day"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑱",
+      "caption": "Sound it out — what does this say?",
+      "correct": "day",
+      "correctLabel": "day"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑰",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bee",
+      "correctLabel": "bee"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑯𐑱𐑤",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "nail",
+        "mail",
+        "tail",
+        "sail"
+      ],
+      "correct": "nail",
+      "correctLabel": "nail"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑚𐑰": "bee",
+        "𐑯𐑱𐑤": "nail",
+        "𐑕𐑰": "see",
+        "𐑛𐑱": "day"
+      },
+      "leftOrder": [
+        "𐑕𐑰",
+        "𐑚𐑰",
+        "𐑛𐑱",
+        "𐑯𐑱𐑤"
+      ],
+      "rightOrder": [
+        "day",
+        "see",
+        "nail",
+        "bee"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑰𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "meet",
+      "correctLabel": "meet"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑰𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "feet",
+      "correctLabel": "feet"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑱",
+      "caption": "Sound it out — what does this say?",
+      "correct": "say",
+      "correctLabel": "say"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑱𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "rain",
+      "correctLabel": "rain"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑱𐑥",
+      "caption": "Sound it out — what does this say?",
+      "correct": "game",
+      "correctLabel": "game"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑑𐑰𐑥",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["team", "tame", "time", "tim"],
+      "correct": "team",
+      "correctLabel": "team"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “tail”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑑𐑱𐑤", "𐑥𐑱𐑤", "𐑯𐑱𐑤", "𐑑𐑱𐑯"],
+      "correct": "𐑑𐑱𐑤",
+      "correctLabel": "𐑑𐑱𐑤"
+    },
+    {
+      "type": "build",
+      "prompt": "keep",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑒", "𐑰", "𐑐", "𐑛", "𐑑"],
+      "answer": ["𐑒", "𐑰", "𐑐"],
+      "correctLabel": "𐑒𐑰𐑐"
+    },
+    {
+      "type": "build",
+      "prompt": "sail",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑕", "𐑱", "𐑤", "𐑯", "𐑥"],
+      "answer": ["𐑕", "𐑱", "𐑤"],
+      "correctLabel": "𐑕𐑱𐑤"
+    },
+    {
+      "type": "build",
+      "prompt": "train",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑑", "𐑮", "𐑱", "𐑯", "𐑛"],
+      "answer": ["𐑑", "𐑮", "𐑱", "𐑯"],
+      "correctLabel": "𐑑𐑮𐑱𐑯"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑥𐑰𐑑": "meet", "𐑓𐑰𐑑": "feet", "𐑕𐑱": "say", "𐑮𐑱𐑯": "rain" },
+      "leftOrder": ["𐑮𐑱𐑯", "𐑥𐑰𐑑", "𐑕𐑱", "𐑓𐑰𐑑"],
+      "rightOrder": ["meet", "rain", "feet", "say"]
+    }
+  ]
+}

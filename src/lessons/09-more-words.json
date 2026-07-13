@@ -1,0 +1,209 @@
+{
+  "id": 9,
+  "title": "More Words",
+  "glyph": "𐑓𐑦𐑜",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Keep blending",
+      "body": "You now know eight consonants and four vowels — enough for a real stack of words. Let's put them to work."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑝𐑧𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "vest",
+      "correctLabel": "vest"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑕𐑦𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "sit",
+        "sat",
+        "set",
+        "fit"
+      ],
+      "correct": "sit",
+      "correctLabel": "sit"
+    },
+    {
+      "type": "build",
+      "prompt": "digit",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑛",
+        "𐑦",
+        "𐑜",
+        "𐑦",
+        "𐑑",
+        "𐑝"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑦",
+        "𐑜",
+        "𐑦",
+        "𐑑"
+      ],
+      "correctLabel": "𐑛𐑦𐑜𐑦𐑑"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑓𐑨𐑑": "fat",
+        "𐑝𐑦𐑕𐑦𐑑": "visit",
+        "𐑕𐑑𐑪𐑐": "stop",
+        "𐑟𐑦𐑐": "zip"
+      },
+      "leftOrder": [
+        "𐑟𐑦𐑐",
+        "𐑓𐑨𐑑",
+        "𐑕𐑑𐑪𐑐",
+        "𐑝𐑦𐑕𐑦𐑑"
+      ],
+      "rightOrder": [
+        "fat",
+        "zip",
+        "visit",
+        "stop"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑨𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cast",
+      "correctLabel": "cast"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑧𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "best",
+      "correctLabel": "best"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑜𐑧𐑕𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "guest",
+        "gust",
+        "best",
+        "test"
+      ],
+      "correct": "guest",
+      "correctLabel": "guest"
+    },
+    {
+      "type": "build",
+      "prompt": "kiss",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑦",
+        "𐑕",
+        "𐑟",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑦",
+        "𐑕"
+      ],
+      "correctLabel": "𐑒𐑦𐑕"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑧𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "test",
+      "correctLabel": "test"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑧𐑕𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "desk",
+      "correctLabel": "desk"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑨𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fast",
+      "correctLabel": "fast"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑪𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cost",
+      "correctLabel": "cost"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑨𐑕𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "task",
+      "correctLabel": "task"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑛𐑦𐑕𐑒",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["disk", "desk", "dusk", "dish"],
+      "correct": "disk",
+      "correctLabel": "disk"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “gift”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑜𐑦𐑓𐑑", "𐑜𐑦𐑑", "𐑜𐑦𐑓", "𐑒𐑦𐑓𐑑"],
+      "correct": "𐑜𐑦𐑓𐑑",
+      "correctLabel": "𐑜𐑦𐑓𐑑"
+    },
+    {
+      "type": "build",
+      "prompt": "test",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑑", "𐑧", "𐑕", "𐑑", "𐑛"],
+      "answer": ["𐑑", "𐑧", "𐑕", "𐑑"],
+      "correctLabel": "𐑑𐑧𐑕𐑑"
+    },
+    {
+      "type": "build",
+      "prompt": "desk",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑛", "𐑧", "𐑕", "𐑒", "𐑑"],
+      "answer": ["𐑛", "𐑧", "𐑕", "𐑒"],
+      "correctLabel": "𐑛𐑧𐑕𐑒"
+    },
+    {
+      "type": "build",
+      "prompt": "fist",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑓", "𐑦", "𐑕", "𐑑", "𐑧"],
+      "answer": ["𐑓", "𐑦", "𐑕", "𐑑"],
+      "correctLabel": "𐑓𐑦𐑕𐑑"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑑𐑧𐑕𐑑": "test", "𐑛𐑧𐑕𐑒": "desk", "𐑛𐑦𐑕𐑒": "disk", "𐑓𐑨𐑕𐑑": "fast" },
+      "leftOrder": ["𐑓𐑨𐑕𐑑", "𐑑𐑧𐑕𐑑", "𐑛𐑦𐑕𐑒", "𐑛𐑧𐑕𐑒"],
+      "rightOrder": ["desk", "fast", "test", "disk"]
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "id": 2,
+  "title": "Letters: T D",
+  "glyph": "𐑑𐑛",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "A borrowed vowel: ash",
+      "body": "Another quick vowel: 𐑨, the short “a” heard in ash and cat. Keep it in mind — you'll be using it a lot this lesson."
+    },
+    {
+      "type": "teach",
+      "title": "Meet tot",
+      "body": "The letter for tot is 𐑑. Say “t” — unvoiced again, so it's tall, standing straight up like a little flagpole."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑨𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "tap",
+      "correctLabel": "tap"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which letter makes the “t” sound?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑑",
+        "𐑛",
+        "𐑐",
+        "𐑚"
+      ],
+      "correct": "𐑑",
+      "correctLabel": "𐑑"
+    },
+    {
+      "type": "teach",
+      "title": "Meet dead",
+      "body": "The letter for dead is 𐑛 — the voiced, deep partner of tot. Compare: 𐑑 𐑛. Say “ddd” and feel the buzz."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑛𐑨𐑛",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "dad",
+        "bad",
+        "tab",
+        "dab"
+      ],
+      "correct": "dad",
+      "correctLabel": "dad"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Tap the symbol for “d”",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑛",
+        "𐑑",
+        "𐑜",
+        "𐑒"
+      ],
+      "correct": "𐑛",
+      "correctLabel": "𐑛"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑨𐑚",
+      "caption": "Sound it out — what does this say?",
+      "correct": "tab",
+      "correctLabel": "tab"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑚𐑨𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "bat",
+        "bad",
+        "bag",
+        "dab"
+      ],
+      "correct": "bat",
+      "correctLabel": "bat"
+    },
+    {
+      "type": "build",
+      "prompt": "pat",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑐",
+        "𐑨",
+        "𐑑",
+        "𐑛",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑨",
+        "𐑑"
+      ],
+      "correctLabel": "𐑐𐑨𐑑"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑪𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "top",
+      "correctLabel": "top"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑪𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "pot",
+      "correctLabel": "pot"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑪𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "dot",
+      "correctLabel": "dot"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑨𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "pad",
+      "correctLabel": "pad"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑚𐑨𐑛",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["bad", "bat", "bud", "dab"],
+      "correct": "bad",
+      "correctLabel": "bad"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “pot”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑐𐑪𐑑", "𐑑𐑪𐑐", "𐑐𐑨𐑑", "𐑚𐑪𐑑"],
+      "correct": "𐑐𐑪𐑑",
+      "correctLabel": "𐑐𐑪𐑑"
+    },
+    {
+      "type": "build",
+      "prompt": "dot",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑛", "𐑪", "𐑑", "𐑐", "𐑨"],
+      "answer": ["𐑛", "𐑪", "𐑑"],
+      "correctLabel": "𐑛𐑪𐑑"
+    },
+    {
+      "type": "build",
+      "prompt": "dad",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑛", "𐑨", "𐑛", "𐑑", "𐑚"],
+      "answer": ["𐑛", "𐑨", "𐑛"],
+      "correctLabel": "𐑛𐑨𐑛"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑑𐑪𐑐": "top", "𐑐𐑪𐑑": "pot", "𐑛𐑪𐑑": "dot", "𐑚𐑨𐑛": "bad" },
+      "leftOrder": ["𐑚𐑨𐑛", "𐑑𐑪𐑐", "𐑛𐑪𐑑", "𐑐𐑪𐑑"],
+      "rightOrder": ["dot", "top", "bad", "pot"]
+    }
+  ]
+}

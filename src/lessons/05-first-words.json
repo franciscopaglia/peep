@@ -1,0 +1,227 @@
+{
+  "id": 5,
+  "title": "First Words",
+  "glyph": "𐑒𐑨𐑑",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Reading whole words",
+      "body": "Now for the fun part — blending letters into words. Shavian is read strictly left to right, sound by sound, with no silent letters to trip you up. Look at 𐑛𐑪𐑑: 𐑛 (d) + 𐑪 (o) + 𐑑 (t) blends smoothly into \"dot\"."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑒𐑦𐑛",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "kid",
+        "kit",
+        "cod",
+        "cap"
+      ],
+      "correct": "kid",
+      "correctLabel": "kid"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑦𐑜",
+      "caption": "Type what this word says",
+      "correct": "big",
+      "correctLabel": "big"
+    },
+    {
+      "type": "teach",
+      "title": "One letter, not two",
+      "body": "English often doubles up consonant letters — miss, add, well — but Shavian never does. One letter is always enough: 𐑚𐑪𐑕 says \"boss\", not \"bosss\"."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “zip”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑟𐑦𐑐",
+        "𐑟𐑦𐑑",
+        "𐑕𐑦𐑐",
+        "𐑟𐑨𐑐"
+      ],
+      "correct": "𐑟𐑦𐑐",
+      "correctLabel": "𐑟𐑦𐑐"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑨𐑐",
+      "caption": "Type what this word says",
+      "correct": "gap",
+      "correctLabel": "gap"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑓𐑦𐑑": "fit",
+        "𐑛𐑪𐑑": "dot",
+        "𐑕𐑦𐑑": "sit",
+        "𐑐𐑪𐑛": "pod"
+      },
+      "leftOrder": [
+        "𐑐𐑪𐑛",
+        "𐑓𐑦𐑑",
+        "𐑕𐑦𐑑",
+        "𐑛𐑪𐑑"
+      ],
+      "rightOrder": [
+        "dot",
+        "pod",
+        "fit",
+        "sit"
+      ]
+    },
+    {
+      "type": "build",
+      "prompt": "kid",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑦",
+        "𐑛",
+        "𐑜",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑦",
+        "𐑛"
+      ],
+      "correctLabel": "𐑒𐑦𐑛"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑐𐑪𐑛",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "pod",
+        "pot",
+        "pad",
+        "pat"
+      ],
+      "correct": "pod",
+      "correctLabel": "pod"
+    },
+    {
+      "type": "build",
+      "prompt": "sit",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑕",
+        "𐑦",
+        "𐑑",
+        "𐑛",
+        "𐑨"
+      ],
+      "answer": [
+        "𐑕",
+        "𐑦",
+        "𐑑"
+      ],
+      "correctLabel": "𐑕𐑦𐑑"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑦𐑑",
+      "caption": "Type what this word says",
+      "correct": "fit",
+      "correctLabel": "fit"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑨𐑚",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cab",
+      "correctLabel": "cab"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑚𐑦𐑚",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "bib",
+        "bid",
+        "big",
+        "dib"
+      ],
+      "correct": "bib",
+      "correctLabel": "bib"
+    },
+    {
+      "type": "build",
+      "prompt": "dig",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑛",
+        "𐑦",
+        "𐑜",
+        "𐑚",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑦",
+        "𐑜"
+      ],
+      "correctLabel": "𐑛𐑦𐑜"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑦𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "kit",
+      "correctLabel": "kit"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑦𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "pit",
+      "correctLabel": "pit"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑚𐑦𐑛",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["bid", "bad", "bud", "did"],
+      "correct": "bid",
+      "correctLabel": "bid"
+    },
+    {
+      "type": "build",
+      "prompt": "cot",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑒", "𐑪", "𐑑", "𐑨", "𐑐"],
+      "answer": ["𐑒", "𐑪", "𐑑"],
+      "correctLabel": "𐑒𐑪𐑑"
+    },
+    {
+      "type": "build",
+      "prompt": "tag",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑑", "𐑨", "𐑜", "𐑒", "𐑛"],
+      "answer": ["𐑑", "𐑨", "𐑜"],
+      "correctLabel": "𐑑𐑨𐑜"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑒𐑦𐑑": "kit", "𐑐𐑦𐑑": "pit", "𐑒𐑪𐑑": "cot", "𐑛𐑪𐑜": "dog" },
+      "leftOrder": ["𐑛𐑪𐑜", "𐑒𐑦𐑑", "𐑒𐑪𐑑", "𐑐𐑦𐑑"],
+      "rightOrder": ["kit", "cot", "dog", "pit"]
+    }
+  ]
+}

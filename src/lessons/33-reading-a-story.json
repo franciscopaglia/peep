@@ -1,0 +1,52 @@
+{
+  "id": 33,
+  "title": "Reading a Story",
+  "glyph": "·𐑕𐑨𐑥",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "One last story",
+      "body": "Time to read a tiny story, one sentence at a time: ·𐑕𐑨𐑥 𐑣𐑨𐑟 𐑩 𐑚𐑦𐑜 𐑛𐑪𐑜. 𐑞 𐑛𐑪𐑜 𐑦𐑟 𐑒𐑿𐑑. 𐑞𐑱 𐑮𐑳𐑯 𐑑𐑵 𐑞 𐑒𐑸."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "·𐑕𐑨𐑥 𐑣𐑨𐑟 𐑩 𐑚𐑦𐑜 𐑛𐑪𐑜",
+      "caption": "What does this say?",
+      "optionIsGlyph": false,
+      "options": ["Sam has a big dog", "Sam has a big cat", "Ann has a big dog", "Sam is a big dog"],
+      "correct": "Sam has a big dog",
+      "correctLabel": "Sam has a big dog"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑞 𐑛𐑪𐑜 𐑦𐑟 𐑒𐑿𐑑",
+      "caption": "Type what this says",
+      "correct": "the dog is cute",
+      "correctLabel": "the dog is cute"
+    },
+    {
+      "type": "arrange",
+      "promptEn": "they run to the car",
+      "tiles": ["𐑞𐑱", "𐑮𐑳𐑯", "𐑑𐑵", "𐑞", "𐑒𐑸", "𐑣𐑽"],
+      "answer": ["𐑞𐑱", "𐑮𐑳𐑯", "𐑑𐑵", "𐑞", "𐑒𐑸"],
+      "correctLabel": "𐑞𐑱 𐑮𐑳𐑯 𐑑𐑵 𐑞 𐑒𐑸"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Who has a big dog?",
+      "caption": "",
+      "optionIsGlyph": false,
+      "options": ["Sam", "Ann", "the dog", "they"],
+      "correct": "Sam",
+      "correctLabel": "Sam"
+    },
+    {
+      "type": "teach",
+      "title": "You did it",
+      "body": "That's the whole Shavian alphabet, all its r-vowels, the naming dot, and full sentences — read start to finish. Come back any time to review."
+    }
+  ]
+}

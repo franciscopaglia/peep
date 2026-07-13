@@ -1,0 +1,203 @@
+{
+  "id": 4,
+  "title": "Short Vowels: A O",
+  "glyph": "𐑨𐑪",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Officially: ash",
+      "body": "You've been borrowing 𐑨 for a few lessons now — time to make it official. It's called ash, the short “a” heard in cat and ash."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which letter makes “a” as in “cat”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑨",
+        "𐑧",
+        "𐑦",
+        "𐑪"
+      ],
+      "correct": "𐑨",
+      "correctLabel": "𐑨"
+    },
+    {
+      "type": "teach",
+      "title": "Officially: on",
+      "body": "And 𐑪 — the letter for on, the short “o” heard in dog and on."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑪",
+      "caption": "What sound does this make?",
+      "optionIsGlyph": false,
+      "options": [
+        "O as in dog",
+        "A as in cat",
+        "U as in cup",
+        "E as in bed"
+      ],
+      "correct": "O as in dog",
+      "correctLabel": "O as in dog"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑪𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "top",
+      "correctLabel": "top"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑨𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cap",
+      "correctLabel": "cap"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑐𐑪𐑑": "pot",
+        "𐑒𐑨𐑐": "cap",
+        "𐑚𐑨𐑜": "bag",
+        "𐑜𐑪𐑑": "got"
+      },
+      "leftOrder": [
+        "𐑜𐑪𐑑",
+        "𐑐𐑪𐑑",
+        "𐑚𐑨𐑜",
+        "𐑒𐑨𐑐"
+      ],
+      "rightOrder": [
+        "cap",
+        "got",
+        "pot",
+        "bag"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑪𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cot",
+      "correctLabel": "cot"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑚𐑪𐑜",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "bog",
+        "bag",
+        "big",
+        "dog"
+      ],
+      "correct": "bog",
+      "correctLabel": "bog"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑒𐑪𐑑": "cot",
+        "𐑚𐑪𐑜": "bog",
+        "𐑑𐑨𐑚": "tab",
+        "𐑚𐑦𐑑": "bit"
+      },
+      "leftOrder": [
+        "𐑚𐑦𐑑",
+        "𐑒𐑪𐑑",
+        "𐑑𐑨𐑚",
+        "𐑚𐑪𐑜"
+      ],
+      "rightOrder": [
+        "tab",
+        "bog",
+        "cot",
+        "bit"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑪𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cop",
+      "correctLabel": "cop"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑪𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "dog",
+      "correctLabel": "dog"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑨𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bag",
+      "correctLabel": "bag"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑨𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "gap",
+      "correctLabel": "gap"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑒𐑪𐑛",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["cod", "cad", "cud", "cot"],
+      "correct": "cod",
+      "correctLabel": "cod"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “cat”, not “cot”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑒𐑨𐑑", "𐑒𐑪𐑑", "𐑒𐑦𐑑", "𐑜𐑨𐑑"],
+      "correct": "𐑒𐑨𐑑",
+      "correctLabel": "𐑒𐑨𐑑"
+    },
+    {
+      "type": "build",
+      "prompt": "dog",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑛", "𐑪", "𐑜", "𐑨", "𐑑"],
+      "answer": ["𐑛", "𐑪", "𐑜"],
+      "correctLabel": "𐑛𐑪𐑜"
+    },
+    {
+      "type": "build",
+      "prompt": "cap",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑒", "𐑨", "𐑐", "𐑪", "𐑚"],
+      "answer": ["𐑒", "𐑨", "𐑐"],
+      "correctLabel": "𐑒𐑨𐑐"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑪𐑚",
+      "caption": "Sound it out — what does this say?",
+      "correct": "gob",
+      "correctLabel": "gob"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑒𐑪𐑐": "cop", "𐑛𐑪𐑜": "dog", "𐑚𐑨𐑜": "bag", "𐑜𐑨𐑐": "gap" },
+      "leftOrder": ["𐑜𐑨𐑐", "𐑒𐑪𐑐", "𐑚𐑨𐑜", "𐑛𐑪𐑜"],
+      "rightOrder": ["cop", "gap", "dog", "bag"]
+    }
+  ]
+}

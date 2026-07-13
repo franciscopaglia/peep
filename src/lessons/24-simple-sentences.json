@@ -1,0 +1,227 @@
+{
+  "id": 24,
+  "title": "Simple Sentences",
+  "glyph": "𐑝𐑼𐑚",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Putting words together",
+      "body": "Shavian has no capital letters — instead, a small dot before a word marks it as a name (like ·Sam). Otherwise sentences read just like English, word by word, only spelled the way they sound. 𐑞 𐑒𐑨𐑑 𐑕𐑨𐑑 reads as \"the cat sat\"."
+    },
+    {
+      "type": "teach",
+      "title": "A few little words",
+      "body": "A handful of common words get their own fixed spelling worth memorizing: I is just 𐑲, the is 𐑞, a is 𐑩, and and is 𐑨𐑯𐑛. You'll run into them constantly."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑲 𐑕𐑰 𐑞 𐑛𐑪𐑜",
+      "caption": "What does this say?",
+      "optionIsGlyph": false,
+      "options": [
+        "I see the dog",
+        "I see the log",
+        "I see a dog",
+        "We see the dog"
+      ],
+      "correct": "I see the dog",
+      "correctLabel": "I see the dog"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑞 𐑛𐑪𐑜 𐑮𐑨𐑯",
+      "caption": "Type what this says",
+      "correct": "the dog ran",
+      "correctLabel": "the dog ran"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑰 𐑮𐑳𐑯 𐑨𐑯𐑛 𐑡𐑳𐑥𐑐",
+      "caption": "Type what this says",
+      "correct": "we run and jump",
+      "correctLabel": "we run and jump"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑖𐑰 𐑣𐑨𐑟 𐑩 𐑚𐑦𐑜 𐑒𐑨𐑑",
+      "caption": "What does this say?",
+      "optionIsGlyph": false,
+      "options": [
+        "She has a big cat",
+        "She has a big dog",
+        "He has a big cat",
+        "She was a big cat"
+      ],
+      "correct": "She has a big cat",
+      "correctLabel": "She has a big cat"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑰 𐑮𐑨𐑯 𐑑𐑵 𐑞 𐑖𐑪𐑐",
+      "caption": "Type what this says",
+      "correct": "he ran to the shop",
+      "correctLabel": "he ran to the shop"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑲": "I",
+        "𐑢𐑰": "we",
+        "𐑖𐑰": "she",
+        "𐑣𐑰": "he"
+      },
+      "leftOrder": [
+        "𐑣𐑰",
+        "𐑲",
+        "𐑖𐑰",
+        "𐑢𐑰"
+      ],
+      "rightOrder": [
+        "we",
+        "he",
+        "I",
+        "she"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑞 𐑒𐑨𐑑 𐑕𐑨𐑑",
+      "caption": "Type what this says",
+      "correct": "the cat sat",
+      "correctLabel": "the cat sat"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word means “and”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑨𐑯𐑛",
+        "𐑨𐑯",
+        "𐑧𐑯𐑛",
+        "𐑨𐑛"
+      ],
+      "correct": "𐑨𐑯𐑛",
+      "correctLabel": "𐑨𐑯𐑛"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word means “a”, as in “a big cat”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑩",
+        "𐑨",
+        "𐑧",
+        "𐑳"
+      ],
+      "correct": "𐑩",
+      "correctLabel": "𐑩"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑰 𐑣𐑨𐑟 𐑩 𐑚𐑦𐑜 𐑛𐑪𐑜",
+      "caption": "Type what this says",
+      "correct": "he has a big dog",
+      "correctLabel": "he has a big dog"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑞 𐑒𐑨𐑑 𐑮𐑨𐑯",
+      "caption": "What does this say?",
+      "optionIsGlyph": false,
+      "options": [
+        "the cat ran",
+        "the cat sat",
+        "a cat ran",
+        "the dog ran"
+      ],
+      "correct": "the cat ran",
+      "correctLabel": "the cat ran"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑞": "the",
+        "𐑩": "a",
+        "𐑨𐑯𐑛": "and",
+        "𐑑𐑵": "to"
+      },
+      "leftOrder": [
+        "𐑑𐑵",
+        "𐑞",
+        "𐑨𐑯𐑛",
+        "𐑩"
+      ],
+      "rightOrder": [
+        "a",
+        "to",
+        "the",
+        "and"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑰 𐑤𐑲𐑒 𐑞 𐑜𐑮𐑰𐑯 𐑚𐑴𐑑",
+      "caption": "Type what this says",
+      "correct": "we like the green boat",
+      "correctLabel": "we like the green boat"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑰 𐑣𐑨𐑛 𐑩 𐑮𐑧𐑛 𐑚𐑲𐑒",
+      "caption": "Type what this says",
+      "correct": "he had a red bike",
+      "correctLabel": "he had a red bike"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑰 𐑕𐑦𐑑 𐑨𐑯𐑛 𐑮𐑧𐑕𐑑",
+      "caption": "Type what this says",
+      "correct": "we sit and rest",
+      "correctLabel": "we sit and rest"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑞 𐑛𐑪𐑜 𐑮𐑨𐑯 𐑑𐑵 𐑞 𐑐𐑪𐑯𐑛",
+      "caption": "What does this say?",
+      "optionIsGlyph": false,
+      "options": [
+        "the dog ran to the pond",
+        "the dog ran to the pool",
+        "a dog ran to the pond",
+        "the dog ran to the shop"
+      ],
+      "correct": "the dog ran to the pond",
+      "correctLabel": "the dog ran to the pond"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which line says “she can sing”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑖𐑰 𐑒𐑨𐑯 𐑕𐑦𐑙",
+        "𐑖𐑰 𐑒𐑨𐑯 𐑕𐑦𐑑",
+        "𐑣𐑰 𐑒𐑨𐑯 𐑕𐑦𐑙",
+        "𐑖𐑰 𐑒𐑨𐑯 𐑮𐑦𐑙"
+      ],
+      "correct": "𐑖𐑰 𐑒𐑨𐑯 𐑕𐑦𐑙",
+      "correctLabel": "𐑖𐑰 𐑒𐑨𐑯 𐑕𐑦𐑙"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑒𐑨𐑯": "can", "𐑐𐑪𐑯𐑛": "pond", "𐑮𐑧𐑕𐑑": "rest", "𐑜𐑮𐑰𐑯": "green" },
+      "leftOrder": ["𐑜𐑮𐑰𐑯", "𐑒𐑨𐑯", "𐑮𐑧𐑕𐑑", "𐑐𐑪𐑯𐑛"],
+      "rightOrder": ["can", "green", "pond", "rest"]
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "id": 23,
+  "title": "Final Practice",
+  "glyph": "𐑜𐑪𐑖",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Almost there",
+      "body": "Every letter you need is now in your toolkit. This round mixes everything together — take your time."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑗𐑧𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "chest",
+      "correctLabel": "chest"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑣𐑳𐑯𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "hunt",
+        "hint",
+        "hurt",
+        "hut"
+      ],
+      "correct": "hunt",
+      "correctLabel": "hunt"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑪𐑖",
+      "caption": "Sound it out — what does this say?",
+      "correct": "gosh",
+      "correctLabel": "gosh"
+    },
+    {
+      "type": "build",
+      "prompt": "yellow",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑘",
+        "𐑧",
+        "𐑤",
+        "𐑴",
+        "𐑢"
+      ],
+      "answer": [
+        "𐑘",
+        "𐑧",
+        "𐑤",
+        "𐑴"
+      ],
+      "correctLabel": "𐑘𐑧𐑤𐑴"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑗𐑧𐑕𐑑": "chest",
+        "𐑣𐑳𐑯𐑑": "hunt",
+        "𐑜𐑪𐑖": "gosh",
+        "𐑘𐑧𐑤𐑴": "yellow"
+      },
+      "leftOrder": [
+        "𐑘𐑧𐑤𐑴",
+        "𐑗𐑧𐑕𐑑",
+        "𐑜𐑪𐑖",
+        "𐑣𐑳𐑯𐑑"
+      ],
+      "rightOrder": [
+        "chest",
+        "yellow",
+        "hunt",
+        "gosh"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑖𐑴𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "shown",
+      "correctLabel": "shown"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑡𐑵𐑕",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "juice",
+        "juke",
+        "choose",
+        "chews"
+      ],
+      "correct": "juice",
+      "correctLabel": "juice"
+    },
+    {
+      "type": "build",
+      "prompt": "bright",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑚",
+        "𐑮",
+        "𐑲",
+        "𐑑",
+        "𐑴"
+      ],
+      "answer": [
+        "𐑚",
+        "𐑮",
+        "𐑲",
+        "𐑑"
+      ],
+      "correctLabel": "𐑚𐑮𐑲𐑑"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑳𐑯𐑗",
+      "caption": "Sound it out — what does this say?",
+      "correct": "lunch",
+      "correctLabel": "lunch"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑧𐑯𐑗",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bench",
+      "correctLabel": "bench"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑑𐑮𐑪𐑙",
+      "caption": "Sound it out — what does this say?",
+      "correct": "strong",
+      "correctLabel": "strong"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑪𐑒𐑦𐑑",
+      "caption": "Two syllables — take it slowly. What does this say?",
+      "correct": "rocket",
+      "correctLabel": "rocket"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑨𐑕𐑒𐑦𐑑",
+      "caption": "Two syllables — take it slowly. What does this say?",
+      "correct": "basket",
+      "correctLabel": "basket"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑡𐑨𐑒𐑦𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["jacket", "jackal", "racket", "packet"],
+      "correct": "jacket",
+      "correctLabel": "jacket"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “spring”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑕𐑐𐑮𐑦𐑙", "𐑕𐑑𐑮𐑦𐑙", "𐑕𐑐𐑮𐑦𐑯", "𐑕𐑐𐑮𐑦𐑜"],
+      "correct": "𐑕𐑐𐑮𐑦𐑙",
+      "correctLabel": "𐑕𐑐𐑮𐑦𐑙"
+    },
+    {
+      "type": "build",
+      "prompt": "crash",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑒", "𐑮", "𐑨", "𐑖", "𐑗"],
+      "answer": ["𐑒", "𐑮", "𐑨", "𐑖"],
+      "correctLabel": "𐑒𐑮𐑨𐑖"
+    },
+    {
+      "type": "build",
+      "prompt": "twist",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑑", "𐑢", "𐑦", "𐑕", "𐑑", "𐑯"],
+      "answer": ["𐑑", "𐑢", "𐑦", "𐑕", "𐑑"],
+      "correctLabel": "𐑑𐑢𐑦𐑕𐑑"
+    },
+    {
+      "type": "build",
+      "prompt": "punch",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑐", "𐑳", "𐑯", "𐑗", "𐑖"],
+      "answer": ["𐑐", "𐑳", "𐑯", "𐑗"],
+      "correctLabel": "𐑐𐑳𐑯𐑗"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑤𐑳𐑯𐑗": "lunch", "𐑚𐑧𐑯𐑗": "bench", "𐑕𐑑𐑮𐑪𐑙": "strong", "𐑮𐑪𐑒𐑦𐑑": "rocket" },
+      "leftOrder": ["𐑮𐑪𐑒𐑦𐑑", "𐑤𐑳𐑯𐑗", "𐑕𐑑𐑮𐑪𐑙", "𐑚𐑧𐑯𐑗"],
+      "rightOrder": ["lunch", "rocket", "bench", "strong"]
+    }
+  ]
+}

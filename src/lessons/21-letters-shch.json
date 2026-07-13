@@ -1,0 +1,180 @@
+{
+  "id": 21,
+  "title": "Letters: SH CH",
+  "glyph": "𐑖𐑗",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Meet sure",
+      "body": "The letter for sure is 𐑖, the “sh” sound."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑖𐑦𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "ship",
+      "correctLabel": "ship"
+    },
+    {
+      "type": "teach",
+      "title": "Meet church",
+      "body": "Say “t” right before “sh” and speed it up — that blend is the church sound, 𐑗. Its shape looks a little like the tot and sure letters pressed together."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which letter makes the “ch” sound?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑗",
+        "𐑖",
+        "𐑡",
+        "𐑕"
+      ],
+      "correct": "𐑗",
+      "correctLabel": "𐑗"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑖𐑪𐑐",
+      "caption": "Type what this word says",
+      "correct": "shop",
+      "correctLabel": "shop"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑖𐑧𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "shed",
+      "correctLabel": "shed"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑗𐑳𐑯𐑒",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "chunk",
+        "chuck",
+        "chock",
+        "check"
+      ],
+      "correct": "chunk",
+      "correctLabel": "chunk"
+    },
+    {
+      "type": "build",
+      "prompt": "fresh",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑓",
+        "𐑮",
+        "𐑧",
+        "𐑖",
+        "𐑗"
+      ],
+      "answer": [
+        "𐑓",
+        "𐑮",
+        "𐑧",
+        "𐑖"
+      ],
+      "correctLabel": "𐑓𐑮𐑧𐑖"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑦𐑖",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fish",
+      "correctLabel": "fish"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑦𐑖",
+      "caption": "Sound it out — what does this say?",
+      "correct": "dish",
+      "correctLabel": "dish"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑗𐑦𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "chip",
+      "correctLabel": "chip"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑗𐑨𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "chat",
+      "correctLabel": "chat"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑦𐑗",
+      "caption": "Sound it out — what does this say?",
+      "correct": "rich",
+      "correctLabel": "rich"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑮𐑳𐑖",
+      "caption": "Sound it out — what does this say?",
+      "correct": "brush",
+      "correctLabel": "brush"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑖𐑲𐑯",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["shine", "shin", "shone", "sign"],
+      "correct": "shine",
+      "correctLabel": "shine"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “much”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑥𐑳𐑗", "𐑥𐑳𐑖", "𐑕𐑳𐑗", "𐑮𐑦𐑗"],
+      "correct": "𐑥𐑳𐑗",
+      "correctLabel": "𐑥𐑳𐑗"
+    },
+    {
+      "type": "build",
+      "prompt": "wish",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑢", "𐑦", "𐑖", "𐑗", "𐑕"],
+      "answer": ["𐑢", "𐑦", "𐑖"],
+      "correctLabel": "𐑢𐑦𐑖"
+    },
+    {
+      "type": "build",
+      "prompt": "chain",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑗", "𐑱", "𐑯", "𐑖", "𐑑"],
+      "answer": ["𐑗", "𐑱", "𐑯"],
+      "correctLabel": "𐑗𐑱𐑯"
+    },
+    {
+      "type": "build",
+      "prompt": "teach",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑑", "𐑰", "𐑗", "𐑖", "𐑐"],
+      "answer": ["𐑑", "𐑰", "𐑗"],
+      "correctLabel": "𐑑𐑰𐑗"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑓𐑦𐑖": "fish", "𐑛𐑦𐑖": "dish", "𐑗𐑦𐑐": "chip", "𐑗𐑨𐑑": "chat" },
+      "leftOrder": ["𐑗𐑨𐑑", "𐑓𐑦𐑖", "𐑗𐑦𐑐", "𐑛𐑦𐑖"],
+      "rightOrder": ["fish", "chat", "dish", "chip"]
+    }
+  ]
+}

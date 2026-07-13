@@ -1,0 +1,212 @@
+{
+  "id": 13,
+  "title": "Letters: N R",
+  "glyph": "𐑯𐑮",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Meet nun",
+      "body": "The letter for nun is 𐑯."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑯𐑧𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "net",
+      "correctLabel": "net"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which letter makes the “n” sound?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑯",
+        "𐑮",
+        "𐑤",
+        "𐑥"
+      ],
+      "correct": "𐑯",
+      "correctLabel": "𐑯"
+    },
+    {
+      "type": "teach",
+      "title": "Meet roar",
+      "body": "The letter for roar is 𐑮 — the last of the everyday consonants. You now know enough to read hundreds of words."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑨𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "rat",
+      "correctLabel": "rat"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Tap the symbol for “r”",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑮",
+        "𐑯",
+        "𐑤",
+        "𐑥"
+      ],
+      "correct": "𐑮",
+      "correctLabel": "𐑮"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑤𐑦𐑐": "lip",
+        "𐑯𐑧𐑑": "net",
+        "𐑮𐑨𐑑": "rat",
+        "𐑕𐑳𐑯": "sun"
+      },
+      "leftOrder": [
+        "𐑕𐑳𐑯",
+        "𐑤𐑦𐑐",
+        "𐑮𐑨𐑑",
+        "𐑯𐑧𐑑"
+      ],
+      "rightOrder": [
+        "net",
+        "sun",
+        "lip",
+        "rat"
+      ]
+    },
+    {
+      "type": "build",
+      "prompt": "milk",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑥",
+        "𐑦",
+        "𐑤",
+        "𐑒",
+        "𐑯"
+      ],
+      "answer": [
+        "𐑥",
+        "𐑦",
+        "𐑤",
+        "𐑒"
+      ],
+      "correctLabel": "𐑥𐑦𐑤𐑒"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑳𐑯",
+      "caption": "Type what this word says",
+      "correct": "run",
+      "correctLabel": "run"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑦𐑚",
+      "caption": "Sound it out — what does this say?",
+      "correct": "rib",
+      "correctLabel": "rib"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑯𐑳𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "nut",
+        "not",
+        "net",
+        "nod"
+      ],
+      "correct": "nut",
+      "correctLabel": "nut"
+    },
+    {
+      "type": "build",
+      "prompt": "drum",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑛",
+        "𐑮",
+        "𐑳",
+        "𐑥",
+        "𐑤"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑮",
+        "𐑳",
+        "𐑥"
+      ],
+      "correctLabel": "𐑛𐑮𐑳𐑥"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑳𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sun",
+      "correctLabel": "sun"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑧𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "ten",
+      "correctLabel": "ten"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑨𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "man",
+      "correctLabel": "man"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑮𐑦𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "grin",
+      "correctLabel": "grin"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑮𐑧𐑛",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["red", "rid", "rod", "rud"],
+      "correct": "red",
+      "correctLabel": "red"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “pin”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑐𐑦𐑯", "𐑐𐑨𐑯", "𐑚𐑦𐑯", "𐑐𐑦𐑥"],
+      "correct": "𐑐𐑦𐑯",
+      "correctLabel": "𐑐𐑦𐑯"
+    },
+    {
+      "type": "build",
+      "prompt": "trip",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑑", "𐑮", "𐑦", "𐑐", "𐑚"],
+      "answer": ["𐑑", "𐑮", "𐑦", "𐑐"],
+      "correctLabel": "𐑑𐑮𐑦𐑐"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑕𐑳𐑯": "sun", "𐑑𐑧𐑯": "ten", "𐑥𐑨𐑯": "man", "𐑮𐑧𐑛": "red" },
+      "leftOrder": ["𐑮𐑧𐑛", "𐑕𐑳𐑯", "𐑥𐑨𐑯", "𐑑𐑧𐑯"],
+      "rightOrder": ["sun", "red", "ten", "man"]
+    }
+  ]
+}

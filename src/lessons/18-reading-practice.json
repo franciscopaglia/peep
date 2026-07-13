@@ -1,0 +1,207 @@
+{
+  "id": 18,
+  "title": "Reading Practice",
+  "glyph": "𐑥𐑰𐑑",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Short and long together",
+      "body": "Time to mix your short and long vowels in the same words. Take it slow — sound out each letter before you say the whole thing."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑰𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "meet",
+      "correctLabel": "meet"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑒𐑴𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "coat",
+        "cot",
+        "cut",
+        "cat"
+      ],
+      "correct": "coat",
+      "correctLabel": "coat"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑥𐑲𐑤",
+      "caption": "Sound it out — what does this say?",
+      "correct": "smile",
+      "correctLabel": "smile"
+    },
+    {
+      "type": "build",
+      "prompt": "grow",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑜",
+        "𐑮",
+        "𐑴",
+        "𐑫",
+        "𐑳"
+      ],
+      "answer": [
+        "𐑜",
+        "𐑮",
+        "𐑴"
+      ],
+      "correctLabel": "𐑜𐑮𐑴"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑥𐑰𐑑": "meet",
+        "𐑒𐑴𐑑": "coat",
+        "𐑕𐑥𐑲𐑤": "smile",
+        "𐑜𐑮𐑴": "grow"
+      },
+      "leftOrder": [
+        "𐑜𐑮𐑴",
+        "𐑥𐑰𐑑",
+        "𐑕𐑥𐑲𐑤",
+        "𐑒𐑴𐑑"
+      ],
+      "rightOrder": [
+        "coat",
+        "grow",
+        "meet",
+        "smile"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑨𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fast",
+      "correctLabel": "fast"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑟𐑵𐑥",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "zoom",
+        "zoo",
+        "zone",
+        "zap"
+      ],
+      "correct": "zoom",
+      "correctLabel": "zoom"
+    },
+    {
+      "type": "build",
+      "prompt": "train",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑑",
+        "𐑮",
+        "𐑱",
+        "𐑯",
+        "𐑫"
+      ],
+      "answer": [
+        "𐑑",
+        "𐑮",
+        "𐑱",
+        "𐑯"
+      ],
+      "correctLabel": "𐑑𐑮𐑱𐑯"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑮𐑰𐑥",
+      "caption": "Sound it out — what does this say?",
+      "correct": "dream",
+      "correctLabel": "dream"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑤𐑰𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sleep",
+      "correctLabel": "sleep"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑴𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "toast",
+      "correctLabel": "toast"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑴𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "road",
+      "correctLabel": "road"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑮𐑰𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "green",
+      "correctLabel": "green"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑒𐑤𐑰𐑯",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["clean", "clan", "lean", "glean"],
+      "correct": "clean",
+      "correctLabel": "clean"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “five”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑓𐑲𐑝", "𐑓𐑲𐑚", "𐑓𐑰𐑝", "𐑝𐑲𐑓"],
+      "correct": "𐑓𐑲𐑝",
+      "correctLabel": "𐑓𐑲𐑝"
+    },
+    {
+      "type": "build",
+      "prompt": "cream",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑒", "𐑮", "𐑰", "𐑥", "𐑤"],
+      "answer": ["𐑒", "𐑮", "𐑰", "𐑥"],
+      "correctLabel": "𐑒𐑮𐑰𐑥"
+    },
+    {
+      "type": "build",
+      "prompt": "float",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑓", "𐑤", "𐑴", "𐑑", "𐑮"],
+      "answer": ["𐑓", "𐑤", "𐑴", "𐑑"],
+      "correctLabel": "𐑓𐑤𐑴𐑑"
+    },
+    {
+      "type": "build",
+      "prompt": "most",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑥", "𐑴", "𐑕", "𐑑", "𐑯"],
+      "answer": ["𐑥", "𐑴", "𐑕", "𐑑"],
+      "correctLabel": "𐑥𐑴𐑕𐑑"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑛𐑮𐑰𐑥": "dream", "𐑕𐑤𐑰𐑐": "sleep", "𐑑𐑴𐑕𐑑": "toast", "𐑜𐑮𐑰𐑯": "green" },
+      "leftOrder": ["𐑜𐑮𐑰𐑯", "𐑛𐑮𐑰𐑥", "𐑑𐑴𐑕𐑑", "𐑕𐑤𐑰𐑐"],
+      "rightOrder": ["dream", "green", "sleep", "toast"]
+    }
+  ]
+}

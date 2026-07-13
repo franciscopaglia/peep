@@ -1,0 +1,38 @@
+{
+  "id": 25,
+  "title": "Letter: ZH",
+  "glyph": "𐑠",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Welcome to Chapter 2",
+      "body": "You've read the whole alphabet's core sounds. This chapter finishes the job with the rarest letters, then moves on to reading full sentences with confidence."
+    },
+    {
+      "type": "teach",
+      "title": "Meet measure",
+      "body": "The letter for measure is 𐑠 — the “zh” sound buried in the middle of measure, vision, and treasure. It's one of the rarest sounds in English, so you'll spot it far less often than its neighbors."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which letter makes the “zh” sound, as in “measure”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑠", "𐑟", "𐑖", "𐑡"],
+      "correct": "𐑠",
+      "correctLabel": "𐑠"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑠",
+      "caption": "What sound does this make?",
+      "optionIsGlyph": false,
+      "options": ["ZH as in measure", "SH as in sure", "J as in judge", "Z as in zoo"],
+      "correct": "ZH as in measure",
+      "correctLabel": "ZH as in measure"
+    }
+  ]
+}

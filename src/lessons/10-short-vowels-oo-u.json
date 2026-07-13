@@ -1,0 +1,204 @@
+{
+  "id": 10,
+  "title": "Short Vowels: OO U",
+  "glyph": "𐑫𐑳",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Meet wool",
+      "body": "The letter for wool is 𐑫, the short “oo” in put — round your lips as you say it."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑫𐑑",
+      "caption": "Type what this word says",
+      "correct": "put",
+      "correctLabel": "put"
+    },
+    {
+      "type": "teach",
+      "title": "Meet up",
+      "body": "The letter for up is 𐑳, the short “u” in cup. It's easy to mix up with wool — wool rounds your lips (put), up doesn't (cup)."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which letter makes “u” as in “cup”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑳",
+        "𐑫",
+        "𐑧",
+        "𐑩"
+      ],
+      "correct": "𐑳",
+      "correctLabel": "𐑳"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑳𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cup",
+      "correctLabel": "cup"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑨": "cat",
+        "𐑧": "bed",
+        "𐑦": "sit",
+        "𐑪": "dog"
+      },
+      "leftOrder": [
+        "𐑪",
+        "𐑨",
+        "𐑦",
+        "𐑧"
+      ],
+      "rightOrder": [
+        "bed",
+        "dog",
+        "cat",
+        "sit"
+      ]
+    },
+    {
+      "type": "build",
+      "prompt": "big",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑚",
+        "𐑦",
+        "𐑜",
+        "𐑨",
+        "𐑛"
+      ],
+      "answer": [
+        "𐑚",
+        "𐑦",
+        "𐑜"
+      ],
+      "correctLabel": "𐑚𐑦𐑜"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑳𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cut",
+      "correctLabel": "cut"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑐𐑳𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "putt",
+        "put",
+        "pot",
+        "pit"
+      ],
+      "correct": "putt",
+      "correctLabel": "putt"
+    },
+    {
+      "type": "build",
+      "prompt": "dust",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑛",
+        "𐑳",
+        "𐑕",
+        "𐑑",
+        "𐑫"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑳",
+        "𐑕",
+        "𐑑"
+      ],
+      "correctLabel": "𐑛𐑳𐑕𐑑"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑳𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bug",
+      "correctLabel": "bug"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑳𐑚",
+      "caption": "Sound it out — what does this say?",
+      "correct": "tub",
+      "correctLabel": "tub"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑫𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "book",
+      "correctLabel": "book"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑫𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "good",
+      "correctLabel": "good"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑳𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "gust",
+      "correctLabel": "gust"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑓𐑫𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["foot", "feet", "fit", "fat"],
+      "correct": "foot",
+      "correctLabel": "foot"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “cup”, not “cop”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑒𐑳𐑐", "𐑒𐑪𐑐", "𐑒𐑫𐑐", "𐑒𐑨𐑐"],
+      "correct": "𐑒𐑳𐑐",
+      "correctLabel": "𐑒𐑳𐑐"
+    },
+    {
+      "type": "build",
+      "prompt": "gut",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑜", "𐑳", "𐑑", "𐑫", "𐑛"],
+      "answer": ["𐑜", "𐑳", "𐑑"],
+      "correctLabel": "𐑜𐑳𐑑"
+    },
+    {
+      "type": "build",
+      "prompt": "cook",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑒", "𐑫", "𐑒", "𐑳", "𐑐"],
+      "answer": ["𐑒", "𐑫", "𐑒"],
+      "correctLabel": "𐑒𐑫𐑒"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑚𐑳𐑜": "bug", "𐑑𐑳𐑚": "tub", "𐑚𐑫𐑒": "book", "𐑜𐑫𐑛": "good" },
+      "leftOrder": ["𐑜𐑫𐑛", "𐑚𐑳𐑜", "𐑚𐑫𐑒", "𐑑𐑳𐑚"],
+      "rightOrder": ["bug", "good", "tub", "book"]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": 31,
+  "title": "Build Sentences I",
+  "glyph": "𐑞 𐑦𐑟",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Tap the words in order",
+      "body": "Read the English sentence, then tap the Shavian words below in the order that spells it out. Watch out — there's usually one extra word you don't need."
+    },
+    {
+      "type": "arrange",
+      "promptEn": "the car is far",
+      "tiles": ["𐑞", "𐑒𐑸", "𐑦𐑟", "𐑓𐑸", "𐑣𐑽"],
+      "answer": ["𐑞", "𐑒𐑸", "𐑦𐑟", "𐑓𐑸"],
+      "correctLabel": "𐑞 𐑒𐑸 𐑦𐑟 𐑓𐑸"
+    },
+    {
+      "type": "arrange",
+      "promptEn": "we use the cup",
+      "tiles": ["𐑢𐑰", "𐑿𐑟", "𐑞", "𐑒𐑳𐑐", "𐑩"],
+      "answer": ["𐑢𐑰", "𐑿𐑟", "𐑞", "𐑒𐑳𐑐"],
+      "correctLabel": "𐑢𐑰 𐑿𐑟 𐑞 𐑒𐑳𐑐"
+    },
+    {
+      "type": "arrange",
+      "promptEn": "she has a few",
+      "tiles": ["𐑖𐑰", "𐑣𐑨𐑟", "𐑩", "𐑓𐑿", "𐑣𐑰"],
+      "answer": ["𐑖𐑰", "𐑣𐑨𐑟", "𐑩", "𐑓𐑿"],
+      "correctLabel": "𐑖𐑰 𐑣𐑨𐑟 𐑩 𐑓𐑿"
+    },
+    {
+      "type": "arrange",
+      "promptEn": "he has a big car",
+      "tiles": ["𐑣𐑰", "𐑣𐑨𐑟", "𐑩", "𐑚𐑦𐑜", "𐑒𐑸", "𐑞"],
+      "answer": ["𐑣𐑰", "𐑣𐑨𐑟", "𐑩", "𐑚𐑦𐑜", "𐑒𐑸"],
+      "correctLabel": "𐑣𐑰 𐑣𐑨𐑟 𐑩 𐑚𐑦𐑜 𐑒𐑸"
+    }
+  ]
+}

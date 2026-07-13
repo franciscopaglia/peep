@@ -1,0 +1,48 @@
+{
+  "id": 28,
+  "title": "R-Vowels: ARRAY EAR",
+  "glyph": "𐑼𐑽",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Meet array",
+      "body": "The letter for array is 𐑼 — the soft, unstressed “-er” you hear trailing off the end of better and over. It's one of the most common letters in Shavian, since English loves that ending."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑧𐑑𐑼",
+      "caption": "Sound it out — what does this say?",
+      "correct": "better",
+      "correctLabel": "better"
+    },
+    {
+      "type": "teach",
+      "title": "Meet ear",
+      "body": "The letter for ear is 𐑽, the sound in ear itself, and in here."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑽",
+      "caption": "Sound it out — what does this say?",
+      "correct": "here",
+      "correctLabel": "here"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑴𐑝𐑼",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["over", "oven", "ever", "other"],
+      "correct": "over",
+      "correctLabel": "over"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑚𐑧𐑑𐑼": "better", "𐑣𐑽": "here", "𐑴𐑝𐑼": "over", "𐑽": "ear" },
+      "leftOrder": ["𐑽", "𐑚𐑧𐑑𐑼", "𐑴𐑝𐑼", "𐑣𐑽"],
+      "rightOrder": ["better", "ear", "here", "over"]
+    }
+  ]
+}

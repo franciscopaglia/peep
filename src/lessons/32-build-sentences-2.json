@@ -1,0 +1,41 @@
+{
+  "id": 32,
+  "title": "Build Sentences II",
+  "glyph": "𐑦𐑑 𐑦𐑟",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Reading longer sentences",
+      "body": "Same idea, a little longer. Sound out each word first if you need to — there's no rush."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑰 𐑦𐑟 𐑩 𐑒𐑿𐑑 𐑒𐑨𐑑",
+      "caption": "Type what this says",
+      "correct": "he is a cute cat",
+      "correctLabel": "he is a cute cat"
+    },
+    {
+      "type": "arrange",
+      "promptEn": "the few cars are here",
+      "tiles": ["𐑞", "𐑓𐑿", "𐑒𐑸𐑟", "𐑸", "𐑣𐑽", "𐑚𐑦𐑜"],
+      "answer": ["𐑞", "𐑓𐑿", "𐑒𐑸𐑟", "𐑸", "𐑣𐑽"],
+      "correctLabel": "𐑞 𐑓𐑿 𐑒𐑸𐑟 𐑸 𐑣𐑽"
+    },
+    {
+      "type": "arrange",
+      "promptEn": "it is better here",
+      "tiles": ["𐑦𐑑", "𐑦𐑟", "𐑚𐑧𐑑𐑼", "𐑣𐑽", "𐑞"],
+      "answer": ["𐑦𐑑", "𐑦𐑟", "𐑚𐑧𐑑𐑼", "𐑣𐑽"],
+      "correctLabel": "𐑦𐑑 𐑦𐑟 𐑚𐑧𐑑𐑼 𐑣𐑽"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑞 𐑒𐑸 𐑦𐑟 𐑓𐑸",
+      "caption": "Type what this says",
+      "correct": "the car is far",
+      "correctLabel": "the car is far"
+    }
+  ]
+}

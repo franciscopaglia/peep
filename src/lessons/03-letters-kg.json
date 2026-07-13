@@ -1,0 +1,209 @@
+{
+  "id": 3,
+  "title": "Letters: K G",
+  "glyph": "𐑒𐑜",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "A borrowed vowel: if",
+      "body": "One more quick vowel: 𐑦, the short “i” heard in if and sit."
+    },
+    {
+      "type": "teach",
+      "title": "Meet kick",
+      "body": "The letter for kick is 𐑒. Unvoiced and tall — the last of the voiceless trio, alongside peep and tot."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑦𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "kit",
+      "correctLabel": "kit"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which letter makes the “k” sound?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑒",
+        "𐑜",
+        "𐑑",
+        "𐑛"
+      ],
+      "correct": "𐑒",
+      "correctLabel": "𐑒"
+    },
+    {
+      "type": "teach",
+      "title": "Meet gag",
+      "body": "The letter for gag is 𐑜 — the voiced, deep partner of kick. Compare: 𐑒 𐑜. That completes all three pairs: peep/bib, tot/dead, kick/gag."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑜𐑪𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "got",
+        "get",
+        "gut",
+        "god"
+      ],
+      "correct": "got",
+      "correctLabel": "got"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑑𐑪𐑐": "top",
+        "𐑒𐑨𐑑": "cat",
+        "𐑚𐑨𐑛": "bad",
+        "𐑛𐑪𐑜": "dog"
+      },
+      "leftOrder": [
+        "𐑚𐑨𐑛",
+        "𐑑𐑪𐑐",
+        "𐑛𐑪𐑜",
+        "𐑒𐑨𐑑"
+      ],
+      "rightOrder": [
+        "cat",
+        "bad",
+        "top",
+        "dog"
+      ]
+    },
+    {
+      "type": "build",
+      "prompt": "pig",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑐",
+        "𐑦",
+        "𐑜",
+        "𐑛",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑦",
+        "𐑜"
+      ],
+      "correctLabel": "𐑐𐑦𐑜"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑦𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bit",
+      "correctLabel": "bit"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which letter makes the “g” sound?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑜",
+        "𐑒",
+        "𐑛",
+        "𐑑"
+      ],
+      "correct": "𐑜",
+      "correctLabel": "𐑜"
+    },
+    {
+      "type": "build",
+      "prompt": "tag",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑑",
+        "𐑨",
+        "𐑜",
+        "𐑒",
+        "𐑛"
+      ],
+      "answer": [
+        "𐑑",
+        "𐑨",
+        "𐑜"
+      ],
+      "correctLabel": "𐑑𐑨𐑜"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑨𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cat",
+      "correctLabel": "cat"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑦𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "kid",
+      "correctLabel": "kid"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑦𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "dig",
+      "correctLabel": "dig"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑦𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "big",
+      "correctLabel": "big"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑜𐑨𐑜",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["gag", "gig", "gap", "bag"],
+      "correct": "gag",
+      "correctLabel": "gag"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “pig”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑐𐑦𐑜", "𐑚𐑦𐑜", "𐑐𐑦𐑑", "𐑐𐑨𐑜"],
+      "correct": "𐑐𐑦𐑜",
+      "correctLabel": "𐑐𐑦𐑜"
+    },
+    {
+      "type": "build",
+      "prompt": "kid",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑒", "𐑦", "𐑛", "𐑜", "𐑑"],
+      "answer": ["𐑒", "𐑦", "𐑛"],
+      "correctLabel": "𐑒𐑦𐑛"
+    },
+    {
+      "type": "build",
+      "prompt": "got",
+      "caption": "Build this word from Shavian letters",
+      "tiles": ["𐑜", "𐑪", "𐑑", "𐑒", "𐑨"],
+      "answer": ["𐑜", "𐑪", "𐑑"],
+      "correctLabel": "𐑜𐑪𐑑"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑒𐑨𐑑": "cat", "𐑒𐑦𐑛": "kid", "𐑚𐑦𐑜": "big", "𐑜𐑪𐑑": "got" },
+      "leftOrder": ["𐑜𐑪𐑑", "𐑒𐑨𐑑", "𐑚𐑦𐑜", "𐑒𐑦𐑛"],
+      "rightOrder": ["big", "got", "cat", "kid"]
+    }
+  ]
+}
