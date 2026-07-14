@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Check, Lock } from 'lucide-react';
+import { Check, Lock, Unlock } from 'lucide-react';
 import { CHAPTERS, LESSON_META, type Chapter } from '@/lessons';
 import { ComingSoonCard } from '@/components/ComingSoonCard';
 import { SectionLabel } from '@/components/SectionLabel';
@@ -60,15 +60,28 @@ export function Dashboard({
   completedCount,
   onStartLesson,
   onContinueCurrent,
+  onUnlockThrough,
 }: {
   completedCount: number;
   onStartLesson: (id: number) => void;
   onContinueCurrent: () => void;
+  onUnlockThrough: (lessonId: number) => void;
 }) {
   const current = LESSON_META[Math.min(completedCount, LESSON_META.length - 1)];
   const currentNo = Math.min(completedCount + 1, LESSON_META.length);
   const overallPct = Math.round((completedCount / LESSON_META.length) * 100);
   const isMobile = useIsMobile();
+  // The chapter awaiting "unlock all" confirmation, if any.
+  const [confirm, setConfirm] = useState<{ title: string; lastId: number } | null>(null);
+
+  useEffect(() => {
+    if (!confirm) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setConfirm(null);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [confirm]);
 
   return (
     <div className="relative">
@@ -129,9 +142,24 @@ export function Dashboard({
             );
           }
 
+          const lastId = Math.max(...chapterLessons.map((l) => l.id));
+          const chapterDone = completedCount >= lastId;
+
           return (
             <div key={chapter.id} className="flex flex-col gap-7 mt-1.5">
-              <ChapterHeader chapter={chapter} />
+              <div className="flex items-center justify-between gap-3">
+                <ChapterHeader chapter={chapter} />
+                {!chapterDone && (
+                  <button
+                    onClick={() => setConfirm({ title: chapter.title, lastId })}
+                    title="Unlock this chapter"
+                    aria-label={`Unlock all lessons in ${chapter.title}`}
+                    className="flex-none inline-flex items-center justify-center h-8 w-8 rounded-btn border border-border bg-card text-muted-foreground transition-colors hover:text-accent hover:border-accent-border hover:bg-accent-soft"
+                  >
+                    <Unlock size={15} />
+                  </button>
+                )}
+              </div>
 
               <div className="flex flex-col items-center gap-11 relative pt-2">
                 <div className="absolute top-[45px] bottom-[60px] left-1/2 w-1 -translate-x-1/2 bg-border rounded-full z-0" />
@@ -198,6 +226,58 @@ export function Dashboard({
           );
         })}
       </div>
+
+      {confirm && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-6"
+          style={{ background: 'color-mix(in srgb, var(--foreground) 45%, transparent)' }}
+          onClick={() => setConfirm(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Unlock ${confirm.title}`}
+        >
+          <div
+            className="w-full max-w-[400px] rounded-card bg-card border border-border shadow-lg p-7 flex flex-col items-center gap-4 text-center"
+            style={{ animation: 'shvPop .2s ease' }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="w-12 h-12 rounded-full bg-accent-soft text-accent flex items-center justify-center">
+              <Unlock size={22} />
+            </div>
+            <h2 className="text-lg font-bold text-foreground m-0">
+              Unlock all of {confirm.title}?
+            </h2>
+            <p className="text-sm leading-relaxed text-muted-foreground m-0">
+              This marks every lesson in {confirm.title} as complete and skips the
+              practice — and honestly, earning it is half the fun.
+              <br />
+              <br />
+              That said, an app update can occasionally reset your progress, so if
+              you're just restoring where you already were, go right ahead.
+            </p>
+            <div className="flex gap-3 w-full mt-1">
+              <Button
+                variant="outline"
+                size="sm"
+                className="flex-1"
+                onClick={() => setConfirm(null)}
+              >
+                Cancel
+              </Button>
+              <Button
+                size="sm"
+                className="flex-1"
+                onClick={() => {
+                  onUnlockThrough(confirm.lastId);
+                  setConfirm(null);
+                }}
+              >
+                Unlock anyway
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

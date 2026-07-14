@@ -86,9 +86,9 @@ export function Footer({ onSetView }: { onSetView: (v: View) => void }) {
         ))}
       </div>
       <div className="max-w-[960px] mx-auto px-6 pt-0 pb-10 text-[13px] text-muted-foreground">
-        © 2026 Peep ·{' '}
+        © 2026 Peep · ver.{' '}
         <Chip className="font-mono text-[13px] font-medium text-muted-foreground">
-          v{__COMMIT_HASH__}
+          {__COMMIT_HASH__}
         </Chip>{' '}
         · A learning project by{' '}
         <a

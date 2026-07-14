@@ -14,6 +14,9 @@ type Status = 'active' | 'correct' | 'wrong';
 
 const PROGRESS_KEY = 'shavian-progress';
 
+// First-try accuracy needed to pass a lesson and unlock the next one.
+const PASS_THRESHOLD = 0.6;
+
 function useProgress() {
   const [completedCount, setCompletedCount] = useState(() => {
     const stored = Number(localStorage.getItem(PROGRESS_KEY));
@@ -127,18 +130,28 @@ export default function App() {
 
   const closeLesson = useCallback(() => setView('dashboard'), [setView]);
 
+  const unlockThrough = useCallback(
+    (lessonId: number) => {
+      setCompletedCount((c) => Math.max(c, lessonId));
+    },
+    [setCompletedCount]
+  );
+
   const continueNext = useCallback(() => {
     setExIndex((i) => {
       const nextIndex = i + 1;
       if (nextIndex >= exercises.length) {
+        const total = exercises.filter((e) => e.type !== 'teach' && !e.retry).length;
+        const passed = total === 0 || score / total >= PASS_THRESHOLD;
         setView('complete');
-        setCompletedCount((c) => Math.max(c, activeLessonId));
+        // Only unlock the next lesson when the pass threshold is met.
+        if (passed) setCompletedCount((c) => Math.max(c, activeLessonId));
         return i;
       }
       resetExerciseState();
       return nextIndex;
     });
-  }, [exercises.length, activeLessonId, setView, setCompletedCount, resetExerciseState]);
+  }, [exercises, score, activeLessonId, setView, setCompletedCount, resetExerciseState]);
 
   const checkAnswer = useCallback(() => {
     const ex = exercises[exIndex];
@@ -315,6 +328,10 @@ export default function App() {
   const currentExercise = exercises[exIndex];
   const activeLessonTitle =
     LESSON_META.find((l) => l.id === activeLessonId)?.title ?? '';
+  const gradeableTotal = exercises.filter(
+    (e) => e.type !== 'teach' && !e.retry
+  ).length;
+  const lessonPassed = gradeableTotal === 0 || score / gradeableTotal >= PASS_THRESHOLD;
 
   return (
     <div className="min-h-screen bg-background font-sans">
@@ -346,6 +363,7 @@ export default function App() {
           completedCount={completedCount}
           onStartLesson={startLesson}
           onContinueCurrent={continueCurrent}
+          onUnlockThrough={unlockThrough}
         />
       )}
 
@@ -385,8 +403,11 @@ export default function App() {
       {view === 'complete' && (
         <Complete
           score={score}
-          total={exercises.filter((e) => e.type !== 'teach' && !e.retry).length}
+          total={gradeableTotal}
+          passed={lessonPassed}
+          passThresholdPct={Math.round(PASS_THRESHOLD * 100)}
           onBack={closeLesson}
+          onRetry={() => startLesson(activeLessonId)}
         />
       )}
 
