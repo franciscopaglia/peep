@@ -1,5 +1,5 @@
 {
-  "id": 32,
+  "id": 33,
   "title": "Build Sentences II",
   "glyph": "𐑦𐑑 𐑦𐑟",
   "chapter": 2,
@@ -44,6 +44,16 @@
       "blanks": [1, 3],
       "bank": ["𐑒𐑸", "𐑓𐑸", "𐑚𐑸"],
       "correctLabel": "𐑞 𐑒𐑸 𐑦𐑟 𐑓𐑸"
+    },
+    {
+      "type": "cloze",
+      "caption": "Read the passage and fill the gaps",
+      "translation": "The car is here. It is better here.",
+      "words": ["𐑞", "𐑒𐑸", "𐑦𐑟", "𐑣𐑽", "𐑦𐑑", "𐑦𐑟", "𐑚𐑧𐑑𐑼", "𐑣𐑽"],
+      "stops": [3, 7],
+      "blanks": [1, 6],
+      "bank": ["𐑒𐑸", "𐑚𐑧𐑑𐑼", "𐑣𐑽"],
+      "correctLabel": "𐑞 𐑒𐑸 𐑦𐑟 𐑣𐑽 𐑦𐑑 𐑦𐑟 𐑚𐑧𐑑𐑼 𐑣𐑽"
     }
   ]
 }

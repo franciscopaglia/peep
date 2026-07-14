@@ -1,0 +1,153 @@
+{
+  "id": 30,
+  "title": "More Vowels",
+  "glyph": "𐑒𐑬",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "The last four vowels",
+      "body": "You've met most of the vowels already. Here are the final four sounds that finish the set: 𐑬, 𐑷, 𐑶 and 𐑭. Learn these and you'll know the whole alphabet."
+    },
+    {
+      "type": "teach",
+      "title": "OUT — 𐑬",
+      "body": "𐑬 is the sound in cow and out — say “ow!”. You'll see it in 𐑒𐑬 (cow) and 𐑯𐑬 (now)."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑒𐑬",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": ["cow", "key", "car", "cap"],
+      "correct": "cow",
+      "correctLabel": "cow"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑬𐑑",
+      "caption": "Type what this says",
+      "correct": "out",
+      "correctLabel": "out"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑯𐑬",
+      "caption": "Type what this says",
+      "correct": "now",
+      "correctLabel": "now"
+    },
+    {
+      "type": "build",
+      "prompt": "down",
+      "caption": "Build this word",
+      "tiles": ["𐑛", "𐑬", "𐑯", "𐑑", "𐑮"],
+      "answer": ["𐑛", "𐑬", "𐑯"],
+      "correctLabel": "𐑛𐑬𐑯"
+    },
+    {
+      "type": "teach",
+      "title": "AWE — 𐑷",
+      "body": "𐑷 is the long “aw” in law and saw. It sits in 𐑚𐑷𐑤 (ball) and 𐑒𐑷𐑤 (call)."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑤𐑷",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": ["law", "lay", "low", "let"],
+      "correct": "law",
+      "correctLabel": "law"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑷",
+      "caption": "Type what this says",
+      "correct": "saw",
+      "correctLabel": "saw"
+    },
+    {
+      "type": "build",
+      "prompt": "ball",
+      "caption": "Build this word",
+      "tiles": ["𐑚", "𐑷", "𐑤", "𐑬"],
+      "answer": ["𐑚", "𐑷", "𐑤"],
+      "correctLabel": "𐑚𐑷𐑤"
+    },
+    {
+      "type": "teach",
+      "title": "OIL — 𐑶",
+      "body": "𐑶 is the “oy” in boy and oil — as in 𐑑𐑶 (toy) and 𐑒𐑶𐑯 (coin)."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑚𐑶",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": ["boy", "bay", "buy", "bee"],
+      "correct": "boy",
+      "correctLabel": "boy"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑶",
+      "caption": "Type what this says",
+      "correct": "toy",
+      "correctLabel": "toy"
+    },
+    {
+      "type": "build",
+      "prompt": "coin",
+      "caption": "Build this word",
+      "tiles": ["𐑒", "𐑶", "𐑯", "𐑑"],
+      "answer": ["𐑒", "𐑶", "𐑯"],
+      "correctLabel": "𐑒𐑶𐑯"
+    },
+    {
+      "type": "teach",
+      "title": "AH — 𐑭",
+      "body": "𐑭 is the long, open “ah” — a doctor's “say ahh”. It's in 𐑐𐑭𐑥 (palm) and 𐑒𐑭𐑥 (calm)."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑐𐑭𐑥",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": ["palm", "pam", "pom", "pum"],
+      "correct": "palm",
+      "correctLabel": "palm"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑭𐑥",
+      "caption": "Type what this says",
+      "correct": "calm",
+      "correctLabel": "calm"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “cow”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑒𐑬", "𐑒𐑷", "𐑒𐑶", "𐑒𐑭"],
+      "correct": "𐑒𐑬",
+      "correctLabel": "𐑒𐑬"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑒𐑬": "cow", "𐑤𐑷": "law", "𐑚𐑶": "boy", "𐑐𐑭𐑥": "palm" },
+      "leftOrder": ["𐑒𐑬", "𐑤𐑷", "𐑚𐑶", "𐑐𐑭𐑥"],
+      "rightOrder": ["cow", "law", "boy", "palm"]
+    },
+    {
+      "type": "teach",
+      "title": "That's every sound",
+      "body": "𐑬, 𐑷, 𐑶, 𐑭 — that's the last of the vowels, and the whole Shavian alphabet. From here on it's all reading and writing practice."
+    }
+  ]
+}

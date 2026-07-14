@@ -22,7 +22,7 @@ Legend: ✅ shipped · 🚧 in progress · 🗓️ planned · 💡 idea / under 
 
 ### Practice
 
-Eight kinds of exercise keep every lesson varied:
+Nine kinds of exercise keep every lesson varied:
 
 | Type | What it does |
 | --- | --- |
@@ -34,6 +34,7 @@ Eight kinds of exercise keep every lesson varied:
 | `arrange` | Order word-tiles into a full sentence |
 | `complete` | Fill in a word's missing letter(s) from a tile bank |
 | `fill` | Choose the missing words to finish a sentence (some pre-filled) |
+| `cloze` | Read a short passage and fill its blanked words from context |
 
 - **Everything is randomized** — choice options, letter tiles, fill-in banks, and
   both match columns are shuffled on every load, and never render in their
@@ -78,8 +79,9 @@ exercise). The next step is to make sentence work deeper and more forgiving:
 - **🗓️ Guided arranging** — the `arrange` exercise gains optional **pre-filled
   anchors**: harder or not-yet-taught words are locked in place, and you slot the
   rest around them. Great for easing into longer sentences.
-- **💡 Cloze reading** — read a short Shavian passage with a few blanked words and
-  fill them in from context.
+- **✅ Cloze reading** (the `cloze` exercise) — read a short Shavian passage with
+  a few blanked words and fill them in from context; a supporting English
+  translation can be shown. Chapter 2's reading capstone.
 
 ### Richer word practice
 

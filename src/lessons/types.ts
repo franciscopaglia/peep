@@ -85,6 +85,19 @@ export type FillExercise = {
   retry?: boolean;
 };
 
+// Read a short passage and fill its blanked-out words from context.
+export type ClozeExercise = {
+  type: 'cloze';
+  caption?: string;
+  translation?: string; // optional English meaning, shown as support
+  words: string[]; // the passage, word by word
+  stops?: number[]; // word indices a sentence ends on (a period is shown after)
+  blanks: number[]; // indices into `words` that are blanked out, in reading order
+  bank: string[]; // word options to fill the blanks (correct words + distractors)
+  correctLabel: string;
+  retry?: boolean;
+};
+
 export type Exercise =
   | TeachExercise
   | ChoiceExercise
@@ -93,7 +106,8 @@ export type Exercise =
   | BuildExercise
   | ArrangeExercise
   | CompleteExercise
-  | FillExercise;
+  | FillExercise
+  | ClozeExercise;
 
 export type LessonFile = LessonMeta & {
   exercises: Exercise[];

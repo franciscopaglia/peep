@@ -10,6 +10,9 @@ export function Lesson({
   exercise,
   exIndex,
   exTotal,
+  gradedStep,
+  gradedTotal,
+  progressPct,
   lessonId,
   lessonTitle,
   status,
@@ -39,6 +42,9 @@ export function Lesson({
   exercise: Exercise;
   exIndex: number;
   exTotal: number;
+  gradedStep: number;
+  gradedTotal: number;
+  progressPct: number;
   lessonId: number;
   lessonTitle: string;
   status: Status;
@@ -72,17 +78,16 @@ export function Lesson({
   const isArrange = exercise.type === 'arrange';
   const isComplete = exercise.type === 'complete';
   const isFill = exercise.type === 'fill';
+  const isCloze = exercise.type === 'cloze';
   const isMatch = exercise.type === 'match';
   const isWrong = status === 'wrong';
 
   const blanksNeeded =
-    exercise.type === 'complete' || exercise.type === 'fill'
+    exercise.type === 'complete' ||
+    exercise.type === 'fill' ||
+    exercise.type === 'cloze'
       ? exercise.blanks.length
       : 0;
-
-  const progressPct = exTotal
-    ? Math.round(((exIndex + (status !== 'active' ? 1 : 0)) / exTotal) * 100)
-    : 0;
 
   const checkDisabled = isType
     ? typedValue.trim().length === 0
@@ -92,7 +97,7 @@ export function Lesson({
         ? buildSel.length === 0
         : isArrange
           ? arrangeSel.length === 0
-          : isComplete || isFill
+          : isComplete || isFill || isCloze
             ? fillSel.length !== blanksNeeded
             : true;
 
@@ -116,7 +121,7 @@ export function Lesson({
           />
         </div>
         <div className="flex-none text-[13px] font-semibold text-muted-foreground min-w-[44px] text-right">
-          {Math.min(exIndex + 1, exTotal)} / {exTotal}
+          {gradedStep} / {gradedTotal}
         </div>
         <ReportProblem
           issueUrl={lessonIssueUrl(lessonId, lessonTitle, Math.min(exIndex + 1, exTotal))}
@@ -472,6 +477,81 @@ export function Lesson({
                 );
               })}
             </div>
+            <div className="flex gap-2.5 flex-wrap justify-center max-w-[520px]">
+              {exercise.bank.map((word, i) => {
+                const used = fillSel.includes(i);
+                return (
+                  <button
+                    key={i}
+                    onClick={() => onFillAdd(i)}
+                    disabled={used || status !== 'active'}
+                    className="px-4 py-2.5 rounded-btn font-bold text-xl"
+                    style={{
+                      border: '2px solid var(--border)',
+                      background: used ? 'var(--locked-bg)' : 'var(--card)',
+                      color: used ? 'transparent' : 'var(--foreground)',
+                      cursor: used || status !== 'active' ? 'default' : 'pointer',
+                      boxShadow: used ? 'none' : 'var(--shadow-sm)',
+                    }}
+                  >
+                    {word}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {isCloze && exercise.type === 'cloze' && (
+          <div className="w-full flex flex-col items-center gap-7" style={{ animation: 'shvSlideUp .3s ease' }}>
+            <div className="text-sm text-muted-foreground">
+              {exercise.caption ?? 'Read the passage and fill the gaps'}
+            </div>
+            <div className="text-[26px] leading-[1.7] font-semibold text-foreground text-center max-w-[560px] flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1">
+              {exercise.words.map((word, wi) => {
+                const isStop = exercise.stops?.includes(wi);
+                const blankPos = exercise.blanks.indexOf(wi);
+                const content =
+                  blankPos === -1 ? (
+                    <span>{word}</span>
+                  ) : (
+                    (() => {
+                      const filled = blankPos < fillSel.length;
+                      return (
+                        <button
+                          onClick={() => filled && onFillRemove(blankPos)}
+                          className="inline-flex items-center justify-center h-[42px] min-w-[64px] px-2 rounded-btn align-middle"
+                          style={{
+                            border: `2px dashed ${status === 'active' ? (filled ? 'var(--accent-border)' : 'var(--border)') : isWrong ? 'var(--danger)' : 'var(--success)'}`,
+                            background: filled
+                              ? status === 'active'
+                                ? 'var(--accent-soft)'
+                                : isWrong
+                                  ? 'var(--danger-soft)'
+                                  : 'var(--success-soft)'
+                              : 'transparent',
+                            color: status === 'active' ? 'var(--accent)' : isWrong ? 'var(--danger)' : 'var(--success)',
+                            cursor: filled && status === 'active' ? 'pointer' : 'default',
+                          }}
+                        >
+                          {filled ? exercise.bank[fillSel[blankPos]] : ' '}
+                        </button>
+                      );
+                    })()
+                  );
+                return (
+                  <span key={wi} className="inline-flex items-center">
+                    {content}
+                    {isStop && <span>.</span>}
+                  </span>
+                );
+              })}
+            </div>
+            {exercise.translation && (
+              <div className="text-sm italic text-muted-foreground max-w-[440px]">
+                “{exercise.translation}”
+              </div>
+            )}
             <div className="flex gap-2.5 flex-wrap justify-center max-w-[520px]">
               {exercise.bank.map((word, i) => {
                 const used = fillSel.includes(i);

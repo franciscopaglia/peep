@@ -75,7 +75,11 @@ export function shuffleExerciseOptions(exercise: Exercise): Exercise {
   if (exercise.type === 'build' || exercise.type === 'arrange') {
     return { ...exercise, tiles: shuffle(exercise.tiles) };
   }
-  if (exercise.type === 'complete' || exercise.type === 'fill') {
+  if (
+    exercise.type === 'complete' ||
+    exercise.type === 'fill' ||
+    exercise.type === 'cloze'
+  ) {
     return { ...exercise, bank: shuffle(exercise.bank) };
   }
   if (exercise.type === 'match') {

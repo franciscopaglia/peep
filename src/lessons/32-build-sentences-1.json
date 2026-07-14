@@ -1,5 +1,5 @@
 {
-  "id": 31,
+  "id": 32,
   "title": "Build Sentences I",
   "glyph": "𐑞 𐑦𐑟",
   "chapter": 2,
@@ -53,6 +53,16 @@
       "blanks": [1],
       "bank": ["𐑦", "𐑨", "𐑳"],
       "correctLabel": "𐑚𐑦𐑜"
+    },
+    {
+      "type": "cloze",
+      "caption": "Read the passage and fill the gaps",
+      "translation": "The car is far. She has a big car.",
+      "words": ["𐑞", "𐑒𐑸", "𐑦𐑟", "𐑓𐑸", "𐑖𐑰", "𐑣𐑨𐑟", "𐑩", "𐑚𐑦𐑜", "𐑒𐑸"],
+      "stops": [3, 8],
+      "blanks": [3, 7],
+      "bank": ["𐑓𐑸", "𐑚𐑦𐑜", "𐑒𐑸"],
+      "correctLabel": "𐑞 𐑒𐑸 𐑦𐑟 𐑓𐑸 𐑖𐑰 𐑣𐑨𐑟 𐑩 𐑚𐑦𐑜 𐑒𐑸"
     }
   ]
 }

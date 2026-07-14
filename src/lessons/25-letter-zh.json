@@ -1,18 +1,18 @@
 {
   "id": 25,
-  "title": "Letter: ZH",
-  "glyph": "𐑠",
+  "title": "Letters: ZH & TH",
+  "glyph": "𐑠𐑔",
   "chapter": 2,
   "exercises": [
     {
       "type": "teach",
       "title": "Welcome to Chapter 2",
-      "body": "You've read the whole alphabet's core sounds. This chapter finishes the job with the rarest letters, then moves on to reading full sentences with confidence."
+      "body": "You've read the whole alphabet's core sounds. This chapter finishes the job with the last few letters, then moves on to reading full sentences with confidence. First, two leftover consonants: 𐑠 and 𐑔."
     },
     {
       "type": "teach",
-      "title": "Meet measure",
-      "body": "The letter for measure is 𐑠 — the “zh” sound buried in the middle of measure, vision, and treasure. It's one of the rarest sounds in English, so you'll spot it far less often than its neighbors."
+      "title": "Meet measure — 𐑠",
+      "body": "The letter for measure is 𐑠 — the “zh” sound buried in the middle of measure, vision and treasure. It's one of the rarest sounds in English, so you'll spot it far less often than its neighbours."
     },
     {
       "type": "choice",
@@ -33,6 +33,98 @@
       "options": ["ZH as in measure", "SH as in sure", "J as in judge", "Z as in zoo"],
       "correct": "ZH as in measure",
       "correctLabel": "ZH as in measure"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑝𐑦𐑠𐑩𐑯",
+      "caption": "Type what this word says",
+      "correct": "vision",
+      "correctLabel": "vision"
+    },
+    {
+      "type": "teach",
+      "title": "Meet thigh — 𐑔",
+      "body": "𐑔 is the soft, breathy “th” in thin, thick and moth. Its voiced partner is 𐑞, which you already know from the word the — same mouth shape, but 𐑞 buzzes and 𐑔 doesn't."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which letter makes the breathy “th” in “thin”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑔", "𐑞", "𐑑", "𐑕"],
+      "correct": "𐑔",
+      "correctLabel": "𐑔"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑔",
+      "caption": "What sound does this make?",
+      "optionIsGlyph": false,
+      "options": ["TH as in thin", "TH as in the", "T as in top", "F as in fee"],
+      "correct": "TH as in thin",
+      "correctLabel": "TH as in thin"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑔𐑦𐑯",
+      "caption": "Type what this says",
+      "correct": "thin",
+      "correctLabel": "thin"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑔𐑦𐑒",
+      "caption": "Type what this says",
+      "correct": "thick",
+      "correctLabel": "thick"
+    },
+    {
+      "type": "build",
+      "prompt": "moth",
+      "caption": "Build this word",
+      "tiles": ["𐑥", "𐑪", "𐑔", "𐑚"],
+      "answer": ["𐑥", "𐑪", "𐑔"],
+      "correctLabel": "𐑥𐑪𐑔"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑚𐑴𐑔",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": ["both", "boat", "boot", "bought"],
+      "correct": "both",
+      "correctLabel": "both"
+    },
+    {
+      "type": "teach",
+      "title": "𐑔 vs 𐑞",
+      "body": "The pair is easy to mix up: 𐑔 is the quiet “th” in thin and teeth, while 𐑞 is the buzzing “th” in the and this. Say “thin” then “this” and feel the difference in your throat."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑰𐑔",
+      "caption": "Type what this says",
+      "correct": "teeth",
+      "correctLabel": "teeth"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑔𐑦𐑯": "thin", "𐑔𐑦𐑒": "thick", "𐑥𐑪𐑔": "moth", "𐑑𐑰𐑔": "teeth" },
+      "leftOrder": ["𐑔𐑦𐑯", "𐑔𐑦𐑒", "𐑥𐑪𐑔", "𐑑𐑰𐑔"],
+      "rightOrder": ["thin", "thick", "moth", "teeth"]
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “math”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑥𐑨𐑔", "𐑥𐑨𐑑", "𐑥𐑨𐑕", "𐑥𐑧𐑔"],
+      "correct": "𐑥𐑨𐑔",
+      "correctLabel": "𐑥𐑨𐑔"
     }
   ]
 }

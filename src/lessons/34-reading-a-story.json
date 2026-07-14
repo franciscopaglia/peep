@@ -1,5 +1,5 @@
 {
-  "id": 33,
+  "id": 34,
   "title": "Reading a Story",
   "glyph": "·𐑕𐑨𐑥",
   "chapter": 2,
@@ -7,7 +7,7 @@
     {
       "type": "teach",
       "title": "One last story",
-      "body": "Time to read a tiny story, one sentence at a time: ·𐑕𐑨𐑥 𐑣𐑨𐑟 𐑩 𐑚𐑦𐑜 𐑛𐑪𐑜. 𐑞 𐑛𐑪𐑜 𐑦𐑟 𐑒𐑿𐑑. 𐑞𐑱 𐑮𐑳𐑯 𐑑𐑵 𐑞 𐑒𐑸."
+      "body": "Time to read a tiny story, one sentence at a time: [[·𐑕𐑨𐑥 𐑣𐑨𐑟 𐑩 𐑚𐑦𐑜 𐑛𐑪𐑜]]. [[𐑞 𐑛𐑪𐑜 𐑦𐑟 𐑒𐑿𐑑]]. [[𐑞𐑱 𐑮𐑳𐑯 𐑑𐑵 𐑞 𐑒𐑸]]."
     },
     {
       "type": "choice",
@@ -50,6 +50,16 @@
       "blanks": [1, 3],
       "bank": ["𐑛𐑪𐑜", "𐑒𐑿𐑑", "𐑒𐑨𐑑"],
       "correctLabel": "𐑞 𐑛𐑪𐑜 𐑦𐑟 𐑒𐑿𐑑"
+    },
+    {
+      "type": "cloze",
+      "caption": "Read the whole story and fill the gaps",
+      "translation": "Sam has a big dog. The dog is cute. They run to the car.",
+      "words": ["·𐑕𐑨𐑥", "𐑣𐑨𐑟", "𐑩", "𐑚𐑦𐑜", "𐑛𐑪𐑜", "𐑞", "𐑛𐑪𐑜", "𐑦𐑟", "𐑒𐑿𐑑", "𐑞𐑱", "𐑮𐑳𐑯", "𐑑𐑵", "𐑞", "𐑒𐑸"],
+      "stops": [4, 8, 13],
+      "blanks": [3, 8, 13],
+      "bank": ["𐑚𐑦𐑜", "𐑒𐑿𐑑", "𐑒𐑸", "𐑒𐑨𐑑"],
+      "correctLabel": "·𐑕𐑨𐑥 𐑣𐑨𐑟 𐑩 𐑚𐑦𐑜 𐑛𐑪𐑜 𐑞 𐑛𐑪𐑜 𐑦𐑟 𐑒𐑿𐑑 𐑞𐑱 𐑮𐑳𐑯 𐑑𐑵 𐑞 𐑒𐑸"
     },
     {
       "type": "teach",

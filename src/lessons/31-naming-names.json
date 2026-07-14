@@ -1,0 +1,128 @@
+{
+  "id": 31,
+  "title": "Naming Names",
+  "glyph": "·𐑕",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "The naming dot",
+      "body": "Shavian has no capital letters at all — so how do you spell a name? With a small dot right before the word: ·Sam, ·Ann, ·London. The dot is the only clue that a word is a proper name — a person or a place."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "·𐑕𐑨𐑥",
+      "caption": "What does this say?",
+      "optionIsGlyph": false,
+      "options": ["Sam", "same", "sum", "Sami"],
+      "correct": "Sam",
+      "correctLabel": "Sam"
+    },
+    {
+      "type": "type",
+      "prompt": "·𐑨𐑯",
+      "caption": "Type what this says",
+      "correct": "Ann",
+      "correctLabel": "Ann"
+    },
+    {
+      "type": "type",
+      "prompt": "·𐑑𐑪𐑥",
+      "caption": "Type what this says",
+      "correct": "Tom",
+      "correctLabel": "Tom"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "·𐑚𐑧𐑯",
+      "caption": "Which name is this?",
+      "optionIsGlyph": false,
+      "options": ["Ben", "Ban", "Bin", "Bun"],
+      "correct": "Ben",
+      "correctLabel": "Ben"
+    },
+    {
+      "type": "type",
+      "prompt": "·𐑒𐑦𐑥",
+      "caption": "Type this name",
+      "correct": "Kim",
+      "correctLabel": "Kim"
+    },
+    {
+      "type": "type",
+      "prompt": "·𐑥𐑧𐑜",
+      "caption": "Type this name",
+      "correct": "Meg",
+      "correctLabel": "Meg"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which one spells the name “Tom”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["·𐑑𐑪𐑥", "·𐑑𐑦𐑥", "·𐑑𐑨𐑥", "·𐑛𐑪𐑥"],
+      "correct": "·𐑑𐑪𐑥",
+      "correctLabel": "·𐑑𐑪𐑥"
+    },
+    {
+      "type": "match",
+      "pairs": { "·𐑕𐑨𐑥": "Sam", "·𐑚𐑧𐑯": "Ben", "·𐑒𐑦𐑥": "Kim", "·𐑥𐑧𐑜": "Meg" },
+      "leftOrder": ["·𐑕𐑨𐑥", "·𐑚𐑧𐑯", "·𐑒𐑦𐑥", "·𐑥𐑧𐑜"],
+      "rightOrder": ["Sam", "Ben", "Kim", "Meg"]
+    },
+    {
+      "type": "type",
+      "prompt": "·𐑚𐑪𐑚",
+      "caption": "Type this name",
+      "correct": "Bob",
+      "correctLabel": "Bob"
+    },
+    {
+      "type": "teach",
+      "title": "Names in sentences",
+      "body": "Names work just like any other word in a sentence — they just keep their dot. Build a few: you'll get an English sentence and a pool of Shavian words to tap in order."
+    },
+    {
+      "type": "arrange",
+      "promptEn": "Sam is here",
+      "tiles": ["·𐑕𐑨𐑥", "𐑦𐑟", "𐑣𐑽", "𐑞"],
+      "answer": ["·𐑕𐑨𐑥", "𐑦𐑟", "𐑣𐑽"],
+      "correctLabel": "·𐑕𐑨𐑥 𐑦𐑟 𐑣𐑽"
+    },
+    {
+      "type": "arrange",
+      "promptEn": "Ben has a dog",
+      "tiles": ["·𐑚𐑧𐑯", "𐑣𐑨𐑟", "𐑩", "𐑛𐑪𐑜", "𐑒𐑨𐑑"],
+      "answer": ["·𐑚𐑧𐑯", "𐑣𐑨𐑟", "𐑩", "𐑛𐑪𐑜"],
+      "correctLabel": "·𐑚𐑧𐑯 𐑣𐑨𐑟 𐑩 𐑛𐑪𐑜"
+    },
+    {
+      "type": "type",
+      "prompt": "·𐑒𐑦𐑥 𐑦𐑟 𐑣𐑽",
+      "caption": "Type this whole sentence",
+      "correct": "Kim is here",
+      "correctLabel": "Kim is here"
+    },
+    {
+      "type": "fill",
+      "promptEn": "Meg has a cat",
+      "words": ["·𐑥𐑧𐑜", "𐑣𐑨𐑟", "𐑩", "𐑒𐑨𐑑"],
+      "blanks": [0, 3],
+      "bank": ["·𐑥𐑧𐑜", "𐑒𐑨𐑑", "𐑛𐑪𐑜"],
+      "correctLabel": "·𐑥𐑧𐑜 𐑣𐑨𐑟 𐑩 𐑒𐑨𐑑"
+    },
+    {
+      "type": "cloze",
+      "caption": "Read the names and fill the gaps",
+      "translation": "Sam is here. Ann is here too.",
+      "words": ["·𐑕𐑨𐑥", "𐑦𐑟", "𐑣𐑽", "·𐑨𐑯", "𐑦𐑟", "𐑣𐑽", "𐑑𐑵"],
+      "stops": [2, 6],
+      "blanks": [0, 3],
+      "bank": ["·𐑕𐑨𐑥", "·𐑨𐑯", "·𐑑𐑪𐑥"],
+      "correctLabel": "·𐑕𐑨𐑥 𐑦𐑟 𐑣𐑽 ·𐑨𐑯 𐑦𐑟 𐑣𐑽 𐑑𐑵"
+    }
+  ]
+}

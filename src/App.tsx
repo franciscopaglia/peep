@@ -8,14 +8,12 @@ import { Dashboard } from '@/views/Dashboard';
 import { Lesson } from '@/views/Lesson';
 import { Complete } from '@/views/Complete';
 import { LESSON_META, getLessonExercises, shuffleExerciseOptions, type Exercise } from '@/lessons';
+import { isCorrect, gradeableCount, lessonPassed, PASS_THRESHOLD } from '@/lib/grading';
 import type { View } from '@/types';
 
 type Status = 'active' | 'correct' | 'wrong';
 
 const PROGRESS_KEY = 'shavian-progress';
-
-// First-try accuracy needed to pass a lesson and unlock the next one.
-const PASS_THRESHOLD = 0.6;
 
 function useProgress() {
   const [completedCount, setCompletedCount] = useState(() => {
@@ -141,8 +139,7 @@ export default function App() {
     setExIndex((i) => {
       const nextIndex = i + 1;
       if (nextIndex >= exercises.length) {
-        const total = exercises.filter((e) => e.type !== 'teach' && !e.retry).length;
-        const passed = total === 0 || score / total >= PASS_THRESHOLD;
+        const passed = lessonPassed(score, gradeableCount(exercises));
         setView('complete');
         // Only unlock the next lesson when the pass threshold is met.
         if (passed) setCompletedCount((c) => Math.max(c, activeLessonId));
@@ -156,22 +153,13 @@ export default function App() {
   const checkAnswer = useCallback(() => {
     const ex = exercises[exIndex];
     if (!ex) return;
-    let correct = false;
-    if (ex.type === 'choice') correct = selected === ex.correct;
-    if (ex.type === 'type')
-      correct = typedValue.trim().toLowerCase() === ex.correct.toLowerCase();
-    if (ex.type === 'build')
-      correct = buildSel.map((i) => ex.tiles[i]).join('') === ex.answer.join('');
-    if (ex.type === 'arrange')
-      correct = arrangeSel.map((i) => ex.tiles[i]).join(' ') === ex.answer.join(' ');
-    if (ex.type === 'complete')
-      correct =
-        fillSel.map((i) => ex.bank[i]).join('') ===
-        ex.blanks.map((b) => ex.word[b]).join('');
-    if (ex.type === 'fill')
-      correct =
-        fillSel.map((i) => ex.bank[i]).join(' ') ===
-        ex.blanks.map((b) => ex.words[b]).join(' ');
+    const correct = isCorrect(ex, {
+      selected,
+      typedValue,
+      buildSel,
+      arrangeSel,
+      fillSel,
+    });
 
     setStatus(correct ? 'correct' : 'wrong');
     if (correct && !ex.retry) setScore((s) => s + 1);
@@ -235,7 +223,11 @@ export default function App() {
     (i: number) => {
       if (status !== 'active') return;
       const ex = exercises[exIndex];
-      if (!ex || (ex.type !== 'complete' && ex.type !== 'fill')) return;
+      if (
+        !ex ||
+        (ex.type !== 'complete' && ex.type !== 'fill' && ex.type !== 'cloze')
+      )
+        return;
       setFillSel((s) =>
         s.includes(i) || s.length >= ex.blanks.length ? s : [...s, i]
       );
@@ -316,7 +308,7 @@ export default function App() {
               ? buildSel.length > 0
               : ex.type === 'arrange'
                 ? arrangeSel.length > 0
-                : ex.type === 'complete' || ex.type === 'fill'
+                : ex.type === 'complete' || ex.type === 'fill' || ex.type === 'cloze'
                   ? fillSel.length === ex.blanks.length
                   : false;
       if (canCheck) checkAnswer();
@@ -328,10 +320,25 @@ export default function App() {
   const currentExercise = exercises[exIndex];
   const activeLessonTitle =
     LESSON_META.find((l) => l.id === activeLessonId)?.title ?? '';
-  const gradeableTotal = exercises.filter(
-    (e) => e.type !== 'teach' && !e.retry
-  ).length;
-  const lessonPassed = gradeableTotal === 0 || score / gradeableTotal >= PASS_THRESHOLD;
+  const gradeableTotal = gradeableCount(exercises);
+  const passed = lessonPassed(score, gradeableTotal);
+
+  // The lesson counter / progress bar count only graded exercises (skip teach
+  // cards) so the "X / Y" during the lesson matches the "score / Y" at the end.
+  const gradedBefore = exercises
+    .slice(0, exIndex)
+    .filter((e) => e.type !== 'teach' && !e.retry).length;
+  const currentIsGraded = currentExercise ? currentExercise.type !== 'teach' : false;
+  const gradedStep =
+    Math.min(gradedBefore + (currentIsGraded ? 1 : 0), gradeableTotal) ||
+    (gradeableTotal ? 1 : 0);
+  const gradedProgressPct = gradeableTotal
+    ? Math.round(
+        ((gradedBefore + (currentIsGraded && status !== 'active' ? 1 : 0)) /
+          gradeableTotal) *
+          100
+      )
+    : 0;
 
   return (
     <div className="min-h-screen bg-background font-sans">
@@ -372,6 +379,9 @@ export default function App() {
           exercise={currentExercise}
           exIndex={exIndex}
           exTotal={exercises.length}
+          gradedStep={gradedStep}
+          gradedTotal={gradeableTotal}
+          progressPct={gradedProgressPct}
           lessonId={activeLessonId}
           lessonTitle={activeLessonTitle}
           status={status}
@@ -404,7 +414,7 @@ export default function App() {
         <Complete
           score={score}
           total={gradeableTotal}
-          passed={lessonPassed}
+          passed={passed}
           passThresholdPct={Math.round(PASS_THRESHOLD * 100)}
           onBack={closeLesson}
           onRetry={() => startLesson(activeLessonId)}
