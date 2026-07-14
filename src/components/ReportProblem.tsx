@@ -7,12 +7,14 @@ import { Button } from '@/components/Button';
  * GitHub's issue form (which is jargon-heavy and needs an account), it first
  * shows a short, plain-language explanation of what will happen.
  *
- * Used in two places: an inline pill inside lessons (with the exercise
- * pre-filled), and an icon-only button in the header for anything else.
+ * Used in a few places: an inline pill inside lessons (with the exercise
+ * pre-filled), an icon-only button in the header, and a plain text link in the
+ * footer — all opening the same modal.
  */
 export function ReportProblem({
   issueUrl,
   trigger = 'pill',
+  label = 'Report a problem',
   heading = 'Spotted a mistake?',
   body = (
     <>
@@ -26,7 +28,8 @@ export function ReportProblem({
   tooltip = 'Report a problem',
 }: {
   issueUrl: string;
-  trigger?: 'pill' | 'icon';
+  trigger?: 'pill' | 'icon' | 'link';
+  label?: string;
   heading?: string;
   body?: ReactNode;
   tooltip?: string;
@@ -59,6 +62,14 @@ export function ReportProblem({
         >
           <Flag size={17} />
         </button>
+      ) : trigger === 'link' ? (
+        <button
+          type="button"
+          onClick={() => setOpen(true)}
+          className="text-sm text-muted-foreground bg-transparent border-none p-0 cursor-pointer text-left transition-colors hover:text-accent"
+        >
+          {label}
+        </button>
       ) : (
         <button
           type="button"
@@ -67,7 +78,7 @@ export function ReportProblem({
           className="flex-none inline-flex items-center gap-1.5 h-8 px-3 rounded-btn border border-border bg-card text-[13px] font-medium text-muted-foreground transition-colors hover:text-accent hover:border-accent-border hover:bg-accent-soft"
         >
           <Flag size={14} />
-          <span className="hidden sm:inline">Report a problem</span>
+          <span className="hidden sm:inline">{label}</span>
         </button>
       )}
 

@@ -61,13 +61,39 @@ export type ArrangeExercise = {
   retry?: boolean;
 };
 
+// Complete a word by filling in its missing letter(s) from a bank of tiles.
+export type CompleteExercise = {
+  type: 'complete';
+  prompt: string; // the English word being completed
+  caption?: string;
+  word: string[]; // the full target word, letter by letter
+  blanks: number[]; // indices into `word` that are blanked out, in reading order
+  bank: string[]; // letter options to fill the blanks (correct letters + distractors)
+  correctLabel: string;
+  retry?: boolean;
+};
+
+// Fill a sentence by choosing the missing Shavian words; some words are pre-filled.
+export type FillExercise = {
+  type: 'fill';
+  promptEn: string; // the English sentence
+  caption?: string;
+  words: string[]; // the full Shavian sentence, word by word
+  blanks: number[]; // indices into `words` that are blanked out, in reading order
+  bank: string[]; // word options to fill the blanks (correct words + distractors)
+  correctLabel: string;
+  retry?: boolean;
+};
+
 export type Exercise =
   | TeachExercise
   | ChoiceExercise
   | TypeExercise
   | MatchExercise
   | BuildExercise
-  | ArrangeExercise;
+  | ArrangeExercise
+  | CompleteExercise
+  | FillExercise;
 
 export type LessonFile = LessonMeta & {
   exercises: Exercise[];

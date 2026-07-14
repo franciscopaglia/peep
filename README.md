@@ -40,7 +40,7 @@ Lessons live as plain **JSON data files** — the code just renders them — whi
 | **Chapter 2** | Reading Fluency | 9 lessons — the ʒ letter, r-coloured vowels, names, and sentence building |
 | **Chapter 3** | *Coming soon* | — |
 
-Six kinds of exercise keep practice varied:
+Eight kinds of exercise keep practice varied:
 
 | Type | What it does |
 | --- | --- |
@@ -50,6 +50,8 @@ Six kinds of exercise keep practice varied:
 | `match` | Pair each symbol with its word |
 | `build` | Assemble a word from letter tiles |
 | `arrange` | Order word-tiles into a full sentence |
+| `complete` | Fill in a word's missing letter(s) from a tile bank |
+| `fill` | Choose the missing words to finish a sentence (some pre-filled) |
 
 ## Getting started
 

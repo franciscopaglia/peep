@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Check, Lock } from 'lucide-react';
 import { CHAPTERS, LESSON_META, type Chapter } from '@/lessons';
 import { ComingSoonCard } from '@/components/ComingSoonCard';
@@ -6,17 +7,18 @@ import { Button } from '@/components/Button';
 
 const PATTERN_GLYPHS = ['𐑐', '𐑑', '𐑒', '𐑚', '𐑤', '𐑯', '𐑮', '𐑳', '𐑦', '𐑧'];
 
-function buildPatternSvg() {
-  const cells = [
-    [20, 30],
-    [95, 15],
-    [150, 60],
-    [40, 100],
-    [110, 130],
-    [10, 170],
-    [160, 190],
-    [70, 220],
-  ];
+const PATTERN_CELLS = [
+  [20, 30],
+  [95, 15],
+  [150, 60],
+  [40, 100],
+  [110, 130],
+  [10, 170],
+  [160, 190],
+  [70, 220],
+];
+
+function buildPatternSvg(cells: number[][]) {
   const glyphs = cells
     .map(
       ([x, y], i) =>
@@ -27,7 +29,23 @@ function buildPatternSvg() {
   return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
 }
 
-const PATTERN_BG = buildPatternSvg();
+const PATTERN_BG = buildPatternSvg(PATTERN_CELLS);
+// Lighten the effect on small screens: 25% fewer glyphs per tile.
+const PATTERN_BG_MOBILE = buildPatternSvg(
+  PATTERN_CELLS.slice(0, Math.round(PATTERN_CELLS.length * 0.75))
+);
+
+function useIsMobile(breakpoint = 640) {
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth < breakpoint);
+  useEffect(() => {
+    const mq = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);
+    const onChange = () => setIsMobile(mq.matches);
+    onChange();
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, [breakpoint]);
+  return isMobile;
+}
 
 function ChapterHeader({ chapter }: { chapter: Chapter }) {
   return (
@@ -50,13 +68,14 @@ export function Dashboard({
   const current = LESSON_META[Math.min(completedCount, LESSON_META.length - 1)];
   const currentNo = Math.min(completedCount + 1, LESSON_META.length);
   const overallPct = Math.round((completedCount / LESSON_META.length) * 100);
+  const isMobile = useIsMobile();
 
   return (
     <div className="relative">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: PATTERN_BG,
+          backgroundImage: isMobile ? PATTERN_BG_MOBILE : PATTERN_BG,
           backgroundRepeat: 'repeat',
           backgroundSize: '180px 240px',
           animation: 'shvDrift 90s linear infinite',
@@ -103,7 +122,9 @@ export function Dashboard({
             return (
               <div key={chapter.id} className="flex flex-col gap-4 mt-1.5">
                 <ChapterHeader chapter={chapter} />
-                <ComingSoonCard body="We're still writing Chapter 3. Finish Chapter 2 and check back soon." />
+                <ComingSoonCard
+                  body={chapter.blurb ?? 'More lessons are on the way — check back soon.'}
+                />
               </div>
             );
           }

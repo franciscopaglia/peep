@@ -22,7 +22,7 @@ Legend: ✅ shipped · 🚧 in progress · 🗓️ planned · 💡 idea / under 
 
 ### Practice
 
-Six kinds of exercise keep every lesson varied:
+Eight kinds of exercise keep every lesson varied:
 
 | Type | What it does |
 | --- | --- |
@@ -32,10 +32,12 @@ Six kinds of exercise keep every lesson varied:
 | `match` | Pair each symbol with its word |
 | `build` | Assemble a word from letter tiles |
 | `arrange` | Order word-tiles into a full sentence |
+| `complete` | Fill in a word's missing letter(s) from a tile bank |
+| `fill` | Choose the missing words to finish a sentence (some pre-filled) |
 
-- **Everything is randomized** — choice options, letter tiles, and both match
-  columns are shuffled on every load, and never render in their authored order,
-  so nothing can be solved by tapping straight through.
+- **Everything is randomized** — choice options, letter tiles, fill-in banks, and
+  both match columns are shuffled on every load, and never render in their
+  authored order, so nothing can be solved by tapping straight through.
 - **Instant feedback** with a gentle retry: miss one and it comes back later in
   the lesson, reshuffled.
 - **Skip** anything you're stuck on.
@@ -69,15 +71,31 @@ Six kinds of exercise keep every lesson varied:
 Chapter 2 already has you *ordering* word-tiles into a sentence (the `arrange`
 exercise). The next step is to make sentence work deeper and more forgiving:
 
-- **🗓️ Fill-the-sentence** — you're shown an English sentence and a bank of
-  Shavian words, and you pick the words that spell it out. Some slots come
-  **pre-filled** (for example, words using letters not yet taught), so you only
-  ever choose from what you know.
+- **✅ Fill-the-sentence** (the `fill` exercise) — you're shown an English
+  sentence and a bank of Shavian words, and you pick the words that spell it out.
+  Some slots come **pre-filled** (for example, words using letters not yet
+  taught), so you only ever choose from what you know.
 - **🗓️ Guided arranging** — the `arrange` exercise gains optional **pre-filled
   anchors**: harder or not-yet-taught words are locked in place, and you slot the
   rest around them. Great for easing into longer sentences.
 - **💡 Cloze reading** — read a short Shavian passage with a few blanked words and
   fill them in from context.
+
+### Richer word practice
+
+Between reading single letters and ordering whole sentences sits the **word** —
+the level that makes reading really click. New exercise types planned here:
+
+- **✅ Complete the word** (the `complete` exercise) — a Shavian word appears
+  with one or more letters blanked out (e.g. `𐑒_𐑑` for *cat*), and you fill the
+  gaps from a small bank of letters. It cements full-word spelling once the
+  individual letters are known, and bridges nicely between the `build` exercise
+  and reading a word on sight. Not-yet-taught letters can be left pre-filled so
+  you only ever choose from what you've learned.
+- **💡 Fix the spelling** — a word is shown with one letter swapped for a wrong
+  one; spot it and correct it. Great for sharpening letter-by-letter attention.
+- **💡 Word dictation** — hear a word spoken (ties into the pronunciation
+  helpers) and build it letter by letter, no English prompt shown.
 
 ### Video lessons
 
@@ -96,16 +114,31 @@ exercise). The next step is to make sentence work deeper and more forgiving:
   into the "one alphabet, many accents" idea already covered in About.
 - **💡 Speak-it-back** — optional microphone practice to check your pronunciation.
 
-### More chapters, more content
+### The five-chapter arc
 
-- **🚧 Chapter 3** — currently a "coming soon" placeholder on the path; being
-  written now.
-- **🗓️ Beyond the basics** — punctuation and abbreviations, numbers and dates,
-  the common ligatures, and the standard shorthand spellings (`the`, `of`,
-  `and`, `to`, `for`).
-- **🗓️ Real reading** — longer graded passages, short stories and dialogue as
-  reading fluency grows.
-- **💡 Writing track** — go the other way: given English, write it in Shavian.
+The curriculum is planned as **five chapters**, each a distinct *mode* rather
+than just more lessons. The progression runs **learn letters → read words →
+read real text → write → master**, and every chapter assumes the one before it,
+so nothing re-teaches what came earlier.
+
+- **✅ Chapter 1 — The Alphabet** *(shipped · 24 lessons)* — all 48 letters, a
+  pair at a time, blending into first words.
+- **✅ Chapter 2 — Reading Fluency** *(shipped · 9 lessons)* — the `ʒ` letter, the
+  r-coloured vowels, the naming dot, sentence building, and a first short story.
+- **🚧 Chapter 3 — Reading in the Wild** *(placeholder — to be written)* — you can
+  read sentences; now read *published* Shavian. Longer, unassisted passages and
+  dialogue (no word banks), plus the mechanics that make real text look
+  different from sounded-out spelling: ligatures, the standard shorthand words
+  (`the`, `of`, `and`, `to`, `for`), punctuation, numbers and dates.
+- **🗓️ Chapter 4 — Writing Shavian** *(placeholder — to be scoped)* — the reverse
+  direction: given English, spell it in Shavian. Its own chapter because writing
+  needs rules reading doesn't — schwa vs. full vowels under stress, the fixed
+  spellings, dropping apostrophes, and telling homophones apart (their/there,
+  to/too).
+- **💡 Chapter 5 — Fluency & Beyond** *(placeholder — ideas only)* — mastery and
+  range: timed or self-paced reading, longer stories and real documents, accents
+  & variation (one spelling across RP and rhotic speech), free-writing prompts,
+  and a capstone.
 
 ### Quality-of-life
 

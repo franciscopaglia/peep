@@ -16,12 +16,38 @@ export const LESSON_META: LessonMeta[] = LESSONS.map(({ id, title, glyph, chapte
   chapter,
 }));
 
-export type Chapter = { id: number; title: string; subtitle: string; comingSoon?: boolean };
+export type Chapter = {
+  id: number;
+  title: string;
+  subtitle: string;
+  comingSoon?: boolean;
+  blurb?: string;
+};
 
 export const CHAPTERS: Chapter[] = [
   { id: 1, title: 'Chapter 1', subtitle: 'The Alphabet' },
   { id: 2, title: 'Chapter 2', subtitle: 'Reading Fluency' },
-  { id: 3, title: 'Chapter 3', subtitle: 'Coming soon', comingSoon: true },
+  {
+    id: 3,
+    title: 'Chapter 3',
+    subtitle: 'Reading in the Wild',
+    comingSoon: true,
+    blurb: 'Longer passages and dialogue, plus the ligatures and shorthand words that make real Shavian text tick.',
+  },
+  {
+    id: 4,
+    title: 'Chapter 4',
+    subtitle: 'Writing Shavian',
+    comingSoon: true,
+    blurb: 'Turn it around — spell English in Shavian, with the rules that writing needs.',
+  },
+  {
+    id: 5,
+    title: 'Chapter 5',
+    subtitle: 'Fluency & Beyond',
+    comingSoon: true,
+    blurb: 'Speed, longer stories, accents, and free writing — putting it all together.',
+  },
 ];
 
 function shuffle<T>(items: T[]): T[] {
@@ -48,6 +74,9 @@ export function shuffleExerciseOptions(exercise: Exercise): Exercise {
   }
   if (exercise.type === 'build' || exercise.type === 'arrange') {
     return { ...exercise, tiles: shuffle(exercise.tiles) };
+  }
+  if (exercise.type === 'complete' || exercise.type === 'fill') {
+    return { ...exercise, bank: shuffle(exercise.bank) };
   }
   if (exercise.type === 'match') {
     // Shuffle each column independently so pairs never line up row-to-row.

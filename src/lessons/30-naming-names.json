@@ -37,6 +37,14 @@
       "tiles": ["·𐑕𐑨𐑥", "𐑦𐑟", "𐑣𐑽", "𐑞"],
       "answer": ["·𐑕𐑨𐑥", "𐑦𐑟", "𐑣𐑽"],
       "correctLabel": "·𐑕𐑨𐑥 𐑦𐑟 𐑣𐑽"
+    },
+    {
+      "type": "fill",
+      "promptEn": "Sam is here",
+      "words": ["·𐑕𐑨𐑥", "𐑦𐑟", "𐑣𐑽"],
+      "blanks": [1, 2],
+      "bank": ["𐑦𐑟", "𐑣𐑽", "𐑞𐑺"],
+      "correctLabel": "·𐑕𐑨𐑥 𐑦𐑟 𐑣𐑽"
     }
   ]
 }

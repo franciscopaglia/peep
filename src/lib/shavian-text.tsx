@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { Kbd } from '@/components/ui/kbd';
+import { Chip } from '@/components/Chip';
 
 const SHAVIAN_RUN = /[\u{10450}-\u{1047F}]+/gu;
 
@@ -11,9 +11,9 @@ export function renderWithGlyphChips(text: string) {
     const nodes = [<Fragment key={`t${i}`}>{part}</Fragment>];
     if (i < glyphs.length) {
       nodes.push(
-        <Kbd key={`g${i}`} className="mx-0.5 h-auto min-w-0 px-1.5 py-0.5 text-base font-bold text-foreground">
+        <Chip key={`g${i}`} className="text-base font-bold text-foreground">
           {glyphs[i]}
-        </Kbd>
+        </Chip>
       );
     }
     return nodes;

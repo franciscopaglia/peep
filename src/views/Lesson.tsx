@@ -17,6 +17,7 @@ export function Lesson({
   typedValue,
   buildSel,
   arrangeSel,
+  fillSel,
   matchSelLeft,
   matchSelRight,
   matchedKeys,
@@ -31,6 +32,8 @@ export function Lesson({
   onBuildRemove,
   onArrangeAdd,
   onArrangeRemove,
+  onFillAdd,
+  onFillRemove,
   onMatchClick,
 }: {
   exercise: Exercise;
@@ -43,6 +46,7 @@ export function Lesson({
   typedValue: string;
   buildSel: number[];
   arrangeSel: number[];
+  fillSel: number[];
   matchSelLeft: string | null;
   matchSelRight: string | null;
   matchedKeys: string[];
@@ -57,6 +61,8 @@ export function Lesson({
   onBuildRemove: (pos: number) => void;
   onArrangeAdd: (i: number) => void;
   onArrangeRemove: (pos: number) => void;
+  onFillAdd: (i: number) => void;
+  onFillRemove: (pos: number) => void;
   onMatchClick: (side: 'left' | 'right', value: string) => void;
 }) {
   const isTeach = exercise.type === 'teach';
@@ -64,8 +70,15 @@ export function Lesson({
   const isType = exercise.type === 'type';
   const isBuild = exercise.type === 'build';
   const isArrange = exercise.type === 'arrange';
+  const isComplete = exercise.type === 'complete';
+  const isFill = exercise.type === 'fill';
   const isMatch = exercise.type === 'match';
   const isWrong = status === 'wrong';
+
+  const blanksNeeded =
+    exercise.type === 'complete' || exercise.type === 'fill'
+      ? exercise.blanks.length
+      : 0;
 
   const progressPct = exTotal
     ? Math.round(((exIndex + (status !== 'active' ? 1 : 0)) / exTotal) * 100)
@@ -79,7 +92,9 @@ export function Lesson({
         ? buildSel.length === 0
         : isArrange
           ? arrangeSel.length === 0
-          : true;
+          : isComplete || isFill
+            ? fillSel.length !== blanksNeeded
+            : true;
 
   const showCheckButton = status === 'active' && !isMatch && !isTeach;
   const showSkip = status === 'active' && !isTeach;
@@ -322,6 +337,149 @@ export function Lesson({
                   <button
                     key={i}
                     onClick={() => onArrangeAdd(i)}
+                    className="px-4 py-2.5 rounded-btn font-bold text-xl"
+                    style={{
+                      border: '2px solid var(--border)',
+                      background: used ? 'var(--locked-bg)' : 'var(--card)',
+                      color: used ? 'transparent' : 'var(--foreground)',
+                      cursor: used || status !== 'active' ? 'default' : 'pointer',
+                      boxShadow: used ? 'none' : 'var(--shadow-sm)',
+                    }}
+                  >
+                    {word}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {isComplete && exercise.type === 'complete' && (
+          <div className="w-full flex flex-col items-center gap-8" style={{ animation: 'shvSlideUp .3s ease' }}>
+            <div className="text-center">
+              <div className="text-sm text-muted-foreground mb-2">Complete the word:</div>
+              <div className="text-[26px] font-semibold text-foreground">
+                “{exercise.prompt}”
+              </div>
+              {exercise.caption && (
+                <div className="text-sm text-muted-foreground mt-2">{exercise.caption}</div>
+              )}
+            </div>
+            <div className="flex gap-2.5 items-center justify-center flex-wrap">
+              {exercise.word.map((ch, wi) => {
+                const blankPos = exercise.blanks.indexOf(wi);
+                if (blankPos === -1) {
+                  return (
+                    <div
+                      key={wi}
+                      className="w-[54px] h-[54px] rounded-btn border-2 border-border bg-card flex items-center justify-center font-bold text-2xl text-foreground"
+                    >
+                      {ch}
+                    </div>
+                  );
+                }
+                const filled = blankPos < fillSel.length;
+                return (
+                  <button
+                    key={wi}
+                    onClick={() => filled && onFillRemove(blankPos)}
+                    className="w-[54px] h-[54px] rounded-btn font-bold text-2xl flex items-center justify-center"
+                    style={{
+                      border: `2px dashed ${status === 'active' ? (filled ? 'var(--accent-border)' : 'var(--border)') : isWrong ? 'var(--danger)' : 'var(--success)'}`,
+                      background: filled
+                        ? status === 'active'
+                          ? 'var(--accent-soft)'
+                          : isWrong
+                            ? 'var(--danger-soft)'
+                            : 'var(--success-soft)'
+                        : 'transparent',
+                      color: status === 'active' ? 'var(--accent)' : isWrong ? 'var(--danger)' : 'var(--success)',
+                      cursor: filled && status === 'active' ? 'pointer' : 'default',
+                    }}
+                  >
+                    {filled ? exercise.bank[fillSel[blankPos]] : ''}
+                  </button>
+                );
+              })}
+            </div>
+            <div className="flex gap-3 flex-wrap justify-center">
+              {exercise.bank.map((ch, i) => {
+                const used = fillSel.includes(i);
+                return (
+                  <button
+                    key={i}
+                    onClick={() => onFillAdd(i)}
+                    disabled={used || status !== 'active'}
+                    className="w-[58px] h-[58px] rounded-btn font-bold text-2xl flex items-center justify-center"
+                    style={{
+                      border: '2px solid var(--border)',
+                      background: used ? 'var(--locked-bg)' : 'var(--card)',
+                      color: used ? 'transparent' : 'var(--foreground)',
+                      cursor: used || status !== 'active' ? 'default' : 'pointer',
+                      boxShadow: used ? 'none' : 'var(--shadow-sm)',
+                    }}
+                  >
+                    {ch}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {isFill && exercise.type === 'fill' && (
+          <div className="w-full flex flex-col items-center gap-8" style={{ animation: 'shvSlideUp .3s ease' }}>
+            <div className="text-center">
+              <div className="text-sm text-muted-foreground mb-2">Fill in the sentence:</div>
+              <div className="text-2xl font-semibold text-foreground max-w-[480px]">
+                “{exercise.promptEn}”
+              </div>
+            </div>
+            <div className="flex gap-2.5 items-center justify-center flex-wrap max-w-[520px]">
+              {exercise.words.map((word, wi) => {
+                const blankPos = exercise.blanks.indexOf(wi);
+                if (blankPos === -1) {
+                  return (
+                    <div
+                      key={wi}
+                      className="px-4 py-2.5 rounded-btn border-2 border-border bg-card font-bold text-xl text-foreground"
+                    >
+                      {word}
+                    </div>
+                  );
+                }
+                const filled = blankPos < fillSel.length;
+                return (
+                  <button
+                    key={wi}
+                    onClick={() => filled && onFillRemove(blankPos)}
+                    className="min-w-[64px] px-4 py-2.5 rounded-btn font-bold text-xl flex items-center justify-center"
+                    style={{
+                      border: `2px dashed ${status === 'active' ? (filled ? 'var(--accent-border)' : 'var(--border)') : isWrong ? 'var(--danger)' : 'var(--success)'}`,
+                      background: filled
+                        ? status === 'active'
+                          ? 'var(--accent-soft)'
+                          : isWrong
+                            ? 'var(--danger-soft)'
+                            : 'var(--success-soft)'
+                        : 'transparent',
+                      color: status === 'active' ? 'var(--accent)' : isWrong ? 'var(--danger)' : 'var(--success)',
+                      cursor: filled && status === 'active' ? 'pointer' : 'default',
+                    }}
+                  >
+                    {filled ? exercise.bank[fillSel[blankPos]] : ' '}
+                  </button>
+                );
+              })}
+            </div>
+            <div className="flex gap-2.5 flex-wrap justify-center max-w-[520px]">
+              {exercise.bank.map((word, i) => {
+                const used = fillSel.includes(i);
+                return (
+                  <button
+                    key={i}
+                    onClick={() => onFillAdd(i)}
+                    disabled={used || status !== 'active'}
                     className="px-4 py-2.5 rounded-btn font-bold text-xl"
                     style={{
                       border: '2px solid var(--border)',

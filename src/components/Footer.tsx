@@ -1,16 +1,14 @@
+import type { ReactNode } from 'react';
 import type { View } from '@/types';
 import { GITHUB_URL, AUTHOR_GITHUB_URL } from '@/lib/constants';
+import { ReportProblem } from '@/components/ReportProblem';
+import { siteReport } from '@/lib/report';
+import { Chip } from '@/components/Chip';
 
-type FooterItem = { label: string; onClick: () => void };
+type FooterItem = { label: string; onClick?: () => void; node?: ReactNode };
 type FooterCol = { heading: string; items: FooterItem[] };
 
-export function Footer({
-  onSetView,
-  onContinueCurrent,
-}: {
-  onSetView: (v: View) => void;
-  onContinueCurrent: () => void;
-}) {
+export function Footer({ onSetView }: { onSetView: (v: View) => void }) {
   function goTo(view: View, anchorId?: string) {
     onSetView(view);
     if (!anchorId) return;
@@ -26,8 +24,11 @@ export function Footer({
       heading: 'Learn',
       items: [
         { label: 'Home', onClick: () => onSetView('landing') },
-        { label: 'Your path', onClick: () => onSetView('dashboard') },
-        { label: 'Start a lesson', onClick: onContinueCurrent },
+        { label: 'Learning', onClick: () => onSetView('dashboard') },
+        {
+          label: 'Report a problem',
+          node: <ReportProblem trigger="link" label="Report a problem" {...siteReport} />,
+        },
       ],
     },
     {
@@ -68,20 +69,28 @@ export function Footer({
         {cols.map((col) => (
           <div key={col.heading} className="flex flex-col gap-3">
             <div className="text-[13px] font-semibold text-foreground">{col.heading}</div>
-            {col.items.map((item) => (
-              <button
-                key={item.label}
-                onClick={item.onClick}
-                className="text-sm text-muted-foreground bg-transparent border-none p-0 cursor-pointer text-left"
-              >
-                {item.label}
-              </button>
-            ))}
+            {col.items.map((item) =>
+              item.node ? (
+                <div key={item.label}>{item.node}</div>
+              ) : (
+                <button
+                  key={item.label}
+                  onClick={item.onClick}
+                  className="text-sm text-muted-foreground bg-transparent border-none p-0 cursor-pointer text-left"
+                >
+                  {item.label}
+                </button>
+              )
+            )}
           </div>
         ))}
       </div>
       <div className="max-w-[960px] mx-auto px-6 pt-0 pb-10 text-[13px] text-muted-foreground">
-        © 2026 Peep · A learning project by{' '}
+        © 2026 Peep ·{' '}
+        <Chip className="font-mono text-[13px] font-medium text-muted-foreground">
+          v{__COMMIT_HASH__}
+        </Chip>{' '}
+        · A learning project by{' '}
         <a
           href={AUTHOR_GITHUB_URL}
           target="_blank"

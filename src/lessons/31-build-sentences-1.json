@@ -36,6 +36,23 @@
       "tiles": ["𐑣𐑰", "𐑣𐑨𐑟", "𐑩", "𐑚𐑦𐑜", "𐑒𐑸", "𐑞"],
       "answer": ["𐑣𐑰", "𐑣𐑨𐑟", "𐑩", "𐑚𐑦𐑜", "𐑒𐑸"],
       "correctLabel": "𐑣𐑰 𐑣𐑨𐑟 𐑩 𐑚𐑦𐑜 𐑒𐑸"
+    },
+    {
+      "type": "fill",
+      "promptEn": "the cat sat",
+      "words": ["𐑞", "𐑒𐑨𐑑", "𐑕𐑨𐑑"],
+      "blanks": [1, 2],
+      "bank": ["𐑒𐑨𐑑", "𐑕𐑨𐑑", "𐑣𐑨𐑑"],
+      "correctLabel": "𐑞 𐑒𐑨𐑑 𐑕𐑨𐑑"
+    },
+    {
+      "type": "complete",
+      "prompt": "big",
+      "caption": "Tap the missing letter",
+      "word": ["𐑚", "𐑦", "𐑜"],
+      "blanks": [1],
+      "bank": ["𐑦", "𐑨", "𐑳"],
+      "correctLabel": "𐑚𐑦𐑜"
     }
   ]
 }

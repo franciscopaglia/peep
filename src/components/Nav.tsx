@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Sun, Moon, GitBranch, Menu, X } from 'lucide-react';
 import type { View } from '@/types';
-import { GITHUB_URL, GITHUB_ISSUES_URL } from '@/lib/constants';
+import { GITHUB_URL } from '@/lib/constants';
 import { ReportProblem } from '@/components/ReportProblem';
+import { siteReport } from '@/lib/report';
 
 type NavLink = { label: string; view: View };
 
@@ -12,15 +13,6 @@ const NAV_LINKS: NavLink[] = [
   { label: 'About', view: 'about' },
   { label: 'Resources', view: 'resources' },
 ];
-
-const HEADER_BODY = (
-  <>
-    Thanks for helping make Peep better! Tapping{' '}
-    <span className="font-semibold text-foreground">Continue</span> opens a short form on{' '}
-    <span className="font-semibold text-foreground">GitHub</span> where you can describe the
-    problem. You'll need a free GitHub account to send it — it only takes a moment.
-  </>
-);
 
 export function Nav({
   view,
@@ -103,13 +95,7 @@ export function Nav({
               {completedCount} / {totalLessons} lessons
             </div>
           )}
-          <ReportProblem
-            issueUrl={GITHUB_ISSUES_URL}
-            trigger="icon"
-            tooltip="Report an issue — did you find something wrong?"
-            heading="Did you find something wrong?"
-            body={HEADER_BODY}
-          />
+          <ReportProblem trigger="icon" {...siteReport} />
           <a
             href={GITHUB_URL}
             target="_blank"

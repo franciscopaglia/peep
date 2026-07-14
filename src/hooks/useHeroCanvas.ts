@@ -17,6 +17,10 @@ const CHARS = Array.from(
   '𐑐𐑑𐑒𐑚𐑛𐑜𐑓𐑝𐑕𐑟𐑞𐑨𐑦𐑪𐑳𐑮𐑤𐑥𐑯𐑰𐑴𐑵𐑢𐑗𐑖𐑡𐑘𐑙𐑻𐑼𐑽𐑾𐑿𐑹𐑺'
 );
 
+const PARTICLE_COUNT = 90;
+// Lighten the effect on small screens: 25% fewer glyphs.
+const MOBILE_BREAKPOINT = 640;
+
 export function useHeroCanvas(active: boolean, isDark: boolean) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[] | null>(null);
@@ -41,8 +45,10 @@ export function useHeroCanvas(active: boolean, isDark: boolean) {
     }
 
     function initParticles() {
+      const isMobile = window.innerWidth < MOBILE_BREAKPOINT;
+      const count = isMobile ? Math.round(PARTICLE_COUNT * 0.75) : PARTICLE_COUNT;
       const arr: Particle[] = [];
-      for (let i = 0; i < 90; i++) {
+      for (let i = 0; i < count; i++) {
         const depth = Math.random();
         arr.push({
           x: Math.random(),

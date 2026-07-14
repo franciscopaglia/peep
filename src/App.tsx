@@ -83,6 +83,8 @@ export default function App() {
   const [matchWrong, setMatchWrong] = useState(false);
   const [buildSel, setBuildSel] = useState<number[]>([]);
   const [arrangeSel, setArrangeSel] = useState<number[]>([]);
+  // Shared by 'complete' and 'fill': bank indices chosen for the blanks, in order.
+  const [fillSel, setFillSel] = useState<number[]>([]);
   const [score, setScore] = useState(0);
 
   const setView = useCallback((v: View) => {
@@ -100,6 +102,7 @@ export default function App() {
     setMatchWrong(false);
     setBuildSel([]);
     setArrangeSel([]);
+    setFillSel([]);
   }, []);
 
   const startLesson = useCallback(
@@ -148,6 +151,14 @@ export default function App() {
       correct = buildSel.map((i) => ex.tiles[i]).join('') === ex.answer.join('');
     if (ex.type === 'arrange')
       correct = arrangeSel.map((i) => ex.tiles[i]).join(' ') === ex.answer.join(' ');
+    if (ex.type === 'complete')
+      correct =
+        fillSel.map((i) => ex.bank[i]).join('') ===
+        ex.blanks.map((b) => ex.word[b]).join('');
+    if (ex.type === 'fill')
+      correct =
+        fillSel.map((i) => ex.bank[i]).join(' ') ===
+        ex.blanks.map((b) => ex.words[b]).join(' ');
 
     setStatus(correct ? 'correct' : 'wrong');
     if (correct && !ex.retry) setScore((s) => s + 1);
@@ -157,7 +168,7 @@ export default function App() {
         { ...shuffleExerciseOptions(ex), retry: true },
       ]);
     }
-  }, [exercises, exIndex, selected, typedValue, buildSel, arrangeSel]);
+  }, [exercises, exIndex, selected, typedValue, buildSel, arrangeSel, fillSel]);
 
   const selectOption = useCallback(
     (opt: string) => {
@@ -203,6 +214,26 @@ export default function App() {
     (pos: number) => {
       if (status !== 'active') return;
       setArrangeSel((s) => s.filter((_, p) => p !== pos));
+    },
+    [status]
+  );
+
+  const fillAdd = useCallback(
+    (i: number) => {
+      if (status !== 'active') return;
+      const ex = exercises[exIndex];
+      if (!ex || (ex.type !== 'complete' && ex.type !== 'fill')) return;
+      setFillSel((s) =>
+        s.includes(i) || s.length >= ex.blanks.length ? s : [...s, i]
+      );
+    },
+    [status, exercises, exIndex]
+  );
+
+  const fillRemove = useCallback(
+    (pos: number) => {
+      if (status !== 'active') return;
+      setFillSel((s) => s.filter((_, p) => p !== pos));
     },
     [status]
   );
@@ -272,12 +303,14 @@ export default function App() {
               ? buildSel.length > 0
               : ex.type === 'arrange'
                 ? arrangeSel.length > 0
-                : false;
+                : ex.type === 'complete' || ex.type === 'fill'
+                  ? fillSel.length === ex.blanks.length
+                  : false;
       if (canCheck) checkAnswer();
     }
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [view, exercises, exIndex, status, typedValue, selected, buildSel, arrangeSel, continueNext, checkAnswer]);
+  }, [view, exercises, exIndex, status, typedValue, selected, buildSel, arrangeSel, fillSel, continueNext, checkAnswer]);
 
   const currentExercise = exercises[exIndex];
   const activeLessonTitle =
@@ -328,6 +361,7 @@ export default function App() {
           typedValue={typedValue}
           buildSel={buildSel}
           arrangeSel={arrangeSel}
+          fillSel={fillSel}
           matchSelLeft={matchSelLeft}
           matchSelRight={matchSelRight}
           matchedKeys={matchedKeys}
@@ -342,6 +376,8 @@ export default function App() {
           onBuildRemove={buildRemove}
           onArrangeAdd={arrangeAdd}
           onArrangeRemove={arrangeRemove}
+          onFillAdd={fillAdd}
+          onFillRemove={fillRemove}
           onMatchClick={matchClick}
         />
       )}
@@ -355,7 +391,7 @@ export default function App() {
       )}
 
       {view !== 'lesson' && (
-        <Footer onSetView={setView} onContinueCurrent={continueCurrent} />
+        <Footer onSetView={setView} />
       )}
     </div>
   );

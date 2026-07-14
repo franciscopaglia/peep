@@ -222,6 +222,15 @@
       "pairs": { "𐑒𐑦𐑑": "kit", "𐑐𐑦𐑑": "pit", "𐑒𐑪𐑑": "cot", "𐑛𐑪𐑜": "dog" },
       "leftOrder": ["𐑛𐑪𐑜", "𐑒𐑦𐑑", "𐑒𐑪𐑑", "𐑐𐑦𐑑"],
       "rightOrder": ["kit", "cot", "dog", "pit"]
+    },
+    {
+      "type": "complete",
+      "prompt": "cat",
+      "caption": "Tap the missing letter",
+      "word": ["𐑒", "𐑨", "𐑑"],
+      "blanks": [1],
+      "bank": ["𐑨", "𐑦", "𐑪"],
+      "correctLabel": "𐑒𐑨𐑑"
     }
   ]
 }

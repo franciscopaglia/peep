@@ -222,6 +222,23 @@
       "pairs": { "𐑒𐑨𐑯": "can", "𐑐𐑪𐑯𐑛": "pond", "𐑮𐑧𐑕𐑑": "rest", "𐑜𐑮𐑰𐑯": "green" },
       "leftOrder": ["𐑜𐑮𐑰𐑯", "𐑒𐑨𐑯", "𐑮𐑧𐑕𐑑", "𐑐𐑪𐑯𐑛"],
       "rightOrder": ["can", "green", "pond", "rest"]
+    },
+    {
+      "type": "complete",
+      "prompt": "jump",
+      "caption": "Tap the missing letter",
+      "word": ["𐑡", "𐑳", "𐑥", "𐑐"],
+      "blanks": [1],
+      "bank": ["𐑳", "𐑨", "𐑦"],
+      "correctLabel": "𐑡𐑳𐑥𐑐"
+    },
+    {
+      "type": "fill",
+      "promptEn": "the dog ran",
+      "words": ["𐑞", "𐑛𐑪𐑜", "𐑮𐑨𐑯"],
+      "blanks": [1, 2],
+      "bank": ["𐑛𐑪𐑜", "𐑮𐑨𐑯", "𐑒𐑨𐑑"],
+      "correctLabel": "𐑞 𐑛𐑪𐑜 𐑮𐑨𐑯"
     }
   ]
 }
