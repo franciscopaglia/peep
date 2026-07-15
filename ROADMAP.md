@@ -103,11 +103,14 @@ the level that makes reading really click. New exercise types planned here:
 
 ### More theory, woven in
 
-- **🗓️ Richer teach cards throughout existing lessons** — today most `teach`
-  cards introduce a new letter and move on. Planned: short theory cards woven
-  through the path — where a letter's shape comes from, why a spelling looks
-  the way it does, reading tips, a pinch of history — so the "why" arrives
-  alongside the "how", a card at a time.
+- **🚧 Richer teach cards throughout existing lessons** — most `teach` cards
+  introduce a new letter and move on; the plan is short theory woven through
+  the path instead — shape design, why a spelling looks the way it does,
+  reading tips, a pinch of history — so the "why" arrives alongside the "how".
+  **Chapter 1 has a first pass** (11 new cards: the tall/deep rotation pattern,
+  the three letter-shape families, a Shaw history nugget, sonorants, vowel
+  length, reading-by-silhouette, and a ligature preview). Chapter 2 and beyond
+  are still open.
 
 ### Video lessons
 

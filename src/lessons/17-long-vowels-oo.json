@@ -10,6 +10,11 @@
       "body": "The letter for ooze is 𐑵, the sound in moon. Round your lips and hold it — that's the last of the long vowels."
     },
     {
+      "type": "teach",
+      "title": "Length that counts",
+      "body": "English spelling barely marks whether a vowel is long or short — “bit” and “beet” look almost alike. Shavian gives long and short vowels genuinely different letters, like 𐑦 and 𐑰, so the sound is never in doubt."
+    },
+    {
       "type": "choice",
       "promptIsGlyph": false,
       "prompt": "Tap the symbol for “oo” as in “moon”",

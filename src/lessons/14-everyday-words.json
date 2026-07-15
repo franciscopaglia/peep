@@ -10,6 +10,11 @@
       "body": "You've now met twelve consonants and four vowels — plenty to read real words. Let's practice."
     },
     {
+      "type": "teach",
+      "title": "Reach-for-it letters",
+      "body": "Notice how many of the sounds you use constantly — 𐑯, 𐑮, 𐑑 — are quick, single strokes. The letters you'll write most often are, conveniently, some of the fastest to draw."
+    },
+    {
       "type": "type",
       "prompt": "𐑯𐑨𐑐",
       "caption": "Sound it out — what does this say?",

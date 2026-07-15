@@ -10,6 +10,11 @@
       "body": "Now for the fun part — blending letters into words. Shavian is read strictly left to right, sound by sound, with no silent letters to trip you up. Look at 𐑛𐑪𐑑: 𐑛 (d) + 𐑪 (o) + 𐑑 (t) blends smoothly into \"dot\"."
     },
     {
+      "type": "teach",
+      "title": "Why this alphabet exists",
+      "body": "George Bernard Shaw thought English spelling wasted years of every child's life learning exceptions that taught nothing about how words actually sound. His will paid for a replacement — and blending 𐑛𐑪𐑑 straight into “dot”, no guessing required, is exactly the fix he had in mind."
+    },
+    {
       "type": "choice",
       "promptIsGlyph": true,
       "prompt": "𐑒𐑦𐑛",

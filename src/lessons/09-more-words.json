@@ -10,6 +10,11 @@
       "body": "You now know eight consonants and four vowels — enough for a real stack of words. Let's put them to work."
     },
     {
+      "type": "teach",
+      "title": "Shorter on the page",
+      "body": "Notice 𐑝𐑧𐑕𐑑 (vest): four letters, four sounds, nothing silent or doubled. Multiply that across a whole page and Shavian text typically runs about two-thirds the length of the same words in English spelling."
+    },
+    {
       "type": "type",
       "prompt": "𐑝𐑧𐑕𐑑",
       "caption": "Sound it out — what does this say?",

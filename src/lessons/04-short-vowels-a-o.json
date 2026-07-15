@@ -30,6 +30,11 @@
       "body": "And 𐑪 — the letter for on, the short “o” heard in dog and on."
     },
     {
+      "type": "teach",
+      "title": "Three shapes, one alphabet",
+      "body": "𐑨 and 𐑪 belong to a third family: short letters, small and sitting right on the line — unlike the tall and deep consonants you've just learned. Most vowels live here, so you can often guess “probably a vowel” on sight."
+    },
+    {
       "type": "choice",
       "promptIsGlyph": true,
       "prompt": "𐑪",

@@ -42,6 +42,11 @@
       "body": "The letter for gag is 𐑜 — the voiced, deep partner of kick. Compare: 𐑒 𐑜. That completes all three pairs: peep/bib, tot/dead, kick/gag."
     },
     {
+      "type": "teach",
+      "title": "Three pairs, one rule",
+      "body": "Look back at 𐑐/𐑚, 𐑑/𐑛, 𐑒/𐑜: every voiced letter is its voiceless partner turned end over end, and every voiced letter dips below the line. Spot the height, and you already know half of what a new consonant sounds like."
+    },
+    {
       "type": "choice",
       "promptIsGlyph": true,
       "prompt": "𐑜𐑪𐑑",

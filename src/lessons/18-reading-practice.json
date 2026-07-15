@@ -10,6 +10,11 @@
       "body": "Time to mix your short and long vowels in the same words. Take it slow — sound out each letter before you say the whole thing."
     },
     {
+      "type": "teach",
+      "title": "Read the shape, not just the sound",
+      "body": "As blending gets automatic, start recognizing short, frequent words by their whole silhouette instead of sounding out every letter — that's how fluent reading works in any script, Shavian included."
+    },
+    {
       "type": "type",
       "prompt": "𐑥𐑰𐑑",
       "caption": "Sound it out — what does this say?",
