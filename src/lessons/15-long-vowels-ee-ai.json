@@ -19,6 +19,7 @@
       "prompt": "𐑕𐑰",
       "caption": "Sound it out — what does this say?",
       "correct": "see",
+      "accept": ["sea"],
       "correctLabel": "see"
     },
     {
@@ -53,6 +54,7 @@
       "prompt": "𐑚𐑰",
       "caption": "Sound it out — what does this say?",
       "correct": "bee",
+      "accept": ["be"],
       "correctLabel": "bee"
     },
     {
@@ -96,6 +98,7 @@
       "prompt": "𐑥𐑰𐑑",
       "caption": "Sound it out — what does this say?",
       "correct": "meet",
+      "accept": ["meat"],
       "correctLabel": "meet"
     },
     {
@@ -103,6 +106,7 @@
       "prompt": "𐑓𐑰𐑑",
       "caption": "Sound it out — what does this say?",
       "correct": "feet",
+      "accept": ["feat"],
       "correctLabel": "feet"
     },
     {
@@ -117,6 +121,7 @@
       "prompt": "𐑮𐑱𐑯",
       "caption": "Sound it out — what does this say?",
       "correct": "rain",
+      "accept": ["rein", "reign"],
       "correctLabel": "rain"
     },
     {

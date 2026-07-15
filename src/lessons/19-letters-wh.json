@@ -117,6 +117,7 @@
       "prompt": "𐑢𐑰𐑒",
       "caption": "Sound it out — what does this say?",
       "correct": "week",
+      "accept": ["weak"],
       "correctLabel": "week"
     },
     {

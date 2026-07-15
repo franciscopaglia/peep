@@ -43,7 +43,7 @@ const STEP_CARDS = [
 const SHOWCASE_WORDS = [
   { glyph: '𐑞', en: 'the' },
   { glyph: '𐑒𐑨𐑑', en: 'cat' },
-  { glyph: '𐑨𐑯𐑛', en: 'and' },
+  { glyph: '𐑯', en: 'and' },
   { glyph: '𐑞', en: 'the' },
   { glyph: '𐑛𐑪𐑜', en: 'dog' },
 ];
@@ -114,7 +114,8 @@ export function Landing({
               ))}
             </div>
             <div className="text-sm text-muted-foreground">
-              “the cat and the dog” — five short words, spelled exactly as they sound.
+              “the cat and the dog” — spelled exactly as it sounds, and the most common
+              little words, like “the” and “and”, shrink to a single letter.
             </div>
           </div>
         </div>

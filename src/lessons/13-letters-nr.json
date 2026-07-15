@@ -151,6 +151,7 @@
       "prompt": "𐑕𐑳𐑯",
       "caption": "Sound it out — what does this say?",
       "correct": "sun",
+      "accept": ["son"],
       "correctLabel": "sun"
     },
     {

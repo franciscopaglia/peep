@@ -33,30 +33,30 @@
     },
     {
       "type": "build",
-      "prompt": "digit",
+      "prompt": "visit",
       "caption": "Build this word from Shavian letters",
       "tiles": [
-        "𐑛",
+        "𐑝",
         "𐑦",
-        "𐑜",
+        "𐑟",
         "𐑦",
         "𐑑",
-        "𐑝"
+        "𐑕"
       ],
       "answer": [
-        "𐑛",
+        "𐑝",
         "𐑦",
-        "𐑜",
+        "𐑟",
         "𐑦",
         "𐑑"
       ],
-      "correctLabel": "𐑛𐑦𐑜𐑦𐑑"
+      "correctLabel": "𐑝𐑦𐑟𐑦𐑑"
     },
     {
       "type": "match",
       "pairs": {
         "𐑓𐑨𐑑": "fat",
-        "𐑝𐑦𐑕𐑦𐑑": "visit",
+        "𐑝𐑦𐑟𐑦𐑑": "visit",
         "𐑕𐑑𐑪𐑐": "stop",
         "𐑟𐑦𐑐": "zip"
       },
@@ -64,7 +64,7 @@
         "𐑟𐑦𐑐",
         "𐑓𐑨𐑑",
         "𐑕𐑑𐑪𐑐",
-        "𐑝𐑦𐑕𐑦𐑑"
+        "𐑝𐑦𐑟𐑦𐑑"
       ],
       "rightOrder": [
         "fat",

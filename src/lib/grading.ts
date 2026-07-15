@@ -31,8 +31,11 @@ export function isCorrect(exercise: Exercise, state: AnswerState): boolean {
   switch (exercise.type) {
     case 'choice':
       return state.selected === exercise.correct;
-    case 'type':
-      return state.typedValue.trim().toLowerCase() === exercise.correct.toLowerCase();
+    case 'type': {
+      const typed = state.typedValue.trim().toLowerCase();
+      if (typed === exercise.correct.toLowerCase()) return true;
+      return (exercise.accept ?? []).some((alt) => typed === alt.toLowerCase());
+    }
     case 'build':
       return (
         state.buildSel.map((i) => exercise.tiles[i]).join('') === exercise.answer.join('')

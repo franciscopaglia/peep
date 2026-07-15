@@ -30,6 +30,9 @@ export type TypeExercise = {
   prompt: string;
   caption: string;
   correct: string;
+  // Alternate readings also graded correct — for prompts whose Shavian spelling
+  // is shared by English homophones (e.g. 𐑑𐑵 is both "too" and "two").
+  accept?: string[];
   correctLabel: string;
   retry?: boolean;
 };

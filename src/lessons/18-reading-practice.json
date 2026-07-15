@@ -14,6 +14,7 @@
       "prompt": "𐑥𐑰𐑑",
       "caption": "Sound it out — what does this say?",
       "correct": "meet",
+      "accept": ["meat"],
       "correctLabel": "meet"
     },
     {
@@ -144,6 +145,7 @@
       "prompt": "𐑮𐑴𐑛",
       "caption": "Sound it out — what does this say?",
       "correct": "road",
+      "accept": ["rode", "rowed"],
       "correctLabel": "road"
     },
     {

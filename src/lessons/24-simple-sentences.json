@@ -12,7 +12,7 @@
     {
       "type": "teach",
       "title": "A few little words",
-      "body": "A handful of common words get their own fixed spelling worth memorizing: I is just 𐑲, the is 𐑞, a is 𐑩, and and is 𐑨𐑯𐑛. You'll run into them constantly."
+      "body": "A handful of common words get their own fixed spelling worth memorizing: I is just 𐑲 and a is 𐑩. The very commonest words shrink to a single letter: the is 𐑞, and is 𐑯, and to is 𐑑. You'll run into them constantly."
     },
     {
       "type": "choice",
@@ -38,7 +38,7 @@
     },
     {
       "type": "type",
-      "prompt": "𐑢𐑰 𐑮𐑳𐑯 𐑨𐑯𐑛 𐑡𐑳𐑥𐑐",
+      "prompt": "𐑢𐑰 𐑮𐑳𐑯 𐑯 𐑡𐑳𐑥𐑐",
       "caption": "Type what this says",
       "correct": "we run and jump",
       "correctLabel": "we run and jump"
@@ -60,7 +60,7 @@
     },
     {
       "type": "type",
-      "prompt": "𐑣𐑰 𐑮𐑨𐑯 𐑑𐑵 𐑞 𐑖𐑪𐑐",
+      "prompt": "𐑣𐑰 𐑮𐑨𐑯 𐑑 𐑞 𐑖𐑪𐑐",
       "caption": "Type what this says",
       "correct": "he ran to the shop",
       "correctLabel": "he ran to the shop"
@@ -96,17 +96,17 @@
     {
       "type": "choice",
       "promptIsGlyph": false,
-      "prompt": "Which word means “and”?",
+      "prompt": "Which letter is the word “and”?",
       "caption": "",
       "optionIsGlyph": true,
       "options": [
-        "𐑨𐑯𐑛",
-        "𐑨𐑯",
-        "𐑧𐑯𐑛",
-        "𐑨𐑛"
+        "𐑯",
+        "𐑞",
+        "𐑑",
+        "𐑥"
       ],
-      "correct": "𐑨𐑯𐑛",
-      "correctLabel": "𐑨𐑯𐑛"
+      "correct": "𐑯",
+      "correctLabel": "𐑯"
     },
     {
       "type": "choice",
@@ -150,13 +150,13 @@
       "pairs": {
         "𐑞": "the",
         "𐑩": "a",
-        "𐑨𐑯𐑛": "and",
-        "𐑑𐑵": "to"
+        "𐑯": "and",
+        "𐑑": "to"
       },
       "leftOrder": [
-        "𐑑𐑵",
+        "𐑑",
         "𐑞",
-        "𐑨𐑯𐑛",
+        "𐑯",
         "𐑩"
       ],
       "rightOrder": [
@@ -182,7 +182,7 @@
     },
     {
       "type": "type",
-      "prompt": "𐑢𐑰 𐑕𐑦𐑑 𐑨𐑯𐑛 𐑮𐑧𐑕𐑑",
+      "prompt": "𐑢𐑰 𐑕𐑦𐑑 𐑯 𐑮𐑧𐑕𐑑",
       "caption": "Type what this says",
       "correct": "we sit and rest",
       "correctLabel": "we sit and rest"
@@ -190,7 +190,7 @@
     {
       "type": "choice",
       "promptIsGlyph": true,
-      "prompt": "𐑞 𐑛𐑪𐑜 𐑮𐑨𐑯 𐑑𐑵 𐑞 𐑐𐑪𐑯𐑛",
+      "prompt": "𐑞 𐑛𐑪𐑜 𐑮𐑨𐑯 𐑑 𐑞 𐑐𐑪𐑯𐑛",
       "caption": "What does this say?",
       "optionIsGlyph": false,
       "options": [

@@ -103,7 +103,14 @@ answer is always authored first, so this stops "tap straight through").
 
 - **Only use letters taught by that point.** Chapter 1 must not use Chapter 2
   letters (`𐑠` zh, the r-vowels `𐑸𐑹𐑺𐑻𐑼𐑽𐑾𐑿`, or `𐑬𐑭𐑷𐑶`), and never `𐑔`; `𐑞`
-  appears in Ch1 only as the fixed word "the".
+  appears in Ch1 only as the fixed word "the". Also beware words whose *sounds*
+  aren't all taught yet — "digit" contains `𐑡` (j), not `𐑜` (g).
+- **Use the standard abbreviated words.** In running Shavian text, the = `𐑞`,
+  and = `𐑯`, to = `𐑑`, of = `𐑝`, for = `𐑓` — never spelled out. `𐑨𐑯𐑛` is a
+  misspelling of "and", and `𐑑𐑵` reads "too/two", never "to".
+- `type`: when the prompt's spelling is shared by English homophones (`𐑑𐑵` is
+  both "too" and "two", `𐑓𐑹` is "four"/"fore"), list the alternates in
+  `accept` so a correct reading is never marked wrong.
 - `correctLabel` must equal the joined answer (letters for `build`, space-joined
   words for `arrange`/`fill`/`cloze`, the full word for `complete`).
 - `choice`: options distinct and include `correct`.

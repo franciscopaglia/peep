@@ -26,6 +26,7 @@
       "prompt": "𐑣𐑽",
       "caption": "Sound it out — what does this say?",
       "correct": "here",
+      "accept": ["hear"],
       "correctLabel": "here"
     },
     {

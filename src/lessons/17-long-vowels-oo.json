@@ -125,6 +125,7 @@
       "prompt": "𐑑𐑵",
       "caption": "Sound it out — what does this say?",
       "correct": "too",
+      "accept": ["two"],
       "correctLabel": "too"
     },
     {
@@ -132,6 +133,7 @@
       "prompt": "𐑮𐑵𐑑",
       "caption": "Sound it out — what does this say?",
       "correct": "root",
+      "accept": ["route"],
       "correctLabel": "root"
     },
     {

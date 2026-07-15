@@ -93,6 +93,15 @@ describe('isCorrect', () => {
     expect(isCorrect(typeEx, { ...emptyAnswer, typedValue: '' })).toBe(false);
   });
 
+  it('type: accepts listed homophone alternates, case-insensitively', () => {
+    const tooEx: TypeExercise = { ...typeEx, prompt: '𐑑𐑵', correct: 'too', accept: ['two'], correctLabel: 'too' };
+    expect(isCorrect(tooEx, { ...emptyAnswer, typedValue: 'too' })).toBe(true);
+    expect(isCorrect(tooEx, { ...emptyAnswer, typedValue: ' Two ' })).toBe(true);
+    expect(isCorrect(tooEx, { ...emptyAnswer, typedValue: 'to' })).toBe(false);
+    // no accept list behaves as before
+    expect(isCorrect(typeEx, { ...emptyAnswer, typedValue: 'two' })).toBe(false);
+  });
+
   it('build: tiles must be selected in the right order and complete', () => {
     expect(isCorrect(build, { ...emptyAnswer, buildSel: [0, 1, 2] })).toBe(true);
     expect(isCorrect(build, { ...emptyAnswer, buildSel: [1, 0, 2] })).toBe(false);

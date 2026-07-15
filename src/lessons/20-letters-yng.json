@@ -145,6 +145,7 @@
       "prompt": "𐑮𐑦𐑙",
       "caption": "Sound it out — what does this say?",
       "correct": "ring",
+      "accept": ["wring"],
       "correctLabel": "ring"
     },
     {

@@ -89,6 +89,7 @@
       "prompt": "𐑯𐑳𐑯",
       "caption": "Sound it out — what does this say?",
       "correct": "nun",
+      "accept": ["none"],
       "correctLabel": "nun"
     },
     {

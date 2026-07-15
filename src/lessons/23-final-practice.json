@@ -83,6 +83,7 @@
       "prompt": "𐑖𐑴𐑯",
       "caption": "Sound it out — what does this say?",
       "correct": "shown",
+      "accept": ["shone"],
       "correctLabel": "shown"
     },
     {
