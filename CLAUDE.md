@@ -102,6 +102,12 @@ answer is always authored first, so this stops "tap straight through").
 
 ## Lesson authoring rules
 
+**Read and edit lessons through `node scripts/lesson.mjs`** (`list` / `show` /
+`grep` / `put` / `add` / `check` …), not by opening the JSON — the compact
+line protocol is far cheaper and derives labels, blanks and banks
+automatically. See the `lesson-editor` skill (`.claude/skills/lesson-editor/`)
+for the grammar. Run `lesson.mjs check` plus `npm test` after content changes.
+
 - **Only use letters taught by that point.** Chapter 1 must not use Chapter 2
   letters (`𐑠` zh, the r-vowels `𐑸𐑹𐑺𐑻𐑼𐑽𐑾𐑿`, or `𐑬𐑭𐑷𐑶`), and never `𐑔`; `𐑞`
   appears in Ch1 only as the fixed word "the". Also beware words whose *sounds*

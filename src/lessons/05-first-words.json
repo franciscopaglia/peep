@@ -34,22 +34,22 @@
     {
       "type": "teach",
       "title": "One letter, not two",
-      "body": "English often doubles up consonant letters — miss, add, well — but Shavian never does. One letter is always enough: 𐑚𐑪𐑕 says \"boss\", not \"bosss\"."
+      "body": "English often doubles up consonant letters — miss, add, well — but Shavian never does. One letter is always enough: 𐑨𐑛 says \"add\", not \"addd\"."
     },
     {
       "type": "choice",
       "promptIsGlyph": false,
-      "prompt": "Which word says “zip”?",
+      "prompt": "Which word says “gag”?",
       "caption": "",
       "optionIsGlyph": true,
       "options": [
-        "𐑟𐑦𐑐",
-        "𐑟𐑦𐑑",
-        "𐑕𐑦𐑐",
-        "𐑟𐑨𐑐"
+        "𐑜𐑨𐑜",
+        "𐑜𐑨𐑒",
+        "𐑒𐑨𐑜",
+        "𐑜𐑪𐑜"
       ],
-      "correct": "𐑟𐑦𐑐",
-      "correctLabel": "𐑟𐑦𐑐"
+      "correct": "𐑜𐑨𐑜",
+      "correctLabel": "𐑜𐑨𐑜"
     },
     {
       "type": "type",
@@ -61,22 +61,22 @@
     {
       "type": "match",
       "pairs": {
-        "𐑓𐑦𐑑": "fit",
-        "𐑛𐑪𐑑": "dot",
-        "𐑕𐑦𐑑": "sit",
-        "𐑐𐑪𐑛": "pod"
+        "𐑐𐑪𐑛": "pod",
+        "𐑚𐑦𐑜": "big",
+        "𐑒𐑨𐑚": "cab",
+        "𐑛𐑪𐑑": "dot"
       },
       "leftOrder": [
         "𐑐𐑪𐑛",
-        "𐑓𐑦𐑑",
-        "𐑕𐑦𐑑",
+        "𐑚𐑦𐑜",
+        "𐑒𐑨𐑚",
         "𐑛𐑪𐑑"
       ],
       "rightOrder": [
         "dot",
+        "big",
         "pod",
-        "fit",
-        "sit"
+        "cab"
       ]
     },
     {
@@ -114,28 +114,28 @@
     },
     {
       "type": "build",
-      "prompt": "sit",
+      "prompt": "pig",
       "caption": "Build this word from Shavian letters",
       "tiles": [
-        "𐑕",
+        "𐑐",
         "𐑦",
-        "𐑑",
-        "𐑛",
+        "𐑜",
+        "𐑚",
         "𐑨"
       ],
       "answer": [
-        "𐑕",
+        "𐑐",
         "𐑦",
-        "𐑑"
+        "𐑜"
       ],
-      "correctLabel": "𐑕𐑦𐑑"
+      "correctLabel": "𐑐𐑦𐑜"
     },
     {
       "type": "type",
-      "prompt": "𐑓𐑦𐑑",
+      "prompt": "𐑒𐑪𐑛",
       "caption": "Type what this word says",
-      "correct": "fit",
-      "correctLabel": "fit"
+      "correct": "cod",
+      "correctLabel": "cod"
     },
     {
       "type": "type",
@@ -197,7 +197,12 @@
       "prompt": "𐑚𐑦𐑛",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["bid", "bad", "bud", "did"],
+      "options": [
+        "bid",
+        "bad",
+        "bud",
+        "did"
+      ],
       "correct": "bid",
       "correctLabel": "bid"
     },
@@ -205,31 +210,76 @@
       "type": "build",
       "prompt": "cot",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑒", "𐑪", "𐑑", "𐑨", "𐑐"],
-      "answer": ["𐑒", "𐑪", "𐑑"],
+      "tiles": [
+        "𐑒",
+        "𐑪",
+        "𐑑",
+        "𐑨",
+        "𐑐"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑪",
+        "𐑑"
+      ],
       "correctLabel": "𐑒𐑪𐑑"
     },
     {
       "type": "build",
       "prompt": "tag",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑑", "𐑨", "𐑜", "𐑒", "𐑛"],
-      "answer": ["𐑑", "𐑨", "𐑜"],
+      "tiles": [
+        "𐑑",
+        "𐑨",
+        "𐑜",
+        "𐑒",
+        "𐑛"
+      ],
+      "answer": [
+        "𐑑",
+        "𐑨",
+        "𐑜"
+      ],
       "correctLabel": "𐑑𐑨𐑜"
     },
     {
       "type": "match",
-      "pairs": { "𐑒𐑦𐑑": "kit", "𐑐𐑦𐑑": "pit", "𐑒𐑪𐑑": "cot", "𐑛𐑪𐑜": "dog" },
-      "leftOrder": ["𐑛𐑪𐑜", "𐑒𐑦𐑑", "𐑒𐑪𐑑", "𐑐𐑦𐑑"],
-      "rightOrder": ["kit", "cot", "dog", "pit"]
+      "pairs": {
+        "𐑒𐑦𐑑": "kit",
+        "𐑐𐑦𐑑": "pit",
+        "𐑒𐑪𐑑": "cot",
+        "𐑛𐑪𐑜": "dog"
+      },
+      "leftOrder": [
+        "𐑛𐑪𐑜",
+        "𐑒𐑦𐑑",
+        "𐑒𐑪𐑑",
+        "𐑐𐑦𐑑"
+      ],
+      "rightOrder": [
+        "kit",
+        "cot",
+        "dog",
+        "pit"
+      ]
     },
     {
       "type": "complete",
       "prompt": "cat",
       "caption": "Tap the missing letter",
-      "word": ["𐑒", "𐑨", "𐑑"],
-      "blanks": [1],
-      "bank": ["𐑨", "𐑦", "𐑪"],
+      "word": [
+        "𐑒",
+        "𐑨",
+        "𐑑"
+      ],
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑨",
+        "𐑦",
+        "𐑪"
+      ],
       "correctLabel": "𐑒𐑨𐑑"
     }
   ]

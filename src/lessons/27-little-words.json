@@ -15,7 +15,12 @@
       "prompt": "Which letter is the word “of”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑝", "𐑓", "𐑞", "𐑑"],
+      "options": [
+        "𐑝",
+        "𐑓",
+        "𐑞",
+        "𐑑"
+      ],
       "correct": "𐑝",
       "correctLabel": "𐑝"
     },
@@ -25,7 +30,12 @@
       "prompt": "Which letter is the word “for”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑓", "𐑝", "𐑯", "𐑞"],
+      "options": [
+        "𐑓",
+        "𐑝",
+        "𐑯",
+        "𐑞"
+      ],
       "correct": "𐑓",
       "correctLabel": "𐑓"
     },
@@ -47,16 +57,34 @@
       "prompt": "𐑓𐑹",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["four", "for", "far", "form"],
+      "options": [
+        "four",
+        "for",
+        "far",
+        "form"
+      ],
       "correct": "four",
       "correctLabel": "four"
     },
     {
       "type": "fill",
       "promptEn": "we run to the shop",
-      "words": ["𐑢𐑰", "𐑮𐑳𐑯", "𐑑", "𐑞", "𐑖𐑪𐑐"],
-      "blanks": [2, 3],
-      "bank": ["𐑑", "𐑞", "𐑑𐑵"],
+      "words": [
+        "𐑢𐑰",
+        "𐑮𐑳𐑯",
+        "𐑑",
+        "𐑞",
+        "𐑖𐑪𐑐"
+      ],
+      "blanks": [
+        2,
+        3
+      ],
+      "bank": [
+        "𐑑",
+        "𐑞",
+        "𐑑𐑵"
+      ],
       "correctLabel": "𐑢𐑰 𐑮𐑳𐑯 𐑑 𐑞 𐑖𐑪𐑐"
     },
     {
@@ -70,15 +98,35 @@
       "prompt": "𐑑𐑵 spells two English words. Which pair?",
       "caption": "",
       "optionIsGlyph": false,
-      "options": ["too and two", "to and too", "to and two", "tea and toe"],
+      "options": [
+        "too and two",
+        "to and too",
+        "to and two",
+        "tea and toe"
+      ],
       "correct": "too and two",
       "correctLabel": "too and two"
     },
     {
       "type": "match",
-      "pairs": { "𐑝": "of", "𐑓": "for", "𐑯": "and", "𐑑": "to" },
-      "leftOrder": ["𐑓", "𐑑", "𐑝", "𐑯"],
-      "rightOrder": ["and", "of", "to", "for"]
+      "pairs": {
+        "𐑝": "of",
+        "𐑓": "for",
+        "𐑯": "and",
+        "𐑑": "to"
+      },
+      "leftOrder": [
+        "𐑓",
+        "𐑑",
+        "𐑝",
+        "𐑯"
+      ],
+      "rightOrder": [
+        "and",
+        "of",
+        "to",
+        "for"
+      ]
     },
     {
       "type": "type",
@@ -90,16 +138,41 @@
     {
       "type": "fill",
       "promptEn": "a gift for the cat",
-      "words": ["𐑩", "𐑜𐑦𐑓𐑑", "𐑓", "𐑞", "𐑒𐑨𐑑"],
-      "blanks": [2],
-      "bank": ["𐑓", "𐑓𐑹", "𐑝"],
+      "words": [
+        "𐑩",
+        "𐑜𐑦𐑓𐑑",
+        "𐑓",
+        "𐑞",
+        "𐑒𐑨𐑑"
+      ],
+      "blanks": [
+        2
+      ],
+      "bank": [
+        "𐑓",
+        "𐑓𐑹",
+        "𐑝"
+      ],
       "correctLabel": "𐑩 𐑜𐑦𐑓𐑑 𐑓 𐑞 𐑒𐑨𐑑"
     },
     {
       "type": "arrange",
       "promptEn": "we run to the car",
-      "tiles": ["𐑢𐑰", "𐑮𐑳𐑯", "𐑑", "𐑞", "𐑒𐑸", "𐑑𐑵"],
-      "answer": ["𐑢𐑰", "𐑮𐑳𐑯", "𐑑", "𐑞", "𐑒𐑸"],
+      "tiles": [
+        "𐑢𐑰",
+        "𐑮𐑳𐑯",
+        "𐑑",
+        "𐑞",
+        "𐑒𐑸",
+        "𐑑𐑵"
+      ],
+      "answer": [
+        "𐑢𐑰",
+        "𐑮𐑳𐑯",
+        "𐑑",
+        "𐑞",
+        "𐑒𐑸"
+      ],
       "correctLabel": "𐑢𐑰 𐑮𐑳𐑯 𐑑 𐑞 𐑒𐑸"
     },
     {
