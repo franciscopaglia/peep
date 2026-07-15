@@ -15,8 +15,10 @@ Legend: ✅ shipped · 🚧 in progress · 🗓️ planned · 💡 idea / under 
 - **Chapter 1 — The Alphabet** (24 lessons): every consonant and vowel of the
   48-letter Shavian alphabet, introduced a pair at a time, with ~20
   practice-heavy exercises per lesson.
-- **Chapter 2 — Reading Fluency** (9 lessons): the `ʒ` letter, the r-coloured
-  vowels, writing names, sentence building, and a short reading passage.
+- **Chapter 2 — Reading Fluency** (10 lessons): the `ʒ` letter, the r-coloured
+  vowels, the little words (the single-letter spellings 𐑞 𐑝 𐑯 𐑑 𐑓 and a first
+  look at homographs like 𐑑𐑵 = *too*/*two*), writing names, sentence building,
+  and a short reading passage.
 - New letters only ever build on what you've already learned — the path never
   asks you to read a symbol it hasn't taught.
 
@@ -99,6 +101,14 @@ the level that makes reading really click. New exercise types planned here:
 - **💡 Word dictation** — hear a word spoken (ties into the pronunciation
   helpers) and build it letter by letter, no English prompt shown.
 
+### More theory, woven in
+
+- **🗓️ Richer teach cards throughout existing lessons** — today most `teach`
+  cards introduce a new letter and move on. Planned: short theory cards woven
+  through the path — where a letter's shape comes from, why a spelling looks
+  the way it does, reading tips, a pinch of history — so the "why" arrives
+  alongside the "how", a card at a time.
+
 ### Video lessons
 
 - **🗓️ Short lesson videos** — a handful of narrated walkthroughs (letter shapes,
@@ -125,13 +135,15 @@ so nothing re-teaches what came earlier.
 
 - **✅ Chapter 1 — The Alphabet** *(shipped · 24 lessons)* — all 48 letters, a
   pair at a time, blending into first words.
-- **✅ Chapter 2 — Reading Fluency** *(shipped · 9 lessons)* — the `ʒ` letter, the
-  r-coloured vowels, the naming dot, sentence building, and a first short story.
+- **✅ Chapter 2 — Reading Fluency** *(shipped · 10 lessons)* — the `ʒ` letter,
+  the r-coloured vowels, the little words (single-letter spellings and first
+  homographs), the naming dot, sentence building, and a first short story.
 - **🚧 Chapter 3 — Reading in the Wild** *(placeholder — to be written)* — you can
   read sentences; now read *published* Shavian. Longer, unassisted passages and
   dialogue (no word banks), plus the mechanics that make real text look
-  different from sounded-out spelling: ligatures, the standard shorthand words
-  (`the`, `of`, `and`, `to`, `for`), punctuation, numbers and dates.
+  different from sounded-out spelling: ligatures, punctuation, numbers and
+  dates, and a deeper pass on the shorthand words and homographs that
+  Chapter 2's "Little Words" lesson only introduces.
 - **🗓️ Chapter 4 — Writing Shavian** *(placeholder — to be scoped)* — the reverse
   direction: given English, spell it in Shavian. Its own chapter because writing
   needs rules reading doesn't — schwa vs. full vowels under stress, the fixed

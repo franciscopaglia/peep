@@ -108,7 +108,9 @@ answer is always authored first, so this stops "tap straight through").
   aren't all taught yet — "digit" contains `𐑡` (j), not `𐑜` (g).
 - **Use the standard abbreviated words.** In running Shavian text, the = `𐑞`,
   and = `𐑯`, to = `𐑑`, of = `𐑝`, for = `𐑓` — never spelled out. `𐑨𐑯𐑛` is a
-  misspelling of "and", and `𐑑𐑵` reads "too/two", never "to".
+  misspelling of "and", and `𐑑𐑵` reads "too/two", never "to". They're taught in
+  lesson 24 (`𐑞 𐑯 𐑑`) and lesson 27 "Little Words" (`𐑝 𐑓`, plus for/four and
+  the first homographs); Chapter 3 will deepen this (ligatures, more shorthand).
 - `type`: when the prompt's spelling is shared by English homophones (`𐑑𐑵` is
   both "too" and "two", `𐑓𐑹` is "four"/"fore"), list the alternates in
   `accept` so a correct reading is never marked wrong.

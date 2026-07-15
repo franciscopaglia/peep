@@ -1,0 +1,111 @@
+{
+  "id": 27,
+  "title": "Little Words",
+  "glyph": "𐑝𐑓",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Words of one letter",
+      "body": "You already write the as 𐑞, and as 𐑯, and to as 𐑑. Two more everyday words shrink to a single letter: of is 𐑝, and for is 𐑓. That's the full set of five — they're everywhere, so they save a lot of ink."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which letter is the word “of”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑝", "𐑓", "𐑞", "𐑑"],
+      "correct": "𐑝",
+      "correctLabel": "𐑝"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which letter is the word “for”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": ["𐑓", "𐑝", "𐑯", "𐑞"],
+      "correct": "𐑓",
+      "correctLabel": "𐑓"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑞 𐑒𐑳𐑐 𐑝 𐑑𐑰",
+      "caption": "Type what this says",
+      "correct": "the cup of tea",
+      "correctLabel": "the cup of tea"
+    },
+    {
+      "type": "teach",
+      "title": "for vs. four",
+      "body": "Since for is just 𐑓, the spelled-out 𐑓𐑹 is left meaning the number four. So [[𐑩 𐑜𐑦𐑓𐑑 𐑓 𐑞 𐑛𐑪𐑜]] is “a gift for the dog”, while 𐑓𐑹 𐑛𐑪𐑜𐑟 is “four dogs”."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑓𐑹",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": ["four", "for", "far", "form"],
+      "correct": "four",
+      "correctLabel": "four"
+    },
+    {
+      "type": "fill",
+      "promptEn": "we run to the shop",
+      "words": ["𐑢𐑰", "𐑮𐑳𐑯", "𐑑", "𐑞", "𐑖𐑪𐑐"],
+      "blanks": [2, 3],
+      "bank": ["𐑑", "𐑞", "𐑑𐑵"],
+      "correctLabel": "𐑢𐑰 𐑮𐑳𐑯 𐑑 𐑞 𐑖𐑪𐑐"
+    },
+    {
+      "type": "teach",
+      "title": "One spelling, two words",
+      "body": "Spelling by sound has a twist: words that sound the same are written the same. 𐑑𐑵 is both too and two; 𐑕𐑳𐑯 is both sun and son. Context tells you which one is meant — exactly as it does when you listen."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "𐑑𐑵 spells two English words. Which pair?",
+      "caption": "",
+      "optionIsGlyph": false,
+      "options": ["too and two", "to and too", "to and two", "tea and toe"],
+      "correct": "too and two",
+      "correctLabel": "too and two"
+    },
+    {
+      "type": "match",
+      "pairs": { "𐑝": "of", "𐑓": "for", "𐑯": "and", "𐑑": "to" },
+      "leftOrder": ["𐑓", "𐑑", "𐑝", "𐑯"],
+      "rightOrder": ["and", "of", "to", "for"]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑞 𐑕𐑳𐑯 𐑦𐑟 𐑣𐑪𐑑",
+      "caption": "Type what this says",
+      "correct": "the sun is hot",
+      "correctLabel": "the sun is hot"
+    },
+    {
+      "type": "fill",
+      "promptEn": "a gift for the cat",
+      "words": ["𐑩", "𐑜𐑦𐑓𐑑", "𐑓", "𐑞", "𐑒𐑨𐑑"],
+      "blanks": [2],
+      "bank": ["𐑓", "𐑓𐑹", "𐑝"],
+      "correctLabel": "𐑩 𐑜𐑦𐑓𐑑 𐑓 𐑞 𐑒𐑨𐑑"
+    },
+    {
+      "type": "arrange",
+      "promptEn": "we run to the car",
+      "tiles": ["𐑢𐑰", "𐑮𐑳𐑯", "𐑑", "𐑞", "𐑒𐑸", "𐑑𐑵"],
+      "answer": ["𐑢𐑰", "𐑮𐑳𐑯", "𐑑", "𐑞", "𐑒𐑸"],
+      "correctLabel": "𐑢𐑰 𐑮𐑳𐑯 𐑑 𐑞 𐑒𐑸"
+    },
+    {
+      "type": "teach",
+      "title": "That's the set",
+      "body": "𐑞, 𐑝, 𐑯, 𐑑, 𐑓 — the five little words you'll see in nearly every Shavian sentence. Chapter 3 digs into more tricks of real printed Shavian, like joined letter pairs. For now, spotting these five on sight is plenty."
+    }
+  ]
+}
