@@ -46,7 +46,16 @@ export function Footer({ onSetView }: { onSetView: (v: View) => void }) {
         { label: 'Tools', onClick: () => goTo('resources', 'tools') },
         {
           label: 'GitHub',
-          onClick: () => window.open(GITHUB_URL, '_blank'),
+          node: (
+            <a
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener"
+              className="text-sm text-muted-foreground no-underline hover:text-accent"
+            >
+              GitHub
+            </a>
+          ),
         },
       ],
     },

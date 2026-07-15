@@ -111,6 +111,7 @@ export function Lesson({
         <button
           className="w-9 h-9 border-none bg-transparent text-muted-foreground cursor-pointer flex-none flex items-center justify-center"
           onClick={onClose}
+          aria-label="Close lesson"
         >
           <X size={20} />
         </button>
@@ -286,6 +287,7 @@ export function Lesson({
                   <button
                     key={i}
                     onClick={() => onBuildAdd(i)}
+                    disabled={used || status !== 'active'}
                     className="w-[58px] h-[58px] rounded-btn font-bold text-2xl flex items-center justify-center"
                     style={{
                       border: '2px solid var(--border)',
@@ -342,6 +344,7 @@ export function Lesson({
                   <button
                     key={i}
                     onClick={() => onArrangeAdd(i)}
+                    disabled={used || status !== 'active'}
                     className="px-4 py-2.5 rounded-btn font-bold text-xl"
                     style={{
                       border: '2px solid var(--border)',

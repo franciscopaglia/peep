@@ -92,7 +92,8 @@ Nine types (see `src/lessons/types.ts`). Graded via `isCorrect`:
 `choice`, `type`, `build`, `arrange`, `complete` (fill a word's missing
 letters), `fill` (fill a sentence's missing words), `cloze` (fill a passage's
 blanks). `teach` is not graded; `match` is graded through its own pairing flow
-in `App.tsx` (not via `isCorrect`).
+in `App.tsx` (not via `isCorrect`). `match` is **intentionally not failable** —
+wrong picks just shake and reset, and finishing always scores the point.
 
 **Randomization:** `shuffleExerciseOptions` shuffles `choice` options, `build`/
 `arrange` tiles, and `complete`/`fill`/`cloze` banks on load. The shuffle

@@ -63,6 +63,12 @@ describe('lesson content is well-formed and solvable', () => {
           expect(sorted(ex.leftOrder)).toEqual(sorted(Object.keys(ex.pairs)));
           expect(sorted(ex.rightOrder)).toEqual(sorted(Object.values(ex.pairs)));
         });
+        it(`${at}: pair values are unique`, () => {
+          // The right column looks pairs up by value, so a duplicate English
+          // word would make two cells indistinguishable.
+          const values = Object.values(ex.pairs);
+          expect(new Set(values).size).toBe(values.length);
+        });
         continue;
       }
 

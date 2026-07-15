@@ -127,7 +127,9 @@ export function useHeroCanvas(active: boolean, isDark: boolean) {
       rafRef.current = null;
       window.removeEventListener('resize', onResize);
     };
-  }, [active]);
+    // `isDark` re-runs the effect so the one-off draw() under
+    // prefers-reduced-motion repaints in the new theme colors.
+  }, [active, isDark]);
 
   return canvasRef;
 }

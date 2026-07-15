@@ -136,19 +136,17 @@ export default function App() {
   );
 
   const continueNext = useCallback(() => {
-    setExIndex((i) => {
-      const nextIndex = i + 1;
-      if (nextIndex >= exercises.length) {
-        const passed = lessonPassed(score, gradeableCount(exercises));
-        setView('complete');
-        // Only unlock the next lesson when the pass threshold is met.
-        if (passed) setCompletedCount((c) => Math.max(c, activeLessonId));
-        return i;
-      }
-      resetExerciseState();
-      return nextIndex;
-    });
-  }, [exercises, score, activeLessonId, setView, setCompletedCount, resetExerciseState]);
+    const nextIndex = exIndex + 1;
+    if (nextIndex >= exercises.length) {
+      const passed = lessonPassed(score, gradeableCount(exercises));
+      setView('complete');
+      // Only unlock the next lesson when the pass threshold is met.
+      if (passed) setCompletedCount((c) => Math.max(c, activeLessonId));
+      return;
+    }
+    resetExerciseState();
+    setExIndex(nextIndex);
+  }, [exIndex, exercises, score, activeLessonId, setView, setCompletedCount, resetExerciseState]);
 
   const checkAnswer = useCallback(() => {
     const ex = exercises[exIndex];
@@ -252,6 +250,8 @@ export default function App() {
         if (matchedKeys.includes(value)) return;
         setMatchSelLeft((prev) => (prev === value ? null : value));
       } else {
+        const key = Object.keys(ex.pairs).find((k) => ex.pairs[k] === value);
+        if (key && matchedKeys.includes(key)) return;
         setMatchSelRight((prev) => (prev === value ? null : value));
       }
     },
@@ -264,17 +264,14 @@ export default function App() {
     if (!ex || ex.type !== 'match') return;
     const isPair = ex.pairs[matchSelLeft] === matchSelRight;
     if (isPair) {
-      setMatchedKeys((prev) => {
-        const next = [...prev, matchSelLeft];
-        const done = next.length === Object.keys(ex.pairs).length;
-        if (done) {
-          setStatus('correct');
-          setScore((s) => s + 1);
-        }
-        return next;
-      });
+      const next = [...matchedKeys, matchSelLeft];
+      setMatchedKeys(next);
       setMatchSelLeft(null);
       setMatchSelRight(null);
+      if (next.length === Object.keys(ex.pairs).length) {
+        setStatus('correct');
+        setScore((s) => s + 1);
+      }
     } else {
       setMatchWrong(true);
       const t = window.setTimeout(() => {
@@ -284,18 +281,22 @@ export default function App() {
       }, 500);
       return () => window.clearTimeout(t);
     }
-  }, [matchSelLeft, matchSelRight, exercises, exIndex]);
+  }, [matchSelLeft, matchSelRight, exercises, exIndex, matchedKeys]);
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if (e.key !== 'Enter' || view !== 'lesson') return;
       const ex = exercises[exIndex];
       if (!ex) return;
+      // Stop a focused button from also firing its click on this same Enter,
+      // which would advance twice and silently skip an exercise.
       if (status !== 'active') {
+        e.preventDefault();
         continueNext();
         return;
       }
       if (ex.type === 'teach') {
+        e.preventDefault();
         continueNext();
         return;
       }
@@ -311,7 +312,10 @@ export default function App() {
                 : ex.type === 'complete' || ex.type === 'fill' || ex.type === 'cloze'
                   ? fillSel.length === ex.blanks.length
                   : false;
-      if (canCheck) checkAnswer();
+      if (canCheck) {
+        e.preventDefault();
+        checkAnswer();
+      }
     }
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);

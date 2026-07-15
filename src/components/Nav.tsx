@@ -100,6 +100,7 @@ export function Nav({
             href={GITHUB_URL}
             target="_blank"
             rel="noopener"
+            aria-label="View source on GitHub"
             className="hidden md:inline-flex h-[38px] w-[38px] box-border items-center justify-center border border-border bg-card text-muted-foreground rounded-btn cursor-pointer no-underline"
           >
             <GitBranch size={18} />
