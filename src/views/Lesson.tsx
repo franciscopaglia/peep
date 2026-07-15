@@ -6,6 +6,41 @@ import { lessonIssueUrl } from '@/lib/constants';
 
 type Status = 'active' | 'correct' | 'wrong';
 
+// Border/background/text colors for an answer element by grading status.
+// While the exercise is active, `lit` elements use the accent scheme and
+// unlit ones (an empty blank, the idle input) stay neutral.
+function answerColors(status: Status, lit = true) {
+  if (status === 'wrong')
+    return { border: 'var(--danger)', bg: 'var(--danger-soft)', color: 'var(--danger)' };
+  if (status === 'correct')
+    return { border: 'var(--success)', bg: 'var(--success-soft)', color: 'var(--success)' };
+  return lit
+    ? { border: 'var(--accent-border)', bg: 'var(--accent-soft)', color: 'var(--accent)' }
+    : { border: 'var(--border)', bg: 'transparent', color: 'var(--accent)' };
+}
+
+// A tile/word in a tap pool: greyed out once used, a flat card otherwise.
+function poolTileStyle(used: boolean, status: Status) {
+  return {
+    border: '2px solid var(--border)',
+    background: used ? 'var(--locked-bg)' : 'var(--card)',
+    color: used ? 'transparent' : 'var(--foreground)',
+    cursor: used || status !== 'active' ? 'default' : 'pointer',
+    boxShadow: used ? 'none' : 'var(--shadow-sm)',
+  };
+}
+
+// A match cell, on either side of the pairing grid.
+function matchCellColors(matched: boolean, wrong: boolean, sel: boolean) {
+  if (matched)
+    return { border: 'var(--success)', bg: 'var(--success-soft)', color: 'var(--success)' };
+  if (wrong)
+    return { border: 'var(--danger)', bg: 'var(--danger-soft)', color: 'var(--danger)' };
+  if (sel)
+    return { border: 'var(--accent)', bg: 'var(--accent-soft)', color: 'var(--accent)' };
+  return { border: 'var(--border)', bg: 'var(--card)', color: 'var(--foreground)' };
+}
+
 export function Lesson({
   exercise,
   exIndex,
@@ -81,6 +116,8 @@ export function Lesson({
   const isCloze = exercise.type === 'cloze';
   const isMatch = exercise.type === 'match';
   const isWrong = status === 'wrong';
+  const lit = answerColors(status);
+  const dim = answerColors(status, false);
 
   const blanksNeeded =
     exercise.type === 'complete' ||
@@ -235,8 +272,8 @@ export function Lesson({
             <input
               className="w-[260px] text-center text-[22px] font-semibold p-4 rounded-btn outline-none"
               style={{
-                border: `2px solid ${status === 'active' ? 'var(--border)' : isWrong ? 'var(--danger)' : 'var(--success)'}`,
-                background: status === 'active' ? 'var(--card)' : isWrong ? 'var(--danger-soft)' : 'var(--success-soft)',
+                border: `2px solid ${dim.border}`,
+                background: status === 'active' ? 'var(--card)' : dim.bg,
                 color: 'var(--foreground)',
               }}
               value={typedValue}
@@ -270,9 +307,9 @@ export function Lesson({
                   onClick={() => onBuildRemove(pos)}
                   className="w-[54px] h-[54px] rounded-btn font-bold text-2xl flex items-center justify-center"
                   style={{
-                    border: `2px solid ${status === 'active' ? 'var(--accent-border)' : isWrong ? 'var(--danger)' : 'var(--success)'}`,
-                    background: status === 'active' ? 'var(--accent-soft)' : isWrong ? 'var(--danger-soft)' : 'var(--success-soft)',
-                    color: status === 'active' ? 'var(--accent)' : isWrong ? 'var(--danger)' : 'var(--success)',
+                    border: `2px solid ${lit.border}`,
+                    background: lit.bg,
+                    color: lit.color,
                     cursor: status === 'active' ? 'pointer' : 'default',
                   }}
                 >
@@ -289,13 +326,7 @@ export function Lesson({
                     onClick={() => onBuildAdd(i)}
                     disabled={used || status !== 'active'}
                     className="w-[58px] h-[58px] rounded-btn font-bold text-2xl flex items-center justify-center"
-                    style={{
-                      border: '2px solid var(--border)',
-                      background: used ? 'var(--locked-bg)' : 'var(--card)',
-                      color: used ? 'transparent' : 'var(--foreground)',
-                      cursor: used || status !== 'active' ? 'default' : 'pointer',
-                      boxShadow: used ? 'none' : 'var(--shadow-sm)',
-                    }}
+                    style={poolTileStyle(used, status)}
                   >
                     {ch}
                   </button>
@@ -327,9 +358,9 @@ export function Lesson({
                   onClick={() => onArrangeRemove(pos)}
                   className="px-4 py-2.5 rounded-btn font-bold text-xl"
                   style={{
-                    border: `2px solid ${status === 'active' ? 'var(--accent-border)' : isWrong ? 'var(--danger)' : 'var(--success)'}`,
-                    background: status === 'active' ? 'var(--accent-soft)' : isWrong ? 'var(--danger-soft)' : 'var(--success-soft)',
-                    color: status === 'active' ? 'var(--accent)' : isWrong ? 'var(--danger)' : 'var(--success)',
+                    border: `2px solid ${lit.border}`,
+                    background: lit.bg,
+                    color: lit.color,
                     cursor: status === 'active' ? 'pointer' : 'default',
                   }}
                 >
@@ -346,13 +377,7 @@ export function Lesson({
                     onClick={() => onArrangeAdd(i)}
                     disabled={used || status !== 'active'}
                     className="px-4 py-2.5 rounded-btn font-bold text-xl"
-                    style={{
-                      border: '2px solid var(--border)',
-                      background: used ? 'var(--locked-bg)' : 'var(--card)',
-                      color: used ? 'transparent' : 'var(--foreground)',
-                      cursor: used || status !== 'active' ? 'default' : 'pointer',
-                      boxShadow: used ? 'none' : 'var(--shadow-sm)',
-                    }}
+                    style={poolTileStyle(used, status)}
                   >
                     {word}
                   </button>
@@ -393,15 +418,9 @@ export function Lesson({
                     onClick={() => filled && onFillRemove(blankPos)}
                     className="w-[54px] h-[54px] rounded-btn font-bold text-2xl flex items-center justify-center"
                     style={{
-                      border: `2px dashed ${status === 'active' ? (filled ? 'var(--accent-border)' : 'var(--border)') : isWrong ? 'var(--danger)' : 'var(--success)'}`,
-                      background: filled
-                        ? status === 'active'
-                          ? 'var(--accent-soft)'
-                          : isWrong
-                            ? 'var(--danger-soft)'
-                            : 'var(--success-soft)'
-                        : 'transparent',
-                      color: status === 'active' ? 'var(--accent)' : isWrong ? 'var(--danger)' : 'var(--success)',
+                      border: `2px dashed ${filled ? lit.border : dim.border}`,
+                      background: filled ? lit.bg : 'transparent',
+                      color: lit.color,
                       cursor: filled && status === 'active' ? 'pointer' : 'default',
                     }}
                   >
@@ -419,13 +438,7 @@ export function Lesson({
                     onClick={() => onFillAdd(i)}
                     disabled={used || status !== 'active'}
                     className="w-[58px] h-[58px] rounded-btn font-bold text-2xl flex items-center justify-center"
-                    style={{
-                      border: '2px solid var(--border)',
-                      background: used ? 'var(--locked-bg)' : 'var(--card)',
-                      color: used ? 'transparent' : 'var(--foreground)',
-                      cursor: used || status !== 'active' ? 'default' : 'pointer',
-                      boxShadow: used ? 'none' : 'var(--shadow-sm)',
-                    }}
+                    style={poolTileStyle(used, status)}
                   >
                     {ch}
                   </button>
@@ -463,15 +476,9 @@ export function Lesson({
                     onClick={() => filled && onFillRemove(blankPos)}
                     className="min-w-[64px] px-4 py-2.5 rounded-btn font-bold text-xl flex items-center justify-center"
                     style={{
-                      border: `2px dashed ${status === 'active' ? (filled ? 'var(--accent-border)' : 'var(--border)') : isWrong ? 'var(--danger)' : 'var(--success)'}`,
-                      background: filled
-                        ? status === 'active'
-                          ? 'var(--accent-soft)'
-                          : isWrong
-                            ? 'var(--danger-soft)'
-                            : 'var(--success-soft)'
-                        : 'transparent',
-                      color: status === 'active' ? 'var(--accent)' : isWrong ? 'var(--danger)' : 'var(--success)',
+                      border: `2px dashed ${filled ? lit.border : dim.border}`,
+                      background: filled ? lit.bg : 'transparent',
+                      color: lit.color,
                       cursor: filled && status === 'active' ? 'pointer' : 'default',
                     }}
                   >
@@ -489,13 +496,7 @@ export function Lesson({
                     onClick={() => onFillAdd(i)}
                     disabled={used || status !== 'active'}
                     className="px-4 py-2.5 rounded-btn font-bold text-xl"
-                    style={{
-                      border: '2px solid var(--border)',
-                      background: used ? 'var(--locked-bg)' : 'var(--card)',
-                      color: used ? 'transparent' : 'var(--foreground)',
-                      cursor: used || status !== 'active' ? 'default' : 'pointer',
-                      boxShadow: used ? 'none' : 'var(--shadow-sm)',
-                    }}
+                    style={poolTileStyle(used, status)}
                   >
                     {word}
                   </button>
@@ -525,15 +526,9 @@ export function Lesson({
                           onClick={() => filled && onFillRemove(blankPos)}
                           className="inline-flex items-center justify-center h-[42px] min-w-[64px] px-2 rounded-btn align-middle"
                           style={{
-                            border: `2px dashed ${status === 'active' ? (filled ? 'var(--accent-border)' : 'var(--border)') : isWrong ? 'var(--danger)' : 'var(--success)'}`,
-                            background: filled
-                              ? status === 'active'
-                                ? 'var(--accent-soft)'
-                                : isWrong
-                                  ? 'var(--danger-soft)'
-                                  : 'var(--success-soft)'
-                              : 'transparent',
-                            color: status === 'active' ? 'var(--accent)' : isWrong ? 'var(--danger)' : 'var(--success)',
+                            border: `2px dashed ${filled ? lit.border : dim.border}`,
+                            background: filled ? lit.bg : 'transparent',
+                            color: lit.color,
                             cursor: filled && status === 'active' ? 'pointer' : 'default',
                           }}
                         >
@@ -564,13 +559,7 @@ export function Lesson({
                     onClick={() => onFillAdd(i)}
                     disabled={used || status !== 'active'}
                     className="px-4 py-2.5 rounded-btn font-bold text-xl"
-                    style={{
-                      border: '2px solid var(--border)',
-                      background: used ? 'var(--locked-bg)' : 'var(--card)',
-                      color: used ? 'transparent' : 'var(--foreground)',
-                      cursor: used || status !== 'active' ? 'default' : 'pointer',
-                      boxShadow: used ? 'none' : 'var(--shadow-sm)',
-                    }}
+                    style={poolTileStyle(used, status)}
                   >
                     {word}
                   </button>
@@ -591,31 +580,16 @@ export function Lesson({
                   const matched = matchedKeys.includes(v);
                   const sel = matchSelLeft === v;
                   const wrong = matchWrong && sel;
-                  let bg = 'var(--card)';
-                  let bd = 'var(--border)';
-                  let col = 'var(--foreground)';
-                  if (matched) {
-                    bg = 'var(--success-soft)';
-                    bd = 'var(--success)';
-                    col = 'var(--success)';
-                  } else if (wrong) {
-                    bg = 'var(--danger-soft)';
-                    bd = 'var(--danger)';
-                    col = 'var(--danger)';
-                  } else if (sel) {
-                    bg = 'var(--accent-soft)';
-                    bd = 'var(--accent)';
-                    col = 'var(--accent)';
-                  }
+                  const c = matchCellColors(matched, wrong, sel);
                   return (
                     <button
                       key={v}
                       onClick={() => onMatchClick('left', v)}
                       className="w-[120px] h-[62px] box-border flex items-center justify-center rounded-btn font-bold text-2xl"
                       style={{
-                        border: `2px solid ${bd}`,
-                        background: bg,
-                        color: col,
+                        border: `2px solid ${c.border}`,
+                        background: c.bg,
+                        color: c.color,
                         cursor: matched ? 'default' : 'pointer',
                         animation: wrong ? 'shvShake .3s ease' : 'none',
                       }}
@@ -633,31 +607,16 @@ export function Lesson({
                   const matched = key != null && matchedKeys.includes(key);
                   const sel = matchSelRight === v;
                   const wrong = matchWrong && sel;
-                  let bg = 'var(--card)';
-                  let bd = 'var(--border)';
-                  let col = 'var(--foreground)';
-                  if (matched) {
-                    bg = 'var(--success-soft)';
-                    bd = 'var(--success)';
-                    col = 'var(--success)';
-                  } else if (wrong) {
-                    bg = 'var(--danger-soft)';
-                    bd = 'var(--danger)';
-                    col = 'var(--danger)';
-                  } else if (sel) {
-                    bg = 'var(--accent-soft)';
-                    bd = 'var(--accent)';
-                    col = 'var(--accent)';
-                  }
+                  const c = matchCellColors(matched, wrong, sel);
                   return (
                     <button
                       key={v}
                       onClick={() => onMatchClick('right', v)}
                       className="w-[120px] h-[62px] box-border flex items-center justify-center rounded-btn font-semibold text-base"
                       style={{
-                        border: `2px solid ${bd}`,
-                        background: bg,
-                        color: col,
+                        border: `2px solid ${c.border}`,
+                        background: c.bg,
+                        color: c.color,
                         cursor: matched ? 'default' : 'pointer',
                         animation: wrong ? 'shvShake .3s ease' : 'none',
                       }}

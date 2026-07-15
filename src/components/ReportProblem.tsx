@@ -1,6 +1,7 @@
-import { useEffect, useState, type ReactNode } from 'react';
+import { useState, type ReactNode } from 'react';
 import { Flag } from 'lucide-react';
 import { Button } from '@/components/Button';
+import { Modal } from '@/components/Modal';
 
 /**
  * A friendly "Report a problem" control. Rather than sending people straight to
@@ -35,15 +36,6 @@ export function ReportProblem({
   tooltip?: string;
 }) {
   const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    if (!open) return;
-    function onKey(e: KeyboardEvent) {
-      if (e.key === 'Escape') setOpen(false);
-    }
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, [open]);
 
   function submit() {
     window.open(issueUrl, '_blank', 'noopener');
@@ -83,39 +75,26 @@ export function ReportProblem({
       )}
 
       {open && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-6"
-          style={{ background: 'color-mix(in srgb, var(--foreground) 45%, transparent)' }}
-          onClick={() => setOpen(false)}
-          role="dialog"
-          aria-modal="true"
-          aria-label="Report a problem"
-        >
-          <div
-            className="w-full max-w-[400px] rounded-card bg-card border border-border shadow-lg p-7 flex flex-col items-center gap-4 text-center"
-            style={{ animation: 'shvPop .2s ease' }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="w-12 h-12 rounded-full bg-accent-soft text-accent flex items-center justify-center">
-              <Flag size={22} />
-            </div>
-            <h2 className="text-lg font-bold text-foreground m-0">{heading}</h2>
-            <p className="text-sm leading-relaxed text-muted-foreground m-0">{body}</p>
-            <div className="flex gap-3 w-full mt-1">
-              <Button
-                variant="outline"
-                size="sm"
-                className="flex-1"
-                onClick={() => setOpen(false)}
-              >
-                Cancel
-              </Button>
-              <Button size="sm" className="flex-1" onClick={submit}>
-                Continue
-              </Button>
-            </div>
+        <Modal label="Report a problem" onClose={() => setOpen(false)}>
+          <div className="w-12 h-12 rounded-full bg-accent-soft text-accent flex items-center justify-center">
+            <Flag size={22} />
           </div>
-        </div>
+          <h2 className="text-lg font-bold text-foreground m-0">{heading}</h2>
+          <p className="text-sm leading-relaxed text-muted-foreground m-0">{body}</p>
+          <div className="flex gap-3 w-full mt-1">
+            <Button
+              variant="outline"
+              size="sm"
+              className="flex-1"
+              onClick={() => setOpen(false)}
+            >
+              Cancel
+            </Button>
+            <Button size="sm" className="flex-1" onClick={submit}>
+              Continue
+            </Button>
+          </div>
+        </Modal>
       )}
     </>
   );
