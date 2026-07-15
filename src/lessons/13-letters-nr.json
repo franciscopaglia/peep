@@ -151,7 +151,9 @@
       "prompt": "𐑕𐑳𐑯",
       "caption": "Sound it out — what does this say?",
       "correct": "sun",
-      "accept": ["son"],
+      "accept": [
+        "son"
+      ],
       "correctLabel": "sun"
     },
     {
@@ -181,7 +183,12 @@
       "prompt": "𐑮𐑧𐑛",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["red", "rid", "rod", "rud"],
+      "options": [
+        "red",
+        "rid",
+        "rod",
+        "rud"
+      ],
       "correct": "red",
       "correctLabel": "red"
     },
@@ -191,7 +198,12 @@
       "prompt": "Which word says “pin”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑐𐑦𐑯", "𐑐𐑨𐑯", "𐑚𐑦𐑯", "𐑐𐑦𐑥"],
+      "options": [
+        "𐑐𐑦𐑯",
+        "𐑐𐑨𐑯",
+        "𐑚𐑦𐑯",
+        "𐑐𐑦𐑥"
+      ],
       "correct": "𐑐𐑦𐑯",
       "correctLabel": "𐑐𐑦𐑯"
     },
@@ -199,15 +211,41 @@
       "type": "build",
       "prompt": "trip",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑑", "𐑮", "𐑦", "𐑐", "𐑚"],
-      "answer": ["𐑑", "𐑮", "𐑦", "𐑐"],
+      "tiles": [
+        "𐑑",
+        "𐑮",
+        "𐑦",
+        "𐑐",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑑",
+        "𐑮",
+        "𐑦",
+        "𐑐"
+      ],
       "correctLabel": "𐑑𐑮𐑦𐑐"
     },
     {
       "type": "match",
-      "pairs": { "𐑕𐑳𐑯": "sun", "𐑑𐑧𐑯": "ten", "𐑥𐑨𐑯": "man", "𐑮𐑧𐑛": "red" },
-      "leftOrder": ["𐑮𐑧𐑛", "𐑕𐑳𐑯", "𐑥𐑨𐑯", "𐑑𐑧𐑯"],
-      "rightOrder": ["sun", "red", "ten", "man"]
+      "pairs": {
+        "𐑕𐑳𐑯": "sun",
+        "𐑑𐑧𐑯": "ten",
+        "𐑥𐑨𐑯": "man",
+        "𐑮𐑧𐑛": "red"
+      },
+      "leftOrder": [
+        "𐑮𐑧𐑛",
+        "𐑕𐑳𐑯",
+        "𐑥𐑨𐑯",
+        "𐑑𐑧𐑯"
+      ],
+      "rightOrder": [
+        "sun",
+        "red",
+        "ten",
+        "man"
+      ]
     }
   ]
 }

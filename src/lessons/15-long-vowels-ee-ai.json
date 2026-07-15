@@ -19,7 +19,9 @@
       "prompt": "𐑕𐑰",
       "caption": "Sound it out — what does this say?",
       "correct": "see",
-      "accept": ["sea"],
+      "accept": [
+        "sea"
+      ],
       "correctLabel": "see"
     },
     {
@@ -54,7 +56,9 @@
       "prompt": "𐑚𐑰",
       "caption": "Sound it out — what does this say?",
       "correct": "bee",
-      "accept": ["be"],
+      "accept": [
+        "be"
+      ],
       "correctLabel": "bee"
     },
     {
@@ -98,7 +102,9 @@
       "prompt": "𐑥𐑰𐑑",
       "caption": "Sound it out — what does this say?",
       "correct": "meet",
-      "accept": ["meat"],
+      "accept": [
+        "meat"
+      ],
       "correctLabel": "meet"
     },
     {
@@ -106,7 +112,9 @@
       "prompt": "𐑓𐑰𐑑",
       "caption": "Sound it out — what does this say?",
       "correct": "feet",
-      "accept": ["feat"],
+      "accept": [
+        "feat"
+      ],
       "correctLabel": "feet"
     },
     {
@@ -121,7 +129,10 @@
       "prompt": "𐑮𐑱𐑯",
       "caption": "Sound it out — what does this say?",
       "correct": "rain",
-      "accept": ["rein", "reign"],
+      "accept": [
+        "rein",
+        "reign"
+      ],
       "correctLabel": "rain"
     },
     {
@@ -137,7 +148,12 @@
       "prompt": "𐑑𐑰𐑥",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["team", "tame", "time", "tim"],
+      "options": [
+        "team",
+        "tame",
+        "time",
+        "tim"
+      ],
       "correct": "team",
       "correctLabel": "team"
     },
@@ -147,7 +163,12 @@
       "prompt": "Which word says “tail”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑑𐑱𐑤", "𐑥𐑱𐑤", "𐑯𐑱𐑤", "𐑑𐑱𐑯"],
+      "options": [
+        "𐑑𐑱𐑤",
+        "𐑥𐑱𐑤",
+        "𐑯𐑱𐑤",
+        "𐑑𐑱𐑯"
+      ],
       "correct": "𐑑𐑱𐑤",
       "correctLabel": "𐑑𐑱𐑤"
     },
@@ -155,31 +176,77 @@
       "type": "build",
       "prompt": "keep",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑒", "𐑰", "𐑐", "𐑛", "𐑑"],
-      "answer": ["𐑒", "𐑰", "𐑐"],
+      "tiles": [
+        "𐑒",
+        "𐑰",
+        "𐑐",
+        "𐑛",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑰",
+        "𐑐"
+      ],
       "correctLabel": "𐑒𐑰𐑐"
     },
     {
       "type": "build",
       "prompt": "sail",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑕", "𐑱", "𐑤", "𐑯", "𐑥"],
-      "answer": ["𐑕", "𐑱", "𐑤"],
+      "tiles": [
+        "𐑕",
+        "𐑱",
+        "𐑤",
+        "𐑯",
+        "𐑥"
+      ],
+      "answer": [
+        "𐑕",
+        "𐑱",
+        "𐑤"
+      ],
       "correctLabel": "𐑕𐑱𐑤"
     },
     {
       "type": "build",
       "prompt": "train",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑑", "𐑮", "𐑱", "𐑯", "𐑛"],
-      "answer": ["𐑑", "𐑮", "𐑱", "𐑯"],
+      "tiles": [
+        "𐑑",
+        "𐑮",
+        "𐑱",
+        "𐑯",
+        "𐑛"
+      ],
+      "answer": [
+        "𐑑",
+        "𐑮",
+        "𐑱",
+        "𐑯"
+      ],
       "correctLabel": "𐑑𐑮𐑱𐑯"
     },
     {
       "type": "match",
-      "pairs": { "𐑥𐑰𐑑": "meet", "𐑓𐑰𐑑": "feet", "𐑕𐑱": "say", "𐑮𐑱𐑯": "rain" },
-      "leftOrder": ["𐑮𐑱𐑯", "𐑥𐑰𐑑", "𐑕𐑱", "𐑓𐑰𐑑"],
-      "rightOrder": ["meet", "rain", "feet", "say"]
+      "pairs": {
+        "𐑥𐑰𐑑": "meet",
+        "𐑓𐑰𐑑": "feet",
+        "𐑕𐑱": "say",
+        "𐑮𐑱𐑯": "rain"
+      },
+      "leftOrder": [
+        "𐑮𐑱𐑯",
+        "𐑥𐑰𐑑",
+        "𐑕𐑱",
+        "𐑓𐑰𐑑"
+      ],
+      "rightOrder": [
+        "meet",
+        "rain",
+        "feet",
+        "say"
+      ]
     }
   ]
 }

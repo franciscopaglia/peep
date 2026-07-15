@@ -83,7 +83,9 @@
       "prompt": "𐑖𐑴𐑯",
       "caption": "Sound it out — what does this say?",
       "correct": "shown",
-      "accept": ["shone"],
+      "accept": [
+        "shone"
+      ],
       "correctLabel": "shown"
     },
     {
@@ -161,7 +163,12 @@
       "prompt": "𐑡𐑨𐑒𐑦𐑑",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["jacket", "jackal", "racket", "packet"],
+      "options": [
+        "jacket",
+        "jackal",
+        "racket",
+        "packet"
+      ],
       "correct": "jacket",
       "correctLabel": "jacket"
     },
@@ -171,7 +178,12 @@
       "prompt": "Which word says “spring”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑕𐑐𐑮𐑦𐑙", "𐑕𐑑𐑮𐑦𐑙", "𐑕𐑐𐑮𐑦𐑯", "𐑕𐑐𐑮𐑦𐑜"],
+      "options": [
+        "𐑕𐑐𐑮𐑦𐑙",
+        "𐑕𐑑𐑮𐑦𐑙",
+        "𐑕𐑐𐑮𐑦𐑯",
+        "𐑕𐑐𐑮𐑦𐑜"
+      ],
       "correct": "𐑕𐑐𐑮𐑦𐑙",
       "correctLabel": "𐑕𐑐𐑮𐑦𐑙"
     },
@@ -179,31 +191,81 @@
       "type": "build",
       "prompt": "crash",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑒", "𐑮", "𐑨", "𐑖", "𐑗"],
-      "answer": ["𐑒", "𐑮", "𐑨", "𐑖"],
+      "tiles": [
+        "𐑒",
+        "𐑮",
+        "𐑨",
+        "𐑖",
+        "𐑗"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑮",
+        "𐑨",
+        "𐑖"
+      ],
       "correctLabel": "𐑒𐑮𐑨𐑖"
     },
     {
       "type": "build",
       "prompt": "twist",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑑", "𐑢", "𐑦", "𐑕", "𐑑", "𐑯"],
-      "answer": ["𐑑", "𐑢", "𐑦", "𐑕", "𐑑"],
+      "tiles": [
+        "𐑑",
+        "𐑢",
+        "𐑦",
+        "𐑕",
+        "𐑑",
+        "𐑯"
+      ],
+      "answer": [
+        "𐑑",
+        "𐑢",
+        "𐑦",
+        "𐑕",
+        "𐑑"
+      ],
       "correctLabel": "𐑑𐑢𐑦𐑕𐑑"
     },
     {
       "type": "build",
       "prompt": "punch",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑐", "𐑳", "𐑯", "𐑗", "𐑖"],
-      "answer": ["𐑐", "𐑳", "𐑯", "𐑗"],
+      "tiles": [
+        "𐑐",
+        "𐑳",
+        "𐑯",
+        "𐑗",
+        "𐑖"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑳",
+        "𐑯",
+        "𐑗"
+      ],
       "correctLabel": "𐑐𐑳𐑯𐑗"
     },
     {
       "type": "match",
-      "pairs": { "𐑤𐑳𐑯𐑗": "lunch", "𐑚𐑧𐑯𐑗": "bench", "𐑕𐑑𐑮𐑪𐑙": "strong", "𐑮𐑪𐑒𐑦𐑑": "rocket" },
-      "leftOrder": ["𐑮𐑪𐑒𐑦𐑑", "𐑤𐑳𐑯𐑗", "𐑕𐑑𐑮𐑪𐑙", "𐑚𐑧𐑯𐑗"],
-      "rightOrder": ["lunch", "rocket", "bench", "strong"]
+      "pairs": {
+        "𐑤𐑳𐑯𐑗": "lunch",
+        "𐑚𐑧𐑯𐑗": "bench",
+        "𐑕𐑑𐑮𐑪𐑙": "strong",
+        "𐑮𐑪𐑒𐑦𐑑": "rocket"
+      },
+      "leftOrder": [
+        "𐑮𐑪𐑒𐑦𐑑",
+        "𐑤𐑳𐑯𐑗",
+        "𐑕𐑑𐑮𐑪𐑙",
+        "𐑚𐑧𐑯𐑗"
+      ],
+      "rightOrder": [
+        "lunch",
+        "rocket",
+        "bench",
+        "strong"
+      ]
     }
   ]
 }

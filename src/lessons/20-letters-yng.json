@@ -145,7 +145,9 @@
       "prompt": "𐑮𐑦𐑙",
       "caption": "Sound it out — what does this say?",
       "correct": "ring",
-      "accept": ["wring"],
+      "accept": [
+        "wring"
+      ],
       "correctLabel": "ring"
     },
     {
@@ -175,7 +177,12 @@
       "prompt": "𐑣𐑨𐑙",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["hang", "hung", "hong", "hag"],
+      "options": [
+        "hang",
+        "hung",
+        "hong",
+        "hag"
+      ],
       "correct": "hang",
       "correctLabel": "hang"
     },
@@ -185,7 +192,12 @@
       "prompt": "Which word says “wing”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑢𐑦𐑙", "𐑮𐑦𐑙", "𐑢𐑦𐑯", "𐑕𐑦𐑙"],
+      "options": [
+        "𐑢𐑦𐑙",
+        "𐑮𐑦𐑙",
+        "𐑢𐑦𐑯",
+        "𐑕𐑦𐑙"
+      ],
       "correct": "𐑢𐑦𐑙",
       "correctLabel": "𐑢𐑦𐑙"
     },
@@ -193,23 +205,59 @@
       "type": "build",
       "prompt": "bring",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑚", "𐑮", "𐑦", "𐑙", "𐑑"],
-      "answer": ["𐑚", "𐑮", "𐑦", "𐑙"],
+      "tiles": [
+        "𐑚",
+        "𐑮",
+        "𐑦",
+        "𐑙",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑚",
+        "𐑮",
+        "𐑦",
+        "𐑙"
+      ],
       "correctLabel": "𐑚𐑮𐑦𐑙"
     },
     {
       "type": "build",
       "prompt": "gong",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑜", "𐑪", "𐑙", "𐑒", "𐑯"],
-      "answer": ["𐑜", "𐑪", "𐑙"],
+      "tiles": [
+        "𐑜",
+        "𐑪",
+        "𐑙",
+        "𐑒",
+        "𐑯"
+      ],
+      "answer": [
+        "𐑜",
+        "𐑪",
+        "𐑙"
+      ],
       "correctLabel": "𐑜𐑪𐑙"
     },
     {
       "type": "match",
-      "pairs": { "𐑕𐑦𐑙": "sing", "𐑮𐑦𐑙": "ring", "𐑚𐑨𐑙": "bang", "𐑕𐑪𐑙": "song" },
-      "leftOrder": ["𐑕𐑪𐑙", "𐑕𐑦𐑙", "𐑚𐑨𐑙", "𐑮𐑦𐑙"],
-      "rightOrder": ["sing", "song", "ring", "bang"]
+      "pairs": {
+        "𐑕𐑦𐑙": "sing",
+        "𐑮𐑦𐑙": "ring",
+        "𐑚𐑨𐑙": "bang",
+        "𐑕𐑪𐑙": "song"
+      },
+      "leftOrder": [
+        "𐑕𐑪𐑙",
+        "𐑕𐑦𐑙",
+        "𐑚𐑨𐑙",
+        "𐑮𐑦𐑙"
+      ],
+      "rightOrder": [
+        "sing",
+        "song",
+        "ring",
+        "bang"
+      ]
     }
   ]
 }

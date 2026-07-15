@@ -125,7 +125,9 @@
       "prompt": "𐑑𐑵",
       "caption": "Sound it out — what does this say?",
       "correct": "too",
-      "accept": ["two"],
+      "accept": [
+        "two"
+      ],
       "correctLabel": "too"
     },
     {
@@ -133,7 +135,9 @@
       "prompt": "𐑮𐑵𐑑",
       "caption": "Sound it out — what does this say?",
       "correct": "root",
-      "accept": ["route"],
+      "accept": [
+        "route"
+      ],
       "correctLabel": "root"
     },
     {
@@ -163,7 +167,12 @@
       "prompt": "𐑐𐑵𐑤",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["pool", "pull", "pole", "pill"],
+      "options": [
+        "pool",
+        "pull",
+        "pole",
+        "pill"
+      ],
       "correct": "pool",
       "correctLabel": "pool"
     },
@@ -173,7 +182,12 @@
       "prompt": "Which word says “spoon”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑕𐑐𐑵𐑯", "𐑕𐑵𐑯", "𐑕𐑐𐑵𐑥", "𐑕𐑑𐑵𐑯"],
+      "options": [
+        "𐑕𐑐𐑵𐑯",
+        "𐑕𐑵𐑯",
+        "𐑕𐑐𐑵𐑥",
+        "𐑕𐑑𐑵𐑯"
+      ],
       "correct": "𐑕𐑐𐑵𐑯",
       "correctLabel": "𐑕𐑐𐑵𐑯"
     },
@@ -181,31 +195,77 @@
       "type": "build",
       "prompt": "tool",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑑", "𐑵", "𐑤", "𐑮", "𐑯"],
-      "answer": ["𐑑", "𐑵", "𐑤"],
+      "tiles": [
+        "𐑑",
+        "𐑵",
+        "𐑤",
+        "𐑮",
+        "𐑯"
+      ],
+      "answer": [
+        "𐑑",
+        "𐑵",
+        "𐑤"
+      ],
       "correctLabel": "𐑑𐑵𐑤"
     },
     {
       "type": "build",
       "prompt": "broom",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑚", "𐑮", "𐑵", "𐑥", "𐑤"],
-      "answer": ["𐑚", "𐑮", "𐑵", "𐑥"],
+      "tiles": [
+        "𐑚",
+        "𐑮",
+        "𐑵",
+        "𐑥",
+        "𐑤"
+      ],
+      "answer": [
+        "𐑚",
+        "𐑮",
+        "𐑵",
+        "𐑥"
+      ],
       "correctLabel": "𐑚𐑮𐑵𐑥"
     },
     {
       "type": "build",
       "prompt": "blue",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑚", "𐑤", "𐑵", "𐑮", "𐑐"],
-      "answer": ["𐑚", "𐑤", "𐑵"],
+      "tiles": [
+        "𐑚",
+        "𐑤",
+        "𐑵",
+        "𐑮",
+        "𐑐"
+      ],
+      "answer": [
+        "𐑚",
+        "𐑤",
+        "𐑵"
+      ],
       "correctLabel": "𐑚𐑤𐑵"
     },
     {
       "type": "match",
-      "pairs": { "𐑕𐑵𐑯": "soon", "𐑓𐑵𐑛": "food", "𐑒𐑵𐑤": "cool", "𐑮𐑵𐑥": "room" },
-      "leftOrder": ["𐑮𐑵𐑥", "𐑕𐑵𐑯", "𐑒𐑵𐑤", "𐑓𐑵𐑛"],
-      "rightOrder": ["soon", "room", "food", "cool"]
+      "pairs": {
+        "𐑕𐑵𐑯": "soon",
+        "𐑓𐑵𐑛": "food",
+        "𐑒𐑵𐑤": "cool",
+        "𐑮𐑵𐑥": "room"
+      },
+      "leftOrder": [
+        "𐑮𐑵𐑥",
+        "𐑕𐑵𐑯",
+        "𐑒𐑵𐑤",
+        "𐑓𐑵𐑛"
+      ],
+      "rightOrder": [
+        "soon",
+        "room",
+        "food",
+        "cool"
+      ]
     }
   ]
 }

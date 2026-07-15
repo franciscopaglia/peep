@@ -145,7 +145,12 @@
       "prompt": "𐑚𐑨𐑛",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["bad", "bat", "bud", "dab"],
+      "options": [
+        "bad",
+        "bat",
+        "bud",
+        "dab"
+      ],
       "correct": "bad",
       "correctLabel": "bad"
     },
@@ -155,7 +160,12 @@
       "prompt": "Which word says “pot”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑐𐑪𐑑", "𐑑𐑪𐑐", "𐑐𐑨𐑑", "𐑚𐑪𐑑"],
+      "options": [
+        "𐑐𐑪𐑑",
+        "𐑑𐑪𐑐",
+        "𐑐𐑨𐑑",
+        "𐑚𐑪𐑑"
+      ],
       "correct": "𐑐𐑪𐑑",
       "correctLabel": "𐑐𐑪𐑑"
     },
@@ -163,23 +173,58 @@
       "type": "build",
       "prompt": "dot",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑛", "𐑪", "𐑑", "𐑐", "𐑨"],
-      "answer": ["𐑛", "𐑪", "𐑑"],
+      "tiles": [
+        "𐑛",
+        "𐑪",
+        "𐑑",
+        "𐑐",
+        "𐑨"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑪",
+        "𐑑"
+      ],
       "correctLabel": "𐑛𐑪𐑑"
     },
     {
       "type": "build",
       "prompt": "dad",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑛", "𐑨", "𐑛", "𐑑", "𐑚"],
-      "answer": ["𐑛", "𐑨", "𐑛"],
+      "tiles": [
+        "𐑛",
+        "𐑨",
+        "𐑛",
+        "𐑑",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑨",
+        "𐑛"
+      ],
       "correctLabel": "𐑛𐑨𐑛"
     },
     {
       "type": "match",
-      "pairs": { "𐑑𐑪𐑐": "top", "𐑐𐑪𐑑": "pot", "𐑛𐑪𐑑": "dot", "𐑚𐑨𐑛": "bad" },
-      "leftOrder": ["𐑚𐑨𐑛", "𐑑𐑪𐑐", "𐑛𐑪𐑑", "𐑐𐑪𐑑"],
-      "rightOrder": ["dot", "top", "bad", "pot"]
+      "pairs": {
+        "𐑑𐑪𐑐": "top",
+        "𐑐𐑪𐑑": "pot",
+        "𐑛𐑪𐑑": "dot",
+        "𐑚𐑨𐑛": "bad"
+      },
+      "leftOrder": [
+        "𐑚𐑨𐑛",
+        "𐑑𐑪𐑐",
+        "𐑛𐑪𐑑",
+        "𐑐𐑪𐑑"
+      ],
+      "rightOrder": [
+        "dot",
+        "top",
+        "bad",
+        "pot"
+      ]
     }
   ]
 }

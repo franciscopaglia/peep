@@ -14,7 +14,9 @@
       "prompt": "𐑣𐑺",
       "caption": "Sound it out — what does this say?",
       "correct": "hair",
-      "accept": ["hare"],
+      "accept": [
+        "hare"
+      ],
       "correctLabel": "hair"
     },
     {
@@ -35,15 +37,35 @@
       "prompt": "𐑒𐑺",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["care", "car", "core", "cur"],
+      "options": [
+        "care",
+        "car",
+        "core",
+        "cur"
+      ],
       "correct": "care",
       "correctLabel": "care"
     },
     {
       "type": "match",
-      "pairs": { "𐑣𐑺": "hair", "𐑣𐑻": "her", "𐑒𐑺": "care", "𐑕𐑻": "sir" },
-      "leftOrder": ["𐑕𐑻", "𐑣𐑺", "𐑒𐑺", "𐑣𐑻"],
-      "rightOrder": ["hair", "sir", "her", "care"]
+      "pairs": {
+        "𐑣𐑺": "hair",
+        "𐑣𐑻": "her",
+        "𐑒𐑺": "care",
+        "𐑕𐑻": "sir"
+      },
+      "leftOrder": [
+        "𐑕𐑻",
+        "𐑣𐑺",
+        "𐑒𐑺",
+        "𐑣𐑻"
+      ],
+      "rightOrder": [
+        "hair",
+        "sir",
+        "her",
+        "care"
+      ]
     }
   ]
 }

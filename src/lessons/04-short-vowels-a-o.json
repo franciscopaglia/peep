@@ -156,7 +156,12 @@
       "prompt": "𐑒𐑪𐑛",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["cod", "cad", "cud", "cot"],
+      "options": [
+        "cod",
+        "cad",
+        "cud",
+        "cot"
+      ],
       "correct": "cod",
       "correctLabel": "cod"
     },
@@ -166,7 +171,12 @@
       "prompt": "Which word says “cat”, not “cot”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑒𐑨𐑑", "𐑒𐑪𐑑", "𐑒𐑦𐑑", "𐑜𐑨𐑑"],
+      "options": [
+        "𐑒𐑨𐑑",
+        "𐑒𐑪𐑑",
+        "𐑒𐑦𐑑",
+        "𐑜𐑨𐑑"
+      ],
       "correct": "𐑒𐑨𐑑",
       "correctLabel": "𐑒𐑨𐑑"
     },
@@ -174,16 +184,36 @@
       "type": "build",
       "prompt": "dog",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑛", "𐑪", "𐑜", "𐑨", "𐑑"],
-      "answer": ["𐑛", "𐑪", "𐑜"],
+      "tiles": [
+        "𐑛",
+        "𐑪",
+        "𐑜",
+        "𐑨",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑪",
+        "𐑜"
+      ],
       "correctLabel": "𐑛𐑪𐑜"
     },
     {
       "type": "build",
       "prompt": "cap",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑒", "𐑨", "𐑐", "𐑪", "𐑚"],
-      "answer": ["𐑒", "𐑨", "𐑐"],
+      "tiles": [
+        "𐑒",
+        "𐑨",
+        "𐑐",
+        "𐑪",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑨",
+        "𐑐"
+      ],
       "correctLabel": "𐑒𐑨𐑐"
     },
     {
@@ -195,9 +225,24 @@
     },
     {
       "type": "match",
-      "pairs": { "𐑒𐑪𐑐": "cop", "𐑛𐑪𐑜": "dog", "𐑚𐑨𐑜": "bag", "𐑜𐑨𐑐": "gap" },
-      "leftOrder": ["𐑜𐑨𐑐", "𐑒𐑪𐑐", "𐑚𐑨𐑜", "𐑛𐑪𐑜"],
-      "rightOrder": ["cop", "gap", "dog", "bag"]
+      "pairs": {
+        "𐑒𐑪𐑐": "cop",
+        "𐑛𐑪𐑜": "dog",
+        "𐑚𐑨𐑜": "bag",
+        "𐑜𐑨𐑐": "gap"
+      },
+      "leftOrder": [
+        "𐑜𐑨𐑐",
+        "𐑒𐑪𐑐",
+        "𐑚𐑨𐑜",
+        "𐑛𐑪𐑜"
+      ],
+      "rightOrder": [
+        "cop",
+        "gap",
+        "dog",
+        "bag"
+      ]
     }
   ]
 }

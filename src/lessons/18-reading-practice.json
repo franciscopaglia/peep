@@ -14,7 +14,9 @@
       "prompt": "𐑥𐑰𐑑",
       "caption": "Sound it out — what does this say?",
       "correct": "meet",
-      "accept": ["meat"],
+      "accept": [
+        "meat"
+      ],
       "correctLabel": "meet"
     },
     {
@@ -145,7 +147,10 @@
       "prompt": "𐑮𐑴𐑛",
       "caption": "Sound it out — what does this say?",
       "correct": "road",
-      "accept": ["rode", "rowed"],
+      "accept": [
+        "rode",
+        "rowed"
+      ],
       "correctLabel": "road"
     },
     {
@@ -161,7 +166,12 @@
       "prompt": "𐑒𐑤𐑰𐑯",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["clean", "clan", "lean", "glean"],
+      "options": [
+        "clean",
+        "clan",
+        "lean",
+        "glean"
+      ],
       "correct": "clean",
       "correctLabel": "clean"
     },
@@ -171,7 +181,12 @@
       "prompt": "Which word says “five”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑓𐑲𐑝", "𐑓𐑲𐑚", "𐑓𐑰𐑝", "𐑝𐑲𐑓"],
+      "options": [
+        "𐑓𐑲𐑝",
+        "𐑓𐑲𐑚",
+        "𐑓𐑰𐑝",
+        "𐑝𐑲𐑓"
+      ],
       "correct": "𐑓𐑲𐑝",
       "correctLabel": "𐑓𐑲𐑝"
     },
@@ -179,31 +194,79 @@
       "type": "build",
       "prompt": "cream",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑒", "𐑮", "𐑰", "𐑥", "𐑤"],
-      "answer": ["𐑒", "𐑮", "𐑰", "𐑥"],
+      "tiles": [
+        "𐑒",
+        "𐑮",
+        "𐑰",
+        "𐑥",
+        "𐑤"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑮",
+        "𐑰",
+        "𐑥"
+      ],
       "correctLabel": "𐑒𐑮𐑰𐑥"
     },
     {
       "type": "build",
       "prompt": "float",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑓", "𐑤", "𐑴", "𐑑", "𐑮"],
-      "answer": ["𐑓", "𐑤", "𐑴", "𐑑"],
+      "tiles": [
+        "𐑓",
+        "𐑤",
+        "𐑴",
+        "𐑑",
+        "𐑮"
+      ],
+      "answer": [
+        "𐑓",
+        "𐑤",
+        "𐑴",
+        "𐑑"
+      ],
       "correctLabel": "𐑓𐑤𐑴𐑑"
     },
     {
       "type": "build",
       "prompt": "most",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑥", "𐑴", "𐑕", "𐑑", "𐑯"],
-      "answer": ["𐑥", "𐑴", "𐑕", "𐑑"],
+      "tiles": [
+        "𐑥",
+        "𐑴",
+        "𐑕",
+        "𐑑",
+        "𐑯"
+      ],
+      "answer": [
+        "𐑥",
+        "𐑴",
+        "𐑕",
+        "𐑑"
+      ],
       "correctLabel": "𐑥𐑴𐑕𐑑"
     },
     {
       "type": "match",
-      "pairs": { "𐑛𐑮𐑰𐑥": "dream", "𐑕𐑤𐑰𐑐": "sleep", "𐑑𐑴𐑕𐑑": "toast", "𐑜𐑮𐑰𐑯": "green" },
-      "leftOrder": ["𐑜𐑮𐑰𐑯", "𐑛𐑮𐑰𐑥", "𐑑𐑴𐑕𐑑", "𐑕𐑤𐑰𐑐"],
-      "rightOrder": ["dream", "green", "sleep", "toast"]
+      "pairs": {
+        "𐑛𐑮𐑰𐑥": "dream",
+        "𐑕𐑤𐑰𐑐": "sleep",
+        "𐑑𐑴𐑕𐑑": "toast",
+        "𐑜𐑮𐑰𐑯": "green"
+      },
+      "leftOrder": [
+        "𐑜𐑮𐑰𐑯",
+        "𐑛𐑮𐑰𐑥",
+        "𐑑𐑴𐑕𐑑",
+        "𐑕𐑤𐑰𐑐"
+      ],
+      "rightOrder": [
+        "dream",
+        "green",
+        "sleep",
+        "toast"
+      ]
     }
   ]
 }

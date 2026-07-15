@@ -89,7 +89,9 @@
       "prompt": "𐑯𐑳𐑯",
       "caption": "Sound it out — what does this say?",
       "correct": "nun",
-      "accept": ["none"],
+      "accept": [
+        "none"
+      ],
       "correctLabel": "nun"
     },
     {
@@ -169,7 +171,12 @@
       "prompt": "𐑒𐑨𐑥𐑐",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["camp", "come", "cap", "lamp"],
+      "options": [
+        "camp",
+        "come",
+        "cap",
+        "lamp"
+      ],
       "correct": "camp",
       "correctLabel": "camp"
     },
@@ -179,7 +186,12 @@
       "prompt": "Which word says “trap”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑑𐑮𐑨𐑐", "𐑑𐑮𐑦𐑐", "𐑛𐑮𐑨𐑐", "𐑑𐑨𐑐"],
+      "options": [
+        "𐑑𐑮𐑨𐑐",
+        "𐑑𐑮𐑦𐑐",
+        "𐑛𐑮𐑨𐑐",
+        "𐑑𐑨𐑐"
+      ],
       "correct": "𐑑𐑮𐑨𐑐",
       "correctLabel": "𐑑𐑮𐑨𐑐"
     },
@@ -187,23 +199,60 @@
       "type": "build",
       "prompt": "lamp",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑤", "𐑨", "𐑥", "𐑐", "𐑚"],
-      "answer": ["𐑤", "𐑨", "𐑥", "𐑐"],
+      "tiles": [
+        "𐑤",
+        "𐑨",
+        "𐑥",
+        "𐑐",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑤",
+        "𐑨",
+        "𐑥",
+        "𐑐"
+      ],
       "correctLabel": "𐑤𐑨𐑥𐑐"
     },
     {
       "type": "build",
       "prompt": "plum",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑐", "𐑤", "𐑳", "𐑥", "𐑯"],
-      "answer": ["𐑐", "𐑤", "𐑳", "𐑥"],
+      "tiles": [
+        "𐑐",
+        "𐑤",
+        "𐑳",
+        "𐑥",
+        "𐑯"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑤",
+        "𐑳",
+        "𐑥"
+      ],
       "correctLabel": "𐑐𐑤𐑳𐑥"
     },
     {
       "type": "match",
-      "pairs": { "𐑓𐑳𐑯": "fun", "𐑐𐑦𐑯": "pin", "𐑮𐑳𐑜": "rug", "𐑕𐑐𐑦𐑯": "spin" },
-      "leftOrder": ["𐑕𐑐𐑦𐑯", "𐑓𐑳𐑯", "𐑮𐑳𐑜", "𐑐𐑦𐑯"],
-      "rightOrder": ["fun", "spin", "pin", "rug"]
+      "pairs": {
+        "𐑓𐑳𐑯": "fun",
+        "𐑐𐑦𐑯": "pin",
+        "𐑮𐑳𐑜": "rug",
+        "𐑕𐑐𐑦𐑯": "spin"
+      },
+      "leftOrder": [
+        "𐑕𐑐𐑦𐑯",
+        "𐑓𐑳𐑯",
+        "𐑮𐑳𐑜",
+        "𐑐𐑦𐑯"
+      ],
+      "rightOrder": [
+        "fun",
+        "spin",
+        "pin",
+        "rug"
+      ]
     }
   ]
 }

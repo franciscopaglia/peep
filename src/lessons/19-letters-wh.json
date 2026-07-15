@@ -117,7 +117,9 @@
       "prompt": "𐑢𐑰𐑒",
       "caption": "Sound it out — what does this say?",
       "correct": "week",
-      "accept": ["weak"],
+      "accept": [
+        "weak"
+      ],
       "correctLabel": "week"
     },
     {
@@ -140,7 +142,12 @@
       "prompt": "𐑢𐑦𐑜",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["wig", "wag", "win", "web"],
+      "options": [
+        "wig",
+        "wag",
+        "win",
+        "web"
+      ],
       "correct": "wig",
       "correctLabel": "wig"
     },
@@ -150,7 +157,12 @@
       "prompt": "Which word says “hand”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑣𐑨𐑯𐑛", "𐑣𐑨𐑛", "𐑣𐑨𐑯", "𐑣𐑧𐑯𐑛"],
+      "options": [
+        "𐑣𐑨𐑯𐑛",
+        "𐑣𐑨𐑛",
+        "𐑣𐑨𐑯",
+        "𐑣𐑧𐑯𐑛"
+      ],
       "correct": "𐑣𐑨𐑯𐑛",
       "correctLabel": "𐑣𐑨𐑯𐑛"
     },
@@ -158,31 +170,77 @@
       "type": "build",
       "prompt": "hike",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑣", "𐑲", "𐑒", "𐑦", "𐑑"],
-      "answer": ["𐑣", "𐑲", "𐑒"],
+      "tiles": [
+        "𐑣",
+        "𐑲",
+        "𐑒",
+        "𐑦",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑣",
+        "𐑲",
+        "𐑒"
+      ],
       "correctLabel": "𐑣𐑲𐑒"
     },
     {
       "type": "build",
       "prompt": "wait",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑢", "𐑱", "𐑑", "𐑦", "𐑯"],
-      "answer": ["𐑢", "𐑱", "𐑑"],
+      "tiles": [
+        "𐑢",
+        "𐑱",
+        "𐑑",
+        "𐑦",
+        "𐑯"
+      ],
+      "answer": [
+        "𐑢",
+        "𐑱",
+        "𐑑"
+      ],
       "correctLabel": "𐑢𐑱𐑑"
     },
     {
       "type": "build",
       "prompt": "help",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑣", "𐑧", "𐑤", "𐑐", "𐑑"],
-      "answer": ["𐑣", "𐑧", "𐑤", "𐑐"],
+      "tiles": [
+        "𐑣",
+        "𐑧",
+        "𐑤",
+        "𐑐",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑣",
+        "𐑧",
+        "𐑤",
+        "𐑐"
+      ],
       "correctLabel": "𐑣𐑧𐑤𐑐"
     },
     {
       "type": "match",
-      "pairs": { "𐑢𐑦𐑯": "win", "𐑣𐑪𐑑": "hot", "𐑢𐑰𐑒": "week", "𐑕𐑢𐑦𐑥": "swim" },
-      "leftOrder": ["𐑕𐑢𐑦𐑥", "𐑢𐑦𐑯", "𐑢𐑰𐑒", "𐑣𐑪𐑑"],
-      "rightOrder": ["win", "swim", "hot", "week"]
+      "pairs": {
+        "𐑢𐑦𐑯": "win",
+        "𐑣𐑪𐑑": "hot",
+        "𐑢𐑰𐑒": "week",
+        "𐑕𐑢𐑦𐑥": "swim"
+      },
+      "leftOrder": [
+        "𐑕𐑢𐑦𐑥",
+        "𐑢𐑦𐑯",
+        "𐑢𐑰𐑒",
+        "𐑣𐑪𐑑"
+      ],
+      "rightOrder": [
+        "win",
+        "swim",
+        "hot",
+        "week"
+      ]
     }
   ]
 }

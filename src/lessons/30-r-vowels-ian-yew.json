@@ -34,7 +34,12 @@
       "prompt": "Which letter is ian?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑾", "𐑿", "𐑽", "𐑼"],
+      "options": [
+        "𐑾",
+        "𐑿",
+        "𐑽",
+        "𐑼"
+      ],
       "correct": "𐑾",
       "correctLabel": "𐑾"
     },
@@ -44,7 +49,12 @@
       "prompt": "𐑿𐑕",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["use", "yews", "ooze", "yes"],
+      "options": [
+        "use",
+        "yews",
+        "ooze",
+        "yes"
+      ],
       "correct": "use",
       "correctLabel": "use"
     }

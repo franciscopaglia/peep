@@ -187,7 +187,12 @@
       "prompt": "𐑒𐑱𐑡",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["cage", "cave", "cake", "keg"],
+      "options": [
+        "cage",
+        "cave",
+        "cake",
+        "keg"
+      ],
       "correct": "cage",
       "correctLabel": "cage"
     },
@@ -197,7 +202,12 @@
       "prompt": "Which word says “just”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑡𐑳𐑕𐑑", "𐑡𐑳𐑑", "𐑜𐑳𐑕𐑑", "𐑡𐑳𐑟𐑑"],
+      "options": [
+        "𐑡𐑳𐑕𐑑",
+        "𐑡𐑳𐑑",
+        "𐑜𐑳𐑕𐑑",
+        "𐑡𐑳𐑟𐑑"
+      ],
       "correct": "𐑡𐑳𐑕𐑑",
       "correctLabel": "𐑡𐑳𐑕𐑑"
     },
@@ -205,23 +215,58 @@
       "type": "build",
       "prompt": "jail",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑡", "𐑱", "𐑤", "𐑖", "𐑯"],
-      "answer": ["𐑡", "𐑱", "𐑤"],
+      "tiles": [
+        "𐑡",
+        "𐑱",
+        "𐑤",
+        "𐑖",
+        "𐑯"
+      ],
+      "answer": [
+        "𐑡",
+        "𐑱",
+        "𐑤"
+      ],
       "correctLabel": "𐑡𐑱𐑤"
     },
     {
       "type": "build",
       "prompt": "badge",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑚", "𐑨", "𐑡", "𐑛", "𐑜"],
-      "answer": ["𐑚", "𐑨", "𐑡"],
+      "tiles": [
+        "𐑚",
+        "𐑨",
+        "𐑡",
+        "𐑛",
+        "𐑜"
+      ],
+      "answer": [
+        "𐑚",
+        "𐑨",
+        "𐑡"
+      ],
       "correctLabel": "𐑚𐑨𐑡"
     },
     {
       "type": "match",
-      "pairs": { "𐑡𐑨𐑥": "jam", "𐑡𐑳𐑥𐑐": "jump", "𐑡𐑧𐑑": "jet", "𐑐𐑱𐑡": "page" },
-      "leftOrder": ["𐑐𐑱𐑡", "𐑡𐑨𐑥", "𐑡𐑧𐑑", "𐑡𐑳𐑥𐑐"],
-      "rightOrder": ["jam", "page", "jump", "jet"]
+      "pairs": {
+        "𐑡𐑨𐑥": "jam",
+        "𐑡𐑳𐑥𐑐": "jump",
+        "𐑡𐑧𐑑": "jet",
+        "𐑐𐑱𐑡": "page"
+      },
+      "leftOrder": [
+        "𐑐𐑱𐑡",
+        "𐑡𐑨𐑥",
+        "𐑡𐑧𐑑",
+        "𐑡𐑳𐑥𐑐"
+      ],
+      "rightOrder": [
+        "jam",
+        "page",
+        "jump",
+        "jet"
+      ]
     }
   ]
 }

@@ -109,24 +109,51 @@
       "type": "build",
       "prompt": "pop",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑐", "𐑪", "𐑐", "𐑚"],
-      "answer": ["𐑐", "𐑪", "𐑐"],
+      "tiles": [
+        "𐑐",
+        "𐑪",
+        "𐑐",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑪",
+        "𐑐"
+      ],
       "correctLabel": "𐑐𐑪𐑐"
     },
     {
       "type": "build",
       "prompt": "bob",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑚", "𐑪", "𐑚", "𐑐"],
-      "answer": ["𐑚", "𐑪", "𐑚"],
+      "tiles": [
+        "𐑚",
+        "𐑪",
+        "𐑚",
+        "𐑐"
+      ],
+      "answer": [
+        "𐑚",
+        "𐑪",
+        "𐑚"
+      ],
       "correctLabel": "𐑚𐑪𐑚"
     },
     {
       "type": "build",
       "prompt": "bop",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑚", "𐑪", "𐑐", "𐑚"],
-      "answer": ["𐑚", "𐑪", "𐑐"],
+      "tiles": [
+        "𐑚",
+        "𐑪",
+        "𐑐",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑚",
+        "𐑪",
+        "𐑐"
+      ],
       "correctLabel": "𐑚𐑪𐑐"
     },
     {
@@ -135,7 +162,12 @@
       "prompt": "𐑚𐑪𐑚",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["bob", "pop", "bop", "pob"],
+      "options": [
+        "bob",
+        "pop",
+        "bop",
+        "pob"
+      ],
       "correct": "bob",
       "correctLabel": "bob"
     },
@@ -145,7 +177,12 @@
       "prompt": "Which word says “bop”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑚𐑪𐑐", "𐑐𐑪𐑚", "𐑚𐑪𐑚", "𐑐𐑪𐑐"],
+      "options": [
+        "𐑚𐑪𐑐",
+        "𐑐𐑪𐑚",
+        "𐑚𐑪𐑚",
+        "𐑐𐑪𐑐"
+      ],
       "correct": "𐑚𐑪𐑐",
       "correctLabel": "𐑚𐑪𐑐"
     },
@@ -166,9 +203,21 @@
     },
     {
       "type": "match",
-      "pairs": { "𐑐𐑪𐑐": "pop", "𐑚𐑪𐑚": "bob", "𐑚𐑪𐑐": "bop" },
-      "leftOrder": ["𐑚𐑪𐑐", "𐑐𐑪𐑐", "𐑚𐑪𐑚"],
-      "rightOrder": ["bob", "pop", "bop"]
+      "pairs": {
+        "𐑐𐑪𐑐": "pop",
+        "𐑚𐑪𐑚": "bob",
+        "𐑚𐑪𐑐": "bop"
+      },
+      "leftOrder": [
+        "𐑚𐑪𐑐",
+        "𐑐𐑪𐑐",
+        "𐑚𐑪𐑚"
+      ],
+      "rightOrder": [
+        "bob",
+        "pop",
+        "bop"
+      ]
     }
   ]
 }

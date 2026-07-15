@@ -146,7 +146,12 @@
       "prompt": "𐑝𐑨𐑑",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["vat", "fat", "bat", "vet"],
+      "options": [
+        "vat",
+        "fat",
+        "bat",
+        "vet"
+      ],
       "correct": "vat",
       "correctLabel": "vat"
     },
@@ -156,7 +161,12 @@
       "prompt": "Which word says “fog”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑓𐑪𐑜", "𐑝𐑪𐑜", "𐑓𐑪𐑚", "𐑓𐑨𐑜"],
+      "options": [
+        "𐑓𐑪𐑜",
+        "𐑝𐑪𐑜",
+        "𐑓𐑪𐑚",
+        "𐑓𐑨𐑜"
+      ],
       "correct": "𐑓𐑪𐑜",
       "correctLabel": "𐑓𐑪𐑜"
     },
@@ -166,7 +176,12 @@
       "prompt": "𐑓𐑪𐑚",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["fob", "fog", "fib", "cob"],
+      "options": [
+        "fob",
+        "fog",
+        "fib",
+        "cob"
+      ],
       "correct": "fob",
       "correctLabel": "fob"
     },
@@ -174,31 +189,77 @@
       "type": "build",
       "prompt": "fig",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑓", "𐑦", "𐑜", "𐑝", "𐑑"],
-      "answer": ["𐑓", "𐑦", "𐑜"],
+      "tiles": [
+        "𐑓",
+        "𐑦",
+        "𐑜",
+        "𐑝",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑓",
+        "𐑦",
+        "𐑜"
+      ],
       "correctLabel": "𐑓𐑦𐑜"
     },
     {
       "type": "build",
       "prompt": "vat",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑝", "𐑨", "𐑑", "𐑓", "𐑚"],
-      "answer": ["𐑝", "𐑨", "𐑑"],
+      "tiles": [
+        "𐑝",
+        "𐑨",
+        "𐑑",
+        "𐑓",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑝",
+        "𐑨",
+        "𐑑"
+      ],
       "correctLabel": "𐑝𐑨𐑑"
     },
     {
       "type": "build",
       "prompt": "gift",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑜", "𐑦", "𐑓", "𐑑", "𐑝"],
-      "answer": ["𐑜", "𐑦", "𐑓", "𐑑"],
+      "tiles": [
+        "𐑜",
+        "𐑦",
+        "𐑓",
+        "𐑑",
+        "𐑝"
+      ],
+      "answer": [
+        "𐑜",
+        "𐑦",
+        "𐑓",
+        "𐑑"
+      ],
       "correctLabel": "𐑜𐑦𐑓𐑑"
     },
     {
       "type": "match",
-      "pairs": { "𐑓𐑦𐑑": "fit", "𐑓𐑨𐑑": "fat", "𐑓𐑦𐑚": "fib", "𐑜𐑦𐑓𐑑": "gift" },
-      "leftOrder": ["𐑜𐑦𐑓𐑑", "𐑓𐑦𐑑", "𐑓𐑦𐑚", "𐑓𐑨𐑑"],
-      "rightOrder": ["fat", "gift", "fit", "fib"]
+      "pairs": {
+        "𐑓𐑦𐑑": "fit",
+        "𐑓𐑨𐑑": "fat",
+        "𐑓𐑦𐑚": "fib",
+        "𐑜𐑦𐑓𐑑": "gift"
+      },
+      "leftOrder": [
+        "𐑜𐑦𐑓𐑑",
+        "𐑓𐑦𐑑",
+        "𐑓𐑦𐑚",
+        "𐑓𐑨𐑑"
+      ],
+      "rightOrder": [
+        "fat",
+        "gift",
+        "fit",
+        "fib"
+      ]
     }
   ]
 }

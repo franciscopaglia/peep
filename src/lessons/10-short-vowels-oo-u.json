@@ -164,7 +164,12 @@
       "prompt": "𐑓𐑫𐑑",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["foot", "feet", "fit", "fat"],
+      "options": [
+        "foot",
+        "feet",
+        "fit",
+        "fat"
+      ],
       "correct": "foot",
       "correctLabel": "foot"
     },
@@ -174,7 +179,12 @@
       "prompt": "Which word says “cup”, not “cop”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑒𐑳𐑐", "𐑒𐑪𐑐", "𐑒𐑫𐑐", "𐑒𐑨𐑐"],
+      "options": [
+        "𐑒𐑳𐑐",
+        "𐑒𐑪𐑐",
+        "𐑒𐑫𐑐",
+        "𐑒𐑨𐑐"
+      ],
       "correct": "𐑒𐑳𐑐",
       "correctLabel": "𐑒𐑳𐑐"
     },
@@ -182,23 +192,58 @@
       "type": "build",
       "prompt": "gut",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑜", "𐑳", "𐑑", "𐑫", "𐑛"],
-      "answer": ["𐑜", "𐑳", "𐑑"],
+      "tiles": [
+        "𐑜",
+        "𐑳",
+        "𐑑",
+        "𐑫",
+        "𐑛"
+      ],
+      "answer": [
+        "𐑜",
+        "𐑳",
+        "𐑑"
+      ],
       "correctLabel": "𐑜𐑳𐑑"
     },
     {
       "type": "build",
       "prompt": "cook",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑒", "𐑫", "𐑒", "𐑳", "𐑐"],
-      "answer": ["𐑒", "𐑫", "𐑒"],
+      "tiles": [
+        "𐑒",
+        "𐑫",
+        "𐑒",
+        "𐑳",
+        "𐑐"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑫",
+        "𐑒"
+      ],
       "correctLabel": "𐑒𐑫𐑒"
     },
     {
       "type": "match",
-      "pairs": { "𐑚𐑳𐑜": "bug", "𐑑𐑳𐑚": "tub", "𐑚𐑫𐑒": "book", "𐑜𐑫𐑛": "good" },
-      "leftOrder": ["𐑜𐑫𐑛", "𐑚𐑳𐑜", "𐑚𐑫𐑒", "𐑑𐑳𐑚"],
-      "rightOrder": ["bug", "good", "tub", "book"]
+      "pairs": {
+        "𐑚𐑳𐑜": "bug",
+        "𐑑𐑳𐑚": "tub",
+        "𐑚𐑫𐑒": "book",
+        "𐑜𐑫𐑛": "good"
+      },
+      "leftOrder": [
+        "𐑜𐑫𐑛",
+        "𐑚𐑳𐑜",
+        "𐑚𐑫𐑒",
+        "𐑑𐑳𐑚"
+      ],
+      "rightOrder": [
+        "bug",
+        "good",
+        "tub",
+        "book"
+      ]
     }
   ]
 }

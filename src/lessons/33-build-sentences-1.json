@@ -12,56 +12,143 @@
     {
       "type": "arrange",
       "promptEn": "the car is far",
-      "tiles": ["𐑞", "𐑒𐑸", "𐑦𐑟", "𐑓𐑸", "𐑣𐑽"],
-      "answer": ["𐑞", "𐑒𐑸", "𐑦𐑟", "𐑓𐑸"],
+      "tiles": [
+        "𐑞",
+        "𐑒𐑸",
+        "𐑦𐑟",
+        "𐑓𐑸",
+        "𐑣𐑽"
+      ],
+      "answer": [
+        "𐑞",
+        "𐑒𐑸",
+        "𐑦𐑟",
+        "𐑓𐑸"
+      ],
       "correctLabel": "𐑞 𐑒𐑸 𐑦𐑟 𐑓𐑸"
     },
     {
       "type": "arrange",
       "promptEn": "we use the cup",
-      "tiles": ["𐑢𐑰", "𐑿𐑟", "𐑞", "𐑒𐑳𐑐", "𐑩"],
-      "answer": ["𐑢𐑰", "𐑿𐑟", "𐑞", "𐑒𐑳𐑐"],
+      "tiles": [
+        "𐑢𐑰",
+        "𐑿𐑟",
+        "𐑞",
+        "𐑒𐑳𐑐",
+        "𐑩"
+      ],
+      "answer": [
+        "𐑢𐑰",
+        "𐑿𐑟",
+        "𐑞",
+        "𐑒𐑳𐑐"
+      ],
       "correctLabel": "𐑢𐑰 𐑿𐑟 𐑞 𐑒𐑳𐑐"
     },
     {
       "type": "arrange",
       "promptEn": "she has a few",
-      "tiles": ["𐑖𐑰", "𐑣𐑨𐑟", "𐑩", "𐑓𐑿", "𐑣𐑰"],
-      "answer": ["𐑖𐑰", "𐑣𐑨𐑟", "𐑩", "𐑓𐑿"],
+      "tiles": [
+        "𐑖𐑰",
+        "𐑣𐑨𐑟",
+        "𐑩",
+        "𐑓𐑿",
+        "𐑣𐑰"
+      ],
+      "answer": [
+        "𐑖𐑰",
+        "𐑣𐑨𐑟",
+        "𐑩",
+        "𐑓𐑿"
+      ],
       "correctLabel": "𐑖𐑰 𐑣𐑨𐑟 𐑩 𐑓𐑿"
     },
     {
       "type": "arrange",
       "promptEn": "he has a big car",
-      "tiles": ["𐑣𐑰", "𐑣𐑨𐑟", "𐑩", "𐑚𐑦𐑜", "𐑒𐑸", "𐑞"],
-      "answer": ["𐑣𐑰", "𐑣𐑨𐑟", "𐑩", "𐑚𐑦𐑜", "𐑒𐑸"],
+      "tiles": [
+        "𐑣𐑰",
+        "𐑣𐑨𐑟",
+        "𐑩",
+        "𐑚𐑦𐑜",
+        "𐑒𐑸",
+        "𐑞"
+      ],
+      "answer": [
+        "𐑣𐑰",
+        "𐑣𐑨𐑟",
+        "𐑩",
+        "𐑚𐑦𐑜",
+        "𐑒𐑸"
+      ],
       "correctLabel": "𐑣𐑰 𐑣𐑨𐑟 𐑩 𐑚𐑦𐑜 𐑒𐑸"
     },
     {
       "type": "fill",
       "promptEn": "the cat sat",
-      "words": ["𐑞", "𐑒𐑨𐑑", "𐑕𐑨𐑑"],
-      "blanks": [1, 2],
-      "bank": ["𐑒𐑨𐑑", "𐑕𐑨𐑑", "𐑣𐑨𐑑"],
+      "words": [
+        "𐑞",
+        "𐑒𐑨𐑑",
+        "𐑕𐑨𐑑"
+      ],
+      "blanks": [
+        1,
+        2
+      ],
+      "bank": [
+        "𐑒𐑨𐑑",
+        "𐑕𐑨𐑑",
+        "𐑣𐑨𐑑"
+      ],
       "correctLabel": "𐑞 𐑒𐑨𐑑 𐑕𐑨𐑑"
     },
     {
       "type": "complete",
       "prompt": "big",
       "caption": "Tap the missing letter",
-      "word": ["𐑚", "𐑦", "𐑜"],
-      "blanks": [1],
-      "bank": ["𐑦", "𐑨", "𐑳"],
+      "word": [
+        "𐑚",
+        "𐑦",
+        "𐑜"
+      ],
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑦",
+        "𐑨",
+        "𐑳"
+      ],
       "correctLabel": "𐑚𐑦𐑜"
     },
     {
       "type": "cloze",
       "caption": "Read the passage and fill the gaps",
       "translation": "The car is far. She has a big car.",
-      "words": ["𐑞", "𐑒𐑸", "𐑦𐑟", "𐑓𐑸", "𐑖𐑰", "𐑣𐑨𐑟", "𐑩", "𐑚𐑦𐑜", "𐑒𐑸"],
-      "stops": [3, 8],
-      "blanks": [3, 7],
-      "bank": ["𐑓𐑸", "𐑚𐑦𐑜", "𐑒𐑸"],
+      "words": [
+        "𐑞",
+        "𐑒𐑸",
+        "𐑦𐑟",
+        "𐑓𐑸",
+        "𐑖𐑰",
+        "𐑣𐑨𐑟",
+        "𐑩",
+        "𐑚𐑦𐑜",
+        "𐑒𐑸"
+      ],
+      "stops": [
+        3,
+        8
+      ],
+      "blanks": [
+        3,
+        7
+      ],
+      "bank": [
+        "𐑓𐑸",
+        "𐑚𐑦𐑜",
+        "𐑒𐑸"
+      ],
       "correctLabel": "𐑞 𐑒𐑸 𐑦𐑟 𐑓𐑸 𐑖𐑰 𐑣𐑨𐑟 𐑩 𐑚𐑦𐑜 𐑒𐑸"
     }
   ]

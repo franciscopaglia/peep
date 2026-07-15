@@ -26,7 +26,9 @@
       "prompt": "𐑣𐑽",
       "caption": "Sound it out — what does this say?",
       "correct": "here",
-      "accept": ["hear"],
+      "accept": [
+        "hear"
+      ],
       "correctLabel": "here"
     },
     {
@@ -35,15 +37,35 @@
       "prompt": "𐑴𐑝𐑼",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["over", "oven", "ever", "other"],
+      "options": [
+        "over",
+        "oven",
+        "ever",
+        "other"
+      ],
       "correct": "over",
       "correctLabel": "over"
     },
     {
       "type": "match",
-      "pairs": { "𐑚𐑧𐑑𐑼": "better", "𐑣𐑽": "here", "𐑴𐑝𐑼": "over", "𐑽": "ear" },
-      "leftOrder": ["𐑽", "𐑚𐑧𐑑𐑼", "𐑴𐑝𐑼", "𐑣𐑽"],
-      "rightOrder": ["better", "ear", "here", "over"]
+      "pairs": {
+        "𐑚𐑧𐑑𐑼": "better",
+        "𐑣𐑽": "here",
+        "𐑴𐑝𐑼": "over",
+        "𐑽": "ear"
+      },
+      "leftOrder": [
+        "𐑽",
+        "𐑚𐑧𐑑𐑼",
+        "𐑴𐑝𐑼",
+        "𐑣𐑽"
+      ],
+      "rightOrder": [
+        "better",
+        "ear",
+        "here",
+        "over"
+      ]
     }
   ]
 }

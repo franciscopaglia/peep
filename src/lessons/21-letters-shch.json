@@ -132,7 +132,12 @@
       "prompt": "𐑖𐑲𐑯",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["shine", "shin", "shone", "sign"],
+      "options": [
+        "shine",
+        "shin",
+        "shone",
+        "sign"
+      ],
       "correct": "shine",
       "correctLabel": "shine"
     },
@@ -142,7 +147,12 @@
       "prompt": "Which word says “much”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑥𐑳𐑗", "𐑥𐑳𐑖", "𐑕𐑳𐑗", "𐑮𐑦𐑗"],
+      "options": [
+        "𐑥𐑳𐑗",
+        "𐑥𐑳𐑖",
+        "𐑕𐑳𐑗",
+        "𐑮𐑦𐑗"
+      ],
       "correct": "𐑥𐑳𐑗",
       "correctLabel": "𐑥𐑳𐑗"
     },
@@ -150,31 +160,76 @@
       "type": "build",
       "prompt": "wish",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑢", "𐑦", "𐑖", "𐑗", "𐑕"],
-      "answer": ["𐑢", "𐑦", "𐑖"],
+      "tiles": [
+        "𐑢",
+        "𐑦",
+        "𐑖",
+        "𐑗",
+        "𐑕"
+      ],
+      "answer": [
+        "𐑢",
+        "𐑦",
+        "𐑖"
+      ],
       "correctLabel": "𐑢𐑦𐑖"
     },
     {
       "type": "build",
       "prompt": "chain",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑗", "𐑱", "𐑯", "𐑖", "𐑑"],
-      "answer": ["𐑗", "𐑱", "𐑯"],
+      "tiles": [
+        "𐑗",
+        "𐑱",
+        "𐑯",
+        "𐑖",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑗",
+        "𐑱",
+        "𐑯"
+      ],
       "correctLabel": "𐑗𐑱𐑯"
     },
     {
       "type": "build",
       "prompt": "teach",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑑", "𐑰", "𐑗", "𐑖", "𐑐"],
-      "answer": ["𐑑", "𐑰", "𐑗"],
+      "tiles": [
+        "𐑑",
+        "𐑰",
+        "𐑗",
+        "𐑖",
+        "𐑐"
+      ],
+      "answer": [
+        "𐑑",
+        "𐑰",
+        "𐑗"
+      ],
       "correctLabel": "𐑑𐑰𐑗"
     },
     {
       "type": "match",
-      "pairs": { "𐑓𐑦𐑖": "fish", "𐑛𐑦𐑖": "dish", "𐑗𐑦𐑐": "chip", "𐑗𐑨𐑑": "chat" },
-      "leftOrder": ["𐑗𐑨𐑑", "𐑓𐑦𐑖", "𐑗𐑦𐑐", "𐑛𐑦𐑖"],
-      "rightOrder": ["fish", "chat", "dish", "chip"]
+      "pairs": {
+        "𐑓𐑦𐑖": "fish",
+        "𐑛𐑦𐑖": "dish",
+        "𐑗𐑦𐑐": "chip",
+        "𐑗𐑨𐑑": "chat"
+      },
+      "leftOrder": [
+        "𐑗𐑨𐑑",
+        "𐑓𐑦𐑖",
+        "𐑗𐑦𐑐",
+        "𐑛𐑦𐑖"
+      ],
+      "rightOrder": [
+        "fish",
+        "chat",
+        "dish",
+        "chip"
+      ]
     }
   ]
 }

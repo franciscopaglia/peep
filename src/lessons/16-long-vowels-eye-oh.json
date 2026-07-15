@@ -49,7 +49,10 @@
       "prompt": "𐑮𐑴𐑛",
       "caption": "Type what this word says",
       "correct": "road",
-      "accept": ["rode", "rowed"],
+      "accept": [
+        "rode",
+        "rowed"
+      ],
       "correctLabel": "road"
     },
     {
@@ -144,7 +147,9 @@
       "prompt": "𐑮𐑴𐑟",
       "caption": "Sound it out — what does this say?",
       "correct": "rose",
-      "accept": ["rows"],
+      "accept": [
+        "rows"
+      ],
       "correctLabel": "rose"
     },
     {
@@ -153,7 +158,12 @@
       "prompt": "𐑒𐑴𐑑",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["coat", "cot", "cut", "goat"],
+      "options": [
+        "coat",
+        "cot",
+        "cut",
+        "goat"
+      ],
       "correct": "coat",
       "correctLabel": "coat"
     },
@@ -163,7 +173,12 @@
       "prompt": "Which word says “time”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑑𐑲𐑥", "𐑑𐑦𐑥", "𐑑𐑱𐑥", "𐑛𐑲𐑥"],
+      "options": [
+        "𐑑𐑲𐑥",
+        "𐑑𐑦𐑥",
+        "𐑑𐑱𐑥",
+        "𐑛𐑲𐑥"
+      ],
       "correct": "𐑑𐑲𐑥",
       "correctLabel": "𐑑𐑲𐑥"
     },
@@ -171,31 +186,78 @@
       "type": "build",
       "prompt": "kite",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑒", "𐑲", "𐑑", "𐑛", "𐑦"],
-      "answer": ["𐑒", "𐑲", "𐑑"],
+      "tiles": [
+        "𐑒",
+        "𐑲",
+        "𐑑",
+        "𐑛",
+        "𐑦"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑲",
+        "𐑑"
+      ],
       "correctLabel": "𐑒𐑲𐑑"
     },
     {
       "type": "build",
       "prompt": "cold",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑒", "𐑴", "𐑤", "𐑛", "𐑑"],
-      "answer": ["𐑒", "𐑴", "𐑤", "𐑛"],
+      "tiles": [
+        "𐑒",
+        "𐑴",
+        "𐑤",
+        "𐑛",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑴",
+        "𐑤",
+        "𐑛"
+      ],
       "correctLabel": "𐑒𐑴𐑤𐑛"
     },
     {
       "type": "build",
       "prompt": "smile",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑕", "𐑥", "𐑲", "𐑤", "𐑯"],
-      "answer": ["𐑕", "𐑥", "𐑲", "𐑤"],
+      "tiles": [
+        "𐑕",
+        "𐑥",
+        "𐑲",
+        "𐑤",
+        "𐑯"
+      ],
+      "answer": [
+        "𐑕",
+        "𐑥",
+        "𐑲",
+        "𐑤"
+      ],
       "correctLabel": "𐑕𐑥𐑲𐑤"
     },
     {
       "type": "match",
-      "pairs": { "𐑚𐑴𐑑": "boat", "𐑤𐑲𐑒": "like", "𐑯𐑲𐑯": "nine", "𐑮𐑴𐑟": "rose" },
-      "leftOrder": ["𐑮𐑴𐑟", "𐑚𐑴𐑑", "𐑯𐑲𐑯", "𐑤𐑲𐑒"],
-      "rightOrder": ["boat", "rose", "like", "nine"]
+      "pairs": {
+        "𐑚𐑴𐑑": "boat",
+        "𐑤𐑲𐑒": "like",
+        "𐑯𐑲𐑯": "nine",
+        "𐑮𐑴𐑟": "rose"
+      },
+      "leftOrder": [
+        "𐑮𐑴𐑟",
+        "𐑚𐑴𐑑",
+        "𐑯𐑲𐑯",
+        "𐑤𐑲𐑒"
+      ],
+      "rightOrder": [
+        "boat",
+        "rose",
+        "like",
+        "nine"
+      ]
     }
   ]
 }

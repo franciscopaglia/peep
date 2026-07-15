@@ -20,7 +20,12 @@
       "prompt": "Which letter makes the “zh” sound, as in “measure”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑠", "𐑟", "𐑖", "𐑡"],
+      "options": [
+        "𐑠",
+        "𐑟",
+        "𐑖",
+        "𐑡"
+      ],
       "correct": "𐑠",
       "correctLabel": "𐑠"
     },
@@ -30,7 +35,12 @@
       "prompt": "𐑠",
       "caption": "What sound does this make?",
       "optionIsGlyph": false,
-      "options": ["ZH as in measure", "SH as in sure", "J as in judge", "Z as in zoo"],
+      "options": [
+        "ZH as in measure",
+        "SH as in sure",
+        "J as in judge",
+        "Z as in zoo"
+      ],
       "correct": "ZH as in measure",
       "correctLabel": "ZH as in measure"
     },
@@ -52,7 +62,12 @@
       "prompt": "Which letter makes the breathy “th” in “thin”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑔", "𐑞", "𐑑", "𐑕"],
+      "options": [
+        "𐑔",
+        "𐑞",
+        "𐑑",
+        "𐑕"
+      ],
       "correct": "𐑔",
       "correctLabel": "𐑔"
     },
@@ -62,7 +77,12 @@
       "prompt": "𐑔",
       "caption": "What sound does this make?",
       "optionIsGlyph": false,
-      "options": ["TH as in thin", "TH as in the", "T as in top", "F as in fee"],
+      "options": [
+        "TH as in thin",
+        "TH as in the",
+        "T as in top",
+        "F as in fee"
+      ],
       "correct": "TH as in thin",
       "correctLabel": "TH as in thin"
     },
@@ -84,8 +104,17 @@
       "type": "build",
       "prompt": "moth",
       "caption": "Build this word",
-      "tiles": ["𐑥", "𐑪", "𐑔", "𐑚"],
-      "answer": ["𐑥", "𐑪", "𐑔"],
+      "tiles": [
+        "𐑥",
+        "𐑪",
+        "𐑔",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑥",
+        "𐑪",
+        "𐑔"
+      ],
       "correctLabel": "𐑥𐑪𐑔"
     },
     {
@@ -94,7 +123,12 @@
       "prompt": "𐑚𐑴𐑔",
       "caption": "What does this word say?",
       "optionIsGlyph": false,
-      "options": ["both", "boat", "boot", "bought"],
+      "options": [
+        "both",
+        "boat",
+        "boot",
+        "bought"
+      ],
       "correct": "both",
       "correctLabel": "both"
     },
@@ -112,9 +146,24 @@
     },
     {
       "type": "match",
-      "pairs": { "𐑔𐑦𐑯": "thin", "𐑔𐑦𐑒": "thick", "𐑥𐑪𐑔": "moth", "𐑑𐑰𐑔": "teeth" },
-      "leftOrder": ["𐑔𐑦𐑯", "𐑔𐑦𐑒", "𐑥𐑪𐑔", "𐑑𐑰𐑔"],
-      "rightOrder": ["thin", "thick", "moth", "teeth"]
+      "pairs": {
+        "𐑔𐑦𐑯": "thin",
+        "𐑔𐑦𐑒": "thick",
+        "𐑥𐑪𐑔": "moth",
+        "𐑑𐑰𐑔": "teeth"
+      },
+      "leftOrder": [
+        "𐑔𐑦𐑯",
+        "𐑔𐑦𐑒",
+        "𐑥𐑪𐑔",
+        "𐑑𐑰𐑔"
+      ],
+      "rightOrder": [
+        "thin",
+        "thick",
+        "moth",
+        "teeth"
+      ]
     },
     {
       "type": "choice",
@@ -122,7 +171,12 @@
       "prompt": "Which word says “math”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑥𐑨𐑔", "𐑥𐑨𐑑", "𐑥𐑨𐑕", "𐑥𐑧𐑔"],
+      "options": [
+        "𐑥𐑨𐑔",
+        "𐑥𐑨𐑑",
+        "𐑥𐑨𐑕",
+        "𐑥𐑧𐑔"
+      ],
       "correct": "𐑥𐑨𐑔",
       "correctLabel": "𐑥𐑨𐑔"
     }

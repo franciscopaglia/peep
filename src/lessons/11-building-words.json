@@ -193,7 +193,12 @@
       "prompt": "Which word says “vest”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑝𐑧𐑕𐑑", "𐑚𐑧𐑕𐑑", "𐑝𐑨𐑕𐑑", "𐑓𐑧𐑕𐑑"],
+      "options": [
+        "𐑝𐑧𐑕𐑑",
+        "𐑚𐑧𐑕𐑑",
+        "𐑝𐑨𐑕𐑑",
+        "𐑓𐑧𐑕𐑑"
+      ],
       "correct": "𐑝𐑧𐑕𐑑",
       "correctLabel": "𐑝𐑧𐑕𐑑"
     },
@@ -201,23 +206,60 @@
       "type": "build",
       "prompt": "cast",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑒", "𐑨", "𐑕", "𐑑", "𐑦"],
-      "answer": ["𐑒", "𐑨", "𐑕", "𐑑"],
+      "tiles": [
+        "𐑒",
+        "𐑨",
+        "𐑕",
+        "𐑑",
+        "𐑦"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑨",
+        "𐑕",
+        "𐑑"
+      ],
       "correctLabel": "𐑒𐑨𐑕𐑑"
     },
     {
       "type": "build",
       "prompt": "dusk",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑛", "𐑳", "𐑕", "𐑒", "𐑑"],
-      "answer": ["𐑛", "𐑳", "𐑕", "𐑒"],
+      "tiles": [
+        "𐑛",
+        "𐑳",
+        "𐑕",
+        "𐑒",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑳",
+        "𐑕",
+        "𐑒"
+      ],
       "correctLabel": "𐑛𐑳𐑕𐑒"
     },
     {
       "type": "match",
-      "pairs": { "𐑚𐑳𐑕𐑑": "bust", "𐑑𐑳𐑕𐑒": "tusk", "𐑒𐑨𐑕𐑑": "cast", "𐑛𐑳𐑕𐑒": "dusk" },
-      "leftOrder": ["𐑛𐑳𐑕𐑒", "𐑚𐑳𐑕𐑑", "𐑒𐑨𐑕𐑑", "𐑑𐑳𐑕𐑒"],
-      "rightOrder": ["bust", "dusk", "tusk", "cast"]
+      "pairs": {
+        "𐑚𐑳𐑕𐑑": "bust",
+        "𐑑𐑳𐑕𐑒": "tusk",
+        "𐑒𐑨𐑕𐑑": "cast",
+        "𐑛𐑳𐑕𐑒": "dusk"
+      },
+      "leftOrder": [
+        "𐑛𐑳𐑕𐑒",
+        "𐑚𐑳𐑕𐑑",
+        "𐑒𐑨𐑕𐑑",
+        "𐑑𐑳𐑕𐑒"
+      ],
+      "rightOrder": [
+        "bust",
+        "dusk",
+        "tusk",
+        "cast"
+      ]
     }
   ]
 }

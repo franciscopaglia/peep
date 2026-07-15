@@ -166,7 +166,12 @@
       "prompt": "𐑤𐑪𐑑",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["lot", "let", "lit", "lat"],
+      "options": [
+        "lot",
+        "let",
+        "lit",
+        "lat"
+      ],
       "correct": "lot",
       "correctLabel": "lot"
     },
@@ -176,7 +181,12 @@
       "prompt": "Which word says “map”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑥𐑨𐑐", "𐑤𐑨𐑐", "𐑥𐑪𐑐", "𐑥𐑨𐑚"],
+      "options": [
+        "𐑥𐑨𐑐",
+        "𐑤𐑨𐑐",
+        "𐑥𐑪𐑐",
+        "𐑥𐑨𐑚"
+      ],
       "correct": "𐑥𐑨𐑐",
       "correctLabel": "𐑥𐑨𐑐"
     },
@@ -184,23 +194,59 @@
       "type": "build",
       "prompt": "lid",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑤", "𐑦", "𐑛", "𐑥", "𐑑"],
-      "answer": ["𐑤", "𐑦", "𐑛"],
+      "tiles": [
+        "𐑤",
+        "𐑦",
+        "𐑛",
+        "𐑥",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑤",
+        "𐑦",
+        "𐑛"
+      ],
       "correctLabel": "𐑤𐑦𐑛"
     },
     {
       "type": "build",
       "prompt": "film",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑓", "𐑦", "𐑤", "𐑥", "𐑚"],
-      "answer": ["𐑓", "𐑦", "𐑤", "𐑥"],
+      "tiles": [
+        "𐑓",
+        "𐑦",
+        "𐑤",
+        "𐑥",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑓",
+        "𐑦",
+        "𐑤",
+        "𐑥"
+      ],
       "correctLabel": "𐑓𐑦𐑤𐑥"
     },
     {
       "type": "match",
-      "pairs": { "𐑥𐑨𐑛": "mad", "𐑤𐑦𐑐": "lip", "𐑤𐑧𐑜": "leg", "𐑥𐑳𐑜": "mug" },
-      "leftOrder": ["𐑥𐑳𐑜", "𐑥𐑨𐑛", "𐑤𐑧𐑜", "𐑤𐑦𐑐"],
-      "rightOrder": ["mad", "mug", "lip", "leg"]
+      "pairs": {
+        "𐑥𐑨𐑛": "mad",
+        "𐑤𐑦𐑐": "lip",
+        "𐑤𐑧𐑜": "leg",
+        "𐑥𐑳𐑜": "mug"
+      },
+      "leftOrder": [
+        "𐑥𐑳𐑜",
+        "𐑥𐑨𐑛",
+        "𐑤𐑧𐑜",
+        "𐑤𐑦𐑐"
+      ],
+      "rightOrder": [
+        "mad",
+        "mug",
+        "lip",
+        "leg"
+      ]
     }
   ]
 }

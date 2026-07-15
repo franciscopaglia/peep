@@ -171,7 +171,12 @@
       "prompt": "𐑟𐑦𐑑",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["zit", "sit", "zip", "fit"],
+      "options": [
+        "zit",
+        "sit",
+        "zip",
+        "fit"
+      ],
       "correct": "zit",
       "correctLabel": "zit"
     },
@@ -181,7 +186,12 @@
       "prompt": "Which word says “kiss”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑒𐑦𐑕", "𐑒𐑦𐑟", "𐑒𐑨𐑕", "𐑜𐑦𐑕"],
+      "options": [
+        "𐑒𐑦𐑕",
+        "𐑒𐑦𐑟",
+        "𐑒𐑨𐑕",
+        "𐑜𐑦𐑕"
+      ],
       "correct": "𐑒𐑦𐑕",
       "correctLabel": "𐑒𐑦𐑕"
     },
@@ -189,23 +199,60 @@
       "type": "build",
       "prompt": "fist",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑓", "𐑦", "𐑕", "𐑑", "𐑟"],
-      "answer": ["𐑓", "𐑦", "𐑕", "𐑑"],
+      "tiles": [
+        "𐑓",
+        "𐑦",
+        "𐑕",
+        "𐑑",
+        "𐑟"
+      ],
+      "answer": [
+        "𐑓",
+        "𐑦",
+        "𐑕",
+        "𐑑"
+      ],
       "correctLabel": "𐑓𐑦𐑕𐑑"
     },
     {
       "type": "build",
       "prompt": "task",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑑", "𐑨", "𐑕", "𐑒", "𐑟"],
-      "answer": ["𐑑", "𐑨", "𐑕", "𐑒"],
+      "tiles": [
+        "𐑑",
+        "𐑨",
+        "𐑕",
+        "𐑒",
+        "𐑟"
+      ],
+      "answer": [
+        "𐑑",
+        "𐑨",
+        "𐑕",
+        "𐑒"
+      ],
       "correctLabel": "𐑑𐑨𐑕𐑒"
     },
     {
       "type": "match",
-      "pairs": { "𐑕𐑦𐑑": "sit", "𐑟𐑦𐑐": "zip", "𐑓𐑨𐑕𐑑": "fast", "𐑒𐑪𐑕𐑑": "cost" },
-      "leftOrder": ["𐑒𐑪𐑕𐑑", "𐑕𐑦𐑑", "𐑓𐑨𐑕𐑑", "𐑟𐑦𐑐"],
-      "rightOrder": ["sit", "cost", "zip", "fast"]
+      "pairs": {
+        "𐑕𐑦𐑑": "sit",
+        "𐑟𐑦𐑐": "zip",
+        "𐑓𐑨𐑕𐑑": "fast",
+        "𐑒𐑪𐑕𐑑": "cost"
+      },
+      "leftOrder": [
+        "𐑒𐑪𐑕𐑑",
+        "𐑕𐑦𐑑",
+        "𐑓𐑨𐑕𐑑",
+        "𐑟𐑦𐑐"
+      ],
+      "rightOrder": [
+        "sit",
+        "cost",
+        "zip",
+        "fast"
+      ]
     }
   ]
 }

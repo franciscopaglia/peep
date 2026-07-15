@@ -31,7 +31,10 @@
       "prompt": "𐑓𐑹",
       "caption": "Sound it out — what does this say?",
       "correct": "four",
-      "accept": ["fore", "for"],
+      "accept": [
+        "fore",
+        "for"
+      ],
       "correctLabel": "four"
     },
     {
@@ -40,15 +43,35 @@
       "prompt": "𐑓𐑸",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["far", "for", "fur", "fear"],
+      "options": [
+        "far",
+        "for",
+        "fur",
+        "fear"
+      ],
       "correct": "far",
       "correctLabel": "far"
     },
     {
       "type": "match",
-      "pairs": { "𐑒𐑸": "car", "𐑓𐑹": "four", "𐑓𐑸": "far", "𐑓𐑹𐑥": "form" },
-      "leftOrder": ["𐑓𐑹𐑥", "𐑒𐑸", "𐑓𐑸", "𐑓𐑹"],
-      "rightOrder": ["four", "form", "car", "far"]
+      "pairs": {
+        "𐑒𐑸": "car",
+        "𐑓𐑹": "four",
+        "𐑓𐑸": "far",
+        "𐑓𐑹𐑥": "form"
+      },
+      "leftOrder": [
+        "𐑓𐑹𐑥",
+        "𐑒𐑸",
+        "𐑓𐑸",
+        "𐑓𐑹"
+      ],
+      "rightOrder": [
+        "four",
+        "form",
+        "car",
+        "far"
+      ]
     }
   ]
 }

@@ -169,7 +169,12 @@
       "prompt": "𐑜𐑨𐑜",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
-      "options": ["gag", "gig", "gap", "bag"],
+      "options": [
+        "gag",
+        "gig",
+        "gap",
+        "bag"
+      ],
       "correct": "gag",
       "correctLabel": "gag"
     },
@@ -179,7 +184,12 @@
       "prompt": "Which word says “pig”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑐𐑦𐑜", "𐑚𐑦𐑜", "𐑐𐑦𐑑", "𐑐𐑨𐑜"],
+      "options": [
+        "𐑐𐑦𐑜",
+        "𐑚𐑦𐑜",
+        "𐑐𐑦𐑑",
+        "𐑐𐑨𐑜"
+      ],
       "correct": "𐑐𐑦𐑜",
       "correctLabel": "𐑐𐑦𐑜"
     },
@@ -187,23 +197,58 @@
       "type": "build",
       "prompt": "kid",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑒", "𐑦", "𐑛", "𐑜", "𐑑"],
-      "answer": ["𐑒", "𐑦", "𐑛"],
+      "tiles": [
+        "𐑒",
+        "𐑦",
+        "𐑛",
+        "𐑜",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑦",
+        "𐑛"
+      ],
       "correctLabel": "𐑒𐑦𐑛"
     },
     {
       "type": "build",
       "prompt": "got",
       "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑜", "𐑪", "𐑑", "𐑒", "𐑨"],
-      "answer": ["𐑜", "𐑪", "𐑑"],
+      "tiles": [
+        "𐑜",
+        "𐑪",
+        "𐑑",
+        "𐑒",
+        "𐑨"
+      ],
+      "answer": [
+        "𐑜",
+        "𐑪",
+        "𐑑"
+      ],
       "correctLabel": "𐑜𐑪𐑑"
     },
     {
       "type": "match",
-      "pairs": { "𐑒𐑨𐑑": "cat", "𐑒𐑦𐑛": "kid", "𐑚𐑦𐑜": "big", "𐑜𐑪𐑑": "got" },
-      "leftOrder": ["𐑜𐑪𐑑", "𐑒𐑨𐑑", "𐑚𐑦𐑜", "𐑒𐑦𐑛"],
-      "rightOrder": ["big", "got", "cat", "kid"]
+      "pairs": {
+        "𐑒𐑨𐑑": "cat",
+        "𐑒𐑦𐑛": "kid",
+        "𐑚𐑦𐑜": "big",
+        "𐑜𐑪𐑑": "got"
+      },
+      "leftOrder": [
+        "𐑜𐑪𐑑",
+        "𐑒𐑨𐑑",
+        "𐑚𐑦𐑜",
+        "𐑒𐑦𐑛"
+      ],
+      "rightOrder": [
+        "big",
+        "got",
+        "cat",
+        "kid"
+      ]
     }
   ]
 }

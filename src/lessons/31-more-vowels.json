@@ -20,7 +20,12 @@
       "prompt": "𐑒𐑬",
       "caption": "What does this word say?",
       "optionIsGlyph": false,
-      "options": ["cow", "key", "car", "cap"],
+      "options": [
+        "cow",
+        "key",
+        "car",
+        "cap"
+      ],
       "correct": "cow",
       "correctLabel": "cow"
     },
@@ -42,8 +47,18 @@
       "type": "build",
       "prompt": "down",
       "caption": "Build this word",
-      "tiles": ["𐑛", "𐑬", "𐑯", "𐑑", "𐑮"],
-      "answer": ["𐑛", "𐑬", "𐑯"],
+      "tiles": [
+        "𐑛",
+        "𐑬",
+        "𐑯",
+        "𐑑",
+        "𐑮"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑬",
+        "𐑯"
+      ],
       "correctLabel": "𐑛𐑬𐑯"
     },
     {
@@ -57,7 +72,12 @@
       "prompt": "𐑤𐑷",
       "caption": "What does this word say?",
       "optionIsGlyph": false,
-      "options": ["law", "lay", "low", "let"],
+      "options": [
+        "law",
+        "lay",
+        "low",
+        "let"
+      ],
       "correct": "law",
       "correctLabel": "law"
     },
@@ -72,8 +92,17 @@
       "type": "build",
       "prompt": "ball",
       "caption": "Build this word",
-      "tiles": ["𐑚", "𐑷", "𐑤", "𐑬"],
-      "answer": ["𐑚", "𐑷", "𐑤"],
+      "tiles": [
+        "𐑚",
+        "𐑷",
+        "𐑤",
+        "𐑬"
+      ],
+      "answer": [
+        "𐑚",
+        "𐑷",
+        "𐑤"
+      ],
       "correctLabel": "𐑚𐑷𐑤"
     },
     {
@@ -87,7 +116,12 @@
       "prompt": "𐑚𐑶",
       "caption": "What does this word say?",
       "optionIsGlyph": false,
-      "options": ["boy", "bay", "buy", "bee"],
+      "options": [
+        "boy",
+        "bay",
+        "buy",
+        "bee"
+      ],
       "correct": "boy",
       "correctLabel": "boy"
     },
@@ -102,8 +136,17 @@
       "type": "build",
       "prompt": "coin",
       "caption": "Build this word",
-      "tiles": ["𐑒", "𐑶", "𐑯", "𐑑"],
-      "answer": ["𐑒", "𐑶", "𐑯"],
+      "tiles": [
+        "𐑒",
+        "𐑶",
+        "𐑯",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑶",
+        "𐑯"
+      ],
       "correctLabel": "𐑒𐑶𐑯"
     },
     {
@@ -117,7 +160,12 @@
       "prompt": "𐑐𐑭𐑥",
       "caption": "What does this word say?",
       "optionIsGlyph": false,
-      "options": ["palm", "pam", "pom", "pum"],
+      "options": [
+        "palm",
+        "pam",
+        "pom",
+        "pum"
+      ],
       "correct": "palm",
       "correctLabel": "palm"
     },
@@ -134,15 +182,35 @@
       "prompt": "Which word says “cow”?",
       "caption": "",
       "optionIsGlyph": true,
-      "options": ["𐑒𐑬", "𐑒𐑷", "𐑒𐑶", "𐑒𐑭"],
+      "options": [
+        "𐑒𐑬",
+        "𐑒𐑷",
+        "𐑒𐑶",
+        "𐑒𐑭"
+      ],
       "correct": "𐑒𐑬",
       "correctLabel": "𐑒𐑬"
     },
     {
       "type": "match",
-      "pairs": { "𐑒𐑬": "cow", "𐑤𐑷": "law", "𐑚𐑶": "boy", "𐑐𐑭𐑥": "palm" },
-      "leftOrder": ["𐑒𐑬", "𐑤𐑷", "𐑚𐑶", "𐑐𐑭𐑥"],
-      "rightOrder": ["cow", "law", "boy", "palm"]
+      "pairs": {
+        "𐑒𐑬": "cow",
+        "𐑤𐑷": "law",
+        "𐑚𐑶": "boy",
+        "𐑐𐑭𐑥": "palm"
+      },
+      "leftOrder": [
+        "𐑒𐑬",
+        "𐑤𐑷",
+        "𐑚𐑶",
+        "𐑐𐑭𐑥"
+      ],
+      "rightOrder": [
+        "cow",
+        "law",
+        "boy",
+        "palm"
+      ]
     },
     {
       "type": "teach",
