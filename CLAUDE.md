@@ -34,6 +34,7 @@ background (both lighter on mobile); build **version** stamped in the footer.
 ## Commands
 
 ```bash
+node scripts/readlex.mjs <word>…      # verify Shavian spellings (see below)
 npm run dev      # dev server
 npm test         # run the Vitest suite (vitest run)
 npm run test:watch
@@ -118,6 +119,12 @@ line protocol is far cheaper and derives labels, blanks and banks
 automatically. See the `lesson-editor` skill (`.claude/skills/lesson-editor/`)
 for the grammar. Run `lesson.mjs check` plus `npm test` after content changes.
 
+- **Verify every Shavian spelling with `node scripts/readlex.mjs`** before
+  authoring it — Shavian spells sounds, so spellings can't be guessed, and a
+  plausible-but-wrong one passes `lesson.mjs check`. Batch-check planned
+  vocabulary forwards (`readlex.mjs million story`), then reverse-check what
+  you wrote (`readlex.mjs -r 𐑥𐑦𐑤𐑘𐑩𐑯`); `NOT FOUND` means you invented it.
+  See the `shavian-spelling` skill.
 - **Only use letters taught by that point.** Chapter 1 must not use Chapter 2
   letters (`𐑠` zh, the r-vowels `𐑸𐑹𐑺𐑻𐑼𐑽𐑾𐑿`, or `𐑬𐑭𐑷𐑶`), and never `𐑔`; `𐑞`
   appears in Ch1 only as the fixed word "the". Also beware words whose *sounds*

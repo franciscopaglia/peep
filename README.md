@@ -132,7 +132,14 @@ The full grammar lives in [`.claude/skills/lesson-editor/SKILL.md`](./.claude/sk
 A few guidelines that keep the curriculum sound:
 
 - **Only use letters that have already been taught** by that point in the path — including a word's *sounds*, since "digit" contains 𐑡 (j), not 𐑜 (g). `check` enforces this.
-- **Verify spellings** against the [Read Lexicon](https://readlex.pw) rather than intuition — Shavian spells sounds, so "million" is 𐑥𐑦𐑤𐑘𐑩𐑯 and "story" is 𐑕𐑑𐑹𐑦. When a spelling is shared by homophones (𐑑𐑵 is both "too" and "two"), list the alternates in `alt=`.
+- **Verify every spelling** rather than trusting intuition — Shavian spells sounds, so a spelling can't be guessed from the English. There's a second CLI for exactly this, checking against the [Read Lexicon](https://github.com/Shavian-info/readlex):
+
+  ```bash
+  node scripts/readlex.mjs million story       # English → Shavian
+  node scripts/readlex.mjs -r 𐑥𐑦𐑤𐑘𐑩𐑯 𐑕𐑑𐑹𐑦     # Shavian → English, to check what you wrote
+  ```
+
+  It fetches the lexicon once (~27 MB, cached and gitignored) and prints `NOT FOUND` for anything it doesn't know. That's how you learn "million" is 𐑥𐑦𐑤𐑘𐑩𐑯 rather than the tempting 𐑥𐑦𐑤𐑾𐑯, and that "story" is 𐑕𐑑𐑹𐑦 with the r tucked inside 𐑹. When a reverse lookup returns several English words the spelling is shared (𐑑𐑵 is both "too" and "two"), so list the alternates in `alt=`.
 - **`transcribe` passages must be real, sourced texts** — never invented ones.
 - Shavian lives in Unicode block `U+10450–U+1047F`.
 - Run `node scripts/lesson.mjs check` and `npm test` afterwards. They validate every lesson's structure and solvability, and catch letters the learner hasn't met yet.

@@ -26,3 +26,6 @@ dist-ssr
 # Claude Code: the lesson-editor skill is shared with everyone; personal
 # permissions and overrides stay local.
 .claude/settings.local.json
+
+# The Read Lexicon, downloaded on demand by scripts/readlex.mjs (~27 MB).
+.readlex-cache
