@@ -55,6 +55,80 @@
       "correctLabel": "𐑦𐑑 𐑦𐑟 𐑚𐑧𐑑𐑼 𐑣𐑽"
     },
     {
+      "type": "arrange",
+      "promptEn": "the girl has a new idea",
+      "tiles": [
+        "𐑞",
+        "𐑜𐑻𐑤",
+        "𐑣𐑨𐑟",
+        "𐑩",
+        "𐑯𐑿",
+        "𐑲𐑛𐑾",
+        "𐑒𐑸"
+      ],
+      "answer": [
+        "𐑞",
+        "𐑜𐑻𐑤",
+        "𐑣𐑨𐑟",
+        "𐑩",
+        "𐑯𐑿",
+        "𐑲𐑛𐑾"
+      ],
+      "correctLabel": "𐑞 𐑜𐑻𐑤 𐑣𐑨𐑟 𐑩 𐑯𐑿 𐑲𐑛𐑾"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑺 𐑦𐑟 𐑞 𐑛𐑹",
+      "caption": "Type what this says",
+      "correct": "where is the door",
+      "correctLabel": "where is the door"
+    },
+    {
+      "type": "teach",
+      "title": "Don’t translate — read",
+      "body": "By now, try saying the Shavian sentence out loud before you reach for the English. Fluent readers don’t decode letter by letter; they hear the words straight off the page. It’s fine to be slow — out loud beats in your head."
+    },
+    {
+      "type": "fill",
+      "blanks": [
+        2,
+        3
+      ],
+      "bank": [
+        "𐑓𐑹",
+        "𐑚𐑻𐑛𐑟",
+        "𐑓"
+      ],
+      "correctLabel": "𐑢𐑰 𐑕𐑷 𐑓𐑹 𐑚𐑻𐑛𐑟",
+      "words": [
+        "𐑢𐑰",
+        "𐑕𐑷",
+        "𐑓𐑹",
+        "𐑚𐑻𐑛𐑟"
+      ],
+      "promptEn": "we saw four birds"
+    },
+    {
+      "type": "arrange",
+      "promptEn": "there is more water here",
+      "tiles": [
+        "𐑞𐑺",
+        "𐑦𐑟",
+        "𐑥𐑹",
+        "𐑢𐑷𐑑𐑼",
+        "𐑣𐑽",
+        "𐑞"
+      ],
+      "answer": [
+        "𐑞𐑺",
+        "𐑦𐑟",
+        "𐑥𐑹",
+        "𐑢𐑷𐑑𐑼",
+        "𐑣𐑽"
+      ],
+      "correctLabel": "𐑞𐑺 𐑦𐑟 𐑥𐑹 𐑢𐑷𐑑𐑼 𐑣𐑽"
+    },
+    {
       "type": "type",
       "prompt": "𐑞 𐑒𐑸 𐑦𐑟 𐑓𐑸",
       "caption": "Type what this says",

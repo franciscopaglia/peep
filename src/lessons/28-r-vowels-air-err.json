@@ -20,6 +20,54 @@
       "correctLabel": "hair"
     },
     {
+      "type": "type",
+      "prompt": "𐑗𐑺",
+      "caption": "Sound it out — what does this say?",
+      "correct": "chair",
+      "correctLabel": "chair"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑚𐑺",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "bear",
+        "beer",
+        "bar",
+        "bore"
+      ],
+      "correct": "bear",
+      "correctLabel": "bear"
+    },
+    {
+      "type": "teach",
+      "title": "there, their, they’re",
+      "body": "𐑞𐑺 spells there, their and they’re all at once — they sound identical, so Shavian writes them identically, and context does the rest. Its cousin where is 𐑢𐑺. Between them, these two words turn up in almost every paragraph of real Shavian."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑞𐑺",
+      "caption": "Sound it out — what does this say?",
+      "correct": "there",
+      "correctLabel": "there",
+      "accept": [
+        "their"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑺",
+      "caption": "Sound it out — what does this say?",
+      "correct": "where",
+      "correctLabel": "where",
+      "accept": [
+        "wear",
+        "ware"
+      ]
+    },
+    {
       "type": "teach",
       "title": "Meet err",
       "body": "The letter for err is 𐑻, the sound in her and sir."
@@ -30,6 +78,45 @@
       "caption": "Sound it out — what does this say?",
       "correct": "her",
       "correctLabel": "her"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑻𐑤",
+      "caption": "Sound it out — what does this say?",
+      "correct": "girl",
+      "correctLabel": "girl"
+    },
+    {
+      "type": "build",
+      "prompt": "bird",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑚",
+        "𐑻",
+        "𐑛",
+        "𐑺"
+      ],
+      "answer": [
+        "𐑚",
+        "𐑻",
+        "𐑛"
+      ],
+      "correctLabel": "𐑚𐑻𐑛"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑓𐑻𐑕𐑑",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "first",
+        "fist",
+        "forest",
+        "frost"
+      ],
+      "correct": "first",
+      "correctLabel": "first"
     },
     {
       "type": "choice",
@@ -47,24 +134,47 @@
       "correctLabel": "care"
     },
     {
+      "type": "teach",
+      "title": "𐑺 or 𐑻?",
+      "body": "The two are easy to mix up. 𐑺 opens your mouth wide — hair, care, fair (𐑓𐑺). 𐑻 stays small and tight — her, bird, fur (𐑓𐑻). Try the pair out loud: 𐑓𐑺 fair, 𐑓𐑻 fur."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑢𐑻",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "were",
+        "where",
+        "wire",
+        "war"
+      ],
+      "correct": "were",
+      "correctLabel": "were"
+    },
+    {
       "type": "match",
       "pairs": {
         "𐑣𐑺": "hair",
         "𐑣𐑻": "her",
-        "𐑒𐑺": "care",
-        "𐑕𐑻": "sir"
+        "𐑞𐑺": "there",
+        "𐑚𐑻𐑛": "bird",
+        "𐑗𐑺": "chair"
       },
       "leftOrder": [
-        "𐑕𐑻",
         "𐑣𐑺",
-        "𐑒𐑺",
-        "𐑣𐑻"
+        "𐑣𐑻",
+        "𐑞𐑺",
+        "𐑚𐑻𐑛",
+        "𐑗𐑺"
       ],
       "rightOrder": [
-        "hair",
-        "sir",
         "her",
-        "care"
+        "there",
+        "chair",
+        "hair",
+        "bird"
       ]
     }
   ]

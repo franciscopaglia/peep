@@ -18,15 +18,76 @@
     },
     {
       "type": "type",
+      "prompt": "𐑯𐑿",
+      "caption": "Sound it out — what does this say?",
+      "correct": "new",
+      "correctLabel": "new",
+      "accept": [
+        "knew"
+      ]
+    },
+    {
+      "type": "type",
       "prompt": "𐑒𐑿𐑑",
       "caption": "Sound it out — what does this say?",
       "correct": "cute",
       "correctLabel": "cute"
     },
     {
+      "type": "build",
+      "prompt": "music",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑥",
+        "𐑿",
+        "𐑟",
+        "𐑦",
+        "𐑒",
+        "𐑵"
+      ],
+      "answer": [
+        "𐑥",
+        "𐑿",
+        "𐑟",
+        "𐑦",
+        "𐑒"
+      ],
+      "correctLabel": "𐑥𐑿𐑟𐑦𐑒"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑣𐑿𐑡",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "huge",
+        "hug",
+        "hedge",
+        "juice"
+      ],
+      "correct": "huge",
+      "correctLabel": "huge"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑿𐑕",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "use",
+        "yews",
+        "ooze",
+        "yes"
+      ],
+      "correct": "use",
+      "correctLabel": "use"
+    },
+    {
       "type": "teach",
       "title": "Meet ian",
-      "body": "The last letter of all: ian, 𐑾. It's the rarest letter in the alphabet, tucked into words like familiar. You won't need it often, but now you've seen the whole set."
+      "body": "One more ligature rounds out the family: ian, 𐑾 — a quick glide from “i” into “a”. It hides in some very common words: real is 𐑮𐑾𐑤, really 𐑮𐑾𐑤𐑦, and idea is 𐑲𐑛𐑾."
     },
     {
       "type": "choice",
@@ -44,19 +105,59 @@
       "correctLabel": "𐑾"
     },
     {
+      "type": "type",
+      "prompt": "𐑮𐑾𐑤",
+      "caption": "Sound it out — what does this say?",
+      "correct": "real",
+      "correctLabel": "real"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑲𐑛𐑾",
+      "caption": "Sound it out — what does this say?",
+      "correct": "idea",
+      "correctLabel": "idea"
+    },
+    {
+      "type": "teach",
+      "title": "Ligatures of sound",
+      "body": "𐑿 and 𐑾 are ligatures too, but of sounds rather than an r: 𐑿 packs “y”+“oo” into one letter (few is f-yoo), and 𐑾 glides “i” into “a”. That completes the whole ligature family — the eight r-vowels plus these two. Only four ordinary vowels remain before you know the full alphabet."
+    },
+    {
       "type": "choice",
       "promptIsGlyph": true,
-      "prompt": "𐑿𐑕",
-      "caption": "What does this word mean?",
+      "prompt": "𐑥𐑧𐑯𐑿",
+      "caption": "What does this word say?",
       "optionIsGlyph": false,
       "options": [
-        "use",
-        "yews",
-        "ooze",
-        "yes"
+        "menu",
+        "many",
+        "mane",
+        "moon"
       ],
-      "correct": "use",
-      "correctLabel": "use"
+      "correct": "menu",
+      "correctLabel": "menu"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑓𐑿": "few",
+        "𐑯𐑿": "new",
+        "𐑮𐑾𐑤": "real",
+        "𐑲𐑛𐑾": "idea"
+      },
+      "leftOrder": [
+        "𐑓𐑿",
+        "𐑯𐑿",
+        "𐑮𐑾𐑤",
+        "𐑲𐑛𐑾"
+      ],
+      "rightOrder": [
+        "new",
+        "real",
+        "idea",
+        "few"
+      ]
     }
   ]
 }

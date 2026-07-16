@@ -22,6 +22,45 @@
       "correctLabel": "car"
     },
     {
+      "type": "type",
+      "prompt": "𐑛𐑸𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "dark",
+      "correctLabel": "dark"
+    },
+    {
+      "type": "build",
+      "prompt": "park",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑐",
+        "𐑸",
+        "𐑒",
+        "𐑹"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑸",
+        "𐑒"
+      ],
+      "correctLabel": "𐑐𐑸𐑒"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑕𐑑𐑸",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "star",
+        "store",
+        "stair",
+        "sitar"
+      ],
+      "correct": "star",
+      "correctLabel": "star"
+    },
+    {
       "type": "teach",
       "title": "Meet or",
       "body": "The letter for or is 𐑹, the sound in four and form."
@@ -36,6 +75,32 @@
         "for"
       ],
       "correctLabel": "four"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑹",
+      "caption": "Sound it out — what does this say?",
+      "correct": "door",
+      "correctLabel": "door"
+    },
+    {
+      "type": "build",
+      "prompt": "storm",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑕",
+        "𐑑",
+        "𐑹",
+        "𐑥",
+        "𐑸"
+      ],
+      "answer": [
+        "𐑕",
+        "𐑑",
+        "𐑹",
+        "𐑥"
+      ],
+      "correctLabel": "𐑕𐑑𐑹𐑥"
     },
     {
       "type": "choice",
@@ -53,24 +118,66 @@
       "correctLabel": "far"
     },
     {
+      "type": "teach",
+      "title": "Two letters in one",
+      "body": "Look closely at 𐑸 and 𐑹 — each is really a vowel and 𐑮 (roar) fused into a single character. Fused pairs like this are called ligatures, and every r-vowel in this chapter is one. This is the trick 𐑗 hinted at back in Chapter 1, taken all the way."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑹",
+      "caption": "Sound it out — what does this say?",
+      "correct": "more",
+      "correctLabel": "more"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which one is the word “or”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑹",
+        "𐑸",
+        "𐑮",
+        "𐑪"
+      ],
+      "correct": "𐑹",
+      "correctLabel": "𐑹"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “short”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑖𐑹𐑑",
+        "𐑕𐑹𐑑",
+        "𐑖𐑸𐑑",
+        "𐑖𐑻𐑑"
+      ],
+      "correct": "𐑖𐑹𐑑",
+      "correctLabel": "𐑖𐑹𐑑"
+    },
+    {
       "type": "match",
       "pairs": {
         "𐑒𐑸": "car",
-        "𐑓𐑹": "four",
-        "𐑓𐑸": "far",
+        "𐑛𐑹": "door",
+        "𐑕𐑑𐑸": "star",
         "𐑓𐑹𐑥": "form"
       },
       "leftOrder": [
-        "𐑓𐑹𐑥",
         "𐑒𐑸",
-        "𐑓𐑸",
-        "𐑓𐑹"
+        "𐑛𐑹",
+        "𐑕𐑑𐑸",
+        "𐑓𐑹𐑥"
       ],
       "rightOrder": [
-        "four",
+        "door",
+        "star",
         "form",
-        "car",
-        "far"
+        "car"
       ]
     }
   ]

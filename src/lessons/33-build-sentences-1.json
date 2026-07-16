@@ -84,6 +84,62 @@
       "correctLabel": "𐑣𐑰 𐑣𐑨𐑟 𐑩 𐑚𐑦𐑜 𐑒𐑸"
     },
     {
+      "type": "arrange",
+      "promptEn": "the bird is under the chair",
+      "tiles": [
+        "𐑞",
+        "𐑚𐑻𐑛",
+        "𐑦𐑟",
+        "𐑳𐑯𐑛𐑼",
+        "𐑞",
+        "𐑗𐑺",
+        "𐑴𐑝𐑼"
+      ],
+      "answer": [
+        "𐑞",
+        "𐑚𐑻𐑛",
+        "𐑦𐑟",
+        "𐑳𐑯𐑛𐑼",
+        "𐑞",
+        "𐑗𐑺"
+      ],
+      "correctLabel": "𐑞 𐑚𐑻𐑛 𐑦𐑟 𐑳𐑯𐑛𐑼 𐑞 𐑗𐑺"
+    },
+    {
+      "type": "arrange",
+      "promptEn": "her car is near the door",
+      "tiles": [
+        "𐑣𐑻",
+        "𐑒𐑸",
+        "𐑦𐑟",
+        "𐑯𐑽",
+        "𐑞",
+        "𐑛𐑹",
+        "𐑓𐑸"
+      ],
+      "answer": [
+        "𐑣𐑻",
+        "𐑒𐑸",
+        "𐑦𐑟",
+        "𐑯𐑽",
+        "𐑞",
+        "𐑛𐑹"
+      ],
+      "correctLabel": "𐑣𐑻 𐑒𐑸 𐑦𐑟 𐑯𐑽 𐑞 𐑛𐑹"
+    },
+    {
+      "type": "teach",
+      "title": "Spot the little words first",
+      "body": "A quick trick for reading sentences: find 𐑞, 𐑯, 𐑑, 𐑝 and 𐑓 first. Those single-letter words anchor the sentence, and the words between them are usually the nouns and verbs doing the work."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑞 𐑥𐑿𐑟𐑦𐑒 𐑦𐑟 𐑯𐑿",
+      "caption": "Type what this says",
+      "correct": "the music is new",
+      "correctLabel": "the music is new"
+    },
+    {
       "type": "fill",
       "promptEn": "the cat sat",
       "words": [
@@ -103,6 +159,27 @@
       "correctLabel": "𐑞 𐑒𐑨𐑑 𐑕𐑨𐑑"
     },
     {
+      "type": "fill",
+      "blanks": [
+        1,
+        4
+      ],
+      "bank": [
+        "𐑜𐑻𐑤",
+        "𐑕𐑑𐑸",
+        "𐑚𐑻𐑛"
+      ],
+      "correctLabel": "𐑞 𐑜𐑻𐑤 𐑕𐑷 𐑩 𐑕𐑑𐑸",
+      "words": [
+        "𐑞",
+        "𐑜𐑻𐑤",
+        "𐑕𐑷",
+        "𐑩",
+        "𐑕𐑑𐑸"
+      ],
+      "promptEn": "the girl saw a star"
+    },
+    {
       "type": "complete",
       "prompt": "big",
       "caption": "Tap the missing letter",
@@ -120,6 +197,26 @@
         "𐑳"
       ],
       "correctLabel": "𐑚𐑦𐑜"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        3
+      ],
+      "bank": [
+        "𐑼",
+        "𐑻",
+        "𐑽"
+      ],
+      "correctLabel": "𐑚𐑧𐑑𐑼",
+      "prompt": "better",
+      "word": [
+        "𐑚",
+        "𐑧",
+        "𐑑",
+        "𐑼"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
       "type": "cloze",
@@ -150,6 +247,37 @@
         "𐑒𐑸"
       ],
       "correctLabel": "𐑞 𐑒𐑸 𐑦𐑟 𐑓𐑸 𐑖𐑰 𐑣𐑨𐑟 𐑩 𐑚𐑦𐑜 𐑒𐑸"
+    },
+    {
+      "type": "cloze",
+      "blanks": [
+        3,
+        7
+      ],
+      "bank": [
+        "𐑣𐑽",
+        "𐑯𐑽",
+        "𐑓𐑸"
+      ],
+      "correctLabel": "𐑞 𐑜𐑻𐑤 𐑦𐑟 𐑣𐑽 𐑣𐑻 𐑒𐑸 𐑦𐑟 𐑯𐑽 𐑞 𐑛𐑹",
+      "words": [
+        "𐑞",
+        "𐑜𐑻𐑤",
+        "𐑦𐑟",
+        "𐑣𐑽",
+        "𐑣𐑻",
+        "𐑒𐑸",
+        "𐑦𐑟",
+        "𐑯𐑽",
+        "𐑞",
+        "𐑛𐑹"
+      ],
+      "stops": [
+        3,
+        9
+      ],
+      "translation": "The girl is here. Her car is near the door.",
+      "caption": "Read the passage and fill the gaps"
     }
   ]
 }

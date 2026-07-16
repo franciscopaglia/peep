@@ -17,19 +17,57 @@
       "correctLabel": "better"
     },
     {
+      "type": "type",
+      "prompt": "𐑳𐑯𐑛𐑼",
+      "caption": "Sound it out — what does this say?",
+      "correct": "under",
+      "correctLabel": "under"
+    },
+    {
+      "type": "build",
+      "prompt": "letter",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑤",
+        "𐑧",
+        "𐑑",
+        "𐑼",
+        "𐑻"
+      ],
+      "answer": [
+        "𐑤",
+        "𐑧",
+        "𐑑",
+        "𐑼"
+      ],
+      "correctLabel": "𐑤𐑧𐑑𐑼"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑕𐑦𐑕𐑑𐑼",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "sister",
+        "system",
+        "sitter",
+        "supper"
+      ],
+      "correct": "sister",
+      "correctLabel": "sister"
+    },
+    {
       "type": "teach",
-      "title": "Meet ear",
-      "body": "The letter for ear is 𐑽, the sound in ear itself, and in here."
+      "title": "The “-er” machine",
+      "body": "English hangs 𐑼 on the end of everything — better, under, never, letter, dinner, summer, sister. Whole families of words end in that soft little curl, which is why 𐑼 is one of the commonest letters in real Shavian text. Learn its shape cold and reading speeds up everywhere."
     },
     {
       "type": "type",
-      "prompt": "𐑣𐑽",
+      "prompt": "𐑯𐑧𐑝𐑼",
       "caption": "Sound it out — what does this say?",
-      "correct": "here",
-      "accept": [
-        "hear"
-      ],
-      "correctLabel": "here"
+      "correct": "never",
+      "correctLabel": "never"
     },
     {
       "type": "choice",
@@ -47,24 +85,74 @@
       "correctLabel": "over"
     },
     {
+      "type": "teach",
+      "title": "Meet ear",
+      "body": "The letter for ear is 𐑽, the sound in ear itself, and in here."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑽",
+      "caption": "Sound it out — what does this say?",
+      "correct": "here",
+      "accept": [
+        "hear"
+      ],
+      "correctLabel": "here"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑘𐑽",
+      "caption": "Sound it out — what does this say?",
+      "correct": "year",
+      "correctLabel": "year"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑯𐑽",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "near",
+        "never",
+        "ear",
+        "new"
+      ],
+      "correct": "near",
+      "correctLabel": "near"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑽",
+      "caption": "Sound it out — what does this say?",
+      "correct": "dear",
+      "correctLabel": "dear",
+      "accept": [
+        "deer"
+      ]
+    },
+    {
       "type": "match",
       "pairs": {
         "𐑚𐑧𐑑𐑼": "better",
+        "𐑳𐑯𐑛𐑼": "under",
+        "𐑘𐑽": "year",
         "𐑣𐑽": "here",
-        "𐑴𐑝𐑼": "over",
-        "𐑽": "ear"
+        "𐑯𐑽": "near"
       },
       "leftOrder": [
-        "𐑽",
         "𐑚𐑧𐑑𐑼",
-        "𐑴𐑝𐑼",
-        "𐑣𐑽"
+        "𐑳𐑯𐑛𐑼",
+        "𐑘𐑽",
+        "𐑣𐑽",
+        "𐑯𐑽"
       ],
       "rightOrder": [
-        "better",
-        "ear",
+        "under",
+        "year",
+        "near",
         "here",
-        "over"
+        "better"
       ]
     }
   ]
