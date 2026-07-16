@@ -1,6 +1,8 @@
-import { X } from 'lucide-react';
+import { Delete, X } from 'lucide-react';
 import type { Exercise } from '@/lessons';
 import { renderWithGlyphChips } from '@/lib/shavian-text';
+import { keyboardRows, NAMING_DOT } from '@/lib/shavian-keyboard';
+import { useIsMobile } from '@/hooks/useIsMobile';
 import { ReportProblem } from '@/components/ReportProblem';
 import { lessonIssueUrl } from '@/lib/constants';
 
@@ -106,6 +108,9 @@ export function Lesson({
   onFillRemove: (pos: number) => void;
   onMatchClick: (side: 'left' | 'right', value: string) => void;
 }) {
+  // On narrow screens the write keyboard splits its 12-key rows into
+  // interleaved half-rows of 6 (pairing preserved) so keys stay tappable.
+  const isMobile = useIsMobile();
   const isTeach = exercise.type === 'teach';
   const isChoice = exercise.type === 'choice';
   const isType = exercise.type === 'type';
@@ -114,6 +119,9 @@ export function Lesson({
   const isComplete = exercise.type === 'complete';
   const isFill = exercise.type === 'fill';
   const isCloze = exercise.type === 'cloze';
+  const isSpot = exercise.type === 'spot';
+  const isTranscribe = exercise.type === 'transcribe';
+  const isWrite = exercise.type === 'write';
   const isMatch = exercise.type === 'match';
   const isWrong = status === 'wrong';
   const lit = answerColors(status);
@@ -126,7 +134,7 @@ export function Lesson({
       ? exercise.blanks.length
       : 0;
 
-  const checkDisabled = isType
+  const checkDisabled = isType || isTranscribe || isWrite
     ? typedValue.trim().length === 0
     : isChoice
       ? selected == null
@@ -136,7 +144,9 @@ export function Lesson({
           ? arrangeSel.length === 0
           : isComplete || isFill || isCloze
             ? fillSel.length !== blanksNeeded
-            : true;
+            : isSpot
+              ? selected == null
+              : true;
 
   const showCheckButton = status === 'active' && !isMatch && !isTeach;
   const showSkip = status === 'active' && !isTeach;
@@ -563,6 +573,168 @@ export function Lesson({
                   >
                     {word}
                   </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {isTranscribe && exercise.type === 'transcribe' && (
+          <div className="w-full flex flex-col gap-6" style={{ animation: 'shvSlideUp .3s ease' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 items-stretch">
+              <div className="flex flex-col gap-3">
+                <div className="flex-1 p-5 rounded-card border border-border bg-card">
+                  <div className="text-[24px] leading-[1.75] font-semibold text-foreground">
+                    {exercise.passage}
+                  </div>
+                </div>
+                {exercise.source && (
+                  <div className="text-xs italic text-muted-foreground px-1">
+                    — {exercise.source}
+                  </div>
+                )}
+              </div>
+              <div className="flex flex-col gap-3">
+                <div className="text-sm text-muted-foreground">{exercise.caption}</div>
+                <textarea
+                  className="flex-1 w-full min-h-[140px] p-4 rounded-btn outline-none text-base font-medium leading-relaxed resize-none box-border"
+                  style={{
+                    border: `2px solid ${dim.border}`,
+                    background: status === 'active' ? 'var(--card)' : dim.bg,
+                    color: 'var(--foreground)',
+                  }}
+                  value={typedValue}
+                  onChange={(e) => onTypeChange(e.target.value)}
+                  placeholder="write the English here"
+                  autoFocus
+                />
+              </div>
+            </div>
+          </div>
+        )}
+
+        {isWrite && exercise.type === 'write' && (
+          <div className="w-full flex flex-col items-center gap-6" style={{ animation: 'shvSlideUp .3s ease' }}>
+            <div className="text-center">
+              <div className="text-[26px] font-semibold text-foreground">
+                “{exercise.prompt}”
+              </div>
+              <div className="text-sm text-muted-foreground mt-2">{exercise.caption}</div>
+            </div>
+            <div
+              className="flex items-center justify-center text-[32px] font-bold tracking-wide"
+              style={{
+                minHeight: 58,
+                minWidth: 220,
+                borderBottom: `2px dashed ${typedValue ? lit.border : dim.border}`,
+                color: typedValue ? lit.color : 'var(--muted-foreground)',
+                padding: '0 20px 8px',
+              }}
+            >
+              {typedValue || ' '}
+            </div>
+            <div className="w-full max-w-[520px] flex flex-col gap-1.5">
+              {keyboardRows(isMobile).map((row, ri) => (
+                <div
+                  key={ri}
+                  className={`grid gap-1.5 ${isMobile ? 'grid-cols-6' : 'grid-cols-12'}`}
+                >
+                  {row.map((key) => (
+                    <button
+                      key={key.glyph}
+                      onClick={() => onTypeChange(typedValue + key.glyph)}
+                      disabled={status !== 'active'}
+                      aria-label={key.name}
+                      title={key.name}
+                      className="h-10 sm:h-11 rounded-md font-bold text-xl flex items-center justify-center"
+                      style={poolTileStyle(false, status)}
+                    >
+                      {key.glyph}
+                    </button>
+                  ))}
+                </div>
+              ))}
+              <div className="flex justify-center gap-1.5">
+                <button
+                  onClick={() => onTypeChange(typedValue + NAMING_DOT.glyph)}
+                  disabled={status !== 'active'}
+                  aria-label={NAMING_DOT.name}
+                  title={NAMING_DOT.name}
+                  className="h-10 sm:h-11 w-[30%] rounded-md font-bold text-xl flex items-center justify-center"
+                  style={poolTileStyle(false, status)}
+                >
+                  {NAMING_DOT.glyph}
+                </button>
+                <button
+                  onClick={() => onTypeChange([...typedValue].slice(0, -1).join(''))}
+                  disabled={status !== 'active' || typedValue.length === 0}
+                  aria-label="delete last letter"
+                  title="delete last letter"
+                  className="h-10 sm:h-11 w-[30%] rounded-md flex items-center justify-center"
+                  style={poolTileStyle(false, status)}
+                >
+                  <Delete size={20} />
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {isSpot && exercise.type === 'spot' && (
+          <div className="w-full flex flex-col items-center gap-8" style={{ animation: 'shvSlideUp .3s ease' }}>
+            <div className="text-center">
+              <div className="text-sm text-muted-foreground mb-2">
+                {exercise.caption ?? 'Tap the word that says:'}
+              </div>
+              <div className="text-[26px] font-semibold text-foreground max-w-[440px]">
+                “{exercise.prompt}”
+              </div>
+            </div>
+            <div className="text-[26px] leading-[1.7] font-semibold text-center max-w-[560px] flex flex-wrap items-center justify-center gap-x-2.5 gap-y-2">
+              {exercise.words.map((word, wi) => {
+                const isStop = exercise.stops?.includes(wi);
+                const isSel = selected === String(wi);
+                let bg = 'var(--card)';
+                let bd = 'var(--border)';
+                let col = 'var(--foreground)';
+                let anim = 'none';
+                if (status === 'active') {
+                  if (isSel) {
+                    bg = 'var(--accent-soft)';
+                    bd = 'var(--accent)';
+                    col = 'var(--accent)';
+                  }
+                } else {
+                  if (wi === exercise.correct) {
+                    bg = 'var(--success-soft)';
+                    bd = 'var(--success)';
+                    col = 'var(--success)';
+                  } else if (isSel) {
+                    bg = 'var(--danger-soft)';
+                    bd = 'var(--danger)';
+                    col = 'var(--danger)';
+                    anim = 'shvShake .3s ease';
+                  } else {
+                    col = 'var(--muted-foreground)';
+                  }
+                }
+                return (
+                  <span key={wi} className="inline-flex items-center gap-x-2.5">
+                    <button
+                      onClick={() => onSelectOption(String(wi))}
+                      className="px-3.5 py-2 rounded-btn font-bold transition-all duration-100"
+                      style={{
+                        border: `2px solid ${bd}`,
+                        background: bg,
+                        color: col,
+                        cursor: status === 'active' ? 'pointer' : 'default',
+                        animation: anim,
+                      }}
+                    >
+                      {word}
+                    </button>
+                    {isStop && <span className="text-foreground">.</span>}
+                  </span>
                 );
               })}
             </div>

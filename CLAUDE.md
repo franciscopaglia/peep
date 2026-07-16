@@ -24,7 +24,7 @@ density or pressure.
 
 ## Features
 
-Gradual 48-letter curriculum (Chapters 1–2 shipped, 3–5 planned); nine exercise
+Gradual 48-letter curriculum (Chapters 1–3 shipped, 4 started, 5 planned); twelve exercise
 types; retry-on-wrong with a 60% pass gate; a full alphabet **reference** (About
 page); **light/dark theme** that follows the system and persists; **responsive**
 with a mobile nav; per-chapter **unlock** (for when a release resets progress);
@@ -88,17 +88,27 @@ Each view has one clear job — keep them focused:
 
 ## Exercise types
 
-Nine types (see `src/lessons/types.ts`). Graded via `isCorrect`:
+Twelve types (see `src/lessons/types.ts`). Graded via `isCorrect`:
 `choice`, `type`, `build`, `arrange`, `complete` (fill a word's missing
 letters), `fill` (fill a sentence's missing words), `cloze` (fill a passage's
-blanks). `teach` is not graded; `match` is graded through its own pairing flow
-in `App.tsx` (not via `isCorrect`). `match` is **intentionally not failable** —
-wrong picks just shake and reset, and finishing always scores the point.
+blanks), `spot` (tap the word in a sentence that means the English prompt —
+graded by word *index*, since sentences can repeat a word), `transcribe`
+(read a real Shavian passage, write the full English; compared through
+`normalizeTranscription` — case/punctuation/whitespace-insensitive, with
+`accept` for spelling variants; passages must be real sourced texts, never
+invented), `write` (spell an English word in Shavian on the full on-screen
+keyboard — layout in `lib/shavian-keyboard.ts`, chart-paired rows, exact
+glyph match plus `accept`). `teach` is not
+graded; `match` is graded through its own pairing flow in `App.tsx` (not via
+`isCorrect`). `match` is **intentionally not failable** — wrong picks just
+shake and reset, and finishing always scores the point.
 
 **Randomization:** `shuffleExerciseOptions` shuffles `choice` options, `build`/
 `arrange` tiles, and `complete`/`fill`/`cloze` banks on load. The shuffle
 guarantees a **non-identity** order (never the authored order — the correct
 answer is always authored first, so this stops "tap straight through").
+`spot`, `transcribe` and `write` are never shuffled — their text/keyboard
+*is* the exercise.
 
 ## Lesson authoring rules
 
@@ -128,7 +138,10 @@ for the grammar. Run `lesson.mjs check` plus `npm test` after content changes.
 - Pass mark is **60% first-try accuracy** (`PASS_THRESHOLD`); below that the
   lesson is "not passed" and the next stays locked.
 - In `teach` bodies, Shavian runs render as chips. Wrap a span in `[[ … ]]` to
-  render it as **one** chip (e.g. a whole sentence) instead of one per word.
+  render it as **one** chip (a short phrase) instead of one per word. Wrap a
+  passage in `{{ … }}` to render it as a full-width **display block** — use
+  this for whole sentences and dialogue so punctuation stays inside instead of
+  chopping the text into chips at every stop.
 
 ## Tests
 

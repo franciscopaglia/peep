@@ -30,6 +30,8 @@ const DEFAULT_CAPTION = {
   type: 'Sound it out — what does this say?',
   build: 'Build this word from Shavian letters',
   choice: '',
+  transcribe: 'Read the passage, then write it out in English',
+  write: 'Spell it in Shavian on the keyboard below',
 };
 
 // Letters (and the naming dot) available from each lesson on, cumulatively.
@@ -107,11 +109,21 @@ function exToLine(ex) {
       if (ex.correctLabel !== ex.correct) parts.push(`label=${ex.correctLabel}`);
       return parts.join(SEP);
     }
-    case 'type': {
+    case 'type':
+    case 'write': {
       parts.push(ex.prompt);
       joinCap(parts, ex);
       parts.push(`ok=${ex.correct}`);
       if (ex.accept?.length) parts.push(`alt=${ex.accept.join(' | ')}`);
+      if (ex.correctLabel !== ex.correct) parts.push(`label=${ex.correctLabel}`);
+      return parts.join(SEP);
+    }
+    case 'transcribe': {
+      parts.push(ex.passage);
+      joinCap(parts, ex);
+      parts.push(`ok=${ex.correct}`);
+      if (ex.accept?.length) parts.push(`alt=${ex.accept.join(' | ')}`);
+      if (ex.source) parts.push(`src=${ex.source}`);
       if (ex.correctLabel !== ex.correct) parts.push(`label=${ex.correctLabel}`);
       return parts.join(SEP);
     }
@@ -129,6 +141,18 @@ function exToLine(ex) {
       else parts.push(`tiles=${ex.tiles.join(' ')}`, `ans=${ex.answer.join(' ')}`);
       const label = ex.answer.join(ex.type === 'build' ? '' : ' ');
       if (ex.correctLabel !== label) parts.push(`label=${ex.correctLabel}`);
+      return parts.join(SEP);
+    }
+    case 'spot': {
+      parts.push(ex.prompt);
+      joinCap(parts, ex);
+      const toks = [];
+      ex.words.forEach((w, i) => {
+        toks.push(i === ex.correct ? '*' + w : w);
+        if (ex.stops?.includes(i)) toks.push('.');
+      });
+      parts.push(toks.join(' '));
+      if (ex.correctLabel !== ex.words[ex.correct]) parts.push(`label=${ex.correctLabel}`);
       return parts.join(SEP);
     }
     case 'complete':
@@ -163,7 +187,7 @@ function exToLine(ex) {
 
 // ---------------------------------------------------------------- parser
 
-const KEYS = /^(cap|ok|alt|tr|label|tiles|ans|bank|R)=([\s\S]*)$/;
+const KEYS = /^(cap|ok|alt|tr|src|label|tiles|ans|bank|R)=([\s\S]*)$/;
 
 function lineToEx(line) {
   const fields = line.trim().split(SEP);
@@ -193,11 +217,20 @@ function lineToEx(line) {
       return { type, promptIsGlyph, prompt, caption, optionIsGlyph, options,
                correct, correctLabel: kv.label ?? correct };
     }
-    case 'type': {
+    case 'type':
+    case 'write': {
       const ex = { type, prompt: pos[0], caption, correct: kv.ok,
                    correctLabel: kv.label ?? kv.ok };
-      if (!ex.correct) die(`type needs ok=…: ${line}`);
+      if (!ex.correct) die(`${type} needs ok=…: ${line}`);
       if (kv.alt) ex.accept = kv.alt.split(' | ');
+      return ex;
+    }
+    case 'transcribe': {
+      const ex = { type, passage: pos[0], caption, correct: kv.ok,
+                   correctLabel: kv.label ?? kv.ok };
+      if (!ex.correct) die(`transcribe needs ok=…: ${line}`);
+      if (kv.alt) ex.accept = kv.alt.split(' | ');
+      if (kv.src) ex.source = kv.src;
       return ex;
     }
     case 'match': {
@@ -228,6 +261,25 @@ function lineToEx(line) {
       return type === 'build'
         ? { type, prompt: promptField, caption, tiles, answer, correctLabel }
         : { type, promptEn: promptField, tiles, answer, correctLabel };
+    }
+    case 'spot': {
+      const words = [];
+      const stops = [];
+      let correct = -1;
+      for (const t of pos[1].split(' ')) {
+        if (t === '.') stops.push(words.length - 1);
+        else if (t.startsWith('*')) {
+          if (correct !== -1) die(`spot needs exactly one *target: ${line}`);
+          correct = words.length;
+          words.push(t.slice(1));
+        } else words.push(t);
+      }
+      if (correct === -1) die(`spot needs one *target word: ${line}`);
+      const ex = { type, prompt: pos[0], words, correct,
+                   correctLabel: kv.label ?? words[correct] };
+      if (stops.length) ex.stops = stops;
+      if (kv.cap !== undefined) ex.caption = kv.cap;
+      return ex;
     }
     case 'complete':
     case 'fill':
@@ -318,6 +370,12 @@ function checkLesson(lesson, problems) {
       if (!multisetCovers(ex.bank, ex.blanks.map((b) => seq[b]))) flag('bank cannot fill blanks');
       if (ex.correctLabel !== seq.join(ex.type === 'complete' ? '' : ' '))
         flag('correctLabel does not match joined words');
+    }
+    if (ex.type === 'spot') {
+      if (!Number.isInteger(ex.correct) || ex.correct < 0 || ex.correct >= ex.words.length)
+        flag('correct index out of range');
+      else if (ex.correctLabel !== ex.words[ex.correct])
+        flag('correctLabel does not match the target word');
     }
     if (ex.type === 'match') {
       const keys = Object.keys(ex.pairs);

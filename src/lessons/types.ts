@@ -101,6 +101,44 @@ export type ClozeExercise = {
   retry?: boolean;
 };
 
+// Read a Shavian sentence and tap the word that means the English prompt.
+export type SpotExercise = {
+  type: 'spot';
+  prompt: string; // the English word to find in the sentence
+  caption?: string;
+  words: string[]; // the sentence, word by word (tapped in place, never shuffled)
+  stops?: number[]; // word indices a sentence ends on (a period is shown after)
+  correct: number; // index into `words` of the target word
+  correctLabel: string;
+  retry?: boolean;
+};
+
+// Read a real Shavian passage and write out its full English transcription.
+export type TranscribeExercise = {
+  type: 'transcribe';
+  passage: string; // the Shavian text, with its punctuation
+  source?: string; // attribution shown under the passage
+  caption: string;
+  correct: string; // the English transcription
+  // Full-sentence alternates also graded correct (spelling variants like
+  // traveller/traveler). Comparison is case/punctuation/whitespace-insensitive.
+  accept?: string[];
+  correctLabel: string;
+  retry?: boolean;
+};
+
+// Spell an English word in Shavian on the full on-screen Shavian keyboard —
+// no pre-picked tiles, all 48 letters available (plus the naming dot).
+export type WriteExercise = {
+  type: 'write';
+  prompt: string; // the English word to spell
+  caption: string;
+  correct: string; // the Shavian spelling
+  accept?: string[]; // alternate valid spellings
+  correctLabel: string;
+  retry?: boolean;
+};
+
 export type Exercise =
   | TeachExercise
   | ChoiceExercise
@@ -110,7 +148,10 @@ export type Exercise =
   | ArrangeExercise
   | CompleteExercise
   | FillExercise
-  | ClozeExercise;
+  | ClozeExercise
+  | SpotExercise
+  | TranscribeExercise
+  | WriteExercise;
 
 export type LessonFile = LessonMeta & {
   exercises: Exercise[];

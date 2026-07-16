@@ -7,7 +7,7 @@
     {
       "type": "teach",
       "title": "One last story",
-      "body": "Time to read a tiny story, one sentence at a time: [[·𐑕𐑨𐑥 𐑣𐑨𐑟 𐑩 𐑚𐑦𐑜 𐑛𐑪𐑜]]. [[𐑞 𐑛𐑪𐑜 𐑦𐑟 𐑒𐑿𐑑]]. [[𐑞𐑱 𐑮𐑳𐑯 𐑑 𐑞 𐑒𐑸]]."
+      "body": "Time to read a tiny story: {{·𐑕𐑨𐑥 𐑣𐑨𐑟 𐑩 𐑚𐑦𐑜 𐑛𐑪𐑜. 𐑞 𐑛𐑪𐑜 𐑦𐑟 𐑒𐑿𐑑. 𐑞𐑱 𐑮𐑳𐑯 𐑑 𐑞 𐑒𐑸.}} Take it one sentence at a time — there’s no rush."
     },
     {
       "type": "choice",
@@ -126,8 +126,106 @@
     },
     {
       "type": "teach",
+      "title": "The story goes on",
+      "body": "Part two: {{𐑞𐑱 𐑕𐑷 𐑩 𐑚𐑻𐑛 𐑦𐑯 𐑞 𐑐𐑸𐑒. 𐑞 𐑚𐑻𐑛 𐑦𐑟 𐑯𐑽 𐑞 𐑢𐑷𐑑𐑼.}} Read both sentences out loud before moving on."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑞𐑱 𐑕𐑷 𐑩 𐑚𐑻𐑛",
+      "caption": "What does this say?",
+      "optionIsGlyph": false,
+      "options": [
+        "they saw a bird",
+        "they see a bird",
+        "they saw a cat",
+        "she saw a bird"
+      ],
+      "correct": "they saw a bird",
+      "correctLabel": "they saw a bird"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑞 𐑚𐑻𐑛 𐑦𐑟 𐑯𐑽 𐑞 𐑢𐑷𐑑𐑼",
+      "caption": "Type what this says",
+      "correct": "the bird is near the water",
+      "correctLabel": "the bird is near the water"
+    },
+    {
+      "type": "arrange",
+      "promptEn": "the bird is in the park",
+      "tiles": [
+        "𐑞",
+        "𐑚𐑻𐑛",
+        "𐑦𐑟",
+        "𐑦𐑯",
+        "𐑞",
+        "𐑐𐑸𐑒",
+        "𐑢𐑷𐑑𐑼"
+      ],
+      "answer": [
+        "𐑞",
+        "𐑚𐑻𐑛",
+        "𐑦𐑟",
+        "𐑦𐑯",
+        "𐑞",
+        "𐑐𐑸𐑒"
+      ],
+      "correctLabel": "𐑞 𐑚𐑻𐑛 𐑦𐑟 𐑦𐑯 𐑞 𐑐𐑸𐑒"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Where is the bird?",
+      "caption": "",
+      "optionIsGlyph": false,
+      "options": [
+        "near the water",
+        "in the car",
+        "under the chair",
+        "at the door"
+      ],
+      "correct": "near the water",
+      "correctLabel": "near the water"
+    },
+    {
+      "type": "cloze",
+      "blanks": [
+        3,
+        10
+      ],
+      "bank": [
+        "𐑚𐑻𐑛",
+        "𐑯𐑽",
+        "𐑒𐑸"
+      ],
+      "correctLabel": "𐑞𐑱 𐑕𐑷 𐑩 𐑚𐑻𐑛 𐑦𐑯 𐑞 𐑐𐑸𐑒 𐑞 𐑚𐑻𐑛 𐑦𐑟 𐑯𐑽 𐑞 𐑢𐑷𐑑𐑼",
+      "words": [
+        "𐑞𐑱",
+        "𐑕𐑷",
+        "𐑩",
+        "𐑚𐑻𐑛",
+        "𐑦𐑯",
+        "𐑞",
+        "𐑐𐑸𐑒",
+        "𐑞",
+        "𐑚𐑻𐑛",
+        "𐑦𐑟",
+        "𐑯𐑽",
+        "𐑞",
+        "𐑢𐑷𐑑𐑼"
+      ],
+      "stops": [
+        6,
+        12
+      ],
+      "translation": "They saw a bird in the park. The bird is near the water.",
+      "caption": "Read the passage and fill the gaps"
+    },
+    {
+      "type": "teach",
       "title": "You did it",
-      "body": "That's the whole Shavian alphabet, all its r-vowels, the naming dot, and full sentences — read start to finish. Come back any time to review."
+      "body": "That’s the whole Shavian alphabet, all its r-vowels, the naming dot, and full sentences — read start to finish. Chapter 3 takes you out into the wild: real endings, dialogue, and longer stories. Come back any time to review."
     }
   ]
 }

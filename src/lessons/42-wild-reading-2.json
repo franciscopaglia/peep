@@ -1,0 +1,207 @@
+{
+  "id": 42,
+  "title": "Reading in the Wild II",
+  "glyph": "𐑞 𐑧𐑯𐑛",
+  "chapter": 3,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "The last story",
+      "body": "All of Chapter 3 in one tale. Part one: {{·𐑕𐑨𐑥 𐑯 ·𐑥𐑧𐑜 𐑢𐑧𐑯𐑑 𐑑 𐑞 𐑐𐑸𐑒. 𐑞𐑱 𐑕𐑨𐑑 𐑳𐑯𐑛𐑼 𐑩𐑯 𐑴𐑤𐑛 𐑑𐑮𐑰.}}"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Where did Sam and Meg go?",
+      "caption": "",
+      "optionIsGlyph": false,
+      "options": [
+        "to the park",
+        "to the house",
+        "to the garden",
+        "to the moon"
+      ],
+      "correct": "to the park",
+      "correctLabel": "to the park"
+    },
+    {
+      "type": "spot",
+      "prompt": "tree",
+      "words": [
+        "𐑞𐑱",
+        "𐑕𐑨𐑑",
+        "𐑳𐑯𐑛𐑼",
+        "𐑩𐑯",
+        "𐑴𐑤𐑛",
+        "𐑑𐑮𐑰"
+      ],
+      "correct": 5,
+      "correctLabel": "𐑑𐑮𐑰",
+      "stops": [
+        5
+      ]
+    },
+    {
+      "type": "teach",
+      "title": "They talk",
+      "body": "{{“𐑤𐑫𐑒 𐑨𐑑 𐑞 𐑚𐑻𐑛𐑟,” 𐑕𐑧𐑛 ·𐑥𐑧𐑜. “𐑞𐑱 𐑸 𐑕𐑦𐑙𐑦𐑙,” 𐑕𐑧𐑛 ·𐑕𐑨𐑥.}}"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "“𐑤𐑫𐑒 𐑨𐑑 𐑞 𐑚𐑻𐑛𐑟,” 𐑕𐑧𐑛 ·𐑥𐑧𐑜",
+      "caption": "What does this say?",
+      "optionIsGlyph": false,
+      "options": [
+        "“Look at the birds,” said Meg",
+        "“Look at the bird,” said Meg",
+        "“Look at the birds,” said Sam",
+        "“Look at the trees,” said Meg"
+      ],
+      "correct": "“Look at the birds,” said Meg",
+      "correctLabel": "“Look at the birds,” said Meg"
+    },
+    {
+      "type": "spot",
+      "prompt": "singing",
+      "words": [
+        "𐑞𐑱",
+        "𐑸",
+        "𐑕𐑦𐑙𐑦𐑙"
+      ],
+      "correct": 2,
+      "correctLabel": "𐑕𐑦𐑙𐑦𐑙",
+      "stops": [
+        2
+      ]
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Who said the birds are singing?",
+      "caption": "",
+      "optionIsGlyph": false,
+      "options": [
+        "Sam",
+        "Meg",
+        "the birds",
+        "no one"
+      ],
+      "correct": "Sam",
+      "correctLabel": "Sam"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑞𐑱 𐑢𐑧𐑯𐑑 𐑣𐑴𐑥 𐑣𐑨𐑐𐑦",
+      "caption": "Type what this says",
+      "correct": "they went home happy",
+      "correctLabel": "they went home happy"
+    },
+    {
+      "type": "arrange",
+      "promptEn": "they sat under an old tree",
+      "tiles": [
+        "𐑞𐑱",
+        "𐑕𐑨𐑑",
+        "𐑳𐑯𐑛𐑼",
+        "𐑩𐑯",
+        "𐑴𐑤𐑛",
+        "𐑑𐑮𐑰",
+        "𐑣𐑴𐑥"
+      ],
+      "answer": [
+        "𐑞𐑱",
+        "𐑕𐑨𐑑",
+        "𐑳𐑯𐑛𐑼",
+        "𐑩𐑯",
+        "𐑴𐑤𐑛",
+        "𐑑𐑮𐑰"
+      ],
+      "correctLabel": "𐑞𐑱 𐑕𐑨𐑑 𐑳𐑯𐑛𐑼 𐑩𐑯 𐑴𐑤𐑛 𐑑𐑮𐑰"
+    },
+    {
+      "type": "fill",
+      "blanks": [
+        3,
+        6
+      ],
+      "bank": [
+        "𐑢𐑧𐑯𐑑",
+        "𐑐𐑸𐑒",
+        "𐑣𐑴𐑥"
+      ],
+      "correctLabel": "·𐑕𐑨𐑥 𐑯 ·𐑥𐑧𐑜 𐑢𐑧𐑯𐑑 𐑑 𐑞 𐑐𐑸𐑒",
+      "words": [
+        "·𐑕𐑨𐑥",
+        "𐑯",
+        "·𐑥𐑧𐑜",
+        "𐑢𐑧𐑯𐑑",
+        "𐑑",
+        "𐑞",
+        "𐑐𐑸𐑒"
+      ],
+      "promptEn": "Sam and Meg went to the park"
+    },
+    {
+      "type": "spot",
+      "prompt": "home",
+      "words": [
+        "𐑞𐑱",
+        "𐑢𐑧𐑯𐑑",
+        "𐑣𐑴𐑥",
+        "𐑣𐑨𐑐𐑦"
+      ],
+      "correct": 2,
+      "correctLabel": "𐑣𐑴𐑥",
+      "stops": [
+        3
+      ]
+    },
+    {
+      "type": "cloze",
+      "blanks": [
+        6,
+        12,
+        15
+      ],
+      "bank": [
+        "𐑐𐑸𐑒",
+        "·𐑥𐑧𐑜",
+        "𐑣𐑴𐑥",
+        "𐑑𐑮𐑰"
+      ],
+      "correctLabel": "·𐑕𐑨𐑥 𐑯 ·𐑥𐑧𐑜 𐑢𐑧𐑯𐑑 𐑑 𐑞 𐑐𐑸𐑒 “𐑤𐑫𐑒 𐑨𐑑 𐑞 𐑚𐑻𐑛𐑟,” 𐑕𐑧𐑛 ·𐑥𐑧𐑜 𐑞𐑱 𐑢𐑧𐑯𐑑 𐑣𐑴𐑥 𐑣𐑨𐑐𐑦",
+      "words": [
+        "·𐑕𐑨𐑥",
+        "𐑯",
+        "·𐑥𐑧𐑜",
+        "𐑢𐑧𐑯𐑑",
+        "𐑑",
+        "𐑞",
+        "𐑐𐑸𐑒",
+        "“𐑤𐑫𐑒",
+        "𐑨𐑑",
+        "𐑞",
+        "𐑚𐑻𐑛𐑟,”",
+        "𐑕𐑧𐑛",
+        "·𐑥𐑧𐑜",
+        "𐑞𐑱",
+        "𐑢𐑧𐑯𐑑",
+        "𐑣𐑴𐑥",
+        "𐑣𐑨𐑐𐑦"
+      ],
+      "stops": [
+        6,
+        12,
+        16
+      ],
+      "translation": "Sam and Meg went to the park. “Look at the birds,” said Meg. They went home happy.",
+      "caption": "Read the whole story and fill the gaps"
+    },
+    {
+      "type": "teach",
+      "title": "One more thing",
+      "body": "Endings, tricky everyday words, the schwa, dialogue and stories — almost there. So far, every story was written for you. The last lesson hands you a piece of real Shavian reading: a classic fable, to read and write out in full."
+    }
+  ]
+}

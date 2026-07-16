@@ -4,6 +4,7 @@ import {
   gradeableCount,
   lessonPassed,
   emptyAnswer,
+  normalizeTranscription,
   PASS_THRESHOLD,
 } from '@/lib/grading';
 import type {
@@ -14,6 +15,9 @@ import type {
   CompleteExercise,
   FillExercise,
   ClozeExercise,
+  SpotExercise,
+  TranscribeExercise,
+  WriteExercise,
   Exercise,
 } from '@/lessons/types';
 
@@ -79,6 +83,31 @@ const cloze: ClozeExercise = {
   correctLabel: '𐑞 𐑛𐑪𐑜 𐑦𐑟 𐑒𐑿𐑑',
 };
 
+const spot: SpotExercise = {
+  type: 'spot',
+  prompt: 'dog',
+  words: ['𐑞', '𐑛𐑪𐑜', '𐑦𐑟', '𐑒𐑿𐑑'],
+  correct: 1,
+  correctLabel: '𐑛𐑪𐑜',
+};
+
+const transcribe: TranscribeExercise = {
+  type: 'transcribe',
+  passage: '𐑞 𐑯𐑹𐑔 𐑢𐑦𐑯𐑛 𐑯 𐑞 𐑕𐑳𐑯 𐑢𐑻 𐑛𐑦𐑕𐑐𐑿𐑑𐑦𐑙.',
+  caption: '',
+  correct: 'the north wind and the sun were disputing',
+  accept: ['the north wind and the sun were arguing'],
+  correctLabel: 'the north wind and the sun were disputing',
+};
+
+const write: WriteExercise = {
+  type: 'write',
+  prompt: 'cat',
+  caption: '',
+  correct: '𐑒𐑨𐑑',
+  correctLabel: '𐑒𐑨𐑑',
+};
+
 describe('isCorrect', () => {
   it('choice: only the correct option passes', () => {
     expect(isCorrect(choice, { ...emptyAnswer, selected: 'cat' })).toBe(true);
@@ -129,6 +158,41 @@ describe('isCorrect', () => {
   it('cloze: shares the fill logic', () => {
     expect(isCorrect(cloze, { ...emptyAnswer, fillSel: [0, 1] })).toBe(true);
     expect(isCorrect(cloze, { ...emptyAnswer, fillSel: [2, 1] })).toBe(false);
+  });
+
+  it('spot: grades the tapped word by index, not value', () => {
+    expect(isCorrect(spot, { ...emptyAnswer, selected: '1' })).toBe(true);
+    expect(isCorrect(spot, { ...emptyAnswer, selected: '0' })).toBe(false);
+    expect(isCorrect(spot, { ...emptyAnswer, selected: '𐑛𐑪𐑜' })).toBe(false);
+    expect(isCorrect(spot, { ...emptyAnswer, selected: null })).toBe(false);
+  });
+
+  it('transcribe: ignores case, punctuation and extra whitespace', () => {
+    expect(isCorrect(transcribe, { ...emptyAnswer, typedValue: 'the north wind and the sun were disputing' })).toBe(true);
+    expect(isCorrect(transcribe, { ...emptyAnswer, typedValue: 'The North Wind, and the Sun — were disputing!' })).toBe(true);
+    expect(isCorrect(transcribe, { ...emptyAnswer, typedValue: '  the north  wind and the sun\nwere disputing ' })).toBe(true);
+    expect(isCorrect(transcribe, { ...emptyAnswer, typedValue: 'the north wind and the sun were fighting' })).toBe(false);
+    expect(isCorrect(transcribe, { ...emptyAnswer, typedValue: '' })).toBe(false);
+  });
+
+  it('transcribe: accepts full-sentence alternates', () => {
+    expect(isCorrect(transcribe, { ...emptyAnswer, typedValue: 'the north wind and the sun were arguing' })).toBe(true);
+  });
+
+  it('normalizeTranscription: drops apostrophes, spaces out other punctuation', () => {
+    expect(normalizeTranscription("Don't stop!")).toBe('dont stop');
+    expect(normalizeTranscription('“Hello,” said Sam.')).toBe('hello said sam');
+    expect(normalizeTranscription('  a  b\tc ')).toBe('a b c');
+  });
+
+  it('write: the exact Shavian spelling, or a listed alternate', () => {
+    expect(isCorrect(write, { ...emptyAnswer, typedValue: '𐑒𐑨𐑑' })).toBe(true);
+    expect(isCorrect(write, { ...emptyAnswer, typedValue: ' 𐑒𐑨𐑑 ' })).toBe(true);
+    expect(isCorrect(write, { ...emptyAnswer, typedValue: '𐑒𐑨' })).toBe(false);
+    expect(isCorrect(write, { ...emptyAnswer, typedValue: '𐑒𐑪𐑑' })).toBe(false);
+    expect(isCorrect(write, { ...emptyAnswer, typedValue: '' })).toBe(false);
+    const alt: WriteExercise = { ...write, accept: ['𐑒𐑨𐑑𐑑'] };
+    expect(isCorrect(alt, { ...emptyAnswer, typedValue: '𐑒𐑨𐑑𐑑' })).toBe(true);
   });
 
   it('teach and match are never graded here', () => {

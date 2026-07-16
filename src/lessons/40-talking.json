@@ -1,0 +1,191 @@
+{
+  "id": 40,
+  "title": "Talking on the Page",
+  "glyph": "𐑕𐑧𐑛",
+  "chapter": 3,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Dialogue works the same",
+      "body": "Shavian borrows all of English punctuation unchanged — quotes, commas, question marks, full stops. So dialogue reads exactly as you would expect: {{“𐑣𐑧𐑤𐑴,” 𐑕𐑧𐑛 ·𐑕𐑨𐑥.}} That says: “Hello,” said Sam."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "“𐑣𐑧𐑤𐑴,” 𐑕𐑧𐑛 ·𐑕𐑨𐑥",
+      "caption": "What does this say?",
+      "optionIsGlyph": false,
+      "options": [
+        "“Hello,” said Sam",
+        "“Hello,” says Sam",
+        "“Help,” said Sam",
+        "“Hello,” said Meg"
+      ],
+      "correct": "“Hello,” said Sam",
+      "correctLabel": "“Hello,” said Sam"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑘𐑧𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "yes",
+      "correctLabel": "yes"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑯𐑴",
+      "caption": "Sound it out — what does this say?",
+      "correct": "no",
+      "correctLabel": "no",
+      "accept": [
+        "know"
+      ]
+    },
+    {
+      "type": "teach",
+      "title": "Questions",
+      "body": "Question words are old friends by now — 𐑢𐑪𐑑 what, 𐑢𐑺 where, 𐑣𐑵 who — and a question mark does the rest: {{𐑢𐑺 𐑦𐑟 𐑞 𐑛𐑪𐑜?}}"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑺 𐑦𐑟 𐑞 𐑛𐑪𐑜?",
+      "caption": "Type what this asks",
+      "correct": "where is the dog",
+      "correctLabel": "where is the dog",
+      "accept": [
+        "where is the dog?"
+      ]
+    },
+    {
+      "type": "arrange",
+      "promptEn": "she asked who was there",
+      "tiles": [
+        "𐑖𐑰",
+        "𐑭𐑕𐑒𐑑",
+        "𐑣𐑵",
+        "𐑢𐑪𐑟",
+        "𐑞𐑺",
+        "𐑢𐑪𐑑"
+      ],
+      "answer": [
+        "𐑖𐑰",
+        "𐑭𐑕𐑒𐑑",
+        "𐑣𐑵",
+        "𐑢𐑪𐑟",
+        "𐑞𐑺"
+      ],
+      "correctLabel": "𐑖𐑰 𐑭𐑕𐑒𐑑 𐑣𐑵 𐑢𐑪𐑟 𐑞𐑺"
+    },
+    {
+      "type": "spot",
+      "prompt": "said",
+      "words": [
+        "“𐑯𐑴,”",
+        "𐑕𐑧𐑛",
+        "𐑞",
+        "𐑜𐑻𐑤"
+      ],
+      "correct": 1,
+      "correctLabel": "𐑕𐑧𐑛",
+      "stops": [
+        3
+      ]
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "“𐑢𐑪𐑑 𐑦𐑟 𐑞𐑨𐑑?” 𐑭𐑕𐑒𐑑 ·𐑥𐑧𐑜",
+      "caption": "What does this say?",
+      "optionIsGlyph": false,
+      "options": [
+        "“What is that?” asked Meg",
+        "“Who is that?” asked Meg",
+        "“What is this?” asked Meg",
+        "“What is that?” said Meg"
+      ],
+      "correct": "“What is that?” asked Meg",
+      "correctLabel": "“What is that?” asked Meg"
+    },
+    {
+      "type": "teach",
+      "title": "said, says, asked",
+      "body": "Watch the vowels: said 𐑕𐑧𐑛 and says 𐑕𐑧𐑟 both rhyme with bed — English spelling hides that, Shavian doesn’t. asked is 𐑭𐑕𐑒𐑑, with the long 𐑭 of standard British speech. (Accents vary; printed Shavian usually follows one standard voice.)"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑧𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "says",
+      "correctLabel": "says"
+    },
+    {
+      "type": "spot",
+      "prompt": "asked",
+      "words": [
+        "“𐑢𐑺",
+        "𐑦𐑟",
+        "𐑦𐑑?”",
+        "𐑭𐑕𐑒𐑑",
+        "·𐑚𐑧𐑯"
+      ],
+      "correct": 3,
+      "correctLabel": "𐑭𐑕𐑒𐑑",
+      "stops": [
+        4
+      ]
+    },
+    {
+      "type": "cloze",
+      "blanks": [
+        2,
+        7
+      ],
+      "bank": [
+        "·𐑕𐑨𐑥",
+        "𐑐𐑸𐑒",
+        "·𐑥𐑧𐑜"
+      ],
+      "correctLabel": "“𐑣𐑧𐑤𐑴,” 𐑕𐑧𐑛 ·𐑕𐑨𐑥 𐑞𐑱 𐑢𐑧𐑯𐑑 𐑑 𐑞 𐑐𐑸𐑒",
+      "words": [
+        "“𐑣𐑧𐑤𐑴,”",
+        "𐑕𐑧𐑛",
+        "·𐑕𐑨𐑥",
+        "𐑞𐑱",
+        "𐑢𐑧𐑯𐑑",
+        "𐑑",
+        "𐑞",
+        "𐑐𐑸𐑒"
+      ],
+      "stops": [
+        2,
+        7
+      ],
+      "translation": "“Hello,” said Sam. They went to the park.",
+      "caption": "Read the passage and fill the gaps"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑕𐑧𐑛": "said",
+        "𐑕𐑧𐑟": "says",
+        "𐑭𐑕𐑒𐑑": "asked",
+        "𐑘𐑧𐑕": "yes",
+        "𐑯𐑴": "no"
+      },
+      "leftOrder": [
+        "𐑕𐑧𐑛",
+        "𐑕𐑧𐑟",
+        "𐑭𐑕𐑒𐑑",
+        "𐑘𐑧𐑕",
+        "𐑯𐑴"
+      ],
+      "rightOrder": [
+        "says",
+        "asked",
+        "no",
+        "yes",
+        "said"
+      ]
+    }
+  ]
+}

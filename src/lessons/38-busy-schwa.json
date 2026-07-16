@@ -1,0 +1,174 @@
+{
+  "id": 38,
+  "title": "The Busy Schwa",
+  "glyph": "𐑩",
+  "chapter": 3,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "The busiest vowel",
+      "body": "𐑩 — the tiny “uh” of unstressed syllables — is the most common vowel sound in spoken English. You met it as the word a; now watch it fill whole words: about is 𐑩𐑚𐑬𐑑, again is 𐑩𐑜𐑧𐑯."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑩𐑚𐑬𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "about",
+      "correctLabel": "about"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑩𐑜𐑧𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "again",
+      "correctLabel": "again"
+    },
+    {
+      "type": "build",
+      "prompt": "away",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑩",
+        "𐑢",
+        "𐑱",
+        "𐑨"
+      ],
+      "answer": [
+        "𐑩",
+        "𐑢",
+        "𐑱"
+      ],
+      "correctLabel": "𐑩𐑢𐑱"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑕𐑴𐑓𐑩",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "sofa",
+        "soap",
+        "safe",
+        "softer"
+      ],
+      "correct": "sofa",
+      "correctLabel": "sofa"
+    },
+    {
+      "type": "teach",
+      "title": "Stress decides",
+      "body": "English squeezes the vowels it doesn’t stress. Say “banana” — only the middle a keeps its full sound: 𐑚𐑩𐑯𐑭𐑯𐑩. Shavian spells the squeeze honestly, which is why so many words are full of 𐑩 no matter how English letters them."
+    },
+    {
+      "type": "build",
+      "prompt": "banana",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑚",
+        "𐑩",
+        "𐑯",
+        "𐑭",
+        "𐑯",
+        "𐑩",
+        "𐑨"
+      ],
+      "answer": [
+        "𐑚",
+        "𐑩",
+        "𐑯",
+        "𐑭",
+        "𐑯",
+        "𐑩"
+      ],
+      "correctLabel": "𐑚𐑩𐑯𐑭𐑯𐑩"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑩𐑜𐑴",
+      "caption": "Sound it out — what does this say?",
+      "correct": "ago",
+      "correctLabel": "ago"
+    },
+    {
+      "type": "spot",
+      "prompt": "about",
+      "words": [
+        "𐑞",
+        "𐑚𐑫𐑒",
+        "𐑦𐑟",
+        "𐑩𐑚𐑬𐑑",
+        "𐑩",
+        "𐑛𐑪𐑜"
+      ],
+      "correct": 3,
+      "correctLabel": "𐑩𐑚𐑬𐑑",
+      "stops": [
+        5
+      ]
+    },
+    {
+      "type": "teach",
+      "title": "Rush past it",
+      "body": "When you see 𐑩, don’t overthink it — it’s the sound you make when you barely say anything at all. Skim over it exactly as you do in speech, and words like 𐑩𐑚𐑬𐑑 and 𐑤𐑦𐑑𐑩𐑤 (little) snap into place."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑤𐑦𐑑𐑩𐑤",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "little",
+        "letter",
+        "light",
+        "late"
+      ],
+      "correct": "little",
+      "correctLabel": "little"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑴𐑐𐑩𐑯𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "opened",
+      "correctLabel": "opened"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which spells “again”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑩𐑜𐑧𐑯",
+        "𐑨𐑜𐑧𐑯",
+        "𐑧𐑜𐑧𐑯",
+        "𐑩𐑜𐑦𐑯"
+      ],
+      "correct": "𐑩𐑜𐑧𐑯",
+      "correctLabel": "𐑩𐑜𐑧𐑯"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑩𐑚𐑬𐑑": "about",
+        "𐑩𐑜𐑴": "ago",
+        "𐑕𐑴𐑓𐑩": "sofa",
+        "𐑩𐑢𐑱": "away"
+      },
+      "leftOrder": [
+        "𐑩𐑚𐑬𐑑",
+        "𐑩𐑜𐑴",
+        "𐑕𐑴𐑓𐑩",
+        "𐑩𐑢𐑱"
+      ],
+      "rightOrder": [
+        "ago",
+        "away",
+        "about",
+        "sofa"
+      ]
+    }
+  ]
+}

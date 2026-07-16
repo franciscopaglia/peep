@@ -1,0 +1,193 @@
+{
+  "id": 36,
+  "title": "Endings: S & ING",
+  "glyph": "𐑦𐑙",
+  "chapter": 3,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Welcome to Chapter 3",
+      "body": "You can read every letter and build simple sentences. This chapter is about real Shavian text — the endings, everyday words and dialogue that fill actual pages. Everything is still spelled by sound; you just haven’t met all its habits yet."
+    },
+    {
+      "type": "teach",
+      "title": "Plurals follow your voice",
+      "body": "Say “cats”, then “dogs”. The s buzzes in dogs but not in cats — so Shavian writes cats 𐑒𐑨𐑑𐑕 and dogs 𐑛𐑪𐑜𐑟. There is no one-size “-s” to memorize: write the sound you actually make."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑒𐑨𐑑𐑕",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "cats",
+        "cat",
+        "chats",
+        "costs"
+      ],
+      "correct": "cats",
+      "correctLabel": "cats"
+    },
+    {
+      "type": "build",
+      "prompt": "dogs",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑛",
+        "𐑪",
+        "𐑜",
+        "𐑟",
+        "𐑕"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑪",
+        "𐑜",
+        "𐑟"
+      ],
+      "correctLabel": "𐑛𐑪𐑜𐑟"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which spells “cups”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑒𐑳𐑐𐑕",
+        "𐑒𐑳𐑐𐑟",
+        "𐑒𐑫𐑐𐑕",
+        "𐑒𐑳𐑚𐑕"
+      ],
+      "correct": "𐑒𐑳𐑐𐑕",
+      "correctLabel": "𐑒𐑳𐑐𐑕"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which spells “birds”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑚𐑻𐑛𐑟",
+        "𐑚𐑻𐑛𐑕",
+        "𐑚𐑽𐑛𐑟",
+        "𐑚𐑻𐑑𐑟"
+      ],
+      "correct": "𐑚𐑻𐑛𐑟",
+      "correctLabel": "𐑚𐑻𐑛𐑟"
+    },
+    {
+      "type": "teach",
+      "title": "An extra beat: 𐑩𐑟",
+      "body": "After a hissy sound — s, z, sh, ch, j — you can’t just stack on another hiss. English slips in a tiny vowel, and Shavian writes it: boxes is 𐑚𐑪𐑒𐑕𐑩𐑟, wishes is 𐑢𐑦𐑖𐑩𐑟."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑪𐑒𐑕𐑩𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "boxes",
+      "correctLabel": "boxes"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑦𐑖𐑩𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "wishes",
+      "correctLabel": "wishes"
+    },
+    {
+      "type": "teach",
+      "title": "-ing is always 𐑦𐑙",
+      "body": "The “-ing” ending never changes: running is 𐑮𐑳𐑯𐑦𐑙, reading is 𐑮𐑰𐑛𐑦𐑙, morning is 𐑥𐑹𐑯𐑦𐑙. Two letters, every time."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑳𐑯𐑦𐑙",
+      "caption": "Sound it out — what does this say?",
+      "correct": "running",
+      "correctLabel": "running"
+    },
+    {
+      "type": "build",
+      "prompt": "reading",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑮",
+        "𐑰",
+        "𐑛",
+        "𐑦",
+        "𐑙",
+        "𐑯"
+      ],
+      "answer": [
+        "𐑮",
+        "𐑰",
+        "𐑛",
+        "𐑦",
+        "𐑙"
+      ],
+      "correctLabel": "𐑮𐑰𐑛𐑦𐑙"
+    },
+    {
+      "type": "teach",
+      "title": "New: spot the word",
+      "body": "From now on you’ll sometimes get a whole Shavian sentence and one word to find in it. Read the sentence, then tap the word that matches. That’s reading in the wild — scanning real text for meaning."
+    },
+    {
+      "type": "spot",
+      "prompt": "singing",
+      "words": [
+        "𐑞",
+        "𐑜𐑻𐑤",
+        "𐑦𐑟",
+        "𐑕𐑦𐑙𐑦𐑙"
+      ],
+      "correct": 3,
+      "correctLabel": "𐑕𐑦𐑙𐑦𐑙",
+      "stops": [
+        3
+      ]
+    },
+    {
+      "type": "spot",
+      "prompt": "dogs",
+      "words": [
+        "𐑞",
+        "𐑛𐑪𐑜𐑟",
+        "𐑸",
+        "𐑮𐑳𐑯𐑦𐑙",
+        "𐑦𐑯",
+        "𐑞",
+        "𐑐𐑸𐑒"
+      ],
+      "correct": 1,
+      "correctLabel": "𐑛𐑪𐑜𐑟",
+      "stops": [
+        6
+      ]
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑒𐑨𐑑𐑕": "cats",
+        "𐑛𐑪𐑜𐑟": "dogs",
+        "𐑮𐑳𐑯𐑦𐑙": "running",
+        "𐑚𐑪𐑒𐑕𐑩𐑟": "boxes"
+      },
+      "leftOrder": [
+        "𐑒𐑨𐑑𐑕",
+        "𐑛𐑪𐑜𐑟",
+        "𐑮𐑳𐑯𐑦𐑙",
+        "𐑚𐑪𐑒𐑕𐑩𐑟"
+      ],
+      "rightOrder": [
+        "dogs",
+        "running",
+        "boxes",
+        "cats"
+      ]
+    }
+  ]
+}

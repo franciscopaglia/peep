@@ -1,0 +1,183 @@
+{
+  "id": 39,
+  "title": "Old Friends, New Faces",
+  "glyph": "𐑢𐑳𐑯",
+  "chapter": 3,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Spelled as spoken",
+      "body": "Some everyday words look strange at first, because English spelling has been fibbing about them for centuries. was is 𐑢𐑪𐑟 — say it, that really is a z. said is 𐑕𐑧𐑛, rhyming with bed. And one starts with a w sound: 𐑢𐑳𐑯."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑪𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "was",
+      "correctLabel": "was"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑧𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "said",
+      "correctLabel": "said"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑳𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "one",
+      "correctLabel": "one",
+      "accept": [
+        "won"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑳𐑯𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "once",
+      "correctLabel": "once"
+    },
+    {
+      "type": "teach",
+      "title": "Silent letters vanish",
+      "body": "have, come and some all end in a silent e that Shavian simply drops: 𐑣𐑨𐑝, 𐑒𐑳𐑥, 𐑕𐑳𐑥. And what and who write the sounds you actually say: 𐑢𐑪𐑑, 𐑣𐑵."
+    },
+    {
+      "type": "build",
+      "prompt": "come",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑳",
+        "𐑥",
+        "𐑴"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑳",
+        "𐑥"
+      ],
+      "correctLabel": "𐑒𐑳𐑥"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑨𐑝",
+      "caption": "Sound it out — what does this say?",
+      "correct": "have",
+      "correctLabel": "have"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑢𐑪𐑑",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "what",
+        "want",
+        "wait",
+        "wet"
+      ],
+      "correct": "what",
+      "correctLabel": "what"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑵",
+      "caption": "Sound it out — what does this say?",
+      "correct": "who",
+      "correctLabel": "who"
+    },
+    {
+      "type": "teach",
+      "title": "you, your and I",
+      "body": "The most personal words are the shortest: you is just 𐑿, I is just 𐑲, and your is 𐑘𐑹. Once these are automatic, whole sentences start reading themselves."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑘𐑹",
+      "caption": "Sound it out — what does this say?",
+      "correct": "your",
+      "correctLabel": "your",
+      "accept": [
+        "yore"
+      ]
+    },
+    {
+      "type": "spot",
+      "prompt": "was",
+      "words": [
+        "𐑞",
+        "𐑛𐑪𐑜",
+        "𐑢𐑪𐑟",
+        "𐑦𐑯",
+        "𐑞",
+        "𐑒𐑸"
+      ],
+      "correct": 2,
+      "correctLabel": "𐑢𐑪𐑟",
+      "stops": [
+        5
+      ]
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which spells “does”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑛𐑳𐑟",
+        "𐑛𐑧𐑟",
+        "𐑛𐑪𐑕",
+        "𐑛𐑵𐑟"
+      ],
+      "correct": "𐑛𐑳𐑟",
+      "correctLabel": "𐑛𐑳𐑟"
+    },
+    {
+      "type": "spot",
+      "prompt": "once",
+      "words": [
+        "𐑢𐑳𐑯𐑕",
+        "𐑞𐑱",
+        "𐑣𐑨𐑛",
+        "𐑩",
+        "𐑤𐑦𐑑𐑩𐑤",
+        "𐑛𐑪𐑜"
+      ],
+      "correct": 0,
+      "correctLabel": "𐑢𐑳𐑯𐑕",
+      "stops": [
+        5
+      ]
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑢𐑪𐑟": "was",
+        "𐑕𐑧𐑛": "said",
+        "𐑣𐑵": "who",
+        "𐑢𐑳𐑯": "one",
+        "𐑒𐑳𐑥": "come"
+      },
+      "leftOrder": [
+        "𐑢𐑪𐑟",
+        "𐑕𐑧𐑛",
+        "𐑣𐑵",
+        "𐑢𐑳𐑯",
+        "𐑒𐑳𐑥"
+      ],
+      "rightOrder": [
+        "said",
+        "one",
+        "come",
+        "was",
+        "who"
+      ]
+    }
+  ]
+}

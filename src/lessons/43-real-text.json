@@ -1,0 +1,137 @@
+{
+  "id": 43,
+  "title": "A Real Text",
+  "glyph": "𐑯𐑹𐑔",
+  "chapter": 3,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Reading the real thing",
+      "body": "Time to read like a Shavian reader: a whole passage on one side, and you writing out the English on the other. The text is “The North Wind and the Sun” — the Aesop fable that linguists have used for over a century to show off writing systems. Small slips of case or punctuation are fine; just write what it says."
+    },
+    {
+      "type": "transcribe",
+      "passage": "𐑞 𐑯𐑹𐑔 𐑢𐑦𐑯𐑛 𐑯 𐑞 𐑕𐑳𐑯 𐑢𐑻 𐑛𐑦𐑕𐑐𐑿𐑑𐑦𐑙 𐑢𐑦𐑗 𐑢𐑪𐑟 𐑞 𐑕𐑑𐑮𐑪𐑙𐑜𐑼.",
+      "caption": "Read the passage, then write it out in English",
+      "correct": "the north wind and the sun were disputing which was the stronger",
+      "correctLabel": "the north wind and the sun were disputing which was the stronger",
+      "source": "Aesop, “The North Wind and the Sun”"
+    },
+    {
+      "type": "transcribe",
+      "passage": "𐑢𐑧𐑯 𐑩 𐑑𐑮𐑨𐑝𐑩𐑤𐑼 𐑒𐑱𐑥 𐑩𐑤𐑪𐑙 𐑮𐑨𐑐𐑑 𐑦𐑯 𐑩 𐑢𐑹𐑥 𐑒𐑤𐑴𐑒.",
+      "caption": "Read the passage, then write it out in English",
+      "correct": "when a traveller came along wrapped in a warm cloak",
+      "correctLabel": "when a traveller came along wrapped in a warm cloak",
+      "accept": [
+        "when a traveler came along wrapped in a warm cloak"
+      ],
+      "source": "Aesop, “The North Wind and the Sun”"
+    },
+    {
+      "type": "teach",
+      "title": "The wager",
+      "body": "They agree on a test: {{𐑞 𐑢𐑳𐑯 𐑣𐑵 𐑓𐑻𐑕𐑑 𐑕𐑩𐑒𐑕𐑰𐑛𐑩𐑛 𐑦𐑯 𐑥𐑱𐑒𐑦𐑙 𐑞 𐑑𐑮𐑨𐑝𐑩𐑤𐑼 𐑑𐑱𐑒 𐑣𐑦𐑟 𐑒𐑤𐑴𐑒 𐑪𐑓 𐑖𐑫𐑛 𐑚𐑰 𐑒𐑩𐑯𐑕𐑦𐑛𐑼𐑛 𐑕𐑑𐑮𐑪𐑙𐑜𐑼 𐑞𐑨𐑯 𐑞 𐑳𐑞𐑼.}} Whoever first makes the traveller take his cloak off should be considered stronger than the other."
+    },
+    {
+      "type": "transcribe",
+      "passage": "𐑞𐑧𐑯 𐑞 𐑯𐑹𐑔 𐑢𐑦𐑯𐑛 𐑚𐑤𐑵 𐑨𐑟 𐑣𐑸𐑛 𐑨𐑟 𐑣𐑰 𐑒𐑫𐑛.",
+      "caption": "Read the passage, then write it out in English",
+      "correct": "then the north wind blew as hard as he could",
+      "correctLabel": "then the north wind blew as hard as he could",
+      "source": "Aesop, “The North Wind and the Sun”"
+    },
+    {
+      "type": "transcribe",
+      "passage": "𐑚𐑳𐑑 𐑞 𐑥𐑹 𐑣𐑰 𐑚𐑤𐑵, 𐑞 𐑥𐑹 𐑒𐑤𐑴𐑕𐑤𐑦 𐑛𐑦𐑛 𐑞 𐑑𐑮𐑨𐑝𐑩𐑤𐑼 𐑓𐑴𐑤𐑛 𐑣𐑦𐑟 𐑒𐑤𐑴𐑒 𐑼𐑬𐑯𐑛 𐑣𐑦𐑥.",
+      "caption": "Read the passage, then write it out in English",
+      "correct": "but the more he blew the more closely did the traveller fold his cloak around him",
+      "correctLabel": "but the more he blew the more closely did the traveller fold his cloak around him",
+      "accept": [
+        "but the more he blew the more closely did the traveler fold his cloak around him"
+      ],
+      "source": "Aesop, “The North Wind and the Sun”"
+    },
+    {
+      "type": "transcribe",
+      "passage": "𐑯 𐑨𐑑 𐑤𐑭𐑕𐑑 𐑞 𐑯𐑹𐑔 𐑢𐑦𐑯𐑛 𐑜𐑱𐑝 𐑳𐑐 𐑞 𐑩𐑑𐑧𐑥𐑐𐑑.",
+      "caption": "Read the passage, then write it out in English",
+      "correct": "and at last the north wind gave up the attempt",
+      "correctLabel": "and at last the north wind gave up the attempt",
+      "source": "Aesop, “The North Wind and the Sun”"
+    },
+    {
+      "type": "teach",
+      "title": "Now the sun",
+      "body": "The wind has failed. Watch how little the sun has to do — and keep writing."
+    },
+    {
+      "type": "transcribe",
+      "passage": "𐑞𐑧𐑯 𐑞 𐑕𐑳𐑯 𐑖𐑪𐑯 𐑬𐑑 𐑢𐑹𐑥𐑤𐑦, 𐑯 𐑦𐑥𐑰𐑛𐑾𐑑𐑤𐑦 𐑞 𐑑𐑮𐑨𐑝𐑩𐑤𐑼 𐑑𐑫𐑒 𐑪𐑓 𐑣𐑦𐑟 𐑒𐑤𐑴𐑒.",
+      "caption": "Read the passage, then write it out in English",
+      "correct": "then the sun shone out warmly and immediately the traveller took off his cloak",
+      "correctLabel": "then the sun shone out warmly and immediately the traveller took off his cloak",
+      "accept": [
+        "then the sun shone out warmly and immediately the traveler took off his cloak",
+        "then the sun shined out warmly and immediately the traveller took off his cloak",
+        "then the sun shined out warmly and immediately the traveler took off his cloak"
+      ],
+      "source": "Aesop, “The North Wind and the Sun”"
+    },
+    {
+      "type": "transcribe",
+      "passage": "𐑯 𐑕𐑴 𐑞 𐑯𐑹𐑔 𐑢𐑦𐑯𐑛 𐑢𐑪𐑟 𐑩𐑚𐑤𐑲𐑡𐑛 𐑑 𐑒𐑩𐑯𐑓𐑧𐑕 𐑞𐑨𐑑 𐑞 𐑕𐑳𐑯 𐑢𐑪𐑟 𐑞 𐑕𐑑𐑮𐑪𐑙𐑜𐑼 𐑝 𐑞 𐑑𐑵.",
+      "caption": "Read the passage, then write it out in English",
+      "correct": "and so the north wind was obliged to confess that the sun was the stronger of the two",
+      "correctLabel": "and so the north wind was obliged to confess that the sun was the stronger of the two",
+      "source": "Aesop, “The North Wind and the Sun”"
+    },
+    {
+      "type": "spot",
+      "prompt": "cloak",
+      "words": [
+        "𐑞𐑱",
+        "𐑩𐑜𐑮𐑰𐑛",
+        "𐑞𐑨𐑑",
+        "𐑞",
+        "𐑢𐑳𐑯",
+        "𐑣𐑵",
+        "𐑓𐑻𐑕𐑑",
+        "𐑕𐑩𐑒𐑕𐑰𐑛𐑩𐑛",
+        "𐑦𐑯",
+        "𐑥𐑱𐑒𐑦𐑙",
+        "𐑞",
+        "𐑑𐑮𐑨𐑝𐑩𐑤𐑼",
+        "𐑑𐑱𐑒",
+        "𐑣𐑦𐑟",
+        "𐑒𐑤𐑴𐑒",
+        "𐑪𐑓"
+      ],
+      "correct": 14,
+      "correctLabel": "𐑒𐑤𐑴𐑒",
+      "stops": [
+        15
+      ]
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "In the fable, who turned out to be the stronger?",
+      "caption": "",
+      "optionIsGlyph": false,
+      "options": [
+        "the sun",
+        "the north wind",
+        "the traveller",
+        "neither"
+      ],
+      "correct": "the sun",
+      "correctLabel": "the sun"
+    },
+    {
+      "type": "teach",
+      "title": "You read a real text",
+      "body": "That was a genuine piece of literature, read straight from Shavian and written out in your own hand — the full journey of Chapter 3. Chapter 4 will turn it around and teach you to write Shavian yourself. Until then, the Resources page has whole books ready for you."
+    }
+  ]
+}

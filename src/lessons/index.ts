@@ -27,20 +27,8 @@ export type Chapter = {
 export const CHAPTERS: Chapter[] = [
   { id: 1, title: 'Chapter 1', subtitle: 'The Alphabet' },
   { id: 2, title: 'Chapter 2', subtitle: 'Reading Fluency' },
-  {
-    id: 3,
-    title: 'Chapter 3',
-    subtitle: 'Reading in the Wild',
-    comingSoon: true,
-    blurb: 'Longer passages and dialogue, plus the ligatures and shorthand words that make real Shavian text tick.',
-  },
-  {
-    id: 4,
-    title: 'Chapter 4',
-    subtitle: 'Writing Shavian',
-    comingSoon: true,
-    blurb: 'Turn it around — spell English in Shavian, with the rules that writing needs.',
-  },
+  { id: 3, title: 'Chapter 3', subtitle: 'Reading in the Wild' },
+  { id: 4, title: 'Chapter 4', subtitle: 'Writing Shavian' },
   {
     id: 5,
     title: 'Chapter 5',

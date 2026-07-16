@@ -1,0 +1,217 @@
+{
+  "id": 41,
+  "title": "Reading in the Wild I",
+  "glyph": "𐑥𐑵𐑯",
+  "chapter": 3,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "A longer story",
+      "body": "This one comes in two parts. Part one: {{·𐑥𐑧𐑜 𐑣𐑨𐑟 𐑩 𐑤𐑦𐑑𐑩𐑤 𐑛𐑪𐑜. 𐑢𐑳𐑯 𐑯𐑲𐑑 𐑞 𐑛𐑪𐑜 𐑢𐑪𐑟 𐑯𐑪𐑑 𐑦𐑯 𐑞 𐑣𐑬𐑕.}} Read it out loud — twice if it helps."
+    },
+    {
+      "type": "spot",
+      "prompt": "little",
+      "words": [
+        "·𐑥𐑧𐑜",
+        "𐑣𐑨𐑟",
+        "𐑩",
+        "𐑤𐑦𐑑𐑩𐑤",
+        "𐑛𐑪𐑜"
+      ],
+      "correct": 3,
+      "correctLabel": "𐑤𐑦𐑑𐑩𐑤",
+      "stops": [
+        4
+      ]
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "When was the dog missing?",
+      "caption": "",
+      "optionIsGlyph": false,
+      "options": [
+        "at night",
+        "in the morning",
+        "at dinner",
+        "in the summer"
+      ],
+      "correct": "at night",
+      "correctLabel": "at night"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑞 𐑛𐑪𐑜 𐑢𐑪𐑟 𐑯𐑪𐑑 𐑦𐑯 𐑞 𐑣𐑬𐑕",
+      "caption": "Type what this says",
+      "correct": "the dog was not in the house",
+      "correctLabel": "the dog was not in the house"
+    },
+    {
+      "type": "teach",
+      "title": "Part two",
+      "body": "{{𐑖𐑰 𐑤𐑫𐑒𐑑 𐑳𐑯𐑛𐑼 𐑞 𐑕𐑴𐑓𐑩. 𐑖𐑰 𐑤𐑫𐑒𐑑 𐑦𐑯 𐑞 𐑜𐑸𐑛𐑩𐑯. 𐑞𐑧𐑯 𐑖𐑰 𐑣𐑻𐑛 𐑦𐑑 — 𐑞 𐑛𐑪𐑜 𐑢𐑪𐑟 𐑚𐑸𐑒𐑦𐑙 𐑨𐑑 𐑞 𐑥𐑵𐑯.}}"
+    },
+    {
+      "type": "spot",
+      "prompt": "garden",
+      "words": [
+        "𐑖𐑰",
+        "𐑤𐑫𐑒𐑑",
+        "𐑦𐑯",
+        "𐑞",
+        "𐑜𐑸𐑛𐑩𐑯"
+      ],
+      "correct": 4,
+      "correctLabel": "𐑜𐑸𐑛𐑩𐑯",
+      "stops": [
+        4
+      ]
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Where did Meg look first?",
+      "caption": "",
+      "optionIsGlyph": false,
+      "options": [
+        "under the sofa",
+        "in the garden",
+        "at the moon",
+        "in the car"
+      ],
+      "correct": "under the sofa",
+      "correctLabel": "under the sofa"
+    },
+    {
+      "type": "spot",
+      "prompt": "heard",
+      "words": [
+        "𐑞𐑧𐑯",
+        "𐑖𐑰",
+        "𐑣𐑻𐑛",
+        "𐑦𐑑"
+      ],
+      "correct": 2,
+      "correctLabel": "𐑣𐑻𐑛",
+      "stops": [
+        3
+      ]
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "What was the dog doing?",
+      "caption": "",
+      "optionIsGlyph": false,
+      "options": [
+        "barking at the moon",
+        "running to the park",
+        "looking at the sofa",
+        "singing to the moon"
+      ],
+      "correct": "barking at the moon",
+      "correctLabel": "barking at the moon"
+    },
+    {
+      "type": "arrange",
+      "promptEn": "the dog was barking",
+      "tiles": [
+        "𐑞",
+        "𐑛𐑪𐑜",
+        "𐑢𐑪𐑟",
+        "𐑚𐑸𐑒𐑦𐑙",
+        "𐑤𐑫𐑒𐑦𐑙"
+      ],
+      "answer": [
+        "𐑞",
+        "𐑛𐑪𐑜",
+        "𐑢𐑪𐑟",
+        "𐑚𐑸𐑒𐑦𐑙"
+      ],
+      "correctLabel": "𐑞 𐑛𐑪𐑜 𐑢𐑪𐑟 𐑚𐑸𐑒𐑦𐑙"
+    },
+    {
+      "type": "cloze",
+      "blanks": [
+        3,
+        6,
+        13
+      ],
+      "bank": [
+        "𐑤𐑦𐑑𐑩𐑤",
+        "𐑯𐑲𐑑",
+        "𐑣𐑬𐑕",
+        "𐑥𐑵𐑯"
+      ],
+      "correctLabel": "·𐑥𐑧𐑜 𐑣𐑨𐑟 𐑩 𐑤𐑦𐑑𐑩𐑤 𐑛𐑪𐑜 𐑢𐑳𐑯 𐑯𐑲𐑑 𐑞 𐑛𐑪𐑜 𐑢𐑪𐑟 𐑯𐑪𐑑 𐑦𐑯 𐑞 𐑣𐑬𐑕",
+      "words": [
+        "·𐑥𐑧𐑜",
+        "𐑣𐑨𐑟",
+        "𐑩",
+        "𐑤𐑦𐑑𐑩𐑤",
+        "𐑛𐑪𐑜",
+        "𐑢𐑳𐑯",
+        "𐑯𐑲𐑑",
+        "𐑞",
+        "𐑛𐑪𐑜",
+        "𐑢𐑪𐑟",
+        "𐑯𐑪𐑑",
+        "𐑦𐑯",
+        "𐑞",
+        "𐑣𐑬𐑕"
+      ],
+      "stops": [
+        4,
+        13
+      ],
+      "translation": "Meg has a little dog. One night the dog was not in the house.",
+      "caption": "Read part one and fill the gaps"
+    },
+    {
+      "type": "cloze",
+      "blanks": [
+        4,
+        12,
+        15
+      ],
+      "bank": [
+        "𐑕𐑴𐑓𐑩",
+        "𐑚𐑸𐑒𐑦𐑙",
+        "𐑥𐑵𐑯",
+        "𐑣𐑬𐑕"
+      ],
+      "correctLabel": "𐑖𐑰 𐑤𐑫𐑒𐑑 𐑳𐑯𐑛𐑼 𐑞 𐑕𐑴𐑓𐑩 𐑞𐑧𐑯 𐑖𐑰 𐑣𐑻𐑛 𐑦𐑑 𐑞 𐑛𐑪𐑜 𐑢𐑪𐑟 𐑚𐑸𐑒𐑦𐑙 𐑨𐑑 𐑞 𐑥𐑵𐑯",
+      "words": [
+        "𐑖𐑰",
+        "𐑤𐑫𐑒𐑑",
+        "𐑳𐑯𐑛𐑼",
+        "𐑞",
+        "𐑕𐑴𐑓𐑩",
+        "𐑞𐑧𐑯",
+        "𐑖𐑰",
+        "𐑣𐑻𐑛",
+        "𐑦𐑑",
+        "𐑞",
+        "𐑛𐑪𐑜",
+        "𐑢𐑪𐑟",
+        "𐑚𐑸𐑒𐑦𐑙",
+        "𐑨𐑑",
+        "𐑞",
+        "𐑥𐑵𐑯"
+      ],
+      "stops": [
+        4,
+        8,
+        15
+      ],
+      "translation": "She looked under the sofa. Then she heard it. The dog was barking at the moon.",
+      "caption": "Read part two and fill the gaps"
+    },
+    {
+      "type": "teach",
+      "title": "Found!",
+      "body": "{{𐑞 𐑛𐑪𐑜 𐑢𐑪𐑟 𐑣𐑨𐑐𐑦 𐑑 𐑕𐑰 𐑣𐑻.}} The dog was happy to see her. And you just read a whole story with endings, sight words and the schwa, all in the wild. One lesson to go."
+    }
+  ]
+}

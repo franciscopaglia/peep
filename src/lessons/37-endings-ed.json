@@ -1,0 +1,179 @@
+{
+  "id": 37,
+  "title": "Endings: ED",
+  "glyph": "𐑩𐑛",
+  "chapter": 3,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Three faces of -ed",
+      "body": "English spells the past tense “-ed”, but says it three different ways — and Shavian writes what you say. First: say “jumped”. Hear the t at the end? So it’s written 𐑑: 𐑡𐑳𐑥𐑐𐑑."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑡𐑳𐑥𐑐𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "jumped",
+      "correctLabel": "jumped"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑒𐑦𐑒𐑑",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "kicked",
+        "kicks",
+        "kitted",
+        "ticket"
+      ],
+      "correct": "kicked",
+      "correctLabel": "kicked"
+    },
+    {
+      "type": "build",
+      "prompt": "looked",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑤",
+        "𐑫",
+        "𐑒",
+        "𐑑",
+        "𐑛"
+      ],
+      "answer": [
+        "𐑤",
+        "𐑫",
+        "𐑒",
+        "𐑑"
+      ],
+      "correctLabel": "𐑤𐑫𐑒𐑑"
+    },
+    {
+      "type": "teach",
+      "title": "The buzzing -ed",
+      "body": "After a buzzy, voiced sound the ending buzzes too: played is 𐑐𐑤𐑱𐑛, called is 𐑒𐑷𐑤𐑛. Your throat decides for you — try saying “playt” without whispering. You can’t."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑤𐑱𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "played",
+      "correctLabel": "played"
+    },
+    {
+      "type": "build",
+      "prompt": "called",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑷",
+        "𐑤",
+        "𐑛",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑷",
+        "𐑤",
+        "𐑛"
+      ],
+      "correctLabel": "𐑒𐑷𐑤𐑛"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which spells “stopped”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑕𐑑𐑪𐑐𐑑",
+        "𐑕𐑑𐑪𐑐𐑛",
+        "𐑕𐑑𐑪𐑐𐑩𐑛",
+        "𐑕𐑑𐑪𐑐"
+      ],
+      "correct": "𐑕𐑑𐑪𐑐𐑑",
+      "correctLabel": "𐑕𐑑𐑪𐑐𐑑"
+    },
+    {
+      "type": "teach",
+      "title": "The extra-syllable -ed",
+      "body": "After a t or d sound you hear a whole extra beat: wanted is 𐑢𐑪𐑯𐑑𐑩𐑛, needed is 𐑯𐑰𐑛𐑩𐑛. If you can count the extra syllable, write 𐑩𐑛."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑪𐑯𐑑𐑩𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "wanted",
+      "correctLabel": "wanted"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑯𐑰𐑛𐑩𐑛",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "needed",
+        "needled",
+        "nodded",
+        "knotted"
+      ],
+      "correct": "needed",
+      "correctLabel": "needed"
+    },
+    {
+      "type": "spot",
+      "prompt": "waited",
+      "words": [
+        "𐑞𐑱",
+        "𐑢𐑱𐑑𐑩𐑛",
+        "𐑓",
+        "𐑞",
+        "𐑚𐑻𐑛𐑟"
+      ],
+      "correct": 1,
+      "correctLabel": "𐑢𐑱𐑑𐑩𐑛",
+      "stops": [
+        4
+      ]
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "How does the “-ed” in 𐑐𐑤𐑱𐑛 (played) sound?",
+      "caption": "",
+      "optionIsGlyph": false,
+      "options": [
+        "like a d",
+        "like a t",
+        "like a full syllable",
+        "it is silent"
+      ],
+      "correct": "like a d",
+      "correctLabel": "like a d"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑡𐑳𐑥𐑐𐑑": "jumped",
+        "𐑐𐑤𐑱𐑛": "played",
+        "𐑢𐑪𐑯𐑑𐑩𐑛": "wanted",
+        "𐑤𐑫𐑒𐑑": "looked"
+      },
+      "leftOrder": [
+        "𐑡𐑳𐑥𐑐𐑑",
+        "𐑐𐑤𐑱𐑛",
+        "𐑢𐑪𐑯𐑑𐑩𐑛",
+        "𐑤𐑫𐑒𐑑"
+      ],
+      "rightOrder": [
+        "played",
+        "looked",
+        "wanted",
+        "jumped"
+      ]
+    }
+  ]
+}

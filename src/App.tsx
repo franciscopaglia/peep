@@ -301,9 +301,9 @@ export default function App() {
         return;
       }
       const canCheck =
-        ex.type === 'type'
+        ex.type === 'type' || ex.type === 'transcribe' || ex.type === 'write'
           ? typedValue.trim().length > 0
-          : ex.type === 'choice'
+          : ex.type === 'choice' || ex.type === 'spot'
             ? selected != null
             : ex.type === 'build'
               ? buildSel.length > 0

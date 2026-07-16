@@ -38,6 +38,11 @@ function solve(ex: Exercise): AnswerState {
         ...emptyAnswer,
         fillSel: pickIndices(ex.bank, ex.blanks.map((b) => ex.words[b])),
       };
+    case 'spot':
+      return { ...emptyAnswer, selected: String(ex.correct) };
+    case 'transcribe':
+    case 'write':
+      return { ...emptyAnswer, typedValue: ex.correct };
     default:
       return emptyAnswer;
   }
@@ -91,6 +96,14 @@ describe('lesson content is well-formed and solvable', () => {
       if (ex.type === 'build' || ex.type === 'arrange') {
         it(`${at}: correctLabel matches the joined answer`, () => {
           expect(ex.correctLabel).toBe(ex.answer.join(ex.type === 'build' ? '' : ' '));
+        });
+      }
+
+      if (ex.type === 'spot') {
+        it(`${at}: target index is valid and labelled`, () => {
+          expect(ex.correct).toBeGreaterThanOrEqual(0);
+          expect(ex.correct).toBeLessThan(ex.words.length);
+          expect(ex.correctLabel).toBe(ex.words[ex.correct]);
         });
       }
 

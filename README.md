@@ -42,10 +42,11 @@ Lessons live as plain **JSON data files** — the code just renders them — whi
 | --- | --- | --- |
 | **Chapter 1** | The Alphabet | 24 lessons — every consonant and vowel, ~20 exercises each |
 | **Chapter 2** | Reading Fluency | 11 lessons — the last letters, r-coloured vowels & ligatures, names, and sentence building |
-| **Chapter 3** | Reading in the Wild | 7 lessons — sound-true endings, the schwa, sight words, dialogue, and longer stories |
-| **Chapter 4** | *Coming soon* | — |
+| **Chapter 3** | Reading in the Wild | 8 lessons — sound-true endings, the schwa, sight words, dialogue, longer stories, and a real fable to transcribe |
+| **Chapter 4** | Writing Shavian | 1 lesson so far — spell words on a full on-screen Shavian keyboard |
+| **Chapter 5** | *Coming soon* | — |
 
-Ten kinds of exercise keep practice varied:
+Twelve kinds of exercise keep practice varied:
 
 | Type | What it does |
 | --- | --- |
@@ -59,6 +60,8 @@ Ten kinds of exercise keep practice varied:
 | `fill` | Choose the missing words to finish a sentence (some pre-filled) |
 | `cloze` | Read a short passage and fill its blanked words from context |
 | `spot` | Read a sentence and tap the word that means the English prompt |
+| `transcribe` | Read a real Shavian passage and write out the full English |
+| `write` | Spell an English word in Shavian on a full on-screen keyboard |
 
 ## Getting started
 

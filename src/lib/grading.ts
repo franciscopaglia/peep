@@ -21,6 +21,20 @@ export const emptyAnswer: AnswerState = {
 };
 
 /**
+ * Canonical form for comparing a learner's transcription with the answer:
+ * case-insensitive, apostrophes dropped, all other punctuation treated as a
+ * space, whitespace collapsed. This is the single tolerance knob for
+ * `transcribe` grading — widen here if it proves too strict.
+ */
+export function normalizeTranscription(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/['’]/g, '')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+/**
  * Whether the given answer state solves the exercise. Pure — the single source
  * of truth for grading, shared by the app and the tests.
  *
@@ -55,6 +69,20 @@ export function isCorrect(exercise: Exercise, state: AnswerState): boolean {
         state.fillSel.map((i) => exercise.bank[i]).join(' ') ===
         exercise.blanks.map((b) => exercise.words[b]).join(' ')
       );
+    case 'spot':
+      // The tapped word is stored by index — words can repeat in a sentence.
+      return state.selected === String(exercise.correct);
+    case 'transcribe': {
+      const typed = normalizeTranscription(state.typedValue);
+      if (typed.length === 0) return false;
+      return [exercise.correct, ...(exercise.accept ?? [])].some(
+        (answer) => typed === normalizeTranscription(answer)
+      );
+    }
+    case 'write': {
+      const typed = state.typedValue.trim();
+      return typed === exercise.correct || (exercise.accept ?? []).includes(typed);
+    }
     default:
       return false;
   }
