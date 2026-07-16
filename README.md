@@ -4,6 +4,10 @@
 
 **Learn to read & write English in the Shavian alphabet — one short, calm lesson at a time.**
 
+### 👉 Try it now at [**www.shavian-peep.com**](https://www.shavian-peep.com/) 👈
+
+*Free, no account, works great on your phone.*
+
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](./LICENSE.md)
 ![React](https://img.shields.io/badge/React-19-61dafb.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6.svg)
@@ -37,10 +41,11 @@ Lessons live as plain **JSON data files** — the code just renders them — whi
 | Chapter | Theme | Lessons |
 | --- | --- | --- |
 | **Chapter 1** | The Alphabet | 24 lessons — every consonant and vowel, ~20 exercises each |
-| **Chapter 2** | Reading Fluency | 9 lessons — the ʒ letter, r-coloured vowels, names, and sentence building |
-| **Chapter 3** | *Coming soon* | — |
+| **Chapter 2** | Reading Fluency | 11 lessons — the last letters, r-coloured vowels & ligatures, names, and sentence building |
+| **Chapter 3** | Reading in the Wild | 7 lessons — sound-true endings, the schwa, sight words, dialogue, and longer stories |
+| **Chapter 4** | *Coming soon* | — |
 
-Nine kinds of exercise keep practice varied:
+Ten kinds of exercise keep practice varied:
 
 | Type | What it does |
 | --- | --- |
@@ -53,6 +58,7 @@ Nine kinds of exercise keep practice varied:
 | `complete` | Fill in a word's missing letter(s) from a tile bank |
 | `fill` | Choose the missing words to finish a sentence (some pre-filled) |
 | `cloze` | Read a short passage and fill its blanked words from context |
+| `spot` | Read a sentence and tap the word that means the English prompt |
 
 ## Getting started
 
@@ -134,6 +140,7 @@ A few guidelines that keep the curriculum sound:
 - For `build`/`arrange`, make sure `answer` is buildable from `tiles`, and `correctLabel` equals the answer joined together (letters for `build`, space-separated words for `arrange`).
 - For `choice`, include the `correct` value in `options`, keep four distinct options, and set `correctLabel` to match.
 - Shavian lives in Unicode block `U+10450–U+1047F`.
+- Run `node scripts/lesson.mjs check` and `npm test` afterwards — they validate every lesson's structure, solvability, and that no exercise uses letters the learner hasn't been taught yet.
 
 Spelling questions? The [ReadLex dictionary](https://readlex.pw) and [shavian.info](https://www.shavian.info) are the go-to references.
 
