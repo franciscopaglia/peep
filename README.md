@@ -102,50 +102,42 @@ Contributions are very welcome — **especially to the lessons**. You don't need
 
 ### Add or fix a lesson
 
-Drop a file named `NN-slug.json` into `src/lessons/`. It's picked up automatically (files are discovered with `import.meta.glob`, sorted by `id`).
+Lessons are one JSON file per lesson in `src/lessons/`, named `NN-slug.json` and picked up automatically. You can edit that JSON directly, but there's a friendlier way: a small CLI that ships with the repo and speaks **one compact line per exercise**. It works out the fiddly bits — `correctLabel`, blank indices, tile and bank composition — so they can't drift out of sync.
 
-```jsonc
-{
-  "id": 5,
-  "title": "First Words",
-  "glyph": "𐑒𐑨𐑑",       // the icon shown on the path
-  "chapter": 1,
-  "exercises": [
-    { "type": "teach", "title": "Reading whole words",
-      "body": "Blend letters left to right: 𐑛𐑪𐑑 is d-o-t, \"dot\"." },
-
-    { "type": "type", "prompt": "𐑚𐑦𐑜",
-      "caption": "Type what this word says",
-      "correct": "big", "correctLabel": "big" },
-
-    { "type": "choice", "promptIsGlyph": true, "prompt": "𐑒𐑦𐑛",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": ["kid", "kit", "cod", "cap"],
-      "correct": "kid", "correctLabel": "kid" },
-
-    { "type": "build", "prompt": "sit",
-      "caption": "Build this word from Shavian letters",
-      "tiles": ["𐑕", "𐑦", "𐑑", "𐑛", "𐑨"],
-      "answer": ["𐑕", "𐑦", "𐑑"], "correctLabel": "𐑕𐑦𐑑" },
-
-    { "type": "match",
-      "pairs": { "𐑓𐑦𐑑": "fit", "𐑛𐑪𐑑": "dot" },
-      "leftOrder": ["𐑛𐑪𐑑", "𐑓𐑦𐑑"],
-      "rightOrder": ["fit", "dot"] }
-  ]
-}
+```bash
+node scripts/lesson.mjs list                 # every lesson, with a tally of its exercise types
+node scripts/lesson.mjs show 27              # read one lesson as compact lines
+node scripts/lesson.mjs grep '𐑑𐑵'            # search the whole curriculum
+node scripts/lesson.mjs add 27 'type :: 𐑝 :: ok=of'      # append an exercise
+node scripts/lesson.mjs put 27 3 '<line>'    # replace exercise 3
+node scripts/lesson.mjs new 45 my-slug 'My Lesson' 𐑐 4   # start a new lesson
+node scripts/lesson.mjs check                # validate the whole curriculum
 ```
+
+The grammar in miniature — `+` marks a wrong option or an unused tile, `_` a blank, `*` the word to find:
+
+```
+teach   :: Title :: Body text; {{𐑞 𐑛𐑪𐑜 𐑦𐑟 𐑒𐑿𐑑.}} renders as a passage block.
+choice  :: gp 𐑓𐑹 :: cap=What does this word mean? :: four | +for | +far | +form
+type    :: 𐑑𐑵 :: ok=too :: alt=two
+build   :: sit :: 𐑕 𐑦 𐑑 +𐑛
+arrange :: the cat sat :: 𐑞 𐑒𐑨𐑑 𐑕𐑨𐑑 +𐑛𐑪𐑜
+fill    :: the dog ran :: 𐑞 _𐑛𐑪𐑜 _𐑮𐑨𐑯 :: +𐑒𐑨𐑑
+spot    :: dog :: 𐑞 *𐑛𐑪𐑜 𐑦𐑟 𐑒𐑿𐑑 .
+write   :: cat :: ok=𐑒𐑨𐑑
+```
+
+The full grammar lives in [`.claude/skills/lesson-editor/SKILL.md`](./.claude/skills/lesson-editor/SKILL.md), and the underlying data shapes in [`src/lessons/types.ts`](./src/lessons/types.ts).
 
 A few guidelines that keep the curriculum sound:
 
-- **Only use letters that have already been taught** by that point in the path.
-- For `build`/`arrange`, make sure `answer` is buildable from `tiles`, and `correctLabel` equals the answer joined together (letters for `build`, space-separated words for `arrange`).
-- For `choice`, include the `correct` value in `options`, keep four distinct options, and set `correctLabel` to match.
+- **Only use letters that have already been taught** by that point in the path — including a word's *sounds*, since "digit" contains 𐑡 (j), not 𐑜 (g). `check` enforces this.
+- **Verify spellings** against the [Read Lexicon](https://readlex.pw) rather than intuition — Shavian spells sounds, so "million" is 𐑥𐑦𐑤𐑘𐑩𐑯 and "story" is 𐑕𐑑𐑹𐑦. When a spelling is shared by homophones (𐑑𐑵 is both "too" and "two"), list the alternates in `alt=`.
+- **`transcribe` passages must be real, sourced texts** — never invented ones.
 - Shavian lives in Unicode block `U+10450–U+1047F`.
-- Run `node scripts/lesson.mjs check` and `npm test` afterwards — they validate every lesson's structure, solvability, and that no exercise uses letters the learner hasn't been taught yet.
+- Run `node scripts/lesson.mjs check` and `npm test` afterwards. They validate every lesson's structure and solvability, and catch letters the learner hasn't met yet.
 
-Spelling questions? The [ReadLex dictionary](https://readlex.pw) and [shavian.info](https://www.shavian.info) are the go-to references.
+Spelling questions? The [Read Lexicon](https://readlex.pw) and [shavian.info](https://www.shavian.info) are the go-to references.
 
 ### Spotted a mistake?
 

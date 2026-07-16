@@ -22,4 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-.claude
+
+# Claude Code: the lesson-editor skill is shared with everyone; personal
+# permissions and overrides stay local.
+.claude/settings.local.json
