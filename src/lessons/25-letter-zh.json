@@ -12,7 +12,13 @@
     {
       "type": "teach",
       "title": "Meet measure — 𐑠",
-      "body": "The letter for measure is 𐑠 — the “zh” sound buried in the middle of measure, vision and treasure. It's one of the rarest sounds in English, so you'll spot it far less often than its neighbours."
+      "body": "The letter for measure is 𐑠 — the “zh” sound buried in the middle of measure, vision and treasure. It's one of the rarest sounds in English, so you'll spot it far less often than its neighbours.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑠"
+        ]
+      }
     },
     {
       "type": "choice",
@@ -54,7 +60,13 @@
     {
       "type": "teach",
       "title": "Meet thigh — 𐑔",
-      "body": "𐑔 is the soft, breathy “th” in thin, thick and moth. Its voiced partner is 𐑞, which you already know from the word the — same mouth shape, but 𐑞 buzzes and 𐑔 doesn't."
+      "body": "𐑔 is the soft, breathy “th” in thin, thick and moth. Its voiced partner is 𐑞, which you already know from the word the — same mouth shape, but 𐑞 buzzes and 𐑔 doesn't.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑔"
+        ]
+      }
     },
     {
       "type": "choice",

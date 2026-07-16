@@ -164,11 +164,24 @@
       "correctLabel": "bump"
     },
     {
-      "type": "type",
-      "prompt": "𐑕𐑐𐑦𐑯",
-      "caption": "Sound it out — what does this say?",
-      "correct": "spin",
-      "correctLabel": "spin"
+      "type": "complete",
+      "blanks": [
+        2
+      ],
+      "bank": [
+        "𐑦",
+        "𐑳",
+        "𐑨"
+      ],
+      "correctLabel": "𐑕𐑐𐑦𐑯",
+      "prompt": "spin",
+      "word": [
+        "𐑕",
+        "𐑐",
+        "𐑦",
+        "𐑯"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
       "type": "choice",

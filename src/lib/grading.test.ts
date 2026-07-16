@@ -5,6 +5,8 @@ import {
   lessonPassed,
   emptyAnswer,
   normalizeTranscription,
+  editBudget,
+  transcriptionMatches,
   PASS_THRESHOLD,
 } from '@/lib/grading';
 import type {
@@ -177,6 +179,60 @@ describe('isCorrect', () => {
 
   it('transcribe: accepts full-sentence alternates', () => {
     expect(isCorrect(transcribe, { ...emptyAnswer, typedValue: 'the north wind and the sun were arguing' })).toBe(true);
+  });
+
+  it('transcribe: forgives a letter or two per word', () => {
+    // A wrong letter, a missing one, and an extra one.
+    expect(isCorrect(transcribe, { ...emptyAnswer, typedValue: 'the north wind and the sun were dispating' })).toBe(true);
+    expect(isCorrect(transcribe, { ...emptyAnswer, typedValue: 'the north wnd and the sun were disputing' })).toBe(true);
+    expect(isCorrect(transcribe, { ...emptyAnswer, typedValue: 'the north wind and the sunn were disputiing' })).toBe(true);
+    // Two slips in one long word is still within budget.
+    expect(isCorrect(transcribe, { ...emptyAnswer, typedValue: 'the north wind and the sun were disputng' })).toBe(true);
+  });
+
+  it('transcribe: a wrong word or a dropped word still fails', () => {
+    expect(isCorrect(transcribe, { ...emptyAnswer, typedValue: 'the north wind and the sun were fighting' })).toBe(false);
+    // Dropped word — a misreading, not a typo.
+    expect(isCorrect(transcribe, { ...emptyAnswer, typedValue: 'the north wind and sun were disputing' })).toBe(false);
+    // The slips have to stay within budget.
+    expect(isCorrect(transcribe, { ...emptyAnswer, typedValue: 'the north wind and the sun were dispute' })).toBe(false);
+  });
+
+  it('transcribe: alternates get the same tolerance', () => {
+    expect(isCorrect(transcribe, { ...emptyAnswer, typedValue: 'the north wind and the sun were argueing' })).toBe(true);
+  });
+});
+
+describe('editBudget', () => {
+  // Short words must stay exact: "cat" is two edits from "dot", so a flat
+  // two-letter budget would grade a different word as correct.
+  it('is exact for one- and two-letter words', () => {
+    expect(editBudget('a')).toBe(0);
+    expect(editBudget('of')).toBe(0);
+  });
+
+  it('allows one letter for short words and two for longer ones', () => {
+    expect(editBudget('the')).toBe(1);
+    expect(editBudget('wind')).toBe(1);
+    expect(editBudget('north')).toBe(2);
+    expect(editBudget('disputing')).toBe(2);
+  });
+});
+
+describe('transcriptionMatches', () => {
+  it('ignores punctuation and case around the tolerance', () => {
+    expect(transcriptionMatches('The Sun, at last!', 'the sunn at last')).toBe(true);
+  });
+
+  it('holds short function words to an exact match', () => {
+    expect(transcriptionMatches('he ran to the shop', 'he ran to the shop')).toBe(true);
+    // "to" → "so" is one edit, but two-letter words get no budget.
+    expect(transcriptionMatches('he ran to the shop', 'he ran so the shop')).toBe(false);
+  });
+
+  it('rejects an empty or extra-word answer', () => {
+    expect(transcriptionMatches('the sun', '')).toBe(false);
+    expect(transcriptionMatches('the sun', 'the sun rose')).toBe(false);
   });
 
   it('normalizeTranscription: drops apostrophes, spaces out other punctuation', () => {

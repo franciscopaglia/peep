@@ -12,7 +12,13 @@
     {
       "type": "teach",
       "title": "Meet eat",
-      "body": "The letter for eat is 𐑰, the long “ee” in see. It looks like someone stretched out 𐑦 until it broke in the middle."
+      "body": "The letter for eat is 𐑰, the long “ee” in see. It looks like someone stretched out 𐑦 until it broke in the middle.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑰"
+        ]
+      }
     },
     {
       "type": "type",
@@ -27,7 +33,13 @@
     {
       "type": "teach",
       "title": "Meet age",
-      "body": "The letter for age is 𐑱, the sound in day."
+      "body": "The letter for age is 𐑱, the sound in day.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑱"
+        ]
+      }
     },
     {
       "type": "choice",

@@ -7,7 +7,13 @@
     {
       "type": "teach",
       "title": "Meet wool",
-      "body": "The letter for wool is 𐑫, the short “oo” in put — round your lips as you say it."
+      "body": "The letter for wool is 𐑫, the short “oo” in put — round your lips as you say it.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑫"
+        ]
+      }
     },
     {
       "type": "type",
@@ -19,7 +25,13 @@
     {
       "type": "teach",
       "title": "Meet up",
-      "body": "The letter for up is 𐑳, the short “u” in cup. It's easy to mix up with wool — wool rounds your lips (put), up doesn't (cup)."
+      "body": "The letter for up is 𐑳, the short “u” in cup. It's easy to mix up with wool — wool rounds your lips (put), up doesn't (cup).",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑳"
+        ]
+      }
     },
     {
       "type": "choice",
@@ -138,11 +150,23 @@
       "correctLabel": "tub"
     },
     {
-      "type": "type",
-      "prompt": "𐑚𐑫𐑒",
-      "caption": "Sound it out — what does this say?",
-      "correct": "book",
-      "correctLabel": "book"
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑫",
+        "𐑳",
+        "𐑨"
+      ],
+      "correctLabel": "𐑚𐑫𐑒",
+      "prompt": "book",
+      "word": [
+        "𐑚",
+        "𐑫",
+        "𐑒"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
       "type": "type",

@@ -43,6 +43,16 @@ const INTRODUCED = {
   25: '𐑠𐑔', 26: '𐑸𐑹', 28: '𐑺𐑻', 29: '𐑼𐑽', 30: '𐑾𐑿', 31: '𐑬𐑷𐑶𐑭', 32: '·',
 };
 
+// The 48 letters, read from the app's alphabet data so the two can't drift.
+// `check` uses this to validate a teach card's `media=letters:` glyphs.
+const LETTERS = new Set(
+  [
+    ...fs
+      .readFileSync(path.join(DIR, '..', 'lib', 'shavian-alphabet.ts'), 'utf8')
+      .matchAll(/glyph: '(.)'/gu),
+  ].map((m) => m[1])
+);
+
 function lettersTaughtBy(id) {
   let set = '';
   for (const [lesson, letters] of Object.entries(INTRODUCED)) {
@@ -98,8 +108,15 @@ function exToLine(ex) {
   const parts = [ex.type];
   switch (ex.type) {
     case 'teach': {
-      if (ex.media) break; // no compact form — fall through to json
-      return [ex.type, ex.title, ex.body].join(SEP);
+      const out = [ex.type, ex.title, ex.body];
+      if (ex.media) {
+        const m = ex.media;
+        if (m.kind === 'letters') out.push(`media=letters:${m.glyphs.join('')}`);
+        else if (m.kind === 'video')
+          out.push(`media=video:${m.src}${m.caption ? ` | ${m.caption}` : ''}`);
+        else break; // unknown media kind — fall through to json
+      }
+      return out.join(SEP);
     }
     case 'choice': {
       parts.push((ex.promptIsGlyph ? 'gp ' : '') + ex.prompt);
@@ -187,7 +204,28 @@ function exToLine(ex) {
 
 // ---------------------------------------------------------------- parser
 
-const KEYS = /^(cap|ok|alt|tr|src|label|tiles|ans|bank|R)=([\s\S]*)$/;
+const KEYS = /^(cap|ok|alt|tr|src|media|label|tiles|ans|bank|R)=([\s\S]*)$/;
+
+// `media=letters:𐑐𐑚` → the About page's letter cards for those glyphs.
+// `media=video:<url>[ | caption]` → an embedded player.
+function parseMedia(spec, line) {
+  const i = spec.indexOf(':');
+  const kind = spec.slice(0, i);
+  const rest = spec.slice(i + 1).trim();
+  if (kind === 'letters') {
+    const glyphs = [...rest.replace(/\s+/g, '')];
+    if (!glyphs.length) die(`media=letters: needs at least one glyph: ${line}`);
+    return { kind, glyphs };
+  }
+  if (kind === 'video') {
+    const [src, ...cap] = rest.split(' | ');
+    const media = { kind, src: src.trim() };
+    if (cap.length) media.caption = cap.join(' | ').trim();
+    if (!media.src) die(`media=video: needs a url: ${line}`);
+    return media;
+  }
+  die(`unknown media kind "${kind}" (want letters: or video:): ${line}`);
+}
 
 function lineToEx(line) {
   const fields = line.trim().split(SEP);
@@ -202,8 +240,11 @@ function lineToEx(line) {
   }
   const caption = kv.cap ?? DEFAULT_CAPTION[type];
   switch (type) {
-    case 'teach':
-      return { type, title: pos[0], body: pos.slice(1).join(SEP) };
+    case 'teach': {
+      const ex = { type, title: pos[0], body: pos.slice(1).join(SEP) };
+      if (kv.media) ex.media = parseMedia(kv.media, line);
+      return ex;
+    }
     case 'choice': {
       let [prompt, opts] = pos;
       const promptIsGlyph = prompt.startsWith('gp ');
@@ -353,6 +394,11 @@ function checkLesson(lesson, problems) {
       const used = [...new Set(JSON.stringify(scanned).match(SHAVIAN) ?? [])];
       const early = used.filter((ch) => !taught.has(ch));
       if (early.length) flag(`uses letters not yet taught: ${early.join(' ')}`);
+    }
+
+    if (ex.type === 'teach' && ex.media?.kind === 'letters') {
+      const unknown = ex.media.glyphs.filter((g) => !LETTERS.has(g));
+      if (unknown.length) flag(`media letters are not Shavian letters: ${unknown.join(' ')}`);
     }
 
     if (ex.type === 'choice') {

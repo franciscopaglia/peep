@@ -4,6 +4,7 @@ import { renderWithGlyphChips } from '@/lib/shavian-text';
 import { keyboardRows, NAMING_DOT } from '@/lib/shavian-keyboard';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { ReportProblem } from '@/components/ReportProblem';
+import { TeachMedia } from '@/components/TeachMedia';
 import { lessonIssueUrl } from '@/lib/constants';
 
 type Status = 'active' | 'correct' | 'wrong';
@@ -182,16 +183,8 @@ export function Lesson({
           <div className="w-full max-w-[420px] flex flex-col gap-5 items-center text-center">
             <div className="text-[22px] font-bold text-foreground">{exercise.title}</div>
             {exercise.media && (
-              <div
-                className="w-full aspect-video rounded-card border border-border flex items-center justify-center"
-                style={{
-                  background:
-                    'repeating-linear-gradient(135deg, var(--border), var(--border) 10px, transparent 10px, transparent 20px)',
-                }}
-              >
-                <div className="font-mono text-xs text-muted-foreground bg-card px-2.5 py-1 rounded-md border border-border">
-                  {exercise.media} placeholder
-                </div>
+              <div className="w-full my-2">
+                <TeachMedia media={exercise.media} />
               </div>
             )}
             <div className="text-[15px] leading-relaxed text-muted-foreground text-left">
@@ -580,35 +573,37 @@ export function Lesson({
         )}
 
         {isTranscribe && exercise.type === 'transcribe' && (
-          <div className="w-full flex flex-col gap-6" style={{ animation: 'shvSlideUp .3s ease' }}>
+          <div className="w-full flex flex-col gap-4" style={{ animation: 'shvSlideUp .3s ease' }}>
+            <div className="text-sm text-muted-foreground">{exercise.caption}</div>
+            {/* One child per column, so the passage and the answer box are the
+                same height: any label stacked beside a box would eat into it. */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 items-stretch">
-              <div className="flex flex-col gap-3">
-                <div className="flex-1 p-5 rounded-card border border-border bg-card">
-                  <div className="text-[24px] leading-[1.75] font-semibold text-foreground">
-                    {exercise.passage}
-                  </div>
+              <figure className="m-0 flex flex-col p-5 rounded-card border border-border bg-card">
+                <div className="flex-1 text-[24px] leading-[1.75] font-semibold text-foreground">
+                  {exercise.passage}
                 </div>
                 {exercise.source && (
-                  <div className="text-xs italic text-muted-foreground px-1">
+                  <figcaption className="mt-3 text-xs italic text-muted-foreground">
                     — {exercise.source}
-                  </div>
+                  </figcaption>
                 )}
-              </div>
-              <div className="flex flex-col gap-3">
-                <div className="text-sm text-muted-foreground">{exercise.caption}</div>
-                <textarea
-                  className="flex-1 w-full min-h-[140px] p-4 rounded-btn outline-none text-base font-medium leading-relaxed resize-none box-border"
-                  style={{
-                    border: `2px solid ${dim.border}`,
-                    background: status === 'active' ? 'var(--card)' : dim.bg,
-                    color: 'var(--foreground)',
-                  }}
-                  value={typedValue}
-                  onChange={(e) => onTypeChange(e.target.value)}
-                  placeholder="write the English here"
-                  autoFocus
-                />
-              </div>
+              </figure>
+              <textarea
+                className="w-full min-h-[140px] p-4 rounded-btn outline-none text-base font-medium leading-relaxed resize-none box-border"
+                style={{
+                  border: `2px solid ${dim.border}`,
+                  background: status === 'active' ? 'var(--card)' : dim.bg,
+                  color: 'var(--foreground)',
+                }}
+                value={typedValue}
+                onChange={(e) => onTypeChange(e.target.value)}
+                placeholder="write the English here"
+                autoFocus
+              />
+            </div>
+            <div className="text-xs italic text-muted-foreground">
+              Spelling doesn't have to be perfect — a slip of a letter or two still counts.
+              I'm still working on this one!
             </div>
           </div>
         )}

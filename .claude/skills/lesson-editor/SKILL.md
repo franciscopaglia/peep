@@ -38,6 +38,8 @@ composition, and glyph flags all come from the line.
 
 ```
 teach  :: Title :: Body; [[𐑖𐑱𐑝𐑾𐑯 𐑮𐑳𐑯𐑟]] is one chip, {{𐑩 𐑣𐑴𐑤 𐑐𐑨𐑕𐑦𐑡.}} a display block (sentences + punctuation).
+teach  :: Meet peep :: The letter for peep is 𐑐. :: media=letters:𐑐      (About-page letter cards)
+teach  :: Why Shavian? :: A short history. :: media=video:https://youtu.be/abc123 | Optional caption
 choice :: gp 𐑓𐑹 :: cap=What does this word mean? :: four | +for | +far | +form
 choice :: Which letter is the word “of”? :: go 𐑝 | +𐑓 | +𐑞 | +𐑑
 type   :: 𐑑𐑵 :: ok=too :: alt=two            (alt= lists accepted homophones)
@@ -51,6 +53,12 @@ spot   :: dog :: 𐑞 *𐑛𐑪𐑜 𐑦𐑟 𐑒𐑿𐑑 .        (tap the sent
 transcribe :: 𐑞 𐑯𐑹𐑔 𐑢𐑦𐑯𐑛 𐑚𐑤𐑵. :: ok=the north wind blew :: alt=… :: src=Aesop
 write  :: cat :: ok=𐑒𐑨𐑑                     (spell the English word on the full Shavian keyboard)
 ```
+
+A `teach` card can carry one optional `media=`: `letters:𐑐𐑚` renders the About
+page's letter cards for those glyphs (one or more, in the order given — use it
+on cards that introduce a letter), or `video:<url>[ | caption]` embeds a player
+(YouTube/Vimeo links are embedded, other urls play natively). `check` verifies
+the glyphs are real letters, and taught by that lesson.
 
 `transcribe` shows a real Shavian passage (punctuation kept, `src=` cited)
 beside a free-text box; grading is case/punctuation/whitespace-insensitive

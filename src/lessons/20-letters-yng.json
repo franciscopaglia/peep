@@ -7,7 +7,13 @@
     {
       "type": "teach",
       "title": "Meet yea",
-      "body": "The letter for yea is 𐑘, the “y” sound at the start of yes."
+      "body": "The letter for yea is 𐑘, the “y” sound at the start of yes.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑘"
+        ]
+      }
     },
     {
       "type": "type",
@@ -19,7 +25,13 @@
     {
       "type": "teach",
       "title": "Meet hung",
-      "body": "The letter for hung is 𐑙, the “ng” sound at the end of sing and wing. In English it never starts a word — you'll only ever find it at the end of a syllable."
+      "body": "The letter for hung is 𐑙, the “ng” sound at the end of sing and wing. In English it never starts a word — you'll only ever find it at the end of a syllable.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑙"
+        ]
+      }
     },
     {
       "type": "build",

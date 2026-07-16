@@ -7,7 +7,13 @@
     {
       "type": "teach",
       "title": "Officially: ash",
-      "body": "You've been borrowing 𐑨 for a few lessons now — time to make it official. It's called ash, the short “a” heard in cat and ash."
+      "body": "You've been borrowing 𐑨 for a few lessons now — time to make it official. It's called ash, the short “a” heard in cat and ash.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑨"
+        ]
+      }
     },
     {
       "type": "choice",
@@ -27,7 +33,13 @@
     {
       "type": "teach",
       "title": "Officially: on",
-      "body": "And 𐑪 — the letter for on, the short “o” heard in dog and on."
+      "body": "And 𐑪 — the letter for on, the short “o” heard in dog and on.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑪"
+        ]
+      }
     },
     {
       "type": "teach",
@@ -142,11 +154,23 @@
       "correctLabel": "dog"
     },
     {
-      "type": "type",
-      "prompt": "𐑚𐑨𐑜",
-      "caption": "Sound it out — what does this say?",
-      "correct": "bag",
-      "correctLabel": "bag"
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑨",
+        "𐑪",
+        "𐑦"
+      ],
+      "correctLabel": "𐑚𐑨𐑜",
+      "prompt": "bag",
+      "word": [
+        "𐑚",
+        "𐑨",
+        "𐑜"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
       "type": "type",

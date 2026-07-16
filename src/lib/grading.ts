@@ -23,8 +23,7 @@ export const emptyAnswer: AnswerState = {
 /**
  * Canonical form for comparing a learner's transcription with the answer:
  * case-insensitive, apostrophes dropped, all other punctuation treated as a
- * space, whitespace collapsed. This is the single tolerance knob for
- * `transcribe` grading — widen here if it proves too strict.
+ * space, whitespace collapsed.
  */
 export function normalizeTranscription(text: string): string {
   return text
@@ -32,6 +31,53 @@ export function normalizeTranscription(text: string): string {
     .replace(/['’]/g, '')
     .replace(/[^a-z0-9]+/g, ' ')
     .trim();
+}
+
+/**
+ * Letters a word may differ by and still count. `transcribe` asks the learner
+ * to *read* a passage, so a slip of the keyboard shouldn't fail them — but the
+ * budget has to scale with length, or a short word turns into a different word
+ * within budget ("cat" is only two edits from "dot"). Short function words —
+ * the abbreviated 𐑞/𐑯/𐑑/𐑝/𐑓 the curriculum drills — stay exact.
+ */
+export function editBudget(word: string): number {
+  if (word.length <= 2) return 0;
+  return word.length <= 4 ? 1 : 2;
+}
+
+/** Levenshtein distance: substitutions, insertions and deletions, cost 1 each. */
+function editDistance(a: string, b: string): number {
+  let prev = Array.from({ length: b.length + 1 }, (_, j) => j);
+  for (let i = 1; i <= a.length; i++) {
+    const curr = [i];
+    for (let j = 1; j <= b.length; j++) {
+      curr[j] = Math.min(
+        prev[j] + 1,
+        curr[j - 1] + 1,
+        prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)
+      );
+    }
+    prev = curr;
+  }
+  return prev[b.length];
+}
+
+/**
+ * Whether a typed transcription reads as `expected`, allowing each word to be
+ * off by up to its `editBudget` (a wrong, missing or extra letter). Word count
+ * must still match — a dropped word is a misreading, not a typo.
+ */
+export function transcriptionMatches(expected: string, typed: string): boolean {
+  const want = normalizeTranscription(expected).split(' ').filter(Boolean);
+  const got = normalizeTranscription(typed).split(' ').filter(Boolean);
+  if (want.length === 0 || want.length !== got.length) return false;
+  return want.every((word, i) => {
+    if (word === got[i]) return true;
+    const budget = editBudget(word);
+    // Length gap alone can exceed the budget — cheaper than the full matrix.
+    if (budget === 0 || Math.abs(word.length - got[i].length) > budget) return false;
+    return editDistance(word, got[i]) <= budget;
+  });
 }
 
 /**
@@ -73,10 +119,9 @@ export function isCorrect(exercise: Exercise, state: AnswerState): boolean {
       // The tapped word is stored by index — words can repeat in a sentence.
       return state.selected === String(exercise.correct);
     case 'transcribe': {
-      const typed = normalizeTranscription(state.typedValue);
-      if (typed.length === 0) return false;
-      return [exercise.correct, ...(exercise.accept ?? [])].some(
-        (answer) => typed === normalizeTranscription(answer)
+      if (normalizeTranscription(state.typedValue).length === 0) return false;
+      return [exercise.correct, ...(exercise.accept ?? [])].some((answer) =>
+        transcriptionMatches(answer, state.typedValue)
       );
     }
     case 'write': {

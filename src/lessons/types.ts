@@ -5,11 +5,20 @@ export type LessonMeta = {
   chapter: number;
 };
 
+// Optional visual shown above a teach card's body. Discriminated on `kind` so
+// new media types surface as errors wherever media is rendered.
+export type TeachMedia =
+  // An embedded video (YouTube/Vimeo URLs are embedded; anything else plays
+  // through the native <video> player).
+  | { kind: 'video'; src: string; caption?: string }
+  // The About page's letter cards, for the letters this card introduces.
+  | { kind: 'letters'; glyphs: string[] };
+
 export type TeachExercise = {
   type: 'teach';
   title: string;
   body: string;
-  media?: string;
+  media?: TeachMedia;
   retry?: boolean;
 };
 

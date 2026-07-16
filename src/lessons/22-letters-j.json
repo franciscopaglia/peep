@@ -7,7 +7,13 @@
     {
       "type": "teach",
       "title": "Meet judge",
-      "body": "The letter for judge is 𐑡 — the voiced, deep partner of church. Compare: 𐑗 𐑡. Say “j” and feel the buzz that “ch” doesn't have."
+      "body": "The letter for judge is 𐑡 — the voiced, deep partner of church. Compare: 𐑗 𐑡. Say “j” and feel the buzz that “ch” doesn't have.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑡"
+        ]
+      }
     },
     {
       "type": "teach",

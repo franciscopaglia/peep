@@ -147,11 +147,24 @@
       "correctLabel": "fast"
     },
     {
-      "type": "type",
-      "prompt": "𐑒𐑪𐑕𐑑",
-      "caption": "Sound it out — what does this say?",
-      "correct": "cost",
-      "correctLabel": "cost"
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑪",
+        "𐑨",
+        "𐑧"
+      ],
+      "correctLabel": "𐑒𐑪𐑕𐑑",
+      "prompt": "cost",
+      "word": [
+        "𐑒",
+        "𐑪",
+        "𐑕",
+        "𐑑"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
       "type": "type",

@@ -137,11 +137,25 @@
       "correctLabel": "bench"
     },
     {
-      "type": "type",
-      "prompt": "𐑕𐑑𐑮𐑪𐑙",
-      "caption": "Sound it out — what does this say?",
-      "correct": "strong",
-      "correctLabel": "strong"
+      "type": "complete",
+      "blanks": [
+        3
+      ],
+      "bank": [
+        "𐑪",
+        "𐑳",
+        "𐑨"
+      ],
+      "correctLabel": "𐑕𐑑𐑮𐑪𐑙",
+      "prompt": "strong",
+      "word": [
+        "𐑕",
+        "𐑑",
+        "𐑮",
+        "𐑪",
+        "𐑙"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
       "type": "type",

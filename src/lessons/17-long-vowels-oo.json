@@ -7,7 +7,13 @@
     {
       "type": "teach",
       "title": "Meet ooze",
-      "body": "The letter for ooze is 𐑵, the sound in moon. Round your lips and hold it — that's the last of the long vowels."
+      "body": "The letter for ooze is 𐑵, the sound in moon. Round your lips and hold it — that's the last of the long vowels.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑵"
+        ]
+      }
     },
     {
       "type": "teach",

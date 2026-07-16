@@ -7,7 +7,13 @@
     {
       "type": "teach",
       "title": "Meet lull",
-      "body": "The letter for lull is 𐑤 — a single downward stroke, easy to remember since it echoes a lowercase Latin “l”. It doesn't pair up voiced/voiceless like the last few lessons — it's naturally voiced on its own."
+      "body": "The letter for lull is 𐑤 — a single downward stroke, easy to remember since it echoes a lowercase Latin “l”. It doesn't pair up voiced/voiceless like the last few lessons — it's naturally voiced on its own.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑤"
+        ]
+      }
     },
     {
       "type": "choice",
@@ -27,7 +33,13 @@
     {
       "type": "teach",
       "title": "Meet mime",
-      "body": "The letter for mime is 𐑥, also naturally voiced with no unvoiced partner."
+      "body": "The letter for mime is 𐑥, also naturally voiced with no unvoiced partner.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑥"
+        ]
+      }
     },
     {
       "type": "teach",

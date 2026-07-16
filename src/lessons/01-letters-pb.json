@@ -6,13 +6,14 @@
   "exercises": [
     {
       "type": "teach",
-      "title": "Tall and deep letters",
-      "body": "Many Shavian consonants come in pairs: a tall letter for an unvoiced sound, and a deep letter for its voiced twin. Say “ffff”, then “vvvv” — feel your throat buzz on the second one? That buzz is voicing. Tall letters rise above the line; deep letters hang below it — a handy reminder, since your vocal cords sit low when they buzz."
-    },
-    {
-      "type": "teach",
       "title": "Meet peep",
-      "body": "The letter for peep is 𐑐. Say “p” — no buzz, so it's an unvoiced, tall letter. Its shape is just a simple stroke rising above the line."
+      "body": "The letter for peep is 𐑐. Say “p” — no buzz, so it's an unvoiced, tall letter. Its shape is just a simple stroke rising above the line.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑐"
+        ]
+      }
     },
     {
       "type": "teach",
@@ -44,7 +45,13 @@
     {
       "type": "teach",
       "title": "Meet bib",
-      "body": "The letter for bib is 𐑚 — sort of like an upside-down peep. See them together: 𐑐 𐑚. Say “bbb”: your vocal cords buzz, so this is the deep, voiced partner of peep."
+      "body": "The letter for bib is 𐑚 — sort of like an upside-down peep. See them together: 𐑐 𐑚. Say “bbb”: your vocal cords buzz, so this is the deep, voiced partner of peep.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑚"
+        ]
+      }
     },
     {
       "type": "teach",
@@ -190,6 +197,11 @@
       ],
       "correct": "𐑚𐑪𐑐",
       "correctLabel": "𐑚𐑪𐑐"
+    },
+    {
+      "type": "teach",
+      "title": "Tall and deep letters",
+      "body": "Many Shavian consonants come in pairs: a tall letter for an unvoiced sound, and a deep letter for its voiced twin. Say “ffff”, then “vvvv” — feel your throat buzz on the second one? That buzz is voicing. Tall letters rise above the line; deep letters hang below it — a handy reminder, since your vocal cords sit low when they buzz."
     },
     {
       "type": "choice",

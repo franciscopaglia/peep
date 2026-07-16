@@ -87,11 +87,18 @@
       ]
     },
     {
-      "type": "type",
-      "prompt": "𐑞 𐑒𐑨𐑑 𐑕𐑨𐑑",
-      "caption": "Type what this says",
-      "correct": "the cat sat",
-      "correctLabel": "the cat sat"
+      "type": "spot",
+      "prompt": "cat",
+      "words": [
+        "𐑞",
+        "𐑒𐑨𐑑",
+        "𐑕𐑨𐑑"
+      ],
+      "correct": 1,
+      "correctLabel": "𐑒𐑨𐑑",
+      "stops": [
+        2
+      ]
     },
     {
       "type": "choice",
@@ -181,11 +188,22 @@
       "correctLabel": "he had a red bike"
     },
     {
-      "type": "type",
-      "prompt": "𐑢𐑰 𐑕𐑦𐑑 𐑯 𐑮𐑧𐑕𐑑",
-      "caption": "Type what this says",
-      "correct": "we sit and rest",
-      "correctLabel": "we sit and rest"
+      "type": "arrange",
+      "promptEn": "we sit and rest",
+      "tiles": [
+        "𐑢𐑰",
+        "𐑕𐑦𐑑",
+        "𐑯",
+        "𐑮𐑧𐑕𐑑",
+        "𐑞"
+      ],
+      "answer": [
+        "𐑢𐑰",
+        "𐑕𐑦𐑑",
+        "𐑯",
+        "𐑮𐑧𐑕𐑑"
+      ],
+      "correctLabel": "𐑢𐑰 𐑕𐑦𐑑 𐑯 𐑮𐑧𐑕𐑑"
     },
     {
       "type": "choice",

@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { LESSONS, shuffleExerciseOptions } from '@/lessons';
 import { isCorrect, emptyAnswer, type AnswerState } from '@/lib/grading';
+import { lettersFor } from '@/lib/shavian-alphabet';
 import type { Exercise } from '@/lessons/types';
 
 const sorted = (a: string[]) => [...a].sort();
@@ -60,8 +61,23 @@ describe('lesson catalogue', () => {
 describe('lesson content is well-formed and solvable', () => {
   for (const lesson of LESSONS) {
     for (const [i, ex] of lesson.exercises.entries()) {
-      if (ex.type === 'teach') continue;
       const at = `L${lesson.id} #${i} ${ex.type}`;
+
+      if (ex.type === 'teach') {
+        const media = ex.media;
+        if (media?.kind === 'letters') {
+          it(`${at}: media letters are real Shavian letters`, () => {
+            expect(media.glyphs.length).toBeGreaterThan(0);
+            expect(lettersFor(media.glyphs).map((l) => l.glyph)).toEqual(media.glyphs);
+          });
+        }
+        if (media?.kind === 'video') {
+          it(`${at}: media video has a usable url`, () => {
+            expect(() => new URL(media.src)).not.toThrow();
+          });
+        }
+        continue;
+      }
 
       if (ex.type === 'match') {
         it(`${at}: left/right orders match the pairs`, () => {

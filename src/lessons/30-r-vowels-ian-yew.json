@@ -7,7 +7,13 @@
     {
       "type": "teach",
       "title": "Meet yew",
-      "body": "The letter for yew is 𐑿, the sound in few and use."
+      "body": "The letter for yew is 𐑿, the sound in few and use.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑿"
+        ]
+      }
     },
     {
       "type": "type",
@@ -87,7 +93,13 @@
     {
       "type": "teach",
       "title": "Meet ian",
-      "body": "One more ligature rounds out the family: ian, 𐑾 — a quick glide from “i” into “a”. It hides in some very common words: real is 𐑮𐑾𐑤, really 𐑮𐑾𐑤𐑦, and idea is 𐑲𐑛𐑾."
+      "body": "One more ligature rounds out the family: ian, 𐑾 — a quick glide from “i” into “a”. It hides in some very common words: real is 𐑮𐑾𐑤, really 𐑮𐑾𐑤𐑦, and idea is 𐑲𐑛𐑾.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑾"
+        ]
+      }
     },
     {
       "type": "choice",

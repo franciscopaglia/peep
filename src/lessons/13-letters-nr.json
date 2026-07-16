@@ -7,7 +7,13 @@
     {
       "type": "teach",
       "title": "Meet nun",
-      "body": "The letter for nun is 𐑯."
+      "body": "The letter for nun is 𐑯.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑯"
+        ]
+      }
     },
     {
       "type": "type",
@@ -34,7 +40,13 @@
     {
       "type": "teach",
       "title": "Meet roar",
-      "body": "The letter for roar is 𐑮 — the last of the everyday consonants. You now know enough to read hundreds of words."
+      "body": "The letter for roar is 𐑮 — the last of the everyday consonants. You now know enough to read hundreds of words.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑮"
+        ]
+      }
     },
     {
       "type": "type",

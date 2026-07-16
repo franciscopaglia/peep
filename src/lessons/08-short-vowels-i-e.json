@@ -7,7 +7,13 @@
     {
       "type": "teach",
       "title": "Officially: if",
-      "body": "You've seen 𐑦 a few times now — it's called if, the short “i” in sit and if."
+      "body": "You've seen 𐑦 a few times now — it's called if, the short “i” in sit and if.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑦"
+        ]
+      }
     },
     {
       "type": "choice",
@@ -27,7 +33,13 @@
     {
       "type": "teach",
       "title": "Meet egg",
-      "body": "The letter for egg is 𐑧, the short “e” in bed. It looks a little like the bottom half of a Latin “e”."
+      "body": "The letter for egg is 𐑧, the short “e” in bed. It looks a little like the bottom half of a Latin “e”.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑧"
+        ]
+      }
     },
     {
       "type": "type",
@@ -115,11 +127,23 @@
       "correctLabel": "bet"
     },
     {
-      "type": "type",
-      "prompt": "𐑐𐑧𐑑",
-      "caption": "Sound it out — what does this say?",
-      "correct": "pet",
-      "correctLabel": "pet"
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑧",
+        "𐑦",
+        "𐑨"
+      ],
+      "correctLabel": "𐑐𐑧𐑑",
+      "prompt": "pet",
+      "word": [
+        "𐑐",
+        "𐑧",
+        "𐑑"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
       "type": "type",

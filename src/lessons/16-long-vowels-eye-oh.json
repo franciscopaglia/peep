@@ -7,7 +7,13 @@
     {
       "type": "teach",
       "title": "Meet ice",
-      "body": "The letter for ice is 𐑲, the sound in time and bike."
+      "body": "The letter for ice is 𐑲, the sound in time and bike.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑲"
+        ]
+      }
     },
     {
       "type": "choice",
@@ -27,7 +33,13 @@
     {
       "type": "teach",
       "title": "Meet oak",
-      "body": "The letter for oak is 𐑴, the sound in boat and road."
+      "body": "The letter for oak is 𐑴, the sound in boat and road.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑴"
+        ]
+      }
     },
     {
       "type": "choice",

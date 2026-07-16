@@ -7,7 +7,13 @@
     {
       "type": "teach",
       "title": "Meet sure",
-      "body": "The letter for sure is 𐑖, the “sh” sound."
+      "body": "The letter for sure is 𐑖, the “sh” sound.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑖"
+        ]
+      }
     },
     {
       "type": "type",
@@ -19,7 +25,13 @@
     {
       "type": "teach",
       "title": "Meet church",
-      "body": "Say “t” right before “sh” and speed it up — that blend is the church sound, 𐑗. Its shape looks a little like the tot and sure letters pressed together."
+      "body": "Say “t” right before “sh” and speed it up — that blend is the church sound, 𐑗. Its shape looks a little like the tot and sure letters pressed together.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑗"
+        ]
+      }
     },
     {
       "type": "choice",
@@ -120,11 +132,24 @@
       "correctLabel": "rich"
     },
     {
-      "type": "type",
-      "prompt": "𐑚𐑮𐑳𐑖",
-      "caption": "Sound it out — what does this say?",
-      "correct": "brush",
-      "correctLabel": "brush"
+      "type": "complete",
+      "blanks": [
+        3
+      ],
+      "bank": [
+        "𐑖",
+        "𐑗",
+        "𐑕"
+      ],
+      "correctLabel": "𐑚𐑮𐑳𐑖",
+      "prompt": "brush",
+      "word": [
+        "𐑚",
+        "𐑮",
+        "𐑳",
+        "𐑖"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
       "type": "choice",

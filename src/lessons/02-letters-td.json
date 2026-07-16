@@ -6,13 +6,19 @@
   "exercises": [
     {
       "type": "teach",
-      "title": "A borrowed vowel: ash",
-      "body": "Another quick vowel: 𐑨, the short “a” heard in ash and cat. Keep it in mind — you'll be using it a lot this lesson."
+      "title": "Meet tot",
+      "body": "The letter for tot is 𐑑. Say “t” — unvoiced again, so it's tall, standing straight up like a little flagpole.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑑"
+        ]
+      }
     },
     {
       "type": "teach",
-      "title": "Meet tot",
-      "body": "The letter for tot is 𐑑. Say “t” — unvoiced again, so it's tall, standing straight up like a little flagpole."
+      "title": "A borrowed vowel: ash",
+      "body": "Another quick vowel: 𐑨, the short “a” heard in ash and cat. Keep it in mind — you'll be using it a lot this lesson."
     },
     {
       "type": "type",
@@ -39,7 +45,13 @@
     {
       "type": "teach",
       "title": "Meet dead",
-      "body": "The letter for dead is 𐑛 — the voiced, deep partner of tot. Compare: 𐑑 𐑛. Say “ddd” and feel the buzz."
+      "body": "The letter for dead is 𐑛 — the voiced, deep partner of tot. Compare: 𐑑 𐑛. Say “ddd” and feel the buzz.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑛"
+        ]
+      }
     },
     {
       "type": "choice",

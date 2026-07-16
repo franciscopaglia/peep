@@ -7,7 +7,13 @@
     {
       "type": "teach",
       "title": "Meet array",
-      "body": "The letter for array is 𐑼 — the soft, unstressed “-er” you hear trailing off the end of better and over. It's one of the most common letters in Shavian, since English loves that ending."
+      "body": "The letter for array is 𐑼 — the soft, unstressed “-er” you hear trailing off the end of better and over. It's one of the most common letters in Shavian, since English loves that ending.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑼"
+        ]
+      }
     },
     {
       "type": "type",
@@ -87,7 +93,13 @@
     {
       "type": "teach",
       "title": "Meet ear",
-      "body": "The letter for ear is 𐑽, the sound in ear itself, and in here."
+      "body": "The letter for ear is 𐑽, the sound in ear itself, and in here.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑽"
+        ]
+      }
     },
     {
       "type": "type",

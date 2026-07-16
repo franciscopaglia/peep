@@ -7,7 +7,13 @@
     {
       "type": "teach",
       "title": "Meet so",
-      "body": "The letter for so is 𐑕. Unvoiced again — a simple curve, a bit like the Latin letter S."
+      "body": "The letter for so is 𐑕. Unvoiced again — a simple curve, a bit like the Latin letter S.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑕"
+        ]
+      }
     },
     {
       "type": "type",
@@ -19,7 +25,13 @@
     {
       "type": "teach",
       "title": "Meet zoo",
-      "body": "The letter for zoo is 𐑟 — the voiced, deep partner of so. It's even shaped like a reversed 𐑕! Say “zzz” and feel the buzz."
+      "body": "The letter for zoo is 𐑟 — the voiced, deep partner of so. It's even shaped like a reversed 𐑕! Say “zzz” and feel the buzz.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑟"
+        ]
+      }
     },
     {
       "type": "choice",

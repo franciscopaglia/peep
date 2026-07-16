@@ -12,7 +12,13 @@
     {
       "type": "teach",
       "title": "Meet are",
-      "body": "The letter for are is 𐑸, the sound in car and far."
+      "body": "The letter for are is 𐑸, the sound in car and far.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑸"
+        ]
+      }
     },
     {
       "type": "type",
@@ -63,7 +69,13 @@
     {
       "type": "teach",
       "title": "Meet or",
-      "body": "The letter for or is 𐑹, the sound in four and form."
+      "body": "The letter for or is 𐑹, the sound in four and form.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑹"
+        ]
+      }
     },
     {
       "type": "type",

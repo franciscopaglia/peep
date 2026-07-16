@@ -7,7 +7,13 @@
     {
       "type": "teach",
       "title": "Meet fee",
-      "body": "The letter for fee is 𐑓. Say “f” — a hiss with no buzz, so it's unvoiced and tall."
+      "body": "The letter for fee is 𐑓. Say “f” — a hiss with no buzz, so it's unvoiced and tall.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑓"
+        ]
+      }
     },
     {
       "type": "choice",
@@ -27,7 +33,13 @@
     {
       "type": "teach",
       "title": "Meet vow",
-      "body": "The letter for vow is 𐑝 — the voiced, deep partner of fee. Compare: 𐑓 𐑝. Say “vvv” and feel the buzz in your throat."
+      "body": "The letter for vow is 𐑝 — the voiced, deep partner of fee. Compare: 𐑓 𐑝. Say “vvv” and feel the buzz in your throat.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑝"
+        ]
+      }
     },
     {
       "type": "type",

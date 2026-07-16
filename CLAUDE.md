@@ -95,9 +95,11 @@ letters), `fill` (fill a sentence's missing words), `cloze` (fill a passage's
 blanks), `spot` (tap the word in a sentence that means the English prompt —
 graded by word *index*, since sentences can repeat a word), `transcribe`
 (read a real Shavian passage, write the full English; compared through
-`normalizeTranscription` — case/punctuation/whitespace-insensitive, with
-`accept` for spelling variants; passages must be real sourced texts, never
-invented), `write` (spell an English word in Shavian on the full on-screen
+`transcriptionMatches` — case/punctuation/whitespace-insensitive, and each word
+may be off by up to its `editBudget` (0 letters for ≤2-letter words, 1 for 3–4,
+2 for longer) so a typo doesn't fail a *reading* exercise, while word count must
+still match; `accept` for spelling variants; passages must be real sourced
+texts, never invented), `write` (spell an English word in Shavian on the full on-screen
 keyboard — layout in `lib/shavian-keyboard.ts`, chart-paired rows, exact
 glyph match plus `accept`). `teach` is not
 graded; `match` is graded through its own pairing flow in `App.tsx` (not via
@@ -144,6 +146,17 @@ for the grammar. Run `lesson.mjs check` plus `npm test` after content changes.
   the tiles/bank.
 - Pass mark is **60% first-try accuracy** (`PASS_THRESHOLD`); below that the
   lesson is "not passed" and the next stays locked.
+- A `teach` card may carry one **`media=`** visual above its body, tagged by
+  kind: `letters:𐑐𐑚` reuses the About page's letter cards (the letter-intro
+  cards all use this), or `video:<url> | caption` embeds a player. Add a kind by
+  extending `TeachMedia` in `lessons/types.ts` and `components/TeachMedia.tsx`.
+- Letter media cards carry a **speaker button** (`AlphabetReferenceTable`'s
+  opt-in `speak` prop; the About page leaves it off) that reads the letter's
+  name aloud — first tap at normal speed, then alternating slow/normal. See
+  `components/SpeakButton.tsx`: it hands `useSpeech` its text at **mount** and
+  flips the rate only in `onStop`, because `react-text-to-speech` defers text
+  changes through a timeout (text passed at click time speaks as empty) and
+  restarts the utterance if the rate changes mid-speech (one tap heard twice).
 - In `teach` bodies, Shavian runs render as chips. Wrap a span in `[[ … ]]` to
   render it as **one** chip (a short phrase) instead of one per word. Wrap a
   passage in `{{ … }}` to render it as a full-width **display block** — use
@@ -181,7 +194,9 @@ Reuse before adding. Common patterns already have a home:
 - **Shared components, not copies:** `Button` (variants `primary|outline|
   inverted`, sizes `sm|md`), `Chip` (Shavian glyph/badge), `SectionLabel`,
   `ComingSoonCard`, `ReportProblem`, `AlphabetChart` / `AlphabetReferenceTable`.
-- **Single sources of truth:** grading → `lib/grading.ts`; URLs + issue links →
+- **Single sources of truth:** grading → `lib/grading.ts`; the 48 letters and
+  their sounds/IPA/examples → `lib/shavian-alphabet.ts` (the About table, the
+  Landing chart and teach-card letter media all read it); URLs + issue links →
   `lib/constants.ts`; the site-wide report modal content → `siteReport` in
   `lib/report.tsx` (used by both nav and footer); glyph-chip rendering →
   `lib/shavian-text.tsx`; class merging → `cn` in `lib/utils.ts`. If you find

@@ -7,7 +7,13 @@
     {
       "type": "teach",
       "title": "Meet woe",
-      "body": "The letter for woe is 𐑢, the “w” sound."
+      "body": "The letter for woe is 𐑢, the “w” sound.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑢"
+        ]
+      }
     },
     {
       "type": "choice",
@@ -34,7 +40,13 @@
     {
       "type": "teach",
       "title": "Meet ha-ha",
-      "body": "The letter for ha-ha is 𐑣, the “h” sound — just a breath, with your throat wide open."
+      "body": "The letter for ha-ha is 𐑣, the “h” sound — just a breath, with your throat wide open.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑣"
+        ]
+      }
     },
     {
       "type": "choice",

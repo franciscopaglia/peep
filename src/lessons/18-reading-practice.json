@@ -141,11 +141,24 @@
       "correctLabel": "sleep"
     },
     {
-      "type": "type",
-      "prompt": "𐑑𐑴𐑕𐑑",
-      "caption": "Sound it out — what does this say?",
-      "correct": "toast",
-      "correctLabel": "toast"
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑴",
+        "𐑪",
+        "𐑵"
+      ],
+      "correctLabel": "𐑑𐑴𐑕𐑑",
+      "prompt": "toast",
+      "word": [
+        "𐑑",
+        "𐑴",
+        "𐑕",
+        "𐑑"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
       "type": "type",

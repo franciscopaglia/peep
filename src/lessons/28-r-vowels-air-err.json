@@ -7,7 +7,13 @@
     {
       "type": "teach",
       "title": "Meet air",
-      "body": "The letter for air is 𐑺, the sound in hair and care."
+      "body": "The letter for air is 𐑺, the sound in hair and care.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑺"
+        ]
+      }
     },
     {
       "type": "type",
@@ -70,7 +76,13 @@
     {
       "type": "teach",
       "title": "Meet err",
-      "body": "The letter for err is 𐑻, the sound in her and sir."
+      "body": "The letter for err is 𐑻, the sound in her and sir.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑻"
+        ]
+      }
     },
     {
       "type": "type",
