@@ -3,16 +3,17 @@ import { SpeakButton } from '@/components/SpeakButton';
 import { cn } from '@/lib/utils';
 
 /**
- * Highlight the letters of a name that spell the sound ("p" in "peep"). Weight
- * alone can't carry this — the names are already semibold, so bolding was a
- * 600-vs-800 difference in the same colour and read as no difference at all.
- * Colour does the work; the weight bump just reinforces it.
+ * Highlight the letters of a name that spell the sound ("p" in "peep"). The
+ * key sits at full foreground weight while the rest of the name stays muted
+ * (the callers set the muted base), so the contrast is dark-vs-grey rather
+ * than an extra colour. Weight alone can't carry it — the names are semibold,
+ * so bolding was a 600-vs-800 difference in one colour and read as none.
  */
 function boldKey(word: string, key: string) {
   const parts = word.split(new RegExp(`(${key})`, 'gi'));
   return parts.map((part, i) =>
     part.toLowerCase() === key.toLowerCase() ? (
-      <strong key={i} className="font-extrabold text-accent">
+      <strong key={i} className="font-extrabold text-foreground">
         {part}
       </strong>
     ) : (
@@ -66,9 +67,11 @@ export function AlphabetReferenceTable({
             {g.glyph}
           </span>
           <div className="flex-1 min-w-0 flex flex-col gap-0.5">
-            <div className="text-[13px] font-semibold text-foreground">
+            {/* Mono, normal-weight base — matches the Landing chart, so the
+                extrabold key stands out instead of the whole name reading bold. */}
+            <div className="font-mono text-[13px] text-muted-foreground">
               {boldKey(g.sound, g.key)}{' '}
-              <span className="font-mono text-[11px] font-normal text-muted-foreground">
+              <span className="text-[11px] font-normal text-muted-foreground">
                 ({g.ipa})
               </span>
             </div>
