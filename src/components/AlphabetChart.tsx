@@ -2,11 +2,17 @@ import { SHAVIAN_ALPHABET, lettersFor, type ShavianLetter } from '@/lib/shavian-
 import { SpeakButton } from '@/components/SpeakButton';
 import { cn } from '@/lib/utils';
 
+/**
+ * Highlight the letters of a name that spell the sound ("p" in "peep"). Weight
+ * alone can't carry this — the names are already semibold, so bolding was a
+ * 600-vs-800 difference in the same colour and read as no difference at all.
+ * Colour does the work; the weight bump just reinforces it.
+ */
 function boldKey(word: string, key: string) {
   const parts = word.split(new RegExp(`(${key})`, 'gi'));
   return parts.map((part, i) =>
     part.toLowerCase() === key.toLowerCase() ? (
-      <strong key={i} className="font-extrabold text-foreground">
+      <strong key={i} className="font-extrabold text-accent">
         {part}
       </strong>
     ) : (
