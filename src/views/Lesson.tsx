@@ -1,7 +1,6 @@
-import type { ReactNode } from 'react';
 import { ChevronLeft, ChevronRight, Delete, X } from 'lucide-react';
 import type { Exercise } from '@/lessons';
-import { cn } from '@/lib/utils';
+import { IconButton } from '@/components/IconButton';
 import { renderWithGlyphChips } from '@/lib/shavian-text';
 import { keyboardRows, NAMING_DOT } from '@/lib/shavian-keyboard';
 import { useIsMobile } from '@/hooks/useIsMobile';
@@ -44,34 +43,6 @@ function matchCellColors(matched: boolean, wrong: boolean, sel: boolean) {
   if (sel)
     return { border: 'var(--accent)', bg: 'var(--accent-soft)', color: 'var(--accent)' };
   return { border: 'var(--border)', bg: 'var(--card)', color: 'var(--foreground)' };
-}
-
-function StepButton({
-  onClick,
-  enabled,
-  label,
-  children,
-}: {
-  onClick: () => void;
-  enabled: boolean;
-  label: string;
-  children: ReactNode;
-}) {
-  return (
-    <button
-      className={cn(
-        'w-7 h-9 border-none bg-transparent flex items-center justify-center',
-        enabled
-          ? 'text-muted-foreground cursor-pointer hover:text-accent'
-          : 'text-border cursor-default'
-      )}
-      onClick={enabled ? onClick : undefined}
-      disabled={!enabled}
-      aria-label={label}
-    >
-      {children}
-    </button>
-  );
 }
 
 export function Lesson({
@@ -194,13 +165,9 @@ export function Lesson({
   return (
     <div className="max-w-[640px] mx-auto px-5 sm:px-6 pt-6 sm:pt-7 pb-10 flex flex-col box-border" style={{ minHeight: '100dvh' }}>
       <div className="flex items-center gap-3 sm:gap-4 mb-9 sm:mb-11">
-        <button
-          className="w-9 h-9 border-none bg-transparent text-muted-foreground cursor-pointer flex-none flex items-center justify-center"
-          onClick={onClose}
-          aria-label="Close lesson"
-        >
-          <X size={20} />
-        </button>
+        <IconButton onClick={onClose} aria-label="Close lesson">
+          <X size={18} />
+        </IconButton>
         <div className="flex-1 h-3 bg-border rounded-full overflow-hidden">
           <div
             className="h-full bg-accent rounded-full transition-[width] duration-300"
@@ -213,13 +180,13 @@ export function Lesson({
         {/* Step over ground already seen — answers and results come back with
             you. Forward stops at the furthest exercise reached, so this can
             never jump past one without answering it. */}
-        <div className="flex-none flex items-center">
-          <StepButton onClick={onGoBack} enabled={canGoBack} label="Previous exercise">
+        <div className="flex-none flex items-center gap-1.5">
+          <IconButton onClick={onGoBack} disabled={!canGoBack} aria-label="Previous exercise">
             <ChevronLeft size={18} />
-          </StepButton>
-          <StepButton onClick={onGoForward} enabled={canGoForward} label="Next exercise">
+          </IconButton>
+          <IconButton onClick={onGoForward} disabled={!canGoForward} aria-label="Next exercise">
             <ChevronRight size={18} />
-          </StepButton>
+          </IconButton>
         </div>
         <ReportProblem
           issueUrl={lessonIssueUrl(lessonId, lessonTitle, Math.min(exIndex + 1, exTotal))}

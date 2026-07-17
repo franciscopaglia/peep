@@ -52,6 +52,12 @@ Only spellings a lesson *asserts* are checked: a choice's wrong options and a
 bank's distractors are non-words on purpose (𐑐𐑪𐑚 "pob"), and single glyphs in
 prose are letters being taught, not words.
 
+**A `match` pair is always a word claim**, so a lone glyph gets no exemption
+there: `𐑞=the` passes because 𐑞 really is that word, but `𐑧=bed` is caught —
+𐑧 is the *letter* in "bed", and bed is 𐑚𐑧𐑛. Never pair a letter with an
+example word in a `match`; a match means "translates to". Use a `choice`
+("which letter makes “e” as in bed?") to drill a letter's sound.
+
 A few spellings are right even though the lexicon disagrees — informal words it
 omits (𐑚𐑪𐑐 "bop"), an affix quoted while being taught (𐑩𐑛), a letter-name it
 files under its Latin form (𐑟𐑧𐑛 → "z"). Those live in

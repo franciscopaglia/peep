@@ -1,6 +1,7 @@
 import { useState, type ReactNode } from 'react';
 import { Flag } from 'lucide-react';
 import { Button } from '@/components/Button';
+import { IconButton } from '@/components/IconButton';
 import { Modal } from '@/components/Modal';
 
 /**
@@ -8,9 +9,9 @@ import { Modal } from '@/components/Modal';
  * GitHub's issue form (which is jargon-heavy and needs an account), it first
  * shows a short, plain-language explanation of what will happen.
  *
- * Used in a few places: an inline pill inside lessons (with the exercise
- * pre-filled), an icon-only button in the header, and a plain text link in the
- * footer — all opening the same modal.
+ * Used in a few places: a labelled button in the lesson header (with the
+ * exercise pre-filled), an icon-only one in the nav, and a plain text link in
+ * the footer — all opening the same modal.
  */
 export function ReportProblem({
   issueUrl,
@@ -44,17 +45,7 @@ export function ReportProblem({
 
   return (
     <>
-      {trigger === 'icon' ? (
-        <button
-          type="button"
-          onClick={() => setOpen(true)}
-          title={tooltip}
-          aria-label={tooltip}
-          className="h-[38px] w-[38px] flex-none box-border inline-flex items-center justify-center border border-border bg-card text-muted-foreground rounded-btn cursor-pointer transition-colors hover:text-accent hover:border-accent-border hover:bg-accent-soft"
-        >
-          <Flag size={17} />
-        </button>
-      ) : trigger === 'link' ? (
+      {trigger === 'link' ? (
         <button
           type="button"
           onClick={() => setOpen(true)}
@@ -63,15 +54,14 @@ export function ReportProblem({
           {label}
         </button>
       ) : (
-        <button
-          type="button"
+        <IconButton
           onClick={() => setOpen(true)}
           title={tooltip}
-          className="flex-none inline-flex items-center gap-1.5 h-8 px-3 rounded-btn border border-border bg-card text-[13px] font-medium text-muted-foreground transition-colors hover:text-accent hover:border-accent-border hover:bg-accent-soft"
+          aria-label={tooltip}
+          label={trigger === 'pill' ? label : undefined}
         >
-          <Flag size={14} />
-          <span className="hidden sm:inline">{label}</span>
-        </button>
+          <Flag size={trigger === 'pill' ? 15 : 17} />
+        </IconButton>
       )}
 
       {open && (

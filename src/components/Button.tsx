@@ -20,7 +20,7 @@ const SIZES: Record<ButtonSize, string> = {
 
 /**
  * The app's page-level call-to-action button, styled with the design tokens.
- * (Distinct from the unused shadcn `ui/button`, which follows a different token set.)
+ * For a square outlined control (close, step, report), see `IconButton`.
  */
 export function Button({
   variant = 'primary',

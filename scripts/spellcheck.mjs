@@ -72,13 +72,16 @@ const lessonFiles = () =>
 // A gloss is a *list* — a prompt may accept several readings (𐑑𐑵 is "too" and
 // "two"), and any one of them vindicates the spelling.
 
-function claim(out, at, shaw, gloss = null) {
+// `strict` claims never get the single-glyph exemption below — use it where a
+// lone letter is genuinely being claimed to *be* a word (a match pair), not
+// merely mentioned as a letter.
+function claim(out, at, shaw, gloss = null, strict = false) {
   const word = lookupKey(shaw);
   const glosses = gloss === null ? null : [gloss].flat().map(normEn).filter(Boolean);
   // A lone letter in prose is a letter reference ("the letter for peep is 𐑐"),
   // not a word — only check single glyphs when a gloss is actually claimed.
   if (!word || (glyphs(word) === 1 && !glosses?.length)) return;
-  out.push({ at, shaw: word, gloss: glosses?.length ? glosses : null });
+  out.push({ at, shaw: word, gloss: glosses?.length ? glosses : null, strict });
 }
 
 /**
@@ -87,11 +90,11 @@ function claim(out, at, shaw, gloss = null) {
  * loose translation) the alignment would be guesswork, so each Shavian word is
  * only checked for existence.
  */
-function pair(out, at, shawText, enText) {
+function pair(out, at, shawText, enText, strict = false) {
   const sw = shawWords(shawText);
   const ew = normEn(enText).split(' ').filter(Boolean);
   if (sw.length && sw.length === ew.length) {
-    sw.forEach((w, i) => claim(out, at, w, ew[i]));
+    sw.forEach((w, i) => claim(out, at, w, ew[i], strict));
   } else {
     sw.forEach((w) => claim(out, at, w));
   }
@@ -125,7 +128,9 @@ function claimsFor(ex, at, out) {
       }
       break;
     case 'match':
-      for (const [shaw, en] of Object.entries(ex.pairs)) pair(out, at, shaw, en);
+      // A match pair says "this Shavian means this English", so even a lone
+      // glyph is a word claim: 𐑞 really is "the", but 𐑧 is not "bed".
+      for (const [shaw, en] of Object.entries(ex.pairs)) pair(out, at, shaw, en, true);
       break;
     case 'build':
       pair(out, at, ex.answer.join(''), ex.prompt);
@@ -214,7 +219,10 @@ const rows = new Map();
 for (const c of claims) {
   const key = `${c.shaw}|${c.gloss?.join(',') ?? ''}`;
   if (!rows.has(key)) rows.set(key, { ...c, at: [] });
-  rows.get(key).at.push(c.at);
+  const row = rows.get(key);
+  row.at.push(c.at);
+  // One strict claim is enough to hold the whole row to the strict rule.
+  row.strict = row.strict || c.strict;
 }
 
 // Spellings a human has already vetted — see spellcheck-allow.json.
@@ -232,7 +240,8 @@ for (const row of rows.values()) {
   // taught, not a spelling — "which letter makes the “p” sound?" is asking
   // about 𐑐 the letter. The single glyphs that *are* words (𐑞 𐑯 𐑑 𐑝 𐑓 𐑲 𐑩)
   // are in the lexicon, so they still get checked against their gloss.
-  if (v.status === 'missing' && glyphs(row.shaw) === 1) continue;
+  // A `strict` claim waives the exemption: there, the letter *is* the claim.
+  if (v.status === 'missing' && glyphs(row.shaw) === 1 && !row.strict) continue;
 
   // Only a *problem* can be waved through — an allowlist entry must never hide
   // a spelling that has quietly gone from right to wrong.

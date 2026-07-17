@@ -83,27 +83,42 @@ export function Dashboard({
           <p className="text-[15px] text-muted-foreground m-0">
             Learn the Shavian alphabet, one lesson at a time.
           </p>
-        </div>
-
-        <div className="flex flex-wrap items-center gap-4 p-[18px] bg-card border border-border rounded-card shadow-sm">
-          <div className="w-14 h-14 flex-none rounded-card bg-accent-soft text-accent flex items-center justify-center text-xl font-bold">
-            {current.glyph}
-          </div>
-          <div className="flex-1 min-w-[160px] flex flex-col gap-2">
-            <div className="text-xs font-medium text-muted-foreground">
-              Lesson {currentNo} of {LESSON_META.length}
-            </div>
-            <div className="text-[17px] font-semibold text-foreground leading-tight">
-              {current.title}
-            </div>
-            <div className="h-2 bg-border rounded-full overflow-hidden mt-0.5">
+          {/* Progress through the whole course belongs to the course heading —
+              inside the lesson card it read as progress through that lesson. */}
+          <div className="mt-4 flex items-center gap-3">
+            <div className="flex-1 h-2 bg-border rounded-full overflow-hidden">
               <div
                 className="h-full bg-accent rounded-full transition-[width] duration-300"
                 style={{ width: `${overallPct}%` }}
               />
             </div>
+            <div className="flex-none text-xs font-medium text-muted-foreground">
+              {completedCount} of {LESSON_META.length} lessons
+            </div>
           </div>
-          <Button size="sm" className="flex-none" onClick={onContinueCurrent}>
+        </div>
+
+        {/* Glyph and title stay a pair; only the button drops below them, and
+            it goes full-width there rather than stranding bottom-left. */}
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4 p-[18px] bg-card border border-border rounded-card shadow-sm">
+          <div className="flex-1 min-w-0 flex items-center gap-4">
+            <div className="w-14 h-14 flex-none rounded-card bg-accent-soft text-accent flex items-center justify-center text-xl font-bold">
+              {current.glyph}
+            </div>
+            <div className="min-w-0 flex flex-col gap-1">
+              <div className="text-xs font-medium text-muted-foreground">
+                Lesson {currentNo} of {LESSON_META.length}
+              </div>
+              <div className="text-[17px] font-semibold text-foreground leading-tight">
+                {current.title}
+              </div>
+            </div>
+          </div>
+          <Button
+            size="sm"
+            className="flex-none w-full sm:w-auto"
+            onClick={onContinueCurrent}
+          >
             Continue
           </Button>
         </div>
@@ -151,13 +166,16 @@ export function Dashboard({
                   const showLock = locked && !completed;
                   const isNext = lesson.id === completedCount + 1;
 
+                  // Done and current share one treatment — soft fill, mid-tone
+                  // border, saturated mark — so the path reads as one family and
+                  // only the colour (and the mark itself) says which is which.
                   let nodeBg = 'var(--card)';
                   let nodeBorder = 'var(--border)';
                   let nodeColor = 'var(--foreground)';
                   if (completed) {
-                    nodeBg = 'var(--success)';
-                    nodeBorder = 'var(--success)';
-                    nodeColor = 'var(--card)';
+                    nodeBg = 'var(--success-soft)';
+                    nodeBorder = 'var(--success-border)';
+                    nodeColor = 'var(--success)';
                   } else if (locked) {
                     nodeBg = 'var(--locked-bg)';
                     nodeBorder = 'var(--border)';

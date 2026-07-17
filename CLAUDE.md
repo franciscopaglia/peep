@@ -160,6 +160,10 @@ for the grammar. Run `lesson.mjs check` plus `npm test` after content changes.
 - `correctLabel` must equal the joined answer (letters for `build`, space-joined
   words for `arrange`/`fill`/`cloze`, the full word for `complete`).
 - `choice`: options distinct and include `correct`.
+- `match` pairs mean "**translates to**", so never pair a letter with a word
+  that merely contains its sound (`𐑧` → "bed" is wrong — bed is `𐑚𐑧𐑛`; `𐑞` →
+  "the" is fine, since 𐑞 *is* that word). Drill a letter's sound with a
+  `choice` instead. `npm run spellcheck` enforces this.
 - `build`/`arrange`/`complete`/`fill`/`cloze`: the answer must be buildable from
   the tiles/bank.
 - Pass mark is **60% first-try accuracy** (`PASS_THRESHOLD`); below that the

@@ -17,7 +17,7 @@ const RESOURCE_GROUPS: { id: string; label: string; items: Resource[] }[] = [
       {
         title: 'Shavian.info',
         desc: 'The community reference hub — history, rules and design notes for the alphabet.',
-        url: 'https://www.shavian.info',
+        url: 'https://shavian.info/',
         icon: Landmark,
       },
       {
@@ -53,13 +53,14 @@ const RESOURCE_GROUPS: { id: string; label: string; items: Resource[] }[] = [
       {
         title: 'ReadLex dictionary',
         desc: 'Look up how any English word is spelled in Shavian, with pronunciation variants.',
-        url: 'https://readlex.pw',
+        url: 'https://readlex.pythonanywhere.com/',
         icon: BookOpen,
       },
       {
         title: 'Type in Shavian',
         desc: 'Keyboard layouts and input tools for writing Shavian on your own devices.',
-        url: 'https://www.dechifro.org/shavian/',
+        // No "www." — that host's TLS certificate doesn't cover it.
+        url: 'https://dechifro.org/shavian/',
         icon: Keyboard,
       },
       {
