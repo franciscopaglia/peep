@@ -159,32 +159,32 @@
     },
     {
       "type": "type",
-      "prompt": "𐑮𐑪𐑒𐑦𐑑",
+      "prompt": "𐑮𐑨𐑚𐑦𐑑",
       "caption": "Two syllables — take it slowly. What does this say?",
-      "correct": "rocket",
-      "correctLabel": "rocket"
+      "correct": "rabbit",
+      "correctLabel": "rabbit"
     },
     {
       "type": "type",
-      "prompt": "𐑚𐑨𐑕𐑒𐑦𐑑",
+      "prompt": "𐑐𐑦𐑒𐑯𐑦𐑒",
       "caption": "Two syllables — take it slowly. What does this say?",
-      "correct": "basket",
-      "correctLabel": "basket"
+      "correct": "picnic",
+      "correctLabel": "picnic"
     },
     {
       "type": "choice",
       "promptIsGlyph": true,
-      "prompt": "𐑡𐑨𐑒𐑦𐑑",
+      "prompt": "𐑕𐑨𐑯𐑢𐑦𐑡",
       "caption": "What does this word mean?",
       "optionIsGlyph": false,
       "options": [
-        "jacket",
-        "jackal",
-        "racket",
-        "packet"
+        "sandwich",
+        "sandpit",
+        "sandbag",
+        "sunset"
       ],
-      "correct": "jacket",
-      "correctLabel": "jacket"
+      "correct": "sandwich",
+      "correctLabel": "sandwich"
     },
     {
       "type": "choice",
@@ -263,20 +263,20 @@
     {
       "type": "match",
       "pairs": {
+        "𐑮𐑨𐑚𐑦𐑑": "rabbit",
         "𐑤𐑳𐑯𐑗": "lunch",
-        "𐑚𐑧𐑯𐑗": "bench",
         "𐑕𐑑𐑮𐑪𐑙": "strong",
-        "𐑮𐑪𐑒𐑦𐑑": "rocket"
+        "𐑚𐑧𐑯𐑗": "bench"
       },
       "leftOrder": [
-        "𐑮𐑪𐑒𐑦𐑑",
+        "𐑮𐑨𐑚𐑦𐑑",
         "𐑤𐑳𐑯𐑗",
         "𐑕𐑑𐑮𐑪𐑙",
         "𐑚𐑧𐑯𐑗"
       ],
       "rightOrder": [
         "lunch",
-        "rocket",
+        "rabbit",
         "bench",
         "strong"
       ]

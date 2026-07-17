@@ -182,10 +182,10 @@
     },
     {
       "type": "type",
-      "prompt": "𐑐𐑪𐑒𐑦𐑑",
+      "prompt": "𐑚𐑦𐑕𐑒𐑦𐑑",
       "caption": "Two syllables — sound out each part, then say it.",
-      "correct": "pocket",
-      "correctLabel": "pocket"
+      "correct": "biscuit",
+      "correctLabel": "biscuit"
     },
     {
       "type": "choice",

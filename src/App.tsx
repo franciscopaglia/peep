@@ -13,6 +13,31 @@ import type { View } from '@/types';
 
 type Status = 'active' | 'correct' | 'wrong';
 
+/**
+ * One exercise's saved work. Stepping back and forth restores these instead of
+ * resetting, so an answer is never lost — and a graded one comes back `correct`
+ * or `wrong`, which is what locks its inputs and stops it being scored twice.
+ */
+type Attempt = {
+  selected: string | null;
+  typedValue: string;
+  status: Status;
+  matchedKeys: string[];
+  buildSel: number[];
+  arrangeSel: number[];
+  fillSel: number[];
+};
+
+const emptyAttempt: Attempt = {
+  selected: null,
+  typedValue: '',
+  status: 'active',
+  matchedKeys: [],
+  buildSel: [],
+  arrangeSel: [],
+  fillSel: [],
+};
+
 const PROGRESS_KEY = 'shavian-progress';
 
 function useProgress() {
@@ -87,23 +112,28 @@ export default function App() {
   // Shared by 'complete' and 'fill': bank indices chosen for the blanks, in order.
   const [fillSel, setFillSel] = useState<number[]>([]);
   const [score, setScore] = useState(0);
+  // Work saved per exercise index, and how far into the lesson we've reached —
+  // you can navigate over ground you've seen, but not jump ahead of it.
+  const [attempts, setAttempts] = useState<Record<number, Attempt>>({});
+  const [furthest, setFurthest] = useState(0);
 
   const setView = useCallback((v: View) => {
     setViewRaw(v);
     window.scrollTo(0, 0);
   }, []);
 
-  const resetExerciseState = useCallback(() => {
-    setSelected(null);
-    setTypedValue('');
-    setStatus('active');
+  const applyAttempt = useCallback((a: Attempt) => {
+    setSelected(a.selected);
+    setTypedValue(a.typedValue);
+    setStatus(a.status);
+    setMatchedKeys(a.matchedKeys);
+    setBuildSel(a.buildSel);
+    setArrangeSel(a.arrangeSel);
+    setFillSel(a.fillSel);
+    // A half-finished match tap is mid-gesture state, never worth restoring.
     setMatchSelLeft(null);
     setMatchSelRight(null);
-    setMatchedKeys([]);
     setMatchWrong(false);
-    setBuildSel([]);
-    setArrangeSel([]);
-    setFillSel([]);
   }, []);
 
   const startLesson = useCallback(
@@ -114,11 +144,13 @@ export default function App() {
       setActiveLessonId(id);
       setExercises(lessonExercises);
       setExIndex(0);
-      resetExerciseState();
+      applyAttempt(emptyAttempt);
+      setAttempts({});
+      setFurthest(0);
       setScore(0);
       setView('lesson');
     },
-    [completedCount, setView, resetExerciseState]
+    [completedCount, setView, applyAttempt]
   );
 
   const continueCurrent = useCallback(() => {
@@ -135,6 +167,41 @@ export default function App() {
     [setCompletedCount]
   );
 
+  /**
+   * Move within the exercises already reached, saving the current work and
+   * restoring the target's. Score is never touched: a point is awarded once, by
+   * `checkAnswer`, and revisiting a graded exercise can't re-award it because
+   * its restored status is no longer 'active'.
+   */
+  const goTo = useCallback(
+    (index: number) => {
+      if (index === exIndex || index < 0 || index >= exercises.length) return;
+      setAttempts((prev) => ({
+        ...prev,
+        [exIndex]: { selected, typedValue, status, matchedKeys, buildSel, arrangeSel, fillSel },
+      }));
+      applyAttempt(attempts[index] ?? emptyAttempt);
+      setExIndex(index);
+      setFurthest((f) => Math.max(f, index));
+    },
+    [
+      exIndex,
+      exercises.length,
+      attempts,
+      applyAttempt,
+      selected,
+      typedValue,
+      status,
+      matchedKeys,
+      buildSel,
+      arrangeSel,
+      fillSel,
+    ]
+  );
+
+  const goBack = useCallback(() => goTo(exIndex - 1), [goTo, exIndex]);
+  const goForward = useCallback(() => goTo(exIndex + 1), [goTo, exIndex]);
+
   const continueNext = useCallback(() => {
     const nextIndex = exIndex + 1;
     if (nextIndex >= exercises.length) {
@@ -144,9 +211,8 @@ export default function App() {
       if (passed) setCompletedCount((c) => Math.max(c, activeLessonId));
       return;
     }
-    resetExerciseState();
-    setExIndex(nextIndex);
-  }, [exIndex, exercises, score, activeLessonId, setView, setCompletedCount, resetExerciseState]);
+    goTo(nextIndex);
+  }, [exIndex, exercises, score, activeLessonId, setView, setCompletedCount, goTo]);
 
   const checkAnswer = useCallback(() => {
     const ex = exercises[exIndex];
@@ -389,6 +455,10 @@ export default function App() {
           lessonId={activeLessonId}
           lessonTitle={activeLessonTitle}
           status={status}
+          canGoBack={exIndex > 0}
+          canGoForward={exIndex < furthest}
+          onGoBack={goBack}
+          onGoForward={goForward}
           selected={selected}
           typedValue={typedValue}
           buildSel={buildSel}

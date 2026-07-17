@@ -31,6 +31,36 @@ it can gate a script.
 3. **`NOT FOUND` means you invented it.** Don't ship it; look for the real
    form (try the base word, or a different sound analysis).
 
+## Auditing what's already there
+
+`npm run spellcheck` checks the **whole curriculum** in one pass — use it after
+a batch of edits, or to vet a lesson you didn't write:
+
+```bash
+npm run spellcheck                 # problems only
+node scripts/spellcheck.mjs --all        # also list every verified spelling
+node scripts/spellcheck.mjs --lesson 9   # one lesson
+```
+
+It reports two things `lesson.mjs check` structurally cannot see:
+
+- **NOT IN THE LEXICON** — the spelling doesn't exist; it was invented or mistyped.
+- **MEANS SOMETHING ELSE** — a real spelling, but wherever the lesson pairs it
+  with English the lexicon disagrees (𐑒𐑪𐑑 is "cot", not "cat").
+
+Only spellings a lesson *asserts* are checked: a choice's wrong options and a
+bank's distractors are non-words on purpose (𐑐𐑪𐑚 "pob"), and single glyphs in
+prose are letters being taught, not words.
+
+A few spellings are right even though the lexicon disagrees — informal words it
+omits (𐑚𐑪𐑐 "bop"), an affix quoted while being taught (𐑩𐑛), a letter-name it
+files under its Latin form (𐑟𐑧𐑛 → "z"). Those live in
+`scripts/spellcheck-allow.json` with a **reason**, which is why the audit exits
+clean. Add an entry only after checking the word by hand — never to quiet a
+finding you haven't understood. Two guards keep the list honest: an entry only
+waves through a *problem*, so a spelling that turns wrong is still reported,
+and an entry no lesson claims any more is flagged as stale.
+
 ## Why this matters — real misses caught this way
 
 - "million"/"onion" are 𐑥𐑦𐑤𐑘𐑩𐑯 / 𐑳𐑯𐑘𐑩𐑯 — **𐑘𐑩𐑯**, not the tempting 𐑾

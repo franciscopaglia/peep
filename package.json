@@ -11,6 +11,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "lesson": "node scripts/lesson.mjs",
+    "spellcheck": "node scripts/spellcheck.mjs",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"

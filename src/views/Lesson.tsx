@@ -1,5 +1,7 @@
-import { Delete, X } from 'lucide-react';
+import type { ReactNode } from 'react';
+import { ChevronLeft, ChevronRight, Delete, X } from 'lucide-react';
 import type { Exercise } from '@/lessons';
+import { cn } from '@/lib/utils';
 import { renderWithGlyphChips } from '@/lib/shavian-text';
 import { keyboardRows, NAMING_DOT } from '@/lib/shavian-keyboard';
 import { useIsMobile } from '@/hooks/useIsMobile';
@@ -44,6 +46,34 @@ function matchCellColors(matched: boolean, wrong: boolean, sel: boolean) {
   return { border: 'var(--border)', bg: 'var(--card)', color: 'var(--foreground)' };
 }
 
+function StepButton({
+  onClick,
+  enabled,
+  label,
+  children,
+}: {
+  onClick: () => void;
+  enabled: boolean;
+  label: string;
+  children: ReactNode;
+}) {
+  return (
+    <button
+      className={cn(
+        'w-7 h-9 border-none bg-transparent flex items-center justify-center',
+        enabled
+          ? 'text-muted-foreground cursor-pointer hover:text-accent'
+          : 'text-border cursor-default'
+      )}
+      onClick={enabled ? onClick : undefined}
+      disabled={!enabled}
+      aria-label={label}
+    >
+      {children}
+    </button>
+  );
+}
+
 export function Lesson({
   exercise,
   exIndex,
@@ -54,6 +84,10 @@ export function Lesson({
   lessonId,
   lessonTitle,
   status,
+  canGoBack,
+  canGoForward,
+  onGoBack,
+  onGoForward,
   selected,
   typedValue,
   buildSel,
@@ -86,6 +120,10 @@ export function Lesson({
   lessonId: number;
   lessonTitle: string;
   status: Status;
+  canGoBack: boolean;
+  canGoForward: boolean;
+  onGoBack: () => void;
+  onGoForward: () => void;
   selected: string | null;
   typedValue: string;
   buildSel: number[];
@@ -171,6 +209,17 @@ export function Lesson({
         </div>
         <div className="flex-none text-[13px] font-semibold text-muted-foreground min-w-[44px] text-right">
           {gradedStep} / {gradedTotal}
+        </div>
+        {/* Step over ground already seen — answers and results come back with
+            you. Forward stops at the furthest exercise reached, so this can
+            never jump past one without answering it. */}
+        <div className="flex-none flex items-center">
+          <StepButton onClick={onGoBack} enabled={canGoBack} label="Previous exercise">
+            <ChevronLeft size={18} />
+          </StepButton>
+          <StepButton onClick={onGoForward} enabled={canGoForward} label="Next exercise">
+            <ChevronRight size={18} />
+          </StepButton>
         </div>
         <ReportProblem
           issueUrl={lessonIssueUrl(lessonId, lessonTitle, Math.min(exIndex + 1, exTotal))}

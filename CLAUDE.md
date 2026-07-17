@@ -35,6 +35,7 @@ background (both lighter on mobile); build **version** stamped in the footer.
 
 ```bash
 node scripts/readlex.mjs <word>…      # verify Shavian spellings (see below)
+npm run spellcheck                    # audit every spelling in the curriculum
 npm run dev      # dev server
 npm test         # run the Vitest suite (vitest run)
 npm run test:watch
@@ -52,6 +53,13 @@ production build). Both must pass before considering work done.
   (`landing | dashboard | lesson | complete | about | resources`). Owns lesson
   playback state and progress. Progress is a single number in `localStorage`
   (`shavian-progress`); lessons unlock sequentially.
+  **In-lesson navigation:** `goTo` steps between exercises already reached
+  (`furthest`), saving the current work into `attempts[exIndex]` and restoring
+  the target's. The score is only ever awarded once, at grading time — a
+  revisited exercise restores `status: 'correct' | 'wrong'`, and every input
+  handler ignores anything but `'active'`, so it can't be re-answered or
+  re-scored. Skipping leaves an exercise untouched (`'active'`, no answer), so
+  stepping back to an accidental skip still lets you answer it.
 - **`src/lessons/`** — the curriculum. One **JSON file per lesson**,
   auto-discovered via `import.meta.glob` and sorted by `id`. `index.ts` exports
   `LESSONS`, `LESSON_META`, `CHAPTERS`, `getLessonExercises`,
@@ -127,6 +135,16 @@ for the grammar. Run `lesson.mjs check` plus `npm test` after content changes.
   vocabulary forwards (`readlex.mjs million story`), then reverse-check what
   you wrote (`readlex.mjs -r 𐑥𐑦𐑤𐑘𐑩𐑯`); `NOT FOUND` means you invented it.
   See the `shavian-spelling` skill.
+- **`npm run spellcheck` audits the whole curriculum** against the lexicon:
+  every asserted spelling must exist, and wherever a lesson pairs Shavian with
+  English the lexicon must agree on the meaning (𐑒𐑪𐑑 is a real word, but it's
+  "cot", not "cat"). Wrong options and bank distractors are skipped — they're
+  non-words by design. It exits non-zero on a finding, so it can gate CI; run
+  it after a batch of content edits. Spellings that are right despite the
+  lexicon (informal words it omits, an affix quoted while being taught) live in
+  `scripts/spellcheck-allow.json` **with a reason** — add one only after
+  checking by hand. An entry only ever waves through a *problem*, never hides a
+  spelling that turned wrong, and one that stops matching is reported as stale.
 - **Only use letters taught by that point.** Chapter 1 must not use Chapter 2
   letters (`𐑠` zh, the r-vowels `𐑸𐑹𐑺𐑻𐑼𐑽𐑾𐑿`, or `𐑬𐑭𐑷𐑶`), and never `𐑔`; `𐑞`
   appears in Ch1 only as the fixed word "the". Also beware words whose *sounds*

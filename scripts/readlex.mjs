@@ -25,9 +25,9 @@ const die = (msg) => { console.error(`error: ${msg}`); process.exit(1); };
 
 // The curriculum follows one standard voice (RRP); the rest are accent
 // variants. Source data spells the tag inconsistently, hence the lowercasing.
-const isStandard = (entry) => entry.var?.toLowerCase() === 'rrp';
+export const isStandard = (entry) => entry.var?.toLowerCase() === 'rrp';
 
-async function load() {
+export async function load() {
   if (!fs.existsSync(CACHE)) {
     console.error('fetching the Read Lexicon (~27 MB, once)…');
     const res = await fetch(URL_);
@@ -40,7 +40,7 @@ async function load() {
 
 // Index every entry under both its English and its Shavian spelling, so one
 // pass serves lookups in either direction.
-function index(lex) {
+export function index(lex) {
   const byEnglish = new Map();
   const byShavian = new Map();
   const push = (map, key, entry) => {
@@ -76,17 +76,20 @@ function report(query, hits, { reverse, all }) {
   return true;
 }
 
-const args = process.argv.slice(2);
-const all = args.some((a) => a === '-a' || a === '--all');
-const reverse = args.some((a) => a === '-r' || a === '--reverse');
-const words = args.filter((a) => !a.startsWith('-'));
-if (!words.length) die('usage: readlex.mjs [-r] [-a] <word>…   (-r: Shavian → English)');
+// Only run the CLI when invoked directly — spellcheck.mjs imports the loader.
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  const args = process.argv.slice(2);
+  const all = args.some((a) => a === '-a' || a === '--all');
+  const reverse = args.some((a) => a === '-r' || a === '--reverse');
+  const words = args.filter((a) => !a.startsWith('-'));
+  if (!words.length) die('usage: readlex.mjs [-r] [-a] <word>…   (-r: Shavian → English)');
 
-const { byEnglish, byShavian } = index(await load());
-let missing = 0;
-for (const w of words) {
-  const hits = reverse ? byShavian.get(w) : byEnglish.get(w.toLowerCase());
-  if (!report(w, hits ?? [], { reverse, all })) missing++;
+  const { byEnglish, byShavian } = index(await load());
+  let missing = 0;
+  for (const w of words) {
+    const hits = reverse ? byShavian.get(w) : byEnglish.get(w.toLowerCase());
+    if (!report(w, hits ?? [], { reverse, all })) missing++;
+  }
+  // Exit non-zero when anything is unknown, so this can gate a script.
+  process.exit(missing ? 1 : 0);
 }
-// Exit non-zero when anything is unknown, so this can gate a script.
-process.exit(missing ? 1 : 0);
