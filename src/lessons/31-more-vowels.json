@@ -12,7 +12,13 @@
     {
       "type": "teach",
       "title": "OUT — 𐑬",
-      "body": "𐑬 is the sound in cow and out — say “ow!”. You'll see it in 𐑒𐑬 (cow) and 𐑯𐑬 (now)."
+      "body": "𐑬 is the sound in cow and out — say “ow!”. You'll see it in 𐑒𐑬 (cow) and 𐑯𐑬 (now).",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑬"
+        ]
+      }
     },
     {
       "type": "choice",
@@ -64,7 +70,13 @@
     {
       "type": "teach",
       "title": "AWE — 𐑷",
-      "body": "𐑷 is the long “aw” in law and saw. It sits in 𐑚𐑷𐑤 (ball) and 𐑒𐑷𐑤 (call)."
+      "body": "𐑷 is the long “aw” in law and saw. It sits in 𐑚𐑷𐑤 (ball) and 𐑒𐑷𐑤 (call).",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑷"
+        ]
+      }
     },
     {
       "type": "choice",
@@ -108,7 +120,13 @@
     {
       "type": "teach",
       "title": "OIL — 𐑶",
-      "body": "𐑶 is the “oy” in boy and oil — as in 𐑑𐑶 (toy) and 𐑒𐑶𐑯 (coin)."
+      "body": "𐑶 is the “oy” in boy and oil — as in 𐑑𐑶 (toy) and 𐑒𐑶𐑯 (coin).",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑶"
+        ]
+      }
     },
     {
       "type": "choice",
@@ -152,7 +170,13 @@
     {
       "type": "teach",
       "title": "AH — 𐑭",
-      "body": "𐑭 is the long, open “ah” — a doctor's “say ahh”. It's in 𐑐𐑭𐑥 (palm) and 𐑒𐑭𐑥 (calm)."
+      "body": "𐑭 is the long, open “ah” — a doctor's “say ahh”. It's in 𐑐𐑭𐑥 (palm) and 𐑒𐑭𐑥 (calm).",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑭"
+        ]
+      }
     },
     {
       "type": "choice",
