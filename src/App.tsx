@@ -7,7 +7,7 @@ import { Resources } from '@/views/Resources';
 import { Dashboard } from '@/views/Dashboard';
 import { Lesson } from '@/views/Lesson';
 import { Complete } from '@/views/Complete';
-import { LESSON_META, getLessonExercises, shuffleExerciseOptions, type Exercise } from '@/lessons';
+import { LESSON_META, SPINE_META, getLessonExercises, shuffleExerciseOptions, type Exercise } from '@/lessons';
 import { isCorrect, gradeableCount, lessonPassed, PASS_THRESHOLD } from '@/lib/grading';
 import type { View } from '@/types';
 
@@ -49,6 +49,30 @@ function useProgress() {
     localStorage.setItem(PROGRESS_KEY, String(completedCount));
   }, [completedCount]);
   return [completedCount, setCompletedCount] as const;
+}
+
+const BRANCHES_KEY = 'shavian-branches';
+
+/**
+ * Completed optional branch lessons, kept as a set of ids separate from the
+ * linear spine progress so a branch never advances the course or gates a lesson.
+ */
+function useBranchProgress() {
+  const [completed, setCompleted] = useState<Set<number>>(() => {
+    try {
+      const raw = JSON.parse(localStorage.getItem(BRANCHES_KEY) ?? '[]');
+      return new Set(Array.isArray(raw) ? raw.filter((n) => typeof n === 'number') : []);
+    } catch {
+      return new Set();
+    }
+  });
+  useEffect(() => {
+    localStorage.setItem(BRANCHES_KEY, JSON.stringify([...completed]));
+  }, [completed]);
+  const markBranchDone = useCallback((id: number) => {
+    setCompleted((prev) => (prev.has(id) ? prev : new Set(prev).add(id)));
+  }, []);
+  return [completed, markBranchDone] as const;
 }
 
 const THEME_KEY = 'shavian-theme';
@@ -96,6 +120,7 @@ export default function App() {
   const [view, setViewRaw] = useState<View>('landing');
   const [dark, toggleMode] = useDarkMode();
   const [completedCount, setCompletedCount] = useProgress();
+  const [completedBranches, markBranchDone] = useBranchProgress();
   const [activeLessonId, setActiveLessonId] = useState(1);
 
   const [exercises, setExercises] = useState<Exercise[]>([]);
@@ -138,7 +163,14 @@ export default function App() {
 
   const startLesson = useCallback(
     (id: number) => {
-      if (id > completedCount + 1) return;
+      const meta = LESSON_META.find((l) => l.id === id);
+      // A branch is available once its anchor spine lesson is done; a spine
+      // lesson follows the usual "one at a time" rule.
+      if (meta?.optional) {
+        if ((meta.anchor ?? Infinity) > completedCount) return;
+      } else if (id > completedCount + 1) {
+        return;
+      }
       const lessonExercises = getLessonExercises(id);
       if (lessonExercises.length === 0) return;
       setActiveLessonId(id);
@@ -154,7 +186,7 @@ export default function App() {
   );
 
   const continueCurrent = useCallback(() => {
-    const id = Math.min(completedCount + 1, LESSON_META.length);
+    const id = Math.min(completedCount + 1, SPINE_META.length);
     startLesson(id);
   }, [completedCount, startLesson]);
 
@@ -207,12 +239,18 @@ export default function App() {
     if (nextIndex >= exercises.length) {
       const passed = lessonPassed(score, gradeableCount(exercises));
       setView('complete');
-      // Only unlock the next lesson when the pass threshold is met.
-      if (passed) setCompletedCount((c) => Math.max(c, activeLessonId));
+      // Only mark complete when the pass threshold is met. A branch records
+      // its own completion and never advances the spine; a spine lesson unlocks
+      // the next one.
+      if (passed) {
+        const meta = LESSON_META.find((l) => l.id === activeLessonId);
+        if (meta?.optional) markBranchDone(activeLessonId);
+        else setCompletedCount((c) => Math.max(c, activeLessonId));
+      }
       return;
     }
     goTo(nextIndex);
-  }, [exIndex, exercises, score, activeLessonId, setView, setCompletedCount, goTo]);
+  }, [exIndex, exercises, score, activeLessonId, setView, setCompletedCount, markBranchDone, goTo]);
 
   const checkAnswer = useCallback(() => {
     const ex = exercises[exIndex];
@@ -417,7 +455,7 @@ export default function App() {
           view={view}
           dark={dark}
           completedCount={completedCount}
-          totalLessons={LESSON_META.length}
+          totalLessons={SPINE_META.length}
           onSetView={setView}
           onToggleDark={toggleMode}
         />
@@ -438,6 +476,7 @@ export default function App() {
       {view === 'dashboard' && (
         <Dashboard
           completedCount={completedCount}
+          completedBranches={completedBranches}
           onStartLesson={startLesson}
           onContinueCurrent={continueCurrent}
           onUnlockThrough={unlockThrough}

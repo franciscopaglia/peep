@@ -3,6 +3,12 @@ export type LessonMeta = {
   title: string;
   glyph: string;
   chapter: number;
+  // A branch lesson: optional extra practice that hangs off the main path.
+  // It never counts toward course progress or gates the next spine lesson.
+  optional?: boolean;
+  // For a branch, the spine lesson it branches off of — it becomes available
+  // once that lesson is completed, and inherits its taught-letter budget.
+  anchor?: number;
 };
 
 // Optional visual shown above a teach card's body. Discriminated on `kind` so

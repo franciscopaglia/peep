@@ -15,16 +15,22 @@ Legend: ✅ shipped · 🚧 in progress · 🗓️ planned · 💡 idea / under 
 - **Chapter 1 — The Alphabet** (24 lessons): every consonant and vowel of the
   48-letter Shavian alphabet, introduced a pair at a time, with ~20
   practice-heavy exercises per lesson.
-- **Chapter 2 — Reading Fluency** (10 lessons): the `ʒ` letter, the r-coloured
+- **Chapter 2 — Reading Fluency** (11 lessons): the `ʒ` letter, the r-coloured
   vowels, the little words (the single-letter spellings 𐑞 𐑝 𐑯 𐑑 𐑓 and a first
   look at homographs like 𐑑𐑵 = *too*/*two*), writing names, sentence building,
   and a short reading passage.
+- **Chapter 3 — Reading in the Wild** (8 lessons): the word endings (`-s`, `-ing`,
+  `-ed`), the busy schwa, a deeper pass on shorthand and homographs, dialogue on
+  the page, and longer *unassisted* passages of real Shavian — including whole
+  sourced texts read straight, no word banks.
+- **Chapter 4 — Writing Shavian** (just begun): the reverse direction — given an
+  English word, spell it yourself on the full on-screen Shavian keyboard.
 - New letters only ever build on what you've already learned — the path never
   asks you to read a symbol it hasn't taught.
 
 ### Practice
 
-Nine kinds of exercise keep every lesson varied:
+Twelve kinds of exercise keep every lesson varied:
 
 | Type | What it does |
 | --- | --- |
@@ -37,6 +43,9 @@ Nine kinds of exercise keep every lesson varied:
 | `complete` | Fill in a word's missing letter(s) from a tile bank |
 | `fill` | Choose the missing words to finish a sentence (some pre-filled) |
 | `cloze` | Read a short passage and fill its blanked words from context |
+| `spot` | Tap the word in a sentence that means the English prompt |
+| `transcribe` | Read a real, sourced Shavian passage and write the full English |
+| `write` | Spell an English word in Shavian on the full on-screen keyboard |
 
 - **Everything is randomized** — choice options, letter tiles, fill-in banks, and
   both match columns are shuffled on every load, and never render in their
@@ -55,6 +64,10 @@ Nine kinds of exercise keep every lesson varied:
 
 ### The app itself
 
+- **A branching path.** The main path stays lean, and **optional branch
+  lessons** hang off it for extra practice on trickier words. Branches unlock
+  once you reach their spot, but they never gate the path or count toward your
+  progress — take them when you want more, skip them when you don't.
 - **No accounts, no streaks, no pressure.** Progress is saved locally in your
   browser and the path unlocks as you go.
 - **Light & dark themes** — follows your system by default, remembers your
@@ -121,8 +134,11 @@ the level that makes reading really click. New exercise types planned here:
 
 ### Pronunciation helpers
 
-- **🗓️ Hear every sound** — tap any letter or example word to hear it spoken, on
-  the About reference and inside lessons.
+- **✅ Hear every letter** — a speaker button on each letter reads its name
+  aloud (first tap at normal speed, then alternating slow/normal), both on the
+  letter cards inside lessons and on the About reference table.
+- **🗓️ Hear every word** — extend tap-to-hear from single letters to example
+  words and the words in exercises.
 - **🗓️ IPA, in context** — pronunciation shown (and played) alongside the sound
   during `teach` and `choice` exercises, not just on the reference page.
 - **💡 Accent toggle** — hear the same spelling in more than one accent, tying
@@ -138,20 +154,19 @@ so nothing re-teaches what came earlier.
 
 - **✅ Chapter 1 — The Alphabet** *(shipped · 24 lessons)* — all 48 letters, a
   pair at a time, blending into first words.
-- **✅ Chapter 2 — Reading Fluency** *(shipped · 10 lessons)* — the `ʒ` letter,
+- **✅ Chapter 2 — Reading Fluency** *(shipped · 11 lessons)* — the `ʒ` letter,
   the r-coloured vowels, the little words (single-letter spellings and first
   homographs), the naming dot, sentence building, and a first short story.
-- **🚧 Chapter 3 — Reading in the Wild** *(placeholder — to be written)* — you can
-  read sentences; now read *published* Shavian. Longer, unassisted passages and
-  dialogue (no word banks), plus the mechanics that make real text look
-  different from sounded-out spelling: ligatures, punctuation, numbers and
-  dates, and a deeper pass on the shorthand words and homographs that
-  Chapter 2's "Little Words" lesson only introduces.
-- **🗓️ Chapter 4 — Writing Shavian** *(placeholder — to be scoped)* — the reverse
-  direction: given English, spell it in Shavian. Its own chapter because writing
-  needs rules reading doesn't — schwa vs. full vowels under stress, the fixed
-  spellings, dropping apostrophes, and telling homophones apart (their/there,
-  to/too).
+- **✅ Chapter 3 — Reading in the Wild** *(shipped · 8 lessons)* — you can read
+  sentences; now read *published* Shavian. The word endings (`-s`, `-ing`,
+  `-ed`), the busy schwa, a deeper pass on shorthand words and homographs,
+  dialogue on the page, and longer *unassisted* passages (no word banks) —
+  culminating in a whole sourced text read straight through.
+- **🚧 Chapter 4 — Writing Shavian** *(started · 1 lesson so far)* — the reverse
+  direction: given English, spell it in Shavian on the full on-screen keyboard
+  (the `write` exercise). Its own chapter because writing needs rules reading
+  doesn't — schwa vs. full vowels under stress, the fixed spellings, dropping
+  apostrophes, and telling homophones apart (their/there, to/too).
 - **💡 Chapter 5 — Fluency & Beyond** *(placeholder — ideas only)* — mastery and
   range: timed or self-paced reading, longer stories and real documents, accents
   & variation (one spelling across RP and rhotic speech), free-writing prompts,
@@ -164,7 +179,9 @@ so nothing re-teaches what came earlier.
 - **💡 Progress export/import** — move your progress between devices without an
   account.
 - **💡 Per-lesson stats** and a gentle sense of mastery per letter.
-- **💡 Keyboard & typing practice** for writing Shavian on your own device.
+- **💡 Type on your own keyboard** — the `write` exercise already gives an
+  on-screen Shavian keyboard; a next step is practice mapping it to a physical
+  keyboard or system IME for writing Shavian outside Peep.
 
 ---
 

@@ -16,11 +16,25 @@
       }
     },
     {
-      "type": "type",
-      "prompt": "𐑐𐑫𐑑",
-      "caption": "Type what this word says",
-      "correct": "put",
-      "correctLabel": "put"
+      "type": "complete",
+      "blanks": [
+        0,
+        1
+      ],
+      "bank": [
+        "𐑐",
+        "𐑫",
+        "𐑚",
+        "𐑳"
+      ],
+      "correctLabel": "𐑐𐑫𐑑",
+      "prompt": "put",
+      "word": [
+        "𐑐",
+        "𐑫",
+        "𐑑"
+      ],
+      "caption": "Tap the missing letters"
     },
     {
       "type": "teach",
@@ -152,12 +166,14 @@
     {
       "type": "complete",
       "blanks": [
+        0,
         1
       ],
       "bank": [
+        "𐑚",
         "𐑫",
-        "𐑳",
-        "𐑨"
+        "𐑐",
+        "𐑳"
       ],
       "correctLabel": "𐑚𐑫𐑒",
       "prompt": "book",
@@ -166,7 +182,7 @@
         "𐑫",
         "𐑒"
       ],
-      "caption": "Tap the missing letter"
+      "caption": "Tap the missing letters"
     },
     {
       "type": "type",

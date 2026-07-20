@@ -21,11 +21,22 @@
       "body": "To spell real words already, borrow one vowel early: 𐑪, the short “o” heard in on and dog. You'll meet the rest of the short vowels properly in a later lesson — for now, just learn to recognize this one by sight."
     },
     {
-      "type": "type",
-      "prompt": "𐑐𐑪𐑐",
-      "caption": "Sound it out — what does this say?",
-      "correct": "pop",
-      "correctLabel": "pop"
+      "type": "complete",
+      "blanks": [
+        2
+      ],
+      "bank": [
+        "𐑐",
+        "𐑚"
+      ],
+      "correctLabel": "𐑐𐑪𐑐",
+      "prompt": "pop",
+      "word": [
+        "𐑐",
+        "𐑪",
+        "𐑐"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
       "type": "choice",
@@ -59,11 +70,22 @@
       "body": "𐑐 and 𐑚 aren't paired at random — turn 𐑐 end over end and you get 𐑚. Most tall/deep pairs work the same way, so learning one often means you can guess its partner's shape before you're told."
     },
     {
-      "type": "type",
-      "prompt": "𐑚𐑪𐑚",
-      "caption": "Sound it out — what does this say?",
-      "correct": "bob",
-      "correctLabel": "bob"
+      "type": "complete",
+      "blanks": [
+        2
+      ],
+      "bank": [
+        "𐑚",
+        "𐑐"
+      ],
+      "correctLabel": "𐑚𐑪𐑚",
+      "prompt": "bob",
+      "word": [
+        "𐑚",
+        "𐑪",
+        "𐑚"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
       "type": "choice",

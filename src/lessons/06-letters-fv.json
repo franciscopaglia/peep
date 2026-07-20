@@ -42,11 +42,25 @@
       }
     },
     {
-      "type": "type",
-      "prompt": "𐑝𐑨𐑑",
-      "caption": "Sound it out — what does this say?",
-      "correct": "vat",
-      "correctLabel": "vat"
+      "type": "complete",
+      "blanks": [
+        0,
+        1
+      ],
+      "bank": [
+        "𐑝",
+        "𐑨",
+        "𐑓",
+        "𐑪"
+      ],
+      "correctLabel": "𐑝𐑨𐑑",
+      "prompt": "vat",
+      "word": [
+        "𐑝",
+        "𐑨",
+        "𐑑"
+      ],
+      "caption": "Tap the missing letters"
     },
     {
       "type": "choice",
@@ -82,11 +96,25 @@
       "correctLabel": "𐑛𐑦𐑐"
     },
     {
-      "type": "type",
-      "prompt": "𐑓𐑪𐑜",
-      "caption": "Sound it out — what does this say?",
-      "correct": "fog",
-      "correctLabel": "fog"
+      "type": "complete",
+      "blanks": [
+        0,
+        1
+      ],
+      "bank": [
+        "𐑓",
+        "𐑪",
+        "𐑝",
+        "𐑨"
+      ],
+      "correctLabel": "𐑓𐑪𐑜",
+      "prompt": "fog",
+      "word": [
+        "𐑓",
+        "𐑪",
+        "𐑜"
+      ],
+      "caption": "Tap the missing letters"
     },
     {
       "type": "choice",

@@ -1,0 +1,123 @@
+{
+  "id": 901,
+  "title": "Trickier Words",
+  "glyph": "𐑑𐑮",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 24,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Trickier words",
+      "body": "Ready for a challenge? These words are longer, but every letter is one you already know. Take your time and sound each one out — there is no rush, and you can skip any that stump you."
+    },
+    {
+      "type": "build",
+      "prompt": "picnic",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑐",
+        "𐑦",
+        "𐑒",
+        "𐑯",
+        "𐑦",
+        "𐑒",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑦",
+        "𐑒",
+        "𐑯",
+        "𐑦",
+        "𐑒"
+      ],
+      "correctLabel": "𐑐𐑦𐑒𐑯𐑦𐑒"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑧𐑤𐑦𐑓𐑩𐑯𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "elephant",
+      "correctLabel": "elephant"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        3,
+        5
+      ],
+      "bank": [
+        "𐑦",
+        "𐑩",
+        "𐑧",
+        "𐑫"
+      ],
+      "correctLabel": "𐑥𐑧𐑛𐑦𐑕𐑩𐑯",
+      "prompt": "medicine",
+      "word": [
+        "𐑥",
+        "𐑧",
+        "𐑛",
+        "𐑦",
+        "𐑕",
+        "𐑩",
+        "𐑯"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑝𐑨𐑯𐑦𐑖",
+      "caption": "Sound it out — what does this say?",
+      "correct": "vanish",
+      "correctLabel": "vanish"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑕𐑨𐑯𐑢𐑦𐑡",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "sandwich",
+        "spinach",
+        "cabbage",
+        "picnic"
+      ],
+      "correct": "sandwich",
+      "correctLabel": "sandwich"
+    },
+    {
+      "type": "build",
+      "prompt": "pumpkin",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑐",
+        "𐑳",
+        "𐑥",
+        "𐑐",
+        "𐑒",
+        "𐑦",
+        "𐑯",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑳",
+        "𐑥",
+        "𐑐",
+        "𐑒",
+        "𐑦",
+        "𐑯"
+      ],
+      "correctLabel": "𐑐𐑳𐑥𐑐𐑒𐑦𐑯"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑪𐑤𐑦𐑛𐑱",
+      "caption": "Sound it out — what does this say?",
+      "correct": "holiday",
+      "correctLabel": "holiday"
+    }
+  ]
+}

@@ -380,9 +380,23 @@ function multisetCovers(pool, wanted) {
   });
 }
 
-function checkLesson(lesson, problems) {
-  const taught = lettersTaughtBy(lesson.id);
-  const knowAll = lesson.id > Math.max(...Object.keys(INTRODUCED).map(Number));
+function checkLesson(lesson, problems, byId = {}) {
+  // A branch inherits its anchor's taught-letter budget and validates against
+  // it, since its own (reserved-range) id says nothing about the curriculum.
+  let effectiveId = lesson.id;
+  if (lesson.optional) {
+    const anchor = byId[lesson.anchor];
+    if (typeof lesson.anchor !== 'number' || !anchor)
+      problems.push(`${lesson.id}: optional lesson has no valid anchor`);
+    else {
+      if (anchor.optional) problems.push(`${lesson.id}: anchor ${lesson.anchor} is itself optional`);
+      if (anchor.chapter !== lesson.chapter)
+        problems.push(`${lesson.id}: chapter ${lesson.chapter} ≠ anchor ${lesson.anchor}'s chapter ${anchor.chapter}`);
+      effectiveId = lesson.anchor;
+    }
+  }
+  const taught = lettersTaughtBy(effectiveId);
+  const knowAll = effectiveId > Math.max(...Object.keys(INTRODUCED).map(Number));
   lesson.exercises.forEach((ex, i) => {
     const at = `${lesson.id}#${i}`;
     const flag = (msg) => problems.push(`${at} (${ex.type}): ${msg}`);
@@ -456,7 +470,8 @@ switch (cmd) {
       const tally = {};
       for (const ex of lesson.exercises) tally[ex.type] = (tally[ex.type] ?? 0) + 1;
       const kinds = Object.entries(tally).map(([t, n]) => `${t}:${n}`).join(' ');
-      console.log(`${lesson.id} :: ${lesson.title} :: ${lesson.glyph} :: ch${lesson.chapter} :: ${kinds}`);
+      const branch = lesson.optional ? `↳anchor ${lesson.anchor} :: ` : '';
+      console.log(`${lesson.id} :: ${lesson.title} :: ${lesson.glyph} :: ch${lesson.chapter} :: ${branch}${kinds}`);
     }
     break;
   }
@@ -531,12 +546,32 @@ switch (cmd) {
     break;
   }
   case 'new': {
+    // Optional branch: `new <id> <slug> <title> <glyph> <chapter> --anchor <N>`.
+    // Give branches an id in the reserved ≥900 range so they never collide with
+    // or renumber the contiguous spine.
+    let anchor;
+    const ai = args.indexOf('--anchor');
+    if (ai !== -1) {
+      anchor = Number(args[ai + 1]);
+      args.splice(ai, 2);
+    }
     const [id, slug, title, glyph, chapter] = args;
     const file = path.join(DIR, `${String(id).padStart(2, '0')}-${slug}.json`);
     if (fs.existsSync(file)) die(`${file} already exists`);
     if (lessonFiles().some((f) => parseInt(f) === Number(id))) die(`id ${id} is taken`);
-    save({ id: Number(id), title, glyph, chapter: Number(chapter), exercises: [] }, file);
-    console.log(`created ${path.basename(file)}`);
+    const isBranch = anchor !== undefined;
+    if (isBranch && Number(id) < 900)
+      die('branch ids should be ≥ 900 to stay clear of the spine');
+    const meta = {
+      id: Number(id),
+      title,
+      glyph,
+      chapter: Number(chapter),
+      ...(isBranch ? { optional: true, anchor } : {}),
+      exercises: [],
+    };
+    save(meta, file);
+    console.log(`created ${path.basename(file)}${anchor !== undefined ? ` (branch → ${anchor})` : ''}`);
     break;
   }
   case 'renumber': {
@@ -563,10 +598,11 @@ switch (cmd) {
     const lessons = loadAll();
     const ids = lessons.map((l) => l.id);
     if (new Set(ids).size !== ids.length) problems.push('duplicate lesson ids');
+    const byId = Object.fromEntries(lessons.map((l) => [l.id, l]));
     for (const f of lessonFiles()) {
       const lesson = JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8'));
       if (parseInt(f) !== lesson.id) problems.push(`${f}: filename prefix ≠ id ${lesson.id}`);
-      checkLesson(lesson, problems);
+      checkLesson(lesson, problems, byId);
     }
     if (problems.length) {
       for (const p of problems) console.log(p);

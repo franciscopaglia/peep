@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { LESSONS, shuffleExerciseOptions } from '@/lessons';
+import { LESSONS, LESSON_META, SPINE_META, branchesFor, shuffleExerciseOptions } from '@/lessons';
 import { isCorrect, emptyAnswer, type AnswerState } from '@/lib/grading';
 import { lettersFor } from '@/lib/shavian-alphabet';
 import type { Exercise } from '@/lessons/types';
@@ -56,6 +56,33 @@ describe('lesson catalogue', () => {
     expect(new Set(ids).size).toBe(ids.length);
     expect([...ids].sort((a, b) => a - b)).toEqual(ids);
   });
+});
+
+describe('branch (optional) lessons', () => {
+  const branches = LESSON_META.filter((l) => l.optional);
+  const byId = new Map(LESSON_META.map((l) => [l.id, l]));
+
+  it('SPINE_META is the non-optional lessons only', () => {
+    expect(SPINE_META.every((l) => !l.optional)).toBe(true);
+    expect(SPINE_META.length + branches.length).toBe(LESSON_META.length);
+  });
+
+  it('there is at least one branch to exercise the feature', () => {
+    expect(branches.length).toBeGreaterThanOrEqual(1);
+  });
+
+  for (const b of branches) {
+    it(`branch ${b.id} anchors to an existing spine lesson in the same chapter`, () => {
+      const anchor = byId.get(b.anchor as number);
+      expect(anchor, `anchor ${b.anchor} exists`).toBeDefined();
+      expect(anchor!.optional).toBeFalsy();
+      expect(anchor!.chapter).toBe(b.chapter);
+    });
+
+    it(`branchesFor(${b.anchor}) includes branch ${b.id}`, () => {
+      expect(branchesFor(b.anchor as number).map((l) => l.id)).toContain(b.id);
+    });
+  }
 });
 
 describe('lesson content is well-formed and solvable', () => {

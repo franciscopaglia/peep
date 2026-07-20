@@ -42,18 +42,46 @@
       }
     },
     {
-      "type": "type",
-      "prompt": "𐑚𐑧𐑛",
-      "caption": "Type what this word says",
-      "correct": "bed",
-      "correctLabel": "bed"
+      "type": "complete",
+      "blanks": [
+        0,
+        1
+      ],
+      "bank": [
+        "𐑚",
+        "𐑧",
+        "𐑐",
+        "𐑦"
+      ],
+      "correctLabel": "𐑚𐑧𐑛",
+      "prompt": "bed",
+      "word": [
+        "𐑚",
+        "𐑧",
+        "𐑛"
+      ],
+      "caption": "Tap the missing letters"
     },
     {
-      "type": "type",
-      "prompt": "𐑑𐑦𐑐",
-      "caption": "Sound it out — what does this say?",
-      "correct": "tip",
-      "correctLabel": "tip"
+      "type": "complete",
+      "blanks": [
+        0,
+        1
+      ],
+      "bank": [
+        "𐑑",
+        "𐑦",
+        "𐑛",
+        "𐑧"
+      ],
+      "correctLabel": "𐑑𐑦𐑐",
+      "prompt": "tip",
+      "word": [
+        "𐑑",
+        "𐑦",
+        "𐑐"
+      ],
+      "caption": "Tap the missing letters"
     },
     {
       "type": "match",
@@ -129,12 +157,14 @@
     {
       "type": "complete",
       "blanks": [
+        0,
         1
       ],
       "bank": [
+        "𐑐",
         "𐑧",
-        "𐑦",
-        "𐑨"
+        "𐑚",
+        "𐑦"
       ],
       "correctLabel": "𐑐𐑧𐑑",
       "prompt": "pet",
@@ -143,7 +173,7 @@
         "𐑧",
         "𐑑"
       ],
-      "caption": "Tap the missing letter"
+      "caption": "Tap the missing letters"
     },
     {
       "type": "type",

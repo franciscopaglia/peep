@@ -15,11 +15,26 @@
       "body": "Notice 𐑝𐑧𐑕𐑑 (vest): four letters, four sounds, nothing silent or doubled. Multiply that across a whole page and Shavian text typically runs about two-thirds the length of the same words in English spelling."
     },
     {
-      "type": "type",
-      "prompt": "𐑝𐑧𐑕𐑑",
-      "caption": "Sound it out — what does this say?",
-      "correct": "vest",
-      "correctLabel": "vest"
+      "type": "complete",
+      "blanks": [
+        1,
+        2
+      ],
+      "bank": [
+        "𐑧",
+        "𐑕",
+        "𐑦",
+        "𐑟"
+      ],
+      "correctLabel": "𐑝𐑧𐑕𐑑",
+      "prompt": "vest",
+      "word": [
+        "𐑝",
+        "𐑧",
+        "𐑕",
+        "𐑑"
+      ],
+      "caption": "Tap the missing letters"
     },
     {
       "type": "choice",
@@ -79,11 +94,26 @@
       ]
     },
     {
-      "type": "type",
-      "prompt": "𐑒𐑨𐑕𐑑",
-      "caption": "Sound it out — what does this say?",
-      "correct": "cast",
-      "correctLabel": "cast"
+      "type": "complete",
+      "blanks": [
+        1,
+        2
+      ],
+      "bank": [
+        "𐑨",
+        "𐑕",
+        "𐑧",
+        "𐑟"
+      ],
+      "correctLabel": "𐑒𐑨𐑕𐑑",
+      "prompt": "cast",
+      "word": [
+        "𐑒",
+        "𐑨",
+        "𐑕",
+        "𐑑"
+      ],
+      "caption": "Tap the missing letters"
     },
     {
       "type": "type",
@@ -149,12 +179,14 @@
     {
       "type": "complete",
       "blanks": [
-        1
+        1,
+        2
       ],
       "bank": [
         "𐑪",
+        "𐑕",
         "𐑨",
-        "𐑧"
+        "𐑟"
       ],
       "correctLabel": "𐑒𐑪𐑕𐑑",
       "prompt": "cost",
@@ -164,7 +196,7 @@
         "𐑕",
         "𐑑"
       ],
-      "caption": "Tap the missing letter"
+      "caption": "Tap the missing letters"
     },
     {
       "type": "type",

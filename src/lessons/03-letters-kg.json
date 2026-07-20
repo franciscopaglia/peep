@@ -21,11 +21,23 @@
       }
     },
     {
-      "type": "type",
-      "prompt": "𐑒𐑦𐑑",
-      "caption": "Sound it out — what does this say?",
-      "correct": "kit",
-      "correctLabel": "kit"
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑦",
+        "𐑨",
+        "𐑪"
+      ],
+      "correctLabel": "𐑒𐑦𐑑",
+      "prompt": "kit",
+      "word": [
+        "𐑒",
+        "𐑦",
+        "𐑑"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
       "type": "choice",
@@ -113,11 +125,23 @@
       "correctLabel": "𐑐𐑦𐑜"
     },
     {
-      "type": "type",
-      "prompt": "𐑚𐑦𐑑",
-      "caption": "Sound it out — what does this say?",
-      "correct": "bit",
-      "correctLabel": "bit"
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑦",
+        "𐑨",
+        "𐑪"
+      ],
+      "correctLabel": "𐑚𐑦𐑑",
+      "prompt": "bit",
+      "word": [
+        "𐑚",
+        "𐑦",
+        "𐑑"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
       "type": "choice",
@@ -153,18 +177,41 @@
       "correctLabel": "𐑑𐑨𐑜"
     },
     {
-      "type": "type",
-      "prompt": "𐑒𐑨𐑑",
-      "caption": "Sound it out — what does this say?",
-      "correct": "cat",
-      "correctLabel": "cat"
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑨",
+        "𐑦",
+        "𐑪"
+      ],
+      "correctLabel": "𐑒𐑨𐑑",
+      "prompt": "cat",
+      "word": [
+        "𐑒",
+        "𐑨",
+        "𐑑"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
-      "type": "type",
-      "prompt": "𐑒𐑦𐑛",
-      "caption": "Sound it out — what does this say?",
-      "correct": "kid",
-      "correctLabel": "kid"
+      "type": "complete",
+      "blanks": [
+        0
+      ],
+      "bank": [
+        "𐑒",
+        "𐑜"
+      ],
+      "correctLabel": "𐑒𐑦𐑛",
+      "prompt": "kid",
+      "word": [
+        "𐑒",
+        "𐑦",
+        "𐑛"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
       "type": "type",

@@ -21,11 +21,22 @@
       "body": "Another quick vowel: 𐑨, the short “a” heard in ash and cat. Keep it in mind — you'll be using it a lot this lesson."
     },
     {
-      "type": "type",
-      "prompt": "𐑑𐑨𐑐",
-      "caption": "Sound it out — what does this say?",
-      "correct": "tap",
-      "correctLabel": "tap"
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑨",
+        "𐑪"
+      ],
+      "correctLabel": "𐑑𐑨𐑐",
+      "prompt": "tap",
+      "word": [
+        "𐑑",
+        "𐑨",
+        "𐑐"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
       "type": "choice",
@@ -84,11 +95,22 @@
       "correctLabel": "𐑛"
     },
     {
-      "type": "type",
-      "prompt": "𐑑𐑨𐑚",
-      "caption": "Sound it out — what does this say?",
-      "correct": "tab",
-      "correctLabel": "tab"
+      "type": "complete",
+      "blanks": [
+        2
+      ],
+      "bank": [
+        "𐑚",
+        "𐑐"
+      ],
+      "correctLabel": "𐑑𐑨𐑚",
+      "prompt": "tab",
+      "word": [
+        "𐑑",
+        "𐑨",
+        "𐑚"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
       "type": "choice",
@@ -124,18 +146,40 @@
       "correctLabel": "𐑐𐑨𐑑"
     },
     {
-      "type": "type",
-      "prompt": "𐑑𐑪𐑐",
-      "caption": "Sound it out — what does this say?",
-      "correct": "top",
-      "correctLabel": "top"
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑪",
+        "𐑨"
+      ],
+      "correctLabel": "𐑑𐑪𐑐",
+      "prompt": "top",
+      "word": [
+        "𐑑",
+        "𐑪",
+        "𐑐"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
-      "type": "type",
-      "prompt": "𐑐𐑪𐑑",
-      "caption": "Sound it out — what does this say?",
-      "correct": "pot",
-      "correctLabel": "pot"
+      "type": "complete",
+      "blanks": [
+        2
+      ],
+      "bank": [
+        "𐑑",
+        "𐑛"
+      ],
+      "correctLabel": "𐑐𐑪𐑑",
+      "prompt": "pot",
+      "word": [
+        "𐑐",
+        "𐑪",
+        "𐑑"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
       "type": "type",

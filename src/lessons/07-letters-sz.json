@@ -16,11 +16,25 @@
       }
     },
     {
-      "type": "type",
-      "prompt": "𐑕𐑨𐑛",
-      "caption": "Sound it out — what does this say?",
-      "correct": "sad",
-      "correctLabel": "sad"
+      "type": "complete",
+      "blanks": [
+        0,
+        1
+      ],
+      "bank": [
+        "𐑕",
+        "𐑨",
+        "𐑟",
+        "𐑦"
+      ],
+      "correctLabel": "𐑕𐑨𐑛",
+      "prompt": "sad",
+      "word": [
+        "𐑕",
+        "𐑨",
+        "𐑛"
+      ],
+      "caption": "Tap the missing letters"
     },
     {
       "type": "teach",
@@ -49,11 +63,25 @@
       "correctLabel": "𐑟𐑨𐑐"
     },
     {
-      "type": "type",
-      "prompt": "𐑓𐑦𐑟",
-      "caption": "Sound it out — what does this say?",
-      "correct": "fizz",
-      "correctLabel": "fizz"
+      "type": "complete",
+      "blanks": [
+        1,
+        2
+      ],
+      "bank": [
+        "𐑦",
+        "𐑟",
+        "𐑨",
+        "𐑕"
+      ],
+      "correctLabel": "𐑓𐑦𐑟",
+      "prompt": "fizz",
+      "word": [
+        "𐑓",
+        "𐑦",
+        "𐑟"
+      ],
+      "caption": "Tap the missing letters"
     },
     {
       "type": "build",
@@ -110,11 +138,25 @@
       "correctLabel": "𐑟"
     },
     {
-      "type": "type",
-      "prompt": "𐑕𐑨𐑜",
-      "caption": "Sound it out — what does this say?",
-      "correct": "sag",
-      "correctLabel": "sag"
+      "type": "complete",
+      "blanks": [
+        0,
+        1
+      ],
+      "bank": [
+        "𐑕",
+        "𐑨",
+        "𐑟",
+        "𐑦"
+      ],
+      "correctLabel": "𐑕𐑨𐑜",
+      "prompt": "sag",
+      "word": [
+        "𐑕",
+        "𐑨",
+        "𐑜"
+      ],
+      "caption": "Tap the missing letters"
     },
     {
       "type": "choice",

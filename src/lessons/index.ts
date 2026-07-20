@@ -9,12 +9,24 @@ export const LESSONS: LessonFile[] = Object.values(modules)
   .map((m) => m.default)
   .sort((a, b) => a.id - b.id);
 
-export const LESSON_META: LessonMeta[] = LESSONS.map(({ id, title, glyph, chapter }) => ({
-  id,
-  title,
-  glyph,
-  chapter,
-}));
+export const LESSON_META: LessonMeta[] = LESSONS.map(
+  ({ id, title, glyph, chapter, optional, anchor }) => ({
+    id,
+    title,
+    glyph,
+    chapter,
+    ...(optional ? { optional, anchor } : {}),
+  })
+);
+
+// The spine: the required, sequential path. Course length and progress are
+// measured against this — branches are extra and never counted here.
+export const SPINE_META: LessonMeta[] = LESSON_META.filter((l) => !l.optional);
+
+// The optional branch lessons anchored to a given spine lesson.
+export function branchesFor(anchorId: number): LessonMeta[] {
+  return LESSON_META.filter((l) => l.optional && l.anchor === anchorId);
+}
 
 export type Chapter = {
   id: number;

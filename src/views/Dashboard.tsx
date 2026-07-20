@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Check, Lock, Unlock } from 'lucide-react';
-import { CHAPTERS, LESSON_META, type Chapter } from '@/lessons';
+import { CHAPTERS, SPINE_META, branchesFor, type Chapter, type LessonMeta } from '@/lessons';
 import { ComingSoonCard } from '@/components/ComingSoonCard';
 import { SectionLabel } from '@/components/SectionLabel';
 import { Button } from '@/components/Button';
@@ -46,20 +46,130 @@ function ChapterHeader({ chapter }: { chapter: Chapter }) {
   );
 }
 
+type NodeState = 'completed' | 'locked' | 'available';
+
+// Done and available share one treatment — soft fill, mid-tone border, saturated
+// mark — so the path reads as one family and only the colour (and mark) differ.
+function nodeColors(state: NodeState) {
+  if (state === 'completed')
+    return { bg: 'var(--success-soft)', border: 'var(--success-border)', color: 'var(--success)' };
+  if (state === 'locked')
+    return { bg: 'var(--locked-bg)', border: 'var(--border)', color: 'var(--locked-fg)' };
+  return { bg: 'var(--accent-soft)', border: 'var(--accent-border)', color: 'var(--accent)' };
+}
+
+// One node on the path — shared by spine lessons and branches. A branch is
+// smaller and dashed to read as optional; otherwise the states are identical.
+function PathNode({
+  state,
+  glyph,
+  size = 74,
+  dashed = false,
+  isNext = false,
+  onClick,
+}: {
+  state: NodeState;
+  glyph: string;
+  size?: number;
+  dashed?: boolean;
+  isNext?: boolean;
+  onClick: () => void;
+}) {
+  const { bg, border, color } = nodeColors(state);
+  const locked = state === 'locked';
+  return (
+    <button
+      className="flex items-center justify-center transition-transform duration-100"
+      style={{
+        width: size,
+        height: size,
+        borderRadius: 999,
+        background: bg,
+        border: `2px ${dashed ? 'dashed' : 'solid'} ${border}`,
+        color,
+        cursor: locked ? 'default' : 'pointer',
+        boxShadow: locked || dashed ? 'none' : `0 2px 0 ${border}`,
+        animation: isNext ? 'shvPulseRing 2.2s ease-in-out infinite' : undefined,
+      }}
+      onClick={onClick}
+      disabled={locked}
+    >
+      {state === 'completed' && <Check size={size * 0.4} strokeWidth={3} />}
+      {state === 'available' && (
+        <span style={{ fontSize: size * 0.3 }} className="font-bold">
+          {glyph}
+        </span>
+      )}
+      {locked && <Lock size={size * 0.3} />}
+    </button>
+  );
+}
+
+// The branch(es) that hang off a spine node, drawn to its right with an elbow
+// connector. Vertically centred on the spine node; laid out absolutely so the
+// spine stays on the centre line.
+function BranchCluster({
+  branches,
+  completedCount,
+  completedBranches,
+  onStartLesson,
+}: {
+  branches: LessonMeta[];
+  completedCount: number;
+  completedBranches: Set<number>;
+  onStartLesson: (id: number) => void;
+}) {
+  // Offset up by half the 56px node so the node — not the node-plus-label
+  // stack — sits on the spine node's centre line, and the connector meets it.
+  return (
+    <div className="absolute top-1/2 left-full -translate-y-[28px] flex flex-col gap-4 z-10">
+      {branches.map((b) => {
+        const state: NodeState = completedBranches.has(b.id)
+          ? 'completed'
+          : (b.anchor ?? Infinity) > completedCount
+            ? 'locked'
+            : 'available';
+        return (
+          <div key={b.id} className="flex items-start">
+            <div className="mt-[27px] h-px w-6 flex-none bg-border" />
+            <div className="flex flex-col items-center gap-2">
+              <PathNode
+                state={state}
+                glyph={b.glyph}
+                size={56}
+                dashed
+                onClick={() => onStartLesson(b.id)}
+              />
+              <div
+                className="text-[11px] font-semibold max-w-[104px] text-center leading-tight"
+                style={{ color: state === 'locked' ? 'var(--locked-fg)' : 'var(--muted-foreground)' }}
+              >
+                {b.title}
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 export function Dashboard({
   completedCount,
+  completedBranches,
   onStartLesson,
   onContinueCurrent,
   onUnlockThrough,
 }: {
   completedCount: number;
+  completedBranches: Set<number>;
   onStartLesson: (id: number) => void;
   onContinueCurrent: () => void;
   onUnlockThrough: (lessonId: number) => void;
 }) {
-  const current = LESSON_META[Math.min(completedCount, LESSON_META.length - 1)];
-  const currentNo = Math.min(completedCount + 1, LESSON_META.length);
-  const overallPct = Math.round((completedCount / LESSON_META.length) * 100);
+  const current = SPINE_META[Math.min(completedCount, SPINE_META.length - 1)];
+  const currentNo = Math.min(completedCount + 1, SPINE_META.length);
+  const overallPct = Math.round((completedCount / SPINE_META.length) * 100);
   const isMobile = useIsMobile();
   // The chapter awaiting "unlock all" confirmation, if any.
   const [confirm, setConfirm] = useState<{ title: string; lastId: number } | null>(null);
@@ -93,7 +203,7 @@ export function Dashboard({
               />
             </div>
             <div className="flex-none text-xs font-medium text-muted-foreground">
-              {completedCount} of {LESSON_META.length} lessons
+              {completedCount} of {SPINE_META.length} lessons
             </div>
           </div>
         </div>
@@ -107,7 +217,7 @@ export function Dashboard({
             </div>
             <div className="min-w-0 flex flex-col gap-1">
               <div className="text-xs font-medium text-muted-foreground">
-                Lesson {currentNo} of {LESSON_META.length}
+                Lesson {currentNo} of {SPINE_META.length}
               </div>
               <div className="text-[17px] font-semibold text-foreground leading-tight">
                 {current.title}
@@ -124,7 +234,7 @@ export function Dashboard({
         </div>
 
         {CHAPTERS.map((chapter) => {
-          const chapterLessons = LESSON_META.filter((l) => l.chapter === chapter.id);
+          const chapterLessons = SPINE_META.filter((l) => l.chapter === chapter.id);
           if (chapterLessons.length === 0 && !chapter.comingSoon) return null;
 
           if (chapter.comingSoon) {
@@ -160,60 +270,39 @@ export function Dashboard({
               <div className="flex flex-col items-center gap-11 relative pt-2">
                 <div className="absolute top-[45px] bottom-[60px] left-1/2 w-1 -translate-x-1/2 bg-border rounded-full z-0" />
                 {chapterLessons.map((lesson) => {
-                  const locked = lesson.id > completedCount + 1;
-                  const completed = lesson.id <= completedCount;
-                  const showGlyph = !completed && !locked;
-                  const showLock = locked && !completed;
+                  const state: NodeState =
+                    lesson.id <= completedCount
+                      ? 'completed'
+                      : lesson.id > completedCount + 1
+                        ? 'locked'
+                        : 'available';
                   const isNext = lesson.id === completedCount + 1;
-
-                  // Done and current share one treatment — soft fill, mid-tone
-                  // border, saturated mark — so the path reads as one family and
-                  // only the colour (and the mark itself) says which is which.
-                  let nodeBg = 'var(--card)';
-                  let nodeBorder = 'var(--border)';
-                  let nodeColor = 'var(--foreground)';
-                  if (completed) {
-                    nodeBg = 'var(--success-soft)';
-                    nodeBorder = 'var(--success-border)';
-                    nodeColor = 'var(--success)';
-                  } else if (locked) {
-                    nodeBg = 'var(--locked-bg)';
-                    nodeBorder = 'var(--border)';
-                    nodeColor = 'var(--locked-fg)';
-                  } else {
-                    nodeBg = 'var(--accent-soft)';
-                    nodeBorder = 'var(--accent-border)';
-                    nodeColor = 'var(--accent)';
-                  }
+                  const branches = branchesFor(lesson.id);
 
                   return (
                     <div
                       key={lesson.id}
                       className="flex flex-col items-center gap-2.5 relative z-10"
                     >
-                      <button
-                        className="w-[74px] h-[74px] flex items-center justify-center transition-transform duration-100"
-                        style={{
-                          borderRadius: 999,
-                          background: nodeBg,
-                          border: `2px solid ${nodeBorder}`,
-                          color: nodeColor,
-                          cursor: locked ? 'default' : 'pointer',
-                          boxShadow: locked ? 'none' : `0 2px 0 ${nodeBorder}`,
-                          animation: isNext ? 'shvPulseRing 2.2s ease-in-out infinite' : undefined,
-                        }}
-                        onClick={() => onStartLesson(lesson.id)}
-                        disabled={locked}
-                      >
-                        {completed && <Check size={30} strokeWidth={3} />}
-                        {showGlyph && (
-                          <span className="text-[22px] font-bold">{lesson.glyph}</span>
+                      <div className="relative">
+                        <PathNode
+                          state={state}
+                          glyph={lesson.glyph}
+                          isNext={isNext}
+                          onClick={() => onStartLesson(lesson.id)}
+                        />
+                        {branches.length > 0 && (
+                          <BranchCluster
+                            branches={branches}
+                            completedCount={completedCount}
+                            completedBranches={completedBranches}
+                            onStartLesson={onStartLesson}
+                          />
                         )}
-                        {showLock && <Lock size={22} />}
-                      </button>
+                      </div>
                       <div
                         className="text-[13px] font-semibold max-w-[160px] text-center leading-tight bg-background px-2.5"
-                        style={{ color: locked ? 'var(--locked-fg)' : 'var(--foreground)' }}
+                        style={{ color: state === 'locked' ? 'var(--locked-fg)' : 'var(--foreground)' }}
                       >
                         {lesson.title}
                       </div>

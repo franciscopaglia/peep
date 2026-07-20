@@ -30,11 +30,23 @@
       "correctLabel": "kid"
     },
     {
-      "type": "type",
-      "prompt": "𐑚𐑦𐑜",
-      "caption": "Type what this word says",
-      "correct": "big",
-      "correctLabel": "big"
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑦",
+        "𐑨",
+        "𐑪"
+      ],
+      "correctLabel": "𐑚𐑦𐑜",
+      "prompt": "big",
+      "word": [
+        "𐑚",
+        "𐑦",
+        "𐑜"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
       "type": "teach",
@@ -57,11 +69,23 @@
       "correctLabel": "𐑜𐑨𐑜"
     },
     {
-      "type": "type",
-      "prompt": "𐑜𐑨𐑐",
-      "caption": "Type what this word says",
-      "correct": "gap",
-      "correctLabel": "gap"
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑨",
+        "𐑦",
+        "𐑪"
+      ],
+      "correctLabel": "𐑜𐑨𐑐",
+      "prompt": "gap",
+      "word": [
+        "𐑜",
+        "𐑨",
+        "𐑐"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
       "type": "match",
@@ -136,11 +160,23 @@
       "correctLabel": "𐑐𐑦𐑜"
     },
     {
-      "type": "type",
-      "prompt": "𐑒𐑪𐑛",
-      "caption": "Type what this word says",
-      "correct": "cod",
-      "correctLabel": "cod"
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑪",
+        "𐑨",
+        "𐑦"
+      ],
+      "correctLabel": "𐑒𐑪𐑛",
+      "prompt": "cod",
+      "word": [
+        "𐑒",
+        "𐑪",
+        "𐑛"
+      ],
+      "caption": "Tap the missing letter"
     },
     {
       "type": "type",
