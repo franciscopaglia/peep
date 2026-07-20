@@ -234,7 +234,7 @@ export function About({ onOpenApp }: { onOpenApp: () => void }) {
           All 48 letters, each with its naming word, IPA value and a short example word
           spelled in Shavian — the place to come back to when a sound slips your mind.
         </p>
-        <AlphabetReferenceTable className="w-full" />
+        <AlphabetReferenceTable className="w-full" speak />
       </div>
 
       <div id="sentences" className="mt-7 max-w-[720px] scroll-mt-24">

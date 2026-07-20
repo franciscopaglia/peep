@@ -62,6 +62,20 @@ export function Landing({
   return (
     <div>
       <div className="relative overflow-hidden" style={{ background: 'var(--hero-bg)' }}>
+        {/* Engraved hairline grid — a faint texture that fades out toward the
+            edges, so the ground reads as designed rather than a flat wash.
+            Sits below the glyph canvas so the drifting letters float over it. */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              'linear-gradient(to right, var(--hairline) 1px, transparent 1px), linear-gradient(to bottom, var(--hairline) 1px, transparent 1px)',
+            backgroundSize: '48px 48px',
+            maskImage: 'radial-gradient(120% 90% at 50% 0%, black, transparent 70%)',
+            WebkitMaskImage: 'radial-gradient(120% 90% at 50% 0%, black, transparent 70%)',
+            opacity: 0.7,
+          }}
+        />
         <canvas
           ref={canvasRef}
           className="absolute inset-0 w-full h-full pointer-events-none"
@@ -77,7 +91,7 @@ export function Landing({
             background: 'linear-gradient(to bottom, transparent, var(--background))',
           }}
         />
-        <div className="relative z-10 max-w-[960px] mx-auto px-6 pt-14 sm:pt-[88px] pb-16 sm:pb-20 flex flex-col items-center text-center gap-6">
+        <div className="relative z-10 max-w-[960px] mx-auto px-6 pt-8 sm:pt-14 pb-16 sm:pb-20 flex flex-col items-center text-center gap-6">
           <div className="text-[13px] font-semibold tracking-wide uppercase text-accent bg-accent-soft px-3.5 py-1.5 rounded-full">
             A phonetic alphabet for English
           </div>

@@ -61,8 +61,12 @@
   --locked-fg: oklch(75% 0.005 90);
   --footer-bg: oklch(97.5% 0.003 90);
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --hero-bg: radial-gradient(ellipse 90% 70% at 50% -10%, oklch(93% 0.045 264), transparent 70%),
-    linear-gradient(180deg, oklch(96% 0.02 264), oklch(98.5% 0.002 90));
+  /* Token-based so it adapts to the theme from one definition (see .dark for
+     --accent/--background/--hairline). Paired with the engraved hairline grid
+     drawn over it in the hero (Landing.tsx). */
+  --hero-bg: radial-gradient(70% 60% at 50% -10%, color-mix(in oklab, var(--accent) 18%, transparent), transparent 70%),
+    linear-gradient(180deg, color-mix(in oklab, var(--accent) 6%, var(--background)), var(--background));
+  --hairline: oklch(90% 0.01 264);
 }
 
 .dark {
@@ -83,8 +87,8 @@
   --locked-fg: oklch(45% 0.008 264);
   --footer-bg: oklch(20% 0.006 264);
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
-  --hero-bg: radial-gradient(ellipse 90% 70% at 50% -10%, oklch(28% 0.055 264), transparent 70%),
-    linear-gradient(180deg, oklch(22% 0.025 264), oklch(17% 0.006 264));
+  /* --hero-bg is defined once in :root from tokens; only the tokens change here. */
+  --hairline: oklch(30% 0.012 264);
 }
 
 @layer base {
