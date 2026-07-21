@@ -1,0 +1,145 @@
+{
+  "id": 9151,
+  "title": "See & Tree",
+  "glyph": "𐑑𐑮𐑰",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 15,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "The long ee",
+      "body": "𐑰 is held longer than 𐑦 — see, meet, green. Read these."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑰",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fee",
+      "correctLabel": "fee"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑰",
+      "caption": "Sound it out — what does this say?",
+      "correct": "tea",
+      "correctLabel": "tea",
+      "accept": [
+        "tee"
+      ]
+    },
+    {
+      "type": "build",
+      "prompt": "keep",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑰",
+        "𐑐",
+        "𐑛",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑰",
+        "𐑐"
+      ],
+      "correctLabel": "𐑒𐑰𐑐"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑜𐑮𐑰𐑯",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "green",
+        "grain",
+        "grin",
+        "greed"
+      ],
+      "correct": "green",
+      "correctLabel": "green"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑯𐑰𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "need",
+      "correctLabel": "need",
+      "accept": [
+        "knead"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑰𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "deep",
+      "correctLabel": "deep"
+    },
+    {
+      "type": "build",
+      "prompt": "tree",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑑",
+        "𐑮",
+        "𐑰",
+        "𐑛",
+        "𐑤"
+      ],
+      "answer": [
+        "𐑑",
+        "𐑮",
+        "𐑰"
+      ],
+      "correctLabel": "𐑑𐑮𐑰"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑰𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "seen",
+      "correctLabel": "seen",
+      "accept": [
+        "scene"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑰𐑓",
+      "caption": "Sound it out — what does this say?",
+      "correct": "beef",
+      "correctLabel": "beef"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑰𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "keen",
+      "correctLabel": "keen"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑓𐑰": "fee",
+        "𐑑𐑰": "tea",
+        "𐑯𐑰𐑛": "need",
+        "𐑛𐑰𐑐": "deep"
+      },
+      "leftOrder": [
+        "𐑓𐑰",
+        "𐑑𐑰",
+        "𐑯𐑰𐑛",
+        "𐑛𐑰𐑐"
+      ],
+      "rightOrder": [
+        "need",
+        "deep",
+        "fee",
+        "tea"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "id": 9131,
+  "title": "Nun & Roar",
+  "glyph": "𐑯𐑮",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 13,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Nun and roar",
+      "body": "𐑯 and 𐑮 — two more sonorants. Read these n and r words."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑯𐑨𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "nap",
+      "correctLabel": "nap"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑳𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "rug",
+      "correctLabel": "rug"
+    },
+    {
+      "type": "build",
+      "prompt": "drum",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑛",
+        "𐑮",
+        "𐑳",
+        "𐑥",
+        "𐑤"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑮",
+        "𐑳",
+        "𐑥"
+      ],
+      "correctLabel": "𐑛𐑮𐑳𐑥"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑯𐑳𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "nut",
+        "not",
+        "net",
+        "nod"
+      ],
+      "correct": "nut",
+      "correctLabel": "nut"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑪𐑚",
+      "caption": "Sound it out — what does this say?",
+      "correct": "rob",
+      "correctLabel": "rob"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑯𐑪𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "nod",
+      "correctLabel": "nod"
+    },
+    {
+      "type": "build",
+      "prompt": "milk",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑥",
+        "𐑦",
+        "𐑤",
+        "𐑒",
+        "𐑯"
+      ],
+      "answer": [
+        "𐑥",
+        "𐑦",
+        "𐑤",
+        "𐑒"
+      ],
+      "correctLabel": "𐑥𐑦𐑤𐑒"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑦𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "rid",
+      "correctLabel": "rid"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑮𐑧𐑛",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "red",
+        "rid",
+        "rod",
+        "ran"
+      ],
+      "correct": "red",
+      "correctLabel": "red"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑨𐑥",
+      "caption": "Sound it out — what does this say?",
+      "correct": "ram",
+      "correctLabel": "ram"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑯𐑨𐑚",
+      "caption": "Sound it out — what does this say?",
+      "correct": "nab",
+      "correctLabel": "nab"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑯𐑨𐑐": "nap",
+        "𐑮𐑳𐑜": "rug",
+        "𐑮𐑪𐑚": "rob",
+        "𐑯𐑪𐑛": "nod"
+      },
+      "leftOrder": [
+        "𐑯𐑨𐑐",
+        "𐑮𐑳𐑜",
+        "𐑮𐑪𐑚",
+        "𐑯𐑪𐑛"
+      ],
+      "rightOrder": [
+        "rob",
+        "nod",
+        "nap",
+        "rug"
+      ]
+    }
+  ]
+}

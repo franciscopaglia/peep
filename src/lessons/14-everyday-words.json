@@ -37,31 +37,6 @@
       "correctLabel": "ram"
     },
     {
-      "type": "type",
-      "prompt": "𐑜𐑳𐑯",
-      "caption": "Sound it out — what does this say?",
-      "correct": "gun",
-      "correctLabel": "gun"
-    },
-    {
-      "type": "build",
-      "prompt": "mill",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑥",
-        "𐑦",
-        "𐑤",
-        "𐑯",
-        "𐑮"
-      ],
-      "answer": [
-        "𐑥",
-        "𐑦",
-        "𐑤"
-      ],
-      "correctLabel": "𐑥𐑦𐑤"
-    },
-    {
       "type": "match",
       "pairs": {
         "𐑓𐑦𐑤": "fill",
@@ -81,87 +56,6 @@
         "fill",
         "nap"
       ]
-    },
-    {
-      "type": "type",
-      "prompt": "𐑤𐑦𐑐",
-      "caption": "Type what this word says",
-      "correct": "lip",
-      "correctLabel": "lip"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑯𐑳𐑯",
-      "caption": "Sound it out — what does this say?",
-      "correct": "nun",
-      "accept": [
-        "none"
-      ],
-      "correctLabel": "nun"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑤𐑳𐑜",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "lug",
-        "log",
-        "leg",
-        "lag"
-      ],
-      "correct": "lug",
-      "correctLabel": "lug"
-    },
-    {
-      "type": "match",
-      "pairs": {
-        "𐑯𐑳𐑯": "nun",
-        "𐑤𐑳𐑜": "lug",
-        "𐑛𐑮𐑳𐑥": "drum",
-        "𐑮𐑦𐑚": "rib"
-      },
-      "leftOrder": [
-        "𐑮𐑦𐑚",
-        "𐑯𐑳𐑯",
-        "𐑛𐑮𐑳𐑥",
-        "𐑤𐑳𐑜"
-      ],
-      "rightOrder": [
-        "lug",
-        "rib",
-        "nun",
-        "drum"
-      ]
-    },
-    {
-      "type": "type",
-      "prompt": "𐑓𐑳𐑯",
-      "caption": "Sound it out — what does this say?",
-      "correct": "fun",
-      "correctLabel": "fun"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑐𐑦𐑯",
-      "caption": "Sound it out — what does this say?",
-      "correct": "pin",
-      "correctLabel": "pin"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑮𐑳𐑜",
-      "caption": "Sound it out — what does this say?",
-      "correct": "rug",
-      "correctLabel": "rug"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑚𐑳𐑥𐑐",
-      "caption": "Sound it out — what does this say?",
-      "correct": "bump",
-      "correctLabel": "bump"
     },
     {
       "type": "complete",
@@ -184,36 +78,6 @@
       "caption": "Tap the missing letter"
     },
     {
-      "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑒𐑨𐑥𐑐",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "camp",
-        "come",
-        "cap",
-        "lamp"
-      ],
-      "correct": "camp",
-      "correctLabel": "camp"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": false,
-      "prompt": "Which word says “trap”?",
-      "caption": "",
-      "optionIsGlyph": true,
-      "options": [
-        "𐑑𐑮𐑨𐑐",
-        "𐑑𐑮𐑦𐑐",
-        "𐑛𐑮𐑨𐑐",
-        "𐑑𐑨𐑐"
-      ],
-      "correct": "𐑑𐑮𐑨𐑐",
-      "correctLabel": "𐑑𐑮𐑨𐑐"
-    },
-    {
       "type": "build",
       "prompt": "lamp",
       "caption": "Build this word from Shavian letters",
@@ -231,46 +95,6 @@
         "𐑐"
       ],
       "correctLabel": "𐑤𐑨𐑥𐑐"
-    },
-    {
-      "type": "build",
-      "prompt": "plum",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑐",
-        "𐑤",
-        "𐑳",
-        "𐑥",
-        "𐑯"
-      ],
-      "answer": [
-        "𐑐",
-        "𐑤",
-        "𐑳",
-        "𐑥"
-      ],
-      "correctLabel": "𐑐𐑤𐑳𐑥"
-    },
-    {
-      "type": "match",
-      "pairs": {
-        "𐑓𐑳𐑯": "fun",
-        "𐑐𐑦𐑯": "pin",
-        "𐑮𐑳𐑜": "rug",
-        "𐑕𐑐𐑦𐑯": "spin"
-      },
-      "leftOrder": [
-        "𐑕𐑐𐑦𐑯",
-        "𐑓𐑳𐑯",
-        "𐑮𐑳𐑜",
-        "𐑐𐑦𐑯"
-      ],
-      "rightOrder": [
-        "fun",
-        "spin",
-        "pin",
-        "rug"
-      ]
     }
   ]
 }

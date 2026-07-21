@@ -1,0 +1,139 @@
+{
+  "id": 9192,
+  "title": "Hats & Hills",
+  "glyph": "𐑣𐑦𐑤",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 19,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Ha-ha and hop",
+      "body": "𐑣 is just a breath — hat, hop, home. Read these."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑦𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "hit",
+      "correctLabel": "hit"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑨𐑥",
+      "caption": "Sound it out — what does this say?",
+      "correct": "ham",
+      "correctLabel": "ham"
+    },
+    {
+      "type": "build",
+      "prompt": "home",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑣",
+        "𐑴",
+        "𐑥",
+        "𐑧",
+        "𐑫"
+      ],
+      "answer": [
+        "𐑣",
+        "𐑴",
+        "𐑥"
+      ],
+      "correctLabel": "𐑣𐑴𐑥"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑣𐑧𐑯",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "hen",
+        "hem",
+        "hand",
+        "ham"
+      ],
+      "correct": "hen",
+      "correctLabel": "hen"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑦𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "hip",
+      "correctLabel": "hip"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑪𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "hop",
+      "correctLabel": "hop"
+    },
+    {
+      "type": "build",
+      "prompt": "hike",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑣",
+        "𐑲",
+        "𐑒",
+        "𐑦",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑣",
+        "𐑲",
+        "𐑒"
+      ],
+      "correctLabel": "𐑣𐑲𐑒"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑲𐑝",
+      "caption": "Sound it out — what does this say?",
+      "correct": "hive",
+      "correctLabel": "hive"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑰𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "heat",
+      "correctLabel": "heat"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑴𐑤",
+      "caption": "Sound it out — what does this say?",
+      "correct": "hole",
+      "correctLabel": "hole",
+      "accept": [
+        "whole"
+      ]
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑣𐑦𐑑": "hit",
+        "𐑣𐑨𐑥": "ham",
+        "𐑣𐑦𐑐": "hip",
+        "𐑣𐑪𐑐": "hop"
+      },
+      "leftOrder": [
+        "𐑣𐑦𐑑",
+        "𐑣𐑨𐑥",
+        "𐑣𐑦𐑐",
+        "𐑣𐑪𐑐"
+      ],
+      "rightOrder": [
+        "hip",
+        "hop",
+        "hit",
+        "ham"
+      ]
+    }
+  ]
+}

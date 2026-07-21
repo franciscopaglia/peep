@@ -1,0 +1,130 @@
+{
+  "id": 9211,
+  "title": "Ship & Fish",
+  "glyph": "𐑓𐑦𐑖",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 21,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Sure and fish",
+      "body": "𐑖 is the “sh” in ship and fish. Read these."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑖𐑳𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "shut",
+      "correctLabel": "shut"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑨𐑖",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cash",
+      "correctLabel": "cash"
+    },
+    {
+      "type": "build",
+      "prompt": "wish",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑢",
+        "𐑦",
+        "𐑖",
+        "𐑗",
+        "𐑕"
+      ],
+      "answer": [
+        "𐑢",
+        "𐑦",
+        "𐑖"
+      ],
+      "correctLabel": "𐑢𐑦𐑖"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑖𐑲𐑯",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "shine",
+        "shin",
+        "shone",
+        "sign"
+      ],
+      "correct": "shine",
+      "correctLabel": "shine"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑳𐑖",
+      "caption": "Sound it out — what does this say?",
+      "correct": "rush",
+      "correctLabel": "rush"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑫𐑖",
+      "caption": "Sound it out — what does this say?",
+      "correct": "push",
+      "correctLabel": "push"
+    },
+    {
+      "type": "build",
+      "prompt": "crash",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑮",
+        "𐑨",
+        "𐑖",
+        "𐑗"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑮",
+        "𐑨",
+        "𐑖"
+      ],
+      "correctLabel": "𐑒𐑮𐑨𐑖"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑪𐑖",
+      "caption": "Sound it out — what does this say?",
+      "correct": "wash",
+      "correctLabel": "wash"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑖𐑰𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sheep",
+      "correctLabel": "sheep"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑖𐑳𐑑": "shut",
+        "𐑒𐑨𐑖": "cash",
+        "𐑮𐑳𐑖": "rush",
+        "𐑐𐑫𐑖": "push"
+      },
+      "leftOrder": [
+        "𐑖𐑳𐑑",
+        "𐑒𐑨𐑖",
+        "𐑮𐑳𐑖",
+        "𐑐𐑫𐑖"
+      ],
+      "rightOrder": [
+        "rush",
+        "push",
+        "shut",
+        "cash"
+      ]
+    }
+  ]
+}

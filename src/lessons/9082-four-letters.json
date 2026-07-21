@@ -1,0 +1,124 @@
+{
+  "id": 9082,
+  "title": "Four Letters",
+  "glyph": "𐑚𐑧𐑕𐑑",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 8,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Four letters",
+      "body": "Longer words now — s-blends with the short e. Read them straight through."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑧𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "best",
+      "correctLabel": "best"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑧𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "test",
+      "correctLabel": "test"
+    },
+    {
+      "type": "build",
+      "prompt": "vest",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑝",
+        "𐑧",
+        "𐑕",
+        "𐑑",
+        "𐑟"
+      ],
+      "answer": [
+        "𐑝",
+        "𐑧",
+        "𐑕",
+        "𐑑"
+      ],
+      "correctLabel": "𐑝𐑧𐑕𐑑"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑧𐑕𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "desk",
+      "correctLabel": "desk"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑐𐑧𐑕𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "pest",
+        "best",
+        "past",
+        "pets"
+      ],
+      "correct": "pest",
+      "correctLabel": "pest"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑟𐑧𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "zest",
+      "correctLabel": "zest"
+    },
+    {
+      "type": "build",
+      "prompt": "kept",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑧",
+        "𐑐",
+        "𐑑",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑧",
+        "𐑐",
+        "𐑑"
+      ],
+      "correctLabel": "𐑒𐑧𐑐𐑑"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑧𐑓𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "deft",
+      "correctLabel": "deft"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑚𐑧𐑕𐑑": "best",
+        "𐑑𐑧𐑕𐑑": "test",
+        "𐑝𐑧𐑕𐑑": "vest",
+        "𐑛𐑧𐑕𐑒": "desk"
+      },
+      "leftOrder": [
+        "𐑚𐑧𐑕𐑑",
+        "𐑑𐑧𐑕𐑑",
+        "𐑝𐑧𐑕𐑑",
+        "𐑛𐑧𐑕𐑒"
+      ],
+      "rightOrder": [
+        "vest",
+        "desk",
+        "best",
+        "test"
+      ]
+    }
+  ]
+}

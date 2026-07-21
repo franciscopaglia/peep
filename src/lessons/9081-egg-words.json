@@ -1,0 +1,143 @@
+{
+  "id": 9081,
+  "title": "Egg Words",
+  "glyph": "𐑦𐑧",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 8,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Egg words",
+      "body": "𐑧 is the short e in bed and egg. Read these."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑧𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "beg",
+      "correctLabel": "beg"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑧𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "keg",
+      "correctLabel": "keg"
+    },
+    {
+      "type": "build",
+      "prompt": "peg",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑐",
+        "𐑧",
+        "𐑜",
+        "𐑦",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑧",
+        "𐑜"
+      ],
+      "correctLabel": "𐑐𐑧𐑜"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑧𐑜",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "egg",
+        "ebb",
+        "get",
+        "keg"
+      ],
+      "correct": "egg",
+      "correctLabel": "egg"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑧𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "set",
+      "correctLabel": "set"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        0,
+        1
+      ],
+      "bank": [
+        "𐑐",
+        "𐑧",
+        "𐑚",
+        "𐑦"
+      ],
+      "correctLabel": "𐑐𐑧𐑑",
+      "prompt": "pet",
+      "word": [
+        "𐑐",
+        "𐑧",
+        "𐑑"
+      ],
+      "caption": "Tap the missing letters"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑧𐑚",
+      "caption": "Sound it out — what does this say?",
+      "correct": "deb",
+      "correctLabel": "deb"
+    },
+    {
+      "type": "build",
+      "prompt": "fez",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑓",
+        "𐑧",
+        "𐑟",
+        "𐑕",
+        "𐑛"
+      ],
+      "answer": [
+        "𐑓",
+        "𐑧",
+        "𐑟"
+      ],
+      "correctLabel": "𐑓𐑧𐑟"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑧𐑚",
+      "caption": "Sound it out — what does this say?",
+      "correct": "ebb",
+      "correctLabel": "ebb"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑚𐑧𐑜": "beg",
+        "𐑒𐑧𐑜": "keg",
+        "𐑕𐑧𐑑": "set",
+        "𐑧𐑜": "egg"
+      },
+      "leftOrder": [
+        "𐑚𐑧𐑜",
+        "𐑒𐑧𐑜",
+        "𐑕𐑧𐑑",
+        "𐑧𐑜"
+      ],
+      "rightOrder": [
+        "set",
+        "egg",
+        "beg",
+        "keg"
+      ]
+    }
+  ]
+}

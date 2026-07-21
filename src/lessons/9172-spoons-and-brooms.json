@@ -1,0 +1,123 @@
+{
+  "id": 9172,
+  "title": "Spoons & Brooms",
+  "glyph": "𐑕𐑐𐑵𐑯",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 17,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Spoons and brooms",
+      "body": "𐑵 in longer words — clusters and the “oo” in glue."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑤𐑵",
+      "caption": "Sound it out — what does this say?",
+      "correct": "glue",
+      "correctLabel": "glue"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑤𐑵",
+      "caption": "Sound it out — what does this say?",
+      "correct": "clue",
+      "correctLabel": "clue"
+    },
+    {
+      "type": "build",
+      "prompt": "blue",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑚",
+        "𐑤",
+        "𐑵",
+        "𐑮",
+        "𐑐"
+      ],
+      "answer": [
+        "𐑚",
+        "𐑤",
+        "𐑵"
+      ],
+      "correctLabel": "𐑚𐑤𐑵"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑤𐑵𐑕",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "loose",
+        "goose",
+        "lose",
+        "louse"
+      ],
+      "correct": "loose",
+      "correctLabel": "loose"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑵𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "goose",
+      "correctLabel": "goose"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑐𐑵𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "spoon",
+      "correctLabel": "spoon"
+    },
+    {
+      "type": "build",
+      "prompt": "stool",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑕",
+        "𐑑",
+        "𐑵",
+        "𐑤",
+        "𐑮"
+      ],
+      "answer": [
+        "𐑕",
+        "𐑑",
+        "𐑵",
+        "𐑤"
+      ],
+      "correctLabel": "𐑕𐑑𐑵𐑤"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑮𐑵",
+      "caption": "Sound it out — what does this say?",
+      "correct": "true",
+      "correctLabel": "true"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑜𐑤𐑵": "glue",
+        "𐑒𐑤𐑵": "clue",
+        "𐑜𐑵𐑕": "goose",
+        "𐑕𐑐𐑵𐑯": "spoon"
+      },
+      "leftOrder": [
+        "𐑜𐑤𐑵",
+        "𐑒𐑤𐑵",
+        "𐑜𐑵𐑕",
+        "𐑕𐑐𐑵𐑯"
+      ],
+      "rightOrder": [
+        "goose",
+        "spoon",
+        "glue",
+        "clue"
+      ]
+    }
+  ]
+}

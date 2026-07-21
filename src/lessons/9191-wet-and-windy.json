@@ -1,0 +1,118 @@
+{
+  "id": 9191,
+  "title": "Wet & Windy",
+  "glyph": "𐑢𐑦𐑯",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 19,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Woe and win",
+      "body": "𐑢 is the “w” in win. Read these."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑦𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "wit",
+      "correctLabel": "wit"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑨𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "wag",
+      "correctLabel": "wag"
+    },
+    {
+      "type": "build",
+      "prompt": "wait",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑢",
+        "𐑱",
+        "𐑑",
+        "𐑦",
+        "𐑯"
+      ],
+      "answer": [
+        "𐑢",
+        "𐑱",
+        "𐑑"
+      ],
+      "correctLabel": "𐑢𐑱𐑑"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑢𐑦𐑜",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "wig",
+        "wag",
+        "win",
+        "web"
+      ],
+      "correct": "wig",
+      "correctLabel": "wig"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑧𐑚",
+      "caption": "Sound it out — what does this say?",
+      "correct": "web",
+      "correctLabel": "web"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑦𐑯𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "wind",
+      "correctLabel": "wind"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑧𐑯𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "went",
+      "correctLabel": "went"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑲𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "wide",
+      "correctLabel": "wide"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑲𐑓",
+      "caption": "Sound it out — what does this say?",
+      "correct": "wife",
+      "correctLabel": "wife"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑢𐑦𐑑": "wit",
+        "𐑢𐑨𐑜": "wag",
+        "𐑢𐑧𐑚": "web",
+        "𐑢𐑦𐑯𐑛": "wind"
+      },
+      "leftOrder": [
+        "𐑢𐑦𐑑",
+        "𐑢𐑨𐑜",
+        "𐑢𐑧𐑚",
+        "𐑢𐑦𐑯𐑛"
+      ],
+      "rightOrder": [
+        "web",
+        "wind",
+        "wit",
+        "wag"
+      ]
+    }
+  ]
+}

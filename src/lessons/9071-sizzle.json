@@ -1,0 +1,143 @@
+{
+  "id": 9071,
+  "title": "Sizzle",
+  "glyph": "𐑕𐑟",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 7,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Sizzle",
+      "body": "𐑕 hisses, 𐑟 buzzes — same curve, mirrored. Read these s and z words."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑨𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sap",
+      "correctLabel": "sap"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑦𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sip",
+      "correctLabel": "sip"
+    },
+    {
+      "type": "build",
+      "prompt": "sob",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑕",
+        "𐑪",
+        "𐑚",
+        "𐑟",
+        "𐑜"
+      ],
+      "answer": [
+        "𐑕",
+        "𐑪",
+        "𐑚"
+      ],
+      "correctLabel": "𐑕𐑪𐑚"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑟𐑨𐑐",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "zap",
+        "sap",
+        "zip",
+        "zag"
+      ],
+      "correct": "zap",
+      "correctLabel": "zap"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑪𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sock",
+      "correctLabel": "sock"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        1,
+        2
+      ],
+      "bank": [
+        "𐑦",
+        "𐑟",
+        "𐑨",
+        "𐑕"
+      ],
+      "correctLabel": "𐑓𐑦𐑟",
+      "prompt": "fizz",
+      "word": [
+        "𐑓",
+        "𐑦",
+        "𐑟"
+      ],
+      "caption": "Tap the missing letters"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑪𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "boss",
+      "correctLabel": "boss"
+    },
+    {
+      "type": "build",
+      "prompt": "toss",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑑",
+        "𐑪",
+        "𐑕",
+        "𐑟",
+        "𐑐"
+      ],
+      "answer": [
+        "𐑑",
+        "𐑪",
+        "𐑕"
+      ],
+      "correctLabel": "𐑑𐑪𐑕"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑪𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sod",
+      "correctLabel": "sod"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑕𐑨𐑐": "sap",
+        "𐑕𐑦𐑐": "sip",
+        "𐑚𐑪𐑕": "boss",
+        "𐑟𐑨𐑐": "zap"
+      },
+      "leftOrder": [
+        "𐑕𐑨𐑐",
+        "𐑕𐑦𐑐",
+        "𐑚𐑪𐑕",
+        "𐑟𐑨𐑐"
+      ],
+      "rightOrder": [
+        "sip",
+        "zap",
+        "sap",
+        "boss"
+      ]
+    }
+  ]
+}

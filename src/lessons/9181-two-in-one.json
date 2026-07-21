@@ -1,0 +1,137 @@
+{
+  "id": 9181,
+  "title": "Two in One",
+  "glyph": "𐑐𐑨𐑯𐑒𐑱𐑒",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 18,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Two words in one",
+      "body": "Some words are just two smaller words joined — read one half, then the other."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑨𐑯𐑒𐑱𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "pancake",
+      "correctLabel": "pancake"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑱𐑯𐑒𐑴𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "raincoat",
+      "correctLabel": "raincoat"
+    },
+    {
+      "type": "build",
+      "prompt": "seaside",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑕",
+        "𐑰",
+        "𐑕",
+        "𐑲",
+        "𐑛",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑕",
+        "𐑰",
+        "𐑕",
+        "𐑲",
+        "𐑛"
+      ],
+      "correctLabel": "𐑕𐑰𐑕𐑲𐑛"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑮𐑱𐑤𐑮𐑴𐑛",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "railroad",
+        "raincoat",
+        "railway",
+        "roadside"
+      ],
+      "correct": "railroad",
+      "correctLabel": "railroad"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑱𐑑𐑲𐑥",
+      "caption": "Sound it out — what does this say?",
+      "correct": "daytime",
+      "correctLabel": "daytime"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑰𐑚𐑨𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "teabag",
+      "correctLabel": "teabag"
+    },
+    {
+      "type": "build",
+      "prompt": "sunbeam",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑕",
+        "𐑳",
+        "𐑯",
+        "𐑚",
+        "𐑰",
+        "𐑥",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑕",
+        "𐑳",
+        "𐑯",
+        "𐑚",
+        "𐑰",
+        "𐑥"
+      ],
+      "correctLabel": "𐑕𐑳𐑯𐑚𐑰𐑥"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑳𐑯𐑤𐑦𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sunlit",
+      "correctLabel": "sunlit"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑯𐑧𐑒𐑑𐑲",
+      "caption": "Sound it out — what does this say?",
+      "correct": "necktie",
+      "correctLabel": "necktie"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑐𐑨𐑯𐑒𐑱𐑒": "pancake",
+        "𐑮𐑱𐑯𐑒𐑴𐑑": "raincoat",
+        "𐑛𐑱𐑑𐑲𐑥": "daytime",
+        "𐑑𐑰𐑚𐑨𐑜": "teabag"
+      },
+      "leftOrder": [
+        "𐑐𐑨𐑯𐑒𐑱𐑒",
+        "𐑮𐑱𐑯𐑒𐑴𐑑",
+        "𐑛𐑱𐑑𐑲𐑥",
+        "𐑑𐑰𐑚𐑨𐑜"
+      ],
+      "rightOrder": [
+        "daytime",
+        "teabag",
+        "pancake",
+        "raincoat"
+      ]
+    }
+  ]
+}

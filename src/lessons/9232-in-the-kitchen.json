@@ -1,0 +1,139 @@
+{
+  "id": 9232,
+  "title": "In the Kitchen",
+  "glyph": "𐑒𐑦𐑗𐑦𐑯",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 23,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Two words joined",
+      "body": "Longer everyday words made of two parts — read each half."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑧𐑛𐑮𐑵𐑥",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bedroom",
+      "correctLabel": "bedroom"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑳𐑖𐑮𐑵𐑥",
+      "caption": "Sound it out — what does this say?",
+      "correct": "mushroom",
+      "correctLabel": "mushroom"
+    },
+    {
+      "type": "build",
+      "prompt": "kitchen",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑦",
+        "𐑗",
+        "𐑦",
+        "𐑯",
+        "𐑖"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑦",
+        "𐑗",
+        "𐑦",
+        "𐑯"
+      ],
+      "correctLabel": "𐑒𐑦𐑗𐑦𐑯"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑕𐑨𐑯𐑢𐑦𐑡",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "sandwich",
+        "sandpit",
+        "sandbag",
+        "sunset"
+      ],
+      "correct": "sandwich",
+      "correctLabel": "sandwich"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑗𐑦𐑒𐑦𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "chicken",
+      "correctLabel": "chicken"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑳𐑯𐑖𐑲𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sunshine",
+      "correctLabel": "sunshine"
+    },
+    {
+      "type": "build",
+      "prompt": "handbag",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑣",
+        "𐑨",
+        "𐑯",
+        "𐑛",
+        "𐑚",
+        "𐑨",
+        "𐑜",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑣",
+        "𐑨",
+        "𐑯",
+        "𐑛",
+        "𐑚",
+        "𐑨",
+        "𐑜"
+      ],
+      "correctLabel": "𐑣𐑨𐑯𐑛𐑚𐑨𐑜"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑦𐑯𐑛𐑥𐑦𐑤",
+      "caption": "Sound it out — what does this say?",
+      "correct": "windmill",
+      "correctLabel": "windmill"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑦𐑤𐑒𐑖𐑱𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "milkshake",
+      "correctLabel": "milkshake"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑚𐑧𐑛𐑮𐑵𐑥": "bedroom",
+        "𐑥𐑳𐑖𐑮𐑵𐑥": "mushroom",
+        "𐑗𐑦𐑒𐑦𐑯": "chicken",
+        "𐑒𐑦𐑗𐑦𐑯": "kitchen"
+      },
+      "leftOrder": [
+        "𐑚𐑧𐑛𐑮𐑵𐑥",
+        "𐑥𐑳𐑖𐑮𐑵𐑥",
+        "𐑗𐑦𐑒𐑦𐑯",
+        "𐑒𐑦𐑗𐑦𐑯"
+      ],
+      "rightOrder": [
+        "chicken",
+        "kitchen",
+        "bedroom",
+        "mushroom"
+      ]
+    }
+  ]
+}

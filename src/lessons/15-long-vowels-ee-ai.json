@@ -57,23 +57,6 @@
       "correctLabel": "AI as in day"
     },
     {
-      "type": "type",
-      "prompt": "𐑛𐑱",
-      "caption": "Sound it out — what does this say?",
-      "correct": "day",
-      "correctLabel": "day"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑚𐑰",
-      "caption": "Sound it out — what does this say?",
-      "correct": "bee",
-      "accept": [
-        "be"
-      ],
-      "correctLabel": "bee"
-    },
-    {
       "type": "choice",
       "promptIsGlyph": true,
       "prompt": "𐑯𐑱𐑤",
@@ -120,71 +103,6 @@
       "correctLabel": "meet"
     },
     {
-      "type": "type",
-      "prompt": "𐑓𐑰𐑑",
-      "caption": "Sound it out — what does this say?",
-      "correct": "feet",
-      "accept": [
-        "feat"
-      ],
-      "correctLabel": "feet"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑕𐑱",
-      "caption": "Sound it out — what does this say?",
-      "correct": "say",
-      "correctLabel": "say"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑮𐑱𐑯",
-      "caption": "Sound it out — what does this say?",
-      "correct": "rain",
-      "accept": [
-        "rein",
-        "reign"
-      ],
-      "correctLabel": "rain"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑜𐑱𐑥",
-      "caption": "Sound it out — what does this say?",
-      "correct": "game",
-      "correctLabel": "game"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑑𐑰𐑥",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "team",
-        "tame",
-        "time",
-        "tim"
-      ],
-      "correct": "team",
-      "correctLabel": "team"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": false,
-      "prompt": "Which word says “tail”?",
-      "caption": "",
-      "optionIsGlyph": true,
-      "options": [
-        "𐑑𐑱𐑤",
-        "𐑥𐑱𐑤",
-        "𐑯𐑱𐑤",
-        "𐑑𐑱𐑯"
-      ],
-      "correct": "𐑑𐑱𐑤",
-      "correctLabel": "𐑑𐑱𐑤"
-    },
-    {
       "type": "build",
       "prompt": "keep",
       "caption": "Build this word from Shavian letters",
@@ -201,64 +119,6 @@
         "𐑐"
       ],
       "correctLabel": "𐑒𐑰𐑐"
-    },
-    {
-      "type": "build",
-      "prompt": "sail",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑕",
-        "𐑱",
-        "𐑤",
-        "𐑯",
-        "𐑥"
-      ],
-      "answer": [
-        "𐑕",
-        "𐑱",
-        "𐑤"
-      ],
-      "correctLabel": "𐑕𐑱𐑤"
-    },
-    {
-      "type": "build",
-      "prompt": "train",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑑",
-        "𐑮",
-        "𐑱",
-        "𐑯",
-        "𐑛"
-      ],
-      "answer": [
-        "𐑑",
-        "𐑮",
-        "𐑱",
-        "𐑯"
-      ],
-      "correctLabel": "𐑑𐑮𐑱𐑯"
-    },
-    {
-      "type": "match",
-      "pairs": {
-        "𐑥𐑰𐑑": "meet",
-        "𐑓𐑰𐑑": "feet",
-        "𐑕𐑱": "say",
-        "𐑮𐑱𐑯": "rain"
-      },
-      "leftOrder": [
-        "𐑮𐑱𐑯",
-        "𐑥𐑰𐑑",
-        "𐑕𐑱",
-        "𐑓𐑰𐑑"
-      ],
-      "rightOrder": [
-        "meet",
-        "rain",
-        "feet",
-        "say"
-      ]
     }
   ]
 }

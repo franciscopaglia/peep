@@ -1,0 +1,129 @@
+{
+  "id": 9222,
+  "title": "Cage & Judge",
+  "glyph": "𐑡𐑳𐑡",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 22,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Ending in j",
+      "body": "The 𐑡 sound often closes a word — cage, edge, judge. Read these."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑱𐑡",
+      "caption": "Sound it out — what does this say?",
+      "correct": "age",
+      "correctLabel": "age"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑱𐑡",
+      "caption": "Sound it out — what does this say?",
+      "correct": "rage",
+      "correctLabel": "rage"
+    },
+    {
+      "type": "build",
+      "prompt": "badge",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑚",
+        "𐑨",
+        "𐑡",
+        "𐑛",
+        "𐑜"
+      ],
+      "answer": [
+        "𐑚",
+        "𐑨",
+        "𐑡"
+      ],
+      "correctLabel": "𐑚𐑨𐑡"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑧𐑡",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "edge",
+        "age",
+        "egg",
+        "edgy"
+      ],
+      "correct": "edge",
+      "correctLabel": "edge"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑱𐑡",
+      "caption": "Sound it out — what does this say?",
+      "correct": "wage",
+      "correctLabel": "wage"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑡𐑳𐑡",
+      "caption": "Sound it out — what does this say?",
+      "correct": "judge",
+      "correctLabel": "judge"
+    },
+    {
+      "type": "build",
+      "prompt": "cage",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑱",
+        "𐑡",
+        "𐑖",
+        "𐑒"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑱",
+        "𐑡"
+      ],
+      "correctLabel": "𐑒𐑱𐑡"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑳𐑡",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fudge",
+      "correctLabel": "fudge"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑦𐑡",
+      "caption": "Sound it out — what does this say?",
+      "correct": "ridge",
+      "correctLabel": "ridge"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑱𐑡": "age",
+        "𐑮𐑱𐑡": "rage",
+        "𐑢𐑱𐑡": "wage",
+        "𐑡𐑳𐑡": "judge"
+      },
+      "leftOrder": [
+        "𐑱𐑡",
+        "𐑮𐑱𐑡",
+        "𐑢𐑱𐑡",
+        "𐑡𐑳𐑡"
+      ],
+      "rightOrder": [
+        "wage",
+        "judge",
+        "age",
+        "rage"
+      ]
+    }
+  ]
+}

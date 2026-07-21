@@ -1,0 +1,139 @@
+{
+  "id": 9111,
+  "title": "Bunched Up",
+  "glyph": "𐑛𐑳𐑕𐑒",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 11,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Bunched up",
+      "body": "Two or three consonants in a row — sound out each one, no skipping."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑳𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bust",
+      "correctLabel": "bust"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑳𐑕𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "tusk",
+      "correctLabel": "tusk"
+    },
+    {
+      "type": "build",
+      "prompt": "dusk",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑛",
+        "𐑳",
+        "𐑕",
+        "𐑒",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑳",
+        "𐑕",
+        "𐑒"
+      ],
+      "correctLabel": "𐑛𐑳𐑕𐑒"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑒𐑨𐑕𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "cast",
+        "cost",
+        "cusp",
+        "cusk"
+      ],
+      "correct": "cast",
+      "correctLabel": "cast"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑳𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "puck",
+      "correctLabel": "puck"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        2,
+        3
+      ],
+      "bank": [
+        "𐑕",
+        "𐑑",
+        "𐑧",
+        "𐑒"
+      ],
+      "correctLabel": "𐑓𐑦𐑕𐑑",
+      "prompt": "fist",
+      "word": [
+        "𐑓",
+        "𐑦",
+        "𐑕",
+        "𐑑"
+      ],
+      "caption": "Tap the missing letters"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑳𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "suck",
+      "correctLabel": "suck"
+    },
+    {
+      "type": "build",
+      "prompt": "cast",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑨",
+        "𐑕",
+        "𐑑",
+        "𐑦"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑨",
+        "𐑕",
+        "𐑑"
+      ],
+      "correctLabel": "𐑒𐑨𐑕𐑑"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑚𐑳𐑕𐑑": "bust",
+        "𐑑𐑳𐑕𐑒": "tusk",
+        "𐑛𐑳𐑕𐑒": "dusk",
+        "𐑐𐑳𐑒": "puck"
+      },
+      "leftOrder": [
+        "𐑚𐑳𐑕𐑑",
+        "𐑑𐑳𐑕𐑒",
+        "𐑛𐑳𐑕𐑒",
+        "𐑐𐑳𐑒"
+      ],
+      "rightOrder": [
+        "puck",
+        "dusk",
+        "bust",
+        "tusk"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": 9202,
+  "title": "Bank & Sink",
+  "glyph": "𐑚𐑨𐑙𐑒",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 20,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Bank and sink",
+      "body": "When n meets k, it turns to 𐑙 — bank is 𐑚𐑨𐑙𐑒. Read these."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑨𐑙𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bank",
+      "correctLabel": "bank"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑨𐑙𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "tank",
+      "correctLabel": "tank"
+    },
+    {
+      "type": "build",
+      "prompt": "drink",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑛",
+        "𐑮",
+        "𐑦",
+        "𐑙",
+        "𐑒",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑮",
+        "𐑦",
+        "𐑙",
+        "𐑒"
+      ],
+      "correctLabel": "𐑛𐑮𐑦𐑙𐑒"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑕𐑦𐑙𐑒",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "sink",
+        "sing",
+        "link",
+        "sank"
+      ],
+      "correct": "sink",
+      "correctLabel": "sink"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑦𐑙𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "pink",
+      "correctLabel": "pink"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑦𐑙𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "link",
+      "correctLabel": "link"
+    },
+    {
+      "type": "build",
+      "prompt": "blink",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑚",
+        "𐑤",
+        "𐑦",
+        "𐑙",
+        "𐑒",
+        "𐑮"
+      ],
+      "answer": [
+        "𐑚",
+        "𐑤",
+        "𐑦",
+        "𐑙",
+        "𐑒"
+      ],
+      "correctLabel": "𐑚𐑤𐑦𐑙𐑒"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑳𐑙𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "dunk",
+      "correctLabel": "dunk"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑦𐑙𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "wink",
+      "correctLabel": "wink"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑚𐑨𐑙𐑒": "bank",
+        "𐑑𐑨𐑙𐑒": "tank",
+        "𐑐𐑦𐑙𐑒": "pink",
+        "𐑤𐑦𐑙𐑒": "link"
+      },
+      "leftOrder": [
+        "𐑚𐑨𐑙𐑒",
+        "𐑑𐑨𐑙𐑒",
+        "𐑐𐑦𐑙𐑒",
+        "𐑤𐑦𐑙𐑒"
+      ],
+      "rightOrder": [
+        "pink",
+        "link",
+        "bank",
+        "tank"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "id": 9032,
+  "title": "K & G: Even More",
+  "glyph": "𐑒𐑜",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 3,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Even more",
+      "body": "A tougher set — no hints, just read and build. All new words."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑨𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "back",
+      "correctLabel": "back"
+    },
+    {
+      "type": "build",
+      "prompt": "pack",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑐",
+        "𐑨",
+        "𐑒",
+        "𐑜",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑨",
+        "𐑒"
+      ],
+      "correctLabel": "𐑐𐑨𐑒"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑪𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "dock",
+      "correctLabel": "dock"
+    },
+    {
+      "type": "build",
+      "prompt": "tick",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑑",
+        "𐑦",
+        "𐑒",
+        "𐑛",
+        "𐑜"
+      ],
+      "answer": [
+        "𐑑",
+        "𐑦",
+        "𐑒"
+      ],
+      "correctLabel": "𐑑𐑦𐑒"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑪𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cog",
+      "correctLabel": "cog"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑜𐑦𐑜",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "gig",
+        "gag",
+        "gog",
+        "jig"
+      ],
+      "correct": "gig",
+      "correctLabel": "gig"
+    },
+    {
+      "type": "build",
+      "prompt": "cob",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑪",
+        "𐑚",
+        "𐑐",
+        "𐑜"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑪",
+        "𐑚"
+      ],
+      "correctLabel": "𐑒𐑪𐑚"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑦𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "dip",
+      "correctLabel": "dip"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑚𐑨𐑒": "back",
+        "𐑛𐑪𐑒": "dock",
+        "𐑑𐑨𐑒": "tack",
+        "𐑒𐑪𐑜": "cog"
+      },
+      "leftOrder": [
+        "𐑚𐑨𐑒",
+        "𐑛𐑪𐑒",
+        "𐑑𐑨𐑒",
+        "𐑒𐑪𐑜"
+      ],
+      "rightOrder": [
+        "cog",
+        "back",
+        "tack",
+        "dock"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "id": 9142,
+  "title": "Two Beats",
+  "glyph": "𐑕𐑳𐑯𐑕𐑧𐑑",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 14,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Two beats",
+      "body": "Longer words, two syllables — read one part, then the next."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑳𐑯𐑕𐑧𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sunset",
+      "correctLabel": "sunset"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑦𐑒𐑯𐑦𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "picnic",
+      "correctLabel": "picnic"
+    },
+    {
+      "type": "build",
+      "prompt": "tennis",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑑",
+        "𐑧",
+        "𐑯",
+        "𐑦",
+        "𐑕",
+        "𐑟"
+      ],
+      "answer": [
+        "𐑑",
+        "𐑧",
+        "𐑯",
+        "𐑦",
+        "𐑕"
+      ],
+      "correctLabel": "𐑑𐑧𐑯𐑦𐑕"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑚𐑨𐑯𐑛𐑦𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "bandit",
+        "rabbit",
+        "bonnet",
+        "banquet"
+      ],
+      "correct": "bandit",
+      "correctLabel": "bandit"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑨𐑯𐑪𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cannot",
+      "correctLabel": "cannot"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑧𐑯𐑦𐑥",
+      "caption": "Sound it out — what does this say?",
+      "correct": "denim",
+      "correctLabel": "denim"
+    },
+    {
+      "type": "build",
+      "prompt": "goblin",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑜",
+        "𐑪",
+        "𐑚",
+        "𐑤",
+        "𐑦",
+        "𐑯",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑜",
+        "𐑪",
+        "𐑚",
+        "𐑤",
+        "𐑦",
+        "𐑯"
+      ],
+      "correctLabel": "𐑜𐑪𐑚𐑤𐑦𐑯"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑪𐑕𐑦𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "gossip",
+      "correctLabel": "gossip"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑨𐑕𐑒𐑪𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "mascot",
+      "correctLabel": "mascot"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑕𐑳𐑯𐑕𐑧𐑑": "sunset",
+        "𐑐𐑦𐑒𐑯𐑦𐑒": "picnic",
+        "𐑒𐑨𐑯𐑪𐑑": "cannot",
+        "𐑛𐑧𐑯𐑦𐑥": "denim"
+      },
+      "leftOrder": [
+        "𐑕𐑳𐑯𐑕𐑧𐑑",
+        "𐑐𐑦𐑒𐑯𐑦𐑒",
+        "𐑒𐑨𐑯𐑪𐑑",
+        "𐑛𐑧𐑯𐑦𐑥"
+      ],
+      "rightOrder": [
+        "cannot",
+        "denim",
+        "sunset",
+        "picnic"
+      ]
+    }
+  ]
+}

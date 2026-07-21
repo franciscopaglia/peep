@@ -63,27 +63,6 @@
       "caption": "Tap the missing letters"
     },
     {
-      "type": "complete",
-      "blanks": [
-        0,
-        1
-      ],
-      "bank": [
-        "𐑑",
-        "𐑦",
-        "𐑛",
-        "𐑧"
-      ],
-      "correctLabel": "𐑑𐑦𐑐",
-      "prompt": "tip",
-      "word": [
-        "𐑑",
-        "𐑦",
-        "𐑐"
-      ],
-      "caption": "Tap the missing letters"
-    },
-    {
       "type": "match",
       "pairs": {
         "𐑚𐑧𐑑": "bet",
@@ -106,110 +85,10 @@
     },
     {
       "type": "type",
-      "prompt": "𐑓𐑧𐑛",
-      "caption": "Sound it out — what does this say?",
-      "correct": "fed",
-      "correctLabel": "fed"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑕𐑧𐑑",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "set",
-        "sit",
-        "sat",
-        "seat"
-      ],
-      "correct": "set",
-      "correctLabel": "set"
-    },
-    {
-      "type": "match",
-      "pairs": {
-        "𐑓𐑧𐑛": "fed",
-        "𐑕𐑧𐑑": "set",
-        "𐑚𐑧𐑛": "bed",
-        "𐑑𐑦𐑐": "tip"
-      },
-      "leftOrder": [
-        "𐑑𐑦𐑐",
-        "𐑓𐑧𐑛",
-        "𐑚𐑧𐑛",
-        "𐑕𐑧𐑑"
-      ],
-      "rightOrder": [
-        "bed",
-        "tip",
-        "set",
-        "fed"
-      ]
-    },
-    {
-      "type": "type",
       "prompt": "𐑚𐑧𐑑",
       "caption": "Sound it out — what does this say?",
       "correct": "bet",
       "correctLabel": "bet"
-    },
-    {
-      "type": "complete",
-      "blanks": [
-        0,
-        1
-      ],
-      "bank": [
-        "𐑐",
-        "𐑧",
-        "𐑚",
-        "𐑦"
-      ],
-      "correctLabel": "𐑐𐑧𐑑",
-      "prompt": "pet",
-      "word": [
-        "𐑐",
-        "𐑧",
-        "𐑑"
-      ],
-      "caption": "Tap the missing letters"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑜𐑧𐑑",
-      "caption": "Sound it out — what does this say?",
-      "correct": "get",
-      "correctLabel": "get"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑝𐑧𐑑",
-      "caption": "Sound it out — what does this say?",
-      "correct": "vet",
-      "correctLabel": "vet"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑚𐑧𐑜",
-      "caption": "Sound it out — what does this say?",
-      "correct": "beg",
-      "correctLabel": "beg"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑒𐑧𐑜",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "keg",
-        "kid",
-        "cog",
-        "kick"
-      ],
-      "correct": "keg",
-      "correctLabel": "keg"
     },
     {
       "type": "choice",
@@ -225,21 +104,6 @@
       ],
       "correct": "𐑚𐑧𐑛",
       "correctLabel": "𐑚𐑧𐑛"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑟𐑧𐑛",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "zed",
-        "zip",
-        "zap",
-        "zit"
-      ],
-      "correct": "zed",
-      "correctLabel": "zed"
     },
     {
       "type": "build",
@@ -258,45 +122,6 @@
         "𐑜"
       ],
       "correctLabel": "𐑐𐑧𐑜"
-    },
-    {
-      "type": "build",
-      "prompt": "fez",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑓",
-        "𐑧",
-        "𐑟",
-        "𐑕",
-        "𐑛"
-      ],
-      "answer": [
-        "𐑓",
-        "𐑧",
-        "𐑟"
-      ],
-      "correctLabel": "𐑓𐑧𐑟"
-    },
-    {
-      "type": "match",
-      "pairs": {
-        "𐑚𐑧𐑑": "bet",
-        "𐑐𐑧𐑑": "pet",
-        "𐑜𐑧𐑑": "get",
-        "𐑝𐑧𐑑": "vet"
-      },
-      "leftOrder": [
-        "𐑝𐑧𐑑",
-        "𐑚𐑧𐑑",
-        "𐑜𐑧𐑑",
-        "𐑐𐑧𐑑"
-      ],
-      "rightOrder": [
-        "get",
-        "vet",
-        "pet",
-        "bet"
-      ]
     }
   ]
 }

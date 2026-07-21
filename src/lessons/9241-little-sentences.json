@@ -1,0 +1,146 @@
+{
+  "id": 9241,
+  "title": "Little Sentences",
+  "glyph": "𐑞",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 24,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Reading sentences",
+      "body": "Whole sentences now — the same words, read left to right. Take them one at a time."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑰 𐑮𐑳𐑯 𐑯 𐑡𐑳𐑥𐑐",
+      "caption": "Type what this says",
+      "correct": "we run and jump",
+      "correctLabel": "we run and jump"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑖𐑰 𐑣𐑨𐑟 𐑩 𐑚𐑦𐑜 𐑒𐑨𐑑",
+      "caption": "What does this say?",
+      "optionIsGlyph": false,
+      "options": [
+        "She has a big cat",
+        "She has a big dog",
+        "He has a big cat",
+        "She was a big cat"
+      ],
+      "correct": "She has a big cat",
+      "correctLabel": "She has a big cat"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑰 𐑮𐑨𐑯 𐑑 𐑞 𐑖𐑪𐑐",
+      "caption": "Type what this says",
+      "correct": "he ran to the shop",
+      "correctLabel": "he ran to the shop"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑣𐑰": "he",
+        "𐑲": "I",
+        "𐑖𐑰": "she",
+        "𐑢𐑰": "we"
+      },
+      "leftOrder": [
+        "𐑣𐑰",
+        "𐑲",
+        "𐑖𐑰",
+        "𐑢𐑰"
+      ],
+      "rightOrder": [
+        "we",
+        "he",
+        "I",
+        "she"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑰 𐑤𐑲𐑒 𐑞 𐑜𐑮𐑰𐑯 𐑚𐑴𐑑",
+      "caption": "Type what this says",
+      "correct": "we like the green boat",
+      "correctLabel": "we like the green boat"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑞 𐑒𐑨𐑑 𐑮𐑨𐑯",
+      "caption": "What does this say?",
+      "optionIsGlyph": false,
+      "options": [
+        "the cat ran",
+        "the cat sat",
+        "a cat ran",
+        "the dog ran"
+      ],
+      "correct": "the cat ran",
+      "correctLabel": "the cat ran"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑰 𐑣𐑨𐑛 𐑩 𐑮𐑧𐑛 𐑚𐑲𐑒",
+      "caption": "Type what this says",
+      "correct": "he had a red bike",
+      "correctLabel": "he had a red bike"
+    },
+    {
+      "type": "arrange",
+      "promptEn": "we sit and rest",
+      "tiles": [
+        "𐑢𐑰",
+        "𐑕𐑦𐑑",
+        "𐑯",
+        "𐑮𐑧𐑕𐑑",
+        "𐑞"
+      ],
+      "answer": [
+        "𐑢𐑰",
+        "𐑕𐑦𐑑",
+        "𐑯",
+        "𐑮𐑧𐑕𐑑"
+      ],
+      "correctLabel": "𐑢𐑰 𐑕𐑦𐑑 𐑯 𐑮𐑧𐑕𐑑"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑞 𐑛𐑪𐑜 𐑮𐑨𐑯 𐑑 𐑞 𐑐𐑪𐑯𐑛",
+      "caption": "What does this say?",
+      "optionIsGlyph": false,
+      "options": [
+        "the dog ran to the pond",
+        "the dog ran to the pool",
+        "a dog ran to the pond",
+        "the dog ran to the shop"
+      ],
+      "correct": "the dog ran to the pond",
+      "correctLabel": "the dog ran to the pond"
+    },
+    {
+      "type": "fill",
+      "blanks": [
+        1,
+        2
+      ],
+      "bank": [
+        "𐑛𐑪𐑜",
+        "𐑮𐑨𐑯",
+        "𐑒𐑨𐑑"
+      ],
+      "correctLabel": "𐑞 𐑛𐑪𐑜 𐑮𐑨𐑯",
+      "words": [
+        "𐑞",
+        "𐑛𐑪𐑜",
+        "𐑮𐑨𐑯"
+      ],
+      "promptEn": "the dog ran"
+    }
+  ]
+}

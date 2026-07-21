@@ -1,0 +1,143 @@
+{
+  "id": 9061,
+  "title": "Hiss & Buzz",
+  "glyph": "𐑓𐑝",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 6,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Hiss and buzz",
+      "body": "𐑓 hisses, 𐑝 buzzes — same mouth shape, one just adds your voice. Tell them apart here."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑨𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fat",
+      "correctLabel": "fat"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑦𐑚",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fib",
+      "correctLabel": "fib"
+    },
+    {
+      "type": "build",
+      "prompt": "dip",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑛",
+        "𐑦",
+        "𐑐",
+        "𐑓",
+        "𐑝"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑦",
+        "𐑐"
+      ],
+      "correctLabel": "𐑛𐑦𐑐"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑝𐑨𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "vat",
+        "fat",
+        "bat",
+        "vet"
+      ],
+      "correct": "vat",
+      "correctLabel": "vat"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑨𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fad",
+      "correctLabel": "fad"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        0,
+        1
+      ],
+      "bank": [
+        "𐑓",
+        "𐑪",
+        "𐑝",
+        "𐑨"
+      ],
+      "correctLabel": "𐑓𐑪𐑜",
+      "prompt": "fog",
+      "word": [
+        "𐑓",
+        "𐑪",
+        "𐑜"
+      ],
+      "caption": "Tap the missing letters"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑪𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fop",
+      "correctLabel": "fop"
+    },
+    {
+      "type": "build",
+      "prompt": "vat",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑝",
+        "𐑨",
+        "𐑑",
+        "𐑓",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑝",
+        "𐑨",
+        "𐑑"
+      ],
+      "correctLabel": "𐑝𐑨𐑑"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑪𐑚",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fob",
+      "correctLabel": "fob"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑓𐑨𐑑": "fat",
+        "𐑝𐑨𐑑": "vat",
+        "𐑓𐑦𐑚": "fib",
+        "𐑓𐑪𐑚": "fob"
+      },
+      "leftOrder": [
+        "𐑓𐑨𐑑",
+        "𐑝𐑨𐑑",
+        "𐑓𐑦𐑚",
+        "𐑓𐑪𐑚"
+      ],
+      "rightOrder": [
+        "vat",
+        "fob",
+        "fat",
+        "fib"
+      ]
+    }
+  ]
+}

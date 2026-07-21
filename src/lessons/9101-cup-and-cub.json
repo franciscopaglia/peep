@@ -1,0 +1,131 @@
+{
+  "id": 9101,
+  "title": "Cup & Cub",
+  "glyph": "𐑒𐑳𐑐",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 10,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Cup and cub",
+      "body": "𐑳 is the “uh” in cup — lips relaxed. Read these."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑳𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "but",
+      "correctLabel": "but"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑳𐑚",
+      "caption": "Sound it out — what does this say?",
+      "correct": "pub",
+      "correctLabel": "pub"
+    },
+    {
+      "type": "build",
+      "prompt": "dust",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑛",
+        "𐑳",
+        "𐑕",
+        "𐑑",
+        "𐑫"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑳",
+        "𐑕",
+        "𐑑"
+      ],
+      "correctLabel": "𐑛𐑳𐑕𐑑"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑛𐑳𐑒",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "duck",
+        "dock",
+        "deck",
+        "dick"
+      ],
+      "correct": "duck",
+      "correctLabel": "duck"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑳𐑚",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cub",
+      "correctLabel": "cub"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑳𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "tug",
+      "correctLabel": "tug"
+    },
+    {
+      "type": "build",
+      "prompt": "bust",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑚",
+        "𐑳",
+        "𐑕",
+        "𐑑",
+        "𐑫"
+      ],
+      "answer": [
+        "𐑚",
+        "𐑳",
+        "𐑕",
+        "𐑑"
+      ],
+      "correctLabel": "𐑚𐑳𐑕𐑑"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑳𐑚",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sub",
+      "correctLabel": "sub"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑳𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bud",
+      "correctLabel": "bud"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑚𐑳𐑑": "but",
+        "𐑐𐑳𐑚": "pub",
+        "𐑒𐑳𐑚": "cub",
+        "𐑕𐑳𐑚": "sub"
+      },
+      "leftOrder": [
+        "𐑚𐑳𐑑",
+        "𐑐𐑳𐑚",
+        "𐑒𐑳𐑚",
+        "𐑕𐑳𐑚"
+      ],
+      "rightOrder": [
+        "cub",
+        "sub",
+        "but",
+        "pub"
+      ]
+    }
+  ]
+}

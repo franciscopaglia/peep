@@ -49,35 +49,6 @@
       "correctLabel": "𐑗"
     },
     {
-      "type": "type",
-      "prompt": "𐑖𐑪𐑐",
-      "caption": "Type what this word says",
-      "correct": "shop",
-      "correctLabel": "shop"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑖𐑧𐑛",
-      "caption": "Sound it out — what does this say?",
-      "correct": "shed",
-      "correctLabel": "shed"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑗𐑳𐑙𐑒",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "chunk",
-        "chuck",
-        "chock",
-        "check"
-      ],
-      "correct": "chunk",
-      "correctLabel": "chunk"
-    },
-    {
       "type": "build",
       "prompt": "fresh",
       "caption": "Build this word from Shavian letters",
@@ -98,73 +69,10 @@
     },
     {
       "type": "type",
-      "prompt": "𐑓𐑦𐑖",
-      "caption": "Sound it out — what does this say?",
-      "correct": "fish",
-      "correctLabel": "fish"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑛𐑦𐑖",
-      "caption": "Sound it out — what does this say?",
-      "correct": "dish",
-      "correctLabel": "dish"
-    },
-    {
-      "type": "type",
       "prompt": "𐑗𐑦𐑐",
       "caption": "Sound it out — what does this say?",
       "correct": "chip",
       "correctLabel": "chip"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑗𐑨𐑑",
-      "caption": "Sound it out — what does this say?",
-      "correct": "chat",
-      "correctLabel": "chat"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑮𐑦𐑗",
-      "caption": "Sound it out — what does this say?",
-      "correct": "rich",
-      "correctLabel": "rich"
-    },
-    {
-      "type": "complete",
-      "blanks": [
-        3
-      ],
-      "bank": [
-        "𐑖",
-        "𐑗",
-        "𐑕"
-      ],
-      "correctLabel": "𐑚𐑮𐑳𐑖",
-      "prompt": "brush",
-      "word": [
-        "𐑚",
-        "𐑮",
-        "𐑳",
-        "𐑖"
-      ],
-      "caption": "Tap the missing letter"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑖𐑲𐑯",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "shine",
-        "shin",
-        "shone",
-        "sign"
-      ],
-      "correct": "shine",
-      "correctLabel": "shine"
     },
     {
       "type": "choice",
@@ -180,60 +88,6 @@
       ],
       "correct": "𐑥𐑳𐑗",
       "correctLabel": "𐑥𐑳𐑗"
-    },
-    {
-      "type": "build",
-      "prompt": "wish",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑢",
-        "𐑦",
-        "𐑖",
-        "𐑗",
-        "𐑕"
-      ],
-      "answer": [
-        "𐑢",
-        "𐑦",
-        "𐑖"
-      ],
-      "correctLabel": "𐑢𐑦𐑖"
-    },
-    {
-      "type": "build",
-      "prompt": "chain",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑗",
-        "𐑱",
-        "𐑯",
-        "𐑖",
-        "𐑑"
-      ],
-      "answer": [
-        "𐑗",
-        "𐑱",
-        "𐑯"
-      ],
-      "correctLabel": "𐑗𐑱𐑯"
-    },
-    {
-      "type": "build",
-      "prompt": "teach",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑑",
-        "𐑰",
-        "𐑗",
-        "𐑖",
-        "𐑐"
-      ],
-      "answer": [
-        "𐑑",
-        "𐑰",
-        "𐑗"
-      ],
-      "correctLabel": "𐑑𐑰𐑗"
     },
     {
       "type": "match",

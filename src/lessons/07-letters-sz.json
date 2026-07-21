@@ -48,42 +48,6 @@
       }
     },
     {
-      "type": "choice",
-      "promptIsGlyph": false,
-      "prompt": "Which word means “zap”?",
-      "caption": "",
-      "optionIsGlyph": true,
-      "options": [
-        "𐑟𐑨𐑐",
-        "𐑟𐑨𐑑",
-        "𐑕𐑨𐑐",
-        "𐑟𐑦𐑐"
-      ],
-      "correct": "𐑟𐑨𐑐",
-      "correctLabel": "𐑟𐑨𐑐"
-    },
-    {
-      "type": "complete",
-      "blanks": [
-        1,
-        2
-      ],
-      "bank": [
-        "𐑦",
-        "𐑟",
-        "𐑨",
-        "𐑕"
-      ],
-      "correctLabel": "𐑓𐑦𐑟",
-      "prompt": "fizz",
-      "word": [
-        "𐑓",
-        "𐑦",
-        "𐑟"
-      ],
-      "caption": "Tap the missing letters"
-    },
-    {
       "type": "build",
       "prompt": "gas",
       "caption": "Build this word from Shavian letters",
@@ -102,27 +66,6 @@
       "correctLabel": "𐑜𐑨𐑕"
     },
     {
-      "type": "match",
-      "pairs": {
-        "𐑚𐑪𐑕": "boss",
-        "𐑒𐑦𐑕": "kiss",
-        "𐑛𐑦𐑜": "dig",
-        "𐑝𐑨𐑑": "vat"
-      },
-      "leftOrder": [
-        "𐑝𐑨𐑑",
-        "𐑚𐑪𐑕",
-        "𐑛𐑦𐑜",
-        "𐑒𐑦𐑕"
-      ],
-      "rightOrder": [
-        "kiss",
-        "vat",
-        "boss",
-        "dig"
-      ]
-    },
-    {
       "type": "choice",
       "promptIsGlyph": false,
       "prompt": "Which of these is the voiced (deep) version of 𐑕?",
@@ -138,154 +81,11 @@
       "correctLabel": "𐑟"
     },
     {
-      "type": "complete",
-      "blanks": [
-        0,
-        1
-      ],
-      "bank": [
-        "𐑕",
-        "𐑨",
-        "𐑟",
-        "𐑦"
-      ],
-      "correctLabel": "𐑕𐑨𐑜",
-      "prompt": "sag",
-      "word": [
-        "𐑕",
-        "𐑨",
-        "𐑜"
-      ],
-      "caption": "Tap the missing letters"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑕𐑦𐑐",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "sip",
-        "zip",
-        "sit",
-        "sap"
-      ],
-      "correct": "sip",
-      "correctLabel": "sip"
-    },
-    {
-      "type": "build",
-      "prompt": "sob",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑕",
-        "𐑪",
-        "𐑚",
-        "𐑟",
-        "𐑜"
-      ],
-      "answer": [
-        "𐑕",
-        "𐑪",
-        "𐑚"
-      ],
-      "correctLabel": "𐑕𐑪𐑚"
-    },
-    {
       "type": "type",
       "prompt": "𐑕𐑦𐑑",
       "caption": "Sound it out — what does this say?",
       "correct": "sit",
       "correctLabel": "sit"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑟𐑦𐑐",
-      "caption": "Sound it out — what does this say?",
-      "correct": "zip",
-      "correctLabel": "zip"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑓𐑨𐑕𐑑",
-      "caption": "Sound it out — what does this say?",
-      "correct": "fast",
-      "correctLabel": "fast"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑒𐑪𐑕𐑑",
-      "caption": "Sound it out — what does this say?",
-      "correct": "cost",
-      "correctLabel": "cost"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑟𐑦𐑑",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "zit",
-        "sit",
-        "zip",
-        "fit"
-      ],
-      "correct": "zit",
-      "correctLabel": "zit"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": false,
-      "prompt": "Which word says “kiss”?",
-      "caption": "",
-      "optionIsGlyph": true,
-      "options": [
-        "𐑒𐑦𐑕",
-        "𐑒𐑦𐑟",
-        "𐑒𐑨𐑕",
-        "𐑜𐑦𐑕"
-      ],
-      "correct": "𐑒𐑦𐑕",
-      "correctLabel": "𐑒𐑦𐑕"
-    },
-    {
-      "type": "build",
-      "prompt": "fist",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑓",
-        "𐑦",
-        "𐑕",
-        "𐑑",
-        "𐑟"
-      ],
-      "answer": [
-        "𐑓",
-        "𐑦",
-        "𐑕",
-        "𐑑"
-      ],
-      "correctLabel": "𐑓𐑦𐑕𐑑"
-    },
-    {
-      "type": "build",
-      "prompt": "task",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑑",
-        "𐑨",
-        "𐑕",
-        "𐑒",
-        "𐑟"
-      ],
-      "answer": [
-        "𐑑",
-        "𐑨",
-        "𐑕",
-        "𐑒"
-      ],
-      "correctLabel": "𐑑𐑨𐑕𐑒"
     },
     {
       "type": "match",

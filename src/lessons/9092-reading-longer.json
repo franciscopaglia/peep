@@ -1,0 +1,126 @@
+{
+  "id": 9092,
+  "title": "Reading Longer",
+  "glyph": "𐑝𐑦𐑟𐑦𐑑",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 9,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Reading longer",
+      "body": "More letters, same rules. Take them one sound at a time."
+    },
+    {
+      "type": "build",
+      "prompt": "visit",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑝",
+        "𐑦",
+        "𐑟",
+        "𐑦",
+        "𐑑",
+        "𐑕"
+      ],
+      "answer": [
+        "𐑝",
+        "𐑦",
+        "𐑟",
+        "𐑦",
+        "𐑑"
+      ],
+      "correctLabel": "𐑝𐑦𐑟𐑦𐑑"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑝𐑧𐑕𐑑𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "vests",
+      "correctLabel": "vests"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑧𐑕𐑑𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "tests",
+      "correctLabel": "tests"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑧𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "peck",
+      "correctLabel": "peck"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑛𐑧𐑒",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "deck",
+        "dock",
+        "dick",
+        "duck"
+      ],
+      "correct": "deck",
+      "correctLabel": "deck"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑨𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sack",
+      "correctLabel": "sack"
+    },
+    {
+      "type": "build",
+      "prompt": "stop",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑕",
+        "𐑑",
+        "𐑪",
+        "𐑐",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑕",
+        "𐑑",
+        "𐑪",
+        "𐑐"
+      ],
+      "correctLabel": "𐑕𐑑𐑪𐑐"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑧𐑕𐑒𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "desks",
+      "correctLabel": "desks"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑐𐑧𐑒": "peck",
+        "𐑛𐑧𐑒": "deck",
+        "𐑕𐑦𐑒": "sick",
+        "𐑕𐑨𐑒": "sack"
+      },
+      "leftOrder": [
+        "𐑐𐑧𐑒",
+        "𐑛𐑧𐑒",
+        "𐑕𐑦𐑒",
+        "𐑕𐑨𐑒"
+      ],
+      "rightOrder": [
+        "sick",
+        "sack",
+        "peck",
+        "deck"
+      ]
+    }
+  ]
+}

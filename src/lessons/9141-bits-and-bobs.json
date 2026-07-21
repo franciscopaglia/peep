@@ -1,0 +1,137 @@
+{
+  "id": 9141,
+  "title": "Bits & Bobs",
+  "glyph": "𐑚𐑳𐑯",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 14,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Bits and bobs",
+      "body": "A grab-bag of short everyday words. Read each one."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑳𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "pun",
+      "correctLabel": "pun"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑳𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bun",
+      "correctLabel": "bun"
+    },
+    {
+      "type": "build",
+      "prompt": "plum",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑐",
+        "𐑤",
+        "𐑳",
+        "𐑥",
+        "𐑯"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑤",
+        "𐑳",
+        "𐑥"
+      ],
+      "correctLabel": "𐑐𐑤𐑳𐑥"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑤𐑳𐑜",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "lug",
+        "log",
+        "leg",
+        "lag"
+      ],
+      "correct": "lug",
+      "correctLabel": "lug"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑨𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "pan",
+      "correctLabel": "pan"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑦𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "tin",
+      "correctLabel": "tin"
+    },
+    {
+      "type": "build",
+      "prompt": "mill",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑥",
+        "𐑦",
+        "𐑤",
+        "𐑯",
+        "𐑮"
+      ],
+      "answer": [
+        "𐑥",
+        "𐑦",
+        "𐑤"
+      ],
+      "correctLabel": "𐑥𐑦𐑤"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑧𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "den",
+      "correctLabel": "den"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑦𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fin",
+      "correctLabel": "fin"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑦𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bin",
+      "correctLabel": "bin"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑐𐑳𐑯": "pun",
+        "𐑚𐑳𐑯": "bun",
+        "𐑐𐑨𐑯": "pan",
+        "𐑑𐑦𐑯": "tin"
+      },
+      "leftOrder": [
+        "𐑐𐑳𐑯",
+        "𐑚𐑳𐑯",
+        "𐑐𐑨𐑯",
+        "𐑑𐑦𐑯"
+      ],
+      "rightOrder": [
+        "pan",
+        "tin",
+        "pun",
+        "bun"
+      ]
+    }
+  ]
+}

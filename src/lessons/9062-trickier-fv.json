@@ -1,0 +1,123 @@
+{
+  "id": 9062,
+  "title": "Trickier F & V",
+  "glyph": "𐑓𐑝",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 6,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Trickier f and v",
+      "body": "Four-letter words and double-f endings — read them straight through."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑦𐑓𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "gift",
+      "correctLabel": "gift"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑨𐑒𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fact",
+      "correctLabel": "fact"
+    },
+    {
+      "type": "build",
+      "prompt": "gift",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑜",
+        "𐑦",
+        "𐑓",
+        "𐑑",
+        "𐑝"
+      ],
+      "answer": [
+        "𐑜",
+        "𐑦",
+        "𐑓",
+        "𐑑"
+      ],
+      "correctLabel": "𐑜𐑦𐑓𐑑"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑦𐑓",
+      "caption": "Sound it out — what does this say?",
+      "correct": "biff",
+      "correctLabel": "biff"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑦𐑓",
+      "caption": "Sound it out — what does this say?",
+      "correct": "tiff",
+      "correctLabel": "tiff"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑓𐑪𐑚",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "fob",
+        "fog",
+        "fib",
+        "cob"
+      ],
+      "correct": "fob",
+      "correctLabel": "fob"
+    },
+    {
+      "type": "build",
+      "prompt": "gaff",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑜",
+        "𐑨",
+        "𐑓",
+        "𐑝",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑜",
+        "𐑨",
+        "𐑓"
+      ],
+      "correctLabel": "𐑜𐑨𐑓"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑪𐑓",
+      "caption": "Sound it out — what does this say?",
+      "correct": "doff",
+      "correctLabel": "doff"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑓𐑨𐑒𐑑": "fact",
+        "𐑜𐑦𐑓𐑑": "gift",
+        "𐑚𐑦𐑓": "biff",
+        "𐑑𐑦𐑓": "tiff"
+      },
+      "leftOrder": [
+        "𐑓𐑨𐑒𐑑",
+        "𐑜𐑦𐑓𐑑",
+        "𐑚𐑦𐑓",
+        "𐑑𐑦𐑓"
+      ],
+      "rightOrder": [
+        "gift",
+        "tiff",
+        "fact",
+        "biff"
+      ]
+    }
+  ]
+}

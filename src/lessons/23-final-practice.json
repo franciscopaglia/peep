@@ -32,32 +32,6 @@
       "correctLabel": "hunt"
     },
     {
-      "type": "type",
-      "prompt": "𐑜𐑪𐑖",
-      "caption": "Sound it out — what does this say?",
-      "correct": "gosh",
-      "correctLabel": "gosh"
-    },
-    {
-      "type": "build",
-      "prompt": "yellow",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑘",
-        "𐑧",
-        "𐑤",
-        "𐑴",
-        "𐑢"
-      ],
-      "answer": [
-        "𐑘",
-        "𐑧",
-        "𐑤",
-        "𐑴"
-      ],
-      "correctLabel": "𐑘𐑧𐑤𐑴"
-    },
-    {
       "type": "match",
       "pairs": {
         "𐑗𐑧𐑕𐑑": "chest",
@@ -80,126 +54,10 @@
     },
     {
       "type": "type",
-      "prompt": "𐑖𐑴𐑯",
-      "caption": "Sound it out — what does this say?",
-      "correct": "shown",
-      "accept": [
-        "shone"
-      ],
-      "correctLabel": "shown"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑡𐑵𐑕",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "juice",
-        "juke",
-        "choose",
-        "chews"
-      ],
-      "correct": "juice",
-      "correctLabel": "juice"
-    },
-    {
-      "type": "build",
-      "prompt": "bright",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑚",
-        "𐑮",
-        "𐑲",
-        "𐑑",
-        "𐑴"
-      ],
-      "answer": [
-        "𐑚",
-        "𐑮",
-        "𐑲",
-        "𐑑"
-      ],
-      "correctLabel": "𐑚𐑮𐑲𐑑"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑤𐑳𐑯𐑗",
-      "caption": "Sound it out — what does this say?",
-      "correct": "lunch",
-      "correctLabel": "lunch"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑚𐑧𐑯𐑗",
-      "caption": "Sound it out — what does this say?",
-      "correct": "bench",
-      "correctLabel": "bench"
-    },
-    {
-      "type": "complete",
-      "blanks": [
-        3
-      ],
-      "bank": [
-        "𐑪",
-        "𐑳",
-        "𐑨"
-      ],
-      "correctLabel": "𐑕𐑑𐑮𐑪𐑙",
-      "prompt": "strong",
-      "word": [
-        "𐑕",
-        "𐑑",
-        "𐑮",
-        "𐑪",
-        "𐑙"
-      ],
-      "caption": "Tap the missing letter"
-    },
-    {
-      "type": "type",
       "prompt": "𐑮𐑨𐑚𐑦𐑑",
       "caption": "Two syllables — take it slowly. What does this say?",
       "correct": "rabbit",
       "correctLabel": "rabbit"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑐𐑦𐑒𐑯𐑦𐑒",
-      "caption": "Two syllables — take it slowly. What does this say?",
-      "correct": "picnic",
-      "correctLabel": "picnic"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑕𐑨𐑯𐑢𐑦𐑡",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "sandwich",
-        "sandpit",
-        "sandbag",
-        "sunset"
-      ],
-      "correct": "sandwich",
-      "correctLabel": "sandwich"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": false,
-      "prompt": "Which word says “spring”?",
-      "caption": "",
-      "optionIsGlyph": true,
-      "options": [
-        "𐑕𐑐𐑮𐑦𐑙",
-        "𐑕𐑑𐑮𐑦𐑙",
-        "𐑕𐑐𐑮𐑦𐑯",
-        "𐑕𐑐𐑮𐑦𐑜"
-      ],
-      "correct": "𐑕𐑐𐑮𐑦𐑙",
-      "correctLabel": "𐑕𐑐𐑮𐑦𐑙"
     },
     {
       "type": "build",
@@ -219,67 +77,6 @@
         "𐑖"
       ],
       "correctLabel": "𐑒𐑮𐑨𐑖"
-    },
-    {
-      "type": "build",
-      "prompt": "twist",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑑",
-        "𐑢",
-        "𐑦",
-        "𐑕",
-        "𐑑",
-        "𐑯"
-      ],
-      "answer": [
-        "𐑑",
-        "𐑢",
-        "𐑦",
-        "𐑕",
-        "𐑑"
-      ],
-      "correctLabel": "𐑑𐑢𐑦𐑕𐑑"
-    },
-    {
-      "type": "build",
-      "prompt": "punch",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑐",
-        "𐑳",
-        "𐑯",
-        "𐑗",
-        "𐑖"
-      ],
-      "answer": [
-        "𐑐",
-        "𐑳",
-        "𐑯",
-        "𐑗"
-      ],
-      "correctLabel": "𐑐𐑳𐑯𐑗"
-    },
-    {
-      "type": "match",
-      "pairs": {
-        "𐑮𐑨𐑚𐑦𐑑": "rabbit",
-        "𐑤𐑳𐑯𐑗": "lunch",
-        "𐑕𐑑𐑮𐑪𐑙": "strong",
-        "𐑚𐑧𐑯𐑗": "bench"
-      },
-      "leftOrder": [
-        "𐑮𐑨𐑚𐑦𐑑",
-        "𐑤𐑳𐑯𐑗",
-        "𐑕𐑑𐑮𐑪𐑙",
-        "𐑚𐑧𐑯𐑗"
-      ],
-      "rightOrder": [
-        "lunch",
-        "rabbit",
-        "bench",
-        "strong"
-      ]
     },
     {
       "type": "teach",

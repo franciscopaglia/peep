@@ -1,0 +1,124 @@
+{
+  "id": 9072,
+  "title": "Add an S",
+  "glyph": "𐑕𐑟",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 7,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Add an s",
+      "body": "To make more than one, add 𐑕 or 𐑟 — 𐑕 after a quiet letter (cats), 𐑟 after a buzzy one (dogs). Your ear picks which."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑨𐑑𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cats",
+      "correctLabel": "cats"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑪𐑜𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "dogs",
+      "correctLabel": "dogs"
+    },
+    {
+      "type": "build",
+      "prompt": "caps",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑨",
+        "𐑐",
+        "𐑕",
+        "𐑟"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑨",
+        "𐑐",
+        "𐑕"
+      ],
+      "correctLabel": "𐑒𐑨𐑐𐑕"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑨𐑜𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bags",
+      "correctLabel": "bags"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑐𐑪𐑑𐑕",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "pots",
+        "pods",
+        "pats",
+        "tops"
+      ],
+      "correct": "pots",
+      "correctLabel": "pots"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑦𐑛𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "kids",
+      "correctLabel": "kids"
+    },
+    {
+      "type": "build",
+      "prompt": "figs",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑓",
+        "𐑦",
+        "𐑜",
+        "𐑟",
+        "𐑕"
+      ],
+      "answer": [
+        "𐑓",
+        "𐑦",
+        "𐑜",
+        "𐑟"
+      ],
+      "correctLabel": "𐑓𐑦𐑜𐑟"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑨𐑚𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cabs",
+      "correctLabel": "cabs"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑒𐑨𐑑𐑕": "cats",
+        "𐑛𐑪𐑜𐑟": "dogs",
+        "𐑒𐑨𐑐𐑕": "caps",
+        "𐑚𐑨𐑜𐑟": "bags"
+      },
+      "leftOrder": [
+        "𐑒𐑨𐑑𐑕",
+        "𐑛𐑪𐑜𐑟",
+        "𐑒𐑨𐑐𐑕",
+        "𐑚𐑨𐑜𐑟"
+      ],
+      "rightOrder": [
+        "dogs",
+        "bags",
+        "cats",
+        "caps"
+      ]
+    }
+  ]
+}

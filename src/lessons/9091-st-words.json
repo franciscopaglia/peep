@@ -1,0 +1,146 @@
+{
+  "id": 9091,
+  "title": "The ST Words",
+  "glyph": "𐑕𐑑",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 9,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "The st words",
+      "body": "A tall 𐑕 and 𐑑 together — say them as one smooth cluster."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑧𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "best",
+      "correctLabel": "best"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑪𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cost",
+      "correctLabel": "cost"
+    },
+    {
+      "type": "build",
+      "prompt": "fist",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑓",
+        "𐑦",
+        "𐑕",
+        "𐑑",
+        "𐑧"
+      ],
+      "answer": [
+        "𐑓",
+        "𐑦",
+        "𐑕",
+        "𐑑"
+      ],
+      "correctLabel": "𐑓𐑦𐑕𐑑"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑑𐑨𐑕𐑒",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "task",
+        "tack",
+        "test",
+        "desk"
+      ],
+      "correct": "task",
+      "correctLabel": "task"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑦𐑕𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "disk",
+      "correctLabel": "disk"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        1,
+        2
+      ],
+      "bank": [
+        "𐑨",
+        "𐑕",
+        "𐑧",
+        "𐑟"
+      ],
+      "correctLabel": "𐑒𐑨𐑕𐑑",
+      "prompt": "cast",
+      "word": [
+        "𐑒",
+        "𐑨",
+        "𐑕",
+        "𐑑"
+      ],
+      "caption": "Tap the missing letters"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑧𐑒𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sect",
+      "correctLabel": "sect"
+    },
+    {
+      "type": "build",
+      "prompt": "test",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑑",
+        "𐑧",
+        "𐑕",
+        "𐑑",
+        "𐑛"
+      ],
+      "answer": [
+        "𐑑",
+        "𐑧",
+        "𐑕",
+        "𐑑"
+      ],
+      "correctLabel": "𐑑𐑧𐑕𐑑"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑦𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sick",
+      "correctLabel": "sick"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑚𐑧𐑕𐑑": "best",
+        "𐑒𐑪𐑕𐑑": "cost",
+        "𐑑𐑨𐑕𐑒": "task",
+        "𐑛𐑦𐑕𐑒": "disk"
+      },
+      "leftOrder": [
+        "𐑚𐑧𐑕𐑑",
+        "𐑒𐑪𐑕𐑑",
+        "𐑑𐑨𐑕𐑒",
+        "𐑛𐑦𐑕𐑒"
+      ],
+      "rightOrder": [
+        "disk",
+        "task",
+        "best",
+        "cost"
+      ]
+    }
+  ]
+}

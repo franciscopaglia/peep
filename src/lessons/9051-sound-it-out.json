@@ -1,0 +1,152 @@
+{
+  "id": 9051,
+  "title": "Sound It Out",
+  "glyph": "𐑒𐑨𐑑",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 5,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Sound it out",
+      "body": "Read each word left to right, letter by letter — no silent letters, no surprises."
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑨",
+        "𐑦",
+        "𐑪"
+      ],
+      "correctLabel": "𐑜𐑨𐑐",
+      "prompt": "gap",
+      "word": [
+        "𐑜",
+        "𐑨",
+        "𐑐"
+      ],
+      "caption": "Tap the missing letter"
+    },
+    {
+      "type": "build",
+      "prompt": "pig",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑐",
+        "𐑦",
+        "𐑜",
+        "𐑛",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑦",
+        "𐑜"
+      ],
+      "correctLabel": "𐑐𐑦𐑜"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑪𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cod",
+      "correctLabel": "cod"
+    },
+    {
+      "type": "build",
+      "prompt": "dig",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑛",
+        "𐑦",
+        "𐑜",
+        "𐑚",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑦",
+        "𐑜"
+      ],
+      "correctLabel": "𐑛𐑦𐑜"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑦𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "pip",
+      "correctLabel": "pip"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑒𐑦𐑛",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "kid",
+        "kit",
+        "cod",
+        "cad"
+      ],
+      "correct": "kid",
+      "correctLabel": "kid"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑦𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "did",
+      "correctLabel": "did"
+    },
+    {
+      "type": "build",
+      "prompt": "tag",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑑",
+        "𐑨",
+        "𐑜",
+        "𐑒",
+        "𐑛"
+      ],
+      "answer": [
+        "𐑑",
+        "𐑨",
+        "𐑜"
+      ],
+      "correctLabel": "𐑑𐑨𐑜"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑪𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cock",
+      "correctLabel": "cock"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑐𐑦𐑐": "pip",
+        "𐑛𐑦𐑛": "did",
+        "𐑒𐑪𐑒": "cock",
+        "𐑑𐑨𐑜": "tag"
+      },
+      "leftOrder": [
+        "𐑐𐑦𐑐",
+        "𐑛𐑦𐑛",
+        "𐑒𐑪𐑒",
+        "𐑑𐑨𐑜"
+      ],
+      "rightOrder": [
+        "did",
+        "tag",
+        "pip",
+        "cock"
+      ]
+    }
+  ]
+}

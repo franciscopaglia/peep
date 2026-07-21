@@ -103,21 +103,6 @@
       "correctLabel": "𐑚"
     },
     {
-      "type": "choice",
-      "promptIsGlyph": false,
-      "prompt": "Which letter is unvoiced, with no throat buzz?",
-      "caption": "",
-      "optionIsGlyph": true,
-      "options": [
-        "𐑐",
-        "𐑚",
-        "𐑛",
-        "𐑜"
-      ],
-      "correct": "𐑐",
-      "correctLabel": "𐑐"
-    },
-    {
       "type": "type",
       "prompt": "𐑚𐑪𐑐",
       "caption": "Sound it out — what does this say?",
@@ -224,6 +209,21 @@
       "type": "teach",
       "title": "Tall and deep letters",
       "body": "Many Shavian consonants come in pairs: a tall letter for an unvoiced sound, and a deep letter for its voiced twin. Say “ffff”, then “vvvv” — feel your throat buzz on the second one? That buzz is voicing. Tall letters rise above the line; deep letters hang below it — a handy reminder, since your vocal cords sit low when they buzz."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which letter is unvoiced, with no throat buzz?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑐",
+        "𐑚",
+        "𐑛",
+        "𐑜"
+      ],
+      "correct": "𐑐",
+      "correctLabel": "𐑐"
     },
     {
       "type": "choice",

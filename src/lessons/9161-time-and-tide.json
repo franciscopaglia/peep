@@ -1,0 +1,137 @@
+{
+  "id": 9161,
+  "title": "Time & Tide",
+  "glyph": "𐑑𐑲𐑥",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 16,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "The long eye",
+      "body": "𐑲 is the sound in time and bike. Read these."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑲",
+      "caption": "Sound it out — what does this say?",
+      "correct": "pie",
+      "correctLabel": "pie"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑲",
+      "caption": "Sound it out — what does this say?",
+      "correct": "my",
+      "correctLabel": "my"
+    },
+    {
+      "type": "build",
+      "prompt": "kite",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑲",
+        "𐑑",
+        "𐑛",
+        "𐑦"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑲",
+        "𐑑"
+      ],
+      "correctLabel": "𐑒𐑲𐑑"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑯𐑲𐑕",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "nice",
+        "niece",
+        "nine",
+        "mice"
+      ],
+      "correct": "nice",
+      "correctLabel": "nice"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑮𐑲",
+      "caption": "Sound it out — what does this say?",
+      "correct": "try",
+      "correctLabel": "try"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑲𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "line",
+      "correctLabel": "line"
+    },
+    {
+      "type": "build",
+      "prompt": "smile",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑕",
+        "𐑥",
+        "𐑲",
+        "𐑤",
+        "𐑯"
+      ],
+      "answer": [
+        "𐑕",
+        "𐑥",
+        "𐑲",
+        "𐑤"
+      ],
+      "correctLabel": "𐑕𐑥𐑲𐑤"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑲𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "ride",
+      "correctLabel": "ride"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑲𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bite",
+      "correctLabel": "bite"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑒𐑲",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sky",
+      "correctLabel": "sky"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑐𐑲": "pie",
+        "𐑥𐑲": "my",
+        "𐑑𐑮𐑲": "try",
+        "𐑤𐑲𐑯": "line"
+      },
+      "leftOrder": [
+        "𐑐𐑲",
+        "𐑥𐑲",
+        "𐑑𐑮𐑲",
+        "𐑤𐑲𐑯"
+      ],
+      "rightOrder": [
+        "try",
+        "line",
+        "pie",
+        "my"
+      ]
+    }
+  ]
+}

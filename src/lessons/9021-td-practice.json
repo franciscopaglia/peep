@@ -1,0 +1,162 @@
+{
+  "id": 9021,
+  "title": "T & D: More Practice",
+  "glyph": "𐑑𐑛",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "More t and d",
+      "body": "Same two letters, a few more words — no new letters here. Read and build them at your own pace."
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        2
+      ],
+      "bank": [
+        "𐑚",
+        "𐑐"
+      ],
+      "correctLabel": "𐑑𐑨𐑚",
+      "prompt": "tab",
+      "word": [
+        "𐑑",
+        "𐑨",
+        "𐑚"
+      ],
+      "caption": "Tap the missing letter"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑪𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "tot",
+      "correctLabel": "tot"
+    },
+    {
+      "type": "build",
+      "prompt": "dot",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑛",
+        "𐑪",
+        "𐑑",
+        "𐑐",
+        "𐑨"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑪",
+        "𐑑"
+      ],
+      "correctLabel": "𐑛𐑪𐑑"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        2
+      ],
+      "bank": [
+        "𐑑",
+        "𐑛"
+      ],
+      "correctLabel": "𐑐𐑪𐑑",
+      "prompt": "pot",
+      "word": [
+        "𐑐",
+        "𐑪",
+        "𐑑"
+      ],
+      "caption": "Tap the missing letter"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑪𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "pod",
+      "correctLabel": "pod"
+    },
+    {
+      "type": "build",
+      "prompt": "dab",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑛",
+        "𐑨",
+        "𐑚",
+        "𐑑",
+        "𐑐"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑨",
+        "𐑚"
+      ],
+      "correctLabel": "𐑛𐑨𐑚"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑚𐑨𐑛",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "bad",
+        "bat",
+        "bud",
+        "dab"
+      ],
+      "correct": "bad",
+      "correctLabel": "bad"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑨𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "pad",
+      "correctLabel": "pad"
+    },
+    {
+      "type": "build",
+      "prompt": "dad",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑛",
+        "𐑨",
+        "𐑛",
+        "𐑑",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑨",
+        "𐑛"
+      ],
+      "correctLabel": "𐑛𐑨𐑛"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑑𐑪𐑑": "tot",
+        "𐑐𐑪𐑛": "pod",
+        "𐑛𐑨𐑚": "dab",
+        "𐑑𐑨𐑚": "tab"
+      },
+      "leftOrder": [
+        "𐑑𐑪𐑑",
+        "𐑐𐑪𐑛",
+        "𐑛𐑨𐑚",
+        "𐑑𐑨𐑚"
+      ],
+      "rightOrder": [
+        "pod",
+        "tab",
+        "tot",
+        "dab"
+      ]
+    }
+  ]
+}

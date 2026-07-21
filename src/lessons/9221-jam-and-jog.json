@@ -1,0 +1,130 @@
+{
+  "id": 9221,
+  "title": "Jam & Jog",
+  "glyph": "𐑡𐑨𐑥",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 22,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Judge and jam",
+      "body": "𐑡 is the buzzy “j” — the voiced partner of 𐑗. Read these."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑡𐑨𐑚",
+      "caption": "Sound it out — what does this say?",
+      "correct": "jab",
+      "correctLabel": "jab"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑡𐑦𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "jig",
+      "correctLabel": "jig"
+    },
+    {
+      "type": "build",
+      "prompt": "jail",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑡",
+        "𐑱",
+        "𐑤",
+        "𐑖",
+        "𐑯"
+      ],
+      "answer": [
+        "𐑡",
+        "𐑱",
+        "𐑤"
+      ],
+      "correctLabel": "𐑡𐑱𐑤"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑡𐑪𐑚",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "job",
+        "jog",
+        "jab",
+        "gob"
+      ],
+      "correct": "job",
+      "correctLabel": "job"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑡𐑪𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "jog",
+      "correctLabel": "jog"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑡𐑨𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "jazz",
+      "correctLabel": "jazz"
+    },
+    {
+      "type": "build",
+      "prompt": "jump",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑡",
+        "𐑳",
+        "𐑥",
+        "𐑐",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑡",
+        "𐑳",
+        "𐑥",
+        "𐑐"
+      ],
+      "correctLabel": "𐑡𐑳𐑥𐑐"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑡𐑰𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "jeep",
+      "correctLabel": "jeep"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑡𐑧𐑥",
+      "caption": "Sound it out — what does this say?",
+      "correct": "gem",
+      "correctLabel": "gem"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑡𐑨𐑚": "jab",
+        "𐑡𐑦𐑜": "jig",
+        "𐑡𐑪𐑜": "jog",
+        "𐑡𐑨𐑟": "jazz"
+      },
+      "leftOrder": [
+        "𐑡𐑨𐑚",
+        "𐑡𐑦𐑜",
+        "𐑡𐑪𐑜",
+        "𐑡𐑨𐑟"
+      ],
+      "rightOrder": [
+        "jog",
+        "jazz",
+        "jab",
+        "jig"
+      ]
+    }
+  ]
+}

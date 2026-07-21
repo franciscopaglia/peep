@@ -54,40 +54,6 @@
       "body": "English often doubles up consonant letters — miss, add, well — but Shavian never does. One letter is always enough: 𐑨𐑛 says \"add\", not \"addd\"."
     },
     {
-      "type": "choice",
-      "promptIsGlyph": false,
-      "prompt": "Which word says “gag”?",
-      "caption": "",
-      "optionIsGlyph": true,
-      "options": [
-        "𐑜𐑨𐑜",
-        "𐑜𐑨𐑒",
-        "𐑒𐑨𐑜",
-        "𐑜𐑪𐑜"
-      ],
-      "correct": "𐑜𐑨𐑜",
-      "correctLabel": "𐑜𐑨𐑜"
-    },
-    {
-      "type": "complete",
-      "blanks": [
-        1
-      ],
-      "bank": [
-        "𐑨",
-        "𐑦",
-        "𐑪"
-      ],
-      "correctLabel": "𐑜𐑨𐑐",
-      "prompt": "gap",
-      "word": [
-        "𐑜",
-        "𐑨",
-        "𐑐"
-      ],
-      "caption": "Tap the missing letter"
-    },
-    {
       "type": "match",
       "pairs": {
         "𐑐𐑪𐑛": "pod",
@@ -109,143 +75,11 @@
       ]
     },
     {
-      "type": "build",
-      "prompt": "kid",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑒",
-        "𐑦",
-        "𐑛",
-        "𐑜",
-        "𐑚"
-      ],
-      "answer": [
-        "𐑒",
-        "𐑦",
-        "𐑛"
-      ],
-      "correctLabel": "𐑒𐑦𐑛"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑐𐑪𐑛",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "pod",
-        "pot",
-        "pad",
-        "pat"
-      ],
-      "correct": "pod",
-      "correctLabel": "pod"
-    },
-    {
-      "type": "build",
-      "prompt": "pig",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑐",
-        "𐑦",
-        "𐑜",
-        "𐑚",
-        "𐑨"
-      ],
-      "answer": [
-        "𐑐",
-        "𐑦",
-        "𐑜"
-      ],
-      "correctLabel": "𐑐𐑦𐑜"
-    },
-    {
-      "type": "complete",
-      "blanks": [
-        1
-      ],
-      "bank": [
-        "𐑪",
-        "𐑨",
-        "𐑦"
-      ],
-      "correctLabel": "𐑒𐑪𐑛",
-      "prompt": "cod",
-      "word": [
-        "𐑒",
-        "𐑪",
-        "𐑛"
-      ],
-      "caption": "Tap the missing letter"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑒𐑨𐑚",
-      "caption": "Sound it out — what does this say?",
-      "correct": "cab",
-      "correctLabel": "cab"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑚𐑦𐑚",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "bib",
-        "bid",
-        "big",
-        "dib"
-      ],
-      "correct": "bib",
-      "correctLabel": "bib"
-    },
-    {
-      "type": "build",
-      "prompt": "dig",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑛",
-        "𐑦",
-        "𐑜",
-        "𐑚",
-        "𐑑"
-      ],
-      "answer": [
-        "𐑛",
-        "𐑦",
-        "𐑜"
-      ],
-      "correctLabel": "𐑛𐑦𐑜"
-    },
-    {
       "type": "type",
       "prompt": "𐑒𐑦𐑑",
       "caption": "Sound it out — what does this say?",
       "correct": "kit",
       "correctLabel": "kit"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑐𐑦𐑑",
-      "caption": "Sound it out — what does this say?",
-      "correct": "pit",
-      "correctLabel": "pit"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑚𐑦𐑛",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "bid",
-        "bad",
-        "bud",
-        "did"
-      ],
-      "correct": "bid",
-      "correctLabel": "bid"
     },
     {
       "type": "build",
@@ -264,64 +98,6 @@
         "𐑑"
       ],
       "correctLabel": "𐑒𐑪𐑑"
-    },
-    {
-      "type": "build",
-      "prompt": "tag",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑑",
-        "𐑨",
-        "𐑜",
-        "𐑒",
-        "𐑛"
-      ],
-      "answer": [
-        "𐑑",
-        "𐑨",
-        "𐑜"
-      ],
-      "correctLabel": "𐑑𐑨𐑜"
-    },
-    {
-      "type": "match",
-      "pairs": {
-        "𐑒𐑦𐑑": "kit",
-        "𐑐𐑦𐑑": "pit",
-        "𐑒𐑪𐑑": "cot",
-        "𐑛𐑪𐑜": "dog"
-      },
-      "leftOrder": [
-        "𐑛𐑪𐑜",
-        "𐑒𐑦𐑑",
-        "𐑒𐑪𐑑",
-        "𐑐𐑦𐑑"
-      ],
-      "rightOrder": [
-        "kit",
-        "cot",
-        "dog",
-        "pit"
-      ]
-    },
-    {
-      "type": "complete",
-      "prompt": "cat",
-      "caption": "Tap the missing letter",
-      "word": [
-        "𐑒",
-        "𐑨",
-        "𐑑"
-      ],
-      "blanks": [
-        1
-      ],
-      "bank": [
-        "𐑨",
-        "𐑦",
-        "𐑪"
-      ],
-      "correctLabel": "𐑒𐑨𐑑"
     }
   ]
 }

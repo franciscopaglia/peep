@@ -36,13 +36,6 @@
       "correctLabel": "job"
     },
     {
-      "type": "type",
-      "prompt": "𐑥𐑳𐑗",
-      "caption": "Sound it out — what does this say?",
-      "correct": "much",
-      "correctLabel": "much"
-    },
-    {
       "type": "match",
       "pairs": {
         "𐑗𐑦𐑐": "chip",
@@ -64,42 +57,6 @@
       ]
     },
     {
-      "type": "build",
-      "prompt": "wish",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑢",
-        "𐑦",
-        "𐑖",
-        "𐑕",
-        "𐑗"
-      ],
-      "answer": [
-        "𐑢",
-        "𐑦",
-        "𐑖"
-      ],
-      "correctLabel": "𐑢𐑦𐑖"
-    },
-    {
-      "type": "build",
-      "prompt": "chip",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑗",
-        "𐑦",
-        "𐑐",
-        "𐑖",
-        "𐑡"
-      ],
-      "answer": [
-        "𐑗",
-        "𐑦",
-        "𐑐"
-      ],
-      "correctLabel": "𐑗𐑦𐑐"
-    },
-    {
       "type": "choice",
       "promptIsGlyph": true,
       "prompt": "𐑡",
@@ -116,129 +73,10 @@
     },
     {
       "type": "type",
-      "prompt": "𐑡𐑳𐑜",
-      "caption": "Sound it out — what does this say?",
-      "correct": "jug",
-      "correctLabel": "jug"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑡𐑧𐑤",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "jell",
-        "gel",
-        "jelly",
-        "yell"
-      ],
-      "correct": "jell",
-      "correctLabel": "jell"
-    },
-    {
-      "type": "match",
-      "pairs": {
-        "𐑖𐑧𐑛": "shed",
-        "𐑡𐑳𐑜": "jug",
-        "𐑗𐑳𐑙𐑒": "chunk",
-        "𐑡𐑧𐑤": "jell"
-      },
-      "leftOrder": [
-        "𐑖𐑧𐑛",
-        "𐑡𐑳𐑜",
-        "𐑗𐑳𐑙𐑒",
-        "𐑡𐑧𐑤"
-      ],
-      "rightOrder": [
-        "jug",
-        "shed",
-        "jell",
-        "chunk"
-      ]
-    },
-    {
-      "type": "type",
       "prompt": "𐑡𐑨𐑥",
       "caption": "Sound it out — what does this say?",
       "correct": "jam",
       "correctLabel": "jam"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑡𐑳𐑥𐑐",
-      "caption": "Sound it out — what does this say?",
-      "correct": "jump",
-      "correctLabel": "jump"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑡𐑧𐑑",
-      "caption": "Sound it out — what does this say?",
-      "correct": "jet",
-      "correctLabel": "jet"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑡𐑴𐑒",
-      "caption": "Sound it out — what does this say?",
-      "correct": "joke",
-      "correctLabel": "joke"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑐𐑱𐑡",
-      "caption": "The J sound can end a word too. What does this say?",
-      "correct": "page",
-      "correctLabel": "page"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑒𐑱𐑡",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "cage",
-        "cave",
-        "cake",
-        "keg"
-      ],
-      "correct": "cage",
-      "correctLabel": "cage"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": false,
-      "prompt": "Which word says “just”?",
-      "caption": "",
-      "optionIsGlyph": true,
-      "options": [
-        "𐑡𐑳𐑕𐑑",
-        "𐑡𐑳𐑑",
-        "𐑜𐑳𐑕𐑑",
-        "𐑡𐑳𐑟𐑑"
-      ],
-      "correct": "𐑡𐑳𐑕𐑑",
-      "correctLabel": "𐑡𐑳𐑕𐑑"
-    },
-    {
-      "type": "build",
-      "prompt": "jail",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑡",
-        "𐑱",
-        "𐑤",
-        "𐑖",
-        "𐑯"
-      ],
-      "answer": [
-        "𐑡",
-        "𐑱",
-        "𐑤"
-      ],
-      "correctLabel": "𐑡𐑱𐑤"
     },
     {
       "type": "build",
@@ -257,27 +95,6 @@
         "𐑡"
       ],
       "correctLabel": "𐑚𐑨𐑡"
-    },
-    {
-      "type": "match",
-      "pairs": {
-        "𐑡𐑨𐑥": "jam",
-        "𐑡𐑳𐑥𐑐": "jump",
-        "𐑡𐑧𐑑": "jet",
-        "𐑐𐑱𐑡": "page"
-      },
-      "leftOrder": [
-        "𐑐𐑱𐑡",
-        "𐑡𐑨𐑥",
-        "𐑡𐑧𐑑",
-        "𐑡𐑳𐑥𐑐"
-      ],
-      "rightOrder": [
-        "jam",
-        "page",
-        "jump",
-        "jet"
-      ]
     }
   ]
 }

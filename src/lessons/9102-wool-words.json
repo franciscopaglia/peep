@@ -1,0 +1,136 @@
+{
+  "id": 9102,
+  "title": "Wool Words",
+  "glyph": "𐑚𐑫𐑒",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 10,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Wool words",
+      "body": "𐑫 is the rounded “oo” in book — lips pushed forward. Plus a few buzzy -zz words."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑫𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "foot",
+      "correctLabel": "foot"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑫𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "soot",
+      "correctLabel": "soot"
+    },
+    {
+      "type": "build",
+      "prompt": "cook",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑫",
+        "𐑒",
+        "𐑳",
+        "𐑐"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑫",
+        "𐑒"
+      ],
+      "correctLabel": "𐑒𐑫𐑒"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑑𐑫𐑒",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "took",
+        "tuck",
+        "tock",
+        "tick"
+      ],
+      "correct": "took",
+      "correctLabel": "took"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑳𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "buzz",
+      "correctLabel": "buzz"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑳𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fuzz",
+      "correctLabel": "fuzz"
+    },
+    {
+      "type": "build",
+      "prompt": "fuss",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑓",
+        "𐑳",
+        "𐑕",
+        "𐑟",
+        "𐑫"
+      ],
+      "answer": [
+        "𐑓",
+        "𐑳",
+        "𐑕"
+      ],
+      "correctLabel": "𐑓𐑳𐑕"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        0,
+        1
+      ],
+      "bank": [
+        "𐑚",
+        "𐑫",
+        "𐑐",
+        "𐑳"
+      ],
+      "correctLabel": "𐑚𐑫𐑒",
+      "prompt": "book",
+      "word": [
+        "𐑚",
+        "𐑫",
+        "𐑒"
+      ],
+      "caption": "Tap the missing letters"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑓𐑫𐑑": "foot",
+        "𐑕𐑫𐑑": "soot",
+        "𐑑𐑫𐑒": "took",
+        "𐑚𐑳𐑟": "buzz"
+      },
+      "leftOrder": [
+        "𐑓𐑫𐑑",
+        "𐑕𐑫𐑑",
+        "𐑑𐑫𐑒",
+        "𐑚𐑳𐑟"
+      ],
+      "rightOrder": [
+        "took",
+        "buzz",
+        "foot",
+        "soot"
+      ]
+    }
+  ]
+}

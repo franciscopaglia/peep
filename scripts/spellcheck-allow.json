@@ -5,18 +5,8 @@
     "why": "Real English word (to hit; a dance), correctly spelled by sound /bɒp/ — the Read Lexicon just omits informal words. Lesson 1 teaches only 𐑐 𐑚 𐑪, so pop/bob/bop are the only real words it can build."
   },
   {
-    "shaw": "𐑟𐑦𐑑",
-    "gloss": "zit",
-    "why": "Real English word (a pimple), correctly spelled by sound /zɪt/ — informal, so the lexicon omits it. Lesson 7 already uses zap and zip, so there is no spare 𐑟 word to swap in."
-  },
-  {
     "shaw": "𐑩𐑛",
     "gloss": null,
     "why": "The -ed suffix, quoted in the body of lesson 37 while teaching it. An affix, not a word, so the lexicon has no entry."
-  },
-  {
-    "shaw": "𐑟𐑧𐑛",
-    "gloss": "zed",
-    "why": "Correct: 𐑟𐑧𐑛 is the name of the letter z. The lexicon files it under the Latin form \"z\" rather than \"zed\", so the gloss looks like a mismatch."
   }
 ]

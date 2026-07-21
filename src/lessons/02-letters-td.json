@@ -66,21 +66,6 @@
     },
     {
       "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑛𐑨𐑛",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "dad",
-        "bad",
-        "tab",
-        "dab"
-      ],
-      "correct": "dad",
-      "correctLabel": "dad"
-    },
-    {
-      "type": "choice",
       "promptIsGlyph": false,
       "prompt": "Tap the symbol for “d”",
       "caption": "",
@@ -93,39 +78,6 @@
       ],
       "correct": "𐑛",
       "correctLabel": "𐑛"
-    },
-    {
-      "type": "complete",
-      "blanks": [
-        2
-      ],
-      "bank": [
-        "𐑚",
-        "𐑐"
-      ],
-      "correctLabel": "𐑑𐑨𐑚",
-      "prompt": "tab",
-      "word": [
-        "𐑑",
-        "𐑨",
-        "𐑚"
-      ],
-      "caption": "Tap the missing letter"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑚𐑨𐑑",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "bat",
-        "bad",
-        "bag",
-        "dab"
-      ],
-      "correct": "bat",
-      "correctLabel": "bat"
     },
     {
       "type": "build",
@@ -146,120 +98,11 @@
       "correctLabel": "𐑐𐑨𐑑"
     },
     {
-      "type": "complete",
-      "blanks": [
-        1
-      ],
-      "bank": [
-        "𐑪",
-        "𐑨"
-      ],
-      "correctLabel": "𐑑𐑪𐑐",
-      "prompt": "top",
-      "word": [
-        "𐑑",
-        "𐑪",
-        "𐑐"
-      ],
-      "caption": "Tap the missing letter"
-    },
-    {
-      "type": "complete",
-      "blanks": [
-        2
-      ],
-      "bank": [
-        "𐑑",
-        "𐑛"
-      ],
-      "correctLabel": "𐑐𐑪𐑑",
-      "prompt": "pot",
-      "word": [
-        "𐑐",
-        "𐑪",
-        "𐑑"
-      ],
-      "caption": "Tap the missing letter"
-    },
-    {
       "type": "type",
       "prompt": "𐑛𐑪𐑑",
       "caption": "Sound it out — what does this say?",
       "correct": "dot",
       "correctLabel": "dot"
-    },
-    {
-      "type": "type",
-      "prompt": "𐑐𐑨𐑛",
-      "caption": "Sound it out — what does this say?",
-      "correct": "pad",
-      "correctLabel": "pad"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑚𐑨𐑛",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "bad",
-        "bat",
-        "bud",
-        "dab"
-      ],
-      "correct": "bad",
-      "correctLabel": "bad"
-    },
-    {
-      "type": "choice",
-      "promptIsGlyph": false,
-      "prompt": "Which word says “pot”?",
-      "caption": "",
-      "optionIsGlyph": true,
-      "options": [
-        "𐑐𐑪𐑑",
-        "𐑑𐑪𐑐",
-        "𐑐𐑨𐑑",
-        "𐑚𐑪𐑑"
-      ],
-      "correct": "𐑐𐑪𐑑",
-      "correctLabel": "𐑐𐑪𐑑"
-    },
-    {
-      "type": "build",
-      "prompt": "dot",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑛",
-        "𐑪",
-        "𐑑",
-        "𐑐",
-        "𐑨"
-      ],
-      "answer": [
-        "𐑛",
-        "𐑪",
-        "𐑑"
-      ],
-      "correctLabel": "𐑛𐑪𐑑"
-    },
-    {
-      "type": "build",
-      "prompt": "dad",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑛",
-        "𐑨",
-        "𐑛",
-        "𐑑",
-        "𐑚"
-      ],
-      "answer": [
-        "𐑛",
-        "𐑨",
-        "𐑛"
-      ],
-      "correctLabel": "𐑛𐑨𐑛"
     },
     {
       "type": "match",

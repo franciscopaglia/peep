@@ -1,0 +1,130 @@
+{
+  "id": 9212,
+  "title": "Chip & Lunch",
+  "glyph": "𐑗𐑦𐑐",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 21,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Church and chip",
+      "body": "𐑗 is the “ch” in chip and lunch. Read these."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑗𐑪𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "chop",
+      "correctLabel": "chop"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑗𐑦𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "chin",
+      "correctLabel": "chin"
+    },
+    {
+      "type": "build",
+      "prompt": "teach",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑑",
+        "𐑰",
+        "𐑗",
+        "𐑖",
+        "𐑐"
+      ],
+      "answer": [
+        "𐑑",
+        "𐑰",
+        "𐑗"
+      ],
+      "correctLabel": "𐑑𐑰𐑗"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑗𐑧𐑕",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "chess",
+        "check",
+        "chest",
+        "chase"
+      ],
+      "correct": "chess",
+      "correctLabel": "chess"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑗𐑧𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "chest",
+      "correctLabel": "chest"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑳𐑯𐑗",
+      "caption": "Sound it out — what does this say?",
+      "correct": "lunch",
+      "correctLabel": "lunch"
+    },
+    {
+      "type": "build",
+      "prompt": "bench",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑚",
+        "𐑧",
+        "𐑯",
+        "𐑗",
+        "𐑖"
+      ],
+      "answer": [
+        "𐑚",
+        "𐑧",
+        "𐑯",
+        "𐑗"
+      ],
+      "correctLabel": "𐑚𐑧𐑯𐑗"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑨𐑗",
+      "caption": "Sound it out — what does this say?",
+      "correct": "match",
+      "correctLabel": "match"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑨𐑗",
+      "caption": "Sound it out — what does this say?",
+      "correct": "catch",
+      "correctLabel": "catch"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑗𐑪𐑐": "chop",
+        "𐑗𐑦𐑯": "chin",
+        "𐑤𐑳𐑯𐑗": "lunch",
+        "𐑗𐑧𐑕𐑑": "chest"
+      },
+      "leftOrder": [
+        "𐑗𐑪𐑐",
+        "𐑗𐑦𐑯",
+        "𐑤𐑳𐑯𐑗",
+        "𐑗𐑧𐑕𐑑"
+      ],
+      "rightOrder": [
+        "lunch",
+        "chest",
+        "chop",
+        "chin"
+      ]
+    }
+  ]
+}

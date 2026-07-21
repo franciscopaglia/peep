@@ -1,0 +1,146 @@
+{
+  "id": 9122,
+  "title": "Milk & Silk",
+  "glyph": "𐑥𐑦𐑤𐑒",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 12,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Milk and silk",
+      "body": "𐑤 and 𐑥 love to cluster — milk, melt, lamp. Sound out every letter."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑦𐑤𐑥",
+      "caption": "Sound it out — what does this say?",
+      "correct": "film",
+      "correctLabel": "film"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑧𐑤𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "melt",
+      "correctLabel": "melt"
+    },
+    {
+      "type": "build",
+      "prompt": "gulp",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑜",
+        "𐑳",
+        "𐑤",
+        "𐑐",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑜",
+        "𐑳",
+        "𐑤",
+        "𐑐"
+      ],
+      "correctLabel": "𐑜𐑳𐑤𐑐"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑕𐑦𐑤𐑒",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "silk",
+        "milk",
+        "silt",
+        "sulk"
+      ],
+      "correct": "silk",
+      "correctLabel": "silk"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑦𐑥𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "limp",
+      "correctLabel": "limp"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑳𐑥𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "lump",
+      "correctLabel": "lump"
+    },
+    {
+      "type": "build",
+      "prompt": "bulk",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑚",
+        "𐑳",
+        "𐑤",
+        "𐑒",
+        "𐑐"
+      ],
+      "answer": [
+        "𐑚",
+        "𐑳",
+        "𐑤",
+        "𐑒"
+      ],
+      "correctLabel": "𐑚𐑳𐑤𐑒"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑳𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "must",
+      "correctLabel": "must"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        2,
+        3
+      ],
+      "bank": [
+        "𐑤",
+        "𐑑",
+        "𐑒",
+        "𐑐"
+      ],
+      "correctLabel": "𐑥𐑧𐑤𐑑",
+      "prompt": "melt",
+      "word": [
+        "𐑥",
+        "𐑧",
+        "𐑤",
+        "𐑑"
+      ],
+      "caption": "Tap the missing letters"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑓𐑦𐑤𐑥": "film",
+        "𐑥𐑧𐑤𐑑": "melt",
+        "𐑤𐑦𐑥𐑐": "limp",
+        "𐑤𐑳𐑥𐑐": "lump"
+      },
+      "leftOrder": [
+        "𐑓𐑦𐑤𐑥",
+        "𐑥𐑧𐑤𐑑",
+        "𐑤𐑦𐑥𐑐",
+        "𐑤𐑳𐑥𐑐"
+      ],
+      "rightOrder": [
+        "lump",
+        "film",
+        "melt",
+        "limp"
+      ]
+    }
+  ]
+}

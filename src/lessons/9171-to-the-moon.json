@@ -1,0 +1,130 @@
+{
+  "id": 9171,
+  "title": "To the Moon",
+  "glyph": "𐑥𐑵𐑯",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 17,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "The long oo",
+      "body": "𐑵 is the long “oo” in moon — round your lips and hold it."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑯𐑵𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "noon",
+      "correctLabel": "noon"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑵𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "mood",
+      "correctLabel": "mood"
+    },
+    {
+      "type": "build",
+      "prompt": "tool",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑑",
+        "𐑵",
+        "𐑤",
+        "𐑮",
+        "𐑯"
+      ],
+      "answer": [
+        "𐑑",
+        "𐑵",
+        "𐑤"
+      ],
+      "correctLabel": "𐑑𐑵𐑤"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑚𐑵𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "boot",
+        "boat",
+        "bout",
+        "bolt"
+      ],
+      "correct": "boot",
+      "correctLabel": "boot"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑵𐑤",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fool",
+      "correctLabel": "fool"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑵𐑥",
+      "caption": "Sound it out — what does this say?",
+      "correct": "boom",
+      "correctLabel": "boom"
+    },
+    {
+      "type": "build",
+      "prompt": "broom",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑚",
+        "𐑮",
+        "𐑵",
+        "𐑥",
+        "𐑤"
+      ],
+      "answer": [
+        "𐑚",
+        "𐑮",
+        "𐑵",
+        "𐑥"
+      ],
+      "correctLabel": "𐑚𐑮𐑵𐑥"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑟𐑵𐑥",
+      "caption": "Sound it out — what does this say?",
+      "correct": "zoom",
+      "correctLabel": "zoom"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑵𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "loot",
+      "correctLabel": "loot"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑯𐑵𐑯": "noon",
+        "𐑥𐑵𐑛": "mood",
+        "𐑓𐑵𐑤": "fool",
+        "𐑚𐑵𐑥": "boom"
+      },
+      "leftOrder": [
+        "𐑯𐑵𐑯",
+        "𐑥𐑵𐑛",
+        "𐑓𐑵𐑤",
+        "𐑚𐑵𐑥"
+      ],
+      "rightOrder": [
+        "fool",
+        "boom",
+        "noon",
+        "mood"
+      ]
+    }
+  ]
+}

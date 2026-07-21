@@ -1,0 +1,129 @@
+{
+  "id": 9201,
+  "title": "Sing-Song",
+  "glyph": "𐑕𐑦𐑙",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 20,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Sing-song",
+      "body": "𐑙 closes a syllable — ring, bang, sung. Read these."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑨𐑙",
+      "caption": "Sound it out — what does this say?",
+      "correct": "gang",
+      "correctLabel": "gang"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑨𐑙",
+      "caption": "Sound it out — what does this say?",
+      "correct": "rang",
+      "correctLabel": "rang"
+    },
+    {
+      "type": "build",
+      "prompt": "king",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑦",
+        "𐑙",
+        "𐑜",
+        "𐑘"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑦",
+        "𐑙"
+      ],
+      "correctLabel": "𐑒𐑦𐑙"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑤𐑪𐑙",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "long",
+        "log",
+        "lung",
+        "lawn"
+      ],
+      "correct": "long",
+      "correctLabel": "long"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑳𐑙",
+      "caption": "Sound it out — what does this say?",
+      "correct": "lung",
+      "correctLabel": "lung"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑳𐑙",
+      "caption": "Sound it out — what does this say?",
+      "correct": "rung",
+      "correctLabel": "rung"
+    },
+    {
+      "type": "build",
+      "prompt": "gong",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑜",
+        "𐑪",
+        "𐑙",
+        "𐑒",
+        "𐑯"
+      ],
+      "answer": [
+        "𐑜",
+        "𐑪",
+        "𐑙"
+      ],
+      "correctLabel": "𐑜𐑪𐑙"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑳𐑙",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sung",
+      "correctLabel": "sung"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑘𐑧𐑤",
+      "caption": "Sound it out — what does this say?",
+      "correct": "yell",
+      "correctLabel": "yell"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑜𐑨𐑙": "gang",
+        "𐑮𐑨𐑙": "rang",
+        "𐑤𐑳𐑙": "lung",
+        "𐑮𐑳𐑙": "rung"
+      },
+      "leftOrder": [
+        "𐑜𐑨𐑙",
+        "𐑮𐑨𐑙",
+        "𐑤𐑳𐑙",
+        "𐑮𐑳𐑙"
+      ],
+      "rightOrder": [
+        "lung",
+        "rung",
+        "gang",
+        "rang"
+      ]
+    }
+  ]
+}

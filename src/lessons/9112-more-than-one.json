@@ -1,0 +1,124 @@
+{
+  "id": 9112,
+  "title": "More Than One",
+  "glyph": "𐑒𐑳𐑐𐑕",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 11,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "More than one",
+      "body": "Add 𐑕 or 𐑟 to make a plural — quiet after quiet, buzzy after buzzy."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑳𐑐𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cups",
+      "correctLabel": "cups"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑳𐑜𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bugs",
+      "correctLabel": "bugs"
+    },
+    {
+      "type": "build",
+      "prompt": "subs",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑕",
+        "𐑳",
+        "𐑚",
+        "𐑟",
+        "𐑕"
+      ],
+      "answer": [
+        "𐑕",
+        "𐑳",
+        "𐑚",
+        "𐑟"
+      ],
+      "correctLabel": "𐑕𐑳𐑚𐑟"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑑𐑳𐑚𐑟",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "tubs",
+        "tabs",
+        "cubs",
+        "tusks"
+      ],
+      "correct": "tubs",
+      "correctLabel": "tubs"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑳𐑒𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bucks",
+      "correctLabel": "bucks"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑳𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "pup",
+      "correctLabel": "pup"
+    },
+    {
+      "type": "build",
+      "prompt": "pups",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑐",
+        "𐑳",
+        "𐑐",
+        "𐑕",
+        "𐑟"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑳",
+        "𐑐",
+        "𐑕"
+      ],
+      "correctLabel": "𐑐𐑳𐑐𐑕"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑳𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cud",
+      "correctLabel": "cud"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑒𐑳𐑐𐑕": "cups",
+        "𐑚𐑳𐑜𐑟": "bugs",
+        "𐑑𐑳𐑚𐑟": "tubs",
+        "𐑚𐑳𐑒𐑕": "bucks"
+      },
+      "leftOrder": [
+        "𐑒𐑳𐑐𐑕",
+        "𐑚𐑳𐑜𐑟",
+        "𐑑𐑳𐑚𐑟",
+        "𐑚𐑳𐑒𐑕"
+      ],
+      "rightOrder": [
+        "tubs",
+        "bucks",
+        "cups",
+        "bugs"
+      ]
+    }
+  ]
+}

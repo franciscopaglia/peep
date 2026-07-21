@@ -1,0 +1,140 @@
+{
+  "id": 9182,
+  "title": "Bigger Blends",
+  "glyph": "𐑕𐑑𐑮𐑰𐑑",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 18,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Bigger blends",
+      "body": "Words that open or close with two or three consonants. Sound out each — Shavian never drops one."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑐𐑰𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "speed",
+      "correctLabel": "speed"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑑𐑮𐑰𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "street",
+      "correctLabel": "street"
+    },
+    {
+      "type": "build",
+      "prompt": "scream",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑕",
+        "𐑒",
+        "𐑮",
+        "𐑰",
+        "𐑥",
+        "𐑤"
+      ],
+      "answer": [
+        "𐑕",
+        "𐑒",
+        "𐑮",
+        "𐑰",
+        "𐑥"
+      ],
+      "correctLabel": "𐑕𐑒𐑮𐑰𐑥"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑕𐑯𐑱𐑒",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "snake",
+        "stake",
+        "sneak",
+        "shake"
+      ],
+      "correct": "snake",
+      "correctLabel": "snake"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑤𐑵𐑥",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bloom",
+      "correctLabel": "bloom"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑮𐑱𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "grape",
+      "correctLabel": "grape"
+    },
+    {
+      "type": "build",
+      "prompt": "flame",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑓",
+        "𐑤",
+        "𐑱",
+        "𐑥",
+        "𐑮"
+      ],
+      "answer": [
+        "𐑓",
+        "𐑤",
+        "𐑱",
+        "𐑥"
+      ],
+      "correctLabel": "𐑓𐑤𐑱𐑥"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑤𐑱𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "place",
+      "correctLabel": "place"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑐𐑱𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "space",
+      "correctLabel": "space"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑮𐑰𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "treat",
+      "correctLabel": "treat"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑕𐑐𐑰𐑛": "speed",
+        "𐑕𐑑𐑮𐑰𐑑": "street",
+        "𐑚𐑤𐑵𐑥": "bloom",
+        "𐑜𐑮𐑱𐑐": "grape"
+      },
+      "leftOrder": [
+        "𐑕𐑐𐑰𐑛",
+        "𐑕𐑑𐑮𐑰𐑑",
+        "𐑚𐑤𐑵𐑥",
+        "𐑜𐑮𐑱𐑐"
+      ],
+      "rightOrder": [
+        "bloom",
+        "grape",
+        "speed",
+        "street"
+      ]
+    }
+  ]
+}

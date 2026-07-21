@@ -1,0 +1,164 @@
+{
+  "id": 9031,
+  "title": "K & G: More Words",
+  "glyph": "𐑒𐑜",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 3,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "More k and g",
+      "body": "Kick, gag and friends — same letters, lots of new words to read and build."
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑨",
+        "𐑦",
+        "𐑪"
+      ],
+      "correctLabel": "𐑒𐑨𐑑",
+      "prompt": "cat",
+      "word": [
+        "𐑒",
+        "𐑨",
+        "𐑑"
+      ],
+      "caption": "Tap the missing letter"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑦𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "big",
+      "correctLabel": "big"
+    },
+    {
+      "type": "build",
+      "prompt": "pig",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑐",
+        "𐑦",
+        "𐑜",
+        "𐑛",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑦",
+        "𐑜"
+      ],
+      "correctLabel": "𐑐𐑦𐑜"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑦𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "kick",
+      "correctLabel": "kick"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑜𐑪𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "got",
+        "get",
+        "gut",
+        "god"
+      ],
+      "correct": "got",
+      "correctLabel": "got"
+    },
+    {
+      "type": "build",
+      "prompt": "cot",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑪",
+        "𐑑",
+        "𐑨",
+        "𐑜"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑪",
+        "𐑑"
+      ],
+      "correctLabel": "𐑒𐑪𐑑"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑦𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "pick",
+      "correctLabel": "pick"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑦",
+        "𐑨",
+        "𐑪"
+      ],
+      "correctLabel": "𐑚𐑦𐑑",
+      "prompt": "bit",
+      "word": [
+        "𐑚",
+        "𐑦",
+        "𐑑"
+      ],
+      "caption": "Tap the missing letter"
+    },
+    {
+      "type": "build",
+      "prompt": "kid",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑦",
+        "𐑛",
+        "𐑜",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑦",
+        "𐑛"
+      ],
+      "correctLabel": "𐑒𐑦𐑛"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑒𐑦𐑒": "kick",
+        "𐑐𐑦𐑒": "pick",
+        "𐑒𐑪𐑑": "cot",
+        "𐑜𐑪𐑛": "god"
+      },
+      "leftOrder": [
+        "𐑒𐑦𐑒",
+        "𐑐𐑦𐑒",
+        "𐑒𐑪𐑑",
+        "𐑜𐑪𐑛"
+      ],
+      "rightOrder": [
+        "god",
+        "cot",
+        "kick",
+        "pick"
+      ]
+    }
+  ]
+}

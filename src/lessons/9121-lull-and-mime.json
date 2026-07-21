@@ -1,0 +1,151 @@
+{
+  "id": 9121,
+  "title": "Lull & Mime",
+  "glyph": "𐑤𐑥",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 12,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Lull and mime",
+      "body": "𐑤 and 𐑥 hum along on their own — no unvoiced twin. Read these l and m words."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑨𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "lap",
+      "correctLabel": "lap"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑨𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "mat",
+      "correctLabel": "mat"
+    },
+    {
+      "type": "build",
+      "prompt": "mud",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑥",
+        "𐑳",
+        "𐑛",
+        "𐑤",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑥",
+        "𐑳",
+        "𐑛"
+      ],
+      "correctLabel": "𐑥𐑳𐑛"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑤𐑦𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "lit",
+        "let",
+        "lot",
+        "lip"
+      ],
+      "correct": "lit",
+      "correctLabel": "lit"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑪𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "lock",
+      "correctLabel": "lock"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑪𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "mop",
+      "correctLabel": "mop"
+    },
+    {
+      "type": "build",
+      "prompt": "lid",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑤",
+        "𐑦",
+        "𐑛",
+        "𐑥",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑤",
+        "𐑦",
+        "𐑛"
+      ],
+      "correctLabel": "𐑤𐑦𐑛"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑨𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "lad",
+      "correctLabel": "lad"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑥𐑳𐑥",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "mum",
+        "mud",
+        "mug",
+        "map"
+      ],
+      "correct": "mum",
+      "correctLabel": "mum"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑧𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "let",
+      "correctLabel": "let"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑳𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "muck",
+      "correctLabel": "muck"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑤𐑨𐑐": "lap",
+        "𐑥𐑨𐑑": "mat",
+        "𐑤𐑪𐑒": "lock",
+        "𐑥𐑪𐑐": "mop"
+      },
+      "leftOrder": [
+        "𐑤𐑨𐑐",
+        "𐑥𐑨𐑑",
+        "𐑤𐑪𐑒",
+        "𐑥𐑪𐑐"
+      ],
+      "rightOrder": [
+        "lock",
+        "mop",
+        "lap",
+        "mat"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "id": 9162,
+  "title": "On the Road",
+  "glyph": "𐑮𐑴𐑛",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 16,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "The long oh",
+      "body": "𐑴 is the sound in boat and road. Read these."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑯𐑴",
+      "caption": "Sound it out — what does this say?",
+      "correct": "no",
+      "correctLabel": "no",
+      "accept": [
+        "know"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑴",
+      "caption": "Sound it out — what does this say?",
+      "correct": "toe",
+      "correctLabel": "toe",
+      "accept": [
+        "tow"
+      ]
+    },
+    {
+      "type": "build",
+      "prompt": "cold",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑴",
+        "𐑤",
+        "𐑛",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑴",
+        "𐑤",
+        "𐑛"
+      ],
+      "correctLabel": "𐑒𐑴𐑤𐑛"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑮𐑴𐑚",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "robe",
+        "rope",
+        "rob",
+        "rose"
+      ],
+      "correct": "robe",
+      "correctLabel": "robe"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑴𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "rope",
+      "correctLabel": "rope"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑴𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bone",
+      "correctLabel": "bone"
+    },
+    {
+      "type": "build",
+      "prompt": "stone",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑕",
+        "𐑑",
+        "𐑴",
+        "𐑯",
+        "𐑫"
+      ],
+      "answer": [
+        "𐑕",
+        "𐑑",
+        "𐑴",
+        "𐑯"
+      ],
+      "correctLabel": "𐑕𐑑𐑴𐑯"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑴𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "soap",
+      "correctLabel": "soap"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑴𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "toast",
+      "correctLabel": "toast"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑴𐑤",
+      "caption": "Sound it out — what does this say?",
+      "correct": "coal",
+      "correctLabel": "coal"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑯𐑴": "no",
+        "𐑑𐑴": "toe",
+        "𐑮𐑴𐑐": "rope",
+        "𐑚𐑴𐑯": "bone"
+      },
+      "leftOrder": [
+        "𐑯𐑴",
+        "𐑑𐑴",
+        "𐑮𐑴𐑐",
+        "𐑚𐑴𐑯"
+      ],
+      "rightOrder": [
+        "rope",
+        "bone",
+        "no",
+        "toe"
+      ]
+    }
+  ]
+}

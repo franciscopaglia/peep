@@ -1,0 +1,140 @@
+{
+  "id": 9231,
+  "title": "Sunny & Happy",
+  "glyph": "𐑣𐑨𐑐𐑦",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 23,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Ends in y",
+      "body": "A final 𐑦 turns lots of words into two-syllable ones — happy, sunny. Read these."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑨𐑐𐑦",
+      "caption": "Sound it out — what does this say?",
+      "correct": "happy",
+      "correctLabel": "happy"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑳𐑯𐑦",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sunny",
+      "correctLabel": "sunny"
+    },
+    {
+      "type": "build",
+      "prompt": "puppy",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑐",
+        "𐑳",
+        "𐑐",
+        "𐑦",
+        "𐑚"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑳",
+        "𐑐",
+        "𐑦"
+      ],
+      "correctLabel": "𐑐𐑳𐑐𐑦"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑓𐑳𐑯𐑦",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "funny",
+        "sunny",
+        "ferry",
+        "fanny"
+      ],
+      "correct": "funny",
+      "correctLabel": "funny"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑧𐑯𐑦",
+      "caption": "Sound it out — what does this say?",
+      "correct": "penny",
+      "correctLabel": "penny"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑱𐑚𐑦",
+      "caption": "Sound it out — what does this say?",
+      "correct": "baby",
+      "correctLabel": "baby"
+    },
+    {
+      "type": "build",
+      "prompt": "windy",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑢",
+        "𐑦",
+        "𐑯",
+        "𐑛",
+        "𐑦",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑢",
+        "𐑦",
+        "𐑯",
+        "𐑛",
+        "𐑦"
+      ],
+      "correctLabel": "𐑢𐑦𐑯𐑛𐑦"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑱𐑟𐑦",
+      "caption": "Sound it out — what does this say?",
+      "correct": "lazy",
+      "correctLabel": "lazy"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑲𐑯𐑦",
+      "caption": "Sound it out — what does this say?",
+      "correct": "tiny",
+      "correctLabel": "tiny"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑳𐑙𐑒𐑦",
+      "caption": "Sound it out — what does this say?",
+      "correct": "monkey",
+      "correctLabel": "monkey"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑣𐑨𐑐𐑦": "happy",
+        "𐑕𐑳𐑯𐑦": "sunny",
+        "𐑐𐑧𐑯𐑦": "penny",
+        "𐑚𐑱𐑚𐑦": "baby"
+      },
+      "leftOrder": [
+        "𐑣𐑨𐑐𐑦",
+        "𐑕𐑳𐑯𐑦",
+        "𐑐𐑧𐑯𐑦",
+        "𐑚𐑱𐑚𐑦"
+      ],
+      "rightOrder": [
+        "penny",
+        "baby",
+        "happy",
+        "sunny"
+      ]
+    }
+  ]
+}

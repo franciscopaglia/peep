@@ -1,0 +1,138 @@
+{
+  "id": 9132,
+  "title": "Land & Sand",
+  "glyph": "𐑕𐑨𐑯𐑛",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 13,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Land and sand",
+      "body": "Words ending in two consonants — sand, mend, ramp. And your first two-part words."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑨𐑯𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "land",
+      "correctLabel": "land"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑨𐑯𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "sand",
+      "correctLabel": "sand"
+    },
+    {
+      "type": "build",
+      "prompt": "mend",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑥",
+        "𐑧",
+        "𐑯",
+        "𐑛",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑥",
+        "𐑧",
+        "𐑯",
+        "𐑛"
+      ],
+      "correctLabel": "𐑥𐑧𐑯𐑛"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑚𐑨𐑯𐑛",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "band",
+        "bend",
+        "bond",
+        "land"
+      ],
+      "correct": "band",
+      "correctLabel": "band"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑧𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "rest",
+      "correctLabel": "rest"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑨𐑥𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "ramp",
+      "correctLabel": "ramp"
+    },
+    {
+      "type": "build",
+      "prompt": "camp",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑨",
+        "𐑥",
+        "𐑐",
+        "𐑛"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑨",
+        "𐑥",
+        "𐑐"
+      ],
+      "correctLabel": "𐑒𐑨𐑥𐑐"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑦𐑯𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "mint",
+      "correctLabel": "mint"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑨𐑚𐑦𐑑",
+      "caption": "Two parts — sound out each.",
+      "correct": "rabbit",
+      "correctLabel": "rabbit"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑯𐑨𐑐𐑒𐑦𐑯",
+      "caption": "Two parts — sound out each.",
+      "correct": "napkin",
+      "correctLabel": "napkin"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑤𐑨𐑯𐑛": "land",
+        "𐑕𐑨𐑯𐑛": "sand",
+        "𐑮𐑨𐑥𐑐": "ramp",
+        "𐑥𐑦𐑯𐑑": "mint"
+      },
+      "leftOrder": [
+        "𐑤𐑨𐑯𐑛",
+        "𐑕𐑨𐑯𐑛",
+        "𐑮𐑨𐑥𐑐",
+        "𐑥𐑦𐑯𐑑"
+      ],
+      "rightOrder": [
+        "ramp",
+        "mint",
+        "land",
+        "sand"
+      ]
+    }
+  ]
+}

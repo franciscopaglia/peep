@@ -105,9 +105,50 @@ function PathNode({
   );
 }
 
-// The branch(es) that hang off a spine node, drawn to its right with an elbow
-// connector. Vertically centred on the spine node; laid out absolutely so the
-// spine stays on the centre line.
+// The branch(es) that hang off a spine node. The first sits to the right of the
+// node, a second to the left — so a pair straddles its anchor on one row instead
+// of stacking down into the next lesson. Each is centred on the spine node (via
+// the −28px = half-node offset) with an elbow connector meeting it.
+function BranchNode({
+  branch,
+  side,
+  completedCount,
+  completedBranches,
+  onStartLesson,
+}: {
+  branch: LessonMeta;
+  side: 'right' | 'left';
+  completedCount: number;
+  completedBranches: Set<number>;
+  onStartLesson: (id: number) => void;
+}) {
+  const state: NodeState = completedBranches.has(branch.id)
+    ? 'completed'
+    : (branch.anchor ?? Infinity) > completedCount
+      ? 'locked'
+      : 'available';
+  return (
+    <div className={`flex items-start ${side === 'left' ? 'flex-row-reverse' : ''}`}>
+      <div className="mt-[27px] h-px w-6 flex-none bg-border" />
+      <div className="flex flex-col items-center gap-2">
+        <PathNode
+          state={state}
+          glyph={branch.glyph}
+          size={56}
+          dashed
+          onClick={() => onStartLesson(branch.id)}
+        />
+        <div
+          className="text-[11px] font-semibold max-w-[104px] text-center leading-tight"
+          style={{ color: state === 'locked' ? 'var(--locked-fg)' : 'var(--muted-foreground)' }}
+        >
+          {branch.title}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function BranchCluster({
   branches,
   completedCount,
@@ -119,38 +160,28 @@ function BranchCluster({
   completedBranches: Set<number>;
   onStartLesson: (id: number) => void;
 }) {
-  // Offset up by half the 56px node so the node — not the node-plus-label
-  // stack — sits on the spine node's centre line, and the connector meets it.
+  // Even-indexed branches go right, odd go left; each side is a column (extra
+  // branches on a side stack, but the common 1–2 case never does).
+  const rightSide = branches.filter((_, i) => i % 2 === 0);
+  const leftSide = branches.filter((_, i) => i % 2 === 1);
+  const props = { completedCount, completedBranches, onStartLesson };
   return (
-    <div className="absolute top-1/2 left-full -translate-y-[28px] flex flex-col gap-4 z-10">
-      {branches.map((b) => {
-        const state: NodeState = completedBranches.has(b.id)
-          ? 'completed'
-          : (b.anchor ?? Infinity) > completedCount
-            ? 'locked'
-            : 'available';
-        return (
-          <div key={b.id} className="flex items-start">
-            <div className="mt-[27px] h-px w-6 flex-none bg-border" />
-            <div className="flex flex-col items-center gap-2">
-              <PathNode
-                state={state}
-                glyph={b.glyph}
-                size={56}
-                dashed
-                onClick={() => onStartLesson(b.id)}
-              />
-              <div
-                className="text-[11px] font-semibold max-w-[104px] text-center leading-tight"
-                style={{ color: state === 'locked' ? 'var(--locked-fg)' : 'var(--muted-foreground)' }}
-              >
-                {b.title}
-              </div>
-            </div>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      {rightSide.length > 0 && (
+        <div className="absolute top-1/2 left-full -translate-y-[28px] flex flex-col gap-4 z-10">
+          {rightSide.map((b) => (
+            <BranchNode key={b.id} branch={b} side="right" {...props} />
+          ))}
+        </div>
+      )}
+      {leftSide.length > 0 && (
+        <div className="absolute top-1/2 right-full -translate-y-[28px] flex flex-col gap-4 z-10">
+          {leftSide.map((b) => (
+            <BranchNode key={b.id} branch={b} side="left" {...props} />
+          ))}
+        </div>
+      )}
+    </>
   );
 }
 

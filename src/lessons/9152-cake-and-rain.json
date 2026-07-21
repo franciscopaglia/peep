@@ -1,0 +1,136 @@
+{
+  "id": 9152,
+  "title": "Cake & Rain",
+  "glyph": "𐑒𐑱𐑒",
+  "chapter": 1,
+  "optional": true,
+  "anchor": 15,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "The long ai",
+      "body": "𐑱 is the sound in day and cake. Read these."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑱",
+      "caption": "Sound it out — what does this say?",
+      "correct": "pay",
+      "correctLabel": "pay"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑱",
+      "caption": "Sound it out — what does this say?",
+      "correct": "lay",
+      "correctLabel": "lay"
+    },
+    {
+      "type": "build",
+      "prompt": "sail",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑕",
+        "𐑱",
+        "𐑤",
+        "𐑯",
+        "𐑥"
+      ],
+      "answer": [
+        "𐑕",
+        "𐑱",
+        "𐑤"
+      ],
+      "correctLabel": "𐑕𐑱𐑤"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑐𐑱𐑯",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "pain",
+        "pin",
+        "pan",
+        "pen"
+      ],
+      "correct": "pain",
+      "correctLabel": "pain"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑱𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "late",
+      "correctLabel": "late"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑯𐑱𐑥",
+      "caption": "Sound it out — what does this say?",
+      "correct": "name",
+      "correctLabel": "name"
+    },
+    {
+      "type": "build",
+      "prompt": "cake",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑱",
+        "𐑒",
+        "𐑑",
+        "𐑤"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑱",
+        "𐑒"
+      ],
+      "correctLabel": "𐑒𐑱𐑒"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑱𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "lane",
+      "correctLabel": "lane"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑱𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "race",
+      "correctLabel": "race"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑱𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "make",
+      "correctLabel": "make"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑐𐑱": "pay",
+        "𐑤𐑱𐑑": "late",
+        "𐑯𐑱𐑥": "name",
+        "𐑮𐑱𐑕": "race"
+      },
+      "leftOrder": [
+        "𐑐𐑱",
+        "𐑤𐑱𐑑",
+        "𐑯𐑱𐑥",
+        "𐑮𐑱𐑕"
+      ],
+      "rightOrder": [
+        "late",
+        "race",
+        "pay",
+        "name"
+      ]
+    }
+  ]
+}
