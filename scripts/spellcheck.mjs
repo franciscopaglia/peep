@@ -30,6 +30,7 @@ import { load, index, isStandard } from './readlex.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DIR = path.join(HERE, '..', 'src', 'lessons');
+const ALPHABET = path.join(HERE, '..', 'src', 'lib', 'shavian-alphabet.ts');
 const ALLOW = path.join(HERE, 'spellcheck-allow.json');
 
 const SHAVIAN = /[\u{10450}-\u{1047F}]/u;
@@ -212,6 +213,19 @@ for (const file of lessonFiles()) {
   lesson.exercises.forEach((ex, i) => claimsFor(ex, `L${lesson.id}#${i}`, claims));
 }
 
+// The 48-letter reference table pairs a Shavian example with its English on the
+// About page, the Landing chart and every letter-intro teach card — the most
+// visible spelling claims in the app, and for a long time the only ones nothing
+// checked. Same rules as a lesson: the example must exist and mean what it says.
+let letters = 0;
+if (only === null) {
+  const table = fs.readFileSync(ALPHABET, 'utf8');
+  for (const m of table.matchAll(/glyph: '(.)',[^\n]*example: '([^']+)', exampleEn: '([^']+)'/gu)) {
+    letters++;
+    claim(claims, `alphabet ${m[1]}`, m[2], m[3], true);
+  }
+}
+
 const { byShavian } = index(await load());
 
 // Collapse to one row per (spelling, claimed meaning), keeping where it appears.
@@ -279,8 +293,9 @@ const section = (title, list, note) => {
 };
 
 console.log(
-  `Shavian spelling audit — ${lessons} lesson${lessons === 1 ? '' : 's'}, ` +
-    `${claims.length} spellings checked, ${rows.size} distinct`
+  `Shavian spelling audit — ${lessons} lesson${lessons === 1 ? '' : 's'}` +
+    (letters ? ` + ${letters} alphabet entries` : '') +
+    `, ${claims.length} spellings checked, ${rows.size} distinct`
 );
 
 section(

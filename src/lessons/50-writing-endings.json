@@ -1,0 +1,105 @@
+{
+  "id": 50,
+  "title": "Writing the Endings",
+  "glyph": "𐑕𐑟",
+  "chapter": 4,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Your throat picks the s",
+      "body": "Say cats, then dogs. The ending hisses in one and buzzes in the other, so Shavian writes what you say: cats is 𐑒𐑨𐑑𐑕 and dogs is 𐑛𐑪𐑜𐑟. There is no rule to memorize — after a quiet letter write 𐑕, after a buzzy one write 𐑟, and your ear will be right every time."
+    },
+    {
+      "type": "write",
+      "prompt": "cats",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑒𐑨𐑑𐑕",
+      "correctLabel": "𐑒𐑨𐑑𐑕"
+    },
+    {
+      "type": "write",
+      "prompt": "dogs",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑛𐑪𐑜𐑟",
+      "correctLabel": "𐑛𐑪𐑜𐑟"
+    },
+    {
+      "type": "write",
+      "prompt": "books",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑚𐑫𐑒𐑕",
+      "correctLabel": "𐑚𐑫𐑒𐑕"
+    },
+    {
+      "type": "write",
+      "prompt": "beds",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑚𐑧𐑛𐑟",
+      "correctLabel": "𐑚𐑧𐑛𐑟"
+    },
+    {
+      "type": "teach",
+      "title": "The -ed that is not there",
+      "body": "Past tenses work the same way. Walked ends in a plain t sound, so it is 𐑢𐑷𐑒𐑑; played buzzes, so it is 𐑐𐑤𐑱𐑛. English spells both -ed and hopes you know the difference; Shavian just writes it down."
+    },
+    {
+      "type": "write",
+      "prompt": "walked",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑢𐑷𐑒𐑑",
+      "correctLabel": "𐑢𐑷𐑒𐑑"
+    },
+    {
+      "type": "write",
+      "prompt": "played",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑐𐑤𐑱𐑛",
+      "correctLabel": "𐑐𐑤𐑱𐑛"
+    },
+    {
+      "type": "write",
+      "prompt": "jumped",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑡𐑳𐑥𐑐𐑑",
+      "correctLabel": "𐑡𐑳𐑥𐑐𐑑"
+    },
+    {
+      "type": "teach",
+      "title": "When -ed is a syllable",
+      "body": "Only after a t or d sound does the ending stay a syllable of its own — and then it is 𐑩𐑛: wanted is 𐑢𐑪𐑯𐑑𐑩𐑛, needed is 𐑯𐑰𐑛𐑩𐑛. Say the word; if you hear an extra beat, write 𐑩𐑛."
+    },
+    {
+      "type": "write",
+      "prompt": "wanted",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑢𐑪𐑯𐑑𐑩𐑛",
+      "correctLabel": "𐑢𐑪𐑯𐑑𐑩𐑛"
+    },
+    {
+      "type": "write",
+      "prompt": "needed",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑯𐑰𐑛𐑩𐑛",
+      "correctLabel": "𐑯𐑰𐑛𐑩𐑛"
+    },
+    {
+      "type": "teach",
+      "title": "The easy one",
+      "body": "After all that, -ing never changes: it is always 𐑦𐑙, the two letters you met together in Chapter 1. Running is 𐑮𐑳𐑯𐑦𐑙, singing is 𐑕𐑦𐑙𐑦𐑙 — with 𐑙 twice, because you say it twice."
+    },
+    {
+      "type": "write",
+      "prompt": "running",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑮𐑳𐑯𐑦𐑙",
+      "correctLabel": "𐑮𐑳𐑯𐑦𐑙"
+    },
+    {
+      "type": "write",
+      "prompt": "singing",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑕𐑦𐑙𐑦𐑙",
+      "correctLabel": "𐑕𐑦𐑙𐑦𐑙"
+    }
+  ]
+}

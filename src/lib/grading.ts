@@ -34,6 +34,15 @@ export function normalizeTranscription(text: string): string {
 }
 
 /**
+ * Canonical form for comparing a `write` answer: the glyphs must match exactly
+ * (it's a spelling exercise), but spacing between words is forgiven — leading,
+ * trailing and repeated spaces collapse to one.
+ */
+export function normalizeSpacing(text: string): string {
+  return text.replace(/\s+/g, ' ').trim();
+}
+
+/**
  * Letters a word may differ by and still count. `transcribe` asks the learner
  * to *read* a passage, so a slip of the keyboard shouldn't fail them — but the
  * budget has to scale with length, or a short word turns into a different word
@@ -125,8 +134,12 @@ export function isCorrect(exercise: Exercise, state: AnswerState): boolean {
       );
     }
     case 'write': {
-      const typed = state.typedValue.trim();
-      return typed === exercise.correct || (exercise.accept ?? []).includes(typed);
+      // Phrase prompts are spelled with the keyboard's space key, so a stray
+      // double space (or one at either end) shouldn't fail an exact spelling.
+      const typed = normalizeSpacing(state.typedValue);
+      return [exercise.correct, ...(exercise.accept ?? [])].some(
+        (answer) => normalizeSpacing(answer) === typed
+      );
     }
     default:
       return false;

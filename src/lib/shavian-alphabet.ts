@@ -30,7 +30,7 @@ export const SHAVIAN_ALPHABET: ShavianLetter[] = [
   { glyph: '𐑡', sound: 'judge', key: 'j', ipa: 'dʒ', example: '𐑡𐑨𐑥', exampleEn: 'jam' },
   { glyph: '𐑢', sound: 'woe', key: 'w', ipa: 'w', example: '𐑢𐑦𐑯', exampleEn: 'win' },
   { glyph: '𐑣', sound: 'ha-ha', key: 'h', ipa: 'h', example: '𐑣𐑨𐑑', exampleEn: 'hat' },
-  { glyph: '𐑤', sound: 'lull', key: 'l', ipa: 'l', example: '𐑤𐑧𐑜', exampleEn: 'leg' },
+  { glyph: '𐑤', sound: 'loll', key: 'l', ipa: 'l', example: '𐑤𐑧𐑜', exampleEn: 'leg' },
   { glyph: '𐑥', sound: 'mime', key: 'm', ipa: 'm', example: '𐑥𐑨𐑯', exampleEn: 'man' },
   { glyph: '𐑦', sound: 'if', key: 'i', ipa: 'ɪ', example: '𐑐𐑦𐑯', exampleEn: 'pin' },
   { glyph: '𐑧', sound: 'egg', key: 'e', ipa: 'ɛ', example: '𐑜𐑧𐑑', exampleEn: 'get' },
@@ -51,12 +51,12 @@ export const SHAVIAN_ALPHABET: ShavianLetter[] = [
   { glyph: '𐑶', sound: 'oil', key: 'oi', ipa: 'ɔɪ', example: '𐑚𐑶', exampleEn: 'boy' },
   { glyph: '𐑷', sound: 'awe', key: 'aw', ipa: 'ɔː', example: '𐑤𐑷', exampleEn: 'law' },
   { glyph: '𐑸', sound: 'are', key: 'ar', ipa: 'ɑːr', example: '𐑒𐑸', exampleEn: 'car' },
-  { glyph: '𐑹', sound: 'or', key: 'or', ipa: 'ɔːr', example: '𐑓𐑹', exampleEn: 'for' },
+  { glyph: '𐑹', sound: 'or', key: 'or', ipa: 'ɔːr', example: '𐑛𐑹', exampleEn: 'door' },
   { glyph: '𐑺', sound: 'air', key: 'ai', ipa: 'ɛər', example: '𐑣𐑺', exampleEn: 'hair' },
   { glyph: '𐑻', sound: 'err', key: 'er', ipa: 'ɜːr', example: '𐑣𐑻', exampleEn: 'her' },
   { glyph: '𐑼', sound: 'array', key: 'a', ipa: 'ər', example: '𐑚𐑧𐑑𐑼', exampleEn: 'better' },
   { glyph: '𐑽', sound: 'ear', key: 'ea', ipa: 'ɪər', example: '𐑣𐑽', exampleEn: 'here' },
-  { glyph: '𐑾', sound: 'ian', key: 'ia', ipa: 'jə', example: '𐑳𐑯𐑾𐑯', exampleEn: 'onion' },
+  { glyph: '𐑾', sound: 'ian', key: 'ia', ipa: 'iə', example: '𐑲𐑛𐑾', exampleEn: 'idea' },
   { glyph: '𐑿', sound: 'yew', key: 'yew', ipa: 'juː', example: '𐑓𐑿', exampleEn: 'few' },
 ];
 

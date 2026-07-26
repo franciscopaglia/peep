@@ -1,0 +1,106 @@
+{
+  "id": 21,
+  "title": "Everyday Words",
+  "glyph": "𐑢𐑦𐑙",
+  "chapter": 1,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Putting it together",
+      "body": "That is twenty-nine letters met — every consonant Chapter 1 will teach you, and every vowel but a handful. Enough to read a great many everyday words, so before the last few letters arrive, spend a lesson just reading."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑦𐑙",
+      "caption": "Sound it out — what does this say?",
+      "correct": "wing",
+      "correctLabel": "wing"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑕𐑪𐑙",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "song",
+        "sing",
+        "sang",
+        "sung"
+      ],
+      "correct": "song",
+      "correctLabel": "song"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑦",
+        "𐑧"
+      ],
+      "correctLabel": "𐑥𐑦𐑤𐑒",
+      "prompt": "milk",
+      "word": [
+        "𐑥",
+        "𐑦",
+        "𐑤",
+        "𐑒"
+      ],
+      "caption": "Tap the missing letter"
+    },
+    {
+      "type": "teach",
+      "title": "The letters left over",
+      "body": "Only four letters of Chapter 1 are still to come, and most of what follows them in Chapter 2 is a family of r-vowels — single letters for the sounds English writes with a vowel plus an r, as in car and for. The hard part is already behind you."
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑢𐑦𐑙": "wing",
+        "𐑘𐑳𐑙": "young",
+        "𐑣𐑦𐑤": "hill",
+        "𐑢𐑧𐑤": "well"
+      },
+      "leftOrder": [
+        "𐑢𐑦𐑙",
+        "𐑘𐑳𐑙",
+        "𐑣𐑦𐑤",
+        "𐑢𐑧𐑤"
+      ],
+      "rightOrder": [
+        "well",
+        "hill",
+        "wing",
+        "young"
+      ]
+    },
+    {
+      "type": "build",
+      "prompt": "swing",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑕",
+        "𐑢",
+        "𐑦",
+        "𐑙",
+        "𐑟"
+      ],
+      "answer": [
+        "𐑕",
+        "𐑢",
+        "𐑦",
+        "𐑙"
+      ],
+      "correctLabel": "𐑕𐑢𐑦𐑙"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑧𐑤𐑐𐑦𐑙",
+      "caption": "Two syllables — sound out each part.",
+      "correct": "helping",
+      "correctLabel": "helping"
+    }
+  ]
+}

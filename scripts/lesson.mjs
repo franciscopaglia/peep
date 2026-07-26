@@ -15,6 +15,7 @@
 //   node scripts/lesson.mjs meta <id> title=… glyph=… chapter=…
 //   node scripts/lesson.mjs new <id> <slug> <title> <glyph> <chapter>
 //   node scripts/lesson.mjs renumber <from>..<to> <±delta>
+//   node scripts/lesson.mjs meta-index     (regenerate the app's meta.json)
 //   node scripts/lesson.mjs check          (structure + taught letters + round-trip)
 
 import fs from 'node:fs';
@@ -39,8 +40,8 @@ const DEFAULT_CAPTION = {
 const INTRODUCED = {
   1: '𐑐𐑚𐑪', 2: '𐑑𐑛𐑨', 3: '𐑒𐑜𐑦', 6: '𐑓𐑝', 7: '𐑕𐑟', 8: '𐑧',
   10: '𐑫𐑳', 12: '𐑤𐑥', 13: '𐑯𐑮', 15: '𐑰𐑱', 16: '𐑲𐑴', 17: '𐑵',
-  19: '𐑢𐑣', 20: '𐑘𐑙', 21: '𐑖𐑗', 22: '𐑡', 24: '𐑞𐑩·',
-  25: '𐑠𐑔', 26: '𐑸𐑹', 28: '𐑺𐑻', 29: '𐑼𐑽', 30: '𐑾𐑿', 31: '𐑬𐑷𐑶𐑭', 32: '·',
+  19: '𐑢𐑣', 20: '𐑘𐑙', 22: '𐑖', 23: '𐑗𐑡', 25: '𐑞𐑩·',
+  26: '𐑠𐑔', 27: '𐑸𐑹', 29: '𐑺𐑻', 30: '𐑼𐑽', 31: '𐑾𐑿', 32: '𐑬𐑷', 33: '𐑶𐑭', 34: '·',
 };
 
 // The 48 letters, read from the app's alphabet data so the two can't drift.
@@ -82,6 +83,25 @@ const loadAll = () => lessonFiles().map((f) => JSON.parse(fs.readFileSync(path.j
 
 function save(lesson, file = fileFor(lesson.id)) {
   fs.writeFileSync(file, JSON.stringify(lesson, null, 2) + '\n');
+}
+
+// The dashboard needs every lesson's id/title/glyph/chapter, but nothing else —
+// so the app ships this index and loads a lesson's exercises only when it is
+// opened. Regenerated after every mutating command; `check` fails if it drifts.
+const META_FILE = path.join(DIR, 'meta.json');
+
+function metaIndex() {
+  return loadAll().map(({ id, title, glyph, chapter, optional, anchor }) => ({
+    id,
+    title,
+    glyph,
+    chapter,
+    ...(optional ? { optional, anchor } : {}),
+  }));
+}
+
+function writeMeta() {
+  fs.writeFileSync(META_FILE, JSON.stringify(metaIndex(), null, 2) + '\n');
 }
 
 // ------------------------------------------------------------- serializer
@@ -538,8 +558,11 @@ switch (cmd) {
       const i = kv.indexOf('=');
       const key = kv.slice(0, i);
       const value = kv.slice(i + 1);
-      if (!['title', 'glyph', 'chapter'].includes(key)) die(`meta can set title/glyph/chapter, not "${key}"`);
-      lesson[key] = key === 'chapter' ? Number(value) : value;
+      // `anchor` matters after a spine renumber: a branch's anchor is a lesson
+      // id, and `renumber` moves ids without rewriting the branches aimed at them.
+      if (!['title', 'glyph', 'chapter', 'anchor'].includes(key))
+        die(`meta can set title/glyph/chapter/anchor, not "${key}"`);
+      lesson[key] = key === 'chapter' || key === 'anchor' ? Number(value) : value;
     }
     save(lesson);
     console.log(`${lesson.id} :: ${lesson.title} :: ${lesson.glyph} :: ch${lesson.chapter}`);
@@ -587,6 +610,10 @@ switch (cmd) {
       lesson.id = id + delta;
       const newFile = path.join(DIR, path.basename(oldFile).replace(/^\d+/, String(lesson.id).padStart(2, '0')));
       if (fs.existsSync(newFile)) die(`${path.basename(newFile)} already exists`);
+      // Two lessons can hold the same id under different slugs, which the
+      // filename check above sails straight past — so check the id itself.
+      if (lessonFiles().some((f) => parseInt(f) === lesson.id))
+        die(`id ${lesson.id} is taken by ${lessonFiles().find((f) => parseInt(f) === lesson.id)}`);
       save(lesson, newFile);
       fs.unlinkSync(oldFile);
       console.log(`${path.basename(oldFile)} -> ${path.basename(newFile)}`);
@@ -604,6 +631,12 @@ switch (cmd) {
       if (parseInt(f) !== lesson.id) problems.push(`${f}: filename prefix ≠ id ${lesson.id}`);
       checkLesson(lesson, problems, byId);
     }
+    // The app reads meta.json instead of every lesson file, so a stale index
+    // silently hides or misnames lessons on the dashboard.
+    const wanted = JSON.stringify(metaIndex(), null, 2) + '\n';
+    const found = fs.existsSync(META_FILE) ? fs.readFileSync(META_FILE, 'utf8') : '';
+    if (found !== wanted)
+      problems.push('meta.json is stale — run `lesson.mjs meta-index` to regenerate');
     if (problems.length) {
       for (const p of problems) console.log(p);
       console.log(`\n${problems.length} problem(s).`);
@@ -617,7 +650,16 @@ switch (cmd) {
     console.log('reformatted all lessons canonically.');
     break;
   }
+  case 'meta-index': {
+    writeMeta();
+    console.log(`wrote meta.json (${metaIndex().length} lessons).`);
+    break;
+  }
   default:
-    console.log('commands: list · show <id> [n] · grep <re> · put <id> <n> <line> · add <id> [--at n] <line> · rm <id> <n> · mv <id> <a> <b> · meta <id> k=v… · new <id> <slug> <title> <glyph> <ch> · renumber a..b ±d · check · fmt');
+    console.log('commands: list · show <id> [n] · grep <re> · put <id> <n> <line> · add <id> [--at n] <line> · rm <id> <n> · mv <id> <a> <b> · meta <id> k=v… · new <id> <slug> <title> <glyph> <ch> · renumber a..b ±d · check · fmt · meta-index');
     process.exit(cmd ? 1 : 0);
 }
+
+// Anything that can change a lesson's id, title, glyph or chapter refreshes the
+// index the app ships, so it can never fall behind the lesson files.
+if (['put', 'add', 'rm', 'mv', 'meta', 'new', 'renumber', 'fmt'].includes(cmd)) writeMeta();

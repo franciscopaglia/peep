@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { Landing } from '@/views/Landing';
@@ -7,7 +7,7 @@ import { Resources } from '@/views/Resources';
 import { Dashboard } from '@/views/Dashboard';
 import { Lesson } from '@/views/Lesson';
 import { Complete } from '@/views/Complete';
-import { LESSON_META, SPINE_META, getLessonExercises, shuffleExerciseOptions, type Exercise } from '@/lessons';
+import { LESSON_META, SPINE_META, getLessonExercises, prefetchLesson, shuffleExerciseOptions, type Exercise } from '@/lessons';
 import { isCorrect, gradeableCount, lessonPassed, PASS_THRESHOLD } from '@/lib/grading';
 import type { View } from '@/types';
 
@@ -122,6 +122,7 @@ export default function App() {
   const [completedCount, setCompletedCount] = useProgress();
   const [completedBranches, markBranchDone] = useBranchProgress();
   const [activeLessonId, setActiveLessonId] = useState(1);
+  const opening = useRef<number | null>(null);
 
   const [exercises, setExercises] = useState<Exercise[]>([]);
   const [exIndex, setExIndex] = useState(0);
@@ -143,6 +144,9 @@ export default function App() {
   const [furthest, setFurthest] = useState(0);
 
   const setView = useCallback((v: View) => {
+    // Navigating anywhere else abandons a lesson chunk still in flight, so it
+    // can't drop the learner into a lesson they've already walked away from.
+    if (v !== 'lesson') opening.current = null;
     setViewRaw(v);
     window.scrollTo(0, 0);
   }, []);
@@ -171,19 +175,31 @@ export default function App() {
       } else if (id > completedCount + 1) {
         return;
       }
-      const lessonExercises = getLessonExercises(id);
-      if (lessonExercises.length === 0) return;
-      setActiveLessonId(id);
-      setExercises(lessonExercises);
-      setExIndex(0);
-      applyAttempt(emptyAttempt);
-      setAttempts({});
-      setFurthest(0);
-      setScore(0);
-      setView('lesson');
+      // A lesson's exercises live in their own chunk, so opening one is async.
+      // `opening` records what was asked for last: a slow chunk that resolves
+      // after the learner has tapped something else is dropped rather than
+      // yanking them into the wrong lesson.
+      opening.current = id;
+      void getLessonExercises(id).then((lessonExercises) => {
+        if (opening.current !== id || lessonExercises.length === 0) return;
+        setActiveLessonId(id);
+        setExercises(lessonExercises);
+        setExIndex(0);
+        applyAttempt(emptyAttempt);
+        setAttempts({});
+        setFurthest(0);
+        setScore(0);
+        setView('lesson');
+      });
     },
     [completedCount, setView, applyAttempt]
   );
+
+  // Warm the chunk the Continue card would open, so the common path into a
+  // lesson costs nothing once the dashboard is on screen.
+  useEffect(() => {
+    if (view === 'dashboard') prefetchLesson(Math.min(completedCount + 1, SPINE_META.length));
+  }, [view, completedCount]);
 
   const continueCurrent = useCallback(() => {
     const id = Math.min(completedCount + 1, SPINE_META.length);

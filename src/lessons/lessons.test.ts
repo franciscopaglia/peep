@@ -1,8 +1,12 @@
 import { describe, it, expect } from 'vitest';
-import { LESSONS, LESSON_META, SPINE_META, branchesFor, shuffleExerciseOptions } from '@/lessons';
+import { loadAllLessons, LESSON_META, SPINE_META, branchesFor, shuffleExerciseOptions } from '@/lessons';
 import { isCorrect, emptyAnswer, type AnswerState } from '@/lib/grading';
 import { lettersFor } from '@/lib/shavian-alphabet';
 import type { Exercise } from '@/lessons/types';
+
+// Lessons are chunked and loaded on demand in the app; the suite wants them
+// all, so it awaits them once at module scope and drives `it()` off the result.
+const LESSONS = await loadAllLessons();
 
 const sorted = (a: string[]) => [...a].sort();
 
@@ -55,6 +59,20 @@ describe('lesson catalogue', () => {
     const ids = LESSONS.map((l) => l.id);
     expect(new Set(ids).size).toBe(ids.length);
     expect([...ids].sort((a, b) => a - b)).toEqual(ids);
+  });
+
+  // The app ships meta.json instead of every lesson file, so the dashboard is
+  // only as correct as this index. `lesson.mjs meta-index` regenerates it.
+  it('meta.json matches the lesson files exactly', () => {
+    expect(LESSON_META).toEqual(
+      LESSONS.map(({ id, title, glyph, chapter, optional, anchor }) => ({
+        id,
+        title,
+        glyph,
+        chapter,
+        ...(optional ? { optional, anchor } : {}),
+      }))
+    );
   });
 });
 

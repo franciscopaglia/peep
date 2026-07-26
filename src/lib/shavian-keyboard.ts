@@ -13,7 +13,7 @@ export const SHAVIAN_KEY_ROWS: ShavianKey[][] = [
   [
     k('𐑐', 'peep'), k('𐑑', 'tot'), k('𐑒', 'kick'), k('𐑓', 'fee'),
     k('𐑔', 'thigh'), k('𐑕', 'so'), k('𐑖', 'sure'), k('𐑗', 'church'),
-    k('𐑘', 'yea'), k('𐑙', 'hung'), k('𐑤', 'lull'), k('𐑥', 'mime'),
+    k('𐑘', 'yea'), k('𐑙', 'hung'), k('𐑤', 'loll'), k('𐑥', 'mime'),
   ],
   [
     k('𐑚', 'bib'), k('𐑛', 'dead'), k('𐑜', 'gag'), k('𐑝', 'vow'),
@@ -33,6 +33,18 @@ export const SHAVIAN_KEY_ROWS: ShavianKey[][] = [
 ];
 
 export const NAMING_DOT: ShavianKey = { glyph: '·', name: 'naming dot' };
+
+/** Word break, for prompts that ask for a phrase rather than a single word. */
+export const SPACE_KEY: ShavianKey = { glyph: ' ', name: 'space' };
+
+// Shavian borrows English punctuation unchanged, so a writer needs these as
+// soon as they write whole sentences rather than single words.
+export const PUNCTUATION_KEYS: ShavianKey[] = [
+  k('.', 'full stop'),
+  k(',', 'comma'),
+  k('?', 'question mark'),
+  k('!', 'exclamation mark'),
+];
 
 /**
  * The rows to render at the given width. On narrow screens each 12-key row

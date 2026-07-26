@@ -105,19 +105,47 @@ function PathNode({
   );
 }
 
+// A branch node (56px) plus its label, and the gap between stacked ones — the
+// vertical budget for one branch in a side column. Used to centre a stacked
+// column on its anchor and to reserve the row height it needs.
+const BRANCH_GAP = 16;
+const BRANCH_LABEL = 28; // two lines at text-[11px] leading-tight
+const BRANCH_ROW = 56 + 8 + BRANCH_LABEL + BRANCH_GAP;
+
+// How far above the row's centre a side column starts: half a branch node, so
+// the first branch's centre — and the elbow connector drawn at that centre —
+// lines up exactly with the spine node it hangs off. Don't raise this; the
+// connector stops meeting the node and the branches read as floating.
+const BRANCH_RISE = 28;
+
+// Where a stacked side forks: a short stem leaves the spine node, then the
+// vertical rail rises and falls from the end of it. Without the stem the rail
+// grows straight out of the node's edge and reads as a bar, not a branch.
+const BRANCH_STEM = 12;
+const BRANCH_ARM = 24;
+
+/** Height a spine row must reserve so its branch cluster stays inside it. */
+function branchClusterHeight(branchCount: number, nodeSize: number): number {
+  const stacked = Math.ceil(branchCount / 2);
+  return Math.max(nodeSize, nodeSize + (stacked - 1) * BRANCH_ROW);
+}
+
 // The branch(es) that hang off a spine node. The first sits to the right of the
 // node, a second to the left — so a pair straddles its anchor on one row instead
-// of stacking down into the next lesson. Each is centred on the spine node (via
-// the −28px = half-node offset) with an elbow connector meeting it.
+// of stacking down into the next lesson. An elbow connector meets the spine
+// node; `BRANCH_RISE` sets how far above the row's centre the column starts.
 function BranchNode({
   branch,
   side,
+  forked = false,
   completedCount,
   completedBranches,
   onStartLesson,
 }: {
   branch: LessonMeta;
   side: 'right' | 'left';
+  /** On a stacked side the arm starts at the rail, not at the spine node. */
+  forked?: boolean;
   completedCount: number;
   completedBranches: Set<number>;
   onStartLesson: (id: number) => void;
@@ -129,7 +157,15 @@ function BranchNode({
       : 'available';
   return (
     <div className={`flex items-start ${side === 'left' ? 'flex-row-reverse' : ''}`}>
-      <div className="mt-[27px] h-px w-6 flex-none bg-border" />
+      {/* Always ends at the branch node; on a forked side it starts at the
+          rail, so the branch sits the same distance out either way. */}
+      <div
+        className="mt-[27px] h-px flex-none bg-border"
+        style={{
+          width: forked ? BRANCH_ARM - BRANCH_STEM : BRANCH_ARM,
+          [side === 'right' ? 'marginLeft' : 'marginRight']: forked ? BRANCH_STEM : 0,
+        }}
+      />
       <div className="flex flex-col items-center gap-2">
         <PathNode
           state={state}
@@ -160,26 +196,60 @@ function BranchCluster({
   completedBranches: Set<number>;
   onStartLesson: (id: number) => void;
 }) {
-  // Even-indexed branches go right, odd go left; each side is a column (extra
-  // branches on a side stack, but the common 1–2 case never does).
-  const rightSide = branches.filter((_, i) => i % 2 === 0);
-  const leftSide = branches.filter((_, i) => i % 2 === 1);
+  // Even-indexed branches go right, odd go left, so a pair straddles its anchor
+  // on one row. Each side is offset by its *own* count — a side holding one
+  // branch puts it level with the spine node, a side holding more centres its
+  // column on the node — and a stacked side grows a vertical rail so every
+  // branch's horizontal stub leads somewhere instead of ending in mid-air.
   const props = { completedCount, completedBranches, onStartLesson };
+  const sides = [
+    { key: 'right' as const, items: branches.filter((_, i) => i % 2 === 0), edge: 'left-full' },
+    { key: 'left' as const, items: branches.filter((_, i) => i % 2 === 1), edge: 'right-full' },
+  ];
   return (
     <>
-      {rightSide.length > 0 && (
-        <div className="absolute top-1/2 left-full -translate-y-[28px] flex flex-col gap-4 z-10">
-          {rightSide.map((b) => (
-            <BranchNode key={b.id} branch={b} side="right" {...props} />
-          ))}
-        </div>
-      )}
-      {leftSide.length > 0 && (
-        <div className="absolute top-1/2 right-full -translate-y-[28px] flex flex-col gap-4 z-10">
-          {leftSide.map((b) => (
-            <BranchNode key={b.id} branch={b} side="left" {...props} />
-          ))}
-        </div>
+      {sides.map(({ key, items, edge }) =>
+        items.length === 0 ? null : (
+          <div
+            key={key}
+            className={`absolute top-1/2 ${edge} flex flex-col z-10`}
+            style={{
+              gap: BRANCH_GAP,
+              transform: `translateY(-${BRANCH_RISE + ((items.length - 1) * BRANCH_ROW) / 2}px)`,
+            }}
+          >
+            {items.length > 1 && (
+              <>
+                {/* Stem out of the spine node, then the upright it forks into,
+                    spanning the first branch's centre to the last one's. */}
+                <div
+                  className={`absolute h-px bg-border ${key === 'right' ? 'left-0' : 'right-0'}`}
+                  style={{
+                    width: BRANCH_STEM,
+                    top: BRANCH_RISE + ((items.length - 1) * BRANCH_ROW) / 2,
+                  }}
+                />
+                <div
+                  className="absolute w-px bg-border"
+                  style={{
+                    [key === 'right' ? 'left' : 'right']: BRANCH_STEM,
+                    top: BRANCH_RISE,
+                    height: (items.length - 1) * BRANCH_ROW,
+                  }}
+                />
+              </>
+            )}
+            {items.map((b) => (
+              <BranchNode
+                key={b.id}
+                branch={b}
+                side={key}
+                forked={items.length > 1}
+                {...props}
+              />
+            ))}
+          </div>
+        )
       )}
     </>
   );
@@ -315,7 +385,10 @@ export function Dashboard({
                       key={lesson.id}
                       className="flex flex-col items-center gap-2.5 relative z-10"
                     >
-                      <div className="relative">
+                      <div
+                        className="relative flex items-center justify-center"
+                        style={{ minHeight: branchClusterHeight(branches.length, 74) }}
+                      >
                         <PathNode
                           state={state}
                           glyph={lesson.glyph}
@@ -332,8 +405,14 @@ export function Dashboard({
                         )}
                       </div>
                       <div
-                        className="text-[13px] font-semibold max-w-[160px] text-center leading-tight bg-background px-2.5"
-                        style={{ color: state === 'locked' ? 'var(--locked-fg)' : 'var(--foreground)' }}
+                        className="text-[13px] font-semibold text-center leading-tight bg-background px-2.5"
+                        style={{
+                          color: state === 'locked' ? 'var(--locked-fg)' : 'var(--foreground)',
+                          // A row with branches has their labels either side of
+                          // it, so the title wraps sooner rather than running
+                          // into them.
+                          maxWidth: branches.length > 0 ? 116 : 160,
+                        }}
                       >
                         {lesson.title}
                       </div>

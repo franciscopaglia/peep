@@ -251,6 +251,21 @@ describe('transcriptionMatches', () => {
     expect(isCorrect(alt, { ...emptyAnswer, typedValue: '𐑒𐑨𐑑𐑑' })).toBe(true);
   });
 
+  it('write: a phrase forgives spacing but not spelling', () => {
+    const phrase: WriteExercise = {
+      type: 'write',
+      prompt: 'the cat',
+      caption: '',
+      correct: '𐑞 𐑒𐑨𐑑',
+      correctLabel: '𐑞 𐑒𐑨𐑑',
+    };
+    expect(isCorrect(phrase, { ...emptyAnswer, typedValue: '𐑞 𐑒𐑨𐑑' })).toBe(true);
+    expect(isCorrect(phrase, { ...emptyAnswer, typedValue: '  𐑞   𐑒𐑨𐑑 ' })).toBe(true);
+    // A missing word break is still the wrong answer — it's one word, not two.
+    expect(isCorrect(phrase, { ...emptyAnswer, typedValue: '𐑞𐑒𐑨𐑑' })).toBe(false);
+    expect(isCorrect(phrase, { ...emptyAnswer, typedValue: '𐑞 𐑒𐑪𐑑' })).toBe(false);
+  });
+
   it('teach and match are never graded here', () => {
     const teach: Exercise = { type: 'teach', title: 't', body: 'b' };
     expect(isCorrect(teach, emptyAnswer)).toBe(false);

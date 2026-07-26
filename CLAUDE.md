@@ -24,7 +24,7 @@ density or pressure.
 
 ## Features
 
-Gradual 48-letter curriculum (Chapters 1–3 shipped, 4 started, 5 planned); twelve exercise
+Gradual 48-letter curriculum (Chapters 1–4 shipped, 5 planned); twelve exercise
 types; retry-on-wrong with a 60% pass gate; a full alphabet **reference** (About
 page); **light/dark theme** that follows the system and persists; **responsive**
 with a mobile nav; per-chapter **unlock** (for when a release resets progress);
@@ -35,7 +35,7 @@ background (both lighter on mobile); build **version** stamped in the footer.
 
 ```bash
 node scripts/readlex.mjs <word>…      # verify Shavian spellings (see below)
-npm run spellcheck                    # audit every spelling in the curriculum
+npm run spellcheck                    # audit every spelling (lessons + the 48 letters)
 npm run dev      # dev server
 npm test         # run the Vitest suite (vitest run)
 npm run test:watch
@@ -60,10 +60,19 @@ production build). Both must pass before considering work done.
   handler ignores anything but `'active'`, so it can't be re-answered or
   re-scored. Skipping leaves an exercise untouched (`'active'`, no answer), so
   stepping back to an accidental skip still lets you answer it.
-- **`src/lessons/`** — the curriculum. One **JSON file per lesson**,
-  auto-discovered via `import.meta.glob` and sorted by `id`. `index.ts` exports
-  `LESSONS`, `LESSON_META`, `CHAPTERS`, `getLessonExercises`,
-  `shuffleExerciseOptions`. `types.ts` defines the `Exercise` union.
+- **`src/lessons/`** — the curriculum. One **JSON file per lesson**, discovered
+  via `import.meta.glob('./[0-9]*.json')`. **Lessons are code-split**: the
+  bundle ships only `meta.json` (id/title/glyph/chapter/optional/anchor for
+  every lesson — all the dashboard path draws), and a lesson's exercises load
+  as their own chunk when it's opened, so a landing-page visitor downloads none
+  of the ~300 kB curriculum. `index.ts` exports `LESSON_META`, `SPINE_META`,
+  `CHAPTERS`, `branchesFor`, `shuffleExerciseOptions`, and the async
+  `getLessonExercises` / `loadLesson` / `loadAllLessons` plus `prefetchLesson`
+  (the dashboard warms the Continue card's lesson so opening it is instant).
+  `types.ts` defines the `Exercise` union.
+  **`meta.json` is generated — never hand-edit it.** `scripts/lesson.mjs`
+  rewrites it after every mutating command, `lesson.mjs meta-index` regenerates
+  it on demand, and both `check` and `npm test` fail when it drifts.
 - **`src/lib/grading.ts`** — **the single source of truth for answer-checking.**
   `isCorrect(exercise, answerState)` grades every gradeable type; also
   `gradeableCount`, `lessonPassed`, `PASS_THRESHOLD`. The app and the tests both
@@ -107,9 +116,11 @@ graded by word *index*, since sentences can repeat a word), `transcribe`
 may be off by up to its `editBudget` (0 letters for ≤2-letter words, 1 for 3–4,
 2 for longer) so a typo doesn't fail a *reading* exercise, while word count must
 still match; `accept` for spelling variants; passages must be real sourced
-texts, never invented), `write` (spell an English word in Shavian on the full on-screen
-keyboard — layout in `lib/shavian-keyboard.ts`, chart-paired rows, exact
-glyph match plus `accept`). `teach` is not
+texts, never invented), `write` (spell an English word — or, from lesson 49
+on, a phrase or whole sentence — in Shavian on the on-screen keyboard; layout in
+`lib/shavian-keyboard.ts`: chart-paired letter rows plus the naming dot,
+`. , ? !` and a space key. Graded on an exact glyph match (plus `accept`),
+with only the spacing between words normalized). `teach` is not
 graded; `match` is graded through its own pairing flow in `App.tsx` (not via
 `isCorrect`). `match` is **intentionally not failable** — wrong picks just
 shake and reset, and finishing always scores the point.
@@ -138,8 +149,10 @@ for the grammar. Run `lesson.mjs check` plus `npm test` after content changes.
 - **`npm run spellcheck` audits the whole curriculum** against the lexicon:
   every asserted spelling must exist, and wherever a lesson pairs Shavian with
   English the lexicon must agree on the meaning (𐑒𐑪𐑑 is a real word, but it's
-  "cot", not "cat"). Wrong options and bank distractors are skipped — they're
-  non-words by design. It exits non-zero on a finding, so it can gate CI; run
+  "cot", not "cat"). It covers **`lib/shavian-alphabet.ts` too** — the 48
+  example words feed the About table, the Landing chart and every letter-intro
+  teach card, so they are spelling claims like any other. Wrong options and bank
+  distractors are skipped — they're non-words by design. It exits non-zero on a finding, so it can gate CI; run
   it after a batch of content edits. Spellings that are right despite the
   lexicon (informal words it omits, an affix quoted while being taught) live in
   `scripts/spellcheck-allow.json` **with a reason** — add one only after
@@ -152,7 +165,7 @@ for the grammar. Run `lesson.mjs check` plus `npm test` after content changes.
 - **Use the standard abbreviated words.** In running Shavian text, the = `𐑞`,
   and = `𐑯`, to = `𐑑`, of = `𐑝`, for = `𐑓` — never spelled out. `𐑨𐑯𐑛` is a
   misspelling of "and", and `𐑑𐑵` reads "too/two", never "to". They're taught in
-  lesson 24 (`𐑞 𐑯 𐑑`) and lesson 27 "Little Words" (`𐑝 𐑓`, plus for/four and
+  lesson 25 (`𐑞 𐑯 𐑑`) and lesson 28 "Little Words" (`𐑝 𐑓`, plus for/four and
   the first homographs); Chapter 3 will deepen this (ligatures, more shorthand).
 - `type`: when the prompt's spelling is shared by English homophones (`𐑑𐑵` is
   both "too" and "two", `𐑓𐑹` is "four"/"fore"), list the alternates in
@@ -193,9 +206,10 @@ for the grammar. Run `lesson.mjs check` plus `npm test` after content changes.
   `gradeableCount` and `lessonPassed`.
 - `src/lessons/shuffle.test.ts` — shuffle preserves the multiset, keeps the
   answer present, is non-identity, and doesn't mutate the input.
-- `src/lessons/lessons.test.ts` — loads **every real lesson** and asserts each
-  exercise is solvable (raw and after shuffling) plus structural checks. This
-  catches bad lesson edits.
+- `src/lessons/lessons.test.ts` — awaits `loadAllLessons()` at module scope and
+  asserts each exercise is solvable (raw and after shuffling) plus structural
+  checks, and that `meta.json` still matches the lesson files. This catches bad
+  lesson edits.
 
 **When adding a new exercise type:** extend the `Exercise` union, add a branch to
 `isCorrect`, handle it in `shuffleExerciseOptions` if it has orderable elements,

@@ -2,7 +2,7 @@ import { ChevronLeft, ChevronRight, Delete, X } from 'lucide-react';
 import type { Exercise } from '@/lessons';
 import { IconButton } from '@/components/IconButton';
 import { renderWithGlyphChips } from '@/lib/shavian-text';
-import { keyboardRows, NAMING_DOT } from '@/lib/shavian-keyboard';
+import { keyboardRows, NAMING_DOT, PUNCTUATION_KEYS, SPACE_KEY } from '@/lib/shavian-keyboard';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { ReportProblem } from '@/components/ReportProblem';
 import { TeachMedia } from '@/components/TeachMedia';
@@ -640,6 +640,7 @@ export function Lesson({
                 borderBottom: `2px dashed ${typedValue ? lit.border : dim.border}`,
                 color: typedValue ? lit.color : 'var(--muted-foreground)',
                 padding: '0 20px 8px',
+                whiteSpace: 'pre-wrap',
               }}
             >
               {typedValue || ' '}
@@ -665,23 +666,46 @@ export function Lesson({
                   ))}
                 </div>
               ))}
+              {/* The naming dot and the punctuation Shavian borrows unchanged
+                  from English — needed once prompts are whole sentences. */}
+              <div className="flex justify-center gap-1.5">
+                {[NAMING_DOT, ...PUNCTUATION_KEYS].map((key) => (
+                  <button
+                    key={key.glyph}
+                    onClick={() => onTypeChange(typedValue + key.glyph)}
+                    disabled={status !== 'active'}
+                    aria-label={key.name}
+                    title={key.name}
+                    className="h-10 sm:h-11 flex-1 max-w-[70px] rounded-md font-bold text-xl flex items-center justify-center"
+                    style={{
+                      ...poolTileStyle(false, status),
+                      // The naming dot and the full stop are the same mark at
+                      // different heights — gap them so they don't read as one
+                      // pair of near-identical keys.
+                      ...(key === NAMING_DOT ? { marginRight: 14 } : null),
+                    }}
+                  >
+                    {key.glyph}
+                  </button>
+                ))}
+              </div>
               <div className="flex justify-center gap-1.5">
                 <button
-                  onClick={() => onTypeChange(typedValue + NAMING_DOT.glyph)}
-                  disabled={status !== 'active'}
-                  aria-label={NAMING_DOT.name}
-                  title={NAMING_DOT.name}
-                  className="h-10 sm:h-11 w-[30%] rounded-md font-bold text-xl flex items-center justify-center"
+                  onClick={() => onTypeChange(typedValue + SPACE_KEY.glyph)}
+                  disabled={status !== 'active' || typedValue.length === 0}
+                  aria-label={SPACE_KEY.name}
+                  title={SPACE_KEY.name}
+                  className="h-10 sm:h-11 flex-1 rounded-md text-xs font-medium tracking-wide flex items-center justify-center"
                   style={poolTileStyle(false, status)}
                 >
-                  {NAMING_DOT.glyph}
+                  {SPACE_KEY.name}
                 </button>
                 <button
                   onClick={() => onTypeChange([...typedValue].slice(0, -1).join(''))}
                   disabled={status !== 'active' || typedValue.length === 0}
                   aria-label="delete last letter"
                   title="delete last letter"
-                  className="h-10 sm:h-11 w-[30%] rounded-md flex items-center justify-center"
+                  className="h-10 sm:h-11 w-[28%] rounded-md flex items-center justify-center"
                   style={poolTileStyle(false, status)}
                 >
                   <Delete size={20} />

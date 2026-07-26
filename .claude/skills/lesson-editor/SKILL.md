@@ -19,7 +19,8 @@ node scripts/lesson.mjs mv 24 3 7            # reorder
 node scripts/lesson.mjs meta 24 title=… glyph=… chapter=…
 node scripts/lesson.mjs new 36 reading-2 'Reading II' 𐑮 2
 node scripts/lesson.mjs renumber 27..34 +1   # shift ids + filenames (descending-safe)
-node scripts/lesson.mjs check                # structure + taught-letters + round-trip
+node scripts/lesson.mjs meta-index           # regenerate the app's meta.json
+node scripts/lesson.mjs check                # structure + taught-letters + round-trip + meta
 ```
 
 ## The line protocol
@@ -77,8 +78,11 @@ doesn't cover.
    order, and `check` relies on this layout staying compact.
 2. After any change, run `node scripts/lesson.mjs check` — it enforces
    structure, **letters-taught-by-lesson** (the table lives in the script;
-   extend `INTRODUCED` when a new lesson introduces letters), and protocol
-   round-trip. Then run `npm test` as the final gate.
+   extend `INTRODUCED` when a new lesson introduces letters), protocol
+   round-trip, and that the generated `meta.json` the app ships still matches
+   the lesson files. Every mutating command rewrites `meta.json` for you, so
+   this only fails if the file was edited by hand or a lesson file was added
+   without the CLI — `meta-index` fixes it. Then run `npm test` as the gate.
 3. Remember the content rules in CLAUDE.md: abbreviated words (𐑞 𐑝 𐑯 𐑑 𐑓),
    `alt=` for homophone prompts, and only letters taught by that point —
    including a word's *sounds* ("digit" has 𐑡, not 𐑜).
