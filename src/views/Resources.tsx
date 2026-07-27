@@ -58,10 +58,16 @@ const RESOURCE_GROUPS: { id: string; label: string; items: Resource[] }[] = [
       },
       {
         title: 'Type in Shavian',
-        desc: 'Keyboard layouts and input tools for writing Shavian on your own devices.',
+        desc: 'Keyboard layouts for computer and phone — Shaw JAFL, QWERTY and Imperial.',
+        url: 'https://shavian.info/keyboards/',
+        icon: Keyboard,
+      },
+      {
+        title: 'Shavian transliterator',
+        desc: 'Paste in English and get it back in Shavian — also IPA and other phonemic scripts.',
         // No "www." — that host's TLS certificate doesn't cover it.
         url: 'https://dechifro.org/shavian/',
-        icon: Keyboard,
+        icon: Zap,
       },
       {
         title: 'Noto Sans Shavian',
