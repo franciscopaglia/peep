@@ -662,5 +662,45 @@
     "chapter": 1,
     "optional": true,
     "anchor": 25
+  },
+  {
+    "id": 9261,
+    "title": "Thin & This",
+    "glyph": "𐑔𐑦𐑯",
+    "chapter": 2,
+    "optional": true,
+    "anchor": 26
+  },
+  {
+    "id": 9271,
+    "title": "Storm & Short",
+    "glyph": "𐑕𐑑𐑹𐑥",
+    "chapter": 2,
+    "optional": true,
+    "anchor": 27
+  },
+  {
+    "id": 9291,
+    "title": "Fair or Fur?",
+    "glyph": "𐑓𐑺",
+    "chapter": 2,
+    "optional": true,
+    "anchor": 29
+  },
+  {
+    "id": 9301,
+    "title": "The -er Words",
+    "glyph": "𐑼",
+    "chapter": 2,
+    "optional": true,
+    "anchor": 30
+  },
+  {
+    "id": 9331,
+    "title": "Calm & Coin",
+    "glyph": "𐑒𐑭𐑥",
+    "chapter": 2,
+    "optional": true,
+    "anchor": 33
   }
 ]

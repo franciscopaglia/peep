@@ -1,0 +1,129 @@
+{
+  "id": 9331,
+  "title": "Calm & Coin",
+  "glyph": "𐑒𐑭𐑥",
+  "chapter": 2,
+  "optional": true,
+  "anchor": 33,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Calm and coin",
+      "body": "The last two vowels get the least practice, so here is a round of both. 𐑭 is the long open “ah”; 𐑶 is the “oy” of boy. Neither is common, but they turn up in words you will want."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑭𐑓",
+      "caption": "Sound it out — what does this say?",
+      "correct": "half",
+      "correctLabel": "half"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑭𐑞𐑼",
+      "caption": "Sound it out — what does this say?",
+      "correct": "rather",
+      "correctLabel": "rather"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑝𐑶𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "voice",
+      "correctLabel": "voice"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑡𐑶𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "join",
+      "correctLabel": "join"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑶𐑯𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "point",
+      "correctLabel": "point"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑦𐑯𐑡𐑶",
+      "caption": "Sound it out — what does this say?",
+      "correct": "enjoy",
+      "correctLabel": "enjoy"
+    },
+    {
+      "type": "build",
+      "prompt": "father",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑓",
+        "𐑭",
+        "𐑞",
+        "𐑼",
+        "𐑨"
+      ],
+      "answer": [
+        "𐑓",
+        "𐑭",
+        "𐑞",
+        "𐑼"
+      ],
+      "correctLabel": "𐑓𐑭𐑞𐑼"
+    },
+    {
+      "type": "build",
+      "prompt": "choice",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑗",
+        "𐑶",
+        "𐑕",
+        "𐑭"
+      ],
+      "answer": [
+        "𐑗",
+        "𐑶",
+        "𐑕"
+      ],
+      "correctLabel": "𐑗𐑶𐑕"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “oil”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑶𐑤",
+        "𐑬𐑤",
+        "𐑷𐑤",
+        "𐑴𐑤"
+      ],
+      "correct": "𐑶𐑤",
+      "correctLabel": "𐑶𐑤"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑣𐑭𐑓": "half",
+        "𐑝𐑶𐑕": "voice",
+        "𐑡𐑶𐑯": "join",
+        "𐑮𐑭𐑞𐑼": "rather"
+      },
+      "leftOrder": [
+        "𐑣𐑭𐑓",
+        "𐑝𐑶𐑕",
+        "𐑡𐑶𐑯",
+        "𐑮𐑭𐑞𐑼"
+      ],
+      "rightOrder": [
+        "join",
+        "rather",
+        "half",
+        "voice"
+      ]
+    }
+  ]
+}

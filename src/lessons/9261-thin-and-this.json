@@ -1,0 +1,129 @@
+{
+  "id": 9261,
+  "title": "Thin & This",
+  "glyph": "𐑔𐑦𐑯",
+  "chapter": 2,
+  "optional": true,
+  "anchor": 26,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Thin and this",
+      "body": "𐑔 is the quiet one, 𐑞 the buzzy one — and English writes both as “th”. Say each word out loud and let your throat pick the letter."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑔𐑦𐑙",
+      "caption": "Sound it out — what does this say?",
+      "correct": "thing",
+      "correctLabel": "thing"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑔𐑦𐑙𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "think",
+      "correctLabel": "think"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑴𐑔",
+      "caption": "Sound it out — what does this say?",
+      "correct": "both",
+      "correctLabel": "both"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑵𐑔",
+      "caption": "Sound it out — what does this say?",
+      "correct": "tooth",
+      "correctLabel": "tooth"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑞𐑧𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "then",
+      "correctLabel": "then"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑞𐑧𐑥",
+      "caption": "Sound it out — what does this say?",
+      "correct": "them",
+      "correctLabel": "them"
+    },
+    {
+      "type": "build",
+      "prompt": "cloth",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑤",
+        "𐑪",
+        "𐑔",
+        "𐑞"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑤",
+        "𐑪",
+        "𐑔"
+      ],
+      "correctLabel": "𐑒𐑤𐑪𐑔"
+    },
+    {
+      "type": "build",
+      "prompt": "that",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑞",
+        "𐑨",
+        "𐑑",
+        "𐑔"
+      ],
+      "answer": [
+        "𐑞",
+        "𐑨",
+        "𐑑"
+      ],
+      "correctLabel": "𐑞𐑨𐑑"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “teeth”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑑𐑰𐑔",
+        "𐑑𐑰𐑞",
+        "𐑑𐑧𐑔",
+        "𐑑𐑰𐑑"
+      ],
+      "correct": "𐑑𐑰𐑔",
+      "correctLabel": "𐑑𐑰𐑔"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑔𐑦𐑙": "thing",
+        "𐑞𐑦𐑕": "this",
+        "𐑑𐑵𐑔": "tooth",
+        "𐑞𐑧𐑯": "then"
+      },
+      "leftOrder": [
+        "𐑔𐑦𐑙",
+        "𐑞𐑦𐑕",
+        "𐑑𐑵𐑔",
+        "𐑞𐑧𐑯"
+      ],
+      "rightOrder": [
+        "this",
+        "then",
+        "thing",
+        "tooth"
+      ]
+    }
+  ]
+}
