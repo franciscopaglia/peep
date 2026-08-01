@@ -28,21 +28,13 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { load, index, isStandard } from './readlex.mjs';
 
+// Lesson loading and Shavian word-splitting are shared with lesson.mjs,
+// vocab.mjs and curriculum.mjs — see scripts/lib.
+import { DIR, ROOT, lessonFiles, shawWords, lookupKey } from './lib/curriculum.mjs';
+
 const HERE = path.dirname(fileURLToPath(import.meta.url));
-const DIR = path.join(HERE, '..', 'src', 'lessons');
-const ALPHABET = path.join(HERE, '..', 'src', 'lib', 'shavian-alphabet.ts');
+const ALPHABET = path.join(ROOT, 'src', 'lib', 'shavian-alphabet.ts');
 const ALLOW = path.join(HERE, 'spellcheck-allow.json');
-
-const SHAVIAN = /[\u{10450}-\u{1047F}]/u;
-// Punctuation and markup end a word — they don't just vanish, or "𐑐/𐑚" in a
-// teach body would read as one six-letter word.
-const SPLIT = /[^\u{10450}-\u{1047F}·]+/u;
-
-/** Shavian words in a run of text: quotes, stops and markup all break words. */
-const shawWords = (text) =>
-  String(text ?? '')
-    .split(SPLIT)
-    .filter((w) => SHAVIAN.test(w));
 
 /** Lexicon form of an English gloss: lowercase, punctuation gone, apostrophes kept. */
 const normEn = (text) =>
@@ -53,19 +45,9 @@ const normEn = (text) =>
     .replace(/\s+/g, ' ')
     .trim();
 
-// A word as the lexicon indexes it: no naming dot (that only marks a proper
-// noun), and no punctuation that rode along from a passage ("“𐑯𐑴,”").
-const lookupKey = (word) => shawWords(word).join('').replace(/·/g, '');
-
 // Shavian lives above the BMP, so every glyph is a surrogate pair: `.length`
 // counts 2 per letter and would never see a "single glyph".
 const glyphs = (word) => [...word].length;
-
-const lessonFiles = () =>
-  fs
-    .readdirSync(DIR)
-    .filter((f) => /^\d+-.+\.json$/.test(f))
-    .sort((a, b) => parseInt(a) - parseInt(b));
 
 // ------------------------------------------------------------------ claims
 // A claim is one spelling a lesson stands behind, with the English it says it
