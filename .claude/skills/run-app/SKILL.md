@@ -83,3 +83,20 @@ page looks fine:
 page.on('console', (m) => m.type() === 'error' && console.log('CONSOLE ERROR:', m.text()));
 page.on('pageerror', (e) => console.log('PAGE ERROR:', e.message));
 ```
+
+## 6. The whole-app sweep
+
+After a change to shared UI — a design token, `Nav`, `Footer`, `Button`, the
+theme — one exercise proves nothing. `scripts/screens.mjs` in this skill shoots
+**every view in both themes at both widths** (24 PNGs) so a regression in the
+dark palette or the narrow layout can't hide:
+
+```bash
+cp .../run-app/scripts/screens.mjs "$SCRATCH" && cd "$SCRATCH"
+node screens.mjs              # all views
+node screens.mjs dashboard    # just one
+```
+
+It emulates the system colour scheme rather than clicking the toggle, and
+clears `shavian-theme` so the app follows it. There is no golden-image diff on
+purpose — see the note at the top of the script.
