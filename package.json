@@ -10,8 +10,13 @@
     "lint": "oxlint",
     "test": "vitest run",
     "test:watch": "vitest",
+    "check": "npm run lint && npm run lesson -- check && npm test && npm run spellcheck && npm run build && npm run bundle-check",
+    "bundle-check": "node scripts/bundle-check.mjs",
     "lesson": "node scripts/lesson.mjs",
+    "vocab": "node scripts/vocab.mjs",
+    "curriculum": "node scripts/curriculum.mjs",
     "spellcheck": "node scripts/spellcheck.mjs",
+    "prepare": "git config core.hooksPath .githooks || true",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"

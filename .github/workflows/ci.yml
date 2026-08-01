@@ -1,0 +1,77 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      # The Read Lexicon is ~27 MB and fetched on first use; cache it so
+      # spellcheck does not re-download it on every run.
+      - uses: actions/cache@v4
+        with:
+          path: .readlex-cache
+          key: readlex-v1
+
+      - run: npm ci
+
+      - run: npm run lint
+
+      # Structure, the taught-letter budget, and meta.json drift.
+      - run: npm run lesson -- check
+
+      - run: npm test
+
+      # Every Shavian spelling in the curriculum, against the lexicon.
+      - run: npm run spellcheck
+
+      - run: npm run build
+
+      # The curriculum must stay out of the entry chunk.
+      - run: npm run bundle-check
+
+  # Publish only what passed `check` above, and only from main. Keeps the
+  # existing setup (the gh-pages branch + public/CNAME), so `npm run deploy`
+  # from a laptop stays a valid fallback and the repo's Pages settings need
+  # no change.
+  deploy:
+    needs: check
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: deploy
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The footer stamps the build with the commit hash, which vite reads
+          # from git — a shallow clone of depth 1 still resolves HEAD.
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Publish dist/ to gh-pages
+        run: |
+          npx gh-pages -d dist \
+            -u "github-actions <github-actions@users.noreply.github.com>" \
+            -r "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

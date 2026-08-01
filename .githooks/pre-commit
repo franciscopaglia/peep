@@ -1,0 +1,32 @@
+#!/bin/sh
+# Peep pre-commit — the cheap content invariants, so they can't reach main.
+#
+# Deliberately fast: no build, no test suite (that is CI's job, and
+# `npm run check` locally). This only guards what a lesson edit can silently
+# break — the taught-letter budget and a stale meta.json — because both are
+# invisible in a diff and neither is caught by `npm test` alone.
+#
+# Installed via the `prepare` npm script (core.hooksPath=.githooks).
+# Skip once with `git commit --no-verify`.
+
+staged=$(git diff --cached --name-only --diff-filter=ACM)
+
+case "$staged" in
+  *src/lessons/*|*src/lib/shavian-alphabet.ts*) ;;
+  *) exit 0 ;;
+esac
+
+echo "pre-commit: checking lessons…"
+if ! node scripts/lesson.mjs check; then
+  echo
+  echo "pre-commit: lesson check failed — fix the above, or commit with --no-verify."
+  exit 1
+fi
+
+# `check` already fails on drift, but regenerating is what the author meant to
+# do; stage it so the index never lands out of date.
+node scripts/lesson.mjs meta-index >/dev/null
+if ! git diff --quiet -- src/lessons/meta.json; then
+  git add src/lessons/meta.json
+  echo "pre-commit: regenerated src/lessons/meta.json and staged it."
+fi
