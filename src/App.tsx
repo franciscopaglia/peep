@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useRef, useReducer, useCallback, useState } from 'react';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { Landing } from '@/views/Landing';
@@ -7,141 +7,30 @@ import { Resources } from '@/views/Resources';
 import { Dashboard } from '@/views/Dashboard';
 import { Lesson } from '@/views/Lesson';
 import { Complete } from '@/views/Complete';
-import { LESSON_META, SPINE_META, getLessonExercises, prefetchLesson, shuffleExerciseOptions, type Exercise } from '@/lessons';
-import { isCorrect, gradeableCount, lessonPassed, PASS_THRESHOLD } from '@/lib/grading';
+import { LESSON_META, SPINE_META, getLessonExercises, prefetchLesson } from '@/lessons';
+import { gradeableCount, lessonPassed, PASS_THRESHOLD } from '@/lib/grading';
+import {
+  lessonReducer,
+  initialLessonState,
+  lessonProgress,
+  canCheck,
+  isLastExercise,
+} from '@/lib/lesson-machine';
+import { useDarkMode } from '@/hooks/useDarkMode';
+import { useProgress, useBranchProgress } from '@/hooks/useProgress';
 import type { View } from '@/types';
-
-type Status = 'active' | 'correct' | 'wrong';
-
-/**
- * One exercise's saved work. Stepping back and forth restores these instead of
- * resetting, so an answer is never lost — and a graded one comes back `correct`
- * or `wrong`, which is what locks its inputs and stops it being scored twice.
- */
-type Attempt = {
-  selected: string | null;
-  typedValue: string;
-  status: Status;
-  matchedKeys: string[];
-  buildSel: number[];
-  arrangeSel: number[];
-  fillSel: number[];
-};
-
-const emptyAttempt: Attempt = {
-  selected: null,
-  typedValue: '',
-  status: 'active',
-  matchedKeys: [],
-  buildSel: [],
-  arrangeSel: [],
-  fillSel: [],
-};
-
-const PROGRESS_KEY = 'shavian-progress';
-
-function useProgress() {
-  const [completedCount, setCompletedCount] = useState(() => {
-    const stored = Number(localStorage.getItem(PROGRESS_KEY));
-    return Number.isFinite(stored) && stored > 0 ? stored : 0;
-  });
-  useEffect(() => {
-    localStorage.setItem(PROGRESS_KEY, String(completedCount));
-  }, [completedCount]);
-  return [completedCount, setCompletedCount] as const;
-}
-
-const BRANCHES_KEY = 'shavian-branches';
-
-/**
- * Completed optional branch lessons, kept as a set of ids separate from the
- * linear spine progress so a branch never advances the course or gates a lesson.
- */
-function useBranchProgress() {
-  const [completed, setCompleted] = useState<Set<number>>(() => {
-    try {
-      const raw = JSON.parse(localStorage.getItem(BRANCHES_KEY) ?? '[]');
-      return new Set(Array.isArray(raw) ? raw.filter((n) => typeof n === 'number') : []);
-    } catch {
-      return new Set();
-    }
-  });
-  useEffect(() => {
-    localStorage.setItem(BRANCHES_KEY, JSON.stringify([...completed]));
-  }, [completed]);
-  const markBranchDone = useCallback((id: number) => {
-    setCompleted((prev) => (prev.has(id) ? prev : new Set(prev).add(id)));
-  }, []);
-  return [completed, markBranchDone] as const;
-}
-
-const THEME_KEY = 'shavian-theme';
-
-function systemPrefersDark() {
-  return window.matchMedia?.('(prefers-color-scheme: dark)').matches ?? false;
-}
-
-function useDarkMode() {
-  // `null` means "follow the system"; 'dark'/'light' is an explicit choice.
-  const [preference, setPreference] = useState<'dark' | 'light' | null>(() => {
-    const stored = localStorage.getItem(THEME_KEY);
-    return stored === 'dark' || stored === 'light' ? stored : null;
-  });
-  const [systemDark, setSystemDark] = useState(systemPrefersDark);
-
-  // Track the OS theme so we can follow it while no explicit choice is set.
-  useEffect(() => {
-    const mq = window.matchMedia?.('(prefers-color-scheme: dark)');
-    if (!mq) return;
-    const onChange = (e: MediaQueryListEvent) => setSystemDark(e.matches);
-    mq.addEventListener('change', onChange);
-    return () => mq.removeEventListener('change', onChange);
-  }, []);
-
-  const dark = preference === null ? systemDark : preference === 'dark';
-
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', dark);
-  }, [dark]);
-
-  const toggle = useCallback(() => {
-    setPreference((prev) => {
-      const currentlyDark = prev === null ? systemPrefersDark() : prev === 'dark';
-      const next = currentlyDark ? 'light' : 'dark';
-      localStorage.setItem(THEME_KEY, next);
-      return next;
-    });
-  }, []);
-
-  return [dark, toggle] as const;
-}
 
 export default function App() {
   const [view, setViewRaw] = useState<View>('landing');
   const [dark, toggleMode] = useDarkMode();
   const [completedCount, setCompletedCount] = useProgress();
   const [completedBranches, markBranchDone] = useBranchProgress();
-  const [activeLessonId, setActiveLessonId] = useState(1);
   const opening = useRef<number | null>(null);
 
-  const [exercises, setExercises] = useState<Exercise[]>([]);
-  const [exIndex, setExIndex] = useState(0);
-  const [selected, setSelected] = useState<string | null>(null);
-  const [typedValue, setTypedValue] = useState('');
-  const [status, setStatus] = useState<Status>('active');
-  const [matchSelLeft, setMatchSelLeft] = useState<string | null>(null);
-  const [matchSelRight, setMatchSelRight] = useState<string | null>(null);
-  const [matchedKeys, setMatchedKeys] = useState<string[]>([]);
-  const [matchWrong, setMatchWrong] = useState(false);
-  const [buildSel, setBuildSel] = useState<number[]>([]);
-  const [arrangeSel, setArrangeSel] = useState<number[]>([]);
-  // Shared by 'complete' and 'fill': bank indices chosen for the blanks, in order.
-  const [fillSel, setFillSel] = useState<number[]>([]);
-  const [score, setScore] = useState(0);
-  // Work saved per exercise index, and how far into the lesson we've reached —
-  // you can navigate over ground you've seen, but not jump ahead of it.
-  const [attempts, setAttempts] = useState<Record<number, Attempt>>({});
-  const [furthest, setFurthest] = useState(0);
+  // All lesson playback — exercises, the current answer, score, navigation —
+  // lives in one pure reducer (lib/lesson-machine.ts). This component only
+  // owns what isn't a function of that state: the view, and saved progress.
+  const [lesson, dispatch] = useReducer(lessonReducer, initialLessonState);
 
   const setView = useCallback((v: View) => {
     // Navigating anywhere else abandons a lesson chunk still in flight, so it
@@ -149,20 +38,6 @@ export default function App() {
     if (v !== 'lesson') opening.current = null;
     setViewRaw(v);
     window.scrollTo(0, 0);
-  }, []);
-
-  const applyAttempt = useCallback((a: Attempt) => {
-    setSelected(a.selected);
-    setTypedValue(a.typedValue);
-    setStatus(a.status);
-    setMatchedKeys(a.matchedKeys);
-    setBuildSel(a.buildSel);
-    setArrangeSel(a.arrangeSel);
-    setFillSel(a.fillSel);
-    // A half-finished match tap is mid-gesture state, never worth restoring.
-    setMatchSelLeft(null);
-    setMatchSelRight(null);
-    setMatchWrong(false);
   }, []);
 
   const startLesson = useCallback(
@@ -180,19 +55,13 @@ export default function App() {
       // after the learner has tapped something else is dropped rather than
       // yanking them into the wrong lesson.
       opening.current = id;
-      void getLessonExercises(id).then((lessonExercises) => {
-        if (opening.current !== id || lessonExercises.length === 0) return;
-        setActiveLessonId(id);
-        setExercises(lessonExercises);
-        setExIndex(0);
-        applyAttempt(emptyAttempt);
-        setAttempts({});
-        setFurthest(0);
-        setScore(0);
+      void getLessonExercises(id).then((exercises) => {
+        if (opening.current !== id || exercises.length === 0) return;
+        dispatch({ type: 'start', lessonId: id, exercises });
         setView('lesson');
       });
     },
-    [completedCount, setView, applyAttempt]
+    [completedCount, setView]
   );
 
   // Warm the chunk the Continue card would open, so the common path into a
@@ -202,267 +71,94 @@ export default function App() {
   }, [view, completedCount]);
 
   const continueCurrent = useCallback(() => {
-    const id = Math.min(completedCount + 1, SPINE_META.length);
-    startLesson(id);
+    startLesson(Math.min(completedCount + 1, SPINE_META.length));
   }, [completedCount, startLesson]);
 
   const closeLesson = useCallback(() => setView('dashboard'), [setView]);
 
   const unlockThrough = useCallback(
-    (lessonId: number) => {
-      setCompletedCount((c) => Math.max(c, lessonId));
-    },
+    (lessonId: number) => setCompletedCount((c) => Math.max(c, lessonId)),
     [setCompletedCount]
   );
 
+  const goTo = useCallback((index: number) => dispatch({ type: 'goTo', index }), []);
+  const goBack = useCallback(() => goTo(lesson.exIndex - 1), [goTo, lesson.exIndex]);
+  const goForward = useCallback(() => goTo(lesson.exIndex + 1), [goTo, lesson.exIndex]);
+  const checkAnswer = useCallback(() => dispatch({ type: 'check' }), []);
+
   /**
-   * Move within the exercises already reached, saving the current work and
-   * restoring the target's. Score is never touched: a point is awarded once, by
-   * `checkAnswer`, and revisiting a graded exercise can't re-award it because
-   * its restored status is no longer 'active'.
+   * Continue past the current exercise — or, at the end, finish the lesson.
+   * Only a passing score records completion: a branch records its own and never
+   * advances the spine, a spine lesson unlocks the next one.
    */
-  const goTo = useCallback(
-    (index: number) => {
-      if (index === exIndex || index < 0 || index >= exercises.length) return;
-      setAttempts((prev) => ({
-        ...prev,
-        [exIndex]: { selected, typedValue, status, matchedKeys, buildSel, arrangeSel, fillSel },
-      }));
-      applyAttempt(attempts[index] ?? emptyAttempt);
-      setExIndex(index);
-      setFurthest((f) => Math.max(f, index));
-    },
-    [
-      exIndex,
-      exercises.length,
-      attempts,
-      applyAttempt,
-      selected,
-      typedValue,
-      status,
-      matchedKeys,
-      buildSel,
-      arrangeSel,
-      fillSel,
-    ]
-  );
-
-  const goBack = useCallback(() => goTo(exIndex - 1), [goTo, exIndex]);
-  const goForward = useCallback(() => goTo(exIndex + 1), [goTo, exIndex]);
-
   const continueNext = useCallback(() => {
-    const nextIndex = exIndex + 1;
-    if (nextIndex >= exercises.length) {
-      const passed = lessonPassed(score, gradeableCount(exercises));
-      setView('complete');
-      // Only mark complete when the pass threshold is met. A branch records
-      // its own completion and never advances the spine; a spine lesson unlocks
-      // the next one.
-      if (passed) {
-        const meta = LESSON_META.find((l) => l.id === activeLessonId);
-        if (meta?.optional) markBranchDone(activeLessonId);
-        else setCompletedCount((c) => Math.max(c, activeLessonId));
-      }
+    if (!isLastExercise(lesson)) {
+      goTo(lesson.exIndex + 1);
       return;
     }
-    goTo(nextIndex);
-  }, [exIndex, exercises, score, activeLessonId, setView, setCompletedCount, markBranchDone, goTo]);
-
-  const checkAnswer = useCallback(() => {
-    const ex = exercises[exIndex];
-    if (!ex) return;
-    const correct = isCorrect(ex, {
-      selected,
-      typedValue,
-      buildSel,
-      arrangeSel,
-      fillSel,
-    });
-
-    setStatus(correct ? 'correct' : 'wrong');
-    if (correct && !ex.retry) setScore((s) => s + 1);
-    if (!correct && !ex.retry) {
-      setExercises((list) => [
-        ...list,
-        { ...shuffleExerciseOptions(ex), retry: true },
-      ]);
+    setView('complete');
+    if (lessonPassed(lesson.score, gradeableCount(lesson.exercises))) {
+      const meta = LESSON_META.find((l) => l.id === lesson.lessonId);
+      if (meta?.optional) markBranchDone(lesson.lessonId);
+      else setCompletedCount((c) => Math.max(c, lesson.lessonId));
     }
-  }, [exercises, exIndex, selected, typedValue, buildSel, arrangeSel, fillSel]);
+  }, [lesson, goTo, setView, setCompletedCount, markBranchDone]);
 
-  const selectOption = useCallback(
-    (opt: string) => {
-      if (status !== 'active') return;
-      setSelected(opt);
-    },
-    [status]
-  );
-
-  const onTypeChange = useCallback(
-    (v: string) => {
-      if (status !== 'active') return;
-      setTypedValue(v);
-    },
-    [status]
-  );
-
-  const buildAdd = useCallback(
-    (i: number) => {
-      if (status !== 'active' || buildSel.includes(i)) return;
-      setBuildSel((s) => [...s, i]);
-    },
-    [status, buildSel]
-  );
-
+  const selectOption = useCallback((option: string) => dispatch({ type: 'select', option }), []);
+  const onTypeChange = useCallback((value: string) => dispatch({ type: 'typed', value }), []);
+  const buildAdd = useCallback((index: number) => dispatch({ type: 'buildAdd', index }), []);
   const buildRemove = useCallback(
-    (pos: number) => {
-      if (status !== 'active') return;
-      setBuildSel((s) => s.filter((_, p) => p !== pos));
-    },
-    [status]
+    (position: number) => dispatch({ type: 'buildRemove', position }),
+    []
   );
-
-  const arrangeAdd = useCallback(
-    (i: number) => {
-      if (status !== 'active' || arrangeSel.includes(i)) return;
-      setArrangeSel((s) => [...s, i]);
-    },
-    [status, arrangeSel]
-  );
-
+  const arrangeAdd = useCallback((index: number) => dispatch({ type: 'arrangeAdd', index }), []);
   const arrangeRemove = useCallback(
-    (pos: number) => {
-      if (status !== 'active') return;
-      setArrangeSel((s) => s.filter((_, p) => p !== pos));
-    },
-    [status]
+    (position: number) => dispatch({ type: 'arrangeRemove', position }),
+    []
   );
-
-  const fillAdd = useCallback(
-    (i: number) => {
-      if (status !== 'active') return;
-      const ex = exercises[exIndex];
-      if (
-        !ex ||
-        (ex.type !== 'complete' && ex.type !== 'fill' && ex.type !== 'cloze')
-      )
-        return;
-      setFillSel((s) =>
-        s.includes(i) || s.length >= ex.blanks.length ? s : [...s, i]
-      );
-    },
-    [status, exercises, exIndex]
-  );
-
+  const fillAdd = useCallback((index: number) => dispatch({ type: 'fillAdd', index }), []);
   const fillRemove = useCallback(
-    (pos: number) => {
-      if (status !== 'active') return;
-      setFillSel((s) => s.filter((_, p) => p !== pos));
-    },
-    [status]
+    (position: number) => dispatch({ type: 'fillRemove', position }),
+    []
   );
-
   const matchClick = useCallback(
-    (side: 'left' | 'right', value: string) => {
-      const ex = exercises[exIndex];
-      if (!ex || ex.type !== 'match') return;
-      if (matchWrong) return;
-      if (side === 'left') {
-        if (matchedKeys.includes(value)) return;
-        setMatchSelLeft((prev) => (prev === value ? null : value));
-      } else {
-        const key = Object.keys(ex.pairs).find((k) => ex.pairs[k] === value);
-        if (key && matchedKeys.includes(key)) return;
-        setMatchSelRight((prev) => (prev === value ? null : value));
-      }
-    },
-    [exercises, exIndex, matchWrong, matchedKeys]
+    (side: 'left' | 'right', value: string) => dispatch({ type: 'matchClick', side, value }),
+    []
   );
 
+  // A wrong match shakes, then clears itself — the only piece of lesson state
+  // that moves on a timer rather than on input.
   useEffect(() => {
-    if (!matchSelLeft || !matchSelRight) return;
-    const ex = exercises[exIndex];
-    if (!ex || ex.type !== 'match') return;
-    const isPair = ex.pairs[matchSelLeft] === matchSelRight;
-    if (isPair) {
-      const next = [...matchedKeys, matchSelLeft];
-      setMatchedKeys(next);
-      setMatchSelLeft(null);
-      setMatchSelRight(null);
-      if (next.length === Object.keys(ex.pairs).length) {
-        setStatus('correct');
-        setScore((s) => s + 1);
-      }
-    } else {
-      setMatchWrong(true);
-      const t = window.setTimeout(() => {
-        setMatchWrong(false);
-        setMatchSelLeft(null);
-        setMatchSelRight(null);
-      }, 500);
-      return () => window.clearTimeout(t);
-    }
-  }, [matchSelLeft, matchSelRight, exercises, exIndex, matchedKeys]);
+    if (!lesson.matchWrong) return;
+    const t = window.setTimeout(() => dispatch({ type: 'matchReset' }), 500);
+    return () => window.clearTimeout(t);
+  }, [lesson.matchWrong]);
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if (e.key !== 'Enter' || view !== 'lesson') return;
-      const ex = exercises[exIndex];
+      const ex = lesson.exercises[lesson.exIndex];
       if (!ex) return;
       // Stop a focused button from also firing its click on this same Enter,
       // which would advance twice and silently skip an exercise.
-      if (status !== 'active') {
+      if (lesson.current.status !== 'active' || ex.type === 'teach') {
         e.preventDefault();
         continueNext();
         return;
       }
-      if (ex.type === 'teach') {
-        e.preventDefault();
-        continueNext();
-        return;
-      }
-      const canCheck =
-        ex.type === 'type' || ex.type === 'transcribe' || ex.type === 'write'
-          ? typedValue.trim().length > 0
-          : ex.type === 'choice' || ex.type === 'spot'
-            ? selected != null
-            : ex.type === 'build'
-              ? buildSel.length > 0
-              : ex.type === 'arrange'
-                ? arrangeSel.length > 0
-                : ex.type === 'complete' || ex.type === 'fill' || ex.type === 'cloze'
-                  ? fillSel.length === ex.blanks.length
-                  : false;
-      if (canCheck) {
+      if (canCheck(lesson)) {
         e.preventDefault();
         checkAnswer();
       }
     }
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [view, exercises, exIndex, status, typedValue, selected, buildSel, arrangeSel, fillSel, continueNext, checkAnswer]);
+  }, [view, lesson, continueNext, checkAnswer]);
 
-  const currentExercise = exercises[exIndex];
-  const activeLessonTitle =
-    LESSON_META.find((l) => l.id === activeLessonId)?.title ?? '';
-  const gradeableTotal = gradeableCount(exercises);
-  const passed = lessonPassed(score, gradeableTotal);
-
-  // The lesson counter / progress bar count only graded exercises (skip teach
-  // cards) so the "X / Y" during the lesson matches the "score / Y" at the end.
-  const gradedBefore = exercises
-    .slice(0, exIndex)
-    .filter((e) => e.type !== 'teach' && !e.retry).length;
-  const currentIsGraded = currentExercise ? currentExercise.type !== 'teach' : false;
-  const gradedStep =
-    Math.min(gradedBefore + (currentIsGraded ? 1 : 0), gradeableTotal) ||
-    (gradeableTotal ? 1 : 0);
-  const gradedProgressPct = gradeableTotal
-    ? Math.round(
-        ((gradedBefore + (currentIsGraded && status !== 'active' ? 1 : 0)) /
-          gradeableTotal) *
-          100
-      )
-    : 0;
+  const currentExercise = lesson.exercises[lesson.exIndex];
+  const activeLessonTitle = LESSON_META.find((l) => l.id === lesson.lessonId)?.title ?? '';
+  const progress = lessonProgress(lesson);
+  const passed = lessonPassed(lesson.score, progress.total);
 
   return (
     <div className="min-h-screen bg-background font-sans">
@@ -502,27 +198,28 @@ export default function App() {
       {view === 'lesson' && currentExercise && (
         <Lesson
           exercise={currentExercise}
-          exIndex={exIndex}
-          exTotal={exercises.length}
-          gradedStep={gradedStep}
-          gradedTotal={gradeableTotal}
-          progressPct={gradedProgressPct}
-          lessonId={activeLessonId}
+          exIndex={lesson.exIndex}
+          exTotal={lesson.exercises.length}
+          gradedStep={progress.step}
+          gradedTotal={progress.total}
+          progressPct={progress.percent}
+          lessonId={lesson.lessonId}
           lessonTitle={activeLessonTitle}
-          status={status}
-          canGoBack={exIndex > 0}
-          canGoForward={exIndex < furthest}
+          status={lesson.current.status}
+          canCheck={canCheck(lesson)}
+          canGoBack={lesson.exIndex > 0}
+          canGoForward={lesson.exIndex < lesson.furthest}
           onGoBack={goBack}
           onGoForward={goForward}
-          selected={selected}
-          typedValue={typedValue}
-          buildSel={buildSel}
-          arrangeSel={arrangeSel}
-          fillSel={fillSel}
-          matchSelLeft={matchSelLeft}
-          matchSelRight={matchSelRight}
-          matchedKeys={matchedKeys}
-          matchWrong={matchWrong}
+          selected={lesson.current.selected}
+          typedValue={lesson.current.typedValue}
+          buildSel={lesson.current.buildSel}
+          arrangeSel={lesson.current.arrangeSel}
+          fillSel={lesson.current.fillSel}
+          matchSelLeft={lesson.matchSelLeft}
+          matchSelRight={lesson.matchSelRight}
+          matchedKeys={lesson.current.matchedKeys}
+          matchWrong={lesson.matchWrong}
           onClose={closeLesson}
           onSelectOption={selectOption}
           onTypeChange={onTypeChange}
@@ -541,18 +238,16 @@ export default function App() {
 
       {view === 'complete' && (
         <Complete
-          score={score}
-          total={gradeableTotal}
+          score={lesson.score}
+          total={progress.total}
           passed={passed}
           passThresholdPct={Math.round(PASS_THRESHOLD * 100)}
           onBack={closeLesson}
-          onRetry={() => startLesson(activeLessonId)}
+          onRetry={() => startLesson(lesson.lessonId)}
         />
       )}
 
-      {view !== 'lesson' && (
-        <Footer onSetView={setView} />
-      )}
+      {view !== 'lesson' && <Footer onSetView={setView} />}
     </div>
   );
 }

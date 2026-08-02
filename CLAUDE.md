@@ -34,32 +34,50 @@ background (both lighter on mobile); build **version** stamped in the footer.
 ## Commands
 
 ```bash
-node scripts/readlex.mjs <word>…      # verify Shavian spellings (see below)
-npm run spellcheck                    # audit every spelling (lessons + the 48 letters)
+npm run check    # everything below, in one go — the same gate CI applies
 npm run dev      # dev server
 npm test         # run the Vitest suite (vitest run)
 npm run test:watch
 npm run lint     # oxlint
 npm run build    # tsc -b && vite build
+npm run bundle-check  # prove the curriculum is still code-split (needs a build)
 npm run deploy   # build + publish dist/ to gh-pages (custom domain via public/CNAME)
 ```
 
-**After any change, run `npm test` and `npm run build`** (build = typecheck +
-production build). Both must pass before considering work done.
+Content tooling — see "Lesson authoring rules" and the `lesson-author` skill:
+
+```bash
+node scripts/vocab.mjs 43 --new       # words readable by lesson 43, from the lexicon
+node scripts/curriculum.mjs           # coverage/health report for the whole course
+node scripts/readlex.mjs <word>…      # verify one Shavian spelling
+node scripts/lesson.mjs check         # structure + taught letters + meta.json
+npm run spellcheck                    # audit every spelling (lessons + the 48 letters)
+```
+
+**After any change, run `npm run check`.** It must pass before considering work
+done. `.github/workflows/ci.yml` runs the same battery on every push and
+publishes to gh-pages when it passes on `main`; `.githooks/pre-commit`
+(installed by the `prepare` script) runs the cheap lesson checks on commit.
 
 ## Architecture
 
 - **`src/App.tsx`** — top-level state machine keyed on `view`
-  (`landing | dashboard | lesson | complete | about | resources`). Owns lesson
-  playback state and progress. Progress is a single number in `localStorage`
-  (`shavian-progress`); lessons unlock sequentially.
-  **In-lesson navigation:** `goTo` steps between exercises already reached
-  (`furthest`), saving the current work into `attempts[exIndex]` and restoring
-  the target's. The score is only ever awarded once, at grading time — a
-  revisited exercise restores `status: 'correct' | 'wrong'`, and every input
-  handler ignores anything but `'active'`, so it can't be re-answered or
-  re-scored. Skipping leaves an exercise untouched (`'active'`, no answer), so
-  stepping back to an accidental skip still lets you answer it.
+  (`landing | dashboard | lesson | complete | about | resources`). Owns the view
+  and progress; progress is a single number in `localStorage`
+  (`shavian-progress`) and lessons unlock sequentially. Storage and theme live
+  in `hooks/useProgress.ts` and `hooks/useDarkMode.ts`.
+- **`src/lib/lesson-machine.ts`** — **lesson playback, as a pure reducer.**
+  Exercises, the current answer, score, navigation and the match pairing flow.
+  `App` dispatches into it and renders the result; nothing about playback is
+  decided in a component. Its rules: `goTo` steps between exercises already
+  reached (`furthest`), saving the current work into `attempts[exIndex]` and
+  restoring the target's; the score is only ever awarded once, at grading time —
+  a revisited exercise restores `status: 'correct' | 'wrong'`, and every action
+  ignores anything but `'active'`, so it can't be re-answered or re-scored;
+  skipping leaves an exercise untouched (`'active'`, no answer), so stepping
+  back to an accidental skip still lets you answer it. Selectors `canCheck`,
+  `isLastExercise` and `lessonProgress` come from here too — never recompute
+  them in a view. Covered by `lesson-machine.test.ts`.
 - **`src/lessons/`** — the curriculum. One **JSON file per lesson**, discovered
   via `import.meta.glob('./[0-9]*.json')`. **Lessons are code-split**: the
   bundle ships only `meta.json` (id/title/glyph/chapter/optional/anchor for
@@ -78,7 +96,15 @@ production build). Both must pass before considering work done.
   `gradeableCount`, `lessonPassed`, `PASS_THRESHOLD`. The app and the tests both
   use it — never re-implement grading elsewhere.
 - **`src/views/`** — `Landing`, `Dashboard`, `Lesson`, `Complete`, `About`,
-  `Resources`. `Lesson.tsx` renders one exercise at a time (a block per type).
+  `Resources`. `Lesson.tsx` owns only the frame: progress header, the exercise
+  card, and the check / skip / result footer.
+- **`src/components/exercises/`** — **one component per exercise type**
+  (`TeachCard`, `ChoiceCard`, …), picked by `ExerciseCard.tsx`'s exhaustive
+  switch (`exercise satisfies never` means a new union member fails to compile
+  until it is rendered). Shared pieces: `TilePool` (the tap pool), `Blank` (a
+  gap in `complete`/`fill`/`cloze`), `props.ts` (the one prop shape every card
+  receives), and `lib/exercise-style.ts` (`answerColors`, `poolTileStyle`,
+  `optionColors`, `matchCellColors`).
 - **`src/components/`** — shared UI (`Nav`, `Footer`, `Button`, `Chip`,
   `AlphabetChart`, `ReportProblem`, `ComingSoonCard`, …).
 
@@ -140,6 +166,12 @@ line protocol is far cheaper and derives labels, blanks and banks
 automatically. See the `lesson-editor` skill (`.claude/skills/lesson-editor/`)
 for the grammar. Run `lesson.mjs check` plus `npm test` after content changes.
 
+- **Take vocabulary from `node scripts/vocab.mjs <lesson>`, don't think of it.**
+  It asks the lexicon which real words are spellable with the letters taught by
+  that lesson (`--new` drops what the curriculum already uses, `--has 𐑗𐑡` drills
+  a pair), so an invented spelling or a too-early letter is impossible before
+  you write a line. `node scripts/curriculum.mjs` reports what the course is
+  short of. The `lesson-author` skill is the whole pipeline in order.
 - **Verify every Shavian spelling with `node scripts/readlex.mjs`** before
   authoring it — Shavian spells sounds, so spellings can't be guessed, and a
   plausible-but-wrong one passes `lesson.mjs check`. Batch-check planned
@@ -200,10 +232,14 @@ for the grammar. Run `lesson.mjs check` plus `npm test` after content changes.
 
 ## Tests
 
-`npm test` runs three suites:
+`npm test` runs these suites:
 
 - `src/lib/grading.test.ts` — unit tests for `isCorrect` per type, plus
   `gradeableCount` and `lessonPassed`.
+- `src/lib/lesson-machine.test.ts` — the playback rules: a point is scored once
+  however often an exercise is revisited, a retry never scores, inputs are inert
+  once graded, a skip stays answerable, `match` can't be failed, and `canCheck`
+  / `lessonProgress` per type.
 - `src/lessons/shuffle.test.ts` — shuffle preserves the multiset, keeps the
   answer present, is non-identity, and doesn't mutate the input.
 - `src/lessons/lessons.test.ts` — awaits `loadAllLessons()` at module scope and
@@ -212,9 +248,12 @@ for the grammar. Run `lesson.mjs check` plus `npm test` after content changes.
   lesson edits.
 
 **When adding a new exercise type:** extend the `Exercise` union, add a branch to
-`isCorrect`, handle it in `shuffleExerciseOptions` if it has orderable elements,
-render it in `Lesson.tsx`, and add coverage in `grading.test.ts` (the
-`lessons.test.ts` `solve()` helper also needs a case).
+`isCorrect`, handle it in `shuffleExerciseOptions` if it has orderable elements
+and in `canCheck` (`lesson-machine.ts`), write a card in
+`components/exercises/` and register it in `ExerciseCard.tsx`, and add coverage
+in `grading.test.ts` (the `lessons.test.ts` `solve()` helper also needs a case).
+TypeScript fails the build until the union is handled everywhere it switches,
+so the compiler walks you through most of this list.
 
 ## Conventions & DRY
 
@@ -235,7 +274,12 @@ Reuse before adding. Common patterns already have a home:
   Landing chart and teach-card letter media all read it); URLs + issue links →
   `lib/constants.ts`; the site-wide report modal content → `siteReport` in
   `lib/report.tsx` (used by both nav and footer); glyph-chip rendering →
-  `lib/shavian-text.tsx`; class merging → `cn` in `lib/utils.ts`. If you find
+  `lib/shavian-text.tsx`; class merging → `cn` in `lib/utils.ts`; lesson
+  playback → `lib/lesson-machine.ts`; answer-element colors →
+  `lib/exercise-style.ts`. For the scripts: the taught-letter schedule, the
+  lesson loader and Shavian word-splitting all live in
+  `scripts/lib/curriculum.mjs`, which `lesson.mjs`, `spellcheck.mjs`,
+  `vocab.mjs`, `curriculum.mjs` and `bundle-check.mjs` share. If you find
   yourself duplicating one of these, import it instead.
 
 ## React & TypeScript practices

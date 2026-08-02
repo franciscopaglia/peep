@@ -20,11 +20,21 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 
-const DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'src', 'lessons');
+// The taught-letter schedule, the 48 letters and lesson loading are shared
+// with vocab.mjs, curriculum.mjs and spellcheck.mjs — see scripts/lib.
+import {
+  DIR,
+  META_FILE,
+  SHAVIAN,
+  LAST_INTRODUCTION,
+  LETTERS,
+  lettersTaughtBy,
+  lessonFiles,
+  loadAll,
+} from './lib/curriculum.mjs';
+
 const SEP = ' :: ';
-const SHAVIAN = /[\u{10450}-\u{1047F}·]/gu;
 
 // Captions this common are omitted from lines and restored on parse.
 const DEFAULT_CAPTION = {
@@ -35,42 +45,9 @@ const DEFAULT_CAPTION = {
   write: 'Spell it in Shavian on the keyboard below',
 };
 
-// Letters (and the naming dot) available from each lesson on, cumulatively.
-// `check` flags any exercise using a glyph its lesson hasn't reached yet.
-const INTRODUCED = {
-  1: '𐑐𐑚𐑪', 2: '𐑑𐑛𐑨', 3: '𐑒𐑜𐑦', 6: '𐑓𐑝', 7: '𐑕𐑟', 8: '𐑧',
-  10: '𐑫𐑳', 12: '𐑤𐑥', 13: '𐑯𐑮', 15: '𐑰𐑱', 16: '𐑲𐑴', 17: '𐑵',
-  19: '𐑢𐑣', 20: '𐑘𐑙', 22: '𐑖', 23: '𐑗𐑡', 25: '𐑞𐑩·',
-  26: '𐑠𐑔', 27: '𐑸𐑹', 29: '𐑺𐑻', 30: '𐑼𐑽', 31: '𐑾𐑿', 32: '𐑬𐑷', 33: '𐑶𐑭', 34: '·',
-};
-
-// The 48 letters, read from the app's alphabet data so the two can't drift.
-// `check` uses this to validate a teach card's `media=letters:` glyphs.
-const LETTERS = new Set(
-  [
-    ...fs
-      .readFileSync(path.join(DIR, '..', 'lib', 'shavian-alphabet.ts'), 'utf8')
-      .matchAll(/glyph: '(.)'/gu),
-  ].map((m) => m[1])
-);
-
-function lettersTaughtBy(id) {
-  let set = '';
-  for (const [lesson, letters] of Object.entries(INTRODUCED)) {
-    if (Number(lesson) <= id) set += letters;
-  }
-  return new Set(set);
-}
-
 // ---------------------------------------------------------------- storage
 
 const die = (msg) => { console.error(`error: ${msg}`); process.exit(1); };
-
-function lessonFiles() {
-  return fs.readdirSync(DIR)
-    .filter((f) => /^\d+-.+\.json$/.test(f))
-    .sort((a, b) => parseInt(a) - parseInt(b));
-}
 
 function fileFor(id) {
   const f = lessonFiles().find((f) => parseInt(f) === id);
@@ -79,7 +56,6 @@ function fileFor(id) {
 }
 
 const load = (id) => JSON.parse(fs.readFileSync(fileFor(id), 'utf8'));
-const loadAll = () => lessonFiles().map((f) => JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8')));
 
 function save(lesson, file = fileFor(lesson.id)) {
   fs.writeFileSync(file, JSON.stringify(lesson, null, 2) + '\n');
@@ -88,7 +64,6 @@ function save(lesson, file = fileFor(lesson.id)) {
 // The dashboard needs every lesson's id/title/glyph/chapter, but nothing else —
 // so the app ships this index and loads a lesson's exercises only when it is
 // opened. Regenerated after every mutating command; `check` fails if it drifts.
-const META_FILE = path.join(DIR, 'meta.json');
 
 function metaIndex() {
   return loadAll().map(({ id, title, glyph, chapter, optional, anchor }) => ({
@@ -416,7 +391,7 @@ function checkLesson(lesson, problems, byId = {}) {
     }
   }
   const taught = lettersTaughtBy(effectiveId);
-  const knowAll = effectiveId > Math.max(...Object.keys(INTRODUCED).map(Number));
+  const knowAll = effectiveId > LAST_INTRODUCTION;
   lesson.exercises.forEach((ex, i) => {
     const at = `${lesson.id}#${i}`;
     const flag = (msg) => problems.push(`${at} (${ex.type}): ${msg}`);
