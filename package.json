@@ -10,7 +10,7 @@
     "lint": "oxlint",
     "test": "vitest run",
     "test:watch": "vitest",
-    "check": "npm run lint && npm run lesson -- check && npm test && npm run spellcheck && npm run build && npm run bundle-check",
+    "check": "npm run lint && npm run lesson -- check && npm run curriculum -- docs --check && npm test && npm run spellcheck && npm run build && npm run bundle-check",
     "bundle-check": "node scripts/bundle-check.mjs",
     "lesson": "node scripts/lesson.mjs",
     "vocab": "node scripts/vocab.mjs",

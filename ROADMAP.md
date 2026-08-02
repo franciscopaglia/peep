@@ -12,10 +12,10 @@ Legend: ✅ shipped · 🚧 in progress · 🗓️ planned · 💡 idea / under 
 
 ### Curriculum
 
-- **Chapter 1 — The Alphabet** (24 lessons): every consonant and vowel of the
+- **Chapter 1 — The Alphabet** (25 lessons): every consonant and vowel of the
   48-letter Shavian alphabet, introduced a pair at a time, with ~20
   practice-heavy exercises per lesson.
-- **Chapter 2 — Reading Fluency** (11 lessons): the `ʒ` letter, the r-coloured
+- **Chapter 2 — Reading Fluency** (12 lessons): the `ʒ` letter, the r-coloured
   vowels, the little words (the single-letter spellings 𐑞 𐑝 𐑯 𐑑 𐑓 and a first
   look at homographs like 𐑑𐑵 = *too*/*two*), writing names, sentence building,
   and a short reading passage.
@@ -23,8 +23,9 @@ Legend: ✅ shipped · 🚧 in progress · 🗓️ planned · 💡 idea / under 
   `-ed`), the busy schwa, a deeper pass on shorthand and homographs, dialogue on
   the page, and longer *unassisted* passages of real Shavian — including whole
   sourced texts read straight, no word banks.
-- **Chapter 4 — Writing Shavian** (just begun): the reverse direction — given an
-  English word, spell it yourself on the full on-screen Shavian keyboard.
+- **Chapter 4 — Writing Shavian** (7 lessons): the reverse direction — given an
+  English word, spell it yourself on the full on-screen Shavian keyboard, from
+  single words up to whole sentences.
 - New letters only ever build on what you've already learned — the path never
   asks you to read a symbol it hasn't taught.
 
@@ -219,9 +220,9 @@ than just more lessons. The progression runs **learn letters → read words →
 read real text → write → master**, and every chapter assumes the one before it,
 so nothing re-teaches what came earlier.
 
-- **✅ Chapter 1 — The Alphabet** *(shipped · 24 lessons)* — all 48 letters, a
+- **✅ Chapter 1 — The Alphabet** *(shipped · 25 lessons)* — all 48 letters, a
   pair at a time, blending into first words.
-- **✅ Chapter 2 — Reading Fluency** *(shipped · 11 lessons)* — the `ʒ` letter,
+- **✅ Chapter 2 — Reading Fluency** *(shipped · 12 lessons)* — the `ʒ` letter,
   the r-coloured vowels, the little words (single-letter spellings and first
   homographs), the naming dot, sentence building, and a first short story.
 - **✅ Chapter 3 — Reading in the Wild** *(shipped · 8 lessons)* — you can read
@@ -229,7 +230,7 @@ so nothing re-teaches what came earlier.
   `-ed`), the busy schwa, a deeper pass on shorthand words and homographs,
   dialogue on the page, and longer *unassisted* passages (no word banks) —
   culminating in a whole sourced text read straight through.
-- **🚧 Chapter 4 — Writing Shavian** *(started · 1 lesson so far)* — the reverse
+- **✅ Chapter 4 — Writing Shavian** *(shipped · 7 lessons)* — the reverse
   direction: given English, spell it in Shavian on the full on-screen keyboard
   (the `write` exercise). Its own chapter because writing needs rules reading
   doesn't — schwa vs. full vowels under stress, the fixed spellings, dropping

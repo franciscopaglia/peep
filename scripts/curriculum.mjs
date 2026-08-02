@@ -9,11 +9,15 @@
 //
 //   node scripts/curriculum.mjs             the full report
 //   node scripts/curriculum.mjs letters     one section only
-//   node scripts/curriculum.mjs chapters | types | words | gaps
+//   node scripts/curriculum.mjs chapters | types | words | gaps | docs
+//   node scripts/curriculum.mjs docs --check   exit non-zero on stale docs
 //   node scripts/curriculum.mjs --json
 //
-// Everything here is descriptive — it reports, it never fails a build. The
-// judgement about what "thin" means stays with the author.
+// The report is descriptive: it never fails a build, and the judgement about
+// what "thin" means stays with the author. The one exception is `docs --check`,
+// which compares the lesson counts README.md and ROADMAP.md *claim* against the
+// curriculum and fails when they disagree — those drifted by 30 lessons before
+// anyone noticed, because nothing was watching them.
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -121,6 +125,84 @@ const gaps = {
   neverRecycled: letters.filter((l) => l.taughtAt !== null && l.recycled === 0).map((l) => l.glyph),
   usedOnce: words.filter((w) => w.lessons.length === 1).length,
 };
+
+// ------------------------------------------------------------------- docs
+// README.md and ROADMAP.md are the front door, and they carry hand-written
+// counts. Every "Chapter N … M lessons" claim is checked against the spine, and
+// the spelled-out number of exercise types against the union in types.ts.
+//
+// Only these two shapes are checked, on purpose: a regex over prose is a blunt
+// instrument, and a check that guesses at more would cry wolf. If a sentence
+// has to be reworded to keep this quiet, that is the check working — the number
+// was load-bearing.
+
+const NUMBER_WORDS = [
+  'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight',
+  'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen',
+  'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty',
+];
+
+const typeCount = [
+  ...fs
+    .readFileSync(path.join(ROOT, 'src', 'lessons', 'types.ts'), 'utf8')
+    // The last member of the union carries the closing `;`.
+    .matchAll(/^\s*\|\s*\w+Exercise;?\s*$/gm),
+].length;
+
+function docClaims() {
+  const problems = [];
+  for (const file of ['README.md', 'ROADMAP.md']) {
+    const text = fs.readFileSync(path.join(ROOT, file), 'utf8');
+    text.split('\n').forEach((line, i) => {
+      const at = `${file}:${i + 1}`;
+
+      // "Chapter 3 … 8 lessons" — anywhere on one line, in prose or a table.
+      const chapter = line.match(/Chapter (\d+)/);
+      const count = line.match(/(\d+) lessons?\b/);
+      if (chapter && count) {
+        const want = chapters.find((c) => c.id === Number(chapter[1]))?.spine;
+        if (want !== undefined && want !== Number(count[1]))
+          problems.push(`${at}: says Chapter ${chapter[1]} has ${count[1]} lessons, it has ${want}`);
+      }
+      // "1 lesson so far", where the chapter is named earlier in the line.
+      if (chapter && /\b1 lesson so far\b/.test(line)) {
+        const want = chapters.find((c) => c.id === Number(chapter[1]))?.spine;
+        if (want !== undefined && want !== 1)
+          problems.push(`${at}: says Chapter ${chapter[1]} has 1 lesson so far, it has ${want}`);
+      }
+
+      // Course-wide totals: "52 lessons on the main path", "50 branch lessons".
+      const spineTotal = line.match(/(\d+) lessons on the main path/);
+      if (spineTotal && Number(spineTotal[1]) !== spine.length)
+        problems.push(`${at}: says ${spineTotal[1]} lessons on the main path, there are ${spine.length}`);
+
+      const branchTotal = line.match(/(\d+) (?:optional )?branch lessons/);
+      if (branchTotal && Number(branchTotal[1]) !== branches.length)
+        problems.push(`${at}: says ${branchTotal[1]} branch lessons, there are ${branches.length}`);
+
+      // "Twelve kinds of exercise" / "Twelve types".
+      const spelled = line.match(/\b(\w+) (?:kinds of exercise|exercise types|types \()/i);
+      if (spelled) {
+        const said = NUMBER_WORDS.indexOf(spelled[1].toLowerCase());
+        if (said !== -1 && said !== typeCount)
+          problems.push(`${at}: says ${spelled[1].toLowerCase()} exercise types, there are ${NUMBER_WORDS[typeCount]}`);
+      }
+    });
+  }
+  return problems;
+}
+
+if (only === 'docs' || argv.includes('--check')) {
+  const problems = docClaims();
+  for (const p of problems) console.log(p);
+  console.log(
+    problems.length
+      ? `\n${problems.length} stale claim(s) in the docs.`
+      : `docs ok — chapter counts and the exercise-type total match (${typeCount} types).`
+  );
+  if (argv.includes('--check')) process.exit(problems.length ? 1 : 0);
+  if (only === 'docs') process.exit(0);
+}
 
 if (asJson) {
   console.log(JSON.stringify({ chapters, letters, words: words.slice(0, 50), gaps }, null, 2));

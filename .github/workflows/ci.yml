@@ -30,6 +30,9 @@ jobs:
       # Structure, the taught-letter budget, and meta.json drift.
       - run: npm run lesson -- check
 
+      # The lesson counts README.md and ROADMAP.md claim.
+      - run: npm run curriculum -- docs --check
+
       - run: npm test
 
       # Every Shavian spelling in the curriculum, against the lexicon.
