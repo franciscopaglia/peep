@@ -41,9 +41,9 @@
       "correctLabel": "at night"
     },
     {
-      "type": "type",
-      "prompt": "𐑞 𐑛𐑪𐑜 𐑢𐑪𐑟 𐑯𐑪𐑑 𐑦𐑯 𐑞 𐑣𐑬𐑕",
-      "caption": "Type what this says",
+      "type": "transcribe",
+      "passage": "𐑞 𐑛𐑪𐑜 𐑢𐑪𐑟 𐑯𐑪𐑑 𐑦𐑯 𐑞 𐑣𐑬𐑕.",
+      "caption": "Read the passage, then write it out in English",
       "correct": "the dog was not in the house",
       "correctLabel": "the dog was not in the house"
     },

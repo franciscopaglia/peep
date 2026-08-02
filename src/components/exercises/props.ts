@@ -15,9 +15,10 @@ export type ExerciseProps<E extends Exercise = Exercise> = {
 
   selected: string | null;
   typedValue: string;
-  buildSel: number[];
-  arrangeSel: number[];
-  fillSel: number[];
+  /** Tile indices in tap order — `build` and `arrange`. */
+  tileSel: number[];
+  /** Bank index per blank position — `complete`, `fill`, `cloze`. Sparse. */
+  fillSel: Record<number, number>;
   matchSelLeft: string | null;
   matchSelRight: string | null;
   matchedKeys: string[];
@@ -26,10 +27,8 @@ export type ExerciseProps<E extends Exercise = Exercise> = {
   onSelectOption: (opt: string) => void;
   onTypeChange: (v: string) => void;
   onContinueNext: () => void;
-  onBuildAdd: (i: number) => void;
-  onBuildRemove: (pos: number) => void;
-  onArrangeAdd: (i: number) => void;
-  onArrangeRemove: (pos: number) => void;
+  onTileAdd: (i: number) => void;
+  onTileRemove: (pos: number) => void;
   onFillAdd: (i: number) => void;
   onFillRemove: (pos: number) => void;
   onMatchClick: (side: 'left' | 'right', value: string) => void;

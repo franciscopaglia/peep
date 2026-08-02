@@ -47,9 +47,9 @@
       "body": "Question words are old friends by now — 𐑢𐑪𐑑 what, 𐑢𐑺 where, 𐑣𐑵 who — and a question mark does the rest: {{𐑢𐑺 𐑦𐑟 𐑞 𐑛𐑪𐑜?}}"
     },
     {
-      "type": "type",
-      "prompt": "𐑢𐑺 𐑦𐑟 𐑞 𐑛𐑪𐑜?",
-      "caption": "Type what this asks",
+      "type": "transcribe",
+      "passage": "𐑢𐑺 𐑦𐑟 𐑞 𐑛𐑪𐑜?",
+      "caption": "Read the question, then write it out in English",
       "correct": "where is the dog",
       "correctLabel": "where is the dog",
       "accept": [

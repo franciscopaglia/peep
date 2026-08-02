@@ -21,27 +21,33 @@ function pickIndices(pool: string[], wanted: string[]): number[] {
   });
 }
 
+/** Bank indices in blank order, as the sparse map `fillSel` expects. */
+function byBlank(indices: number[]): Record<number, number> {
+  return Object.fromEntries(indices.map((bankIndex, position) => [position, bankIndex]));
+}
+
 /** The answer state that should solve a gradeable, non-match exercise. */
 function solve(ex: Exercise): AnswerState {
   switch (ex.type) {
     case 'choice':
+    case 'listen':
       return { ...emptyAnswer, selected: ex.correct };
     case 'type':
       return { ...emptyAnswer, typedValue: ex.correct };
     case 'build':
-      return { ...emptyAnswer, buildSel: pickIndices(ex.tiles, ex.answer) };
+      return { ...emptyAnswer, tileSel: pickIndices(ex.tiles, ex.answer) };
     case 'arrange':
-      return { ...emptyAnswer, arrangeSel: pickIndices(ex.tiles, ex.answer) };
+      return { ...emptyAnswer, tileSel: pickIndices(ex.tiles, ex.answer) };
     case 'complete':
       return {
         ...emptyAnswer,
-        fillSel: pickIndices(ex.bank, ex.blanks.map((b) => ex.word[b])),
+        fillSel: byBlank(pickIndices(ex.bank, ex.blanks.map((b) => ex.word[b]))),
       };
     case 'fill':
     case 'cloze':
       return {
         ...emptyAnswer,
-        fillSel: pickIndices(ex.bank, ex.blanks.map((b) => ex.words[b])),
+        fillSel: byBlank(pickIndices(ex.bank, ex.blanks.map((b) => ex.words[b]))),
       };
     case 'spot':
       return { ...emptyAnswer, selected: String(ex.correct) };

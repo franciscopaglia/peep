@@ -110,6 +110,11 @@ function claimsFor(ex, at, out) {
         else shawWords(ex.correct).forEach((w) => claim(out, at, w));
       }
       break;
+    case 'listen':
+      // The card claims this spelling says that word — exactly the pairing
+      // worth checking. Wrong options are non-words by design.
+      pair(out, at, ex.correct, ex.say);
+      break;
     case 'match':
       // A match pair says "this Shavian means this English", so even a lone
       // glyph is a word claim: 𐑞 really is "the", but 𐑧 is not "bed".

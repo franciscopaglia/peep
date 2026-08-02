@@ -91,9 +91,9 @@
       "correctLabel": "Sam"
     },
     {
-      "type": "type",
-      "prompt": "𐑞𐑱 𐑢𐑧𐑯𐑑 𐑣𐑴𐑥 𐑣𐑨𐑐𐑦",
-      "caption": "Type what this says",
+      "type": "transcribe",
+      "passage": "𐑞𐑱 𐑢𐑧𐑯𐑑 𐑣𐑴𐑥 𐑣𐑨𐑐𐑦.",
+      "caption": "Read the passage, then write it out in English",
       "correct": "they went home happy",
       "correctLabel": "they went home happy"
     },

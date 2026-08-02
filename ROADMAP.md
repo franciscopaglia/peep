@@ -30,7 +30,7 @@ Legend: ✅ shipped · 🚧 in progress · 🗓️ planned · 💡 idea / under 
 
 ### Practice
 
-Twelve kinds of exercise keep every lesson varied:
+Thirteen kinds of exercise keep every lesson varied:
 
 | Type | What it does |
 | --- | --- |
@@ -44,8 +44,9 @@ Twelve kinds of exercise keep every lesson varied:
 | `fill` | Choose the missing words to finish a sentence (some pre-filled) |
 | `cloze` | Read a short passage and fill its blanked words from context |
 | `spot` | Tap the word in a sentence that means the English prompt |
-| `transcribe` | Read a real, sourced Shavian passage and write the full English |
+| `transcribe` | Read a Shavian passage and write the full English (sourced, for real texts) |
 | `write` | Spell an English word in Shavian on the full on-screen keyboard |
+| `listen` | Hear a word and tap the Shavian that spells it — **experimental**, one branch lesson only |
 
 - **Everything is randomized** — choice options, letter tiles, fill-in banks, and
   both match columns are shuffled on every load, and never render in their
@@ -113,6 +114,72 @@ the level that makes reading really click. New exercise types planned here:
   one; spot it and correct it. Great for sharpening letter-by-letter attention.
 - **💡 Word dictation** — hear a word spoken (ties into the pronunciation
   helpers) and build it letter by letter, no English prompt shown.
+
+### 🗓️ Rebalancing the exercise mix
+
+Thirteen exercise types exist, but the curriculum leans hard on a few of them.
+Measured with `node scripts/curriculum.mjs types`, today's graded exercises are:
+
+| | ch1 (587) | ch2 (184) | ch3 (86) | ch4 (70) |
+| --- | --- | --- | --- | --- |
+| `type` | **47%** | **42%** | 23% | — |
+| `choice` | 17% | 23% | 24% | — |
+| `build` | 19% | 10% | 8% | — |
+| `match` | 12% | 8% | 6% | — |
+| `complete` | 5% | 1% | — | — |
+| `arrange` | 0% | 8% | 3% | — |
+| `spot` | 0% | — | 17% | — |
+| `fill` / `cloze` | 0% | 4% / 3% | 1% / 5% | — |
+| `transcribe` | — | — | 12% | — |
+| `write` | — | — | — | 100% |
+
+Two problems. `type` is nearly half of everything a learner does in the first
+two chapters. And the types closest to the actual goal — reading connected
+Shavian: `cloze`, `transcribe` — are the rarest in the whole course.
+
+**This is not a call to spread the types evenly.** A chapter is a mode, and its
+mix should say which mode it is. Chapter 1's job is to make 48 unfamiliar
+symbols feel ordinary, and that means one-tap recognition: `choice`, `match`
+and `build` *should* dominate there, and asking a beginner to fill a passage
+would be friction with no payoff. The problem is not that ch1 is easy — it is
+that ch2 and ch3 are still shaped like ch1.
+
+Targets to author toward, chapter by chapter:
+
+- **Chapter 1 — recognition, and keep it frictionless.** Roughly today's shape,
+  with `type` easing back toward a third and the room going to `complete`, which
+  is the gentlest step from recognising a letter to producing a word. Nothing
+  requiring a full sentence to be read before it can be answered. No target is
+  worth a lesson that feels like work here.
+- **Chapter 2 — where sentences start.** `arrange` and `fill` should roughly
+  double (8% → ~15% each) at `type`'s expense (42% → ~25%). The chapter already
+  claims to be about sentence building; the mix should show it.
+- **Chapter 3 — reading in the wild, properly.** `cloze` + `transcribe` + `spot`
+  should be **half** the chapter (today: 34%), with `choice` and `type` falling
+  to ~25% between them. This is the chapter whose name is a promise the exercise
+  mix doesn't yet keep.
+- **Chapter 4 — writing, with a ramp.** 100% `write` is honest to the chapter's
+  purpose, but 70 blank keyboards in a row is a wall. A leading `complete` or
+  `build` in each lesson — same spelling, with support — earns the free-spelling
+  ones.
+- **Chapter 5 — fluency.** Should be the `transcribe` chapter, on longer real
+  texts, with `cloze` for support and `listen` if the experiment below works
+  out.
+
+`node scripts/vocab.mjs <lesson> --new` makes this affordable: picking the
+vocabulary for a `cloze` was the expensive part, and it now takes a second.
+
+### 💡 Listening (experimental)
+
+There is one **`listen`** exercise type in the course, in a single optional
+branch off the end of Chapter 1 (*Listening (experiment)*). You hear an English
+word read aloud by the browser and tap the Shavian that spells it — no written
+prompt, so it tests exactly what the alphabet is for: sounds to spelling.
+
+It is deliberately walled off in one branch. It depends on browser speech
+synthesis, which varies by platform and is silent where no voice is installed —
+so the lesson says up front that it's an experiment and safe to skip. If it
+holds up, it belongs in Chapter 5 and in the pronunciation work below.
 
 ### More theory, woven in
 

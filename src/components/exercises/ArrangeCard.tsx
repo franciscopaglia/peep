@@ -7,9 +7,9 @@ import { answerColors, enterAnimation } from '@/lib/exercise-style';
 export function ArrangeCard({
   exercise,
   status,
-  arrangeSel,
-  onArrangeAdd,
-  onArrangeRemove,
+  tileSel,
+  onTileAdd,
+  onTileRemove,
 }: ExerciseProps<ArrangeExercise>) {
   const lit = answerColors(status);
   return (
@@ -28,10 +28,10 @@ export function ArrangeCard({
           padding: '0 16px 12px',
         }}
       >
-        {arrangeSel.map((tileIdx, pos) => (
+        {tileSel.map((tileIdx, pos) => (
           <button
             key={pos}
-            onClick={() => onArrangeRemove(pos)}
+            onClick={() => onTileRemove(pos)}
             className="px-4 py-2.5 rounded-btn font-bold text-xl"
             style={{
               border: `2px solid ${lit.border}`,
@@ -46,11 +46,11 @@ export function ArrangeCard({
       </div>
       <TilePool
         tiles={exercise.tiles}
-        isUsed={(i) => arrangeSel.includes(i)}
+        isUsed={(i) => tileSel.includes(i)}
         variant="word"
         maxWidth={500}
         status={status}
-        onPick={onArrangeAdd}
+        onPick={onTileAdd}
       />
     </div>
   );

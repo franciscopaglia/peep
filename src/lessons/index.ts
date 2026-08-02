@@ -78,7 +78,7 @@ function shuffle<T>(items: T[]): T[] {
 }
 
 export function shuffleExerciseOptions(exercise: Exercise): Exercise {
-  if (exercise.type === 'choice') {
+  if (exercise.type === 'choice' || exercise.type === 'listen') {
     return { ...exercise, options: shuffle(exercise.options) };
   }
   if (exercise.type === 'build' || exercise.type === 'arrange') {

@@ -1,4 +1,4 @@
-import { isCorrect, gradeableCount } from '@/lib/grading';
+import { isCorrect, gradeableCount, emptyAnswer, type AnswerState } from '@/lib/grading';
 import { shuffleExerciseOptions } from '@/lessons';
 import type { Exercise } from '@/lessons/types';
 
@@ -22,25 +22,15 @@ export type Status = 'active' | 'correct' | 'wrong';
  * resetting, so an answer is never lost — and a graded one comes back `correct`
  * or `wrong`, which is what locks its inputs and stops it being scored twice.
  */
-export type Attempt = {
-  selected: string | null;
-  typedValue: string;
+export type Attempt = AnswerState & {
   status: Status;
   matchedKeys: string[];
-  buildSel: number[];
-  arrangeSel: number[];
-  /** Shared by 'complete', 'fill' and 'cloze': bank indices chosen, in order. */
-  fillSel: number[];
 };
 
 export const emptyAttempt: Attempt = {
-  selected: null,
-  typedValue: '',
+  ...emptyAnswer,
   status: 'active',
   matchedKeys: [],
-  buildSel: [],
-  arrangeSel: [],
-  fillSel: [],
 };
 
 export type LessonState = {
@@ -79,10 +69,8 @@ export type LessonAction =
   | { type: 'check' }
   | { type: 'select'; option: string }
   | { type: 'typed'; value: string }
-  | { type: 'buildAdd'; index: number }
-  | { type: 'buildRemove'; position: number }
-  | { type: 'arrangeAdd'; index: number }
-  | { type: 'arrangeRemove'; position: number }
+  | { type: 'tileAdd'; index: number }
+  | { type: 'tileRemove'; position: number }
   | { type: 'fillAdd'; index: number }
   | { type: 'fillRemove'; position: number }
   | { type: 'matchClick'; side: 'left' | 'right'; value: string }
@@ -144,24 +132,17 @@ export function lessonReducer(state: LessonState, action: LessonAction): LessonS
     case 'typed':
       return isActive(state) ? withCurrent(state, { typedValue: action.value }) : state;
 
-    case 'buildAdd':
-      if (!isActive(state) || state.current.buildSel.includes(action.index)) return state;
-      return withCurrent(state, { buildSel: [...state.current.buildSel, action.index] });
+    // `build` and `arrange` share one ordered list of tile indices — the tiles
+    // hold letters in one and words in the other, but picking them is the same
+    // gesture, so it is the same state and the same two actions.
+    case 'tileAdd':
+      if (!isActive(state) || state.current.tileSel.includes(action.index)) return state;
+      return withCurrent(state, { tileSel: [...state.current.tileSel, action.index] });
 
-    case 'buildRemove':
+    case 'tileRemove':
       if (!isActive(state)) return state;
       return withCurrent(state, {
-        buildSel: state.current.buildSel.filter((_, p) => p !== action.position),
-      });
-
-    case 'arrangeAdd':
-      if (!isActive(state) || state.current.arrangeSel.includes(action.index)) return state;
-      return withCurrent(state, { arrangeSel: [...state.current.arrangeSel, action.index] });
-
-    case 'arrangeRemove':
-      if (!isActive(state)) return state;
-      return withCurrent(state, {
-        arrangeSel: state.current.arrangeSel.filter((_, p) => p !== action.position),
+        tileSel: state.current.tileSel.filter((_, p) => p !== action.position),
       });
 
     case 'fillAdd': {
@@ -169,16 +150,22 @@ export function lessonReducer(state: LessonState, action: LessonAction): LessonS
       if (exercise.type !== 'complete' && exercise.type !== 'fill' && exercise.type !== 'cloze')
         return state;
       const { fillSel } = state.current;
-      // One tile per blank, no tile twice.
-      if (fillSel.includes(action.index) || fillSel.length >= exercise.blanks.length) return state;
-      return withCurrent(state, { fillSel: [...fillSel, action.index] });
+      // No tile twice.
+      if (Object.values(fillSel).includes(action.index)) return state;
+      // A tapped tile goes into the first blank still empty — which, after a
+      // blank is cleared, is that blank rather than the end of the queue.
+      const target = exercise.blanks.findIndex((_, position) => fillSel[position] === undefined);
+      if (target === -1) return state;
+      return withCurrent(state, { fillSel: { ...fillSel, [target]: action.index } });
     }
 
-    case 'fillRemove':
+    case 'fillRemove': {
       if (!isActive(state)) return state;
-      return withCurrent(state, {
-        fillSel: state.current.fillSel.filter((_, p) => p !== action.position),
-      });
+      // Clear exactly the blank that was tapped; the others stay put.
+      const { [action.position]: removed, ...rest } = state.current.fillSel;
+      if (removed === undefined) return state;
+      return withCurrent(state, { fillSel: rest });
+    }
 
     case 'matchClick': {
       if (!exercise || exercise.type !== 'match' || state.matchWrong) return state;
@@ -224,7 +211,7 @@ export function lessonReducer(state: LessonState, action: LessonAction): LessonS
 export function canCheck(state: LessonState): boolean {
   const exercise = state.exercises[state.exIndex];
   if (!exercise || state.current.status !== 'active') return false;
-  const { typedValue, selected, buildSel, arrangeSel, fillSel } = state.current;
+  const { typedValue, selected, tileSel, fillSel } = state.current;
   switch (exercise.type) {
     case 'type':
     case 'transcribe':
@@ -232,15 +219,15 @@ export function canCheck(state: LessonState): boolean {
       return typedValue.trim().length > 0;
     case 'choice':
     case 'spot':
+    case 'listen':
       return selected != null;
     case 'build':
-      return buildSel.length > 0;
     case 'arrange':
-      return arrangeSel.length > 0;
+      return tileSel.length > 0;
     case 'complete':
     case 'fill':
     case 'cloze':
-      return fillSel.length === exercise.blanks.length;
+      return Object.keys(fillSel).length === exercise.blanks.length;
     case 'teach':
     case 'match':
       return false;

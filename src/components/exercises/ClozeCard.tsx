@@ -20,7 +20,7 @@ export function ClozeCard({
       <div className="text-[26px] leading-[1.7] font-semibold text-foreground text-center max-w-[560px] flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1">
         {exercise.words.map((word, wi) => {
           const blankPos = exercise.blanks.indexOf(wi);
-          const filled = blankPos !== -1 && blankPos < fillSel.length;
+          const filled = blankPos !== -1 && fillSel[blankPos] !== undefined;
           return (
             <span key={wi} className="inline-flex items-center">
               {blankPos === -1 ? (
@@ -46,7 +46,7 @@ export function ClozeCard({
       )}
       <TilePool
         tiles={exercise.bank}
-        isUsed={(i) => fillSel.includes(i)}
+        isUsed={(i) => Object.values(fillSel).includes(i)}
         variant="word"
         maxWidth={520}
         status={status}

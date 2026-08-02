@@ -7,9 +7,9 @@ import { answerColors, enterAnimation } from '@/lib/exercise-style';
 export function BuildCard({
   exercise,
   status,
-  buildSel,
-  onBuildAdd,
-  onBuildRemove,
+  tileSel,
+  onTileAdd,
+  onTileRemove,
 }: ExerciseProps<BuildExercise>) {
   const lit = answerColors(status);
   return (
@@ -27,10 +27,10 @@ export function BuildCard({
           padding: '0 20px 12px',
         }}
       >
-        {buildSel.map((tileIdx, pos) => (
+        {tileSel.map((tileIdx, pos) => (
           <button
             key={pos}
-            onClick={() => onBuildRemove(pos)}
+            onClick={() => onTileRemove(pos)}
             className="w-[54px] h-[54px] rounded-btn font-bold text-2xl flex items-center justify-center"
             style={{
               border: `2px solid ${lit.border}`,
@@ -45,10 +45,10 @@ export function BuildCard({
       </div>
       <TilePool
         tiles={exercise.tiles}
-        isUsed={(i) => buildSel.includes(i)}
+        isUsed={(i) => tileSel.includes(i)}
         variant="letter"
         status={status}
-        onPick={onBuildAdd}
+        onPick={onTileAdd}
       />
     </div>
   );

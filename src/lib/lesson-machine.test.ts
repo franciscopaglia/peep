@@ -165,10 +165,8 @@ describe('input guards', () => {
   it.each<LessonAction>([
     { type: 'select', option: 'cot' },
     { type: 'typed', value: 'x' },
-    { type: 'buildAdd', index: 0 },
-    { type: 'buildRemove', position: 0 },
-    { type: 'arrangeAdd', index: 0 },
-    { type: 'arrangeRemove', position: 0 },
+    { type: 'tileAdd', index: 0 },
+    { type: 'tileRemove', position: 0 },
     { type: 'fillAdd', index: 0 },
     { type: 'fillRemove', position: 0 },
   ])('ignores $type once the exercise is graded', (action) => {
@@ -182,12 +180,59 @@ describe('input guards', () => {
       { type: 'fillAdd', index: 0 },
       { type: 'fillAdd', index: 1 }
     );
-    expect(state.current.fillSel).toEqual([0]);
+    // `fill` above has one blank: the repeat is refused, and so is the second
+    // tile, because there is nowhere left to put it.
+    expect(state.current.fillSel).toEqual({ 0: 0 });
   });
 
-  it('does not add the same build tile twice', () => {
-    const state = run([choice], { type: 'buildAdd', index: 2 }, { type: 'buildAdd', index: 2 });
-    expect(state.current.buildSel).toEqual([2]);
+  it('does not add the same tile twice', () => {
+    const state = run([choice], { type: 'tileAdd', index: 2 }, { type: 'tileAdd', index: 2 });
+    expect(state.current.tileSel).toEqual([2]);
+  });
+});
+
+describe('blanks', () => {
+  // A two-blank sentence: 𐑞 _ 𐑦𐑟 _ .
+  const twoBlanks: Exercise = {
+    type: 'fill',
+    promptEn: 'the cat is big',
+    words: ['𐑞', '𐑒𐑨𐑑', '𐑦𐑟', '𐑚𐑦𐑜'],
+    blanks: [1, 3],
+    bank: ['𐑒𐑨𐑑', '𐑚𐑦𐑜', '𐑛𐑪𐑜'],
+    correctLabel: '𐑞 𐑒𐑨𐑑 𐑦𐑟 𐑚𐑦𐑜',
+  };
+
+  it('fills the first empty blank, in order', () => {
+    const state = run([twoBlanks], { type: 'fillAdd', index: 0 }, { type: 'fillAdd', index: 1 });
+    expect(state.current.fillSel).toEqual({ 0: 0, 1: 1 });
+  });
+
+  it('clearing a blank leaves the others where they are', () => {
+    // The bug this replaced: with both blanks filled, clearing the first slid
+    // the second answer into it and emptied the second.
+    const state = run(
+      [twoBlanks],
+      { type: 'fillAdd', index: 0 },
+      { type: 'fillAdd', index: 1 },
+      { type: 'fillRemove', position: 0 }
+    );
+    expect(state.current.fillSel).toEqual({ 1: 1 });
+  });
+
+  it('refills the blank that was cleared, not the end of the queue', () => {
+    const state = run(
+      [twoBlanks],
+      { type: 'fillAdd', index: 0 },
+      { type: 'fillAdd', index: 1 },
+      { type: 'fillRemove', position: 0 },
+      { type: 'fillAdd', index: 2 }
+    );
+    expect(state.current.fillSel).toEqual({ 0: 2, 1: 1 });
+  });
+
+  it('ignores clearing a blank that is already empty', () => {
+    const state = run([twoBlanks], { type: 'fillAdd', index: 0 });
+    expect(lessonReducer(state, { type: 'fillRemove', position: 1 })).toBe(state);
   });
 });
 

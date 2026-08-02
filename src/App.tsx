@@ -106,14 +106,9 @@ export default function App() {
 
   const selectOption = useCallback((option: string) => dispatch({ type: 'select', option }), []);
   const onTypeChange = useCallback((value: string) => dispatch({ type: 'typed', value }), []);
-  const buildAdd = useCallback((index: number) => dispatch({ type: 'buildAdd', index }), []);
-  const buildRemove = useCallback(
-    (position: number) => dispatch({ type: 'buildRemove', position }),
-    []
-  );
-  const arrangeAdd = useCallback((index: number) => dispatch({ type: 'arrangeAdd', index }), []);
-  const arrangeRemove = useCallback(
-    (position: number) => dispatch({ type: 'arrangeRemove', position }),
+  const tileAdd = useCallback((index: number) => dispatch({ type: 'tileAdd', index }), []);
+  const tileRemove = useCallback(
+    (position: number) => dispatch({ type: 'tileRemove', position }),
     []
   );
   const fillAdd = useCallback((index: number) => dispatch({ type: 'fillAdd', index }), []);
@@ -213,8 +208,7 @@ export default function App() {
           onGoForward={goForward}
           selected={lesson.current.selected}
           typedValue={lesson.current.typedValue}
-          buildSel={lesson.current.buildSel}
-          arrangeSel={lesson.current.arrangeSel}
+          tileSel={lesson.current.tileSel}
           fillSel={lesson.current.fillSel}
           matchSelLeft={lesson.matchSelLeft}
           matchSelRight={lesson.matchSelRight}
@@ -226,10 +220,8 @@ export default function App() {
           onCheckAnswer={checkAnswer}
           onSkip={continueNext}
           onContinueNext={continueNext}
-          onBuildAdd={buildAdd}
-          onBuildRemove={buildRemove}
-          onArrangeAdd={arrangeAdd}
-          onArrangeRemove={arrangeRemove}
+          onTileAdd={tileAdd}
+          onTileRemove={tileRemove}
           onFillAdd={fillAdd}
           onFillRemove={fillRemove}
           onMatchClick={matchClick}

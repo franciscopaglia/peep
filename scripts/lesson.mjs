@@ -113,6 +113,14 @@ function exToLine(ex) {
       }
       return out.join(SEP);
     }
+    case 'listen': {
+      // `say` is spoken, never shown — so it is the prompt field here.
+      parts.push(ex.say);
+      joinCap(parts, ex);
+      parts.push(ex.options.map((o) => (o === ex.correct ? o : '+' + o)).join(' | '));
+      if (ex.correctLabel !== ex.correct) parts.push(`label=${ex.correctLabel}`);
+      return parts.join(SEP);
+    }
     case 'choice': {
       parts.push((ex.promptIsGlyph ? 'gp ' : '') + ex.prompt);
       joinCap(parts, ex);
@@ -238,6 +246,15 @@ function lineToEx(line) {
     case 'teach': {
       const ex = { type, title: pos[0], body: pos.slice(1).join(SEP) };
       if (kv.media) ex.media = parseMedia(kv.media, line);
+      return ex;
+    }
+    case 'listen': {
+      const raw = pos[1].split(' | ');
+      const correct = raw.find((o) => !o.startsWith('+'));
+      if (!correct) die(`listen needs one unmarked (correct) option: ${line}`);
+      const ex = { type, say: pos[0], options: raw.map((o) => (o.startsWith('+') ? o.slice(1) : o)),
+                   correct, correctLabel: kv.label ?? correct };
+      if (caption) ex.caption = caption;
       return ex;
     }
     case 'choice': {
@@ -410,9 +427,15 @@ function checkLesson(lesson, problems, byId = {}) {
       if (unknown.length) flag(`media letters are not Shavian letters: ${unknown.join(' ')}`);
     }
 
-    if (ex.type === 'choice') {
+    if (ex.type === 'choice' || ex.type === 'listen') {
       if (!ex.options.includes(ex.correct)) flag('correct not among options');
       if (new Set(ex.options).size !== ex.options.length) flag('duplicate options');
+    }
+    if (ex.type === 'listen') {
+      // The prompt is spoken by the browser, so it has to be English text —
+      // Shavian handed to speech synthesis is read out as nothing at all.
+      if (SHAVIAN.test(ex.say)) flag('say= must be English, it is read aloud');
+      SHAVIAN.lastIndex = 0;
     }
     if (ex.type === 'build' || ex.type === 'arrange') {
       if (!multisetCovers(ex.tiles, ex.answer)) flag('answer not buildable from tiles');
@@ -539,6 +562,9 @@ switch (cmd) {
         die(`meta can set title/glyph/chapter/anchor, not "${key}"`);
       lesson[key] = key === 'chapter' || key === 'anchor' ? Number(value) : value;
     }
+    // A lesson with an anchor is a branch by definition — the two always travel
+    // together, and `check` rejects an anchor the app would never read.
+    if (lesson.anchor !== undefined) lesson.optional = true;
     save(lesson);
     console.log(`${lesson.id} :: ${lesson.title} :: ${lesson.glyph} :: ch${lesson.chapter}`);
     break;
