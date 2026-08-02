@@ -132,26 +132,42 @@ Each view has one clear job — keep them focused:
 
 ## Exercise types
 
-Twelve types (see `src/lessons/types.ts`). Graded via `isCorrect`:
-`choice`, `type`, `build`, `arrange`, `complete` (fill a word's missing
+Thirteen types (see `src/lessons/types.ts`). Graded via `isCorrect`:
+`choice`, `type` (read the Shavian, write the English — a **one-word** answer is
+matched exactly, since the drill is minimal pairs and "cot" must not pass for
+"cat", while a **multi-word** answer is graded with `transcribe`'s typo
+tolerance, because at that length it is the same reading skill),
+`build`, `arrange`, `complete` (fill a word's missing
 letters), `fill` (fill a sentence's missing words), `cloze` (fill a passage's
 blanks), `spot` (tap the word in a sentence that means the English prompt —
 graded by word *index*, since sentences can repeat a word), `transcribe`
-(read a real Shavian passage, write the full English; compared through
+(read a Shavian passage, write the full English; compared through
 `transcriptionMatches` — case/punctuation/whitespace-insensitive, and each word
 may be off by up to its `editBudget` (0 letters for ≤2-letter words, 1 for 3–4,
 2 for longer) so a typo doesn't fail a *reading* exercise, while word count must
-still match; `accept` for spelling variants; passages must be real sourced
-texts, never invented), `write` (spell an English word — or, from lesson 49
+still match; `accept` for spelling variants. **A passage carrying a `source`
+must be a real text, quoted accurately and never invented** — that is the whole
+claim lesson 45 makes. Short unsourced curriculum sentences are fine as
+transcribe practice on the way there, and carry no `source`),
+`write` (spell an English word — or, from lesson 49
 on, a phrase or whole sentence — in Shavian on the on-screen keyboard; layout in
 `lib/shavian-keyboard.ts`: chart-paired letter rows plus the naming dot,
 `. , ? !` and a space key. Graded on an exact glyph match (plus `accept`),
-with only the spacing between words normalized). `teach` is not
-graded; `match` is graded through its own pairing flow in `App.tsx` (not via
-`isCorrect`). `match` is **intentionally not failable** — wrong picks just
-shake and reset, and finishing always scores the point.
+with only the spacing between words normalized), `listen` (**experimental** —
+hear `say` read aloud by the browser and tap the Shavian that spells it; graded
+like a `choice`, and `lesson.mjs check` rejects a `say=` containing Shavian,
+since speech synthesis reads it as nothing. Used in exactly one branch lesson,
+9252, which says so on its first card — do not spread it further until the
+browser-voice question is settled). `teach` is not
+graded; `match` is graded through its own pairing flow (not via `isCorrect`).
+`match` is **intentionally not failable** — wrong picks just shake and reset,
+and finishing always scores the point.
 
-**Randomization:** `shuffleExerciseOptions` shuffles `choice` options, `build`/
+**The mix is deliberate, per chapter** — recognition types carry Chapter 1 and
+reading types should carry Chapter 3. `node scripts/curriculum.mjs types` shows
+where it stands; ROADMAP.md's "Rebalancing the exercise mix" holds the targets.
+
+**Randomization:** `shuffleExerciseOptions` shuffles `choice`/`listen` options, `build`/
 `arrange` tiles, and `complete`/`fill`/`cloze` banks on load. The shuffle
 guarantees a **non-identity** order (never the authored order — the correct
 answer is always authored first, so this stops "tap straight through").
