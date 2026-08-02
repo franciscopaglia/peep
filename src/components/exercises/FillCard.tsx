@@ -33,7 +33,7 @@ export function FillCard({
               </div>
             );
           }
-          const filled = blankPos < fillSel.length;
+          const filled = fillSel[blankPos] !== undefined;
           return (
             <Blank
               key={wi}
@@ -48,7 +48,7 @@ export function FillCard({
       </div>
       <TilePool
         tiles={exercise.bank}
-        isUsed={(i) => fillSel.includes(i)}
+        isUsed={(i) => Object.values(fillSel).includes(i)}
         variant="word"
         maxWidth={520}
         status={status}

@@ -7,18 +7,41 @@ export const PASS_THRESHOLD = 0.6;
 export type AnswerState = {
   selected: string | null;
   typedValue: string;
-  buildSel: number[];
-  arrangeSel: number[];
-  fillSel: number[];
+  /**
+   * Tile indices in the order they were tapped — `build` spells a word out of
+   * them, `arrange` a sentence. One list for both: the exercises differ in what
+   * the tiles hold, not in how they are picked.
+   */
+  tileSel: number[];
+  /**
+   * The bank index chosen for each blank, keyed by **blank position**, for
+   * `complete`/`fill`/`cloze`. Deliberately sparse rather than a list in tap
+   * order: clearing the first of two blanks must leave the second where it is,
+   * and a list indexed by tap order made the later answer slide into the gap.
+   */
+  fillSel: Record<number, number>;
 };
 
 export const emptyAnswer: AnswerState = {
   selected: null,
   typedValue: '',
-  buildSel: [],
-  arrangeSel: [],
-  fillSel: [],
+  tileSel: [],
+  fillSel: {},
 };
+
+/**
+ * The bank words chosen for every blank, in blank order — or `null` if any
+ * blank is still empty, which is never a correct answer.
+ */
+function filledBlanks(bank: string[], blankCount: number, fillSel: AnswerState['fillSel']) {
+  const chosen: string[] = [];
+  for (let position = 0; position < blankCount; position++) {
+    const bankIndex = fillSel[position];
+    if (bankIndex === undefined) return null;
+    chosen.push(bank[bankIndex]);
+  }
+  return chosen;
+}
 
 /**
  * Canonical form for comparing a learner's transcription with the answer:
@@ -99,31 +122,36 @@ export function transcriptionMatches(expected: string, typed: string): boolean {
 export function isCorrect(exercise: Exercise, state: AnswerState): boolean {
   switch (exercise.type) {
     case 'choice':
+    // The prompt is audio rather than text, but picking the answer is the same.
+    case 'listen':
       return state.selected === exercise.correct;
     case 'type': {
-      const typed = state.typedValue.trim().toLowerCase();
-      if (typed === exercise.correct.toLowerCase()) return true;
-      return (exercise.accept ?? []).some((alt) => typed === alt.toLowerCase());
+      const typed = state.typedValue.trim();
+      return [exercise.correct, ...(exercise.accept ?? [])].some((answer) =>
+        // A single word is a minimal-pair drill — the whole point of "𐑒𐑨𐑑 → cat"
+        // is that "cot" is wrong — so it is graded exactly. A phrase is a
+        // *reading*, the same skill `transcribe` tests, so one slipped letter
+        // in one word shouldn't fail the sentence.
+        answer.trim().includes(' ')
+          ? transcriptionMatches(answer, typed)
+          : typed.toLowerCase() === answer.toLowerCase()
+      );
     }
     case 'build':
-      return (
-        state.buildSel.map((i) => exercise.tiles[i]).join('') === exercise.answer.join('')
-      );
+      return state.tileSel.map((i) => exercise.tiles[i]).join('') === exercise.answer.join('');
     case 'arrange':
-      return (
-        state.arrangeSel.map((i) => exercise.tiles[i]).join(' ') === exercise.answer.join(' ')
-      );
-    case 'complete':
-      return (
-        state.fillSel.map((i) => exercise.bank[i]).join('') ===
-        exercise.blanks.map((b) => exercise.word[b]).join('')
-      );
+      return state.tileSel.map((i) => exercise.tiles[i]).join(' ') === exercise.answer.join(' ');
+    case 'complete': {
+      const chosen = filledBlanks(exercise.bank, exercise.blanks.length, state.fillSel);
+      return chosen !== null && chosen.join('') === exercise.blanks.map((b) => exercise.word[b]).join('');
+    }
     case 'fill':
-    case 'cloze':
+    case 'cloze': {
+      const chosen = filledBlanks(exercise.bank, exercise.blanks.length, state.fillSel);
       return (
-        state.fillSel.map((i) => exercise.bank[i]).join(' ') ===
-        exercise.blanks.map((b) => exercise.words[b]).join(' ')
+        chosen !== null && chosen.join(' ') === exercise.blanks.map((b) => exercise.words[b]).join(' ')
       );
+    }
     case 'spot':
       // The tapped word is stored by index — words can repeat in a sentence.
       return state.selected === String(exercise.correct);
@@ -141,7 +169,15 @@ export function isCorrect(exercise: Exercise, state: AnswerState): boolean {
         (answer) => normalizeSpacing(answer) === typed
       );
     }
+    // Nothing to grade here: a teach card is read, and `match` grades itself
+    // as the pairs are found. Listed explicitly rather than caught by a
+    // `default`, so a new member of the union fails to compile until grading
+    // it has actually been thought about.
+    case 'teach':
+    case 'match':
+      return false;
     default:
+      exercise satisfies never;
       return false;
   }
 }

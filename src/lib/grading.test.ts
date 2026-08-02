@@ -133,33 +133,57 @@ describe('isCorrect', () => {
     expect(isCorrect(typeEx, { ...emptyAnswer, typedValue: 'two' })).toBe(false);
   });
 
+  it('type: a one-word answer is exact — minimal pairs are the whole point', () => {
+    expect(isCorrect(typeEx, { ...emptyAnswer, typedValue: 'cat' })).toBe(true);
+    expect(isCorrect(typeEx, { ...emptyAnswer, typedValue: 'cot' })).toBe(false);
+    expect(isCorrect(typeEx, { ...emptyAnswer, typedValue: 'cta' })).toBe(false);
+  });
+
+  it('type: a phrase forgives a typo, like transcribe — it is the same reading', () => {
+    const phrase: TypeExercise = {
+      ...typeEx,
+      prompt: '𐑞 𐑚𐑻𐑛 𐑦𐑟 𐑯𐑽 𐑞 𐑢𐑷𐑑𐑼',
+      correct: 'the bird is near the water',
+      correctLabel: 'the bird is near the water',
+    };
+    expect(isCorrect(phrase, { ...emptyAnswer, typedValue: 'the bird is near the water' })).toBe(true);
+    // one slipped letter in a long word
+    expect(isCorrect(phrase, { ...emptyAnswer, typedValue: 'the bird is near the watar' })).toBe(true);
+    // punctuation and casing are not the exercise
+    expect(isCorrect(phrase, { ...emptyAnswer, typedValue: 'The bird is near the water.' })).toBe(true);
+    // a dropped word is a misreading, not a typo
+    expect(isCorrect(phrase, { ...emptyAnswer, typedValue: 'the bird is near water' })).toBe(false);
+    // and a short word still has to be right
+    expect(isCorrect(phrase, { ...emptyAnswer, typedValue: 'the bird if near the water' })).toBe(false);
+  });
+
   it('build: tiles must be selected in the right order and complete', () => {
-    expect(isCorrect(build, { ...emptyAnswer, buildSel: [0, 1, 2] })).toBe(true);
-    expect(isCorrect(build, { ...emptyAnswer, buildSel: [1, 0, 2] })).toBe(false);
-    expect(isCorrect(build, { ...emptyAnswer, buildSel: [0, 1] })).toBe(false);
-    expect(isCorrect(build, { ...emptyAnswer, buildSel: [0, 1, 2, 3] })).toBe(false);
+    expect(isCorrect(build, { ...emptyAnswer, tileSel: [0, 1, 2] })).toBe(true);
+    expect(isCorrect(build, { ...emptyAnswer, tileSel: [1, 0, 2] })).toBe(false);
+    expect(isCorrect(build, { ...emptyAnswer, tileSel: [0, 1] })).toBe(false);
+    expect(isCorrect(build, { ...emptyAnswer, tileSel: [0, 1, 2, 3] })).toBe(false);
   });
 
   it('arrange: word-tiles joined with spaces in order', () => {
-    expect(isCorrect(arrange, { ...emptyAnswer, arrangeSel: [0, 1, 2] })).toBe(true);
-    expect(isCorrect(arrange, { ...emptyAnswer, arrangeSel: [1, 0, 2] })).toBe(false);
+    expect(isCorrect(arrange, { ...emptyAnswer, tileSel: [0, 1, 2] })).toBe(true);
+    expect(isCorrect(arrange, { ...emptyAnswer, tileSel: [1, 0, 2] })).toBe(false);
   });
 
   it('complete: fills the blank by bank value', () => {
-    expect(isCorrect(complete, { ...emptyAnswer, fillSel: [0] })).toBe(true); // 𐑨
-    expect(isCorrect(complete, { ...emptyAnswer, fillSel: [1] })).toBe(false); // 𐑦
-    expect(isCorrect(complete, { ...emptyAnswer, fillSel: [] })).toBe(false);
+    expect(isCorrect(complete, { ...emptyAnswer, fillSel: {0: 0} })).toBe(true); // 𐑨
+    expect(isCorrect(complete, { ...emptyAnswer, fillSel: {0: 1} })).toBe(false); // 𐑦
+    expect(isCorrect(complete, { ...emptyAnswer, fillSel: {} })).toBe(false);
   });
 
   it('fill: bank words joined by space against the blanks, in order', () => {
-    expect(isCorrect(fill, { ...emptyAnswer, fillSel: [0, 1] })).toBe(true);
-    expect(isCorrect(fill, { ...emptyAnswer, fillSel: [1, 0] })).toBe(false);
-    expect(isCorrect(fill, { ...emptyAnswer, fillSel: [2, 1] })).toBe(false);
+    expect(isCorrect(fill, { ...emptyAnswer, fillSel: {0: 0, 1: 1} })).toBe(true);
+    expect(isCorrect(fill, { ...emptyAnswer, fillSel: {0: 1, 1: 0} })).toBe(false);
+    expect(isCorrect(fill, { ...emptyAnswer, fillSel: {0: 2, 1: 1} })).toBe(false);
   });
 
   it('cloze: shares the fill logic', () => {
-    expect(isCorrect(cloze, { ...emptyAnswer, fillSel: [0, 1] })).toBe(true);
-    expect(isCorrect(cloze, { ...emptyAnswer, fillSel: [2, 1] })).toBe(false);
+    expect(isCorrect(cloze, { ...emptyAnswer, fillSel: {0: 0, 1: 1} })).toBe(true);
+    expect(isCorrect(cloze, { ...emptyAnswer, fillSel: {0: 2, 1: 1} })).toBe(false);
   });
 
   it('spot: grades the tapped word by index, not value', () => {
