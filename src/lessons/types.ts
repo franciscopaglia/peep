@@ -154,8 +154,31 @@ export type WriteExercise = {
   retry?: boolean;
 };
 
+/**
+ * Hear an English word read aloud, then tap the Shavian that spells it.
+ *
+ * **Experimental.** Shavian spells sounds, so going from a heard word to its
+ * spelling is the most direct test the alphabet allows — but it depends on the
+ * browser's speech synthesis, which varies by platform and is silent where
+ * there is no voice. It is deliberately used in one optional branch lesson
+ * only, until that holds up in practice.
+ *
+ * The prompt is audio, so there is nothing to read: `say` is spoken, never
+ * shown. Options are Shavian spellings, tapped like a `choice`.
+ */
+export type ListenExercise = {
+  type: 'listen';
+  say: string; // the English word spoken aloud — the prompt
+  caption?: string;
+  options: string[]; // Shavian spellings
+  correct: string;
+  correctLabel: string;
+  retry?: boolean;
+};
+
 export type Exercise =
   | TeachExercise
+  | ListenExercise
   | ChoiceExercise
   | TypeExercise
   | MatchExercise

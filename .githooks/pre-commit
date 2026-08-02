@@ -25,6 +25,20 @@ fi
 
 # `check` already fails on drift, but regenerating is what the author meant to
 # do; stage it so the index never lands out of date.
+#
+# Only when every lesson file is going into this commit, though: meta-index
+# reads the working tree, so with a new lesson still untracked it would write —
+# and stage — an index naming a lesson the commit doesn't contain. That commit
+# would fail `lesson.mjs check` if anyone ever landed on it.
+loose=$(git ls-files --others --exclude-standard -- 'src/lessons/*.json')
+unstaged=$(git diff --name-only -- 'src/lessons/*.json')
+
+if [ -n "$loose$unstaged" ]; then
+  echo "pre-commit: lesson files outside this commit — leaving meta.json alone."
+  echo "            (run \`node scripts/lesson.mjs meta-index\` once they are all staged.)"
+  exit 0
+fi
+
 node scripts/lesson.mjs meta-index >/dev/null
 if ! git diff --quiet -- src/lessons/meta.json; then
   git add src/lessons/meta.json
