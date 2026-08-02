@@ -20,7 +20,9 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      // `import.meta.dirname`, not `__dirname`: Vite's native config loader is
+      // becoming the default and doesn't provide the CommonJS globals.
+      '@': path.resolve(import.meta.dirname, './src'),
     },
   },
 })
