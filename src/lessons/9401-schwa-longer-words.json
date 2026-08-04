@@ -1,0 +1,147 @@
+{
+  "id": 9401,
+  "title": "The Schwa in Longer Words",
+  "glyph": "𐑩",
+  "chapter": 3,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "The schwa hides in plain sight",
+      "body": "𐑩 is the sound of an unstressed syllable, so the longer the word, the more of them it holds. In 𐑐𐑻𐑕𐑩𐑯 and 𐑢𐑫𐑥𐑩𐑯 the second vowel is barely there when you say it — and that is exactly what 𐑩 spells. Say each word aloud and listen for the part you almost swallow."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑻𐑕𐑩𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "person",
+      "correctLabel": "person"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑫𐑥𐑩𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "woman",
+      "correctLabel": "woman"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑴𐑥𐑩𐑯𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "moment",
+      "correctLabel": "moment"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑨𐑒𐑖𐑩𐑯",
+      "caption": "",
+      "optionIsGlyph": false,
+      "options": [
+        "action",
+        "auction",
+        "ashen",
+        "acting"
+      ],
+      "correct": "action",
+      "correctLabel": "action"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which spelling has the schwa in the right place for “question”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑒𐑢𐑧𐑕𐑗𐑩𐑯",
+        "𐑒𐑢𐑧𐑕𐑗𐑧𐑯",
+        "𐑒𐑢𐑩𐑕𐑗𐑩𐑯",
+        "𐑒𐑢𐑧𐑕𐑑𐑩𐑯"
+      ],
+      "correct": "𐑒𐑢𐑧𐑕𐑗𐑩𐑯",
+      "correctLabel": "𐑒𐑢𐑧𐑕𐑗𐑩𐑯"
+    },
+    {
+      "type": "spot",
+      "prompt": "woman",
+      "words": [
+        "𐑞",
+        "𐑢𐑫𐑥𐑩𐑯",
+        "𐑭𐑕𐑒𐑑",
+        "𐑩",
+        "𐑒𐑢𐑧𐑕𐑗𐑩𐑯"
+      ],
+      "correct": 1,
+      "correctLabel": "𐑢𐑫𐑥𐑩𐑯",
+      "stops": [
+        4
+      ]
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        3
+      ],
+      "bank": [
+        "𐑩",
+        "𐑨",
+        "𐑧"
+      ],
+      "correctLabel": "𐑐𐑻𐑕𐑩𐑯",
+      "prompt": "person",
+      "word": [
+        "𐑐",
+        "𐑻",
+        "𐑕",
+        "𐑩",
+        "𐑯"
+      ]
+    },
+    {
+      "type": "cloze",
+      "blanks": [
+        1,
+        4
+      ],
+      "bank": [
+        "𐑐𐑻𐑕𐑩𐑯",
+        "𐑥𐑴𐑥𐑩𐑯𐑑",
+        "𐑢𐑫𐑥𐑩𐑯"
+      ],
+      "correctLabel": "𐑞 𐑐𐑻𐑕𐑩𐑯 𐑢𐑱𐑑𐑩𐑛 𐑩 𐑥𐑴𐑥𐑩𐑯𐑑",
+      "words": [
+        "𐑞",
+        "𐑐𐑻𐑕𐑩𐑯",
+        "𐑢𐑱𐑑𐑩𐑛",
+        "𐑩",
+        "𐑥𐑴𐑥𐑩𐑯𐑑"
+      ],
+      "stops": [
+        4
+      ],
+      "translation": "The person waited a moment."
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑐𐑻𐑕𐑩𐑯": "person",
+        "𐑢𐑫𐑥𐑩𐑯": "woman",
+        "𐑨𐑒𐑖𐑩𐑯": "action",
+        "𐑥𐑴𐑥𐑩𐑯𐑑": "moment"
+      },
+      "leftOrder": [
+        "𐑐𐑻𐑕𐑩𐑯",
+        "𐑢𐑫𐑥𐑩𐑯",
+        "𐑨𐑒𐑖𐑩𐑯",
+        "𐑥𐑴𐑥𐑩𐑯𐑑"
+      ],
+      "rightOrder": [
+        "action",
+        "moment",
+        "person",
+        "woman"
+      ]
+    }
+  ],
+  "anchor": 40,
+  "optional": true
+}

@@ -1,0 +1,156 @@
+{
+  "id": 9461,
+  "title": "Writing: A Gentler Start",
+  "glyph": "𐑮𐑲𐑑",
+  "chapter": 4,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Half the work first",
+      "body": "A blank keyboard is a lot to face. So this one starts with the word almost written — fill the gap, then build it from tiles, then spell it yourself. Same word each time, less help each time. By the third go your fingers already know where it lives."
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        2
+      ],
+      "bank": [
+        "𐑞",
+        "𐑔",
+        "𐑝"
+      ],
+      "correctLabel": "𐑢𐑦𐑞",
+      "prompt": "with",
+      "word": [
+        "𐑢",
+        "𐑦",
+        "𐑞"
+      ]
+    },
+    {
+      "type": "build",
+      "prompt": "with",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑢",
+        "𐑦",
+        "𐑞",
+        "𐑔"
+      ],
+      "answer": [
+        "𐑢",
+        "𐑦",
+        "𐑞"
+      ],
+      "correctLabel": "𐑢𐑦𐑞"
+    },
+    {
+      "type": "write",
+      "prompt": "with",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑢𐑦𐑞",
+      "correctLabel": "𐑢𐑦𐑞"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑮",
+        "𐑤",
+        "𐑯"
+      ],
+      "correctLabel": "𐑓𐑮𐑪𐑥",
+      "prompt": "from",
+      "word": [
+        "𐑓",
+        "𐑮",
+        "𐑪",
+        "𐑥"
+      ]
+    },
+    {
+      "type": "build",
+      "prompt": "from",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑓",
+        "𐑮",
+        "𐑪",
+        "𐑥",
+        "𐑳"
+      ],
+      "answer": [
+        "𐑓",
+        "𐑮",
+        "𐑪",
+        "𐑥"
+      ],
+      "correctLabel": "𐑓𐑮𐑪𐑥"
+    },
+    {
+      "type": "write",
+      "prompt": "from",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑓𐑮𐑪𐑥",
+      "correctLabel": "𐑓𐑮𐑪𐑥"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑳",
+        "𐑪",
+        "𐑫"
+      ],
+      "correctLabel": "𐑡𐑳𐑕𐑑",
+      "prompt": "just",
+      "word": [
+        "𐑡",
+        "𐑳",
+        "𐑕",
+        "𐑑"
+      ]
+    },
+    {
+      "type": "write",
+      "prompt": "just",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑡𐑳𐑕𐑑",
+      "correctLabel": "𐑡𐑳𐑕𐑑"
+    },
+    {
+      "type": "write",
+      "prompt": "can",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑒𐑨𐑯",
+      "correctLabel": "𐑒𐑨𐑯"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑢𐑦𐑞": "with",
+        "𐑓𐑮𐑪𐑥": "from",
+        "𐑡𐑳𐑕𐑑": "just",
+        "𐑒𐑨𐑯": "can"
+      },
+      "leftOrder": [
+        "𐑢𐑦𐑞",
+        "𐑓𐑮𐑪𐑥",
+        "𐑡𐑳𐑕𐑑",
+        "𐑒𐑨𐑯"
+      ],
+      "rightOrder": [
+        "just",
+        "can",
+        "with",
+        "from"
+      ]
+    }
+  ],
+  "anchor": 46,
+  "optional": true
+}
