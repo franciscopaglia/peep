@@ -46,7 +46,7 @@ Lessons live as plain **JSON data files** — the code just renders them — whi
 | **Chapter 4** | Writing Shavian | 7 lessons — spell words, then phrases and whole sentences, on a full on-screen Shavian keyboard |
 | **Chapter 5** | *Coming soon* | — |
 
-Alongside those 52 lessons on the main path sit **50 optional branch lessons** —
+Alongside those 52 lessons on the main path sit **56 optional branch lessons** —
 extra practice on the trickier letters and words, hanging off the lesson they
 belong to. They unlock when you reach their spot, and never gate the path or
 count toward your progress: take them when you want more, skip them when you

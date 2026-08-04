@@ -710,5 +710,53 @@
     "chapter": 2,
     "optional": true,
     "anchor": 33
+  },
+  {
+    "id": 9381,
+    "title": "More -S and -ING",
+    "glyph": "𐑦𐑙",
+    "chapter": 3,
+    "optional": true,
+    "anchor": 38
+  },
+  {
+    "id": 9401,
+    "title": "The Schwa in Longer Words",
+    "glyph": "𐑩",
+    "chapter": 3,
+    "optional": true,
+    "anchor": 40
+  },
+  {
+    "id": 9431,
+    "title": "Reading Without Help",
+    "glyph": "𐑮𐑰𐑛",
+    "chapter": 3,
+    "optional": true,
+    "anchor": 43
+  },
+  {
+    "id": 9461,
+    "title": "Writing: A Gentler Start",
+    "glyph": "𐑮𐑲𐑑",
+    "chapter": 4,
+    "optional": true,
+    "anchor": 46
+  },
+  {
+    "id": 9481,
+    "title": "Writing: More R-Vowels",
+    "glyph": "𐑻𐑼",
+    "chapter": 4,
+    "optional": true,
+    "anchor": 48
+  },
+  {
+    "id": 9501,
+    "title": "Writing: Endings in Practice",
+    "glyph": "𐑩𐑛",
+    "chapter": 4,
+    "optional": true,
+    "anchor": 50
   }
 ]

@@ -1,0 +1,160 @@
+{
+  "id": 9381,
+  "title": "More -S and -ING",
+  "glyph": "𐑦𐑙",
+  "chapter": 3,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Endings in the wild",
+      "body": "You have met 𐑕/𐑟 and 𐑦𐑙 on their own. Here they are inside whole sentences, where you will actually meet them — the ending is rarely the interesting part of a word, so the trick is to read straight past it and let it do its quiet job."
+    },
+    {
+      "type": "spot",
+      "prompt": "going",
+      "words": [
+        "𐑞",
+        "𐑗𐑦𐑤𐑛𐑮𐑩𐑯",
+        "𐑸",
+        "𐑜𐑴𐑦𐑙",
+        "𐑣𐑴𐑥"
+      ],
+      "correct": 3,
+      "correctLabel": "𐑜𐑴𐑦𐑙",
+      "stops": [
+        4
+      ]
+    },
+    {
+      "type": "spot",
+      "prompt": "things",
+      "words": [
+        "𐑢𐑰",
+        "𐑕𐑧𐑛",
+        "𐑥𐑧𐑯𐑦",
+        "𐑔𐑦𐑙𐑟"
+      ],
+      "correct": 3,
+      "correctLabel": "𐑔𐑦𐑙𐑟",
+      "stops": [
+        3
+      ]
+    },
+    {
+      "type": "spot",
+      "prompt": "words",
+      "words": [
+        "𐑐𐑰𐑐𐑩𐑤",
+        "𐑒𐑨𐑯",
+        "𐑮𐑰𐑛",
+        "𐑞",
+        "𐑢𐑻𐑛𐑟"
+      ],
+      "correct": 4,
+      "correctLabel": "𐑢𐑻𐑛𐑟",
+      "stops": [
+        4
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑯𐑳𐑔𐑦𐑙",
+      "caption": "Sound it out — what does this say?",
+      "correct": "nothing",
+      "correctLabel": "nothing"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑖𐑰 𐑦𐑟 𐑛𐑵𐑦𐑙 𐑯𐑳𐑔𐑦𐑙 𐑑𐑩𐑛𐑱",
+      "caption": "Read the whole sentence",
+      "correct": "she is doing nothing today",
+      "correctLabel": "she is doing nothing today"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑚𐑰𐑦𐑙",
+      "caption": "",
+      "optionIsGlyph": false,
+      "options": [
+        "being",
+        "bring",
+        "beading",
+        "beam"
+      ],
+      "correct": "being",
+      "correctLabel": "being"
+    },
+    {
+      "type": "build",
+      "prompt": "doing",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑛",
+        "𐑵",
+        "𐑦",
+        "𐑙",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑵",
+        "𐑦",
+        "𐑙"
+      ],
+      "correctLabel": "𐑛𐑵𐑦𐑙"
+    },
+    {
+      "type": "cloze",
+      "blanks": [
+        3,
+        8
+      ],
+      "bank": [
+        "𐑮𐑰𐑛𐑦𐑙",
+        "𐑔𐑦𐑙𐑟",
+        "𐑜𐑴𐑦𐑙"
+      ],
+      "correctLabel": "𐑞 𐑗𐑦𐑤𐑛𐑮𐑩𐑯 𐑸 𐑮𐑰𐑛𐑦𐑙 𐑞𐑱 𐑸 𐑤𐑻𐑯𐑦𐑙 𐑥𐑧𐑯𐑦 𐑔𐑦𐑙𐑟",
+      "words": [
+        "𐑞",
+        "𐑗𐑦𐑤𐑛𐑮𐑩𐑯",
+        "𐑸",
+        "𐑮𐑰𐑛𐑦𐑙",
+        "𐑞𐑱",
+        "𐑸",
+        "𐑤𐑻𐑯𐑦𐑙",
+        "𐑥𐑧𐑯𐑦",
+        "𐑔𐑦𐑙𐑟"
+      ],
+      "stops": [
+        3,
+        8
+      ],
+      "translation": "The children are reading. They are learning many things."
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑜𐑴𐑦𐑙": "going",
+        "𐑔𐑦𐑙𐑟": "things",
+        "𐑯𐑳𐑔𐑦𐑙": "nothing",
+        "𐑢𐑻𐑛𐑟": "words"
+      },
+      "leftOrder": [
+        "𐑜𐑴𐑦𐑙",
+        "𐑔𐑦𐑙𐑟",
+        "𐑯𐑳𐑔𐑦𐑙",
+        "𐑢𐑻𐑛𐑟"
+      ],
+      "rightOrder": [
+        "things",
+        "nothing",
+        "going",
+        "words"
+      ]
+    }
+  ],
+  "anchor": 38,
+  "optional": true
+}
