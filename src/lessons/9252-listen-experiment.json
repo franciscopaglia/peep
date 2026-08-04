@@ -7,7 +7,7 @@
     {
       "type": "teach",
       "title": "We are trying something new",
-      "body": "This lesson is an experiment, and the only one of its kind so far. Instead of reading a word, you will hear it — your browser reads it aloud — and pick the Shavian that spells it. That is Shavian working the way it was designed to: the letters spell the sounds, so a word you can hear is a word you can spell. Tap the speaker to hear it again; a second tap slows it down. If you hear nothing at all, your browser has no voice installed and this lesson will not work — skip it, nothing here is needed to move on."
+      "body": "This lesson is an experiment, and the only one of its kind so far. Instead of reading a word, you will hear it — your browser reads it aloud — and pick the Shavian that spells it. That is Shavian working the way it was designed to: the letters spell the sounds, so a word you can hear is a word you can spell. Tap the speaker to hear it again; a second tap slows it down. And if the voice is unclear, wrong-sounding, or missing altogether, tap “Show the word” — it costs you nothing, and the spelling is still worth practising."
     },
     {
       "type": "listen",
@@ -108,7 +108,7 @@
     {
       "type": "teach",
       "title": "How was that?",
-      "body": "If that worked for you, it may become a proper part of the course. If it did not — no voice, the wrong accent, a word that sounded nothing like its spelling — that is exactly what we need to know. There is a “report a problem” flag at the top of every exercise."
+      "body": "If that worked for you, it may become a proper part of the course. If it did not — no voice, the wrong accent, a word that sounded nothing like its spelling — that is exactly what we need to know, and reaching for “Show the word” a lot is a useful thing to report. There is a “report a problem” flag at the top of every exercise."
     }
   ],
   "anchor": 25,

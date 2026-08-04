@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { ListenExercise } from '@/lessons/types';
 import type { ExerciseProps } from './props';
 import { SpeakButton } from '@/components/SpeakButton';
@@ -11,6 +12,13 @@ import { enterAnimation, optionColors } from '@/lib/exercise-style';
  * exercise a `choice`. The speaker is large and central because it *is* the
  * prompt, and it re-reads on every tap (slow on the second, per `SpeakButton`),
  * since a learner will want to hear a word more than once.
+ *
+ * …with one escape hatch. A browser voice can be unclear, wrong-accented or
+ * missing altogether, and none of that is the learner's fault, so the word can
+ * always be shown. It costs nothing: no penalty, nothing recorded, no effect on
+ * grading — an exercise you couldn't hear should not be an exercise you fail.
+ * Revealing it turns this into a `choice`, which is a fine thing to fall back
+ * to and still practises the spelling.
  */
 export function ListenCard({
   exercise,
@@ -18,6 +26,8 @@ export function ListenCard({
   selected,
   onSelectOption,
 }: ExerciseProps<ListenExercise>) {
+  const [revealed, setRevealed] = useState(false);
+
   return (
     <div className="w-full flex flex-col items-center gap-9" style={enterAnimation}>
       <div className="flex flex-col items-center gap-3 text-center">
@@ -28,6 +38,28 @@ export function ListenCard({
         />
         <div className="text-sm text-muted-foreground">
           {exercise.caption ?? 'Listen, then tap the Shavian that spells it'}
+        </div>
+
+        {/* Reserve the row's height either way, so revealing the word doesn't
+            shift the options out from under a finger already reaching down. */}
+        <div className="min-h-[34px] flex items-center justify-center">
+          {revealed ? (
+            <div
+              className="text-[22px] font-semibold text-foreground"
+              // The word appears after the page has settled, so say it.
+              aria-live="polite"
+            >
+              “{exercise.say}”
+            </div>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setRevealed(true)}
+              className="bg-transparent border-none text-muted-foreground text-[13px] font-medium cursor-pointer underline underline-offset-4"
+            >
+              Can't hear it? Show the word
+            </button>
+          )}
         </div>
       </div>
       <div className="grid grid-cols-2 gap-3.5 w-full max-w-[420px]">
