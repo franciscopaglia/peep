@@ -132,7 +132,7 @@ Each view has one clear job — keep them focused:
 
 ## Exercise types
 
-Fourteen types (see `src/lessons/types.ts`). Graded via `isCorrect`:
+Fifteen types (see `src/lessons/types.ts`). Graded via `isCorrect`:
 `choice`, `type` (read the Shavian, write the English — a **one-word** answer is
 matched exactly, since the drill is minimal pairs and "cot" must not pass for
 "cat", while a **multi-word** answer is graded with `transcribe`'s typo
@@ -140,7 +140,12 @@ tolerance, because at that length it is the same reading skill),
 `build`, `arrange`, `complete` (fill a word's missing
 letters), `fill` (fill a sentence's missing words), `cloze` (fill a passage's
 blanks), `spot` (tap the word in a sentence that means the English prompt —
-graded by word *index*, since sentences can repeat a word), `transcribe`
+graded by word *index*, since sentences can repeat a word), `scan` (the same
+idea over a **long passage** and several rounds: one English prompt at a time,
+tap it in the text, `fillSel` keyed by round. `spot` is answerable by reading
+its sentence; a page is not, so this drills scanning — holding a word in your
+head while the eye moves. Rounds are indices for the same reason `spot` is: a
+passage this long repeats words constantly. Never shuffled), `transcribe`
 (read a Shavian passage, write the full English; compared through
 `transcriptionMatches` — case/punctuation/whitespace-insensitive, and each word
 may be off by up to its `editBudget` (0 letters for ≤2-letter words, 1 for 3–4,

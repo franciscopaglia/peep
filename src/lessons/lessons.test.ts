@@ -38,6 +38,8 @@ function solve(ex: Exercise): AnswerState {
         : { ...emptyAnswer, typedValue: ex.correct };
     case 'sort':
       return { ...emptyAnswer, fillSel: byBlank(ex.answer) };
+    case 'scan':
+      return { ...emptyAnswer, fillSel: byBlank(ex.rounds.map((r) => r.correct)) };
     case 'type':
       return { ...emptyAnswer, typedValue: ex.correct };
     case 'build':

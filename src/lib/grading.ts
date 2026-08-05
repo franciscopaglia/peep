@@ -143,6 +143,10 @@ export function isCorrect(exercise: Exercise, state: AnswerState): boolean {
         ? state.selected === exercise.correct
         : matchesSpelling(exercise.correct, exercise.accept, state.typedValue);
 
+    case 'scan':
+      // Every round found, and found in the right place.
+      return exercise.rounds.every((round, i) => state.fillSel[i] === round.correct);
+
     case 'sort': {
       // Every item has to be placed, and placed right. `fillSel` maps item
       // index to bucket index here — the same shape the blanks use.

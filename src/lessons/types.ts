@@ -203,8 +203,31 @@ export type SortExercise = {
   retry?: boolean;
 };
 
+/**
+ * Find each word in a long passage — several rounds over one text.
+ *
+ * `spot` asks for one word in one sentence, which you can answer by reading the
+ * sentence. This is a page, and the skill is different: scanning, holding an
+ * English word in your head while your eye moves over Shavian looking for its
+ * shape. It is the closest thing in the course to using the alphabet rather
+ * than studying it.
+ *
+ * Rounds are answered in order, and each records the word index tapped — by
+ * index, not by spelling, because a passage this long repeats words constantly.
+ */
+export type ScanExercise = {
+  type: 'scan';
+  caption?: string;
+  passage: string[]; // the text, word by word (never shuffled — it is the exercise)
+  stops?: number[]; // word indices a sentence ends on
+  rounds: { prompt: string; correct: number }[]; // English prompt → index in `passage`
+  correctLabel: string;
+  retry?: boolean;
+};
+
 export type Exercise =
   | TeachExercise
+  | ScanExercise
   | ListenExercise
   | SortExercise
   | ChoiceExercise

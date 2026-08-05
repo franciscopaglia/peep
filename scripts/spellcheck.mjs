@@ -115,6 +115,14 @@ function claimsFor(ex, at, out) {
       // worth checking. Wrong options are non-words by design.
       pair(out, at, ex.correct, ex.say);
       break;
+    case 'scan':
+      // The passage is a claim word by word; the rounds pair one of them with
+      // its English, which is the meaning worth checking.
+      ex.passage.forEach((w, i) => {
+        const round = ex.rounds.find((r) => r.correct === i);
+        claim(out, at, w, round ? round.prompt : null);
+      });
+      break;
     case 'sort':
       // Every item is a real word the lesson stands behind; which bucket it
       // belongs in is a sound question, not a meaning one, so no gloss.

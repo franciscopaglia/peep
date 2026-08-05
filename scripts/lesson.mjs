@@ -124,6 +124,30 @@ function exToLine(ex) {
       if (ex.correctLabel !== ex.correct) parts.push(`label=${ex.correctLabel}`);
       return parts.join(SEP);
     }
+    case 'scan': {
+      const toks = [];
+      ex.passage.forEach((w, i) => {
+        toks.push(w);
+        if (ex.stops?.includes(i)) toks.push('.');
+      });
+      parts.push(toks.join(' '));
+      joinCap(parts, ex);
+      // Each round as `english:shavian`, with `#n` when that spelling occurs
+      // more than once — a long passage repeats words, and the answer is an
+      // index, so the line has to say *which* one.
+      parts.push(
+        'rounds=' +
+          ex.rounds
+            .map((r) => {
+              const word = ex.passage[r.correct];
+              const at = ex.passage.filter((w, i) => w === word && i <= r.correct).length;
+              const total = ex.passage.filter((w) => w === word).length;
+              return `${r.prompt}:${word}${total > 1 ? `#${at}` : ''}`;
+            })
+            .join(' | ')
+      );
+      return parts.join(SEP);
+    }
     case 'sort': {
       parts.push(ex.prompt);
       joinCap(parts, ex);
@@ -221,7 +245,7 @@ function exToLine(ex) {
 
 // ---------------------------------------------------------------- parser
 
-const KEYS = /^(cap|ok|alt|tr|src|media|label|tiles|ans|bank|R)=([\s\S]*)$/;
+const KEYS = /^(cap|ok|alt|tr|src|media|label|tiles|ans|bank|rounds|R)=([\s\S]*)$/;
 
 // `media=letters:𐑐𐑚` → the About page's letter cards for those glyphs.
 // `media=video:<url>[ | caption]` → an embedded player.
@@ -275,6 +299,32 @@ function lineToEx(line) {
       }
       if (kv.alt) ex.accept = kv.alt.split(' | ');
       ex.correctLabel = kv.label ?? ex.correct;
+      if (caption) ex.caption = caption;
+      return ex;
+    }
+    case 'scan': {
+      const passage = [];
+      const stops = [];
+      for (const tok of pos[0].split(' ').filter(Boolean)) {
+        if (tok === '.') stops.push(passage.length - 1);
+        else passage.push(tok);
+      }
+      if (!kv.rounds) die(`scan needs rounds=english:word | …: ${line}`);
+      const rounds = kv.rounds.split(' | ').map((r) => {
+        const [prompt, target] = r.split(':');
+        if (!target) die(`scan round needs "english:word": ${r}`);
+        const [word, nth] = target.split('#');
+        const hits = passage.map((w, i) => (w === word ? i : -1)).filter((i) => i >= 0);
+        if (!hits.length) die(`scan round "${r}": ${word} is not in the passage`);
+        if (hits.length > 1 && !nth)
+          die(`scan round "${r}": ${word} appears ${hits.length} times — say which with #n`);
+        const correct = hits[nth ? Number(nth) - 1 : 0];
+        if (correct === undefined) die(`scan round "${r}": there is no occurrence #${nth}`);
+        return { prompt, correct };
+      });
+      const ex = { type, passage, rounds,
+                   correctLabel: rounds.map((r) => `${r.prompt} = ${passage[r.correct]}`).join(' · ') };
+      if (stops.length) ex.stops = stops;
       if (caption) ex.caption = caption;
       return ex;
     }
@@ -464,6 +514,14 @@ function checkLesson(lesson, problems, byId = {}) {
     if (ex.type === 'teach' && ex.media?.kind === 'letters') {
       const unknown = ex.media.glyphs.filter((g) => !LETTERS.has(g));
       if (unknown.length) flag(`media letters are not Shavian letters: ${unknown.join(' ')}`);
+    }
+
+    if (ex.type === 'scan') {
+      if (ex.rounds.length < 2) flag('a scan needs at least two rounds');
+      if (new Set(ex.rounds.map((r) => r.correct)).size !== ex.rounds.length)
+        flag('two rounds point at the same word');
+      if (ex.rounds.some((r) => ex.passage[r.correct] === undefined))
+        flag('a round points outside the passage');
     }
 
     if (ex.type === 'sort') {
