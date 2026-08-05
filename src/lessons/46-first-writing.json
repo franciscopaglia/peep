@@ -7,7 +7,42 @@
     {
       "type": "teach",
       "title": "Welcome to Chapter 4",
-      "body": "Reading is one direction — now you write. Below every exercise sits a full Shavian keyboard, laid out like the alphabet chart you learned from: each deep letter directly under its tall partner, each long vowel under its short one. Hunt by sound family and you’ll find any letter fast. (Real phone and computer layouts exist too — Shaw JAFL and Shaw QWERTY — for when you graduate.)"
+      "body": "Reading is one direction — now you write. Below every exercise sits the Shavian keyboard, laid out like the alphabet chart you learned from: each deep letter directly under its tall partner, each long vowel under its short one. Hunt by sound family and you’ll find any letter fast. It shows only the keys an answer needs, so it starts as bare letters and grows as the words do. (Real phone and computer layouts exist too — Shaw JAFL and Shaw QWERTY — for when you graduate.)"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        2
+      ],
+      "bank": [
+        "𐑑",
+        "𐑛",
+        "𐑐"
+      ],
+      "correctLabel": "𐑒𐑨𐑑",
+      "prompt": "cat",
+      "word": [
+        "𐑒",
+        "𐑨",
+        "𐑑"
+      ]
+    },
+    {
+      "type": "build",
+      "prompt": "cat",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑨",
+        "𐑑",
+        "𐑪"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑨",
+        "𐑑"
+      ],
+      "correctLabel": "𐑒𐑨𐑑"
     },
     {
       "type": "write",
@@ -15,6 +50,11 @@
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑒𐑨𐑑",
       "correctLabel": "𐑒𐑨𐑑"
+    },
+    {
+      "type": "teach",
+      "title": "Spell the sound, not the letters",
+      "body": "You have just spelled “cat” three ways, with less help each time — that is the shape of this whole chapter. Now forget English spelling entirely. Say the word out loud, then write one Shavian letter per sound you hear. “Fish” is three sounds — f, i, sh — so it is three letters: 𐑓 𐑦 𐑖."
     },
     {
       "type": "write",
@@ -29,11 +69,6 @@
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑕𐑳𐑯",
       "correctLabel": "𐑕𐑳𐑯"
-    },
-    {
-      "type": "teach",
-      "title": "Spell the sound, not the letters",
-      "body": "Forget English spelling entirely. Say the word out loud, then write one Shavian letter per sound you hear. “Fish” is three sounds — f, i, sh — so it’s three letters: 𐑓 𐑦 𐑖."
     },
     {
       "type": "write",
@@ -66,7 +101,7 @@
     {
       "type": "teach",
       "title": "Names need the dot",
-      "body": "Remember the naming dot? When you write a name, it goes first — the keyboard has a · key waiting on its bottom row."
+      "body": "Remember the naming dot? When you write a name it goes first — and since the next answer is a name, a · key appears with it, below the letters."
     },
     {
       "type": "write",
