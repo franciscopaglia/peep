@@ -37,10 +37,10 @@
     },
     {
       "type": "write",
-      "prompt": "a cup of milk",
+      "prompt": "a cup of coffee",
       "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑩 𐑒𐑳𐑐 𐑝 𐑥𐑦𐑤𐑒",
-      "correctLabel": "𐑩 𐑒𐑳𐑐 𐑝 𐑥𐑦𐑤𐑒"
+      "correct": "𐑩 𐑒𐑳𐑐 𐑝 𐑒𐑪𐑓𐑦",
+      "correctLabel": "𐑩 𐑒𐑳𐑐 𐑝 𐑒𐑪𐑓𐑦"
     },
     {
       "type": "teach",
@@ -70,17 +70,31 @@
     },
     {
       "type": "write",
-      "prompt": "to the market",
+      "prompt": "the bus to the station",
       "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑑 𐑞 𐑥𐑸𐑒𐑩𐑑",
-      "correctLabel": "𐑑 𐑞 𐑥𐑸𐑒𐑩𐑑"
+      "correct": "𐑞 𐑚𐑳𐑕 𐑑 𐑞 𐑕𐑑𐑱𐑖𐑩𐑯",
+      "correctLabel": "𐑞 𐑚𐑳𐑕 𐑑 𐑞 𐑕𐑑𐑱𐑖𐑩𐑯"
     },
     {
       "type": "write",
-      "prompt": "bread and water",
+      "prompt": "a letter for my brother",
       "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑚𐑮𐑧𐑛 𐑯 𐑢𐑷𐑑𐑼",
-      "correctLabel": "𐑚𐑮𐑧𐑛 𐑯 𐑢𐑷𐑑𐑼"
+      "correct": "𐑩 𐑤𐑧𐑑𐑼 𐑓 𐑥𐑲 𐑚𐑮𐑳𐑞𐑼",
+      "correctLabel": "𐑩 𐑤𐑧𐑑𐑼 𐑓 𐑥𐑲 𐑚𐑮𐑳𐑞𐑼"
+    },
+    {
+      "type": "write",
+      "prompt": "out of the house",
+      "caption": "Four words, three of them single letters",
+      "correct": "𐑬𐑑 𐑝 𐑞 𐑣𐑬𐑕",
+      "correctLabel": "𐑬𐑑 𐑝 𐑞 𐑣𐑬𐑕"
+    },
+    {
+      "type": "write",
+      "prompt": "half an hour",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑣𐑭𐑓 𐑩𐑯 𐑬𐑼",
+      "correctLabel": "𐑣𐑭𐑓 𐑩𐑯 𐑬𐑼"
     }
   ]
 }
