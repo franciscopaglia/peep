@@ -12,6 +12,7 @@ import { TranscribeCard } from './TranscribeCard';
 import { WriteCard } from './WriteCard';
 import { MatchCard } from './MatchCard';
 import { ListenCard } from './ListenCard';
+import { SortCard } from './SortCard';
 
 /**
  * Renders whichever card the exercise calls for — the one place that knows the
@@ -50,6 +51,8 @@ export function ExerciseCard(props: ExerciseProps) {
       return <MatchCard {...props} exercise={exercise} />;
     case 'listen':
       return <ListenCard {...props} exercise={exercise} />;
+    case 'sort':
+      return <SortCard {...props} exercise={exercise} />;
     default:
       exercise satisfies never;
       return null;

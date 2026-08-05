@@ -20,6 +20,8 @@ import type {
   SpotExercise,
   TranscribeExercise,
   WriteExercise,
+  SortExercise,
+  ListenExercise,
   Exercise,
 } from '@/lessons/types';
 
@@ -318,5 +320,51 @@ describe('lessonPassed', () => {
 
   it('a lesson with nothing to grade always passes', () => {
     expect(lessonPassed(0, 0)).toBe(true);
+  });
+});
+
+describe('sort', () => {
+  const sortEx: SortExercise = {
+    type: 'sort',
+    prompt: 'Which ending?',
+    buckets: ['𐑕', '𐑟'],
+    items: ['𐑒𐑨𐑑𐑕', '𐑛𐑪𐑜𐑟', '𐑚𐑫𐑒𐑕'],
+    answer: [0, 1, 0],
+    correctLabel: '𐑕: 𐑒𐑨𐑑𐑕 𐑚𐑫𐑒𐑕 · 𐑟: 𐑛𐑪𐑜𐑟',
+  };
+
+  it('passes only when every item is in its bucket', () => {
+    expect(isCorrect(sortEx, { ...emptyAnswer, fillSel: { 0: 0, 1: 1, 2: 0 } })).toBe(true);
+    expect(isCorrect(sortEx, { ...emptyAnswer, fillSel: { 0: 1, 1: 1, 2: 0 } })).toBe(false);
+  });
+
+  it('fails a half-sorted pile', () => {
+    expect(isCorrect(sortEx, { ...emptyAnswer, fillSel: { 0: 0, 1: 1 } })).toBe(false);
+    expect(isCorrect(sortEx, { ...emptyAnswer, fillSel: {} })).toBe(false);
+  });
+});
+
+describe('listen', () => {
+  const base = { type: 'listen' as const, say: 'cat', correct: '𐑒𐑨𐑑', correctLabel: '𐑒𐑨𐑑' };
+
+  it('with options, grades the pick', () => {
+    const ex: ListenExercise = { ...base, options: ['𐑒𐑨𐑑', '𐑒𐑪𐑑'] };
+    expect(isCorrect(ex, { ...emptyAnswer, selected: '𐑒𐑨𐑑' })).toBe(true);
+    expect(isCorrect(ex, { ...emptyAnswer, selected: '𐑒𐑪𐑑' })).toBe(false);
+    // Typing into a multiple-choice listen means nothing.
+    expect(isCorrect(ex, { ...emptyAnswer, typedValue: '𐑒𐑨𐑑' })).toBe(false);
+  });
+
+  it('without options, it is dictation — graded like a spelling', () => {
+    const ex: ListenExercise = { ...base };
+    expect(isCorrect(ex, { ...emptyAnswer, typedValue: '𐑒𐑨𐑑' })).toBe(true);
+    expect(isCorrect(ex, { ...emptyAnswer, typedValue: ' 𐑒𐑨𐑑 ' })).toBe(true);
+    expect(isCorrect(ex, { ...emptyAnswer, typedValue: '𐑒𐑪𐑑' })).toBe(false);
+    expect(isCorrect(ex, { ...emptyAnswer, selected: '𐑒𐑨𐑑' })).toBe(false);
+  });
+
+  it('accepts alternates in dictation', () => {
+    const ex: ListenExercise = { ...base, say: 'two', correct: '𐑑𐑵', accept: ['𐑑'] };
+    expect(isCorrect(ex, { ...emptyAnswer, typedValue: '𐑑' })).toBe(true);
   });
 });

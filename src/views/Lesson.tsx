@@ -66,6 +66,7 @@ export function Lesson({
   onFillAdd: (i: number) => void;
   onFillRemove: (pos: number) => void;
   onMatchClick: (side: 'left' | 'right', value: string) => void;
+  onAssign: (item: number, bucket: number) => void;
 }) {
   const isWrong = status === 'wrong';
   const isTeach = exercise.type === 'teach';

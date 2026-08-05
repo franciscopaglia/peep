@@ -78,8 +78,22 @@ function shuffle<T>(items: T[]): T[] {
 }
 
 export function shuffleExerciseOptions(exercise: Exercise): Exercise {
-  if (exercise.type === 'choice' || exercise.type === 'listen') {
+  if (exercise.type === 'choice') {
     return { ...exercise, options: shuffle(exercise.options) };
+  }
+  if (exercise.type === 'listen') {
+    // Dictation has nothing to shuffle — the keyboard is the exercise.
+    return exercise.options ? { ...exercise, options: shuffle(exercise.options) } : exercise;
+  }
+  if (exercise.type === 'sort') {
+    // `answer` runs parallel to `items`, so they have to move together or the
+    // shuffle would silently reassign every word to the wrong bucket.
+    const order = shuffle(exercise.items.map((_, i) => i));
+    return {
+      ...exercise,
+      items: order.map((i) => exercise.items[i]),
+      answer: order.map((i) => exercise.answer[i]),
+    };
   }
   if (exercise.type === 'build' || exercise.type === 'arrange') {
     return { ...exercise, tiles: shuffle(exercise.tiles) };

@@ -132,7 +132,7 @@ Each view has one clear job — keep them focused:
 
 ## Exercise types
 
-Thirteen types (see `src/lessons/types.ts`). Graded via `isCorrect`:
+Fourteen types (see `src/lessons/types.ts`). Graded via `isCorrect`:
 `choice`, `type` (read the Shavian, write the English — a **one-word** answer is
 matched exactly, since the drill is minimal pairs and "cot" must not pass for
 "cat", while a **multi-word** answer is graded with `transcribe`'s typo
@@ -154,11 +154,18 @@ on, a phrase or whole sentence — in Shavian on the on-screen keyboard; layout 
 `lib/shavian-keyboard.ts`: chart-paired letter rows plus the naming dot,
 `. , ? !` and a space key. Graded on an exact glyph match (plus `accept`),
 with only the spacing between words normalized), `listen` (**experimental** —
-hear `say` read aloud by the browser and tap the Shavian that spells it; graded
-like a `choice`, and `lesson.mjs check` rejects a `say=` containing Shavian,
-since speech synthesis reads it as nothing. Used in exactly one branch lesson,
-9252, which says so on its first card — do not spread it further until the
-browser-voice question is settled). `teach` is not
+hear `say` read aloud by the browser. With `options` it is a `choice` whose
+prompt is audio; **without them it is dictation**, spelled on the keyboard and
+graded exactly as `write`. The card always offers "Show the word", which
+reveals `say` with no penalty — a voice the learner cannot hear is not their
+fault. `lesson.mjs check` rejects a `say=` containing Shavian, since speech
+synthesis reads it as nothing. Used in exactly one branch lesson, 9252, which
+says so on its first card — do not spread it further until the browser-voice
+question is settled), `sort` (place each of `items` into one of `buckets`;
+`answer` holds the bucket index per item, and the learner's placement lives in
+`fillSel` keyed by item. **The only type that tests a rule rather than an
+instance** — every other one can be answered by recognising a single word).
+`teach` is not
 graded; `match` is graded through its own pairing flow (not via `isCorrect`).
 `match` is **intentionally not failable** — wrong picks just shake and reset,
 and finishing always scores the point.
@@ -171,8 +178,10 @@ where it stands; ROADMAP.md's "Rebalancing the exercise mix" holds the targets.
 `arrange` tiles, and `complete`/`fill`/`cloze` banks on load. The shuffle
 guarantees a **non-identity** order (never the authored order — the correct
 answer is always authored first, so this stops "tap straight through").
-`spot`, `transcribe` and `write` are never shuffled — their text/keyboard
-*is* the exercise.
+`sort` shuffles its items, carrying `answer` along in the same permutation —
+they run parallel, so moving one without the other would silently reassign
+every word. `spot`, `transcribe`, `write` and `listen` dictation are never
+shuffled — their text/keyboard *is* the exercise.
 
 ## Lesson authoring rules
 
@@ -269,7 +278,10 @@ and in `canCheck` (`lesson-machine.ts`), write a card in
 `components/exercises/` and register it in `ExerciseCard.tsx`, and add coverage
 in `grading.test.ts` (the `lessons.test.ts` `solve()` helper also needs a case).
 TypeScript fails the build until the union is handled everywhere it switches,
-so the compiler walks you through most of this list.
+so the compiler walks you through most of this list — but **not** through the
+tooling: `lesson.mjs` needs a serializer *and* a parser branch (`check` fails
+the round-trip otherwise) plus any structural rules, and `spellcheck.mjs` needs
+to know which of the new fields are spelling claims. Neither is type-checked.
 
 ## Conventions & DRY
 

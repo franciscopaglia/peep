@@ -116,6 +116,10 @@ export default function App() {
     (position: number) => dispatch({ type: 'fillRemove', position }),
     []
   );
+  const assign = useCallback(
+    (item: number, bucket: number) => dispatch({ type: 'assign', item, bucket }),
+    []
+  );
   const matchClick = useCallback(
     (side: 'left' | 'right', value: string) => dispatch({ type: 'matchClick', side, value }),
     []
@@ -225,6 +229,7 @@ export default function App() {
           onFillAdd={fillAdd}
           onFillRemove={fillRemove}
           onMatchClick={matchClick}
+          onAssign={assign}
         />
       )}
 

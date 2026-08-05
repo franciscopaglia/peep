@@ -115,6 +115,11 @@ function claimsFor(ex, at, out) {
       // worth checking. Wrong options are non-words by design.
       pair(out, at, ex.correct, ex.say);
       break;
+    case 'sort':
+      // Every item is a real word the lesson stands behind; which bucket it
+      // belongs in is a sound question, not a meaning one, so no gloss.
+      ex.items.forEach((w) => claim(out, at, w));
+      break;
     case 'match':
       // A match pair says "this Shavian means this English", so even a lone
       // glyph is a word claim: 𐑞 really is "the", but 𐑧 is not "bed".

@@ -107,6 +107,29 @@
     },
     {
       "type": "teach",
+      "title": "Now without the options",
+      "body": "One last thing, and it is the hardest the alphabet can ask: no four spellings to choose between. Hear the word, and write it. If the voice fails you, the hint is still there."
+    },
+    {
+      "type": "listen",
+      "say": "sun",
+      "correct": "𐑕𐑳𐑯",
+      "correctLabel": "𐑕𐑳𐑯"
+    },
+    {
+      "type": "listen",
+      "say": "fish",
+      "correct": "𐑓𐑦𐑖",
+      "correctLabel": "𐑓𐑦𐑖"
+    },
+    {
+      "type": "listen",
+      "say": "green",
+      "correct": "𐑜𐑮𐑰𐑯",
+      "correctLabel": "𐑜𐑮𐑰𐑯"
+    },
+    {
+      "type": "teach",
       "title": "How was that?",
       "body": "If that worked for you, it may become a proper part of the course. If it did not — no voice, the wrong accent, a word that sounded nothing like its spelling — that is exactly what we need to know, and reaching for “Show the word” a lot is a useful thing to report. There is a “report a problem” flag at the top of every exercise."
     }

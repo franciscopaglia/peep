@@ -30,8 +30,14 @@ function byBlank(indices: number[]): Record<number, number> {
 function solve(ex: Exercise): AnswerState {
   switch (ex.type) {
     case 'choice':
-    case 'listen':
       return { ...emptyAnswer, selected: ex.correct };
+    case 'listen':
+      // Options mean pick one; without them it is dictation, spelled out.
+      return ex.options
+        ? { ...emptyAnswer, selected: ex.correct }
+        : { ...emptyAnswer, typedValue: ex.correct };
+    case 'sort':
+      return { ...emptyAnswer, fillSel: byBlank(ex.answer) };
     case 'type':
       return { ...emptyAnswer, typedValue: ex.correct };
     case 'build':

@@ -31,7 +31,7 @@ Legend: ✅ shipped · 🚧 in progress · 🗓️ planned · 💡 idea / under 
 
 ### Practice
 
-Thirteen kinds of exercise keep every lesson varied:
+Fourteen kinds of exercise keep every lesson varied:
 
 | Type | What it does |
 | --- | --- |
@@ -47,7 +47,8 @@ Thirteen kinds of exercise keep every lesson varied:
 | `spot` | Tap the word in a sentence that means the English prompt |
 | `transcribe` | Read a Shavian passage and write the full English (sourced, for real texts) |
 | `write` | Spell an English word in Shavian on the full on-screen keyboard |
-| `listen` | Hear a word and tap the Shavian that spells it — **experimental**, one branch lesson only |
+| `listen` | Hear a word and either tap the Shavian that spells it or write it from dictation — **experimental**, one branch lesson |
+| `sort` | Put each word in the right bucket — the only exercise that tests a rule, not an instance |
 
 - **Everything is randomized** — choice options, letter tiles, fill-in banks, and
   both match columns are shuffled on every load, and never render in their
@@ -118,7 +119,7 @@ the level that makes reading really click. New exercise types planned here:
 
 ### 🗓️ Rebalancing the exercise mix
 
-Thirteen exercise types exist, but the curriculum leans hard on a few of them.
+Fourteen exercise types exist, but the curriculum leans hard on a few of them.
 Measured with `node scripts/curriculum.mjs types`, today's graded exercises are:
 
 | | ch1 (587) | ch2 (184) | ch3 (86) | ch4 (70) |

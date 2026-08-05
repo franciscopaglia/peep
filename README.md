@@ -52,7 +52,7 @@ belong to. They unlock when you reach their spot, and never gate the path or
 count toward your progress: take them when you want more, skip them when you
 don't.
 
-Thirteen kinds of exercise keep practice varied:
+Fourteen kinds of exercise keep practice varied:
 
 | Type | What it does |
 | --- | --- |
@@ -68,7 +68,8 @@ Thirteen kinds of exercise keep practice varied:
 | `spot` | Read a sentence and tap the word that means the English prompt |
 | `transcribe` | Read a Shavian passage and write out the full English (sourced, for real texts) |
 | `write` | Spell an English word in Shavian on a full on-screen keyboard |
-| `listen` | Hear a word and tap the Shavian that spells it — experimental, one branch lesson |
+| `listen` | Hear a word and either tap the Shavian that spells it or write it from dictation — **experimental** |
+| `sort` | Put each word in the right bucket — the only exercise that tests a rule, not an instance |
 
 ## Getting started
 
