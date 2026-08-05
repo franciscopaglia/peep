@@ -5,7 +5,20 @@ import { answerColors, enterAnimation, poolTileStyle } from '@/lib/exercise-styl
 import { keyboardRows, NAMING_DOT, PUNCTUATION_KEYS, SPACE_KEY } from '@/lib/shavian-keyboard';
 import { useIsMobile } from '@/hooks/useIsMobile';
 
-/** Spell the prompt in Shavian on the full on-screen keyboard. */
+/**
+ * Spell the prompt in Shavian on the on-screen keyboard.
+ *
+ * The 48 letters are always there, but the space, the naming dot and the
+ * borrowed punctuation appear only for an answer that uses them. A learner
+ * meeting the keyboard for the first time in lesson 46 is spelling single
+ * words, and five keys they have no use for are five keys in the way; the
+ * space arrives in lesson 49 with the first phrase, and the stops in 52 with
+ * the first sentence, which is exactly the story those lessons tell.
+ *
+ * Derived from the answer rather than authored, so it cannot drift from the
+ * content — and seeing a space key is a fair hint that the answer has two
+ * words, which the English prompt already said.
+ */
 export function WriteCard({
   exercise,
   status,
@@ -19,6 +32,15 @@ export function WriteCard({
   const dim = answerColors(status, false);
   const keyStyle = poolTileStyle(false, status);
   const append = (glyph: string) => onTypeChange(typedValue + glyph);
+
+  // Every spelling this exercise accepts, so an alternate that needs a key
+  // still gets one. Joined with nothing, or the join itself would look like a
+  // space every answer needed.
+  const answers = [exercise.correct, ...(exercise.accept ?? [])];
+  const needsSpace = answers.some((answer) => answer.trim().includes(' '));
+  const extraKeys = [NAMING_DOT, ...PUNCTUATION_KEYS].filter((key) =>
+    answers.some((answer) => answer.includes(key.glyph))
+  );
 
   return (
     <div className="w-full flex flex-col items-center gap-6" style={enterAnimation}>
@@ -57,46 +79,52 @@ export function WriteCard({
             ))}
           </div>
         ))}
-        {/* The naming dot and the punctuation Shavian borrows unchanged
-            from English — needed once prompts are whole sentences. */}
+        {/* The naming dot and the punctuation Shavian borrows unchanged from
+            English, shown only when this answer uses them — see `extraKeys`. */}
+        {extraKeys.length > 0 && (
+          <div className="flex justify-center gap-1.5">
+            {extraKeys.map((key) => (
+              <button
+                key={key.glyph}
+                onClick={() => append(key.glyph)}
+                disabled={status !== 'active'}
+                aria-label={key.name}
+                title={key.name}
+                className="h-10 sm:h-11 flex-1 max-w-[70px] rounded-md font-bold text-xl flex items-center justify-center"
+                style={{
+                  ...keyStyle,
+                  // The naming dot and the full stop are the same mark at
+                  // different heights — gap them so they don't read as one
+                  // pair of near-identical keys.
+                  ...(key === NAMING_DOT && extraKeys.length > 1 ? { marginRight: 14 } : null),
+                }}
+              >
+                {key.glyph}
+              </button>
+            ))}
+          </div>
+        )}
         <div className="flex justify-center gap-1.5">
-          {[NAMING_DOT, ...PUNCTUATION_KEYS].map((key) => (
+          {needsSpace && (
             <button
-              key={key.glyph}
-              onClick={() => append(key.glyph)}
-              disabled={status !== 'active'}
-              aria-label={key.name}
-              title={key.name}
-              className="h-10 sm:h-11 flex-1 max-w-[70px] rounded-md font-bold text-xl flex items-center justify-center"
-              style={{
-                ...keyStyle,
-                // The naming dot and the full stop are the same mark at
-                // different heights — gap them so they don't read as one
-                // pair of near-identical keys.
-                ...(key === NAMING_DOT ? { marginRight: 14 } : null),
-              }}
+              onClick={() => append(SPACE_KEY.glyph)}
+              disabled={status !== 'active' || typedValue.length === 0}
+              aria-label={SPACE_KEY.name}
+              title={SPACE_KEY.name}
+              className="h-10 sm:h-11 flex-1 rounded-md text-xs font-medium tracking-wide flex items-center justify-center"
+              style={keyStyle}
             >
-              {key.glyph}
+              {SPACE_KEY.name}
             </button>
-          ))}
-        </div>
-        <div className="flex justify-center gap-1.5">
-          <button
-            onClick={() => append(SPACE_KEY.glyph)}
-            disabled={status !== 'active' || typedValue.length === 0}
-            aria-label={SPACE_KEY.name}
-            title={SPACE_KEY.name}
-            className="h-10 sm:h-11 flex-1 rounded-md text-xs font-medium tracking-wide flex items-center justify-center"
-            style={keyStyle}
-          >
-            {SPACE_KEY.name}
-          </button>
+          )}
           <button
             onClick={() => onTypeChange([...typedValue].slice(0, -1).join(''))}
             disabled={status !== 'active' || typedValue.length === 0}
             aria-label="delete last letter"
             title="delete last letter"
-            className="h-10 sm:h-11 w-[28%] rounded-md flex items-center justify-center"
+            className={`h-10 sm:h-11 rounded-md flex items-center justify-center ${
+              needsSpace ? 'w-[28%]' : 'flex-1'
+            }`}
             style={keyStyle}
           >
             <Delete size={20} />

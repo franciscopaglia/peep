@@ -10,12 +10,36 @@
       "body": "Time to read like a Shavian reader: a whole passage on one side, and you writing out the English on the other. The text is “The North Wind and the Sun” — the Aesop fable that linguists have used for over a century to show off writing systems. Small slips of case or punctuation are fine; just write what it says."
     },
     {
-      "type": "transcribe",
-      "passage": "𐑞 𐑯𐑹𐑔 𐑢𐑦𐑯𐑛 𐑯 𐑞 𐑕𐑳𐑯 𐑢𐑻 𐑛𐑦𐑕𐑐𐑿𐑑𐑦𐑙 𐑢𐑦𐑗 𐑢𐑪𐑟 𐑞 𐑕𐑑𐑮𐑪𐑙𐑜𐑼.",
-      "caption": "Read the passage, then write it out in English",
-      "correct": "the north wind and the sun were disputing which was the stronger",
-      "correctLabel": "the north wind and the sun were disputing which was the stronger",
-      "source": "Aesop, “The North Wind and the Sun”"
+      "type": "cloze",
+      "blanks": [
+        2,
+        11
+      ],
+      "bank": [
+        "𐑢𐑦𐑯𐑛",
+        "𐑕𐑑𐑮𐑪𐑙𐑜𐑼",
+        "𐑒𐑤𐑴𐑒"
+      ],
+      "correctLabel": "𐑞 𐑯𐑹𐑔 𐑢𐑦𐑯𐑛 𐑯 𐑞 𐑕𐑳𐑯 𐑢𐑻 𐑛𐑦𐑕𐑐𐑿𐑑𐑦𐑙 𐑢𐑦𐑗 𐑢𐑪𐑟 𐑞 𐑕𐑑𐑮𐑪𐑙𐑜𐑼",
+      "words": [
+        "𐑞",
+        "𐑯𐑹𐑔",
+        "𐑢𐑦𐑯𐑛",
+        "𐑯",
+        "𐑞",
+        "𐑕𐑳𐑯",
+        "𐑢𐑻",
+        "𐑛𐑦𐑕𐑐𐑿𐑑𐑦𐑙",
+        "𐑢𐑦𐑗",
+        "𐑢𐑪𐑟",
+        "𐑞",
+        "𐑕𐑑𐑮𐑪𐑙𐑜𐑼"
+      ],
+      "stops": [
+        11
+      ],
+      "translation": "The north wind and the sun were disputing which was the stronger.",
+      "caption": "The fable opens — read it, and fill the two gaps"
     },
     {
       "type": "transcribe",
