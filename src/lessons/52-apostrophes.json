@@ -1,0 +1,117 @@
+{
+  "id": 52,
+  "title": "The Apostrophe Vanishes",
+  "glyph": "𐑛𐑴𐑯𐑑",
+  "chapter": 4,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Nothing is missing",
+      "body": "An English apostrophe marks a letter that was dropped: do not loses its o and becomes don’t. Shavian never dropped anything — it writes the sounds you actually make, and you make every one of them. So don’t is simply 𐑛𐑴𐑯𐑑. No apostrophe, because nothing is missing."
+    },
+    {
+      "type": "write",
+      "prompt": "don’t",
+      "caption": "Say it, then write it — four sounds",
+      "correct": "𐑛𐑴𐑯𐑑",
+      "correctLabel": "𐑛𐑴𐑯𐑑"
+    },
+    {
+      "type": "write",
+      "prompt": "can’t",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑒𐑭𐑯𐑑",
+      "correctLabel": "𐑒𐑭𐑯𐑑"
+    },
+    {
+      "type": "write",
+      "prompt": "didn’t",
+      "caption": "This one keeps a schwa in the middle",
+      "correct": "𐑛𐑦𐑛𐑩𐑯𐑑",
+      "correctLabel": "𐑛𐑦𐑛𐑩𐑯𐑑"
+    },
+    {
+      "type": "teach",
+      "title": "The short ones",
+      "body": "The same goes for the contractions that shrink a whole word: I’m is 𐑲𐑥, we’ll is 𐑢𐑰𐑤, it’s is 𐑦𐑑𐑕. Two letters each, and not a mark of punctuation among them. If you can say it, you can write it."
+    },
+    {
+      "type": "write",
+      "prompt": "I’m",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑲𐑥",
+      "correctLabel": "𐑲𐑥"
+    },
+    {
+      "type": "write",
+      "prompt": "we’ll",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑢𐑰𐑤",
+      "correctLabel": "𐑢𐑰𐑤"
+    },
+    {
+      "type": "write",
+      "prompt": "it’s",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑦𐑑𐑕",
+      "correctLabel": "𐑦𐑑𐑕"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Why does Shavian have no apostrophe in 𐑛𐑴𐑯𐑑?",
+      "caption": "",
+      "optionIsGlyph": false,
+      "options": [
+        "Because no sound is missing — it writes what you say",
+        "Because apostrophes are only for names",
+        "Because the naming dot replaces it",
+        "Because it is a short word"
+      ],
+      "correct": "Because no sound is missing — it writes what you say",
+      "correctLabel": "Because no sound is missing — it writes what you say"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        3
+      ],
+      "bank": [
+        "𐑩",
+        "𐑧",
+        "𐑦"
+      ],
+      "correctLabel": "𐑛𐑦𐑛𐑩𐑯𐑑",
+      "prompt": "didn’t",
+      "word": [
+        "𐑛",
+        "𐑦",
+        "𐑛",
+        "𐑩",
+        "𐑯",
+        "𐑑"
+      ]
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑛𐑴𐑯𐑑": "don’t",
+        "𐑒𐑭𐑯𐑑": "can’t",
+        "𐑲𐑥": "I’m",
+        "𐑦𐑑𐑕": "it’s"
+      },
+      "leftOrder": [
+        "𐑛𐑴𐑯𐑑",
+        "𐑒𐑭𐑯𐑑",
+        "𐑲𐑥",
+        "𐑦𐑑𐑕"
+      ],
+      "rightOrder": [
+        "I’m",
+        "it’s",
+        "don’t",
+        "can’t"
+      ]
+    }
+  ]
+}

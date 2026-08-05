@@ -430,6 +430,10 @@ function checkLesson(lesson, problems, byId = {}) {
     if (ex.type === 'choice' || ex.type === 'listen') {
       if (!ex.options.includes(ex.correct)) flag('correct not among options');
       if (new Set(ex.options).size !== ex.options.length) flag('duplicate options');
+      // One option is not a question. This catches a line whose ` | ` got eaten
+      // somewhere between the shell and the parser, which looks fine in the
+      // JSON and renders as a single button you cannot get wrong.
+      if (ex.options.length < 2) flag(`only ${ex.options.length} option(s)`);
     }
     if (ex.type === 'listen') {
       // The prompt is spoken by the browser, so it has to be English text —
