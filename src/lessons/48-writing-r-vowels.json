@@ -18,24 +18,10 @@
     },
     {
       "type": "write",
-      "prompt": "farm",
-      "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑓𐑸𐑥",
-      "correctLabel": "𐑓𐑸𐑥"
-    },
-    {
-      "type": "write",
       "prompt": "north",
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑯𐑹𐑔",
       "correctLabel": "𐑯𐑹𐑔"
-    },
-    {
-      "type": "write",
-      "prompt": "four",
-      "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑓𐑹",
-      "correctLabel": "𐑓𐑹"
     },
     {
       "type": "teach",
@@ -58,13 +44,6 @@
     },
     {
       "type": "write",
-      "prompt": "turn",
-      "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑑𐑻𐑯",
-      "correctLabel": "𐑑𐑻𐑯"
-    },
-    {
-      "type": "write",
       "prompt": "near",
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑯𐑽",
@@ -84,13 +63,6 @@
     },
     {
       "type": "write",
-      "prompt": "sister",
-      "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑕𐑦𐑕𐑑𐑼",
-      "correctLabel": "𐑕𐑦𐑕𐑑𐑼"
-    },
-    {
-      "type": "write",
       "prompt": "ear",
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑽",
@@ -98,10 +70,38 @@
     },
     {
       "type": "write",
-      "prompt": "few",
+      "prompt": "morning",
+      "caption": "The 𐑹 is buried in the middle now",
+      "correct": "𐑥𐑹𐑯𐑦𐑙",
+      "correctLabel": "𐑥𐑹𐑯𐑦𐑙"
+    },
+    {
+      "type": "write",
+      "prompt": "garden",
       "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑓𐑿",
-      "correctLabel": "𐑓𐑿"
+      "correct": "𐑜𐑸𐑛𐑩𐑯",
+      "correctLabel": "𐑜𐑸𐑛𐑩𐑯"
+    },
+    {
+      "type": "write",
+      "prompt": "teacher",
+      "caption": "Which r-vowel ends it?",
+      "correct": "𐑑𐑰𐑗𐑼",
+      "correctLabel": "𐑑𐑰𐑗𐑼"
+    },
+    {
+      "type": "write",
+      "prompt": "brother",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑚𐑮𐑳𐑞𐑼",
+      "correctLabel": "𐑚𐑮𐑳𐑞𐑼"
+    },
+    {
+      "type": "write",
+      "prompt": "birthday",
+      "caption": "Say it slowly — where does the r-vowel fall?",
+      "correct": "𐑚𐑻𐑔𐑛𐑱",
+      "correctLabel": "𐑚𐑻𐑔𐑛𐑱"
     }
   ]
 }

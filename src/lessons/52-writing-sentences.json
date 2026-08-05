@@ -44,31 +44,38 @@
     },
     {
       "type": "write",
-      "prompt": "I walked to the farm.",
+      "prompt": "I go to work by bus.",
       "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑲 𐑢𐑷𐑒𐑑 𐑑 𐑞 𐑓𐑸𐑥.",
-      "correctLabel": "𐑲 𐑢𐑷𐑒𐑑 𐑑 𐑞 𐑓𐑸𐑥."
+      "correct": "𐑲 𐑜𐑴 𐑑 𐑢𐑻𐑒 𐑚𐑲 𐑚𐑳𐑕.",
+      "correctLabel": "𐑲 𐑜𐑴 𐑑 𐑢𐑻𐑒 𐑚𐑲 𐑚𐑳𐑕."
     },
     {
       "type": "write",
-      "prompt": "Is it hot?",
+      "prompt": "What time is the train?",
       "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑦𐑟 𐑦𐑑 𐑣𐑪𐑑?",
-      "correctLabel": "𐑦𐑟 𐑦𐑑 𐑣𐑪𐑑?"
+      "correct": "𐑢𐑪𐑑 𐑑𐑲𐑥 𐑦𐑟 𐑞 𐑑𐑮𐑱𐑯?",
+      "correctLabel": "𐑢𐑪𐑑 𐑑𐑲𐑥 𐑦𐑟 𐑞 𐑑𐑮𐑱𐑯?"
     },
     {
       "type": "write",
-      "prompt": "My friend has a red bike.",
+      "prompt": "We had coffee in the kitchen.",
       "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑥𐑲 𐑓𐑮𐑧𐑯𐑛 𐑣𐑨𐑟 𐑩 𐑮𐑧𐑛 𐑚𐑲𐑒.",
-      "correctLabel": "𐑥𐑲 𐑓𐑮𐑧𐑯𐑛 𐑣𐑨𐑟 𐑩 𐑮𐑧𐑛 𐑚𐑲𐑒."
+      "correct": "𐑢𐑰 𐑣𐑨𐑛 𐑒𐑪𐑓𐑦 𐑦𐑯 𐑞 𐑒𐑦𐑗𐑦𐑯.",
+      "correctLabel": "𐑢𐑰 𐑣𐑨𐑛 𐑒𐑪𐑓𐑦 𐑦𐑯 𐑞 𐑒𐑦𐑗𐑦𐑯."
     },
     {
       "type": "write",
-      "prompt": "The bird sat near the water.",
+      "prompt": "My brother is a teacher.",
       "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑞 𐑚𐑻𐑛 𐑕𐑨𐑑 𐑯𐑽 𐑞 𐑢𐑷𐑑𐑼.",
-      "correctLabel": "𐑞 𐑚𐑻𐑛 𐑕𐑨𐑑 𐑯𐑽 𐑞 𐑢𐑷𐑑𐑼."
+      "correct": "𐑥𐑲 𐑚𐑮𐑳𐑞𐑼 𐑦𐑟 𐑩 𐑑𐑰𐑗𐑼.",
+      "correctLabel": "𐑥𐑲 𐑚𐑮𐑳𐑞𐑼 𐑦𐑟 𐑩 𐑑𐑰𐑗𐑼."
+    },
+    {
+      "type": "write",
+      "prompt": "Please wait a few minutes.",
+      "caption": "The longest one yet — take it a word at a time",
+      "correct": "𐑐𐑤𐑰𐑟 𐑢𐑱𐑑 𐑩 𐑓𐑿 𐑥𐑦𐑯𐑦𐑑𐑕.",
+      "correctLabel": "𐑐𐑤𐑰𐑟 𐑢𐑱𐑑 𐑩 𐑓𐑿 𐑥𐑦𐑯𐑦𐑑𐑕."
     },
     {
       "type": "teach",

@@ -25,17 +25,17 @@
     },
     {
       "type": "write",
-      "prompt": "books",
+      "prompt": "friends",
       "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑚𐑫𐑒𐑕",
-      "correctLabel": "𐑚𐑫𐑒𐑕"
+      "correct": "𐑓𐑮𐑧𐑯𐑛𐑟",
+      "correctLabel": "𐑓𐑮𐑧𐑯𐑛𐑟"
     },
     {
       "type": "write",
-      "prompt": "beds",
+      "prompt": "minutes",
       "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑚𐑧𐑛𐑟",
-      "correctLabel": "𐑚𐑧𐑛𐑟"
+      "correct": "𐑥𐑦𐑯𐑦𐑑𐑕",
+      "correctLabel": "𐑥𐑦𐑯𐑦𐑑𐑕"
     },
     {
       "type": "teach",
@@ -58,10 +58,10 @@
     },
     {
       "type": "write",
-      "prompt": "jumped",
+      "prompt": "watched",
       "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑡𐑳𐑥𐑐𐑑",
-      "correctLabel": "𐑡𐑳𐑥𐑐𐑑"
+      "correct": "𐑢𐑪𐑗𐑑",
+      "correctLabel": "𐑢𐑪𐑗𐑑"
     },
     {
       "type": "teach",
@@ -77,10 +77,10 @@
     },
     {
       "type": "write",
-      "prompt": "needed",
-      "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑯𐑰𐑛𐑩𐑛",
-      "correctLabel": "𐑯𐑰𐑛𐑩𐑛"
+      "prompt": "started",
+      "caption": "Which -ed is this one?",
+      "correct": "𐑕𐑑𐑸𐑑𐑩𐑛",
+      "correctLabel": "𐑕𐑑𐑸𐑑𐑩𐑛"
     },
     {
       "type": "teach",
@@ -96,10 +96,10 @@
     },
     {
       "type": "write",
-      "prompt": "singing",
+      "prompt": "shopping",
       "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑕𐑦𐑙𐑦𐑙",
-      "correctLabel": "𐑕𐑦𐑙𐑦𐑙"
+      "correct": "𐑖𐑪𐑐𐑦𐑙",
+      "correctLabel": "𐑖𐑪𐑐𐑦𐑙"
     }
   ]
 }

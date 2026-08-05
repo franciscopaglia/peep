@@ -18,24 +18,10 @@
     },
     {
       "type": "write",
-      "prompt": "again",
+      "prompt": "tomorrow",
       "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑩𐑜𐑧𐑯",
-      "correctLabel": "𐑩𐑜𐑧𐑯"
-    },
-    {
-      "type": "write",
-      "prompt": "ago",
-      "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑩𐑜𐑴",
-      "correctLabel": "𐑩𐑜𐑴"
-    },
-    {
-      "type": "write",
-      "prompt": "sofa",
-      "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑕𐑴𐑓𐑩",
-      "correctLabel": "𐑕𐑴𐑓𐑩"
+      "correct": "𐑑𐑩𐑥𐑪𐑮𐑴",
+      "correctLabel": "𐑑𐑩𐑥𐑪𐑮𐑴"
     },
     {
       "type": "teach",
@@ -64,6 +50,13 @@
       "correctLabel": "𐑴𐑐𐑩𐑯𐑛"
     },
     {
+      "type": "write",
+      "prompt": "hospital",
+      "caption": "Three syllables, and only one keeps its vowel",
+      "correct": "𐑣𐑪𐑕𐑐𐑦𐑑𐑩𐑤",
+      "correctLabel": "𐑣𐑪𐑕𐑐𐑦𐑑𐑩𐑤"
+    },
+    {
       "type": "teach",
       "title": "𐑩 or 𐑼?",
       "body": "One question decides between them: is there an r in the sound? The mumbled ending of better, summer and paper is not 𐑩 but 𐑼 — the array vowel from the last lesson. 𐑚𐑧𐑑𐑼, 𐑕𐑳𐑥𐑼, 𐑐𐑱𐑐𐑼. Keep 𐑩 for the mumble with no r in it."
@@ -84,17 +77,24 @@
     },
     {
       "type": "write",
-      "prompt": "paper",
-      "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑐𐑱𐑐𐑼",
-      "correctLabel": "𐑐𐑱𐑐𐑼"
+      "prompt": "together",
+      "caption": "This one needs both",
+      "correct": "𐑑𐑩𐑜𐑧𐑞𐑼",
+      "correctLabel": "𐑑𐑩𐑜𐑧𐑞𐑼"
     },
     {
       "type": "write",
-      "prompt": "banana",
+      "prompt": "remember",
       "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑚𐑩𐑯𐑭𐑯𐑩",
-      "correctLabel": "𐑚𐑩𐑯𐑭𐑯𐑩"
+      "correct": "𐑮𐑦𐑥𐑧𐑥𐑚𐑼",
+      "correctLabel": "𐑮𐑦𐑥𐑧𐑥𐑚𐑼"
+    },
+    {
+      "type": "write",
+      "prompt": "another",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑩𐑯𐑳𐑞𐑼",
+      "correctLabel": "𐑩𐑯𐑳𐑞𐑼"
     }
   ]
 }

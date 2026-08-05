@@ -24,13 +24,6 @@
       "correctLabel": "𐑓𐑵𐑛"
     },
     {
-      "type": "write",
-      "prompt": "put",
-      "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑐𐑫𐑑",
-      "correctLabel": "𐑐𐑫𐑑"
-    },
-    {
       "type": "teach",
       "title": "Short above, long below",
       "body": "The keyboard helps you. Its two vowel rows are paired: every short vowel sits directly above its long partner — 𐑦 over 𐑰, 𐑪 over 𐑴, 𐑳 over 𐑵. If a word comes out sounding wrong, try the letter just under (or just over) the one you picked."
@@ -48,13 +41,6 @@
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑜𐑮𐑰𐑯",
       "correctLabel": "𐑜𐑮𐑰𐑯"
-    },
-    {
-      "type": "write",
-      "prompt": "hot",
-      "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑣𐑪𐑑",
-      "correctLabel": "𐑣𐑪𐑑"
     },
     {
       "type": "write",
@@ -91,10 +77,24 @@
     },
     {
       "type": "write",
-      "prompt": "home",
-      "caption": "Spell it in Shavian on the keyboard below",
-      "correct": "𐑣𐑴𐑥",
-      "correctLabel": "𐑣𐑴𐑥"
+      "prompt": "school",
+      "caption": "One long 𐑵, however English spells it",
+      "correct": "𐑕𐑒𐑵𐑤",
+      "correctLabel": "𐑕𐑒𐑵𐑤"
+    },
+    {
+      "type": "write",
+      "prompt": "kitchen",
+      "caption": "Two short 𐑦, and no e anywhere",
+      "correct": "𐑒𐑦𐑗𐑦𐑯",
+      "correctLabel": "𐑒𐑦𐑗𐑦𐑯"
+    },
+    {
+      "type": "write",
+      "prompt": "afternoon",
+      "caption": "Three syllables — say it, then write what you hear",
+      "correct": "𐑭𐑓𐑑𐑼𐑯𐑵𐑯",
+      "correctLabel": "𐑭𐑓𐑑𐑼𐑯𐑵𐑯"
     }
   ]
 }
