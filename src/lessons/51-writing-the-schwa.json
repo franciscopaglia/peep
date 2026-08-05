@@ -95,6 +95,31 @@
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑩𐑯𐑳𐑞𐑼",
       "correctLabel": "𐑩𐑯𐑳𐑞𐑼"
+    },
+    {
+      "type": "sort",
+      "prompt": "Is the mumbled sound 𐑩 or 𐑼?",
+      "buckets": [
+        "𐑩",
+        "𐑼"
+      ],
+      "items": [
+        "𐑤𐑦𐑑𐑩𐑤",
+        "𐑐𐑮𐑪𐑚𐑤𐑩𐑥",
+        "𐑣𐑪𐑕𐑐𐑦𐑑𐑩𐑤",
+        "𐑚𐑧𐑑𐑼",
+        "𐑕𐑳𐑥𐑼",
+        "𐑑𐑰𐑗𐑼"
+      ],
+      "answer": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "correctLabel": "𐑩: 𐑤𐑦𐑑𐑩𐑤 𐑐𐑮𐑪𐑚𐑤𐑩𐑥 𐑣𐑪𐑕𐑐𐑦𐑑𐑩𐑤 · 𐑼: 𐑚𐑧𐑑𐑼 𐑕𐑳𐑥𐑼 𐑑𐑰𐑗𐑼"
     }
   ]
 }

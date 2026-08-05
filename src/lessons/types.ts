@@ -170,15 +170,66 @@ export type ListenExercise = {
   type: 'listen';
   say: string; // the English word spoken aloud — the prompt
   caption?: string;
-  options: string[]; // Shavian spellings
+  /**
+   * Shavian spellings to pick from. Omit for **dictation**: the learner spells
+   * what they heard on the keyboard instead, with nothing to recognise. Same
+   * prompt, no scaffolding — the hardest thing the alphabet can ask.
+   */
+  options?: string[];
   correct: string;
+  /** Alternate spellings also accepted, as `write` does. Dictation only. */
+  accept?: string[];
+  correctLabel: string;
+  retry?: boolean;
+};
+
+/**
+ * Put each word in the right bucket — the 𐑕 words against the 𐑟 words, the 𐑩
+ * endings against the 𐑼 ones.
+ *
+ * The only exercise that asks about a **rule** rather than an instance. Every
+ * other type can be answered by recognising one word; this one is only
+ * answerable by knowing what decides, which is what a lesson on endings or the
+ * schwa is actually teaching.
+ */
+export type SortExercise = {
+  type: 'sort';
+  prompt: string; // what decides the bucket, e.g. "Which ending does each take?"
+  caption?: string;
+  buckets: string[]; // the bucket labels, in display order
+  items: string[]; // the words to place
+  answer: number[]; // bucket index for each item, parallel to `items`
+  correctLabel: string;
+  retry?: boolean;
+};
+
+/**
+ * Find each word in a long passage — several rounds over one text.
+ *
+ * `spot` asks for one word in one sentence, which you can answer by reading the
+ * sentence. This is a page, and the skill is different: scanning, holding an
+ * English word in your head while your eye moves over Shavian looking for its
+ * shape. It is the closest thing in the course to using the alphabet rather
+ * than studying it.
+ *
+ * Rounds are answered in order, and each records the word index tapped — by
+ * index, not by spelling, because a passage this long repeats words constantly.
+ */
+export type ScanExercise = {
+  type: 'scan';
+  caption?: string;
+  passage: string[]; // the text, word by word (never shuffled — it is the exercise)
+  stops?: number[]; // word indices a sentence ends on
+  rounds: { prompt: string; correct: number }[]; // English prompt → index in `passage`
   correctLabel: string;
   retry?: boolean;
 };
 
 export type Exercise =
   | TeachExercise
+  | ScanExercise
   | ListenExercise
+  | SortExercise
   | ChoiceExercise
   | TypeExercise
   | MatchExercise

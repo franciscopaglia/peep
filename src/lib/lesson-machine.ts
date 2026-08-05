@@ -73,6 +73,7 @@ export type LessonAction =
   | { type: 'tileRemove'; position: number }
   | { type: 'fillAdd'; index: number }
   | { type: 'fillRemove'; position: number }
+  | { type: 'assign'; item: number; bucket: number }
   | { type: 'matchClick'; side: 'left' | 'right'; value: string }
   | { type: 'matchReset' };
 
@@ -167,6 +168,22 @@ export function lessonReducer(state: LessonState, action: LessonAction): LessonS
       return withCurrent(state, { fillSel: rest });
     }
 
+    // `sort` reuses `fillSel`, keyed by item instead of by blank: the shape —
+    // a sparse map from slot to choice — is the same, and so is the rule that
+    // re-placing an item replaces only that item.
+    case 'assign': {
+      if (!isActive(state)) return state;
+      // A negative bucket clears the slot — how `scan` re-opens a round it has
+      // already answered, since assigning is the only way in.
+      if (action.bucket < 0) {
+        const { [action.item]: cleared, ...rest } = state.current.fillSel;
+        return cleared === undefined ? state : withCurrent(state, { fillSel: rest });
+      }
+      return withCurrent(state, {
+        fillSel: { ...state.current.fillSel, [action.item]: action.bucket },
+      });
+    }
+
     case 'matchClick': {
       if (!exercise || exercise.type !== 'match' || state.matchWrong) return state;
       const { side, value } = action;
@@ -219,8 +236,14 @@ export function canCheck(state: LessonState): boolean {
       return typedValue.trim().length > 0;
     case 'choice':
     case 'spot':
-    case 'listen':
       return selected != null;
+    case 'listen':
+      return exercise.options ? selected != null : typedValue.trim().length > 0;
+    case 'sort':
+      // Every item placed — a half-sorted pile is not an answer.
+      return exercise.items.every((_, item) => fillSel[item] !== undefined);
+    case 'scan':
+      return exercise.rounds.every((_, round) => fillSel[round] !== undefined);
     case 'build':
     case 'arrange':
       return tileSel.length > 0;

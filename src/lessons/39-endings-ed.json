@@ -140,6 +140,32 @@
       ]
     },
     {
+      "type": "sort",
+      "prompt": "Which -ed does each verb take?",
+      "buckets": [
+        "𐑑",
+        "𐑛",
+        "𐑩𐑛"
+      ],
+      "items": [
+        "𐑢𐑷𐑒𐑑",
+        "𐑤𐑫𐑒𐑑",
+        "𐑐𐑤𐑱𐑛",
+        "𐑒𐑷𐑤𐑛",
+        "𐑢𐑪𐑯𐑑𐑩𐑛",
+        "𐑯𐑰𐑛𐑩𐑛"
+      ],
+      "answer": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2
+      ],
+      "correctLabel": "𐑑: 𐑢𐑷𐑒𐑑 𐑤𐑫𐑒𐑑 · 𐑛: 𐑐𐑤𐑱𐑛 𐑒𐑷𐑤𐑛 · 𐑩𐑛: 𐑢𐑪𐑯𐑑𐑩𐑛 𐑯𐑰𐑛𐑩𐑛"
+    },
+    {
       "type": "choice",
       "promptIsGlyph": false,
       "prompt": "How does the “-ed” in 𐑐𐑤𐑱𐑛 (played) sound?",

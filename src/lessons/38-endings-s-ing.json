@@ -131,6 +131,31 @@
       "correctLabel": "𐑮𐑰𐑛𐑦𐑙"
     },
     {
+      "type": "sort",
+      "prompt": "Which ending does each plural take?",
+      "buckets": [
+        "𐑕",
+        "𐑟"
+      ],
+      "items": [
+        "𐑒𐑨𐑑𐑕",
+        "𐑚𐑫𐑒𐑕",
+        "𐑣𐑨𐑑𐑕",
+        "𐑛𐑪𐑜𐑟",
+        "𐑚𐑧𐑛𐑟",
+        "𐑚𐑻𐑛𐑟"
+      ],
+      "answer": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "correctLabel": "𐑕: 𐑒𐑨𐑑𐑕 𐑚𐑫𐑒𐑕 𐑣𐑨𐑑𐑕 · 𐑟: 𐑛𐑪𐑜𐑟 𐑚𐑧𐑛𐑟 𐑚𐑻𐑛𐑟"
+    },
+    {
       "type": "teach",
       "title": "New: spot the word",
       "body": "From now on you’ll sometimes get a whole Shavian sentence and one word to find in it. Read the sentence, then tap the word that matches. That’s reading in the wild — scanning real text for meaning."

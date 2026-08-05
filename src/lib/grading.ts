@@ -113,6 +113,17 @@ export function transcriptionMatches(expected: string, typed: string): boolean {
 }
 
 /**
+ * Whether a spelled answer matches — for `write` and for `listen` dictation.
+ * The glyphs must be exact (it is a spelling exercise), but phrase prompts are
+ * typed with the keyboard's space key, so a stray double space, or one at
+ * either end, shouldn't fail an otherwise perfect spelling.
+ */
+function matchesSpelling(correct: string, accept: string[] | undefined, typed: string): boolean {
+  const answer = normalizeSpacing(typed);
+  return [correct, ...(accept ?? [])].some((option) => normalizeSpacing(option) === answer);
+}
+
+/**
  * Whether the given answer state solves the exercise. Pure — the single source
  * of truth for grading, shared by the app and the tests.
  *
@@ -122,9 +133,25 @@ export function transcriptionMatches(expected: string, typed: string): boolean {
 export function isCorrect(exercise: Exercise, state: AnswerState): boolean {
   switch (exercise.type) {
     case 'choice':
-    // The prompt is audio rather than text, but picking the answer is the same.
-    case 'listen':
       return state.selected === exercise.correct;
+
+    case 'listen':
+      // With options it is a `choice` whose prompt happens to be audio; without
+      // them it is dictation, graded exactly as `write` — an exact glyph match,
+      // with only the spacing between words forgiven.
+      return exercise.options
+        ? state.selected === exercise.correct
+        : matchesSpelling(exercise.correct, exercise.accept, state.typedValue);
+
+    case 'scan':
+      // Every round found, and found in the right place.
+      return exercise.rounds.every((round, i) => state.fillSel[i] === round.correct);
+
+    case 'sort': {
+      // Every item has to be placed, and placed right. `fillSel` maps item
+      // index to bucket index here — the same shape the blanks use.
+      return exercise.answer.every((bucket, item) => state.fillSel[item] === bucket);
+    }
     case 'type': {
       const typed = state.typedValue.trim();
       return [exercise.correct, ...(exercise.accept ?? [])].some((answer) =>
@@ -161,14 +188,8 @@ export function isCorrect(exercise: Exercise, state: AnswerState): boolean {
         transcriptionMatches(answer, state.typedValue)
       );
     }
-    case 'write': {
-      // Phrase prompts are spelled with the keyboard's space key, so a stray
-      // double space (or one at either end) shouldn't fail an exact spelling.
-      const typed = normalizeSpacing(state.typedValue);
-      return [exercise.correct, ...(exercise.accept ?? [])].some(
-        (answer) => normalizeSpacing(answer) === typed
-      );
-    }
+    case 'write':
+      return matchesSpelling(exercise.correct, exercise.accept, state.typedValue);
     // Nothing to grade here: a teach card is read, and `match` grades itself
     // as the pairs are found. Listed explicitly rather than caught by a
     // `default`, so a new member of the union fails to compile until grading

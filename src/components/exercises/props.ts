@@ -32,4 +32,6 @@ export type ExerciseProps<E extends Exercise = Exercise> = {
   onFillAdd: (i: number) => void;
   onFillRemove: (pos: number) => void;
   onMatchClick: (side: 'left' | 'right', value: string) => void;
+  /** `sort`: put an item in a bucket. */
+  onAssign: (item: number, bucket: number) => void;
 };

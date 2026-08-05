@@ -117,8 +117,46 @@ function exToLine(ex) {
       // `say` is spoken, never shown — so it is the prompt field here.
       parts.push(ex.say);
       joinCap(parts, ex);
-      parts.push(ex.options.map((o) => (o === ex.correct ? o : '+' + o)).join(' | '));
+      // Options mean "pick one"; `ok=` alone means dictation, on the keyboard.
+      if (ex.options) parts.push(ex.options.map((o) => (o === ex.correct ? o : '+' + o)).join(' | '));
+      else parts.push(`ok=${ex.correct}`);
+      if (ex.accept?.length) parts.push(`alt=${ex.accept.join(' | ')}`);
       if (ex.correctLabel !== ex.correct) parts.push(`label=${ex.correctLabel}`);
+      return parts.join(SEP);
+    }
+    case 'scan': {
+      const toks = [];
+      ex.passage.forEach((w, i) => {
+        toks.push(w);
+        if (ex.stops?.includes(i)) toks.push('.');
+      });
+      parts.push(toks.join(' '));
+      joinCap(parts, ex);
+      // Each round as `english:shavian`, with `#n` when that spelling occurs
+      // more than once — a long passage repeats words, and the answer is an
+      // index, so the line has to say *which* one.
+      parts.push(
+        'rounds=' +
+          ex.rounds
+            .map((r) => {
+              const word = ex.passage[r.correct];
+              const at = ex.passage.filter((w, i) => w === word && i <= r.correct).length;
+              const total = ex.passage.filter((w) => w === word).length;
+              return `${r.prompt}:${word}${total > 1 ? `#${at}` : ''}`;
+            })
+            .join(' | ')
+      );
+      return parts.join(SEP);
+    }
+    case 'sort': {
+      parts.push(ex.prompt);
+      joinCap(parts, ex);
+      // One field per bucket: `<label>: <its items>`. The bucket list, the item
+      // list and the answer all come back out of that.
+      ex.buckets.forEach((label, b) => {
+        const mine = ex.items.filter((_, i) => ex.answer[i] === b);
+        parts.push(`${label}: ${mine.join(' ')}`);
+      });
       return parts.join(SEP);
     }
     case 'choice': {
@@ -207,7 +245,7 @@ function exToLine(ex) {
 
 // ---------------------------------------------------------------- parser
 
-const KEYS = /^(cap|ok|alt|tr|src|media|label|tiles|ans|bank|R)=([\s\S]*)$/;
+const KEYS = /^(cap|ok|alt|tr|src|media|label|tiles|ans|bank|rounds|R)=([\s\S]*)$/;
 
 // `media=letters:𐑐𐑚` → the About page's letter cards for those glyphs.
 // `media=video:<url>[ | caption]` → an embedded player.
@@ -249,11 +287,62 @@ function lineToEx(line) {
       return ex;
     }
     case 'listen': {
-      const raw = pos[1].split(' | ');
-      const correct = raw.find((o) => !o.startsWith('+'));
-      if (!correct) die(`listen needs one unmarked (correct) option: ${line}`);
-      const ex = { type, say: pos[0], options: raw.map((o) => (o.startsWith('+') ? o.slice(1) : o)),
-                   correct, correctLabel: kv.label ?? correct };
+      const ex = { type, say: pos[0] };
+      if (kv.ok) {
+        ex.correct = kv.ok; // dictation — spelled on the keyboard
+      } else {
+        const raw = (pos[1] ?? '').split(' | ');
+        const correct = raw.find((o) => !o.startsWith('+'));
+        if (!correct) die(`listen needs ok=… or one unmarked option: ${line}`);
+        ex.options = raw.map((o) => (o.startsWith('+') ? o.slice(1) : o));
+        ex.correct = correct;
+      }
+      if (kv.alt) ex.accept = kv.alt.split(' | ');
+      ex.correctLabel = kv.label ?? ex.correct;
+      if (caption) ex.caption = caption;
+      return ex;
+    }
+    case 'scan': {
+      const passage = [];
+      const stops = [];
+      for (const tok of pos[0].split(' ').filter(Boolean)) {
+        if (tok === '.') stops.push(passage.length - 1);
+        else passage.push(tok);
+      }
+      if (!kv.rounds) die(`scan needs rounds=english:word | …: ${line}`);
+      const rounds = kv.rounds.split(' | ').map((r) => {
+        const [prompt, target] = r.split(':');
+        if (!target) die(`scan round needs "english:word": ${r}`);
+        const [word, nth] = target.split('#');
+        const hits = passage.map((w, i) => (w === word ? i : -1)).filter((i) => i >= 0);
+        if (!hits.length) die(`scan round "${r}": ${word} is not in the passage`);
+        if (hits.length > 1 && !nth)
+          die(`scan round "${r}": ${word} appears ${hits.length} times — say which with #n`);
+        const correct = hits[nth ? Number(nth) - 1 : 0];
+        if (correct === undefined) die(`scan round "${r}": there is no occurrence #${nth}`);
+        return { prompt, correct };
+      });
+      const ex = { type, passage, rounds,
+                   correctLabel: rounds.map((r) => `${r.prompt} = ${passage[r.correct]}`).join(' · ') };
+      if (stops.length) ex.stops = stops;
+      if (caption) ex.caption = caption;
+      return ex;
+    }
+    case 'sort': {
+      const buckets = [];
+      const items = [];
+      const answer = [];
+      for (const field of pos.slice(1)) {
+        const at = field.indexOf(': ');
+        if (at === -1) die(`sort bucket needs "<label>: <items>": ${field}`);
+        const b = buckets.push(field.slice(0, at)) - 1;
+        for (const item of field.slice(at + 2).split(' ').filter(Boolean)) {
+          items.push(item);
+          answer.push(b);
+        }
+      }
+      const ex = { type, prompt: pos[0], buckets, items, answer,
+                   correctLabel: buckets.map((l, b) => `${l}: ${items.filter((_, i) => answer[i] === b).join(' ')}`).join(' · ') };
       if (caption) ex.caption = caption;
       return ex;
     }
@@ -427,7 +516,25 @@ function checkLesson(lesson, problems, byId = {}) {
       if (unknown.length) flag(`media letters are not Shavian letters: ${unknown.join(' ')}`);
     }
 
-    if (ex.type === 'choice' || ex.type === 'listen') {
+    if (ex.type === 'scan') {
+      if (ex.rounds.length < 2) flag('a scan needs at least two rounds');
+      if (new Set(ex.rounds.map((r) => r.correct)).size !== ex.rounds.length)
+        flag('two rounds point at the same word');
+      if (ex.rounds.some((r) => ex.passage[r.correct] === undefined))
+        flag('a round points outside the passage');
+    }
+
+    if (ex.type === 'sort') {
+      if (ex.buckets.length < 2) flag('a sort needs at least two buckets');
+      if (ex.items.length !== ex.answer.length) flag('items and answer are different lengths');
+      if (new Set(ex.items).size !== ex.items.length) flag('duplicate items');
+      // A bucket nobody is sorted into is a decoy the learner can never use,
+      // and makes the "every item placed" check pass while it stays empty.
+      const used = new Set(ex.answer);
+      ex.buckets.forEach((label, b) => { if (!used.has(b)) flag(`bucket "${label}" has no items`); });
+    }
+
+    if (ex.type === 'choice' || (ex.type === 'listen' && ex.options)) {
       if (!ex.options.includes(ex.correct)) flag('correct not among options');
       if (new Set(ex.options).size !== ex.options.length) flag('duplicate options');
       // One option is not a question. This catches a line whose ` | ` got eaten

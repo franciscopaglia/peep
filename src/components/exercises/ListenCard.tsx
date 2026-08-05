@@ -2,6 +2,7 @@ import { useState } from 'react';
 import type { ListenExercise } from '@/lessons/types';
 import type { ExerciseProps } from './props';
 import { SpeakButton } from '@/components/SpeakButton';
+import { ShavianKeyboard } from './ShavianKeyboard';
 import { enterAnimation, optionColors } from '@/lib/exercise-style';
 
 /**
@@ -24,7 +25,9 @@ export function ListenCard({
   exercise,
   status,
   selected,
+  typedValue,
   onSelectOption,
+  onTypeChange,
 }: ExerciseProps<ListenExercise>) {
   const [revealed, setRevealed] = useState(false);
 
@@ -37,7 +40,10 @@ export function ListenCard({
           className="w-20 h-20 rounded-full border-2 border-accent-border bg-accent-soft text-accent hover:text-accent [&>svg]:w-8 [&>svg]:h-8"
         />
         <div className="text-sm text-muted-foreground">
-          {exercise.caption ?? 'Listen, then tap the Shavian that spells it'}
+          {exercise.caption ??
+            (exercise.options
+              ? 'Listen, then tap the Shavian that spells it'
+              : 'Listen, then spell it on the keyboard')}
         </div>
 
         {/* Reserve the row's height either way, so revealing the word doesn't
@@ -62,27 +68,37 @@ export function ListenCard({
           )}
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-3.5 w-full max-w-[420px]">
-        {exercise.options.map((opt) => {
-          const c = optionColors(status, selected === opt, opt === exercise.correct);
-          return (
-            <button
-              key={opt}
-              onClick={() => onSelectOption(opt)}
-              className="px-3.5 py-[18px] rounded-btn font-semibold text-3xl transition-all duration-100"
-              style={{
-                border: `2px solid ${c.bd}`,
-                background: c.bg,
-                color: c.col,
-                cursor: status === 'active' ? 'pointer' : 'default',
-                animation: c.anim,
-              }}
-            >
-              {opt}
-            </button>
-          );
-        })}
-      </div>
+      {exercise.options ? (
+        <div className="grid grid-cols-2 gap-3.5 w-full max-w-[420px]">
+          {exercise.options.map((opt) => {
+            const c = optionColors(status, selected === opt, opt === exercise.correct);
+            return (
+              <button
+                key={opt}
+                onClick={() => onSelectOption(opt)}
+                className="px-3.5 py-[18px] rounded-btn font-semibold text-3xl transition-all duration-100"
+                style={{
+                  border: `2px solid ${c.bd}`,
+                  background: c.bg,
+                  color: c.col,
+                  cursor: status === 'active' ? 'pointer' : 'default',
+                  animation: c.anim,
+                }}
+              >
+                {opt}
+              </button>
+            );
+          })}
+        </div>
+      ) : (
+        // Dictation: nothing to recognise, so spell it out.
+        <ShavianKeyboard
+          answers={[exercise.correct, ...(exercise.accept ?? [])]}
+          typedValue={typedValue}
+          status={status}
+          onTypeChange={onTypeChange}
+        />
+      )}
     </div>
   );
 }
