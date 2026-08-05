@@ -23,7 +23,7 @@ Legend: ✅ shipped · 🚧 in progress · 🗓️ planned · 💡 idea / under 
   `-ed`), the busy schwa, a deeper pass on shorthand and homographs, dialogue on
   the page, and longer *unassisted* passages of real Shavian — including whole
   sourced texts read straight, no word banks.
-- **Chapter 4 — Writing Shavian** (7 lessons): the reverse direction — given an
+- **Chapter 4 — Writing Shavian** (9 lessons): the reverse direction — given an
   English word, spell it yourself on the full on-screen Shavian keyboard, from
   single words up to whole sentences.
 - New letters only ever build on what you've already learned — the path never
@@ -230,7 +230,7 @@ so nothing re-teaches what came earlier.
   `-ed`), the busy schwa, a deeper pass on shorthand words and homographs,
   dialogue on the page, and longer *unassisted* passages (no word banks) —
   culminating in a whole sourced text read straight through.
-- **✅ Chapter 4 — Writing Shavian** *(shipped · 7 lessons)* — the reverse
+- **✅ Chapter 4 — Writing Shavian** *(shipped · 9 lessons)* — the reverse
   direction: given English, spell it in Shavian on the full on-screen keyboard
   (the `write` exercise). Its own chapter because writing needs rules reading
   doesn't — schwa vs. full vowels under stress, the fixed spellings, dropping
