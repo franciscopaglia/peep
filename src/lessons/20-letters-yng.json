@@ -50,8 +50,17 @@
     },
     {
       "type": "teach",
-      "title": "These two never compete",
-      "body": "You may be waiting to learn when to pick 𐑘 and when to pick 𐑙. You never have to. They sit next to each other on the chart, but they live at opposite ends of a word: 𐑘 only ever *starts* a syllable — yes, young, yet — and 𐑙 only ever *ends* one — sing, long, king. No English word begins with the ng sound, and none ends with the y sound. Where the letter falls tells you which one it is."
+      "title": "Now the pairs close",
+      "body": "Here are the tall partners of the two letters you just learned: 𐑘 goes with 𐑢, and 𐑙 goes with 𐑣. Which is why asking “when do I use 𐑘 and when 𐑙?” never had an answer — they are not alternatives to each other at all. 𐑘 behaves like its partner 𐑢 and only ever starts a syllable. 𐑙 is the odd one of all four: it only ever ends one. No English word begins with the ng sound.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑢",
+          "𐑘",
+          "𐑣",
+          "𐑙"
+        ]
+      }
     },
     {
       "type": "sort",
@@ -77,6 +86,27 @@
         1
       ],
       "correctLabel": "𐑘 at the start: 𐑘𐑧𐑕 𐑘𐑳𐑙 𐑘𐑧𐑑 / 𐑙 at the end: 𐑕𐑦𐑙 𐑤𐑪𐑙 𐑒𐑦𐑙"
+    },
+    {
+      "type": "sort",
+      "prompt": "Which of the pair is it?",
+      "buckets": [
+        "𐑢",
+        "𐑘"
+      ],
+      "items": [
+        "𐑢𐑧𐑑",
+        "𐑢𐑦𐑯",
+        "𐑘𐑧𐑑",
+        "𐑘𐑧𐑕"
+      ],
+      "answer": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "correctLabel": "𐑢: 𐑢𐑧𐑑 𐑢𐑦𐑯 / 𐑘: 𐑘𐑧𐑑 𐑘𐑧𐑕"
     },
     {
       "type": "type",

@@ -6,6 +6,20 @@
   "exercises": [
     {
       "type": "teach",
+      "title": "The other half of the pair",
+      "body": "These two are not new arrivals so much as the partners of the letters you just learned: 𐑮 belongs with 𐑤, and 𐑯 belongs with 𐑥 — one tall, one deep, the same shape either way up. That is why they arrive together, and it is also the reason people mix up l with r and m with n. Meet them side by side and the confusion never starts.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑤",
+          "𐑮",
+          "𐑥",
+          "𐑯"
+        ]
+      }
+    },
+    {
+      "type": "teach",
       "title": "Meet nun",
       "body": "The letter for nun is 𐑯.",
       "media": {
@@ -131,6 +145,67 @@
       ],
       "correct": "red",
       "correctLabel": "red"
+    },
+    {
+      "type": "sort",
+      "prompt": "Which one is it?",
+      "buckets": [
+        "𐑤",
+        "𐑮"
+      ],
+      "items": [
+        "𐑤𐑦𐑐",
+        "𐑤𐑧𐑛",
+        "𐑤𐑪𐑑",
+        "𐑮𐑦𐑐",
+        "𐑮𐑧𐑛",
+        "𐑮𐑪𐑑"
+      ],
+      "answer": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "correctLabel": "𐑤: 𐑤𐑦𐑐 𐑤𐑧𐑛 𐑤𐑪𐑑 / 𐑮: 𐑮𐑦𐑐 𐑮𐑧𐑛 𐑮𐑪𐑑"
+    },
+    {
+      "type": "sort",
+      "prompt": "Which one is it?",
+      "buckets": [
+        "𐑥",
+        "𐑯"
+      ],
+      "items": [
+        "𐑥𐑨𐑐",
+        "𐑥𐑧𐑑",
+        "𐑯𐑨𐑐",
+        "𐑯𐑧𐑑"
+      ],
+      "answer": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "correctLabel": "𐑥: 𐑥𐑨𐑐 𐑥𐑧𐑑 / 𐑯: 𐑯𐑨𐑐 𐑯𐑧𐑑"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑮𐑦𐑐",
+      "caption": "𐑤𐑦𐑐 would be “lip”",
+      "optionIsGlyph": false,
+      "options": [
+        "rip",
+        "lip",
+        "rap",
+        "ripe"
+      ],
+      "correct": "rip",
+      "correctLabel": "rip"
     }
   ]
 }
