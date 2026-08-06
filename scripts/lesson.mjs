@@ -323,7 +323,7 @@ function lineToEx(line) {
         return { prompt, correct };
       });
       const ex = { type, passage, rounds,
-                   correctLabel: rounds.map((r) => `${r.prompt} = ${passage[r.correct]}`).join(' · ') };
+                   correctLabel: rounds.map((r) => `${r.prompt} = ${passage[r.correct]}`).join(' / ') };
       if (stops.length) ex.stops = stops;
       if (caption) ex.caption = caption;
       return ex;
@@ -342,7 +342,7 @@ function lineToEx(line) {
         }
       }
       const ex = { type, prompt: pos[0], buckets, items, answer,
-                   correctLabel: buckets.map((l, b) => `${l}: ${items.filter((_, i) => answer[i] === b).join(' ')}`).join(' · ') };
+                   correctLabel: buckets.map((l, b) => `${l}: ${items.filter((_, i) => answer[i] === b).join(' ')}`).join(' / ') };
       if (caption) ex.caption = caption;
       return ex;
     }

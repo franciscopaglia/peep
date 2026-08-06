@@ -11,10 +11,10 @@
     },
     {
       "type": "type",
-      "prompt": "𐑜𐑦𐑓𐑑",
+      "prompt": "𐑛𐑳𐑕𐑑",
       "caption": "Type what this word says",
-      "correct": "gift",
-      "correctLabel": "gift"
+      "correct": "dust",
+      "correctLabel": "dust"
     },
     {
       "type": "teach",
@@ -54,19 +54,19 @@
     {
       "type": "match",
       "pairs": {
-        "𐑛𐑧𐑕𐑒": "desk",
-        "𐑜𐑦𐑓𐑑": "gift",
         "𐑑𐑧𐑕𐑑": "test",
-        "𐑕𐑪𐑚": "sob"
+        "𐑛𐑧𐑕𐑒": "desk",
+        "𐑕𐑪𐑚": "sob",
+        "𐑛𐑳𐑕𐑑": "dust"
       },
       "leftOrder": [
         "𐑑𐑧𐑕𐑑",
         "𐑛𐑧𐑕𐑒",
         "𐑕𐑪𐑚",
-        "𐑜𐑦𐑓𐑑"
+        "𐑛𐑳𐑕𐑑"
       ],
       "rightOrder": [
-        "gift",
+        "dust",
         "sob",
         "desk",
         "test"

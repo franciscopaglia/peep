@@ -49,6 +49,43 @@
       "correctLabel": "NG as in wing"
     },
     {
+      "type": "teach",
+      "title": "These two never compete",
+      "body": "You may be waiting to learn when to pick 𐑘 and when to pick 𐑙. You never have to. They sit next to each other on the chart, but they live at opposite ends of a word: 𐑘 only ever *starts* a syllable — yes, young, yet — and 𐑙 only ever *ends* one — sing, long, king. No English word begins with the ng sound, and none ends with the y sound. Where the letter falls tells you which one it is."
+    },
+    {
+      "type": "sort",
+      "prompt": "Does it start the word or end it?",
+      "buckets": [
+        "𐑘 at the start",
+        "𐑙 at the end"
+      ],
+      "items": [
+        "𐑘𐑧𐑕",
+        "𐑘𐑳𐑙",
+        "𐑘𐑧𐑑",
+        "𐑕𐑦𐑙",
+        "𐑤𐑪𐑙",
+        "𐑒𐑦𐑙"
+      ],
+      "answer": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "correctLabel": "𐑘 at the start: 𐑘𐑧𐑕 𐑘𐑳𐑙 𐑘𐑧𐑑 / 𐑙 at the end: 𐑕𐑦𐑙 𐑤𐑪𐑙 𐑒𐑦𐑙"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑘𐑳𐑙",
+      "caption": "This one has both — one at each end",
+      "correct": "young",
+      "correctLabel": "young"
+    },
+    {
       "type": "match",
       "pairs": {
         "𐑢𐑧𐑑": "wet",
@@ -109,6 +146,31 @@
         "𐑙"
       ],
       "correctLabel": "𐑚𐑮𐑦𐑙"
+    },
+    {
+      "type": "build",
+      "prompt": "king",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑦",
+        "𐑙",
+        "𐑯",
+        "𐑜"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑦",
+        "𐑙"
+      ],
+      "correctLabel": "𐑒𐑦𐑙"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑪𐑙",
+      "caption": "Sound it out — what does this say?",
+      "correct": "long",
+      "correctLabel": "long"
     }
   ]
 }

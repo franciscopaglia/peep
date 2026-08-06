@@ -63,6 +63,51 @@
       "correctLabel": "𐑳"
     },
     {
+      "type": "teach",
+      "title": "Same lips, different mouth",
+      "body": "These two are the pair people mix up, so hear them side by side. Say “book”, then “buck”. In book your lips push forward and round — that is 𐑫. In buck they stay relaxed and the sound comes from further back — that is 𐑳. put 𐑐𐑫𐑑 and putt 𐑐𐑳𐑑 are the same test. English spells all four with a u and leaves you guessing; Shavian does not."
+    },
+    {
+      "type": "sort",
+      "prompt": "Which vowel do you hear?",
+      "buckets": [
+        "𐑫",
+        "𐑳"
+      ],
+      "items": [
+        "𐑐𐑫𐑑",
+        "𐑚𐑫𐑒",
+        "𐑒𐑫𐑛",
+        "𐑒𐑳𐑐",
+        "𐑚𐑳𐑒",
+        "𐑜𐑳𐑑"
+      ],
+      "answer": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "correctLabel": "𐑫: 𐑐𐑫𐑑 𐑚𐑫𐑒 𐑒𐑫𐑛 / 𐑳: 𐑒𐑳𐑐 𐑚𐑳𐑒 𐑜𐑳𐑑"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑐𐑫𐑑",
+      "caption": "Rounded lips or relaxed?",
+      "optionIsGlyph": false,
+      "options": [
+        "put",
+        "putt",
+        "pot",
+        "pat"
+      ],
+      "correct": "put",
+      "correctLabel": "put"
+    },
+    {
       "type": "type",
       "prompt": "𐑒𐑳𐑐",
       "caption": "Sound it out — what does this say?",
@@ -72,22 +117,22 @@
     {
       "type": "match",
       "pairs": {
-        "𐑛𐑪𐑜": "dog",
-        "𐑒𐑨𐑑": "cat",
-        "𐑕𐑦𐑑": "sit",
-        "𐑚𐑧𐑛": "bed"
+        "𐑐𐑫𐑑": "put",
+        "𐑐𐑳𐑑": "putt",
+        "𐑚𐑫𐑒": "book",
+        "𐑚𐑳𐑒": "buck"
       },
       "leftOrder": [
-        "𐑛𐑪𐑜",
-        "𐑒𐑨𐑑",
-        "𐑕𐑦𐑑",
-        "𐑚𐑧𐑛"
+        "𐑐𐑫𐑑",
+        "𐑐𐑳𐑑",
+        "𐑚𐑫𐑒",
+        "𐑚𐑳𐑒"
       ],
       "rightOrder": [
-        "bed",
-        "dog",
-        "cat",
-        "sit"
+        "buck",
+        "put",
+        "book",
+        "putt"
       ]
     },
     {
