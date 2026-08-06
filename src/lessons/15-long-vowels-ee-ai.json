@@ -57,6 +57,51 @@
       "correctLabel": "AI as in day"
     },
     {
+      "type": "teach",
+      "title": "𐑰 or 𐑱?",
+      "body": "These two run into each other because English writes both with an e somewhere. Say “beat”, then “bait”. Beat holds one steady sound — that is 𐑰. Bait slides from one place to another as you say it — that is 𐑱. If your jaw moves, it is 𐑱."
+    },
+    {
+      "type": "sort",
+      "prompt": "Steady sound, or a slide?",
+      "buckets": [
+        "𐑰",
+        "𐑱"
+      ],
+      "items": [
+        "𐑚𐑰𐑑",
+        "𐑕𐑰",
+        "𐑥𐑰𐑑",
+        "𐑚𐑱𐑑",
+        "𐑕𐑱",
+        "𐑛𐑱"
+      ],
+      "answer": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "correctLabel": "𐑰: 𐑚𐑰𐑑 𐑕𐑰 𐑥𐑰𐑑 / 𐑱: 𐑚𐑱𐑑 𐑕𐑱 𐑛𐑱"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑚𐑱𐑑",
+      "caption": "One letter apart from 𐑚𐑰𐑑",
+      "optionIsGlyph": false,
+      "options": [
+        "bait",
+        "beat",
+        "bat",
+        "boat"
+      ],
+      "correct": "bait",
+      "correctLabel": "bait"
+    },
+    {
       "type": "choice",
       "promptIsGlyph": true,
       "prompt": "𐑯𐑱𐑤",

@@ -130,6 +130,31 @@
         "cat",
         "kid"
       ]
+    },
+    {
+      "type": "build",
+      "prompt": "pig",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑐",
+        "𐑦",
+        "𐑜",
+        "𐑚",
+        "𐑒"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑦",
+        "𐑜"
+      ],
+      "correctLabel": "𐑐𐑦𐑜"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑨𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bag",
+      "correctLabel": "bag"
     }
   ]
 }

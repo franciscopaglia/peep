@@ -11,10 +11,10 @@
     },
     {
       "type": "type",
-      "prompt": "𐑜𐑦𐑓𐑑",
+      "prompt": "𐑛𐑳𐑕𐑑",
       "caption": "Type what this word says",
-      "correct": "gift",
-      "correctLabel": "gift"
+      "correct": "dust",
+      "correctLabel": "dust"
     },
     {
       "type": "teach",
@@ -54,19 +54,19 @@
     {
       "type": "match",
       "pairs": {
-        "𐑛𐑧𐑕𐑒": "desk",
-        "𐑜𐑦𐑓𐑑": "gift",
         "𐑑𐑧𐑕𐑑": "test",
-        "𐑕𐑪𐑚": "sob"
+        "𐑛𐑧𐑕𐑒": "desk",
+        "𐑕𐑪𐑚": "sob",
+        "𐑛𐑳𐑕𐑑": "dust"
       },
       "leftOrder": [
         "𐑑𐑧𐑕𐑑",
         "𐑛𐑧𐑕𐑒",
         "𐑕𐑪𐑚",
-        "𐑜𐑦𐑓𐑑"
+        "𐑛𐑳𐑕𐑑"
       ],
       "rightOrder": [
-        "gift",
+        "dust",
         "sob",
         "desk",
         "test"
@@ -78,6 +78,47 @@
       "caption": "Two syllables — sound out each part, then say it.",
       "correct": "biscuit",
       "correctLabel": "biscuit"
+    },
+    {
+      "type": "build",
+      "prompt": "dusk",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑛",
+        "𐑳",
+        "𐑕",
+        "𐑒",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑳",
+        "𐑕",
+        "𐑒"
+      ],
+      "correctLabel": "𐑛𐑳𐑕𐑒"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑳𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bud",
+      "correctLabel": "bud"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑜𐑳𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "gut",
+        "got",
+        "get",
+        "gate"
+      ],
+      "correct": "gut",
+      "correctLabel": "gut"
     }
   ]
 }

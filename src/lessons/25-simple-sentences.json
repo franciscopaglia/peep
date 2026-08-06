@@ -85,6 +85,47 @@
         "the",
         "and"
       ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑞 𐑕𐑳𐑯 𐑦𐑟 𐑣𐑪𐑑",
+      "caption": "Type what this says",
+      "correct": "the sun is hot",
+      "correctLabel": "the sun is hot"
+    },
+    {
+      "type": "spot",
+      "prompt": "and",
+      "words": [
+        "𐑞",
+        "𐑒𐑨𐑑",
+        "𐑯",
+        "𐑞",
+        "𐑛𐑪𐑜"
+      ],
+      "correct": 2,
+      "correctLabel": "𐑯",
+      "stops": [
+        4
+      ]
+    },
+    {
+      "type": "fill",
+      "blanks": [
+        2
+      ],
+      "bank": [
+        "𐑕𐑨𐑑",
+        "𐑮𐑨𐑯",
+        "𐑣𐑪𐑑"
+      ],
+      "correctLabel": "𐑞 𐑒𐑨𐑑 𐑕𐑨𐑑",
+      "words": [
+        "𐑞",
+        "𐑒𐑨𐑑",
+        "𐑕𐑨𐑑"
+      ],
+      "promptEn": "the cat sat"
     }
   ]
 }

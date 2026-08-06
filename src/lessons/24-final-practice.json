@@ -82,6 +82,47 @@
       "type": "teach",
       "title": "One letter, one job",
       "body": "English makes 26 letters cover far more than 26 sounds — c does double duty for “cat” and “cell”, gh sits silent in “night”. Every Shavian letter you have met means exactly one sound, every time. That is 32 of the 48 letters read; one more lesson finishes the chapter, and Chapter 2 hands you the rest."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑳𐑗",
+      "caption": "Sound it out — what does this say?",
+      "correct": "much",
+      "correctLabel": "much"
+    },
+    {
+      "type": "build",
+      "prompt": "lunch",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑤",
+        "𐑳",
+        "𐑯",
+        "𐑗",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑤",
+        "𐑳",
+        "𐑯",
+        "𐑗"
+      ],
+      "correctLabel": "𐑤𐑳𐑯𐑗"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑓𐑦𐑖",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "fish",
+        "wish",
+        "fresh",
+        "flash"
+      ],
+      "correct": "fish",
+      "correctLabel": "fish"
     }
   ]
 }

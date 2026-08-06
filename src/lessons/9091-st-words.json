@@ -13,10 +13,10 @@
     },
     {
       "type": "type",
-      "prompt": "𐑚𐑧𐑕𐑑",
+      "prompt": "𐑒𐑧𐑐𐑑",
       "caption": "Sound it out — what does this say?",
-      "correct": "best",
-      "correctLabel": "best"
+      "correct": "kept",
+      "correctLabel": "kept"
     },
     {
       "type": "type",
@@ -124,13 +124,13 @@
     {
       "type": "match",
       "pairs": {
-        "𐑚𐑧𐑕𐑑": "best",
+        "𐑒𐑧𐑐𐑑": "kept",
         "𐑒𐑪𐑕𐑑": "cost",
         "𐑑𐑨𐑕𐑒": "task",
         "𐑛𐑦𐑕𐑒": "disk"
       },
       "leftOrder": [
-        "𐑚𐑧𐑕𐑑",
+        "𐑒𐑧𐑐𐑑",
         "𐑒𐑪𐑕𐑑",
         "𐑑𐑨𐑕𐑒",
         "𐑛𐑦𐑕𐑒"
@@ -138,7 +138,7 @@
       "rightOrder": [
         "disk",
         "task",
-        "best",
+        "kept",
         "cost"
       ]
     }

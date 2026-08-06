@@ -13,10 +13,10 @@
     },
     {
       "type": "type",
-      "prompt": "𐑚𐑧𐑕𐑑",
+      "prompt": "𐑛𐑧𐑕𐑒",
       "caption": "Sound it out — what does this say?",
-      "correct": "best",
-      "correctLabel": "best"
+      "correct": "desk",
+      "correctLabel": "desk"
     },
     {
       "type": "type",

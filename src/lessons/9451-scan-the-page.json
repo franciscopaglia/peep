@@ -115,7 +115,7 @@
           "correct": 75
         }
       ],
-      "correctLabel": "summer = 𐑕𐑳𐑥𐑼 · garden = 𐑜𐑸𐑛𐑩𐑯 · sweet = 𐑕𐑢𐑰𐑑 · sour = 𐑕𐑬𐑼",
+      "correctLabel": "summer = 𐑕𐑳𐑥𐑼 / garden = 𐑜𐑸𐑛𐑩𐑯 / sweet = 𐑕𐑢𐑰𐑑 / sour = 𐑕𐑬𐑼",
       "stops": [
         10,
         21,
@@ -238,7 +238,7 @@
           "correct": 20
         }
       ],
-      "correctLabel": "tired = 𐑑𐑲𐑼𐑛 · nose = 𐑯𐑴𐑟 · branch = 𐑚𐑮𐑭𐑯𐑗 · grapes = 𐑜𐑮𐑱𐑐𐑕 · ripe = 𐑮𐑲𐑐",
+      "correctLabel": "tired = 𐑑𐑲𐑼𐑛 / nose = 𐑯𐑴𐑟 / branch = 𐑚𐑮𐑭𐑯𐑗 / grapes = 𐑜𐑮𐑱𐑐𐑕 / ripe = 𐑮𐑲𐑐",
       "stops": [
         10,
         21,

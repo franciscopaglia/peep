@@ -57,6 +57,51 @@
       "correctLabel": "OH as in boat"
     },
     {
+      "type": "teach",
+      "title": "𐑱 or 𐑲?",
+      "body": "The other pair worth pinning down, and this one is easier than it looks: say “day”, then “die”. Both slide, but they start in different places — 𐑱 starts high and forward, 𐑲 starts low and open. Say “may” and “my” one after the other and you can feel your jaw drop for 𐑲."
+    },
+    {
+      "type": "sort",
+      "prompt": "Which slide is it?",
+      "buckets": [
+        "𐑱",
+        "𐑲"
+      ],
+      "items": [
+        "𐑛𐑱",
+        "𐑤𐑱𐑑",
+        "𐑥𐑱",
+        "𐑛𐑲",
+        "𐑤𐑲𐑑",
+        "𐑥𐑲"
+      ],
+      "answer": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "correctLabel": "𐑱: 𐑛𐑱 𐑤𐑱𐑑 𐑥𐑱 / 𐑲: 𐑛𐑲 𐑤𐑲𐑑 𐑥𐑲"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑤𐑲𐑑",
+      "caption": "𐑤𐑱𐑑 would be “late”",
+      "optionIsGlyph": false,
+      "options": [
+        "light",
+        "late",
+        "let",
+        "lot"
+      ],
+      "correct": "light",
+      "correctLabel": "light"
+    },
+    {
       "type": "build",
       "prompt": "time",
       "caption": "Build this word from Shavian letters",
@@ -101,6 +146,13 @@
         "like",
         "nine"
       ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑴𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "road",
+      "correctLabel": "road"
     }
   ]
 }

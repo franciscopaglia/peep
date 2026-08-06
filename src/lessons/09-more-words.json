@@ -85,6 +85,47 @@
       ],
       "correct": "𐑜𐑦𐑓𐑑",
       "correctLabel": "𐑜𐑦𐑓𐑑"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑧𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "pet",
+      "correctLabel": "pet"
+    },
+    {
+      "type": "build",
+      "prompt": "desk",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑛",
+        "𐑧",
+        "𐑕",
+        "𐑒",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑧",
+        "𐑕",
+        "𐑒"
+      ],
+      "correctLabel": "𐑛𐑧𐑕𐑒"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑕𐑦𐑒𐑕",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "six",
+        "sick",
+        "sacks",
+        "socks"
+      ],
+      "correct": "six",
+      "correctLabel": "six"
     }
   ]
 }

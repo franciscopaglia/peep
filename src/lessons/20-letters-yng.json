@@ -49,6 +49,73 @@
       "correctLabel": "NG as in wing"
     },
     {
+      "type": "teach",
+      "title": "Now the pairs close",
+      "body": "Here are the tall partners of the two letters you just learned: 𐑘 goes with 𐑢, and 𐑙 goes with 𐑣. Which is why asking “when do I use 𐑘 and when 𐑙?” never had an answer — they are not alternatives to each other at all. 𐑘 behaves like its partner 𐑢 and only ever starts a syllable. 𐑙 is the odd one of all four: it only ever ends one. No English word begins with the ng sound.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑢",
+          "𐑘",
+          "𐑣",
+          "𐑙"
+        ]
+      }
+    },
+    {
+      "type": "sort",
+      "prompt": "Does it start the word or end it?",
+      "buckets": [
+        "𐑘 at the start",
+        "𐑙 at the end"
+      ],
+      "items": [
+        "𐑘𐑧𐑕",
+        "𐑘𐑳𐑙",
+        "𐑘𐑧𐑑",
+        "𐑕𐑦𐑙",
+        "𐑤𐑪𐑙",
+        "𐑒𐑦𐑙"
+      ],
+      "answer": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "correctLabel": "𐑘 at the start: 𐑘𐑧𐑕 𐑘𐑳𐑙 𐑘𐑧𐑑 / 𐑙 at the end: 𐑕𐑦𐑙 𐑤𐑪𐑙 𐑒𐑦𐑙"
+    },
+    {
+      "type": "sort",
+      "prompt": "Which of the pair is it?",
+      "buckets": [
+        "𐑢",
+        "𐑘"
+      ],
+      "items": [
+        "𐑢𐑧𐑑",
+        "𐑢𐑦𐑯",
+        "𐑘𐑧𐑑",
+        "𐑘𐑧𐑕"
+      ],
+      "answer": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "correctLabel": "𐑢: 𐑢𐑧𐑑 𐑢𐑦𐑯 / 𐑘: 𐑘𐑧𐑑 𐑘𐑧𐑕"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑘𐑳𐑙",
+      "caption": "This one has both — one at each end",
+      "correct": "young",
+      "correctLabel": "young"
+    },
+    {
       "type": "match",
       "pairs": {
         "𐑢𐑧𐑑": "wet",
@@ -109,6 +176,31 @@
         "𐑙"
       ],
       "correctLabel": "𐑚𐑮𐑦𐑙"
+    },
+    {
+      "type": "build",
+      "prompt": "king",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑦",
+        "𐑙",
+        "𐑯",
+        "𐑜"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑦",
+        "𐑙"
+      ],
+      "correctLabel": "𐑒𐑦𐑙"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑪𐑙",
+      "caption": "Sound it out — what does this say?",
+      "correct": "long",
+      "correctLabel": "long"
     }
   ]
 }

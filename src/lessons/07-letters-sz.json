@@ -66,6 +66,41 @@
       "correctLabel": "𐑜𐑨𐑕"
     },
     {
+      "type": "teach",
+      "title": "Your voice decides, not the spelling",
+      "body": "Here is the thing English hides. Say “cats”, then say “dogs”. The ending hisses in one and buzzes in the other — two different sounds, and English writes “s” for both. Shavian writes what you actually say: 𐑒𐑨𐑑𐑕 but 𐑛𐑪𐑜𐑟. So you never choose between 𐑕 and 𐑟 by rule; you say the word and listen."
+    },
+    {
+      "type": "sort",
+      "prompt": "Which one do you hear at the end?",
+      "buckets": [
+        "𐑕",
+        "𐑟"
+      ],
+      "items": [
+        "𐑒𐑨𐑑𐑕",
+        "𐑚𐑦𐑑𐑕",
+        "𐑛𐑪𐑜𐑟",
+        "𐑚𐑨𐑜𐑟",
+        "𐑐𐑦𐑜𐑟"
+      ],
+      "answer": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "correctLabel": "𐑕: 𐑒𐑨𐑑𐑕 𐑚𐑦𐑑𐑕 / 𐑟: 𐑛𐑪𐑜𐑟 𐑚𐑨𐑜𐑟 𐑐𐑦𐑜𐑟"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑦𐑟",
+      "caption": "A tiny one — and that really is a z sound",
+      "correct": "is",
+      "correctLabel": "is"
+    },
+    {
       "type": "choice",
       "promptIsGlyph": false,
       "prompt": "Which of these is the voiced (deep) version of 𐑕?",
@@ -90,23 +125,38 @@
     {
       "type": "match",
       "pairs": {
-        "𐑕𐑦𐑑": "sit",
         "𐑟𐑦𐑐": "zip",
-        "𐑓𐑨𐑕𐑑": "fast",
-        "𐑒𐑪𐑕𐑑": "cost"
+        "𐑕𐑦𐑑": "sit",
+        "𐑛𐑪𐑜𐑟": "dogs",
+        "𐑒𐑨𐑑𐑕": "cats"
       },
       "leftOrder": [
-        "𐑒𐑪𐑕𐑑",
+        "𐑟𐑦𐑐",
         "𐑕𐑦𐑑",
-        "𐑓𐑨𐑕𐑑",
-        "𐑟𐑦𐑐"
+        "𐑛𐑪𐑜𐑟",
+        "𐑒𐑨𐑑𐑕"
       ],
       "rightOrder": [
-        "sit",
-        "cost",
+        "cats",
+        "dogs",
         "zip",
-        "fast"
+        "sit"
       ]
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑟𐑦𐑐",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "zip",
+        "sip",
+        "zap",
+        "zit"
+      ],
+      "correct": "zip",
+      "correctLabel": "zip"
     }
   ]
 }

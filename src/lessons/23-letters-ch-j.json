@@ -113,6 +113,34 @@
         "chat",
         "chip"
       ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑗𐑦𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "chin",
+      "correctLabel": "chin"
+    },
+    {
+      "type": "sort",
+      "prompt": "Which one starts the word?",
+      "buckets": [
+        "𐑗",
+        "𐑡"
+      ],
+      "items": [
+        "𐑗𐑦𐑐",
+        "𐑗𐑦𐑯",
+        "𐑡𐑨𐑥",
+        "𐑡𐑪𐑚"
+      ],
+      "answer": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "correctLabel": "𐑗: 𐑗𐑦𐑐 𐑗𐑦𐑯 / 𐑡: 𐑡𐑨𐑥 𐑡𐑪𐑚"
     }
   ]
 }

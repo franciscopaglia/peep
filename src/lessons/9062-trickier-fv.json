@@ -102,18 +102,18 @@
       "type": "match",
       "pairs": {
         "𐑓𐑨𐑒𐑑": "fact",
-        "𐑜𐑦𐑓𐑑": "gift",
+        "𐑓𐑦𐑓𐑑𐑦": "fifty",
         "𐑚𐑦𐑓": "biff",
         "𐑑𐑦𐑓": "tiff"
       },
       "leftOrder": [
         "𐑓𐑨𐑒𐑑",
-        "𐑜𐑦𐑓𐑑",
+        "𐑓𐑦𐑓𐑑𐑦",
         "𐑚𐑦𐑓",
         "𐑑𐑦𐑓"
       ],
       "rightOrder": [
-        "gift",
+        "fifty",
         "tiff",
         "fact",
         "biff"

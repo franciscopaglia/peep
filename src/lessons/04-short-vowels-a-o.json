@@ -133,6 +133,46 @@
         "𐑜"
       ],
       "correctLabel": "𐑛𐑪𐑜"
+    },
+    {
+      "type": "sort",
+      "prompt": "Which vowel do you hear?",
+      "buckets": [
+        "𐑨",
+        "𐑪"
+      ],
+      "items": [
+        "𐑒𐑨𐑑",
+        "𐑚𐑨𐑜",
+        "𐑑𐑨𐑐",
+        "𐑛𐑪𐑜",
+        "𐑑𐑪𐑐",
+        "𐑐𐑪𐑑"
+      ],
+      "answer": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "correctLabel": "𐑨: 𐑒𐑨𐑑 𐑚𐑨𐑜 𐑑𐑨𐑐 / 𐑪: 𐑛𐑪𐑜 𐑑𐑪𐑐 𐑐𐑪𐑑"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑒𐑪𐑑",
+      "caption": "𐑒𐑨𐑑 would be “cat”",
+      "optionIsGlyph": false,
+      "options": [
+        "cot",
+        "cat",
+        "kit",
+        "cut"
+      ],
+      "correct": "cot",
+      "correctLabel": "cot"
     }
   ]
 }

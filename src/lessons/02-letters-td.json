@@ -105,6 +105,39 @@
       "correctLabel": "dot"
     },
     {
+      "type": "complete",
+      "blanks": [
+        2
+      ],
+      "bank": [
+        "𐑛",
+        "𐑑"
+      ],
+      "correctLabel": "𐑛𐑨𐑛",
+      "prompt": "dad",
+      "word": [
+        "𐑛",
+        "𐑨",
+        "𐑛"
+      ],
+      "caption": "Tap the missing letter"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑑𐑨𐑐",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "tap",
+        "tab",
+        "top",
+        "dab"
+      ],
+      "correct": "tap",
+      "correctLabel": "tap"
+    },
+    {
       "type": "match",
       "pairs": {
         "𐑑𐑪𐑐": "top",
