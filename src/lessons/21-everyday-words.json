@@ -101,6 +101,30 @@
       "caption": "Two syllables — sound out each part.",
       "correct": "helping",
       "correctLabel": "helping"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑧𐑯𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "end",
+      "correctLabel": "end"
+    },
+    {
+      "type": "build",
+      "prompt": "young",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑘",
+        "𐑳",
+        "𐑙",
+        "𐑯"
+      ],
+      "answer": [
+        "𐑘",
+        "𐑳",
+        "𐑙"
+      ],
+      "correctLabel": "𐑘𐑳𐑙"
     }
   ]
 }

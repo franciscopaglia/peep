@@ -122,6 +122,38 @@
         "𐑜"
       ],
       "correctLabel": "𐑓𐑦𐑜"
+    },
+    {
+      "type": "sort",
+      "prompt": "Hiss or buzz?",
+      "buckets": [
+        "𐑓",
+        "𐑝"
+      ],
+      "items": [
+        "𐑓𐑨𐑑",
+        "𐑓𐑦𐑜",
+        "𐑓𐑪𐑜",
+        "𐑝𐑨𐑑",
+        "𐑜𐑦𐑝",
+        "𐑝𐑦𐑝𐑦𐑛"
+      ],
+      "answer": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "correctLabel": "𐑓: 𐑓𐑨𐑑 𐑓𐑦𐑜 𐑓𐑪𐑜 / 𐑝: 𐑝𐑨𐑑 𐑜𐑦𐑝 𐑝𐑦𐑝𐑦𐑛"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑦𐑝",
+      "caption": "Sound it out — what does this say?",
+      "correct": "give",
+      "correctLabel": "give"
     }
   ]
 }

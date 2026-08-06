@@ -146,6 +146,21 @@
         "pop",
         "bop"
       ]
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑐𐑪𐑐",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "pop",
+        "bop",
+        "bob",
+        "pob"
+      ],
+      "correct": "pop",
+      "correctLabel": "pop"
     }
   ]
 }

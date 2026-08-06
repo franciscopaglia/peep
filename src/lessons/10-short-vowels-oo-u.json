@@ -149,6 +149,13 @@
       ],
       "correct": "𐑒𐑳𐑐",
       "correctLabel": "𐑒𐑳𐑐"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑳𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "bus",
+      "correctLabel": "bus"
     }
   ]
 }

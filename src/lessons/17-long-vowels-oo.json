@@ -95,6 +95,45 @@
       ],
       "correct": "pool",
       "correctLabel": "pool"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑵𐑥",
+      "caption": "Sound it out — what does this say?",
+      "correct": "room",
+      "correctLabel": "room"
+    },
+    {
+      "type": "build",
+      "prompt": "food",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑓",
+        "𐑵",
+        "𐑛",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑓",
+        "𐑵",
+        "𐑛"
+      ],
+      "correctLabel": "𐑓𐑵𐑛"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑑𐑵𐑤",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "tool",
+        "toll",
+        "tall",
+        "till"
+      ],
+      "correct": "tool",
+      "correctLabel": "tool"
     }
   ]
 }

@@ -103,6 +103,31 @@
         "fish",
         "dish"
       ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑦𐑖",
+      "caption": "Sound it out — what does this say?",
+      "correct": "wish",
+      "correctLabel": "wish"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        0
+      ],
+      "bank": [
+        "𐑖",
+        "𐑕"
+      ],
+      "correctLabel": "𐑖𐑪𐑐",
+      "prompt": "shop",
+      "word": [
+        "𐑖",
+        "𐑪",
+        "𐑐"
+      ],
+      "caption": "Tap the missing letter"
     }
   ]
 }

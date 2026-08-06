@@ -93,6 +93,57 @@
         "𐑥"
       ],
       "correctLabel": "𐑒𐑮𐑰𐑥"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑲𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "ride",
+      "correctLabel": "ride"
+    },
+    {
+      "type": "sort",
+      "prompt": "Short vowel, or long?",
+      "buckets": [
+        "short",
+        "long"
+      ],
+      "items": [
+        "𐑕𐑦𐑑",
+        "𐑚𐑧𐑛",
+        "𐑒𐑳𐑐",
+        "𐑕𐑰",
+        "𐑮𐑴𐑛",
+        "𐑥𐑵𐑯"
+      ],
+      "answer": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "correctLabel": "short: 𐑕𐑦𐑑 𐑚𐑧𐑛 𐑒𐑳𐑐 / long: 𐑕𐑰 𐑮𐑴𐑛 𐑥𐑵𐑯"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑴",
+        "𐑵",
+        "𐑪"
+      ],
+      "correctLabel": "𐑮𐑴𐑟",
+      "prompt": "rose",
+      "word": [
+        "𐑮",
+        "𐑴",
+        "𐑟"
+      ],
+      "caption": "Tap the missing letter"
     }
   ]
 }

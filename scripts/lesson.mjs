@@ -481,6 +481,12 @@ function multisetCovers(pool, wanted) {
   });
 }
 
+// The shortest a main-path lesson may be, per chapter. Chapter 1 lessons are
+// the ones a beginner meets, and five exercises is over before anything sticks;
+// eight was the floor agreed after playing the course. Branches are exempt —
+// they are optional extra practice and may be as short as they like.
+const MIN_GRADED = { 1: 8 };
+
 function checkLesson(lesson, problems, byId = {}) {
   // A branch inherits its anchor's taught-letter budget and validates against
   // it, since its own (reserved-range) id says nothing about the curriculum.
@@ -496,6 +502,13 @@ function checkLesson(lesson, problems, byId = {}) {
       effectiveId = lesson.anchor;
     }
   }
+  const floor = lesson.optional ? 0 : (MIN_GRADED[lesson.chapter] ?? 0);
+  if (floor) {
+    const graded = lesson.exercises.filter((e) => e.type !== 'teach' && !e.retry).length;
+    if (graded < floor)
+      problems.push(`${lesson.id}: only ${graded} graded exercises, chapter ${lesson.chapter} wants ${floor}`);
+  }
+
   const taught = lettersTaughtBy(effectiveId);
   const knowAll = effectiveId > LAST_INTRODUCTION;
   lesson.exercises.forEach((ex, i) => {

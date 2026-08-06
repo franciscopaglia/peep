@@ -142,6 +142,21 @@
         "zip",
         "sit"
       ]
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑟𐑦𐑐",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "zip",
+        "sip",
+        "zap",
+        "zit"
+      ],
+      "correct": "zip",
+      "correctLabel": "zip"
     }
   ]
 }

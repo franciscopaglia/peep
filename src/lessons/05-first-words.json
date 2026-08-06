@@ -98,6 +98,47 @@
         "𐑑"
       ],
       "correctLabel": "𐑒𐑪𐑑"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑨𐑜",
+      "caption": "Sound it out — what does this say?",
+      "correct": "tag",
+      "correctLabel": "tag"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑦",
+        "𐑪",
+        "𐑨"
+      ],
+      "correctLabel": "𐑛𐑦𐑜",
+      "prompt": "dig",
+      "word": [
+        "𐑛",
+        "𐑦",
+        "𐑜"
+      ],
+      "caption": "Tap the missing letter"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑜𐑪𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "got",
+        "get",
+        "gut",
+        "goat"
+      ],
+      "correct": "got",
+      "correctLabel": "got"
     }
   ]
 }

@@ -122,6 +122,46 @@
         "𐑜"
       ],
       "correctLabel": "𐑐𐑧𐑜"
+    },
+    {
+      "type": "sort",
+      "prompt": "Which vowel do you hear?",
+      "buckets": [
+        "𐑦",
+        "𐑧"
+      ],
+      "items": [
+        "𐑕𐑦𐑑",
+        "𐑚𐑦𐑜",
+        "𐑒𐑦𐑑",
+        "𐑕𐑧𐑑",
+        "𐑚𐑧𐑛",
+        "𐑜𐑧𐑑"
+      ],
+      "answer": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "correctLabel": "𐑦: 𐑕𐑦𐑑 𐑚𐑦𐑜 𐑒𐑦𐑑 / 𐑧: 𐑕𐑧𐑑 𐑚𐑧𐑛 𐑜𐑧𐑑"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑕𐑧𐑑",
+      "caption": "𐑕𐑦𐑑 would be “sit”",
+      "optionIsGlyph": false,
+      "options": [
+        "set",
+        "sit",
+        "sat",
+        "seat"
+      ],
+      "correct": "set",
+      "correctLabel": "set"
     }
   ]
 }

@@ -117,6 +117,28 @@
         "hot",
         "week"
       ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑧𐑤𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "help",
+      "correctLabel": "help"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑢𐑲𐑛",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "wide",
+        "wade",
+        "weed",
+        "wood"
+      ],
+      "correct": "wide",
+      "correctLabel": "wide"
     }
   ]
 }

@@ -146,6 +146,13 @@
         "like",
         "nine"
       ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑴𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "road",
+      "correctLabel": "road"
     }
   ]
 }

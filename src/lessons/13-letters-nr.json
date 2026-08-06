@@ -109,6 +109,28 @@
         "𐑐"
       ],
       "correctLabel": "𐑑𐑮𐑦𐑐"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑨𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "rat",
+      "correctLabel": "rat"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑮𐑧𐑛",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "red",
+        "read",
+        "rid",
+        "rod"
+      ],
+      "correct": "red",
+      "correctLabel": "red"
     }
   ]
 }
