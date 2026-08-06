@@ -11,7 +11,7 @@ export function WriteCard({
   onTypeChange,
 }: ExerciseProps<WriteExercise>) {
   return (
-    <div className="w-full flex flex-col items-center gap-6" style={enterAnimation}>
+    <div className="w-full flex flex-col items-center gap-3 sm:gap-6" style={enterAnimation}>
       <div className="text-center">
         <div className="text-[26px] font-semibold text-foreground">“{exercise.prompt}”</div>
         <div className="text-sm text-muted-foreground mt-2">{exercise.caption}</div>

@@ -1,4 +1,5 @@
 import type { TypeExercise } from '@/lessons/types';
+import { useIsMobile } from '@/hooks/useIsMobile';
 import type { ExerciseProps } from './props';
 import { answerColors, enterAnimation } from '@/lib/exercise-style';
 
@@ -10,6 +11,9 @@ export function TypeCard({
   onTypeChange,
 }: ExerciseProps<TypeExercise>) {
   const dim = answerColors(status, false);
+  // Only on a big screen: on a phone this throws the keyboard up over the
+  // prompt before it has been read, and iOS will not reflow around it.
+  const autoFocus = !useIsMobile();
   return (
     <div className="w-full flex flex-col items-center gap-7" style={enterAnimation}>
       <div className="text-center">
@@ -28,7 +32,7 @@ export function TypeCard({
         value={typedValue}
         onChange={(e) => onTypeChange(e.target.value)}
         placeholder="type here"
-        autoFocus
+        autoFocus={autoFocus}
       />
     </div>
   );

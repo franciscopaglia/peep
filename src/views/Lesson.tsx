@@ -78,10 +78,10 @@ export function Lesson({
 
   return (
     <div
-      className="max-w-[640px] mx-auto px-5 sm:px-6 pt-6 sm:pt-7 pb-10 flex flex-col box-border"
+      className="max-w-[640px] mx-auto px-5 sm:px-6 pt-4 sm:pt-7 pb-2 sm:pb-10 flex flex-col box-border"
       style={{ minHeight: '100dvh' }}
     >
-      <div className="flex items-center gap-3 sm:gap-4 mb-9 sm:mb-11">
+      <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-11">
         <IconButton onClick={onClose} aria-label="Close lesson">
           <X size={18} />
         </IconButton>
@@ -111,7 +111,7 @@ export function Lesson({
         />
       </div>
 
-      <div className="flex-1 flex flex-col items-center justify-center gap-9">
+      <div className="flex-1 flex flex-col items-center justify-center gap-6 sm:gap-9">
         <ExerciseCard
           {...answer}
           exercise={exercise}
@@ -120,7 +120,12 @@ export function Lesson({
         />
       </div>
 
-      <div className="mt-6">
+      {/* Pinned to the bottom of the viewport, not to the end of the page.
+          A phone's own keyboard covers the lower third of the screen and, on
+          iOS, does not reflow the page — so a Check button sitting at the end
+          of the flow ends up underneath it, which is exactly when you need it.
+          Sticky keeps it reachable while the exercise above scrolls. */}
+      <div className="sticky bottom-0 mt-6 pt-3 pb-[env(safe-area-inset-bottom)] bg-background">
         {showCheckButton && (
           <button
             className="w-full py-[13px] rounded-btn border-none font-semibold text-sm"

@@ -49,13 +49,12 @@ export function ShavianKeyboard({
   return (
     <>
       <div
-        className="flex items-center justify-center text-[32px] font-bold tracking-wide"
+        className="flex items-center justify-center text-[26px] sm:text-[32px] font-bold tracking-wide min-h-[44px] sm:min-h-[58px]"
         style={{
-          minHeight: 58,
           minWidth: 220,
           borderBottom: `2px dashed ${typedValue ? lit.border : dim.border}`,
           color: typedValue ? lit.color : 'var(--muted-foreground)',
-          padding: '0 20px 8px',
+          padding: '0 20px 6px',
           whiteSpace: 'pre-wrap',
         }}
       >

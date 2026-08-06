@@ -1,4 +1,5 @@
 import type { TranscribeExercise } from '@/lessons/types';
+import { useIsMobile } from '@/hooks/useIsMobile';
 import type { ExerciseProps } from './props';
 import { answerColors, enterAnimation } from '@/lib/exercise-style';
 
@@ -10,6 +11,7 @@ export function TranscribeCard({
   onTypeChange,
 }: ExerciseProps<TranscribeExercise>) {
   const dim = answerColors(status, false);
+  const autoFocus = !useIsMobile();
   return (
     <div className="w-full flex flex-col gap-4" style={enterAnimation}>
       <div className="text-sm text-muted-foreground">{exercise.caption}</div>
@@ -36,7 +38,7 @@ export function TranscribeCard({
           value={typedValue}
           onChange={(e) => onTypeChange(e.target.value)}
           placeholder="write the English here"
-          autoFocus
+          autoFocus={autoFocus}
         />
       </div>
       <div className="text-xs italic text-muted-foreground">
