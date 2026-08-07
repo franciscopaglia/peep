@@ -151,174 +151,180 @@
   },
   {
     "id": 26,
+    "title": "Letters: They & Ado",
+    "glyph": "𐑞𐑩",
+    "chapter": 2
+  },
+  {
+    "id": 27,
     "title": "Letters: ZH TH",
     "glyph": "𐑠𐑔",
     "chapter": 2
   },
   {
-    "id": 27,
+    "id": 28,
     "title": "R-Vowels: Are & Or",
     "glyph": "𐑸𐑹",
     "chapter": 2
   },
   {
-    "id": 28,
+    "id": 29,
     "title": "Little Words",
     "glyph": "𐑝𐑓",
     "chapter": 2
   },
   {
-    "id": 29,
+    "id": 30,
     "title": "R-Vowels: Air & Err",
     "glyph": "𐑺𐑻",
     "chapter": 2
   },
   {
-    "id": 30,
+    "id": 31,
     "title": "R-Vowels: Array & Ear",
     "glyph": "𐑼𐑽",
     "chapter": 2
   },
   {
-    "id": 31,
+    "id": 32,
     "title": "Ligatures: Yew & Ian",
     "glyph": "𐑾𐑿",
     "chapter": 2
   },
   {
-    "id": 32,
+    "id": 33,
     "title": "Vowels: Out & Awe",
     "glyph": "𐑬𐑷",
     "chapter": 2
   },
   {
-    "id": 33,
+    "id": 34,
     "title": "Vowels: Oil & Ah",
     "glyph": "𐑶𐑭",
     "chapter": 2
   },
   {
-    "id": 34,
+    "id": 35,
     "title": "Naming Names",
     "glyph": "·𐑕",
     "chapter": 2
   },
   {
-    "id": 35,
+    "id": 36,
     "title": "Build Sentences I",
     "glyph": "𐑞 𐑦𐑟",
     "chapter": 2
   },
   {
-    "id": 36,
+    "id": 37,
     "title": "Build Sentences II",
     "glyph": "𐑦𐑑 𐑦𐑟",
     "chapter": 2
   },
   {
-    "id": 37,
+    "id": 38,
     "title": "Reading a Story",
     "glyph": "·𐑕𐑨𐑥",
     "chapter": 2
   },
   {
-    "id": 38,
+    "id": 39,
     "title": "Endings: S & ING",
     "glyph": "𐑦𐑙",
     "chapter": 3
   },
   {
-    "id": 39,
+    "id": 40,
     "title": "Endings: ED",
     "glyph": "𐑩𐑛",
     "chapter": 3
   },
   {
-    "id": 40,
+    "id": 41,
     "title": "The Busy Schwa",
     "glyph": "𐑩",
     "chapter": 3
   },
   {
-    "id": 41,
+    "id": 42,
     "title": "Old Friends, New Faces",
     "glyph": "𐑢𐑳𐑯",
     "chapter": 3
   },
   {
-    "id": 42,
+    "id": 43,
     "title": "Talking on the Page",
     "glyph": "𐑕𐑧𐑛",
     "chapter": 3
   },
   {
-    "id": 43,
+    "id": 44,
     "title": "Reading in the Wild I",
     "glyph": "𐑥𐑵𐑯",
     "chapter": 3
   },
   {
-    "id": 44,
+    "id": 45,
     "title": "Reading in the Wild II",
     "glyph": "𐑞 𐑧𐑯𐑛",
     "chapter": 3
   },
   {
-    "id": 45,
+    "id": 46,
     "title": "A Real Text",
     "glyph": "𐑯𐑹𐑔",
     "chapter": 3
   },
   {
-    "id": 46,
+    "id": 47,
     "title": "First Writing",
     "glyph": "𐑒𐑨𐑑",
     "chapter": 4
   },
   {
-    "id": 47,
+    "id": 48,
     "title": "Hearing the Vowel",
     "glyph": "𐑫𐑵",
     "chapter": 4
   },
   {
-    "id": 48,
+    "id": 49,
     "title": "Writing the R-Vowels",
     "glyph": "𐑸𐑹",
     "chapter": 4
   },
   {
-    "id": 49,
+    "id": 50,
     "title": "Writing the Little Words",
     "glyph": "𐑞 𐑯",
     "chapter": 4
   },
   {
-    "id": 50,
+    "id": 51,
     "title": "Writing the Endings",
     "glyph": "𐑕𐑟",
     "chapter": 4
   },
   {
-    "id": 51,
+    "id": 52,
     "title": "Writing the Schwa",
     "glyph": "𐑩",
     "chapter": 4
   },
   {
-    "id": 52,
+    "id": 53,
     "title": "The Apostrophe Vanishes",
     "glyph": "𐑛𐑴𐑯𐑑",
     "chapter": 4
   },
   {
-    "id": 53,
+    "id": 54,
     "title": "One Spelling, Two Words",
     "glyph": "𐑞𐑺",
     "chapter": 4
   },
   {
-    "id": 54,
+    "id": 55,
     "title": "Writing Sentences",
     "glyph": "𐑞 𐑧𐑯𐑛",
     "chapter": 4
@@ -684,99 +690,99 @@
     "anchor": 25
   },
   {
-    "id": 9261,
+    "id": 9271,
     "title": "Thin & This",
     "glyph": "𐑔𐑦𐑯",
-    "chapter": 2,
-    "optional": true,
-    "anchor": 26
-  },
-  {
-    "id": 9271,
-    "title": "Storm & Short",
-    "glyph": "𐑕𐑑𐑹𐑥",
     "chapter": 2,
     "optional": true,
     "anchor": 27
   },
   {
-    "id": 9291,
-    "title": "Fair or Fur?",
-    "glyph": "𐑓𐑺",
+    "id": 9281,
+    "title": "Storm & Short",
+    "glyph": "𐑕𐑑𐑹𐑥",
     "chapter": 2,
     "optional": true,
-    "anchor": 29
+    "anchor": 28
   },
   {
     "id": 9301,
-    "title": "The -er Words",
-    "glyph": "𐑼",
+    "title": "Fair or Fur?",
+    "glyph": "𐑓𐑺",
     "chapter": 2,
     "optional": true,
     "anchor": 30
   },
   {
-    "id": 9331,
+    "id": 9311,
+    "title": "The -er Words",
+    "glyph": "𐑼",
+    "chapter": 2,
+    "optional": true,
+    "anchor": 31
+  },
+  {
+    "id": 9341,
     "title": "Calm & Coin",
     "glyph": "𐑒𐑭𐑥",
     "chapter": 2,
     "optional": true,
-    "anchor": 33
+    "anchor": 34
   },
   {
-    "id": 9381,
+    "id": 9391,
     "title": "More -S and -ING",
     "glyph": "𐑦𐑙",
     "chapter": 3,
     "optional": true,
-    "anchor": 38
+    "anchor": 39
   },
   {
-    "id": 9401,
+    "id": 9411,
     "title": "The Schwa in Longer Words",
     "glyph": "𐑩",
     "chapter": 3,
     "optional": true,
-    "anchor": 40
+    "anchor": 41
   },
   {
-    "id": 9431,
+    "id": 9441,
     "title": "Reading Without Help",
     "glyph": "𐑮𐑰𐑛",
     "chapter": 3,
     "optional": true,
-    "anchor": 43
+    "anchor": 44
   },
   {
-    "id": 9451,
+    "id": 9461,
     "title": "Find It in the Page",
     "glyph": "𐑓𐑪𐑒𐑕",
     "chapter": 3,
     "optional": true,
-    "anchor": 45
+    "anchor": 46
   },
   {
-    "id": 9461,
+    "id": 9471,
     "title": "Writing: A Gentler Start",
     "glyph": "𐑮𐑲𐑑",
     "chapter": 4,
     "optional": true,
-    "anchor": 46
+    "anchor": 47
   },
   {
-    "id": 9481,
+    "id": 9491,
     "title": "Writing: More R-Vowels",
     "glyph": "𐑻𐑼",
     "chapter": 4,
     "optional": true,
-    "anchor": 48
+    "anchor": 49
   },
   {
-    "id": 9501,
+    "id": 9511,
     "title": "Writing: Endings in Practice",
     "glyph": "𐑩𐑛",
     "chapter": 4,
     "optional": true,
-    "anchor": 50
+    "anchor": 51
   }
 ]

@@ -152,9 +152,9 @@ may be off by up to its `editBudget` (0 letters for ≤2-letter words, 1 for 3�
 2 for longer) so a typo doesn't fail a *reading* exercise, while word count must
 still match; `accept` for spelling variants. **A passage carrying a `source`
 must be a real text, quoted accurately and never invented** — that is the whole
-claim lesson 45 makes. Short unsourced curriculum sentences are fine as
+claim lesson 46 makes. Short unsourced curriculum sentences are fine as
 transcribe practice on the way there, and carry no `source`),
-`write` (spell an English word — or, from lesson 49
+`write` (spell an English word — or, from lesson 50
 on, a phrase or whole sentence — in Shavian on the on-screen keyboard; layout in
 `lib/shavian-keyboard.ts`: chart-paired letter rows plus the naming dot,
 `. , ? !` and a space key. Graded on an exact glyph match (plus `accept`),
@@ -224,10 +224,25 @@ for the grammar. Run `lesson.mjs check` plus `npm test` after content changes.
   letters (`𐑠` zh, the r-vowels `𐑸𐑹𐑺𐑻𐑼𐑽𐑾𐑿`, or `𐑬𐑭𐑷𐑶`), and never `𐑔`; `𐑞`
   appears in Ch1 only as the fixed word "the". Also beware words whose *sounds*
   aren't all taught yet — "digit" contains `𐑡` (j), not `𐑜` (g).
+- **A glyph's budget and its teaching are two different dates.** `INTRODUCED`
+  says when a glyph may *appear*; a lesson may hand it over as a fixed word long
+  before any lesson teaches it as a letter, and then a later "make it official"
+  lesson gives it its card. `𐑨`/`𐑦` arrive in 2 and 3 and are named in 4 and 8;
+  `𐑞`/`𐑩` arrive in 25 as *the* and *a* and become letters in 26. So a new
+  letter-intro lesson does **not** always add an `INTRODUCED` key. Every one of
+  the 48 letters must end up with a `media=letters:` card somewhere — grep
+  `lesson.mjs grep "media=letters"` against `shavian-alphabet.ts` to check.
+- **Length is part of the lesson's job.** A letter-intro lesson runs ~10–18
+  graded exercises and must spend the *same number of screens on each* of its
+  two letters — an asymmetric pair reads as one letter mattering more.
+  Consolidation lessons ("Everyday Words", "Everything Together") and chapter
+  finales carry **20+**, and a finale must actually integrate: sweep every
+  letter family the chapter taught, and use the hardest types the learner has
+  (`cloze`, `arrange`, `fill`, multi-word `type`), not more of the same drill.
 - **Use the standard abbreviated words.** In running Shavian text, the = `𐑞`,
   and = `𐑯`, to = `𐑑`, of = `𐑝`, for = `𐑓` — never spelled out. `𐑨𐑯𐑛` is a
   misspelling of "and", and `𐑑𐑵` reads "too/two", never "to". They're taught in
-  lesson 25 (`𐑞 𐑯 𐑑`) and lesson 28 "Little Words" (`𐑝 𐑓`, plus for/four and
+  lesson 25 (`𐑞 𐑯 𐑑`), made letters in lesson 26, and lesson 29 "Little Words" (`𐑝 𐑓`, plus for/four and
   the first homographs); Chapter 3 will deepen this (ligatures, more shorthand).
 - `type`: when the prompt's spelling is shared by English homophones (`𐑑𐑵` is
   both "too" and "two", `𐑓𐑹` is "four"/"fore"), list the alternates in
@@ -259,6 +274,26 @@ for the grammar. Run `lesson.mjs check` plus `npm test` after content changes.
   passage in `{{ … }}` to render it as a full-width **display block** — use
   this for whole sentences and dialogue so punctuation stays inside instead of
   chopping the text into chips at every stop.
+
+### Inserting a lesson mid-spine
+
+`lesson.mjs renumber a..b ±d` shifts spine ids and filenames, **and nothing
+else**. Everything below is manual, and none of it is type-checked:
+
+- **Branch ids encode their anchor**: `9` + the two-digit anchor + a sequence
+  number, so `9271` is the first branch off lesson 27. Shifting an anchor means
+  renaming the file *and* rewriting its `anchor` field — walk them in
+  **descending** anchor order or the renames collide with each other.
+- **`INTRODUCED` keys** in `scripts/lib/curriculum.mjs` are lesson ids; shift
+  them too, or `check` starts rejecting letters as untaught.
+- **Lesson numbers quoted in prose** drift silently: `spellcheck-allow.json`
+  reasons, comments like `ShavianKeyboard.tsx`'s, and CLAUDE.md / ROADMAP.md /
+  README.md. `curriculum.mjs docs --check` only verifies the *counts*.
+- **Progress is one number in `localStorage`**, so every learner past the
+  insertion point ends up one lesson behind where they were. The per-chapter
+  unlock on the dashboard is the escape hatch; there is no migration.
+
+Then `lesson.mjs meta-index` and the full `npm run check`.
 
 ## Tests
 

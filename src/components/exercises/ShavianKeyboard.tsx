@@ -12,9 +12,9 @@ import { useIsMobile } from '@/hooks/useIsMobile';
  *
  * The 48 letters are always there, but the space, the naming dot and the
  * borrowed punctuation appear only for an answer that uses them. A learner
- * meeting the keyboard for the first time in lesson 46 is spelling single
+ * meeting the keyboard for the first time in lesson 47 is spelling single
  * words, and five keys they have no use for are five keys in the way; the
- * space arrives in lesson 49 with the first phrase, and the stops in 54 with
+ * space arrives in lesson 50 with the first phrase, and the stops in 55 with
  * the first sentence, which is exactly the story those lessons tell.
  *
  * Derived from `answers` rather than authored, so it cannot drift from the

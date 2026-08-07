@@ -1,0 +1,214 @@
+{
+  "id": 26,
+  "title": "Letters: They & Ado",
+  "glyph": "𐑞𐑩",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Welcome to Chapter 2",
+      "body": "You have read the whole alphabet’s core sounds. This chapter finishes the job with the letters still to come, then moves on to reading full sentences with confidence. We start with two you have been using all along without ever meeting them properly: 𐑞 and 𐑩."
+    },
+    {
+      "type": "teach",
+      "title": "Meet they — 𐑞",
+      "body": "You have been reading 𐑞 as the word the. It is a letter as well, and its name is they — the buzzing “th” you hear in they, this and with. Say “the” and hold that first sound: it hums.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑞"
+        ]
+      }
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which letter makes the buzzing “th” in “this”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑞",
+        "𐑛",
+        "𐑟",
+        "𐑝"
+      ],
+      "correct": "𐑞",
+      "correctLabel": "𐑞"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑞𐑨𐑑",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "that",
+        "than",
+        "hat",
+        "the"
+      ],
+      "correct": "that",
+      "correctLabel": "that"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑞𐑧𐑯",
+      "caption": "Type what this says",
+      "correct": "then",
+      "correctLabel": "then"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑦𐑞",
+      "caption": "Type what this says",
+      "correct": "with",
+      "correctLabel": "with"
+    },
+    {
+      "type": "build",
+      "prompt": "this",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑞",
+        "𐑦",
+        "𐑕",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑞",
+        "𐑦",
+        "𐑕"
+      ],
+      "correctLabel": "𐑞𐑦𐑕"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑞𐑱",
+      "caption": "Type what this says",
+      "correct": "they",
+      "correctLabel": "they"
+    },
+    {
+      "type": "teach",
+      "title": "Meet ado — 𐑩",
+      "body": "And 𐑩, which you have been reading as the word a, is the letter ado. It is the quiet “uh” an unstressed syllable collapses into — the start of again, the end of little. It is the commonest vowel sound in spoken English, so this small letter turns up everywhere.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑩"
+        ]
+      }
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑩",
+      "caption": "What sound does this make?",
+      "optionIsGlyph": false,
+      "options": [
+        "the quiet “uh” in again",
+        "the “u” in cup",
+        "the “a” in cat",
+        "the “o” in dog"
+      ],
+      "correct": "the quiet “uh” in again",
+      "correctLabel": "the quiet “uh” in again"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑩𐑯",
+      "caption": "Type what this says",
+      "correct": "an",
+      "correctLabel": "an"
+    },
+    {
+      "type": "build",
+      "prompt": "again",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑩",
+        "𐑜",
+        "𐑧",
+        "𐑯",
+        "𐑨"
+      ],
+      "answer": [
+        "𐑩",
+        "𐑜",
+        "𐑧",
+        "𐑯"
+      ],
+      "correctLabel": "𐑩𐑜𐑧𐑯"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑦𐑑𐑩𐑤",
+      "caption": "Type what this says",
+      "correct": "little",
+      "correctLabel": "little"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑑𐑩𐑛𐑱",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "today",
+        "tidy",
+        "toad",
+        "ready"
+      ],
+      "correct": "today",
+      "correctLabel": "today"
+    },
+    {
+      "type": "teach",
+      "title": "𐑩 vs 𐑳",
+      "body": "Both are “uh” sounds, and stress is what separates them. 𐑳 (up) is the one a stressed syllable gets — cup, sun, bus. 𐑩 (ado) is its unstressed shadow: say again, then until, and notice how little of the first syllable you actually pronounce."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑩𐑯𐑑𐑦𐑤",
+      "caption": "Type what this says",
+      "correct": "until",
+      "correctLabel": "until"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “people”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑐𐑰𐑐𐑩𐑤",
+        "𐑐𐑰𐑐𐑳𐑤",
+        "𐑐𐑧𐑐𐑩𐑤",
+        "𐑐𐑰𐑐𐑤"
+      ],
+      "correct": "𐑐𐑰𐑐𐑩𐑤",
+      "correctLabel": "𐑐𐑰𐑐𐑩𐑤"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑞𐑱": "they",
+        "𐑞𐑧𐑥": "them",
+        "𐑩𐑯": "an",
+        "𐑑𐑩𐑛𐑱": "today"
+      },
+      "leftOrder": [
+        "𐑞𐑱",
+        "𐑞𐑧𐑥",
+        "𐑩𐑯",
+        "𐑑𐑩𐑛𐑱"
+      ],
+      "rightOrder": [
+        "an",
+        "they",
+        "today",
+        "them"
+      ]
+    }
+  ]
+}

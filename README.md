@@ -41,12 +41,12 @@ Lessons live as plain **JSON data files** — the code just renders them — whi
 | Chapter | Theme | Lessons |
 | --- | --- | --- |
 | **Chapter 1** | The Alphabet | 25 lessons — every consonant and vowel, ~20 exercises each |
-| **Chapter 2** | Reading Fluency | 12 lessons — the last letters, r-coloured vowels & ligatures, names, and sentence building |
+| **Chapter 2** | Reading Fluency | 13 lessons — the last letters, r-coloured vowels & ligatures, names, and sentence building |
 | **Chapter 3** | Reading in the Wild | 8 lessons — sound-true endings, the schwa, sight words, dialogue, longer stories, and a real fable to transcribe |
 | **Chapter 4** | Writing Shavian | 9 lessons — spell words, then phrases and whole sentences, on a full on-screen Shavian keyboard |
 | **Chapter 5** | *Coming soon* | — |
 
-Alongside those 54 lessons on the main path sit **57 optional branch lessons** —
+Alongside those 55 lessons on the main path sit **57 optional branch lessons** —
 extra practice on the trickier letters and words, hanging off the lesson they
 belong to. They unlock when you reach their spot, and never gate the path or
 count toward your progress: take them when you want more, skip them when you

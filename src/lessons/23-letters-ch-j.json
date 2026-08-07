@@ -6,7 +6,7 @@
   "exercises": [
     {
       "type": "teach",
-      "title": "Meet church",
+      "title": "Meet church — 𐑗",
       "body": "Say “t” right before the 𐑖 you just learned and speed it up — that blend is the church sound, 𐑗. Its shape says the same thing: it looks like the tot and sure letters pressed together.",
       "media": {
         "kind": "letters",
@@ -14,13 +14,6 @@
           "𐑗"
         ]
       }
-    },
-    {
-      "type": "type",
-      "prompt": "𐑗𐑦𐑐",
-      "caption": "Sound it out — what does this say?",
-      "correct": "chip",
-      "correctLabel": "chip"
     },
     {
       "type": "choice",
@@ -38,8 +31,54 @@
       "correctLabel": "𐑗"
     },
     {
+      "type": "type",
+      "prompt": "𐑗𐑦𐑐",
+      "caption": "Sound it out — what does this say?",
+      "correct": "chip",
+      "correctLabel": "chip"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑗𐑦𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "chin",
+      "correctLabel": "chin"
+    },
+    {
+      "type": "build",
+      "prompt": "chat",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑗",
+        "𐑨",
+        "𐑑",
+        "𐑖"
+      ],
+      "answer": [
+        "𐑗",
+        "𐑨",
+        "𐑑"
+      ],
+      "correctLabel": "𐑗𐑨𐑑"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑮𐑦𐑗",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "rich",
+        "reach",
+        "ridge",
+        "ring"
+      ],
+      "correct": "rich",
+      "correctLabel": "rich"
+    },
+    {
       "type": "teach",
-      "title": "Meet judge",
+      "title": "Meet judge — 𐑡",
       "body": "And here is the deep partner 𐑖 never had — but 𐑗 does. The letter for judge is 𐑡. Compare: 𐑗 𐑡. Say “j” and feel the buzz that “ch” doesn’t have.",
       "media": {
         "kind": "letters",
@@ -50,18 +89,18 @@
     },
     {
       "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑡𐑪𐑚",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
+      "promptIsGlyph": false,
+      "prompt": "Which letter makes the “j” sound?",
+      "caption": "",
+      "optionIsGlyph": true,
       "options": [
-        "job",
-        "jog",
-        "jab",
-        "gob"
+        "𐑡",
+        "𐑗",
+        "𐑟",
+        "𐑛"
       ],
-      "correct": "job",
-      "correctLabel": "job"
+      "correct": "𐑡",
+      "correctLabel": "𐑡"
     },
     {
       "type": "type",
@@ -71,9 +110,49 @@
       "correctLabel": "jam"
     },
     {
+      "type": "type",
+      "prompt": "𐑡𐑪𐑚",
+      "caption": "Sound it out — what does this say?",
+      "correct": "job",
+      "correctLabel": "job"
+    },
+    {
+      "type": "build",
+      "prompt": "page",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑐",
+        "𐑱",
+        "𐑡",
+        "𐑜",
+        "𐑛"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑱",
+        "𐑡"
+      ],
+      "correctLabel": "𐑐𐑱𐑡"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑧𐑡",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "edge",
+        "egg",
+        "age",
+        "etch"
+      ],
+      "correct": "edge",
+      "correctLabel": "edge"
+    },
+    {
       "type": "teach",
-      "title": "Building sounds by blending shapes",
-      "body": "𐑗 visibly borrows from 𐑑 and 𐑖 pressed together — a blend of two known shapes for a blended sound. Chapter 2 takes this trick further: whole letter-pairs fused into one character, called ligatures."
+      "title": "One sound each, however English spells it",
+      "body": "This is where English gets messy and Shavian does not. The 𐑗 sound is written ch in chip, tch in catch, t in future. The 𐑡 sound is j in job, g in age, dge in badge, d in soldier. Four spellings each, and you had to learn which word takes which. In Shavian there is one letter for the first sound and one for the second, and that is the whole rule."
     },
     {
       "type": "build",
@@ -94,45 +173,34 @@
       "correctLabel": "𐑚𐑨𐑡"
     },
     {
-      "type": "match",
-      "pairs": {
-        "𐑗𐑨𐑑": "chat",
-        "𐑗𐑦𐑐": "chip",
-        "𐑡𐑨𐑥": "jam",
-        "𐑡𐑳𐑡": "judge"
-      },
-      "leftOrder": [
-        "𐑗𐑨𐑑",
-        "𐑗𐑦𐑐",
-        "𐑡𐑨𐑥",
-        "𐑡𐑳𐑡"
+      "type": "build",
+      "prompt": "catch",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑨",
+        "𐑗",
+        "𐑑"
       ],
-      "rightOrder": [
-        "judge",
-        "jam",
-        "chat",
-        "chip"
-      ]
-    },
-    {
-      "type": "type",
-      "prompt": "𐑗𐑦𐑯",
-      "caption": "Sound it out — what does this say?",
-      "correct": "chin",
-      "correctLabel": "chin"
+      "answer": [
+        "𐑒",
+        "𐑨",
+        "𐑗"
+      ],
+      "correctLabel": "𐑒𐑨𐑗"
     },
     {
       "type": "sort",
-      "prompt": "Which one starts the word?",
+      "prompt": "Which sound does the word end with?",
       "buckets": [
         "𐑗",
         "𐑡"
       ],
       "items": [
-        "𐑗𐑦𐑐",
-        "𐑗𐑦𐑯",
-        "𐑡𐑨𐑥",
-        "𐑡𐑪𐑚"
+        "𐑕𐑳𐑗",
+        "𐑰𐑗",
+        "𐑧𐑡",
+        "𐑐𐑱𐑡"
       ],
       "answer": [
         0,
@@ -140,7 +208,69 @@
         1,
         1
       ],
-      "correctLabel": "𐑗: 𐑗𐑦𐑐 𐑗𐑦𐑯 / 𐑡: 𐑡𐑨𐑥 𐑡𐑪𐑚"
+      "correctLabel": "𐑗: 𐑕𐑳𐑗 𐑰𐑗 / 𐑡: 𐑧𐑡 𐑐𐑱𐑡"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑳𐑗",
+      "caption": "Sound it out — what does this say?",
+      "correct": "such",
+      "correctLabel": "such"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑰𐑗",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "each",
+        "eat",
+        "itch",
+        "ease"
+      ],
+      "correct": "each",
+      "correctLabel": "each"
+    },
+    {
+      "type": "teach",
+      "title": "A tall one and a deep one",
+      "body": "𐑗 and 𐑡 are a pair like every other: the tall one is quiet, the deep one buzzes. Say chin, then gin, and the only thing that moves is your voice box. Notice too that 𐑗 visibly borrows from 𐑑 and 𐑖 pressed together — a blend of two known shapes for a blended sound. Chapter 2 takes that trick further, into whole letter-pairs fused into one character: ligatures."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑡𐑳𐑡",
+      "caption": "Both letters are the same one. What does it say?",
+      "correct": "judge",
+      "correctLabel": "judge"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑳𐑗",
+      "caption": "Sound it out — what does this say?",
+      "correct": "touch",
+      "correctLabel": "touch"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑗𐑨𐑑": "chat",
+        "𐑮𐑦𐑗": "rich",
+        "𐑡𐑪𐑚": "job",
+        "𐑧𐑡": "edge"
+      },
+      "leftOrder": [
+        "𐑗𐑨𐑑",
+        "𐑮𐑦𐑗",
+        "𐑡𐑪𐑚",
+        "𐑧𐑡"
+      ],
+      "rightOrder": [
+        "job",
+        "chat",
+        "edge",
+        "rich"
+      ]
     }
   ]
 }

@@ -126,6 +126,237 @@
         "𐑕𐑨𐑑"
       ],
       "promptEn": "the cat sat"
+    },
+    {
+      "type": "teach",
+      "title": "Names take a dot",
+      "body": "Shavian has no capital letters at all, so a name is marked another way: a small dot in front of it. ·𐑕𐑨𐑥 is Sam, ·𐑚𐑧𐑯 is Ben. The dot is not a letter and makes no sound — it only says “this word is a name”."
+    },
+    {
+      "type": "type",
+      "prompt": "·𐑕𐑨𐑥 𐑣𐑨𐑛 𐑩 𐑚𐑦𐑜 𐑤𐑳𐑯𐑗",
+      "caption": "Type what this says",
+      "correct": "sam had a big lunch",
+      "correctLabel": "sam had a big lunch"
+    },
+    {
+      "type": "spot",
+      "prompt": "Sam",
+      "words": [
+        "·𐑕𐑨𐑥",
+        "𐑯",
+        "·𐑚𐑧𐑯",
+        "𐑢𐑧𐑯𐑑",
+        "𐑑",
+        "𐑞",
+        "𐑖𐑪𐑐"
+      ],
+      "correct": 0,
+      "correctLabel": "·𐑕𐑨𐑥",
+      "stops": [
+        6
+      ]
+    },
+    {
+      "type": "arrange",
+      "promptEn": "we went to the beach",
+      "tiles": [
+        "𐑢𐑰",
+        "𐑢𐑧𐑯𐑑",
+        "𐑑",
+        "𐑞",
+        "𐑚𐑰𐑗",
+        "𐑞𐑧𐑯"
+      ],
+      "answer": [
+        "𐑢𐑰",
+        "𐑢𐑧𐑯𐑑",
+        "𐑑",
+        "𐑞",
+        "𐑚𐑰𐑗"
+      ],
+      "correctLabel": "𐑢𐑰 𐑢𐑧𐑯𐑑 𐑑 𐑞 𐑚𐑰𐑗"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑞 𐑥𐑧𐑯 𐑮𐑨𐑯 𐑑 𐑞 𐑚𐑳𐑕",
+      "caption": "What does this sentence say?",
+      "optionIsGlyph": false,
+      "options": [
+        "the men ran to the bus",
+        "the man ran to the bus",
+        "the men ran to the bed",
+        "the man ran to the bed"
+      ],
+      "correct": "the men ran to the bus",
+      "correctLabel": "the men ran to the bus"
+    },
+    {
+      "type": "fill",
+      "blanks": [
+        2,
+        5
+      ],
+      "bank": [
+        "𐑜𐑱𐑝",
+        "𐑮𐑧𐑛",
+        "𐑚𐑦𐑜"
+      ],
+      "correctLabel": "𐑞 𐑥𐑨𐑯 𐑜𐑱𐑝 𐑥𐑰 𐑩 𐑮𐑧𐑛 𐑚𐑫𐑒",
+      "words": [
+        "𐑞",
+        "𐑥𐑨𐑯",
+        "𐑜𐑱𐑝",
+        "𐑥𐑰",
+        "𐑩",
+        "𐑮𐑧𐑛",
+        "𐑚𐑫𐑒"
+      ],
+      "promptEn": "the man gave me a red book"
+    },
+    {
+      "type": "teach",
+      "title": "You are reading, not decoding",
+      "body": "Notice what just happened. You did not sound out each of those letters one at a time — the short words went by whole, and only the longer ones needed spelling out. That is what reading is, and it is what the rest of the course builds on. The last few exercises are the hardest in the chapter; take them slowly."
+    },
+    {
+      "type": "spot",
+      "prompt": "book",
+      "words": [
+        "𐑞",
+        "𐑮𐑧𐑛",
+        "𐑚𐑫𐑒",
+        "𐑦𐑟",
+        "𐑪𐑯",
+        "𐑞",
+        "𐑚𐑧𐑛"
+      ],
+      "correct": 2,
+      "correctLabel": "𐑚𐑫𐑒",
+      "stops": [
+        6
+      ]
+    },
+    {
+      "type": "fill",
+      "blanks": [
+        4,
+        7
+      ],
+      "bank": [
+        "𐑖𐑪𐑐",
+        "𐑥𐑦𐑤𐑒",
+        "𐑚𐑫𐑒"
+      ],
+      "correctLabel": "𐑲 𐑢𐑧𐑯𐑑 𐑑 𐑞 𐑖𐑪𐑐 𐑑 𐑜𐑧𐑑 𐑥𐑦𐑤𐑒",
+      "words": [
+        "𐑲",
+        "𐑢𐑧𐑯𐑑",
+        "𐑑",
+        "𐑞",
+        "𐑖𐑪𐑐",
+        "𐑑",
+        "𐑜𐑧𐑑",
+        "𐑥𐑦𐑤𐑒"
+      ],
+      "promptEn": "I went to the shop to get milk"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑞 𐑕𐑳𐑯 𐑦𐑟 𐑣𐑪𐑑 𐑯 𐑞 𐑕𐑰 𐑦𐑟 𐑒𐑵𐑤",
+      "caption": "Type what this says",
+      "correct": "the sun is hot and the sea is cool",
+      "correctLabel": "the sun is hot and the sea is cool"
+    },
+    {
+      "type": "arrange",
+      "promptEn": "I will tell the men",
+      "tiles": [
+        "𐑲",
+        "𐑢𐑦𐑤",
+        "𐑑𐑧𐑤",
+        "𐑞",
+        "𐑥𐑧𐑯",
+        "𐑥𐑨𐑯"
+      ],
+      "answer": [
+        "𐑲",
+        "𐑢𐑦𐑤",
+        "𐑑𐑧𐑤",
+        "𐑞",
+        "𐑥𐑧𐑯"
+      ],
+      "correctLabel": "𐑲 𐑢𐑦𐑤 𐑑𐑧𐑤 𐑞 𐑥𐑧𐑯"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑰 𐑣𐑨𐑛 𐑓𐑦𐑖 𐑯 𐑗𐑦𐑐𐑕",
+      "caption": "Type what this says",
+      "correct": "we had fish and chips",
+      "correctLabel": "we had fish and chips"
+    },
+    {
+      "type": "spot",
+      "prompt": "hungry",
+      "words": [
+        "𐑞",
+        "𐑛𐑪𐑜",
+        "𐑦𐑟",
+        "𐑣𐑳𐑙𐑜𐑮𐑦",
+        "𐑯",
+        "𐑣𐑪𐑑"
+      ],
+      "correct": 3,
+      "correctLabel": "𐑣𐑳𐑙𐑜𐑮𐑦",
+      "stops": [
+        5
+      ]
+    },
+    {
+      "type": "cloze",
+      "blanks": [
+        3,
+        10,
+        16
+      ],
+      "bank": [
+        "𐑮𐑧𐑛",
+        "𐑚𐑰𐑗",
+        "𐑕𐑳𐑯",
+        "𐑛𐑪𐑜",
+        "𐑤𐑳𐑯𐑗"
+      ],
+      "correctLabel": "·𐑕𐑨𐑥 𐑣𐑨𐑛 𐑩 𐑮𐑧𐑛 𐑚𐑫𐑒 𐑣𐑰 𐑑𐑫𐑒 𐑦𐑑 𐑑 𐑞 𐑚𐑰𐑗 𐑯 𐑮𐑧𐑛 𐑦𐑑 𐑦𐑯 𐑞 𐑕𐑳𐑯",
+      "words": [
+        "·𐑕𐑨𐑥",
+        "𐑣𐑨𐑛",
+        "𐑩",
+        "𐑮𐑧𐑛",
+        "𐑚𐑫𐑒",
+        "𐑣𐑰",
+        "𐑑𐑫𐑒",
+        "𐑦𐑑",
+        "𐑑",
+        "𐑞",
+        "𐑚𐑰𐑗",
+        "𐑯",
+        "𐑮𐑧𐑛",
+        "𐑦𐑑",
+        "𐑦𐑯",
+        "𐑞",
+        "𐑕𐑳𐑯"
+      ],
+      "stops": [
+        4,
+        16
+      ],
+      "translation": "Sam had a red book. He took it to the beach and read it in the sun."
+    },
+    {
+      "type": "teach",
+      "title": "That is Chapter 1",
+      "body": "Thirty-two letters, and sentences you can read. From here the alphabet finishes — the last consonants, the r-vowels, the ligatures — and the lessons turn from letters to reading. Well done."
     }
   ]
 }

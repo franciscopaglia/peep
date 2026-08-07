@@ -1,0 +1,133 @@
+{
+  "id": 9441,
+  "title": "Reading Without Help",
+  "glyph": "𐑮𐑰𐑛",
+  "chapter": 3,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "No banks, no tiles",
+      "body": "The main path gives you word banks to lean on. This one does not: read the Shavian, work out what it says, and write it. If a word will not come, sound it out letter by letter — that is what the alphabet is for, and it is the whole reason it can be learned in an afternoon."
+    },
+    {
+      "type": "transcribe",
+      "passage": "𐑞 𐑢𐑫𐑥𐑩𐑯 𐑒𐑱𐑥 𐑓𐑮𐑪𐑥 𐑞 𐑑𐑬𐑯 𐑢𐑦𐑞 𐑑𐑵 𐑗𐑦𐑤𐑛𐑮𐑩𐑯.",
+      "caption": "Read the passage, then write it out in English",
+      "correct": "the woman came from the town with two children",
+      "correctLabel": "the woman came from the town with two children"
+    },
+    {
+      "type": "transcribe",
+      "passage": "𐑞𐑱 𐑢𐑪𐑯𐑑𐑩𐑛 𐑑 𐑮𐑰𐑛 𐑞 𐑚𐑫𐑒, 𐑚𐑳𐑑 𐑦𐑑 𐑢𐑪𐑟 𐑑𐑵 𐑤𐑪𐑙.",
+      "caption": "Read the passage, then write it out in English",
+      "correct": "they wanted to read the book but it was too long",
+      "correctLabel": "they wanted to read the book but it was too long"
+    },
+    {
+      "type": "transcribe",
+      "passage": "𐑞 𐑐𐑰𐑐𐑩𐑤 𐑤𐑫𐑒𐑑 𐑨𐑑 𐑞 𐑢𐑷𐑑𐑼 𐑯 𐑕𐑧𐑛 𐑯𐑳𐑔𐑦𐑙.",
+      "caption": "Read the passage, then write it out in English",
+      "correct": "the people looked at the water and said nothing",
+      "correctLabel": "the people looked at the water and said nothing"
+    },
+    {
+      "type": "spot",
+      "prompt": "without",
+      "words": [
+        "𐑖𐑰",
+        "𐑢𐑷𐑒𐑑",
+        "𐑣𐑴𐑥",
+        "𐑢𐑦𐑞𐑬𐑑",
+        "𐑞",
+        "𐑚𐑫𐑒"
+      ],
+      "correct": 3,
+      "correctLabel": "𐑢𐑦𐑞𐑬𐑑",
+      "stops": [
+        5
+      ]
+    },
+    {
+      "type": "spot",
+      "prompt": "only",
+      "words": [
+        "𐑞𐑺",
+        "𐑢𐑪𐑟",
+        "𐑴𐑯𐑤𐑦",
+        "𐑢𐑳𐑯",
+        "𐑤𐑧𐑓𐑑"
+      ],
+      "correct": 2,
+      "correctLabel": "𐑴𐑯𐑤𐑦",
+      "stops": [
+        4
+      ]
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑚𐑦𐑑𐑢𐑰𐑯",
+      "caption": "",
+      "optionIsGlyph": false,
+      "options": [
+        "between",
+        "beaten",
+        "bitten",
+        "beneath"
+      ],
+      "correct": "between",
+      "correctLabel": "between"
+    },
+    {
+      "type": "cloze",
+      "blanks": [
+        3,
+        4
+      ],
+      "bank": [
+        "𐑤𐑪𐑙",
+        "𐑞𐑧𐑯",
+        "𐑞𐑺"
+      ],
+      "correctLabel": "𐑞 𐑛𐑱 𐑢𐑪𐑟 𐑤𐑪𐑙 𐑞𐑧𐑯 𐑞 𐑯𐑲𐑑 𐑒𐑱𐑥",
+      "words": [
+        "𐑞",
+        "𐑛𐑱",
+        "𐑢𐑪𐑟",
+        "𐑤𐑪𐑙",
+        "𐑞𐑧𐑯",
+        "𐑞",
+        "𐑯𐑲𐑑",
+        "𐑒𐑱𐑥"
+      ],
+      "stops": [
+        3,
+        7
+      ],
+      "translation": "The day was long. Then the night came."
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑢𐑦𐑞𐑬𐑑": "without",
+        "𐑚𐑦𐑑𐑢𐑰𐑯": "between",
+        "𐑴𐑯𐑤𐑦": "only",
+        "𐑡𐑳𐑕𐑑": "just"
+      },
+      "leftOrder": [
+        "𐑢𐑦𐑞𐑬𐑑",
+        "𐑚𐑦𐑑𐑢𐑰𐑯",
+        "𐑴𐑯𐑤𐑦",
+        "𐑡𐑳𐑕𐑑"
+      ],
+      "rightOrder": [
+        "only",
+        "just",
+        "without",
+        "between"
+      ]
+    }
+  ],
+  "anchor": 44,
+  "optional": true
+}
