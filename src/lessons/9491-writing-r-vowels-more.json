@@ -1,0 +1,124 @@
+{
+  "id": 9491,
+  "title": "Writing: More R-Vowels",
+  "glyph": "𐑻𐑼",
+  "chapter": 4,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "One letter, not two",
+      "body": "The hardest habit to break when writing Shavian is reaching for an r. There is no r in 𐑢𐑻𐑤𐑛 or 𐑤𐑱𐑑𐑼 — the vowel already contains it. Ask yourself which r-vowel you hear, write that one letter, and move on."
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑻",
+        "𐑼",
+        "𐑹"
+      ],
+      "correctLabel": "𐑢𐑻𐑤𐑛",
+      "prompt": "world",
+      "word": [
+        "𐑢",
+        "𐑻",
+        "𐑤",
+        "𐑛"
+      ]
+    },
+    {
+      "type": "write",
+      "prompt": "world",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑢𐑻𐑤𐑛",
+      "correctLabel": "𐑢𐑻𐑤𐑛"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        3
+      ],
+      "bank": [
+        "𐑼",
+        "𐑻",
+        "𐑸"
+      ],
+      "correctLabel": "𐑭𐑓𐑑𐑼",
+      "prompt": "after",
+      "word": [
+        "𐑭",
+        "𐑓",
+        "𐑑",
+        "𐑼"
+      ]
+    },
+    {
+      "type": "write",
+      "prompt": "after",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑭𐑓𐑑𐑼",
+      "correctLabel": "𐑭𐑓𐑑𐑼"
+    },
+    {
+      "type": "write",
+      "prompt": "later",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑤𐑱𐑑𐑼",
+      "correctLabel": "𐑤𐑱𐑑𐑼"
+    },
+    {
+      "type": "write",
+      "prompt": "church",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑗𐑻𐑗",
+      "correctLabel": "𐑗𐑻𐑗"
+    },
+    {
+      "type": "write",
+      "prompt": "words",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑢𐑻𐑛𐑟",
+      "correctLabel": "𐑢𐑻𐑛𐑟"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which r-vowel does the middle of “further” use?",
+      "caption": "𐑓𐑻𐑞𐑼 — the first one, under the stress",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑻",
+        "𐑼",
+        "𐑸",
+        "𐑹"
+      ],
+      "correct": "𐑻",
+      "correctLabel": "𐑻"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑢𐑻𐑤𐑛": "world",
+        "𐑭𐑓𐑑𐑼": "after",
+        "𐑗𐑻𐑗": "church",
+        "𐑐𐑬𐑼": "power"
+      },
+      "leftOrder": [
+        "𐑢𐑻𐑤𐑛",
+        "𐑭𐑓𐑑𐑼",
+        "𐑗𐑻𐑗",
+        "𐑐𐑬𐑼"
+      ],
+      "rightOrder": [
+        "after",
+        "power",
+        "world",
+        "church"
+      ]
+    }
+  ],
+  "anchor": 49,
+  "optional": true
+}

@@ -1,0 +1,175 @@
+{
+  "id": 32,
+  "title": "Ligatures: Yew & Ian",
+  "glyph": "𐑾𐑿",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Meet yew",
+      "body": "The letter for yew is 𐑿, the sound in few and use.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑿"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑿",
+      "caption": "Sound it out — what does this say?",
+      "correct": "few",
+      "correctLabel": "few"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑯𐑿",
+      "caption": "Sound it out — what does this say?",
+      "correct": "new",
+      "correctLabel": "new",
+      "accept": [
+        "knew"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑿𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "cute",
+      "correctLabel": "cute"
+    },
+    {
+      "type": "build",
+      "prompt": "music",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑥",
+        "𐑿",
+        "𐑟",
+        "𐑦",
+        "𐑒",
+        "𐑵"
+      ],
+      "answer": [
+        "𐑥",
+        "𐑿",
+        "𐑟",
+        "𐑦",
+        "𐑒"
+      ],
+      "correctLabel": "𐑥𐑿𐑟𐑦𐑒"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑣𐑿𐑡",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "huge",
+        "hug",
+        "hedge",
+        "juice"
+      ],
+      "correct": "huge",
+      "correctLabel": "huge"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑿𐑕",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "use",
+        "yews",
+        "ooze",
+        "yes"
+      ],
+      "correct": "use",
+      "correctLabel": "use"
+    },
+    {
+      "type": "teach",
+      "title": "Meet ian",
+      "body": "One more ligature rounds out the family: ian, 𐑾 — a quick glide from “i” into “a”. It hides in some very common words: real is 𐑮𐑾𐑤, really 𐑮𐑾𐑤𐑦, and idea is 𐑲𐑛𐑾.",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑾"
+        ]
+      }
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which letter is ian?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑾",
+        "𐑿",
+        "𐑽",
+        "𐑼"
+      ],
+      "correct": "𐑾",
+      "correctLabel": "𐑾"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑾𐑤",
+      "caption": "Sound it out — what does this say?",
+      "correct": "real",
+      "correctLabel": "real"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑲𐑛𐑾",
+      "caption": "Sound it out — what does this say?",
+      "correct": "idea",
+      "correctLabel": "idea"
+    },
+    {
+      "type": "teach",
+      "title": "Ligatures of sound",
+      "body": "𐑿 and 𐑾 are ligatures too, but of sounds rather than an r: 𐑿 packs “y”+“oo” into one letter (few is f-yoo), and 𐑾 glides “i” into “a”. That completes the whole ligature family — the six r-vowels plus these two, eight in all. Only four ordinary vowels remain before you know the full alphabet."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑥𐑧𐑯𐑿",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "menu",
+        "many",
+        "mane",
+        "moon"
+      ],
+      "correct": "menu",
+      "correctLabel": "menu"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑓𐑿": "few",
+        "𐑯𐑿": "new",
+        "𐑮𐑾𐑤": "real",
+        "𐑲𐑛𐑾": "idea"
+      },
+      "leftOrder": [
+        "𐑓𐑿",
+        "𐑯𐑿",
+        "𐑮𐑾𐑤",
+        "𐑲𐑛𐑾"
+      ],
+      "rightOrder": [
+        "new",
+        "real",
+        "idea",
+        "few"
+      ]
+    }
+  ]
+}

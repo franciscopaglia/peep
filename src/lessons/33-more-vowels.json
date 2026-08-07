@@ -1,0 +1,157 @@
+{
+  "id": 33,
+  "title": "Vowels: Out & Awe",
+  "glyph": "𐑬𐑷",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "The last four vowels",
+      "body": "Four sounds are all that stand between you and the whole alphabet. Two of them arrive here — the “ow” of cow and the “aw” of law — and the last two in the next lesson."
+    },
+    {
+      "type": "teach",
+      "title": "OUT — 𐑬",
+      "body": "𐑬 is the sound in cow and out — say “ow!”. You'll see it in 𐑒𐑬 (cow) and 𐑯𐑬 (now).",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑬"
+        ]
+      }
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑒𐑬",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "cow",
+        "key",
+        "car",
+        "cap"
+      ],
+      "correct": "cow",
+      "correctLabel": "cow"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑬𐑑",
+      "caption": "Type what this says",
+      "correct": "out",
+      "correctLabel": "out"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑯𐑬",
+      "caption": "Type what this says",
+      "correct": "now",
+      "correctLabel": "now"
+    },
+    {
+      "type": "build",
+      "prompt": "down",
+      "caption": "Build this word",
+      "tiles": [
+        "𐑛",
+        "𐑬",
+        "𐑯",
+        "𐑑",
+        "𐑮"
+      ],
+      "answer": [
+        "𐑛",
+        "𐑬",
+        "𐑯"
+      ],
+      "correctLabel": "𐑛𐑬𐑯"
+    },
+    {
+      "type": "teach",
+      "title": "AWE — 𐑷",
+      "body": "𐑷 is the long “aw” in law and saw. It sits in 𐑚𐑷𐑤 (ball) and 𐑒𐑷𐑤 (call).",
+      "media": {
+        "kind": "letters",
+        "glyphs": [
+          "𐑷"
+        ]
+      }
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑤𐑷",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "law",
+        "lay",
+        "low",
+        "let"
+      ],
+      "correct": "law",
+      "correctLabel": "law"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑷",
+      "caption": "Type what this says",
+      "correct": "saw",
+      "correctLabel": "saw"
+    },
+    {
+      "type": "build",
+      "prompt": "ball",
+      "caption": "Build this word",
+      "tiles": [
+        "𐑚",
+        "𐑷",
+        "𐑤",
+        "𐑬"
+      ],
+      "answer": [
+        "𐑚",
+        "𐑷",
+        "𐑤"
+      ],
+      "correctLabel": "𐑚𐑷𐑤"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “cow”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑒𐑬",
+        "𐑒𐑷",
+        "𐑒𐑪",
+        "𐑒𐑵"
+      ],
+      "correct": "𐑒𐑬",
+      "correctLabel": "𐑒𐑬"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑒𐑬": "cow",
+        "𐑯𐑬": "now",
+        "𐑤𐑷": "law",
+        "𐑕𐑷": "saw"
+      },
+      "leftOrder": [
+        "𐑒𐑬",
+        "𐑯𐑬",
+        "𐑤𐑷",
+        "𐑕𐑷"
+      ],
+      "rightOrder": [
+        "saw",
+        "now",
+        "cow",
+        "law"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "id": 9511,
+  "title": "Writing: Endings in Practice",
+  "glyph": "𐑩𐑛",
+  "chapter": 4,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Write the sound, not the rule",
+      "body": "English writes one “-ed” for three different sounds. Shavian writes what you say: 𐑤𐑫𐑒𐑑 ends in a t, 𐑢𐑪𐑯𐑑𐑩𐑛 in 𐑩𐑛. Say the word, listen to the last sound, write that. The same goes for the plural — 𐑚𐑫𐑒𐑕 hisses, 𐑢𐑻𐑛𐑟 buzzes."
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        3
+      ],
+      "bank": [
+        "𐑑",
+        "𐑛",
+        "𐑩"
+      ],
+      "correctLabel": "𐑤𐑫𐑒𐑑",
+      "prompt": "looked",
+      "word": [
+        "𐑤",
+        "𐑫",
+        "𐑒",
+        "𐑑"
+      ]
+    },
+    {
+      "type": "write",
+      "prompt": "looked",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑤𐑫𐑒𐑑",
+      "correctLabel": "𐑤𐑫𐑒𐑑"
+    },
+    {
+      "type": "write",
+      "prompt": "walked",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑢𐑷𐑒𐑑",
+      "correctLabel": "𐑢𐑷𐑒𐑑"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        4
+      ],
+      "bank": [
+        "𐑩",
+        "𐑦",
+        "𐑧"
+      ],
+      "correctLabel": "𐑢𐑪𐑯𐑑𐑩𐑛",
+      "prompt": "wanted",
+      "word": [
+        "𐑢",
+        "𐑪",
+        "𐑯",
+        "𐑑",
+        "𐑩",
+        "𐑛"
+      ]
+    },
+    {
+      "type": "write",
+      "prompt": "wanted",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑢𐑪𐑯𐑑𐑩𐑛",
+      "correctLabel": "𐑢𐑪𐑯𐑑𐑩𐑛"
+    },
+    {
+      "type": "write",
+      "prompt": "words",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑢𐑻𐑛𐑟",
+      "correctLabel": "𐑢𐑻𐑛𐑟"
+    },
+    {
+      "type": "write",
+      "prompt": "things",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑔𐑦𐑙𐑟",
+      "correctLabel": "𐑔𐑦𐑙𐑟"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which ending does “worked” take?",
+      "caption": "𐑢𐑻𐑒𐑑 — say it aloud and listen to the last sound",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑑",
+        "𐑛",
+        "𐑩𐑛",
+        "𐑦𐑛"
+      ],
+      "correct": "𐑑",
+      "correctLabel": "𐑑"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑤𐑫𐑒𐑑": "looked",
+        "𐑢𐑪𐑯𐑑𐑩𐑛": "wanted",
+        "𐑢𐑻𐑛𐑟": "words",
+        "𐑔𐑦𐑙𐑟": "things"
+      },
+      "leftOrder": [
+        "𐑤𐑫𐑒𐑑",
+        "𐑢𐑪𐑯𐑑𐑩𐑛",
+        "𐑢𐑻𐑛𐑟",
+        "𐑔𐑦𐑙𐑟"
+      ],
+      "rightOrder": [
+        "words",
+        "things",
+        "looked",
+        "wanted"
+      ]
+    }
+  ],
+  "anchor": 51,
+  "optional": true
+}

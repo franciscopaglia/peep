@@ -1,0 +1,100 @@
+{
+  "id": 48,
+  "title": "Hearing the Vowel",
+  "glyph": "𐑫𐑵",
+  "chapter": 4,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "English lies about vowels",
+      "body": "English writes book and food with the same “oo”, but your mouth makes two different sounds. Shavian never blurs them: book is 𐑚𐑫𐑒 and food is 𐑓𐑵𐑛. When you write, stop picturing the English spelling — say the word slowly and write the vowel you actually hear."
+    },
+    {
+      "type": "write",
+      "prompt": "book",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑚𐑫𐑒",
+      "correctLabel": "𐑚𐑫𐑒"
+    },
+    {
+      "type": "write",
+      "prompt": "food",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑓𐑵𐑛",
+      "correctLabel": "𐑓𐑵𐑛"
+    },
+    {
+      "type": "teach",
+      "title": "Short above, long below",
+      "body": "The keyboard helps you. Its two vowel rows are paired: every short vowel sits directly above its long partner — 𐑦 over 𐑰, 𐑪 over 𐑴, 𐑳 over 𐑵. If a word comes out sounding wrong, try the letter just under (or just over) the one you picked."
+    },
+    {
+      "type": "write",
+      "prompt": "pin",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑐𐑦𐑯",
+      "correctLabel": "𐑐𐑦𐑯"
+    },
+    {
+      "type": "write",
+      "prompt": "green",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑜𐑮𐑰𐑯",
+      "correctLabel": "𐑜𐑮𐑰𐑯"
+    },
+    {
+      "type": "write",
+      "prompt": "boat",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑚𐑴𐑑",
+      "correctLabel": "𐑚𐑴𐑑"
+    },
+    {
+      "type": "write",
+      "prompt": "cup",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑒𐑳𐑐",
+      "correctLabel": "𐑒𐑳𐑐"
+    },
+    {
+      "type": "teach",
+      "title": "One letter, one sound",
+      "body": "Watch out for English vowel pairs that are really one sound: the ai of rain is a single 𐑱, the i-e of time a single 𐑲, the o-e of home a single 𐑴. Count sounds, not letters."
+    },
+    {
+      "type": "write",
+      "prompt": "rain",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑮𐑱𐑯",
+      "correctLabel": "𐑮𐑱𐑯"
+    },
+    {
+      "type": "write",
+      "prompt": "time",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑑𐑲𐑥",
+      "correctLabel": "𐑑𐑲𐑥"
+    },
+    {
+      "type": "write",
+      "prompt": "school",
+      "caption": "One long 𐑵, however English spells it",
+      "correct": "𐑕𐑒𐑵𐑤",
+      "correctLabel": "𐑕𐑒𐑵𐑤"
+    },
+    {
+      "type": "write",
+      "prompt": "kitchen",
+      "caption": "Two short 𐑦, and no e anywhere",
+      "correct": "𐑒𐑦𐑗𐑦𐑯",
+      "correctLabel": "𐑒𐑦𐑗𐑦𐑯"
+    },
+    {
+      "type": "write",
+      "prompt": "afternoon",
+      "caption": "Three syllables — say it, then write what you hear",
+      "correct": "𐑭𐑓𐑑𐑼𐑯𐑵𐑯",
+      "correctLabel": "𐑭𐑓𐑑𐑼𐑯𐑵𐑯"
+    }
+  ]
+}

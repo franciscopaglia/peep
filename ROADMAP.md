@@ -15,7 +15,7 @@ Legend: ✅ shipped · 🚧 in progress · 🗓️ planned · 💡 idea / under 
 - **Chapter 1 — The Alphabet** (25 lessons): every consonant and vowel of the
   48-letter Shavian alphabet, introduced a pair at a time, with ~20
   practice-heavy exercises per lesson.
-- **Chapter 2 — Reading Fluency** (12 lessons): the `ʒ` letter, the r-coloured
+- **Chapter 2 — Reading Fluency** (13 lessons): the `ʒ` letter, the r-coloured
   vowels, the little words (the single-letter spellings 𐑞 𐑝 𐑯 𐑑 𐑓 and a first
   look at homographs like 𐑑𐑵 = *too*/*two*), writing names, sentence building,
   and a short reading passage.
@@ -123,20 +123,22 @@ the level that makes reading really click. New exercise types planned here:
 Fifteen exercise types exist, but the curriculum leans hard on a few of them.
 Measured with `node scripts/curriculum.mjs types`, today's graded exercises are:
 
-| | ch1 (587) | ch2 (184) | ch3 (86) | ch4 (70) |
+| | ch1 (709) | ch2 (198) | ch3 (117) | ch4 (123) |
 | --- | --- | --- | --- | --- |
-| `type` | **47%** | **42%** | 23% | — |
-| `choice` | 17% | 23% | 24% | — |
-| `build` | 19% | 10% | 8% | — |
-| `match` | 12% | 8% | 6% | — |
-| `complete` | 5% | 1% | — | — |
+| `type` | **44%** | **42%** | 21% | — |
+| `choice` | 18% | 24% | 21% | 4% |
+| `build` | 18% | 11% | 7% | 2% |
+| `match` | 10% | 8% | 8% | 4% |
+| `complete` | 5% | 1% | 1% | 7% |
+| `sort` | 2% | — | 2% | 1% |
+| `listen` | 2% | — | — | — |
 | `arrange` | 0% | 8% | 3% | — |
-| `spot` | 0% | — | 17% | — |
-| `fill` / `cloze` | 0% | 4% / 3% | 1% / 5% | — |
-| `transcribe` | — | — | 12% | — |
-| `write` | — | — | — | 100% |
+| `spot` | 1% | — | 18% | — |
+| `fill` / `cloze` | 1% / 0% | 4% / 3% | 1% / 7% | — |
+| `transcribe` / `scan` | — | — | 10% / 2% | — |
+| `write` | — | — | — | 81% |
 
-Two problems. `type` is nearly half of everything a learner does in the first
+Two problems. `type` is still over 40% of everything a learner does in the first
 two chapters. And the types closest to the actual goal — reading connected
 Shavian: `cloze`, `transcribe` — are the rarest in the whole course.
 
@@ -158,13 +160,13 @@ Targets to author toward, chapter by chapter:
   double (8% → ~15% each) at `type`'s expense (42% → ~25%). The chapter already
   claims to be about sentence building; the mix should show it.
 - **Chapter 3 — reading in the wild, properly.** `cloze` + `transcribe` + `spot`
-  should be **half** the chapter (today: 34%), with `choice` and `type` falling
+  should be **half** the chapter (today: 37%), with `choice` and `type` falling
   to ~25% between them. This is the chapter whose name is a promise the exercise
   mix doesn't yet keep.
-- **Chapter 4 — writing, with a ramp.** 100% `write` is honest to the chapter's
-  purpose, but 70 blank keyboards in a row is a wall. A leading `complete` or
-  `build` in each lesson — same spelling, with support — earns the free-spelling
-  ones.
+- **Chapter 4 — writing, with a ramp.** `write` at 81% is honest to the
+  chapter's purpose, and the ramp has started: `complete` and `build` now open
+  several lessons with the same spelling, with support, before the free-spelling
+  ones. Every lesson should have one.
 - **Chapter 5 — fluency.** Should be the `transcribe` chapter, on longer real
   texts, with `cloze` for support and `listen` if the experiment below works
   out.
@@ -222,10 +224,11 @@ than just more lessons. The progression runs **learn letters → read words →
 read real text → write → master**, and every chapter assumes the one before it,
 so nothing re-teaches what came earlier.
 
-- **✅ Chapter 1 — The Alphabet** *(shipped · 25 lessons)* — all 48 letters, a
-  pair at a time, blending into first words.
-- **✅ Chapter 2 — Reading Fluency** *(shipped · 12 lessons)* — the `ʒ` letter,
-  the r-coloured vowels, the little words (single-letter spellings and first
+- **✅ Chapter 1 — The Alphabet** *(shipped · 25 lessons)* — the first 32
+  letters, a pair at a time, blending into first words and simple sentences.
+- **✅ Chapter 2 — Reading Fluency** *(shipped · 13 lessons)* — `𐑞` and `𐑩` as
+  letters rather than only as the words *the* and *a*, the `ʒ` letter, the
+  r-coloured vowels, the little words (single-letter spellings and first
   homographs), the naming dot, sentence building, and a first short story.
 - **✅ Chapter 3 — Reading in the Wild** *(shipped · 8 lessons)* — you can read
   sentences; now read *published* Shavian. The word endings (`-s`, `-ing`,

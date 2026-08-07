@@ -7,7 +7,156 @@
     {
       "type": "teach",
       "title": "Almost there",
-      "body": "Every letter you need is now in your toolkit. This round mixes everything together — take your time."
+      "body": "Every letter you need is now in your toolkit. This round is a tour of the whole chapter — one stop per family of letters, in the order you met them. Nothing new here; just everything at once."
+    },
+    {
+      "type": "teach",
+      "title": "The three stop pairs",
+      "body": "Where you started: 𐑐/𐑚, 𐑑/𐑛, 𐑒/𐑜. Tall and quiet, deep and buzzing, the same shape either way up."
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑧",
+        "𐑨",
+        "𐑦"
+      ],
+      "correctLabel": "𐑒𐑧𐑐𐑑",
+      "prompt": "kept",
+      "word": [
+        "𐑒",
+        "𐑧",
+        "𐑐",
+        "𐑑"
+      ],
+      "caption": "Tap the missing letter"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑜𐑪𐑑",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "got",
+        "get",
+        "goat",
+        "good"
+      ],
+      "correct": "got",
+      "correctLabel": "got"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑦𐑜𐑨𐑯",
+      "caption": "Two syllables — sound out each part.",
+      "correct": "began",
+      "correctLabel": "began"
+    },
+    {
+      "type": "teach",
+      "title": "The hissing pairs",
+      "body": "Then the ones you can hold: 𐑓/𐑝 and 𐑕/𐑟. Put a finger on your throat and the pair is obvious."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑲𐑝",
+      "caption": "Sound it out — what does this say?",
+      "correct": "five",
+      "correctLabel": "five"
+    },
+    {
+      "type": "build",
+      "prompt": "visit",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑝",
+        "𐑦",
+        "𐑟",
+        "𐑦",
+        "𐑑",
+        "𐑕"
+      ],
+      "answer": [
+        "𐑝",
+        "𐑦",
+        "𐑟",
+        "𐑦",
+        "𐑑"
+      ],
+      "correctLabel": "𐑝𐑦𐑟𐑦𐑑"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑕𐑑𐑦𐑤",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "still",
+        "steel",
+        "style",
+        "stall"
+      ],
+      "correct": "still",
+      "correctLabel": "still"
+    },
+    {
+      "type": "teach",
+      "title": "The three you met last",
+      "body": "𐑖, 𐑗 and 𐑡 — the newest arrivals, and the ones English spells six different ways between them."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑓𐑦𐑖",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "fish",
+        "wish",
+        "fresh",
+        "flash"
+      ],
+      "correct": "fish",
+      "correctLabel": "fish"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑥𐑳𐑗",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "much",
+        "match",
+        "mush",
+        "march"
+      ],
+      "correct": "much",
+      "correctLabel": "much"
+    },
+    {
+      "type": "build",
+      "prompt": "lunch",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑤",
+        "𐑳",
+        "𐑯",
+        "𐑗",
+        "𐑑"
+      ],
+      "answer": [
+        "𐑤",
+        "𐑳",
+        "𐑯",
+        "𐑗"
+      ],
+      "correctLabel": "𐑤𐑳𐑯𐑗"
     },
     {
       "type": "type",
@@ -15,6 +164,69 @@
       "caption": "Sound it out — what does this say?",
       "correct": "chest",
       "correctLabel": "chest"
+    },
+    {
+      "type": "teach",
+      "title": "The ones that flow",
+      "body": "𐑤, 𐑮, 𐑥, 𐑯 and 𐑙 — the letters you can sing. 𐑙 is still the odd one: it only ever ends a syllable."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑨𐑚𐑦𐑑",
+      "caption": "Two syllables — take it slowly. What does this say?",
+      "correct": "rabbit",
+      "correctLabel": "rabbit"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        3
+      ],
+      "bank": [
+        "𐑴",
+        "𐑵",
+        "𐑪"
+      ],
+      "correctLabel": "𐑘𐑧𐑤𐑴",
+      "prompt": "yellow",
+      "word": [
+        "𐑘",
+        "𐑧",
+        "𐑤",
+        "𐑴"
+      ],
+      "caption": "Tap the missing letter"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑨𐑝𐑦𐑙",
+      "caption": "Sound it out — what does this say?",
+      "correct": "having",
+      "correctLabel": "having"
+    },
+    {
+      "type": "teach",
+      "title": "The breathy three",
+      "body": "𐑢, 𐑣 and 𐑘 — a rounding of the lips, a breath, and a glide. English spells the first one qu when a 𐑒 comes first, but Shavian just writes both letters."
+    },
+    {
+      "type": "build",
+      "prompt": "quite",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑢",
+        "𐑲",
+        "𐑑",
+        "𐑨"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑢",
+        "𐑲",
+        "𐑑"
+      ],
+      "correctLabel": "𐑒𐑢𐑲𐑑"
     },
     {
       "type": "choice",
@@ -32,32 +244,66 @@
       "correctLabel": "hunt"
     },
     {
-      "type": "match",
-      "pairs": {
-        "𐑗𐑧𐑕𐑑": "chest",
-        "𐑣𐑳𐑯𐑑": "hunt",
-        "𐑜𐑪𐑖": "gosh",
-        "𐑘𐑧𐑤𐑴": "yellow"
-      },
-      "leftOrder": [
-        "𐑘𐑧𐑤𐑴",
-        "𐑗𐑧𐑕𐑑",
-        "𐑜𐑪𐑖",
-        "𐑣𐑳𐑯𐑑"
-      ],
-      "rightOrder": [
-        "chest",
-        "yellow",
-        "hunt",
-        "gosh"
+      "type": "type",
+      "prompt": "𐑢𐑲𐑤",
+      "caption": "Sound it out — what does this say?",
+      "correct": "while",
+      "correctLabel": "while",
+      "accept": [
+        "wile"
       ]
     },
     {
+      "type": "teach",
+      "title": "Short vowels and long",
+      "body": "And the vowels: six short ones — 𐑨 𐑪 𐑦 𐑧 𐑫 𐑳 — and five long — 𐑰 𐑱 𐑲 𐑴 𐑵. In English the difference hangs on a silent e at the end of the word. In Shavian it is simply a different letter, and the word looks different from the first glance."
+    },
+    {
+      "type": "sort",
+      "prompt": "Short vowel, or long?",
+      "buckets": [
+        "short",
+        "long"
+      ],
+      "items": [
+        "𐑣𐑨𐑑",
+        "𐑚𐑦𐑑",
+        "𐑣𐑱𐑑",
+        "𐑚𐑰𐑑"
+      ],
+      "answer": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "correctLabel": "short: 𐑣𐑨𐑑 𐑚𐑦𐑑 / long: 𐑣𐑱𐑑 𐑚𐑰𐑑"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑲",
+        "𐑦",
+        "𐑰"
+      ],
+      "correctLabel": "𐑕𐑲𐑛",
+      "prompt": "side",
+      "word": [
+        "𐑕",
+        "𐑲",
+        "𐑛"
+      ],
+      "caption": "Tap the missing letter"
+    },
+    {
       "type": "type",
-      "prompt": "𐑮𐑨𐑚𐑦𐑑",
-      "caption": "Two syllables — take it slowly. What does this say?",
-      "correct": "rabbit",
-      "correctLabel": "rabbit"
+      "prompt": "𐑥𐑴𐑕𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "most",
+      "correctLabel": "most"
     },
     {
       "type": "build",
@@ -85,44 +331,38 @@
     },
     {
       "type": "type",
-      "prompt": "𐑥𐑳𐑗",
-      "caption": "Sound it out — what does this say?",
-      "correct": "much",
-      "correctLabel": "much"
+      "prompt": "𐑣𐑦𐑥𐑕𐑧𐑤𐑓",
+      "caption": "A long one. Three syllables, and every letter is one you know.",
+      "correct": "himself",
+      "correctLabel": "himself"
     },
     {
-      "type": "build",
-      "prompt": "lunch",
-      "caption": "Build this word from Shavian letters",
-      "tiles": [
-        "𐑤",
-        "𐑳",
-        "𐑯",
-        "𐑗",
-        "𐑑"
-      ],
-      "answer": [
-        "𐑤",
-        "𐑳",
-        "𐑯",
-        "𐑗"
-      ],
-      "correctLabel": "𐑤𐑳𐑯𐑗"
+      "type": "type",
+      "prompt": "𐑒𐑳𐑯𐑑𐑮𐑦",
+      "caption": "Three syllables. Sound it out slowly.",
+      "correct": "country",
+      "correctLabel": "country"
     },
     {
-      "type": "choice",
-      "promptIsGlyph": true,
-      "prompt": "𐑓𐑦𐑖",
-      "caption": "What does this word mean?",
-      "optionIsGlyph": false,
-      "options": [
-        "fish",
-        "wish",
-        "fresh",
-        "flash"
+      "type": "match",
+      "pairs": {
+        "𐑜𐑪𐑖": "gosh",
+        "𐑘𐑧𐑤𐑴": "yellow",
+        "𐑗𐑧𐑕𐑑": "chest",
+        "𐑣𐑳𐑯𐑑": "hunt"
+      },
+      "leftOrder": [
+        "𐑜𐑪𐑖",
+        "𐑘𐑧𐑤𐑴",
+        "𐑗𐑧𐑕𐑑",
+        "𐑣𐑳𐑯𐑑"
       ],
-      "correct": "fish",
-      "correctLabel": "fish"
+      "rightOrder": [
+        "chest",
+        "yellow",
+        "hunt",
+        "gosh"
+      ]
     }
   ]
 }

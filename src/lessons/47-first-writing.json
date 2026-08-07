@@ -1,0 +1,119 @@
+{
+  "id": 47,
+  "title": "First Writing",
+  "glyph": "𐑒𐑨𐑑",
+  "chapter": 4,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Welcome to Chapter 4",
+      "body": "Reading is one direction — now you write. Below every exercise sits the Shavian keyboard, laid out like the alphabet chart you learned from: each deep letter directly under its tall partner, each long vowel under its short one. Hunt by sound family and you’ll find any letter fast. It shows only the keys an answer needs, so it starts as bare letters and grows as the words do. (Real phone and computer layouts exist too — Shaw JAFL and Shaw QWERTY — for when you graduate.)"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        2
+      ],
+      "bank": [
+        "𐑑",
+        "𐑛",
+        "𐑐"
+      ],
+      "correctLabel": "𐑒𐑨𐑑",
+      "prompt": "cat",
+      "word": [
+        "𐑒",
+        "𐑨",
+        "𐑑"
+      ]
+    },
+    {
+      "type": "build",
+      "prompt": "cat",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑨",
+        "𐑑",
+        "𐑪"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑨",
+        "𐑑"
+      ],
+      "correctLabel": "𐑒𐑨𐑑"
+    },
+    {
+      "type": "write",
+      "prompt": "cat",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑒𐑨𐑑",
+      "correctLabel": "𐑒𐑨𐑑"
+    },
+    {
+      "type": "teach",
+      "title": "Spell the sound, not the letters",
+      "body": "You have just spelled “cat” three ways, with less help each time — that is the shape of this whole chapter. Now forget English spelling entirely. Say the word out loud, then write one Shavian letter per sound you hear. “Fish” is three sounds — f, i, sh — so it is three letters: 𐑓 𐑦 𐑖."
+    },
+    {
+      "type": "write",
+      "prompt": "dog",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑛𐑪𐑜",
+      "correctLabel": "𐑛𐑪𐑜"
+    },
+    {
+      "type": "write",
+      "prompt": "sun",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑕𐑳𐑯",
+      "correctLabel": "𐑕𐑳𐑯"
+    },
+    {
+      "type": "write",
+      "prompt": "fish",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑓𐑦𐑖",
+      "correctLabel": "𐑓𐑦𐑖"
+    },
+    {
+      "type": "write",
+      "prompt": "ship",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑖𐑦𐑐",
+      "correctLabel": "𐑖𐑦𐑐"
+    },
+    {
+      "type": "write",
+      "prompt": "moon",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑥𐑵𐑯",
+      "correctLabel": "𐑥𐑵𐑯"
+    },
+    {
+      "type": "write",
+      "prompt": "boy",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑚𐑶",
+      "correctLabel": "𐑚𐑶"
+    },
+    {
+      "type": "teach",
+      "title": "Names need the dot",
+      "body": "Remember the naming dot? When you write a name it goes first — and since the next answer is a name, a · key appears with it, below the letters."
+    },
+    {
+      "type": "write",
+      "prompt": "Sam",
+      "caption": "Spell this name — don’t forget the dot",
+      "correct": "·𐑕𐑨𐑥",
+      "correctLabel": "·𐑕𐑨𐑥"
+    },
+    {
+      "type": "teach",
+      "title": "A start",
+      "body": "That’s your first Shavian written by hand — well, by keyboard. The rest of the chapter builds on it: hearing vowels correctly, the r-vowels, the little words, the endings, the schwa, then the two things English makes hard and Shavian makes easy — apostrophes and its/it’s — and finally whole sentences. For now, enjoy having written the alphabet you spent three chapters learning to read."
+    }
+  ]
+}

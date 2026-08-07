@@ -7,7 +7,7 @@
     {
       "type": "teach",
       "title": "Putting it together",
-      "body": "That is twenty-nine letters met — every consonant Chapter 1 will teach you, and every vowel but a handful. Enough to read a great many everyday words, so before the last few letters arrive, spend a lesson just reading."
+      "body": "That is twenty-nine letters met — every consonant Chapter 1 will teach you, and every vowel but a handful. Enough to read a great many everyday words, so before the last few letters arrive, spend a long lesson just reading. This one is the biggest yet; there is no rush, and the skip button is always there."
     },
     {
       "type": "type",
@@ -49,11 +49,6 @@
         "𐑒"
       ],
       "caption": "Tap the missing letter"
-    },
-    {
-      "type": "teach",
-      "title": "The letters left over",
-      "body": "Only four letters of Chapter 1 are still to come, and most of what follows them in Chapter 2 is a family of r-vowels — single letters for the sounds English writes with a vowel plus an r, as in car and for. The hard part is already behind you."
     },
     {
       "type": "match",
@@ -125,6 +120,264 @@
         "𐑙"
       ],
       "correctLabel": "𐑘𐑳𐑙"
+    },
+    {
+      "type": "teach",
+      "title": "Words you use every day",
+      "body": "Enough letters, then — here are the words themselves. What follows is the ordinary furniture of English: the words you would meet in the first minute of any conversation. Every one of them is spelled with letters you already read."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑥𐑨𐑯",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "man",
+        "men",
+        "main",
+        "mine"
+      ],
+      "correct": "man",
+      "correctLabel": "man"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑢𐑦𐑥𐑦𐑯",
+      "caption": "Two syllables. Say it aloud before you answer.",
+      "correct": "women",
+      "correctLabel": "women"
+    },
+    {
+      "type": "build",
+      "prompt": "would",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑢",
+        "𐑫",
+        "𐑛",
+        "𐑵",
+        "𐑤"
+      ],
+      "answer": [
+        "𐑢",
+        "𐑫",
+        "𐑛"
+      ],
+      "correctLabel": "𐑢𐑫𐑛"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑫",
+        "𐑳",
+        "𐑵"
+      ],
+      "correctLabel": "𐑜𐑫𐑛",
+      "prompt": "good",
+      "word": [
+        "𐑜",
+        "𐑫",
+        "𐑛"
+      ],
+      "caption": "Tap the missing letter"
+    },
+    {
+      "type": "sort",
+      "prompt": "Which vowel do you hear in the middle?",
+      "buckets": [
+        "𐑫 (wool)",
+        "𐑳 (up)"
+      ],
+      "items": [
+        "𐑜𐑫𐑛",
+        "𐑓𐑫𐑤",
+        "𐑥𐑳𐑯𐑦",
+        "𐑳𐑕"
+      ],
+      "answer": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "correctLabel": "𐑫 (wool): 𐑜𐑫𐑛 𐑓𐑫𐑤 / 𐑳 (up): 𐑥𐑳𐑯𐑦 𐑳𐑕"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑳𐑯𐑦",
+      "caption": "Sound it out — what does this say?",
+      "correct": "money",
+      "correctLabel": "money"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑤𐑲𐑓",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "life",
+        "leaf",
+        "left",
+        "like"
+      ],
+      "correct": "life",
+      "correctLabel": "life"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑦𐑓": "if",
+        "𐑢𐑦𐑤": "will",
+        "𐑦𐑯𐑑𐑵": "into",
+        "𐑧𐑯𐑦": "any"
+      },
+      "leftOrder": [
+        "𐑦𐑓",
+        "𐑢𐑦𐑤",
+        "𐑦𐑯𐑑𐑵",
+        "𐑧𐑯𐑦"
+      ],
+      "rightOrder": [
+        "any",
+        "if",
+        "into",
+        "will"
+      ]
+    },
+    {
+      "type": "teach",
+      "title": "Nothing left to hide",
+      "body": "Look again at 𐑢𐑦𐑥𐑦𐑯. English writes women and then says “wimin”, and every child has to learn that betrayal by heart. Shavian simply writes what leaves your mouth, so a word you can say is a word you can spell — and a word you can read is one you can say."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑣𐑧𐑛",
+      "caption": "What does this word mean?",
+      "optionIsGlyph": false,
+      "options": [
+        "head",
+        "had",
+        "heed",
+        "hid"
+      ],
+      "correct": "head",
+      "correctLabel": "head"
+    },
+    {
+      "type": "build",
+      "prompt": "eyes",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑲",
+        "𐑟",
+        "𐑕",
+        "𐑦"
+      ],
+      "answer": [
+        "𐑲",
+        "𐑟"
+      ],
+      "correctLabel": "𐑲𐑟"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑱𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "face",
+      "correctLabel": "face"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑪",
+        "𐑨",
+        "𐑳"
+      ],
+      "correctLabel": "𐑚𐑪𐑛𐑦",
+      "prompt": "body",
+      "word": [
+        "𐑚",
+        "𐑪",
+        "𐑛",
+        "𐑦"
+      ],
+      "caption": "Tap the missing letter"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑦𐑒𐑪𐑟",
+      "caption": "Three syllables — take them one at a time.",
+      "correct": "because",
+      "correctLabel": "because"
+    },
+    {
+      "type": "build",
+      "prompt": "great",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑜",
+        "𐑮",
+        "𐑱",
+        "𐑑",
+        "𐑨"
+      ],
+      "answer": [
+        "𐑜",
+        "𐑮",
+        "𐑱",
+        "𐑑"
+      ],
+      "correctLabel": "𐑜𐑮𐑱𐑑"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “next”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑯𐑧𐑒𐑕𐑑",
+        "𐑯𐑧𐑕𐑑",
+        "𐑯𐑨𐑒𐑕𐑑",
+        "𐑯𐑧𐑒𐑑"
+      ],
+      "correct": "𐑯𐑧𐑒𐑕𐑑",
+      "correctLabel": "𐑯𐑧𐑒𐑕𐑑"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑣𐑧𐑛": "head",
+        "𐑓𐑱𐑕": "face",
+        "𐑳𐑕": "us",
+        "𐑥𐑰": "me"
+      },
+      "leftOrder": [
+        "𐑣𐑧𐑛",
+        "𐑓𐑱𐑕",
+        "𐑳𐑕",
+        "𐑥𐑰"
+      ],
+      "rightOrder": [
+        "me",
+        "head",
+        "us",
+        "face"
+      ]
+    },
+    {
+      "type": "teach",
+      "title": "The letters left over",
+      "body": "Only four letters of Chapter 1 are still to come, and most of what follows them in Chapter 2 is a family of r-vowels — single letters for the sounds English writes with a vowel plus an r, as in car and for. The hard part is already behind you."
     }
   ]
 }
