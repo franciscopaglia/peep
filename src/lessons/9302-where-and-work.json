@@ -1,0 +1,137 @@
+{
+  "id": 9302,
+  "title": "Where & Work",
+  "glyph": "𐑢𐑻𐑒",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Where and work",
+      "body": "Both these letters are everywhere in ordinary writing — 𐑻 in work, service, early; 𐑺 in where, care, parents. You have drilled the contrast; now just read them at speed."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑻𐑝𐑦𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "service",
+      "correctLabel": "service"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑻𐑑𐑩𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "certain",
+      "correctLabel": "certain"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑻𐑤𐑦",
+      "caption": "Sound it out — what does this say?",
+      "correct": "early",
+      "correctLabel": "early"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑞𐑺𐑓𐑹",
+      "caption": "Sound it out — what does this say?",
+      "correct": "therefore",
+      "correctLabel": "therefore"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑩𐑢𐑺",
+      "caption": "Sound it out — what does this say?",
+      "correct": "aware",
+      "correctLabel": "aware"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑺𐑤𐑦",
+      "caption": "Sound it out — what does this say?",
+      "correct": "fairly",
+      "correctLabel": "fairly"
+    },
+    {
+      "type": "build",
+      "prompt": "person",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑐",
+        "𐑻",
+        "𐑕",
+        "𐑩",
+        "𐑯",
+        "𐑺"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑻",
+        "𐑕",
+        "𐑩",
+        "𐑯"
+      ],
+      "correctLabel": "𐑐𐑻𐑕𐑩𐑯"
+    },
+    {
+      "type": "build",
+      "prompt": "parents",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑐",
+        "𐑺",
+        "𐑩",
+        "𐑯",
+        "𐑑",
+        "𐑕",
+        "𐑻"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑺",
+        "𐑩",
+        "𐑯",
+        "𐑑",
+        "𐑕"
+      ],
+      "correctLabel": "𐑐𐑺𐑩𐑯𐑑𐑕"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “herself”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑣𐑻𐑕𐑧𐑤𐑓",
+        "𐑣𐑺𐑕𐑧𐑤𐑓",
+        "𐑣𐑻𐑟𐑧𐑤𐑓",
+        "𐑣𐑻𐑕𐑧𐑤𐑝"
+      ],
+      "correct": "𐑣𐑻𐑕𐑧𐑤𐑓",
+      "correctLabel": "𐑣𐑻𐑕𐑧𐑤𐑓"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑕𐑻𐑝𐑦𐑕": "service",
+        "𐑻𐑤𐑦": "early",
+        "𐑩𐑢𐑺": "aware",
+        "𐑞𐑺𐑓𐑹": "therefore"
+      },
+      "leftOrder": [
+        "𐑕𐑻𐑝𐑦𐑕",
+        "𐑻𐑤𐑦",
+        "𐑩𐑢𐑺",
+        "𐑞𐑺𐑓𐑹"
+      ],
+      "rightOrder": [
+        "therefore",
+        "aware",
+        "service",
+        "early"
+      ]
+    }
+  ],
+  "anchor": 30,
+  "optional": true
+}

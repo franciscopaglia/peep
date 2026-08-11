@@ -1,0 +1,138 @@
+{
+  "id": 9331,
+  "title": "Out & Around",
+  "glyph": "𐑮𐑬𐑯𐑛",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Out and around",
+      "body": "𐑬 is the “ow” you say when something hurts, and English is full of it — found, ground, round, out. Read each one aloud and let your mouth open into it."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑬𐑯𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "found",
+      "correctLabel": "found"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑮𐑬𐑯𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "ground",
+      "correctLabel": "ground"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑬𐑯𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "round",
+      "correctLabel": "round"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑬𐑔",
+      "caption": "Sound it out — what does this say?",
+      "correct": "south",
+      "correctLabel": "south"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑬𐑼𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "hours",
+      "correctLabel": "hours",
+      "accept": [
+        "ours"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑬𐑧𐑝𐑼",
+      "caption": "Sound it out — what does this say?",
+      "correct": "however",
+      "correctLabel": "however"
+    },
+    {
+      "type": "build",
+      "prompt": "amount",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑩",
+        "𐑥",
+        "𐑬",
+        "𐑯",
+        "𐑑",
+        "𐑷"
+      ],
+      "answer": [
+        "𐑩",
+        "𐑥",
+        "𐑬",
+        "𐑯",
+        "𐑑"
+      ],
+      "correctLabel": "𐑩𐑥𐑬𐑯𐑑"
+    },
+    {
+      "type": "build",
+      "prompt": "outside",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑬",
+        "𐑑",
+        "𐑕",
+        "𐑲",
+        "𐑛",
+        "𐑵"
+      ],
+      "answer": [
+        "𐑬",
+        "𐑑",
+        "𐑕",
+        "𐑲",
+        "𐑛"
+      ],
+      "correctLabel": "𐑬𐑑𐑕𐑲𐑛"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “thousand”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑔𐑬𐑟𐑩𐑯𐑛",
+        "𐑔𐑷𐑟𐑩𐑯𐑛",
+        "𐑞𐑬𐑟𐑩𐑯𐑛",
+        "𐑔𐑬𐑕𐑩𐑯𐑛"
+      ],
+      "correct": "𐑔𐑬𐑟𐑩𐑯𐑛",
+      "correctLabel": "𐑔𐑬𐑟𐑩𐑯𐑛"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑓𐑬𐑯𐑛": "found",
+        "𐑜𐑮𐑬𐑯𐑛": "ground",
+        "𐑕𐑬𐑔": "south",
+        "𐑮𐑬𐑯𐑛": "round"
+      },
+      "leftOrder": [
+        "𐑓𐑬𐑯𐑛",
+        "𐑜𐑮𐑬𐑯𐑛",
+        "𐑕𐑬𐑔",
+        "𐑮𐑬𐑯𐑛"
+      ],
+      "rightOrder": [
+        "round",
+        "south",
+        "found",
+        "ground"
+      ]
+    }
+  ],
+  "anchor": 33,
+  "optional": true
+}

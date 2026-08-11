@@ -690,6 +690,22 @@
     "anchor": 25
   },
   {
+    "id": 9261,
+    "title": "These & Those",
+    "glyph": "𐑞𐑴𐑟",
+    "chapter": 2,
+    "optional": true,
+    "anchor": 26
+  },
+  {
+    "id": 9262,
+    "title": "The Quiet Vowel",
+    "glyph": "𐑩",
+    "chapter": 2,
+    "optional": true,
+    "anchor": 26
+  },
+  {
     "id": 9271,
     "title": "Thin & This",
     "glyph": "𐑔𐑦𐑯",
@@ -706,9 +722,25 @@
     "anchor": 28
   },
   {
+    "id": 9282,
+    "title": "Heart & Start",
+    "glyph": "𐑣𐑸𐑑",
+    "chapter": 2,
+    "optional": true,
+    "anchor": 28
+  },
+  {
     "id": 9301,
     "title": "Fair or Fur?",
     "glyph": "𐑓𐑺",
+    "chapter": 2,
+    "optional": true,
+    "anchor": 30
+  },
+  {
+    "id": 9302,
+    "title": "Where & Work",
+    "glyph": "𐑢𐑻𐑒",
     "chapter": 2,
     "optional": true,
     "anchor": 30
@@ -722,9 +754,57 @@
     "anchor": 31
   },
   {
+    "id": 9312,
+    "title": "Clear & Near",
+    "glyph": "𐑒𐑤𐑽",
+    "chapter": 2,
+    "optional": true,
+    "anchor": 31
+  },
+  {
+    "id": 9321,
+    "title": "New & Useful",
+    "glyph": "𐑿𐑟",
+    "chapter": 2,
+    "optional": true,
+    "anchor": 32
+  },
+  {
+    "id": 9322,
+    "title": "Real Ideas",
+    "glyph": "𐑲𐑛𐑾",
+    "chapter": 2,
+    "optional": true,
+    "anchor": 32
+  },
+  {
+    "id": 9331,
+    "title": "Out & Around",
+    "glyph": "𐑮𐑬𐑯𐑛",
+    "chapter": 2,
+    "optional": true,
+    "anchor": 33
+  },
+  {
+    "id": 9332,
+    "title": "Also & Always",
+    "glyph": "𐑷𐑤",
+    "chapter": 2,
+    "optional": true,
+    "anchor": 33
+  },
+  {
     "id": 9341,
     "title": "Calm & Coin",
     "glyph": "𐑒𐑭𐑥",
+    "chapter": 2,
+    "optional": true,
+    "anchor": 34
+  },
+  {
+    "id": 9342,
+    "title": "Class & Choice",
+    "glyph": "𐑒𐑤𐑭𐑕",
     "chapter": 2,
     "optional": true,
     "anchor": 34

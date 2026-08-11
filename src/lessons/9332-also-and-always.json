@@ -1,0 +1,129 @@
+{
+  "id": 9332,
+  "title": "Also & Always",
+  "glyph": "𐑷𐑤",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Also and always",
+      "body": "A whole family of common words opens with 𐑷𐑤 — also, always, already, although, almost. Learn that opening and five words come free."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑷𐑤𐑕𐑴",
+      "caption": "Sound it out — what does this say?",
+      "correct": "also",
+      "correctLabel": "also"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑷𐑤𐑢𐑱𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "always",
+      "correctLabel": "always"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑷𐑤𐑮𐑧𐑛𐑦",
+      "caption": "Sound it out — what does this say?",
+      "correct": "already",
+      "correctLabel": "already"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑥𐑷𐑤",
+      "caption": "Sound it out — what does this say?",
+      "correct": "small",
+      "correctLabel": "small"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑔𐑷𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "thought",
+      "correctLabel": "thought"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑑𐑷𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "talk",
+      "correctLabel": "talk"
+    },
+    {
+      "type": "build",
+      "prompt": "although",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑷",
+        "𐑤",
+        "𐑞",
+        "𐑴",
+        "𐑔"
+      ],
+      "answer": [
+        "𐑷",
+        "𐑤",
+        "𐑞",
+        "𐑴"
+      ],
+      "correctLabel": "𐑷𐑤𐑞𐑴"
+    },
+    {
+      "type": "build",
+      "prompt": "wall",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑢",
+        "𐑷",
+        "𐑤",
+        "𐑬"
+      ],
+      "answer": [
+        "𐑢",
+        "𐑷",
+        "𐑤"
+      ],
+      "correctLabel": "𐑢𐑷𐑤"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “almost”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑷𐑤𐑥𐑴𐑕𐑑",
+        "𐑬𐑤𐑥𐑴𐑕𐑑",
+        "𐑷𐑤𐑥𐑪𐑕𐑑",
+        "𐑷𐑥𐑴𐑕𐑑"
+      ],
+      "correct": "𐑷𐑤𐑥𐑴𐑕𐑑",
+      "correctLabel": "𐑷𐑤𐑥𐑴𐑕𐑑"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑷𐑤𐑕𐑴": "also",
+        "𐑷𐑤𐑢𐑱𐑟": "always",
+        "𐑕𐑥𐑷𐑤": "small",
+        "𐑑𐑷𐑒": "talk"
+      },
+      "leftOrder": [
+        "𐑷𐑤𐑕𐑴",
+        "𐑷𐑤𐑢𐑱𐑟",
+        "𐑕𐑥𐑷𐑤",
+        "𐑑𐑷𐑒"
+      ],
+      "rightOrder": [
+        "talk",
+        "small",
+        "also",
+        "always"
+      ]
+    }
+  ],
+  "anchor": 33,
+  "optional": true
+}

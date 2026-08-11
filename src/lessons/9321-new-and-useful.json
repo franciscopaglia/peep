@@ -1,0 +1,137 @@
+{
+  "id": 9321,
+  "title": "New & Useful",
+  "glyph": "𐑿𐑟",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "New and useful",
+      "body": "𐑿 is the “yoo” hiding in use, few and human. English writes it a dozen ways — u, ew, ue — and Shavian writes it one way, every time."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑿𐑟𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "used",
+      "correctLabel": "used"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑿𐑕𐑓𐑩𐑤",
+      "caption": "Sound it out — what does this say?",
+      "correct": "useful",
+      "correctLabel": "useful"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑯𐑿𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "news",
+      "correctLabel": "news"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑿𐑥𐑩𐑯",
+      "caption": "Sound it out — what does this say?",
+      "correct": "human",
+      "correctLabel": "human"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑝𐑨𐑤𐑿",
+      "caption": "Sound it out — what does this say?",
+      "correct": "value",
+      "correctLabel": "value"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑓𐑿𐑗𐑼",
+      "caption": "Sound it out — what does this say?",
+      "correct": "future",
+      "correctLabel": "future"
+    },
+    {
+      "type": "build",
+      "prompt": "unit",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑿",
+        "𐑯",
+        "𐑦",
+        "𐑑",
+        "𐑵"
+      ],
+      "answer": [
+        "𐑿",
+        "𐑯",
+        "𐑦",
+        "𐑑"
+      ],
+      "correctLabel": "𐑿𐑯𐑦𐑑"
+    },
+    {
+      "type": "build",
+      "prompt": "computer",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑒",
+        "𐑩",
+        "𐑥",
+        "𐑐",
+        "𐑿",
+        "𐑑",
+        "𐑼",
+        "𐑵"
+      ],
+      "answer": [
+        "𐑒",
+        "𐑩",
+        "𐑥",
+        "𐑐",
+        "𐑿",
+        "𐑑",
+        "𐑼"
+      ],
+      "correctLabel": "𐑒𐑩𐑥𐑐𐑿𐑑𐑼"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “usually”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑿𐑠𐑫𐑩𐑤𐑦",
+        "𐑵𐑠𐑫𐑩𐑤𐑦",
+        "𐑿𐑟𐑫𐑩𐑤𐑦",
+        "𐑿𐑠𐑩𐑤𐑦"
+      ],
+      "correct": "𐑿𐑠𐑫𐑩𐑤𐑦",
+      "correctLabel": "𐑿𐑠𐑫𐑩𐑤𐑦"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑿𐑟𐑛": "used",
+        "𐑯𐑿𐑟": "news",
+        "𐑣𐑿𐑥𐑩𐑯": "human",
+        "𐑓𐑿𐑗𐑼": "future"
+      },
+      "leftOrder": [
+        "𐑿𐑟𐑛",
+        "𐑯𐑿𐑟",
+        "𐑣𐑿𐑥𐑩𐑯",
+        "𐑓𐑿𐑗𐑼"
+      ],
+      "rightOrder": [
+        "future",
+        "human",
+        "used",
+        "news"
+      ]
+    }
+  ],
+  "anchor": 32,
+  "optional": true
+}

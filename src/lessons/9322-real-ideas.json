@@ -1,0 +1,139 @@
+{
+  "id": 9322,
+  "title": "Real Ideas",
+  "glyph": "𐑲𐑛𐑾",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Real ideas",
+      "body": "𐑾 is the rarest letter you will meet, but it sits in a family of very ordinary words — the “-ious” and “-ea-” endings. Once you know its shape, they all read straight through."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑺𐑾𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "areas",
+      "correctLabel": "areas"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑲𐑛𐑾𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "ideas",
+      "correctLabel": "ideas"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑽𐑾𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "serious",
+      "correctLabel": "serious"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑝𐑺𐑾𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "various",
+      "correctLabel": "various"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑽𐑾𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "period",
+      "correctLabel": "period"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑪𐑚𐑝𐑾𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "obvious",
+      "correctLabel": "obvious"
+    },
+    {
+      "type": "build",
+      "prompt": "previous",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑐",
+        "𐑮",
+        "𐑰",
+        "𐑝",
+        "𐑾",
+        "𐑕",
+        "𐑿"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑮",
+        "𐑰",
+        "𐑝",
+        "𐑾",
+        "𐑕"
+      ],
+      "correctLabel": "𐑐𐑮𐑰𐑝𐑾𐑕"
+    },
+    {
+      "type": "build",
+      "prompt": "material",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑥",
+        "𐑩",
+        "𐑑",
+        "𐑽",
+        "𐑾",
+        "𐑤",
+        "𐑺"
+      ],
+      "answer": [
+        "𐑥",
+        "𐑩",
+        "𐑑",
+        "𐑽",
+        "𐑾",
+        "𐑤"
+      ],
+      "correctLabel": "𐑥𐑩𐑑𐑽𐑾𐑤"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “really”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑮𐑾𐑤𐑦",
+        "𐑮𐑽𐑤𐑦",
+        "𐑮𐑦𐑤𐑦",
+        "𐑮𐑱𐑤𐑦"
+      ],
+      "correct": "𐑮𐑾𐑤𐑦",
+      "correctLabel": "𐑮𐑾𐑤𐑦"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑺𐑾𐑟": "areas",
+        "𐑲𐑛𐑾𐑟": "ideas",
+        "𐑕𐑽𐑾𐑕": "serious",
+        "𐑐𐑽𐑾𐑛": "period"
+      },
+      "leftOrder": [
+        "𐑺𐑾𐑟",
+        "𐑲𐑛𐑾𐑟",
+        "𐑕𐑽𐑾𐑕",
+        "𐑐𐑽𐑾𐑛"
+      ],
+      "rightOrder": [
+        "period",
+        "serious",
+        "areas",
+        "ideas"
+      ]
+    }
+  ],
+  "anchor": 32,
+  "optional": true
+}
