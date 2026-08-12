@@ -1,0 +1,134 @@
+{
+  "id": 9282,
+  "title": "Heart & Start",
+  "glyph": "𐑣𐑸𐑑",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Heart and start",
+      "body": "Last time 𐑹 did most of the work; this round belongs to 𐑸, the open “ah-r” of car and far. A few 𐑹 words are mixed in, so keep listening."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑸𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "part",
+      "correctLabel": "part"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑸𐑡",
+      "caption": "Sound it out — what does this say?",
+      "correct": "large",
+      "correctLabel": "large"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑸𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "heart",
+      "correctLabel": "heart",
+      "accept": [
+        "hart"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑑𐑸𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "start",
+      "correctLabel": "start"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑥𐑸𐑒𐑩𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "market",
+      "correctLabel": "market"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑸𐑥𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "arms",
+      "correctLabel": "arms"
+    },
+    {
+      "type": "build",
+      "prompt": "charge",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑗",
+        "𐑸",
+        "𐑡",
+        "𐑹"
+      ],
+      "answer": [
+        "𐑗",
+        "𐑸",
+        "𐑡"
+      ],
+      "correctLabel": "𐑗𐑸𐑡"
+    },
+    {
+      "type": "build",
+      "prompt": "garden",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑜",
+        "𐑸",
+        "𐑛",
+        "𐑩",
+        "𐑯",
+        "𐑹"
+      ],
+      "answer": [
+        "𐑜",
+        "𐑸",
+        "𐑛",
+        "𐑩",
+        "𐑯"
+      ],
+      "correctLabel": "𐑜𐑸𐑛𐑩𐑯"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “hard”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑣𐑸𐑛",
+        "𐑣𐑹𐑛",
+        "𐑣𐑻𐑛",
+        "𐑣𐑸𐑑"
+      ],
+      "correct": "𐑣𐑸𐑛",
+      "correctLabel": "𐑣𐑸𐑛"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑐𐑸𐑑": "part",
+        "𐑣𐑸𐑑": "heart",
+        "𐑤𐑸𐑡": "large",
+        "𐑥𐑸𐑗": "march"
+      },
+      "leftOrder": [
+        "𐑐𐑸𐑑",
+        "𐑣𐑸𐑑",
+        "𐑤𐑸𐑡",
+        "𐑥𐑸𐑗"
+      ],
+      "rightOrder": [
+        "march",
+        "large",
+        "part",
+        "heart"
+      ]
+    }
+  ],
+  "anchor": 28,
+  "optional": true
+}

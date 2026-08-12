@@ -1,0 +1,129 @@
+{
+  "id": 9342,
+  "title": "Class & Choice",
+  "glyph": "𐑒𐑤𐑭𐑕",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Class and choice",
+      "body": "One more round on the two rarest vowels. 𐑭 is the long “ah” of class and ask; 𐑶 is the “oy” of boy and choice. Neither is common, but both sit in words you will meet on any page."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑒𐑤𐑭𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "class",
+      "correctLabel": "class"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑭𐑕𐑒",
+      "caption": "Sound it out — what does this say?",
+      "correct": "ask",
+      "correctLabel": "ask"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑗𐑭𐑯𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "chance",
+      "correctLabel": "chance"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑭𐑯𐑕𐑼",
+      "caption": "Sound it out — what does this say?",
+      "correct": "answer",
+      "correctLabel": "answer"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑮𐑶𐑩𐑤",
+      "caption": "Sound it out — what does this say?",
+      "correct": "royal",
+      "correctLabel": "royal"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑩𐑝𐑶𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "avoid",
+      "correctLabel": "avoid"
+    },
+    {
+      "type": "build",
+      "prompt": "past",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑐",
+        "𐑭",
+        "𐑕",
+        "𐑑",
+        "𐑨"
+      ],
+      "answer": [
+        "𐑐",
+        "𐑭",
+        "𐑕",
+        "𐑑"
+      ],
+      "correctLabel": "𐑐𐑭𐑕𐑑"
+    },
+    {
+      "type": "build",
+      "prompt": "soil",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑕",
+        "𐑶",
+        "𐑤",
+        "𐑷"
+      ],
+      "answer": [
+        "𐑕",
+        "𐑶",
+        "𐑤"
+      ],
+      "correctLabel": "𐑕𐑶𐑤"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “joint”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑡𐑶𐑯𐑑",
+        "𐑡𐑬𐑯𐑑",
+        "𐑞𐑶𐑯𐑑",
+        "𐑡𐑶𐑯"
+      ],
+      "correct": "𐑡𐑶𐑯𐑑",
+      "correctLabel": "𐑡𐑶𐑯𐑑"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑒𐑤𐑭𐑕": "class",
+        "𐑭𐑕𐑒": "ask",
+        "𐑮𐑶𐑩𐑤": "royal",
+        "𐑩𐑝𐑶𐑛": "avoid"
+      },
+      "leftOrder": [
+        "𐑒𐑤𐑭𐑕",
+        "𐑭𐑕𐑒",
+        "𐑮𐑶𐑩𐑤",
+        "𐑩𐑝𐑶𐑛"
+      ],
+      "rightOrder": [
+        "avoid",
+        "royal",
+        "class",
+        "ask"
+      ]
+    }
+  ],
+  "anchor": 34,
+  "optional": true
+}
