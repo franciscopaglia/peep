@@ -62,6 +62,32 @@
       "correctLabel": "noise"
     },
     {
+      "type": "type",
+      "prompt": "𐑡𐑶",
+      "caption": "Type what this says",
+      "correct": "joy",
+      "correctLabel": "joy"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑶",
+        "𐑲",
+        "𐑬"
+      ],
+      "correctLabel": "𐑐𐑶𐑯𐑑",
+      "prompt": "point",
+      "word": [
+        "𐑐",
+        "𐑶",
+        "𐑯",
+        "𐑑"
+      ]
+    },
+    {
       "type": "teach",
       "title": "AH — 𐑭",
       "body": "𐑭 is the long, open “ah” — a doctor’s “say ahh”. It’s in 𐑐𐑭𐑥 (palm) and 𐑒𐑭𐑥 (calm). Rarer than the rest, but it turns up in some very ordinary words.",
@@ -100,6 +126,91 @@
       "caption": "Type what this says",
       "correct": "father",
       "correctLabel": "father"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑭𐑕𐑑",
+      "caption": "Type what this says",
+      "correct": "last",
+      "correctLabel": "last"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        2
+      ],
+      "bank": [
+        "𐑭",
+        "𐑨",
+        "𐑸"
+      ],
+      "correctLabel": "𐑜𐑤𐑭𐑕",
+      "prompt": "glass",
+      "word": [
+        "𐑜",
+        "𐑤",
+        "𐑭",
+        "𐑕"
+      ]
+    },
+    {
+      "type": "build",
+      "prompt": "after",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑭",
+        "𐑓",
+        "𐑑",
+        "𐑼",
+        "𐑨"
+      ],
+      "answer": [
+        "𐑭",
+        "𐑓",
+        "𐑑",
+        "𐑼"
+      ],
+      "correctLabel": "𐑭𐑓𐑑𐑼"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “toy”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑑𐑶",
+        "𐑑𐑲",
+        "𐑑𐑬",
+        "𐑑𐑹"
+      ],
+      "correct": "𐑑𐑶",
+      "correctLabel": "𐑑𐑶"
+    },
+    {
+      "type": "sort",
+      "prompt": "Plain ah, or ah with an r?",
+      "buckets": [
+        "𐑭 as in calm",
+        "𐑸 as in car"
+      ],
+      "items": [
+        "𐑒𐑭𐑥",
+        "𐑐𐑭𐑔",
+        "𐑜𐑤𐑭𐑕",
+        "𐑛𐑸𐑒",
+        "𐑕𐑑𐑸𐑑",
+        "𐑓𐑸𐑥"
+      ],
+      "answer": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "correctLabel": "𐑭 as in calm: 𐑒𐑭𐑥 𐑐𐑭𐑔 𐑜𐑤𐑭𐑕 / 𐑸 as in car: 𐑛𐑸𐑒 𐑕𐑑𐑸𐑑 𐑓𐑸𐑥"
     },
     {
       "type": "match",

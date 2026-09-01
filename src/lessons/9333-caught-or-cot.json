@@ -1,0 +1,199 @@
+{
+  "id": 9333,
+  "title": "Caught or Cot?",
+  "glyph": "𐑒𐑷𐑑",
+  "chapter": 2,
+  "exercises": [
+    {
+      "type": "teach",
+      "title": "Caught or cot?",
+      "body": "The new vowels have close neighbours, and hearing the difference is what makes them stick. Long 𐑷 against short 𐑪 — 𐑒𐑷𐑑 is caught, 𐑒𐑪𐑑 is cot. 𐑷 against r-coloured 𐑹 — 𐑕𐑷 is saw, 𐑕𐑹 is sore. And sliding 𐑬 against steady 𐑴 — 𐑯𐑬 is now, 𐑯𐑴 is no."
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑒𐑷𐑑",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "caught",
+        "cot",
+        "cut",
+        "coat"
+      ],
+      "correct": "caught",
+      "correctLabel": "caught"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑒𐑪𐑑",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "cot",
+        "caught",
+        "coat",
+        "cat"
+      ],
+      "correct": "cot",
+      "correctLabel": "cot"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑬𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "loud",
+      "correctLabel": "loud"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑤𐑴𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "load",
+      "correctLabel": "load",
+      "accept": [
+        "lode",
+        "lowed"
+      ]
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “sore”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑕𐑹",
+        "𐑕𐑷",
+        "𐑕𐑴",
+        "𐑕𐑬"
+      ],
+      "correct": "𐑕𐑹",
+      "correctLabel": "𐑕𐑹"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑮𐑷",
+      "caption": "Sound it out — what does this say?",
+      "correct": "draw",
+      "correctLabel": "draw"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑚𐑮𐑷𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "brought",
+      "correctLabel": "brought"
+    },
+    {
+      "type": "sort",
+      "prompt": "Slide, or steady?",
+      "buckets": [
+        "𐑬 as in now",
+        "𐑴 as in no"
+      ],
+      "items": [
+        "𐑤𐑬𐑛",
+        "𐑣𐑬",
+        "𐑑𐑬𐑯",
+        "𐑤𐑴𐑛",
+        "𐑣𐑴𐑥",
+        "𐑕𐑴"
+      ],
+      "answer": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "correctLabel": "𐑬 as in now: 𐑤𐑬𐑛 𐑣𐑬 𐑑𐑬𐑯 / 𐑴 as in no: 𐑤𐑴𐑛 𐑣𐑴𐑥 𐑕𐑴"
+    },
+    {
+      "type": "sort",
+      "prompt": "Aw, or or?",
+      "buckets": [
+        "𐑷 as in saw",
+        "𐑹 as in sore"
+      ],
+      "items": [
+        "𐑕𐑷",
+        "𐑤𐑷",
+        "𐑒𐑷𐑑",
+        "𐑕𐑹",
+        "𐑛𐑹",
+        "𐑥𐑹"
+      ],
+      "answer": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "correctLabel": "𐑷 as in saw: 𐑕𐑷 𐑤𐑷 𐑒𐑷𐑑 / 𐑹 as in sore: 𐑕𐑹 𐑛𐑹 𐑥𐑹"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which word says “now”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑯𐑬",
+        "𐑯𐑴",
+        "𐑯𐑿",
+        "𐑯𐑽"
+      ],
+      "correct": "𐑯𐑬",
+      "correctLabel": "𐑯𐑬"
+    },
+    {
+      "type": "build",
+      "prompt": "because",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑚",
+        "𐑦",
+        "𐑒",
+        "𐑪",
+        "𐑟",
+        "𐑷"
+      ],
+      "answer": [
+        "𐑚",
+        "𐑦",
+        "𐑒",
+        "𐑪",
+        "𐑟"
+      ],
+      "correctLabel": "𐑚𐑦𐑒𐑪𐑟"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑒𐑷𐑑": "caught",
+        "𐑒𐑪𐑑": "cot",
+        "𐑯𐑬": "now",
+        "𐑯𐑴": "no"
+      },
+      "leftOrder": [
+        "𐑒𐑷𐑑",
+        "𐑒𐑪𐑑",
+        "𐑯𐑬",
+        "𐑯𐑴"
+      ],
+      "rightOrder": [
+        "no",
+        "cot",
+        "caught",
+        "now"
+      ]
+    }
+  ],
+  "anchor": 33,
+  "optional": true
+}

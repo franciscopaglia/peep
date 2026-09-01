@@ -794,6 +794,14 @@
     "anchor": 33
   },
   {
+    "id": 9333,
+    "title": "Caught or Cot?",
+    "glyph": "𐑒𐑷𐑑",
+    "chapter": 2,
+    "optional": true,
+    "anchor": 33
+  },
+  {
     "id": 9341,
     "title": "Calm & Coin",
     "glyph": "𐑒𐑭𐑥",
@@ -805,6 +813,14 @@
     "id": 9342,
     "title": "Class & Choice",
     "glyph": "𐑒𐑤𐑭𐑕",
+    "chapter": 2,
+    "optional": true,
+    "anchor": 34
+  },
+  {
+    "id": 9343,
+    "title": "All the New Vowels",
+    "glyph": "𐑬𐑷𐑶𐑭",
     "chapter": 2,
     "optional": true,
     "anchor": 34
