@@ -50,6 +50,13 @@
       "correctLabel": "now"
     },
     {
+      "type": "type",
+      "prompt": "𐑣𐑬",
+      "caption": "Type what this says",
+      "correct": "how",
+      "correctLabel": "how"
+    },
+    {
       "type": "build",
       "prompt": "down",
       "caption": "Build this word",
@@ -66,6 +73,23 @@
         "𐑯"
       ],
       "correctLabel": "𐑛𐑬𐑯"
+    },
+    {
+      "type": "build",
+      "prompt": "house",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑣",
+        "𐑬",
+        "𐑕",
+        "𐑴"
+      ],
+      "answer": [
+        "𐑣",
+        "𐑬",
+        "𐑕"
+      ],
+      "correctLabel": "𐑣𐑬𐑕"
     },
     {
       "type": "teach",
@@ -101,6 +125,23 @@
       "correctLabel": "saw"
     },
     {
+      "type": "type",
+      "prompt": "𐑷𐑤",
+      "caption": "Type what this says",
+      "correct": "all",
+      "correctLabel": "all",
+      "accept": [
+        "awl"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑔𐑷𐑑",
+      "caption": "Type what this says",
+      "correct": "thought",
+      "correctLabel": "thought"
+    },
+    {
       "type": "build",
       "prompt": "ball",
       "caption": "Build this word",
@@ -118,6 +159,25 @@
       "correctLabel": "𐑚𐑷𐑤"
     },
     {
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑷",
+        "𐑬",
+        "𐑪"
+      ],
+      "correctLabel": "𐑢𐑷𐑑𐑼",
+      "prompt": "water",
+      "word": [
+        "𐑢",
+        "𐑷",
+        "𐑑",
+        "𐑼"
+      ]
+    },
+    {
       "type": "choice",
       "promptIsGlyph": false,
       "prompt": "Which word says “cow”?",
@@ -131,6 +191,31 @@
       ],
       "correct": "𐑒𐑬",
       "correctLabel": "𐑒𐑬"
+    },
+    {
+      "type": "sort",
+      "prompt": "Which vowel do you hear?",
+      "buckets": [
+        "𐑬 as in cow",
+        "𐑷 as in law"
+      ],
+      "items": [
+        "𐑛𐑬𐑯",
+        "𐑥𐑬𐑔",
+        "𐑕𐑬𐑔",
+        "𐑕𐑥𐑷𐑤",
+        "𐑑𐑷𐑒",
+        "𐑓𐑷𐑤"
+      ],
+      "answer": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "correctLabel": "𐑬 as in cow: 𐑛𐑬𐑯 𐑥𐑬𐑔 𐑕𐑬𐑔 / 𐑷 as in law: 𐑕𐑥𐑷𐑤 𐑑𐑷𐑒 𐑓𐑷𐑤"
     },
     {
       "type": "match",
