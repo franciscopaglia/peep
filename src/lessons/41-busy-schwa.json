@@ -56,6 +56,13 @@
       "correctLabel": "sofa"
     },
     {
+      "type": "type",
+      "prompt": "𐑑𐑱𐑚𐑩𐑤",
+      "caption": "Sound it out — what does this say?",
+      "correct": "table",
+      "correctLabel": "table"
+    },
+    {
       "type": "teach",
       "title": "Stress decides",
       "body": "English squeezes the vowels it doesn’t stress. Say “banana” — only the middle a keeps its full sound: 𐑚𐑩𐑯𐑭𐑯𐑩. Shavian spells the squeeze honestly, which is why so many words are full of 𐑩 no matter how English letters them."
@@ -91,6 +98,31 @@
       "correctLabel": "ago"
     },
     {
+      "type": "sort",
+      "prompt": "Stressed “up”, or the quiet one?",
+      "buckets": [
+        "𐑳 as in up",
+        "𐑩 as in ago"
+      ],
+      "items": [
+        "𐑚𐑳𐑑",
+        "𐑥𐑳𐑯𐑦",
+        "𐑤𐑳𐑯𐑗",
+        "𐑩𐑚𐑬𐑑",
+        "𐑩𐑢𐑱",
+        "𐑕𐑴𐑓𐑩"
+      ],
+      "answer": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "correctLabel": "𐑳 as in up: 𐑚𐑳𐑑 𐑥𐑳𐑯𐑦 𐑤𐑳𐑯𐑗 / 𐑩 as in ago: 𐑩𐑚𐑬𐑑 𐑩𐑢𐑱 𐑕𐑴𐑓𐑩"
+    },
+    {
       "type": "spot",
       "prompt": "about",
       "words": [
@@ -106,6 +138,13 @@
       "stops": [
         5
       ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑧𐑒𐑩𐑯𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "second",
+      "correctLabel": "second"
     },
     {
       "type": "teach",
@@ -128,11 +167,68 @@
       "correctLabel": "little"
     },
     {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑥𐑦𐑤𐑘𐑩𐑯",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "million",
+        "millions",
+        "melon",
+        "minion"
+      ],
+      "correct": "million",
+      "correctLabel": "million"
+    },
+    {
       "type": "type",
       "prompt": "𐑴𐑐𐑩𐑯𐑛",
       "caption": "Sound it out — what does this say?",
       "correct": "opened",
       "correctLabel": "opened"
+    },
+    {
+      "type": "teach",
+      "title": "The long words are the easy ones",
+      "body": "Here is the reward for all this. Long English words are mostly unstressed syllables, which means they are mostly 𐑩 — so the longer the word, the more of it you already know. Important is 𐑦𐑥𐑐𐑹𐑑𐑩𐑯𐑑, different is 𐑛𐑦𐑓𐑼𐑩𐑯𐑑, probably is 𐑐𐑮𐑪𐑚𐑩𐑚𐑤𐑦. Read them slowly and let every 𐑩 stay small."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑛𐑦𐑓𐑼𐑩𐑯𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "different",
+      "correctLabel": "different"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        5
+      ],
+      "bank": [
+        "𐑩",
+        "𐑨",
+        "𐑦"
+      ],
+      "correctLabel": "𐑦𐑥𐑐𐑹𐑑𐑩𐑯𐑑",
+      "prompt": "important",
+      "word": [
+        "𐑦",
+        "𐑥",
+        "𐑐",
+        "𐑹",
+        "𐑑",
+        "𐑩",
+        "𐑯",
+        "𐑑"
+      ]
+    },
+    {
+      "type": "type",
+      "prompt": "𐑐𐑮𐑪𐑚𐑩𐑚𐑤𐑦",
+      "caption": "Sound it out — what does this say?",
+      "correct": "probably",
+      "correctLabel": "probably"
     },
     {
       "type": "choice",
@@ -148,6 +244,65 @@
       ],
       "correct": "𐑩𐑜𐑧𐑯",
       "correctLabel": "𐑩𐑜𐑧𐑯"
+    },
+    {
+      "type": "spot",
+      "prompt": "against",
+      "words": [
+        "𐑞",
+        "𐑑𐑱𐑚𐑩𐑤",
+        "𐑢𐑪𐑟",
+        "𐑩𐑜𐑧𐑯𐑕𐑑",
+        "𐑞",
+        "𐑢𐑷𐑤"
+      ],
+      "correct": 3,
+      "correctLabel": "𐑩𐑜𐑧𐑯𐑕𐑑",
+      "stops": [
+        5
+      ]
+    },
+    {
+      "type": "transcribe",
+      "passage": "𐑖𐑰 𐑮𐑧𐑛 𐑞 𐑕𐑧𐑒𐑩𐑯𐑛 𐑚𐑫𐑒 𐑩𐑜𐑧𐑯.",
+      "caption": "Read the passage, then write it out in English",
+      "correct": "she read the second book again",
+      "correctLabel": "she read the second book again"
+    },
+    {
+      "type": "cloze",
+      "blanks": [
+        1,
+        4,
+        6
+      ],
+      "bank": [
+        "𐑕𐑧𐑒𐑩𐑯𐑛",
+        "𐑩𐑚𐑬𐑑",
+        "𐑤𐑦𐑑𐑩𐑤",
+        "𐑑𐑱𐑚𐑩𐑤"
+      ],
+      "correctLabel": "𐑞 𐑕𐑧𐑒𐑩𐑯𐑛 𐑚𐑫𐑒 𐑢𐑪𐑟 𐑩𐑚𐑬𐑑 𐑩 𐑤𐑦𐑑𐑩𐑤 𐑛𐑪𐑜 𐑖𐑰 𐑮𐑧𐑛 𐑦𐑑 𐑩𐑜𐑧𐑯",
+      "words": [
+        "𐑞",
+        "𐑕𐑧𐑒𐑩𐑯𐑛",
+        "𐑚𐑫𐑒",
+        "𐑢𐑪𐑟",
+        "𐑩𐑚𐑬𐑑",
+        "𐑩",
+        "𐑤𐑦𐑑𐑩𐑤",
+        "𐑛𐑪𐑜",
+        "𐑖𐑰",
+        "𐑮𐑧𐑛",
+        "𐑦𐑑",
+        "𐑩𐑜𐑧𐑯"
+      ],
+      "stops": [
+        7,
+        11
+      ],
+      "translation": "The second book was about a little dog. She read it again.",
+      "caption": "Four schwas in two sentences — fill the gaps"
     },
     {
       "type": "match",

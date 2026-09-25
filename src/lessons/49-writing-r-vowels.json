@@ -10,6 +10,23 @@
       "body": "The r-vowels are the trap of Shavian writing. English spells car with an a and an r, so the hand wants to write 𐑭𐑮 — but it is a single letter: 𐑒𐑸, two letters in all. Never write 𐑮 after a vowel; reach for the r-vowel instead."
     },
     {
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑸",
+        "𐑭",
+        "𐑮"
+      ],
+      "correctLabel": "𐑒𐑸",
+      "prompt": "car",
+      "word": [
+        "𐑒",
+        "𐑸"
+      ]
+    },
+    {
       "type": "write",
       "prompt": "car",
       "caption": "Spell it in Shavian on the keyboard below",
@@ -22,6 +39,20 @@
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑯𐑹𐑔",
       "correctLabel": "𐑯𐑹𐑔"
+    },
+    {
+      "type": "write",
+      "prompt": "park",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑐𐑸𐑒",
+      "correctLabel": "𐑐𐑸𐑒"
+    },
+    {
+      "type": "write",
+      "prompt": "short",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑖𐑹𐑑",
+      "correctLabel": "𐑖𐑹𐑑"
     },
     {
       "type": "teach",
@@ -50,6 +81,27 @@
       "correctLabel": "𐑯𐑽"
     },
     {
+      "type": "write",
+      "prompt": "chair",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑗𐑺",
+      "correctLabel": "𐑗𐑺"
+    },
+    {
+      "type": "write",
+      "prompt": "word",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑢𐑻𐑛",
+      "correctLabel": "𐑢𐑻𐑛"
+    },
+    {
+      "type": "write",
+      "prompt": "year",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑘𐑽",
+      "correctLabel": "𐑘𐑽"
+    },
+    {
       "type": "teach",
       "title": "A whole word in one letter",
       "body": "Some r-vowels are words on their own: ear is just 𐑽, are is just 𐑸. And the tired -er that ends so many English words is 𐑼 — letter is 𐑤𐑧𐑑𐑼, sister 𐑕𐑦𐑕𐑑𐑼."
@@ -67,6 +119,20 @@
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑽",
       "correctLabel": "𐑽"
+    },
+    {
+      "type": "write",
+      "prompt": "sister",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑕𐑦𐑕𐑑𐑼",
+      "correctLabel": "𐑕𐑦𐑕𐑑𐑼"
+    },
+    {
+      "type": "write",
+      "prompt": "corner",
+      "caption": "Two different r-vowels in one word",
+      "correct": "𐑒𐑹𐑯𐑼",
+      "correctLabel": "𐑒𐑹𐑯𐑼"
     },
     {
       "type": "write",
@@ -95,6 +161,20 @@
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑚𐑮𐑳𐑞𐑼",
       "correctLabel": "𐑚𐑮𐑳𐑞𐑼"
+    },
+    {
+      "type": "write",
+      "prompt": "mother",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑥𐑳𐑞𐑼",
+      "correctLabel": "𐑥𐑳𐑞𐑼"
+    },
+    {
+      "type": "write",
+      "prompt": "first",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑓𐑻𐑕𐑑",
+      "correctLabel": "𐑓𐑻𐑕𐑑"
     },
     {
       "type": "write",

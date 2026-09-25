@@ -10,6 +10,22 @@
       "body": "Shavian has no capitals at all — a sentence simply starts with its first letter. Everything else you already know carries over: full stops, commas and question marks are borrowed from English unchanged. Now that the answers are whole sentences, the keyboard offers whichever of those marks a sentence needs, beside the naming dot."
     },
     {
+      "type": "arrange",
+      "promptEn": "the cat sat",
+      "tiles": [
+        "𐑞",
+        "𐑒𐑨𐑑",
+        "𐑕𐑨𐑑",
+        "𐑣𐑨𐑑"
+      ],
+      "answer": [
+        "𐑞",
+        "𐑒𐑨𐑑",
+        "𐑕𐑨𐑑"
+      ],
+      "correctLabel": "𐑞 𐑒𐑨𐑑 𐑕𐑨𐑑"
+    },
+    {
       "type": "write",
       "prompt": "The cat sat.",
       "caption": "Write the whole sentence, stop and all",
@@ -31,6 +47,20 @@
       "correctLabel": "𐑖𐑰 𐑮𐑨𐑯 𐑑 𐑞 𐑖𐑪𐑐."
     },
     {
+      "type": "write",
+      "prompt": "The sun is warm.",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑞 𐑕𐑳𐑯 𐑦𐑟 𐑢𐑹𐑥.",
+      "correctLabel": "𐑞 𐑕𐑳𐑯 𐑦𐑟 𐑢𐑹𐑥."
+    },
+    {
+      "type": "write",
+      "prompt": "It was a long day.",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑦𐑑 𐑢𐑪𐑟 𐑩 𐑤𐑪𐑙 𐑛𐑱.",
+      "correctLabel": "𐑦𐑑 𐑢𐑪𐑟 𐑩 𐑤𐑪𐑙 𐑛𐑱."
+    },
+    {
       "type": "teach",
       "title": "The dot still marks a name",
       "body": "With no capitals to lean on, the naming dot does that work: it goes in front of every name, wherever it sits in the sentence. ·𐑕𐑨𐑥 at the start, ·𐑕𐑨𐑥 in the middle — always the dot."
@@ -41,6 +71,39 @@
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "·𐑕𐑨𐑥 𐑣𐑨𐑟 𐑩 𐑛𐑪𐑜.",
       "correctLabel": "·𐑕𐑨𐑥 𐑣𐑨𐑟 𐑩 𐑛𐑪𐑜."
+    },
+    {
+      "type": "write",
+      "prompt": "Sam asked for help.",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "·𐑕𐑨𐑥 𐑭𐑕𐑒𐑑 𐑓 𐑣𐑧𐑤𐑐.",
+      "correctLabel": "·𐑕𐑨𐑥 𐑭𐑕𐑒𐑑 𐑓 𐑣𐑧𐑤𐑐."
+    },
+    {
+      "type": "teach",
+      "title": "The endings, now in your hand",
+      "body": "Chapter 3 taught you to read the past tense; here you have to produce it. Nothing new to learn — just say the word before you write it, and let the ending follow. Walked ends voiceless, so 𐑢𐑷𐑒𐑑. Played hums, so 𐑐𐑤𐑱𐑛. Wanted has a beat of its own, so 𐑢𐑪𐑯𐑑𐑩𐑛."
+    },
+    {
+      "type": "write",
+      "prompt": "We walked to school.",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑢𐑰 𐑢𐑷𐑒𐑑 𐑑 𐑕𐑒𐑵𐑤.",
+      "correctLabel": "𐑢𐑰 𐑢𐑷𐑒𐑑 𐑑 𐑕𐑒𐑵𐑤."
+    },
+    {
+      "type": "write",
+      "prompt": "The children played in the garden.",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑞 𐑗𐑦𐑤𐑛𐑮𐑩𐑯 𐑐𐑤𐑱𐑛 𐑦𐑯 𐑞 𐑜𐑸𐑛𐑩𐑯.",
+      "correctLabel": "𐑞 𐑗𐑦𐑤𐑛𐑮𐑩𐑯 𐑐𐑤𐑱𐑛 𐑦𐑯 𐑞 𐑜𐑸𐑛𐑩𐑯."
+    },
+    {
+      "type": "write",
+      "prompt": "He wanted more time.",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑣𐑰 𐑢𐑪𐑯𐑑𐑩𐑛 𐑥𐑹 𐑑𐑲𐑥.",
+      "correctLabel": "𐑣𐑰 𐑢𐑪𐑯𐑑𐑩𐑛 𐑥𐑹 𐑑𐑲𐑥."
     },
     {
       "type": "write",
@@ -58,6 +121,20 @@
     },
     {
       "type": "write",
+      "prompt": "Where are my keys?",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑢𐑺 𐑸 𐑥𐑲 𐑒𐑰𐑟?",
+      "correctLabel": "𐑢𐑺 𐑸 𐑥𐑲 𐑒𐑰𐑟?"
+    },
+    {
+      "type": "write",
+      "prompt": "Please close the window.",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑐𐑤𐑰𐑟 𐑒𐑤𐑴𐑟 𐑞 𐑢𐑦𐑯𐑛𐑴.",
+      "correctLabel": "𐑐𐑤𐑰𐑟 𐑒𐑤𐑴𐑟 𐑞 𐑢𐑦𐑯𐑛𐑴."
+    },
+    {
+      "type": "write",
       "prompt": "We had coffee in the kitchen.",
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑢𐑰 𐑣𐑨𐑛 𐑒𐑪𐑓𐑦 𐑦𐑯 𐑞 𐑒𐑦𐑗𐑦𐑯.",
@@ -69,6 +146,20 @@
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑥𐑲 𐑚𐑮𐑳𐑞𐑼 𐑦𐑟 𐑩 𐑑𐑰𐑗𐑼.",
       "correctLabel": "𐑥𐑲 𐑚𐑮𐑳𐑞𐑼 𐑦𐑟 𐑩 𐑑𐑰𐑗𐑼."
+    },
+    {
+      "type": "write",
+      "prompt": "They live near the park.",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑞𐑱 𐑤𐑦𐑝 𐑯𐑽 𐑞 𐑐𐑸𐑒.",
+      "correctLabel": "𐑞𐑱 𐑤𐑦𐑝 𐑯𐑽 𐑞 𐑐𐑸𐑒."
+    },
+    {
+      "type": "write",
+      "prompt": "I think she is right.",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑲 𐑔𐑦𐑙𐑒 𐑖𐑰 𐑦𐑟 𐑮𐑲𐑑.",
+      "correctLabel": "𐑲 𐑔𐑦𐑙𐑒 𐑖𐑰 𐑦𐑟 𐑮𐑲𐑑."
     },
     {
       "type": "write",

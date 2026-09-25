@@ -79,6 +79,20 @@
       "correctLabel": "𐑚𐑻𐑛𐑟"
     },
     {
+      "type": "type",
+      "prompt": "𐑚𐑫𐑒𐑕",
+      "caption": "Sound it out — what does this say?",
+      "correct": "books",
+      "correctLabel": "books"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑣𐑨𐑯𐑛𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "hands",
+      "correctLabel": "hands"
+    },
+    {
       "type": "teach",
       "title": "An extra beat: 𐑩𐑟",
       "body": "After a hissy sound — s, z, sh, ch, j — you can’t just stack on another hiss. English slips in a tiny vowel, and Shavian writes it: boxes is 𐑚𐑪𐑒𐑕𐑩𐑟, wishes is 𐑢𐑦𐑖𐑩𐑟."
@@ -96,6 +110,79 @@
       "caption": "Sound it out — what does this say?",
       "correct": "wishes",
       "correctLabel": "wishes"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑜𐑤𐑭𐑕𐑩𐑟",
+      "caption": "Sound it out — what does this say?",
+      "correct": "glasses",
+      "correctLabel": "glasses"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which spells “watches”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑢𐑪𐑗𐑩𐑟",
+        "𐑢𐑪𐑗𐑕",
+        "𐑢𐑪𐑗𐑟",
+        "𐑢𐑪𐑗𐑩𐑕"
+      ],
+      "correct": "𐑢𐑪𐑗𐑩𐑟",
+      "correctLabel": "𐑢𐑪𐑗𐑩𐑟"
+    },
+    {
+      "type": "sort",
+      "prompt": "Which ending does each plural take?",
+      "buckets": [
+        "𐑕",
+        "𐑟"
+      ],
+      "items": [
+        "𐑒𐑨𐑑𐑕",
+        "𐑚𐑫𐑒𐑕",
+        "𐑣𐑨𐑑𐑕",
+        "𐑛𐑪𐑜𐑟",
+        "𐑚𐑧𐑛𐑟",
+        "𐑚𐑻𐑛𐑟"
+      ],
+      "answer": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "correctLabel": "𐑕: 𐑒𐑨𐑑𐑕 𐑚𐑫𐑒𐑕 𐑣𐑨𐑑𐑕 / 𐑟: 𐑛𐑪𐑜𐑟 𐑚𐑧𐑛𐑟 𐑚𐑻𐑛𐑟"
+    },
+    {
+      "type": "sort",
+      "prompt": "Now all three — which ending does each plural take?",
+      "buckets": [
+        "𐑕",
+        "𐑟",
+        "𐑩𐑟"
+      ],
+      "items": [
+        "𐑚𐑫𐑒𐑕",
+        "𐑒𐑳𐑐𐑕",
+        "𐑣𐑨𐑯𐑛𐑟",
+        "𐑚𐑻𐑛𐑟",
+        "𐑚𐑪𐑒𐑕𐑩𐑟",
+        "𐑢𐑪𐑗𐑩𐑟"
+      ],
+      "answer": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2
+      ],
+      "correctLabel": "𐑕: 𐑚𐑫𐑒𐑕 𐑒𐑳𐑐𐑕 / 𐑟: 𐑣𐑨𐑯𐑛𐑟 𐑚𐑻𐑛𐑟 / 𐑩𐑟: 𐑚𐑪𐑒𐑕𐑩𐑟 𐑢𐑪𐑗𐑩𐑟"
     },
     {
       "type": "teach",
@@ -131,29 +218,33 @@
       "correctLabel": "𐑮𐑰𐑛𐑦𐑙"
     },
     {
-      "type": "sort",
-      "prompt": "Which ending does each plural take?",
-      "buckets": [
-        "𐑕",
-        "𐑟"
+      "type": "type",
+      "prompt": "𐑑𐑷𐑒𐑦𐑙",
+      "caption": "Sound it out — what does this say?",
+      "correct": "talking",
+      "correctLabel": "talking"
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        3,
+        4
       ],
-      "items": [
-        "𐑒𐑨𐑑𐑕",
-        "𐑚𐑫𐑒𐑕",
-        "𐑣𐑨𐑑𐑕",
-        "𐑛𐑪𐑜𐑟",
-        "𐑚𐑧𐑛𐑟",
-        "𐑚𐑻𐑛𐑟"
+      "bank": [
+        "𐑦",
+        "𐑙",
+        "𐑩",
+        "𐑯"
       ],
-      "answer": [
-        0,
-        0,
-        0,
-        1,
-        1,
-        1
-      ],
-      "correctLabel": "𐑕: 𐑒𐑨𐑑𐑕 𐑚𐑫𐑒𐑕 𐑣𐑨𐑑𐑕 / 𐑟: 𐑛𐑪𐑜𐑟 𐑚𐑧𐑛𐑟 𐑚𐑻𐑛𐑟"
+      "correctLabel": "𐑢𐑻𐑒𐑦𐑙",
+      "prompt": "working",
+      "word": [
+        "𐑢",
+        "𐑻",
+        "𐑒",
+        "𐑦",
+        "𐑙"
+      ]
     },
     {
       "type": "teach",
@@ -192,6 +283,39 @@
       "stops": [
         6
       ]
+    },
+    {
+      "type": "cloze",
+      "blanks": [
+        1,
+        5,
+        8
+      ],
+      "bank": [
+        "𐑚𐑫𐑒𐑕",
+        "𐑚𐑪𐑒𐑕𐑩𐑟",
+        "𐑮𐑰𐑛𐑦𐑙",
+        "𐑛𐑪𐑜𐑟"
+      ],
+      "correctLabel": "𐑞 𐑚𐑫𐑒𐑕 𐑸 𐑦𐑯 𐑑𐑵 𐑚𐑪𐑒𐑕𐑩𐑟 𐑖𐑰 𐑦𐑟 𐑮𐑰𐑛𐑦𐑙 𐑞𐑧𐑥",
+      "words": [
+        "𐑞",
+        "𐑚𐑫𐑒𐑕",
+        "𐑸",
+        "𐑦𐑯",
+        "𐑑𐑵",
+        "𐑚𐑪𐑒𐑕𐑩𐑟",
+        "𐑖𐑰",
+        "𐑦𐑟",
+        "𐑮𐑰𐑛𐑦𐑙",
+        "𐑞𐑧𐑥"
+      ],
+      "stops": [
+        5,
+        9
+      ],
+      "translation": "The books are in two boxes. She is reading them.",
+      "caption": "All three endings at once"
     },
     {
       "type": "match",

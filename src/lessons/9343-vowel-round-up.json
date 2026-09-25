@@ -176,11 +176,11 @@
     },
     {
       "type": "arrange",
-      "promptEn": "we all walked to town",
+      "promptEn": "we all went to town",
       "tiles": [
         "𐑢𐑰",
         "𐑷𐑤",
-        "𐑢𐑷𐑒𐑑",
+        "𐑢𐑧𐑯𐑑",
         "𐑑",
         "𐑑𐑬𐑯",
         "𐑑𐑵"
@@ -188,11 +188,11 @@
       "answer": [
         "𐑢𐑰",
         "𐑷𐑤",
-        "𐑢𐑷𐑒𐑑",
+        "𐑢𐑧𐑯𐑑",
         "𐑑",
         "𐑑𐑬𐑯"
       ],
-      "correctLabel": "𐑢𐑰 𐑷𐑤 𐑢𐑷𐑒𐑑 𐑑 𐑑𐑬𐑯"
+      "correctLabel": "𐑢𐑰 𐑷𐑤 𐑢𐑧𐑯𐑑 𐑑 𐑑𐑬𐑯"
     },
     {
       "type": "arrange",
@@ -280,14 +280,14 @@
         "𐑒𐑶𐑯",
         "𐑒𐑬𐑯"
       ],
-      "correctLabel": "𐑦𐑯 𐑞 𐑥𐑹𐑯𐑦𐑙 𐑞 𐑚𐑶 𐑢𐑷𐑒𐑑 𐑑 𐑑𐑬𐑯 𐑣𐑰 𐑓𐑬𐑯𐑛 𐑩 𐑕𐑥𐑷𐑤 𐑒𐑶𐑯 𐑯 𐑑𐑫𐑒 𐑦𐑑 𐑣𐑴𐑥",
+      "correctLabel": "𐑦𐑯 𐑞 𐑥𐑹𐑯𐑦𐑙 𐑞 𐑚𐑶 𐑢𐑧𐑯𐑑 𐑑 𐑑𐑬𐑯 𐑣𐑰 𐑓𐑬𐑯𐑛 𐑩 𐑕𐑥𐑷𐑤 𐑒𐑶𐑯 𐑯 𐑑𐑫𐑒 𐑦𐑑 𐑣𐑴𐑥",
       "words": [
         "𐑦𐑯",
         "𐑞",
         "𐑥𐑹𐑯𐑦𐑙",
         "𐑞",
         "𐑚𐑶",
-        "𐑢𐑷𐑒𐑑",
+        "𐑢𐑧𐑯𐑑",
         "𐑑",
         "𐑑𐑬𐑯",
         "𐑣𐑰",
@@ -304,7 +304,7 @@
         7,
         16
       ],
-      "translation": "In the morning the boy walked to town. He found a small coin and took it home."
+      "translation": "In the morning the boy went to town. He found a small coin and took it home."
     },
     {
       "type": "type",

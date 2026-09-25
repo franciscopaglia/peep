@@ -10,6 +10,24 @@
       "body": "Reading an ending is free — 𐑒𐑨𐑑𐑕 and 𐑛𐑪𐑜𐑟 simply say themselves. Writing one is where it bites, because English has trained your hand to reach for the same “-s” every time. It will want to. Say the word first, and let your throat answer instead: cats hisses, so 𐑕; dogs buzzes, so 𐑟."
     },
     {
+      "type": "complete",
+      "blanks": [
+        3
+      ],
+      "bank": [
+        "𐑕",
+        "𐑟"
+      ],
+      "correctLabel": "𐑒𐑨𐑑𐑕",
+      "prompt": "cats",
+      "word": [
+        "𐑒",
+        "𐑨",
+        "𐑑",
+        "𐑕"
+      ]
+    },
+    {
       "type": "write",
       "prompt": "cats",
       "caption": "Spell it in Shavian on the keyboard below",
@@ -38,6 +56,39 @@
       "correctLabel": "𐑥𐑦𐑯𐑦𐑑𐑕"
     },
     {
+      "type": "write",
+      "prompt": "books",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑚𐑫𐑒𐑕",
+      "correctLabel": "𐑚𐑫𐑒𐑕"
+    },
+    {
+      "type": "write",
+      "prompt": "birds",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑚𐑻𐑛𐑟",
+      "correctLabel": "𐑚𐑻𐑛𐑟"
+    },
+    {
+      "type": "teach",
+      "title": "The hissing plurals",
+      "body": "One more case your hand has to catch. After a hissing sound — s, z, sh, ch or j — you cannot stack another hiss on top, so a small vowel opens up between them and you write both letters: 𐑚𐑪𐑒𐑕𐑩𐑟, 𐑢𐑦𐑖𐑩𐑟. If the plural has grown a syllable, that syllable goes on the page."
+    },
+    {
+      "type": "write",
+      "prompt": "boxes",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑚𐑪𐑒𐑕𐑩𐑟",
+      "correctLabel": "𐑚𐑪𐑒𐑕𐑩𐑟"
+    },
+    {
+      "type": "write",
+      "prompt": "wishes",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑢𐑦𐑖𐑩𐑟",
+      "correctLabel": "𐑢𐑦𐑖𐑩𐑟"
+    },
+    {
       "type": "teach",
       "title": "The same trap, one letter later",
       "body": "Past tenses ambush you the same way. Your hand knows “-ed” and wants to type two letters for a sound that is only one: walked ends in a plain t, so 𐑢𐑷𐑒𐑑; played buzzes, so 𐑐𐑤𐑱𐑛. If you catch yourself about to write 𐑩𐑛 out of habit, stop and say the word."
@@ -64,6 +115,46 @@
       "correctLabel": "𐑢𐑪𐑗𐑑"
     },
     {
+      "type": "write",
+      "prompt": "helped",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑣𐑧𐑤𐑐𐑑",
+      "correctLabel": "𐑣𐑧𐑤𐑐𐑑"
+    },
+    {
+      "type": "write",
+      "prompt": "called",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑒𐑷𐑤𐑛",
+      "correctLabel": "𐑒𐑷𐑤𐑛"
+    },
+    {
+      "type": "sort",
+      "prompt": "Before you write it — which ending does each take?",
+      "buckets": [
+        "𐑑",
+        "𐑛",
+        "𐑩𐑛"
+      ],
+      "items": [
+        "𐑢𐑷𐑒𐑑",
+        "𐑣𐑧𐑤𐑐𐑑",
+        "𐑐𐑤𐑱𐑛",
+        "𐑒𐑷𐑤𐑛",
+        "𐑢𐑪𐑯𐑑𐑩𐑛",
+        "𐑯𐑰𐑛𐑩𐑛"
+      ],
+      "answer": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2
+      ],
+      "correctLabel": "𐑑: 𐑢𐑷𐑒𐑑 𐑣𐑧𐑤𐑐𐑑 / 𐑛: 𐑐𐑤𐑱𐑛 𐑒𐑷𐑤𐑛 / 𐑩𐑛: 𐑢𐑪𐑯𐑑𐑩𐑛 𐑯𐑰𐑛𐑩𐑛"
+    },
+    {
       "type": "teach",
       "title": "When the beat is really there",
       "body": "𐑩𐑛 is not the default — it is what you write only when the ending is a syllable you actually say, which happens after a t or d sound: 𐑢𐑪𐑯𐑑𐑩𐑛, 𐑯𐑰𐑛𐑩𐑛. Two beats or three? Count them on your fingers if you have to; the count decides, not the English spelling."
@@ -83,6 +174,13 @@
       "correctLabel": "𐑕𐑑𐑸𐑑𐑩𐑛"
     },
     {
+      "type": "write",
+      "prompt": "needed",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑯𐑰𐑛𐑩𐑛",
+      "correctLabel": "𐑯𐑰𐑛𐑩𐑛"
+    },
+    {
       "type": "teach",
       "title": "The easy one",
       "body": "After all that, -ing never changes: it is always 𐑦𐑙, the two letters you met together in Chapter 1. Running is 𐑮𐑳𐑯𐑦𐑙, singing is 𐑕𐑦𐑙𐑦𐑙 — with 𐑙 twice, because you say it twice."
@@ -100,6 +198,20 @@
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑖𐑪𐑐𐑦𐑙",
       "correctLabel": "𐑖𐑪𐑐𐑦𐑙"
+    },
+    {
+      "type": "write",
+      "prompt": "talking",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑑𐑷𐑒𐑦𐑙",
+      "correctLabel": "𐑑𐑷𐑒𐑦𐑙"
+    },
+    {
+      "type": "write",
+      "prompt": "reading",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑮𐑰𐑛𐑦𐑙",
+      "correctLabel": "𐑮𐑰𐑛𐑦𐑙"
     }
   ]
 }

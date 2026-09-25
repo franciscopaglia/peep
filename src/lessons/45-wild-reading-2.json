@@ -42,6 +42,13 @@
       ]
     },
     {
+      "type": "transcribe",
+      "passage": "·𐑕𐑨𐑥 𐑯 ·𐑥𐑧𐑜 𐑢𐑧𐑯𐑑 𐑑 𐑞 𐑐𐑸𐑒.",
+      "caption": "Read the passage, then write it out in English",
+      "correct": "sam and meg went to the park",
+      "correctLabel": "sam and meg went to the park"
+    },
+    {
       "type": "teach",
       "title": "They talk",
       "body": "{{“𐑤𐑫𐑒 𐑨𐑑 𐑞 𐑚𐑻𐑛𐑟,” 𐑕𐑧𐑛 ·𐑥𐑧𐑜. “𐑞𐑱 𐑸 𐑕𐑦𐑙𐑦𐑙,” 𐑕𐑧𐑛 ·𐑕𐑨𐑥.}}"
@@ -60,6 +67,23 @@
       ],
       "correct": "“Look at the birds,” said Meg",
       "correctLabel": "“Look at the birds,” said Meg"
+    },
+    {
+      "type": "spot",
+      "prompt": "birds",
+      "words": [
+        "“𐑤𐑫𐑒",
+        "𐑨𐑑",
+        "𐑞",
+        "𐑚𐑻𐑛𐑟,”",
+        "𐑕𐑧𐑛",
+        "·𐑥𐑧𐑜"
+      ],
+      "correct": 3,
+      "correctLabel": "𐑚𐑻𐑛𐑟,”",
+      "stops": [
+        5
+      ]
     },
     {
       "type": "spot",
@@ -89,6 +113,59 @@
       ],
       "correct": "Sam",
       "correctLabel": "Sam"
+    },
+    {
+      "type": "teach",
+      "title": "The middle of the story",
+      "body": "{{𐑞𐑱 𐑱𐑑 𐑤𐑳𐑯𐑗 𐑳𐑯𐑛𐑼 𐑞 𐑑𐑮𐑰. 𐑩 𐑤𐑦𐑑𐑩𐑤 𐑛𐑪𐑜 𐑒𐑱𐑥 𐑯 𐑕𐑨𐑑 𐑢𐑦𐑞 𐑞𐑧𐑥. “𐑢𐑺 𐑦𐑟 𐑦𐑑𐑕 𐑣𐑴𐑥?” 𐑭𐑕𐑒𐑑 ·𐑕𐑨𐑥.}}"
+    },
+    {
+      "type": "transcribe",
+      "passage": "𐑞𐑱 𐑱𐑑 𐑤𐑳𐑯𐑗 𐑳𐑯𐑛𐑼 𐑞 𐑑𐑮𐑰.",
+      "caption": "Read the passage, then write it out in English",
+      "correct": "they ate lunch under the tree",
+      "correctLabel": "they ate lunch under the tree"
+    },
+    {
+      "type": "spot",
+      "prompt": "dog",
+      "words": [
+        "𐑩",
+        "𐑤𐑦𐑑𐑩𐑤",
+        "𐑛𐑪𐑜",
+        "𐑒𐑱𐑥",
+        "𐑯",
+        "𐑕𐑨𐑑",
+        "𐑢𐑦𐑞",
+        "𐑞𐑧𐑥"
+      ],
+      "correct": 2,
+      "correctLabel": "𐑛𐑪𐑜",
+      "stops": [
+        7
+      ]
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "What came and sat with them?",
+      "caption": "",
+      "optionIsGlyph": false,
+      "options": [
+        "a little dog",
+        "a little bird",
+        "an old tree",
+        "nobody"
+      ],
+      "correct": "a little dog",
+      "correctLabel": "a little dog"
+    },
+    {
+      "type": "transcribe",
+      "passage": "“𐑢𐑺 𐑦𐑟 𐑦𐑑𐑕 𐑣𐑴𐑥?” 𐑭𐑕𐑒𐑑 ·𐑕𐑨𐑥.",
+      "caption": "Read the passage, then write it out in English",
+      "correct": "where is its home asked sam",
+      "correctLabel": "where is its home asked sam"
     },
     {
       "type": "transcribe",
@@ -158,6 +235,24 @@
       ]
     },
     {
+      "type": "arrange",
+      "promptEn": "a little dog came",
+      "tiles": [
+        "𐑩",
+        "𐑤𐑦𐑑𐑩𐑤",
+        "𐑛𐑪𐑜",
+        "𐑒𐑱𐑥",
+        "𐑕𐑨𐑑"
+      ],
+      "answer": [
+        "𐑩",
+        "𐑤𐑦𐑑𐑩𐑤",
+        "𐑛𐑪𐑜",
+        "𐑒𐑱𐑥"
+      ],
+      "correctLabel": "𐑩 𐑤𐑦𐑑𐑩𐑤 𐑛𐑪𐑜 𐑒𐑱𐑥"
+    },
+    {
       "type": "cloze",
       "blanks": [
         6,
@@ -197,6 +292,81 @@
       ],
       "translation": "Sam and Meg went to the park. “Look at the birds,” said Meg. They went home happy.",
       "caption": "Read the whole story and fill the gaps"
+    },
+    {
+      "type": "spot",
+      "prompt": "lunch",
+      "words": [
+        "𐑞𐑱",
+        "𐑱𐑑",
+        "𐑤𐑳𐑯𐑗",
+        "𐑳𐑯𐑛𐑼",
+        "𐑞",
+        "𐑑𐑮𐑰"
+      ],
+      "correct": 2,
+      "correctLabel": "𐑤𐑳𐑯𐑗",
+      "stops": [
+        5
+      ]
+    },
+    {
+      "type": "cloze",
+      "blanks": [
+        2,
+        8,
+        13
+      ],
+      "bank": [
+        "𐑤𐑳𐑯𐑗",
+        "𐑛𐑪𐑜",
+        "𐑞𐑧𐑥",
+        "𐑑𐑮𐑰"
+      ],
+      "correctLabel": "𐑞𐑱 𐑱𐑑 𐑤𐑳𐑯𐑗 𐑳𐑯𐑛𐑼 𐑞 𐑑𐑮𐑰 𐑩 𐑤𐑦𐑑𐑩𐑤 𐑛𐑪𐑜 𐑒𐑱𐑥 𐑯 𐑕𐑨𐑑 𐑢𐑦𐑞 𐑞𐑧𐑥",
+      "words": [
+        "𐑞𐑱",
+        "𐑱𐑑",
+        "𐑤𐑳𐑯𐑗",
+        "𐑳𐑯𐑛𐑼",
+        "𐑞",
+        "𐑑𐑮𐑰",
+        "𐑩",
+        "𐑤𐑦𐑑𐑩𐑤",
+        "𐑛𐑪𐑜",
+        "𐑒𐑱𐑥",
+        "𐑯",
+        "𐑕𐑨𐑑",
+        "𐑢𐑦𐑞",
+        "𐑞𐑧𐑥"
+      ],
+      "stops": [
+        5,
+        13
+      ],
+      "translation": "They ate lunch under the tree. A little dog came and sat with them.",
+      "caption": "The middle again, with gaps"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑑𐑮𐑰": "tree",
+        "𐑚𐑻𐑛𐑟": "birds",
+        "𐑤𐑳𐑯𐑗": "lunch",
+        "𐑐𐑸𐑒": "park"
+      },
+      "leftOrder": [
+        "𐑑𐑮𐑰",
+        "𐑚𐑻𐑛𐑟",
+        "𐑤𐑳𐑯𐑗",
+        "𐑐𐑸𐑒"
+      ],
+      "rightOrder": [
+        "birds",
+        "park",
+        "tree",
+        "lunch"
+      ]
     },
     {
       "type": "teach",

@@ -123,20 +123,20 @@ the level that makes reading really click. New exercise types planned here:
 Fifteen exercise types exist, but the curriculum leans hard on a few of them.
 Measured with `node scripts/curriculum.mjs types`, today's graded exercises are:
 
-| | ch1 (709) | ch2 (198) | ch3 (117) | ch4 (123) |
+| | ch1 (709) | ch2 (344) | ch3 (195) | ch4 (221) |
 | --- | --- | --- | --- | --- |
-| `type` | **44%** | **42%** | 21% | — |
-| `choice` | 18% | 24% | 21% | 4% |
-| `build` | 18% | 11% | 7% | 2% |
-| `match` | 10% | 8% | 8% | 4% |
-| `complete` | 5% | 1% | 1% | 7% |
-| `sort` | 2% | — | 2% | 1% |
+| `type` | **44%** | **47%** | 22% | — |
+| `choice` | 18% | 19% | 20% | 3% |
+| `build` | 18% | 13% | 5% | 2% |
+| `match` | 10% | 8% | 6% | 2% |
+| `complete` | 5% | 2% | 2% | 7% |
+| `sort` | 2% | 2% | 3% | 1% |
 | `listen` | 2% | — | — | — |
-| `arrange` | 0% | 8% | 3% | — |
-| `spot` | 1% | — | 18% | — |
-| `fill` / `cloze` | 1% / 0% | 4% / 3% | 1% / 7% | — |
-| `transcribe` / `scan` | — | — | 10% / 2% | — |
-| `write` | — | — | — | 81% |
+| `arrange` | 0% | 5% | 3% | 1% |
+| `spot` | 1% | — | 19% | — |
+| `fill` / `cloze` | 1% / 0% | 3% / 2% | 1% / 8% | — |
+| `transcribe` / `scan` | — | — | 11% / 2% | — |
+| `write` | — | — | — | **84%** |
 
 Two problems. `type` is still over 40% of everything a learner does in the first
 two chapters. And the types closest to the actual goal — reading connected
@@ -160,13 +160,13 @@ Targets to author toward, chapter by chapter:
   double (8% → ~15% each) at `type`'s expense (42% → ~25%). The chapter already
   claims to be about sentence building; the mix should show it.
 - **Chapter 3 — reading in the wild, properly.** `cloze` + `transcribe` + `spot`
-  should be **half** the chapter (today: 37%), with `choice` and `type` falling
+  should be **half** the chapter (today: 38%), with `choice` and `type` falling
   to ~25% between them. This is the chapter whose name is a promise the exercise
   mix doesn't yet keep.
-- **Chapter 4 — writing, with a ramp.** `write` at 81% is honest to the
+- **Chapter 4 — writing, with a ramp.** `write` at 84% is honest to the
   chapter's purpose, and the ramp has started: `complete` and `build` now open
   several lessons with the same spelling, with support, before the free-spelling
-  ones. Every lesson should have one.
+  ones. Every lesson now has one.
 - **Chapter 5 — fluency.** Should be the `transcribe` chapter, on longer real
   texts, with `cloze` for support and `listen` if the experiment below works
   out.
