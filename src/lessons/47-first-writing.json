@@ -71,6 +71,23 @@
       "correctLabel": "𐑕𐑳𐑯"
     },
     {
+      "type": "build",
+      "prompt": "fish",
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑓",
+        "𐑦",
+        "𐑖",
+        "𐑕"
+      ],
+      "answer": [
+        "𐑓",
+        "𐑦",
+        "𐑖"
+      ],
+      "correctLabel": "𐑓𐑦𐑖"
+    },
+    {
       "type": "write",
       "prompt": "fish",
       "caption": "Spell it in Shavian on the keyboard below",
@@ -83,6 +100,34 @@
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑖𐑦𐑐",
       "correctLabel": "𐑖𐑦𐑐"
+    },
+    {
+      "type": "write",
+      "prompt": "hat",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑣𐑨𐑑",
+      "correctLabel": "𐑣𐑨𐑑"
+    },
+    {
+      "type": "write",
+      "prompt": "bed",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑚𐑧𐑛",
+      "correctLabel": "𐑚𐑧𐑛"
+    },
+    {
+      "type": "write",
+      "prompt": "pen",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑐𐑧𐑯",
+      "correctLabel": "𐑐𐑧𐑯"
+    },
+    {
+      "type": "write",
+      "prompt": "leg",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑤𐑧𐑜",
+      "correctLabel": "𐑤𐑧𐑜"
     },
     {
       "type": "write",
@@ -100,6 +145,67 @@
     },
     {
       "type": "teach",
+      "title": "Longer words, same rule",
+      "body": "Nothing changes as the words grow — you still write one letter per sound you hear, left to right. Milk is four sounds and four letters, 𐑥𐑦𐑤𐑒. Hand is four, 𐑣𐑨𐑯𐑛. Say the word under your breath and let your hand follow your mouth."
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        2,
+        3
+      ],
+      "bank": [
+        "𐑤",
+        "𐑒",
+        "𐑮",
+        "𐑜"
+      ],
+      "correctLabel": "𐑥𐑦𐑤𐑒",
+      "prompt": "milk",
+      "word": [
+        "𐑥",
+        "𐑦",
+        "𐑤",
+        "𐑒"
+      ]
+    },
+    {
+      "type": "write",
+      "prompt": "milk",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑥𐑦𐑤𐑒",
+      "correctLabel": "𐑥𐑦𐑤𐑒"
+    },
+    {
+      "type": "write",
+      "prompt": "hand",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑣𐑨𐑯𐑛",
+      "correctLabel": "𐑣𐑨𐑯𐑛"
+    },
+    {
+      "type": "write",
+      "prompt": "chip",
+      "caption": "One sound at the front, so one letter",
+      "correct": "𐑗𐑦𐑐",
+      "correctLabel": "𐑗𐑦𐑐"
+    },
+    {
+      "type": "write",
+      "prompt": "king",
+      "caption": "And one sound at the end",
+      "correct": "𐑒𐑦𐑙",
+      "correctLabel": "𐑒𐑦𐑙"
+    },
+    {
+      "type": "write",
+      "prompt": "nose",
+      "caption": "No silent e — write only what you say",
+      "correct": "𐑯𐑴𐑟",
+      "correctLabel": "𐑯𐑴𐑟"
+    },
+    {
+      "type": "teach",
       "title": "Names need the dot",
       "body": "Remember the naming dot? When you write a name it goes first — and since the next answer is a name, a · key appears with it, below the letters."
     },
@@ -109,6 +215,13 @@
       "caption": "Spell this name — don’t forget the dot",
       "correct": "·𐑕𐑨𐑥",
       "correctLabel": "·𐑕𐑨𐑥"
+    },
+    {
+      "type": "write",
+      "prompt": "Meg",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "·𐑥𐑧𐑜",
+      "correctLabel": "·𐑥𐑧𐑜"
     },
     {
       "type": "teach",

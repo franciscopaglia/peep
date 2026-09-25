@@ -38,6 +38,67 @@
       "correctLabel": "𐑯𐑴"
     },
     {
+      "type": "write",
+      "prompt": "write",
+      "caption": "Yes — exactly the same as “right”",
+      "correct": "𐑮𐑲𐑑",
+      "correctLabel": "𐑮𐑲𐑑"
+    },
+    {
+      "type": "write",
+      "prompt": "two",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑑𐑵",
+      "correctLabel": "𐑑𐑵"
+    },
+    {
+      "type": "write",
+      "prompt": "too",
+      "caption": "Same again",
+      "correct": "𐑑𐑵",
+      "correctLabel": "𐑑𐑵"
+    },
+    {
+      "type": "write",
+      "prompt": "four",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑓𐑹",
+      "correctLabel": "𐑓𐑹"
+    },
+    {
+      "type": "teach",
+      "title": "More pairs that collapse",
+      "body": "It keeps happening. Son and sun are both 𐑕𐑳𐑯; sea and see are both 𐑕𐑰; whole and hole are both 𐑣𐑴𐑤; new and knew are both 𐑯𐑿. English keeps a silent letter around to tell each pair apart on the page — Shavian lets the sentence do that job, exactly as speech has always done."
+    },
+    {
+      "type": "write",
+      "prompt": "son",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑕𐑳𐑯",
+      "correctLabel": "𐑕𐑳𐑯"
+    },
+    {
+      "type": "write",
+      "prompt": "sea",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑕𐑰",
+      "correctLabel": "𐑕𐑰"
+    },
+    {
+      "type": "write",
+      "prompt": "whole",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑣𐑴𐑤",
+      "correctLabel": "𐑣𐑴𐑤"
+    },
+    {
+      "type": "write",
+      "prompt": "knew",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑯𐑿",
+      "correctLabel": "𐑯𐑿"
+    },
+    {
       "type": "teach",
       "title": "But listen properly",
       "body": "Not every English look-alike is a homophone. Say your and you’re slowly: 𐑘𐑹 and 𐑿𐑼 really are different sounds, and Shavian keeps them apart. Same for their 𐑞𐑺 and they’re 𐑞𐑱𐑼. The rule never changes — write what you hear — but that means hearing carefully."
@@ -62,6 +123,20 @@
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑞𐑱𐑼",
       "correctLabel": "𐑞𐑱𐑼"
+    },
+    {
+      "type": "write",
+      "prompt": "we’re",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑢𐑰𐑼",
+      "correctLabel": "𐑢𐑰𐑼"
+    },
+    {
+      "type": "write",
+      "prompt": "wear",
+      "caption": "Careful — this one matches “where”",
+      "correct": "𐑢𐑺",
+      "correctLabel": "𐑢𐑺"
     },
     {
       "type": "choice",
@@ -92,6 +167,21 @@
       ],
       "correct": "your and you’re",
       "correctLabel": "your and you’re"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which of these pairs does Shavian spell differently?",
+      "caption": "",
+      "optionIsGlyph": false,
+      "options": [
+        "we and we’re",
+        "son and sun",
+        "sea and see",
+        "hole and whole"
+      ],
+      "correct": "we and we’re",
+      "correctLabel": "we and we’re"
     },
     {
       "type": "match",

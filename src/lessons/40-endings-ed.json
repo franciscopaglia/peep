@@ -6,30 +6,38 @@
   "exercises": [
     {
       "type": "teach",
-      "title": "Three faces of -ed",
-      "body": "English spells the past tense “-ed”, but says it three different ways — and Shavian writes what you say. First: say “jumped”. Hear the t at the end? So it’s written 𐑑: 𐑡𐑳𐑥𐑐𐑑."
-    },
-    {
-      "type": "type",
-      "prompt": "𐑡𐑳𐑥𐑐𐑑",
-      "caption": "Sound it out — what does this say?",
-      "correct": "jumped",
-      "correctLabel": "jumped"
+      "title": "The ending you cannot hear",
+      "body": "English writes “-ed” on the end of every past tense, but your mouth never says it that way. Shavian writes the sound, so the ending is only ever one letter — and the word in front of it decides which. Start with the gentlest case. Walk is 𐑢𐑷𐑒, and walked simply puts one more letter on the end: 𐑢𐑷𐑒𐑑. Say it slowly and listen to that last sound. It is a plain t."
     },
     {
       "type": "choice",
       "promptIsGlyph": true,
-      "prompt": "𐑒𐑦𐑒𐑑",
-      "caption": "What does this word say?",
+      "prompt": "𐑢𐑷𐑒",
+      "caption": "First the plain verb — what does this say?",
       "optionIsGlyph": false,
       "options": [
-        "kicked",
-        "kicks",
-        "kitted",
-        "ticket"
+        "walk",
+        "walked",
+        "work",
+        "week"
       ],
-      "correct": "kicked",
-      "correctLabel": "kicked"
+      "correct": "walk",
+      "correctLabel": "walk"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑢𐑷𐑒𐑑",
+      "caption": "And now with the ending on it",
+      "optionIsGlyph": false,
+      "options": [
+        "walked",
+        "walks",
+        "walking",
+        "woke"
+      ],
+      "correct": "walked",
+      "correctLabel": "walked"
     },
     {
       "type": "build",
@@ -51,9 +59,73 @@
       "correctLabel": "𐑤𐑫𐑒𐑑"
     },
     {
+      "type": "type",
+      "prompt": "𐑣𐑧𐑤𐑐𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "helped",
+      "correctLabel": "helped"
+    },
+    {
+      "type": "teach",
+      "title": "Why a t, and not a d",
+      "body": "Nothing has gone wrong — the ending is still there, it has just come out voiceless. 𐑑 is what you get after a whispered sound like k, p, s, sh, ch or f, because your voice is already off and it stays off. Try saying “walkd” with a real d on the end. Your mouth will not do it. So jumped is 𐑡𐑳𐑥𐑐𐑑, watched is 𐑢𐑪𐑗𐑑, missed is 𐑥𐑦𐑕𐑑 — one letter, every time."
+    },
+    {
+      "type": "type",
+      "prompt": "𐑡𐑳𐑥𐑐𐑑",
+      "caption": "Sound it out — what does this say?",
+      "correct": "jumped",
+      "correctLabel": "jumped"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": true,
+      "prompt": "𐑢𐑪𐑗𐑑",
+      "caption": "What does this word say?",
+      "optionIsGlyph": false,
+      "options": [
+        "watched",
+        "washed",
+        "watches",
+        "wanted"
+      ],
+      "correct": "watched",
+      "correctLabel": "watched"
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "Which spells “stopped”?",
+      "caption": "",
+      "optionIsGlyph": true,
+      "options": [
+        "𐑕𐑑𐑪𐑐𐑑",
+        "𐑕𐑑𐑪𐑐𐑛",
+        "𐑕𐑑𐑪𐑐𐑩𐑛",
+        "𐑕𐑑𐑪𐑐"
+      ],
+      "correct": "𐑕𐑑𐑪𐑐𐑑",
+      "correctLabel": "𐑕𐑑𐑪𐑐𐑑"
+    },
+    {
+      "type": "spot",
+      "prompt": "asked",
+      "words": [
+        "𐑖𐑰",
+        "𐑭𐑕𐑒𐑑",
+        "𐑓",
+        "𐑣𐑧𐑤𐑐"
+      ],
+      "correct": 1,
+      "correctLabel": "𐑭𐑕𐑒𐑑",
+      "stops": [
+        3
+      ]
+    },
+    {
       "type": "teach",
       "title": "The buzzing -ed",
-      "body": "After a buzzy, voiced sound the ending buzzes too: played is 𐑐𐑤𐑱𐑛, called is 𐑒𐑷𐑤𐑛. Your throat decides for you — try saying “playt” without whispering. You can’t."
+      "body": "Now turn your voice back on. After a sound that hums — l, n, m, r, v, or any vowel at all — the ending hums with it, and you write 𐑛. Called is 𐑒𐑷𐑤𐑛, played is 𐑐𐑤𐑱𐑛, turned is 𐑑𐑻𐑯𐑛. Try saying “playt”. Your throat will not let you, and that is the whole rule."
     },
     {
       "type": "type",
@@ -82,24 +154,61 @@
       "correctLabel": "𐑒𐑷𐑤𐑛"
     },
     {
+      "type": "type",
+      "prompt": "𐑑𐑻𐑯𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "turned",
+      "correctLabel": "turned"
+    },
+    {
       "type": "choice",
       "promptIsGlyph": false,
-      "prompt": "Which spells “stopped”?",
+      "prompt": "Which spells “cleaned”?",
       "caption": "",
       "optionIsGlyph": true,
       "options": [
-        "𐑕𐑑𐑪𐑐𐑑",
-        "𐑕𐑑𐑪𐑐𐑛",
-        "𐑕𐑑𐑪𐑐𐑩𐑛",
-        "𐑕𐑑𐑪𐑐"
+        "𐑒𐑤𐑰𐑯𐑛",
+        "𐑒𐑤𐑰𐑯𐑑",
+        "𐑒𐑤𐑰𐑯𐑩𐑛",
+        "𐑒𐑤𐑰𐑯"
       ],
-      "correct": "𐑕𐑑𐑪𐑐𐑑",
-      "correctLabel": "𐑕𐑑𐑪𐑐𐑑"
+      "correct": "𐑒𐑤𐑰𐑯𐑛",
+      "correctLabel": "𐑒𐑤𐑰𐑯𐑛"
     },
     {
       "type": "teach",
-      "title": "The extra-syllable -ed",
-      "body": "After a t or d sound you hear a whole extra beat: wanted is 𐑢𐑪𐑯𐑑𐑩𐑛, needed is 𐑯𐑰𐑛𐑩𐑛. If you can count the extra syllable, write 𐑩𐑛."
+      "title": "One test, two answers",
+      "body": "So 𐑑 and 𐑛 are the same ending with your voice off or on — 𐑤𐑫𐑒𐑑 beside 𐑒𐑷𐑤𐑛, 𐑢𐑪𐑖𐑑 beside 𐑓𐑦𐑤𐑛. You never have to remember a list. Put a finger on your throat, say the plain verb, and feel its last sound. If it hums, write 𐑛."
+    },
+    {
+      "type": "sort",
+      "prompt": "Say the plain verb — does its last sound hum?",
+      "buckets": [
+        "𐑑",
+        "𐑛"
+      ],
+      "items": [
+        "𐑢𐑷𐑒𐑑",
+        "𐑤𐑫𐑒𐑑",
+        "𐑢𐑪𐑖𐑑",
+        "𐑐𐑤𐑱𐑛",
+        "𐑒𐑷𐑤𐑛",
+        "𐑓𐑦𐑤𐑛"
+      ],
+      "answer": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "correctLabel": "𐑑: 𐑢𐑷𐑒𐑑 𐑤𐑫𐑒𐑑 𐑢𐑪𐑖𐑑 / 𐑛: 𐑐𐑤𐑱𐑛 𐑒𐑷𐑤𐑛 𐑓𐑦𐑤𐑛"
+    },
+    {
+      "type": "teach",
+      "title": "When there really is a beat",
+      "body": "There is one case where you do hear a whole extra syllable, and only one — after a t or a d, because two of them in a row would collide. Wanted is 𐑢𐑪𐑯𐑑𐑩𐑛, needed is 𐑯𐑰𐑛𐑩𐑛. Count the beats on your fingers. If the past tense has one more than the plain verb, write 𐑩𐑛; otherwise it is the single letter you just learned."
     },
     {
       "type": "type",
@@ -124,20 +233,32 @@
       "correctLabel": "needed"
     },
     {
-      "type": "spot",
+      "type": "build",
       "prompt": "waited",
-      "words": [
-        "𐑞𐑱",
-        "𐑢𐑱𐑑𐑩𐑛",
-        "𐑓",
-        "𐑞",
-        "𐑚𐑻𐑛𐑟"
+      "caption": "Build this word from Shavian letters",
+      "tiles": [
+        "𐑢",
+        "𐑱",
+        "𐑑",
+        "𐑩",
+        "𐑛",
+        "𐑦"
       ],
-      "correct": 1,
-      "correctLabel": "𐑢𐑱𐑑𐑩𐑛",
-      "stops": [
-        4
-      ]
+      "answer": [
+        "𐑢",
+        "𐑱",
+        "𐑑",
+        "𐑩",
+        "𐑛"
+      ],
+      "correctLabel": "𐑢𐑱𐑑𐑩𐑛"
+    },
+    {
+      "type": "type",
+      "prompt": "𐑕𐑑𐑸𐑑𐑩𐑛",
+      "caption": "Sound it out — what does this say?",
+      "correct": "started",
+      "correctLabel": "started"
     },
     {
       "type": "sort",
@@ -148,12 +269,12 @@
         "𐑩𐑛"
       ],
       "items": [
-        "𐑢𐑷𐑒𐑑",
-        "𐑤𐑫𐑒𐑑",
-        "𐑐𐑤𐑱𐑛",
-        "𐑒𐑷𐑤𐑛",
-        "𐑢𐑪𐑯𐑑𐑩𐑛",
-        "𐑯𐑰𐑛𐑩𐑛"
+        "𐑣𐑧𐑤𐑐𐑑",
+        "𐑮𐑰𐑗𐑑",
+        "𐑴𐑐𐑩𐑯𐑛",
+        "𐑕𐑥𐑲𐑤𐑛",
+        "𐑤𐑨𐑯𐑛𐑩𐑛",
+        "𐑐𐑱𐑯𐑑𐑩𐑛"
       ],
       "answer": [
         0,
@@ -163,7 +284,61 @@
         2,
         2
       ],
-      "correctLabel": "𐑑: 𐑢𐑷𐑒𐑑 𐑤𐑫𐑒𐑑 / 𐑛: 𐑐𐑤𐑱𐑛 𐑒𐑷𐑤𐑛 / 𐑩𐑛: 𐑢𐑪𐑯𐑑𐑩𐑛 𐑯𐑰𐑛𐑩𐑛"
+      "correctLabel": "𐑑: 𐑣𐑧𐑤𐑐𐑑 𐑮𐑰𐑗𐑑 / 𐑛: 𐑴𐑐𐑩𐑯𐑛 𐑕𐑥𐑲𐑤𐑛 / 𐑩𐑛: 𐑤𐑨𐑯𐑛𐑩𐑛 𐑐𐑱𐑯𐑑𐑩𐑛"
+    },
+    {
+      "type": "spot",
+      "prompt": "waited",
+      "words": [
+        "𐑞𐑱",
+        "𐑢𐑱𐑑𐑩𐑛",
+        "𐑓",
+        "𐑞",
+        "𐑚𐑳𐑕"
+      ],
+      "correct": 1,
+      "correctLabel": "𐑢𐑱𐑑𐑩𐑛",
+      "stops": [
+        4
+      ]
+    },
+    {
+      "type": "cloze",
+      "blanks": [
+        1,
+        6,
+        11
+      ],
+      "bank": [
+        "𐑢𐑷𐑒𐑑",
+        "𐑐𐑤𐑱𐑛",
+        "𐑢𐑱𐑑𐑩𐑛",
+        "𐑢𐑪𐑯𐑑𐑩𐑛"
+      ],
+      "correctLabel": "𐑖𐑰 𐑢𐑷𐑒𐑑 𐑑 𐑞 𐑐𐑸𐑒 𐑯 𐑐𐑤𐑱𐑛 𐑷𐑤 𐑛𐑱 𐑞𐑧𐑯 𐑖𐑰 𐑢𐑱𐑑𐑩𐑛 𐑓 𐑞 𐑚𐑳𐑕",
+      "words": [
+        "𐑖𐑰",
+        "𐑢𐑷𐑒𐑑",
+        "𐑑",
+        "𐑞",
+        "𐑐𐑸𐑒",
+        "𐑯",
+        "𐑐𐑤𐑱𐑛",
+        "𐑷𐑤",
+        "𐑛𐑱",
+        "𐑞𐑧𐑯",
+        "𐑖𐑰",
+        "𐑢𐑱𐑑𐑩𐑛",
+        "𐑓",
+        "𐑞",
+        "𐑚𐑳𐑕"
+      ],
+      "stops": [
+        8,
+        14
+      ],
+      "translation": "She walked to the park and played all day. Then she waited for the bus.",
+      "caption": "All three endings in one passage"
     },
     {
       "type": "choice",
@@ -200,6 +375,11 @@
         "wanted",
         "jumped"
       ]
+    },
+    {
+      "type": "teach",
+      "title": "One ending, three sounds",
+      "body": "That is the whole of the past tense: 𐑑 after a whisper, 𐑛 after a hum, 𐑩𐑛 only when you hear an extra beat. Your mouth has been making this choice your whole life without being told — Shavian just writes down what it already does."
     }
   ]
 }

@@ -10,6 +10,27 @@
       "body": "An English apostrophe marks a letter that was dropped: do not loses its o and becomes don’t. Shavian never dropped anything — it writes the sounds you actually make, and you make every one of them. So don’t is simply 𐑛𐑴𐑯𐑑. No apostrophe, because nothing is missing."
     },
     {
+      "type": "complete",
+      "blanks": [
+        2,
+        3
+      ],
+      "bank": [
+        "𐑯",
+        "𐑑",
+        "𐑥",
+        "𐑐"
+      ],
+      "correctLabel": "𐑛𐑴𐑯𐑑",
+      "prompt": "don’t",
+      "word": [
+        "𐑛",
+        "𐑴",
+        "𐑯",
+        "𐑑"
+      ]
+    },
+    {
       "type": "write",
       "prompt": "don’t",
       "caption": "Say it, then write it — four sounds",
@@ -29,6 +50,34 @@
       "caption": "This one keeps a schwa in the middle",
       "correct": "𐑛𐑦𐑛𐑩𐑯𐑑",
       "correctLabel": "𐑛𐑦𐑛𐑩𐑯𐑑"
+    },
+    {
+      "type": "write",
+      "prompt": "won’t",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑢𐑴𐑯𐑑",
+      "correctLabel": "𐑢𐑴𐑯𐑑"
+    },
+    {
+      "type": "write",
+      "prompt": "isn’t",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑦𐑟𐑩𐑯𐑑",
+      "correctLabel": "𐑦𐑟𐑩𐑯𐑑"
+    },
+    {
+      "type": "write",
+      "prompt": "wasn’t",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑢𐑪𐑟𐑩𐑯𐑑",
+      "correctLabel": "𐑢𐑪𐑟𐑩𐑯𐑑"
+    },
+    {
+      "type": "write",
+      "prompt": "couldn’t",
+      "caption": "Longer, but still nothing missing",
+      "correct": "𐑒𐑫𐑛𐑩𐑯𐑑",
+      "correctLabel": "𐑒𐑫𐑛𐑩𐑯𐑑"
     },
     {
       "type": "teach",
@@ -55,6 +104,67 @@
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑦𐑑𐑕",
       "correctLabel": "𐑦𐑑𐑕"
+    },
+    {
+      "type": "write",
+      "prompt": "I’ll",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑲𐑤",
+      "correctLabel": "𐑲𐑤"
+    },
+    {
+      "type": "write",
+      "prompt": "you’ll",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑿𐑤",
+      "correctLabel": "𐑿𐑤"
+    },
+    {
+      "type": "write",
+      "prompt": "I’ve",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑲𐑝",
+      "correctLabel": "𐑲𐑝"
+    },
+    {
+      "type": "teach",
+      "title": "The ’s that is really a z",
+      "body": "One last thing your ear has to settle. The little ’s on the end of a contraction follows the same voicing rule as a plural: after a humming sound it buzzes, so he’s is 𐑣𐑰𐑟 and she’s is 𐑖𐑰𐑟; after a whispered one it hisses, so that’s is 𐑞𐑨𐑑𐑕 and let’s is 𐑤𐑧𐑑𐑕. English writes one apostrophe-s for both; you write what you hear."
+    },
+    {
+      "type": "write",
+      "prompt": "he’s",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑣𐑰𐑟",
+      "correctLabel": "𐑣𐑰𐑟"
+    },
+    {
+      "type": "write",
+      "prompt": "she’s",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑖𐑰𐑟",
+      "correctLabel": "𐑖𐑰𐑟"
+    },
+    {
+      "type": "write",
+      "prompt": "that’s",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑞𐑨𐑑𐑕",
+      "correctLabel": "𐑞𐑨𐑑𐑕"
+    },
+    {
+      "type": "write",
+      "prompt": "let’s",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑤𐑧𐑑𐑕",
+      "correctLabel": "𐑤𐑧𐑑𐑕"
+    },
+    {
+      "type": "write",
+      "prompt": "we’re",
+      "caption": "Two syllables — listen for the r-vowel",
+      "correct": "𐑢𐑰𐑼",
+      "correctLabel": "𐑢𐑰𐑼"
     },
     {
       "type": "choice",

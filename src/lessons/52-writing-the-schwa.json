@@ -10,6 +10,25 @@
       "body": "Lesson 40 showed you how much 𐑩 there is to read. Writing it is harder, because English keeps a proper-looking vowel on the page — the o of problem, the a of sofa — and your hand wants to copy it. Do not. If the syllable is unstressed and you barely say it, it is 𐑩."
     },
     {
+      "type": "complete",
+      "blanks": [
+        0
+      ],
+      "bank": [
+        "𐑩",
+        "𐑨",
+        "𐑳"
+      ],
+      "correctLabel": "𐑩𐑚𐑬𐑑",
+      "prompt": "about",
+      "word": [
+        "𐑩",
+        "𐑚",
+        "𐑬",
+        "𐑑"
+      ]
+    },
+    {
       "type": "write",
       "prompt": "about",
       "caption": "Spell it in Shavian on the keyboard below",
@@ -22,6 +41,20 @@
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑑𐑩𐑥𐑪𐑮𐑴",
       "correctLabel": "𐑑𐑩𐑥𐑪𐑮𐑴"
+    },
+    {
+      "type": "write",
+      "prompt": "again",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑩𐑜𐑧𐑯",
+      "correctLabel": "𐑩𐑜𐑧𐑯"
+    },
+    {
+      "type": "write",
+      "prompt": "away",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑩𐑢𐑱",
+      "correctLabel": "𐑩𐑢𐑱"
     },
     {
       "type": "teach",
@@ -51,10 +84,38 @@
     },
     {
       "type": "write",
+      "prompt": "table",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑑𐑱𐑚𐑩𐑤",
+      "correctLabel": "𐑑𐑱𐑚𐑩𐑤"
+    },
+    {
+      "type": "write",
+      "prompt": "sofa",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑕𐑴𐑓𐑩",
+      "correctLabel": "𐑕𐑴𐑓𐑩"
+    },
+    {
+      "type": "write",
+      "prompt": "second",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑕𐑧𐑒𐑩𐑯𐑛",
+      "correctLabel": "𐑕𐑧𐑒𐑩𐑯𐑛"
+    },
+    {
+      "type": "write",
       "prompt": "hospital",
       "caption": "Three syllables, and only one keeps its vowel",
       "correct": "𐑣𐑪𐑕𐑐𐑦𐑑𐑩𐑤",
       "correctLabel": "𐑣𐑪𐑕𐑐𐑦𐑑𐑩𐑤"
+    },
+    {
+      "type": "write",
+      "prompt": "banana",
+      "caption": "Only the middle vowel survives",
+      "correct": "𐑚𐑩𐑯𐑭𐑯𐑩",
+      "correctLabel": "𐑚𐑩𐑯𐑭𐑯𐑩"
     },
     {
       "type": "teach",
@@ -77,6 +138,20 @@
     },
     {
       "type": "write",
+      "prompt": "water",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑢𐑷𐑑𐑼",
+      "correctLabel": "𐑢𐑷𐑑𐑼"
+    },
+    {
+      "type": "write",
+      "prompt": "letter",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑤𐑧𐑑𐑼",
+      "correctLabel": "𐑤𐑧𐑑𐑼"
+    },
+    {
+      "type": "write",
       "prompt": "together",
       "caption": "This one needs both",
       "correct": "𐑑𐑩𐑜𐑧𐑞𐑼",
@@ -95,6 +170,13 @@
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑩𐑯𐑳𐑞𐑼",
       "correctLabel": "𐑩𐑯𐑳𐑞𐑼"
+    },
+    {
+      "type": "write",
+      "prompt": "different",
+      "caption": "Both mumbles, one after the other",
+      "correct": "𐑛𐑦𐑓𐑼𐑩𐑯𐑑",
+      "correctLabel": "𐑛𐑦𐑓𐑼𐑩𐑯𐑑"
     },
     {
       "type": "sort",

@@ -10,6 +10,24 @@
       "body": "English writes book and food with the same “oo”, but your mouth makes two different sounds. Shavian never blurs them: book is 𐑚𐑫𐑒 and food is 𐑓𐑵𐑛. When you write, stop picturing the English spelling — say the word slowly and write the vowel you actually hear."
     },
     {
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑫",
+        "𐑵",
+        "𐑳"
+      ],
+      "correctLabel": "𐑚𐑫𐑒",
+      "prompt": "book",
+      "word": [
+        "𐑚",
+        "𐑫",
+        "𐑒"
+      ]
+    },
+    {
       "type": "write",
       "prompt": "book",
       "caption": "Spell it in Shavian on the keyboard below",
@@ -22,6 +40,20 @@
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑓𐑵𐑛",
       "correctLabel": "𐑓𐑵𐑛"
+    },
+    {
+      "type": "write",
+      "prompt": "full",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑓𐑫𐑤",
+      "correctLabel": "𐑓𐑫𐑤"
+    },
+    {
+      "type": "write",
+      "prompt": "pool",
+      "caption": "The same two vowels again — which is which?",
+      "correct": "𐑐𐑵𐑤",
+      "correctLabel": "𐑐𐑵𐑤"
     },
     {
       "type": "teach",
@@ -44,6 +76,20 @@
     },
     {
       "type": "write",
+      "prompt": "ship",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑖𐑦𐑐",
+      "correctLabel": "𐑖𐑦𐑐"
+    },
+    {
+      "type": "write",
+      "prompt": "sheep",
+      "caption": "One row down from the last one",
+      "correct": "𐑖𐑰𐑐",
+      "correctLabel": "𐑖𐑰𐑐"
+    },
+    {
+      "type": "write",
       "prompt": "boat",
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑚𐑴𐑑",
@@ -57,9 +103,41 @@
       "correctLabel": "𐑒𐑳𐑐"
     },
     {
+      "type": "write",
+      "prompt": "bad",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑚𐑨𐑛",
+      "correctLabel": "𐑚𐑨𐑛"
+    },
+    {
+      "type": "write",
+      "prompt": "bed",
+      "caption": "Only the vowel changes",
+      "correct": "𐑚𐑧𐑛",
+      "correctLabel": "𐑚𐑧𐑛"
+    },
+    {
       "type": "teach",
       "title": "One letter, one sound",
       "body": "Watch out for English vowel pairs that are really one sound: the ai of rain is a single 𐑱, the i-e of time a single 𐑲, the o-e of home a single 𐑴. Count sounds, not letters."
+    },
+    {
+      "type": "complete",
+      "blanks": [
+        1
+      ],
+      "bank": [
+        "𐑱",
+        "𐑨",
+        "𐑦"
+      ],
+      "correctLabel": "𐑮𐑱𐑯",
+      "prompt": "rain",
+      "word": [
+        "𐑮",
+        "𐑱",
+        "𐑯"
+      ]
     },
     {
       "type": "write",
@@ -74,6 +152,27 @@
       "caption": "Spell it in Shavian on the keyboard below",
       "correct": "𐑑𐑲𐑥",
       "correctLabel": "𐑑𐑲𐑥"
+    },
+    {
+      "type": "write",
+      "prompt": "coat",
+      "caption": "The oa is a single sound",
+      "correct": "𐑒𐑴𐑑",
+      "correctLabel": "𐑒𐑴𐑑"
+    },
+    {
+      "type": "write",
+      "prompt": "night",
+      "caption": "So is the igh",
+      "correct": "𐑯𐑲𐑑",
+      "correctLabel": "𐑯𐑲𐑑"
+    },
+    {
+      "type": "write",
+      "prompt": "blue",
+      "caption": "Spell it in Shavian on the keyboard below",
+      "correct": "𐑚𐑤𐑵",
+      "correctLabel": "𐑚𐑤𐑵"
     },
     {
       "type": "write",

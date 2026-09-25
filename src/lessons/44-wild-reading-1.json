@@ -48,6 +48,33 @@
       "correctLabel": "the dog was not in the house"
     },
     {
+      "type": "spot",
+      "prompt": "night",
+      "words": [
+        "𐑢𐑳𐑯",
+        "𐑯𐑲𐑑",
+        "𐑞",
+        "𐑛𐑪𐑜",
+        "𐑢𐑪𐑟",
+        "𐑯𐑪𐑑",
+        "𐑦𐑯",
+        "𐑞",
+        "𐑣𐑬𐑕"
+      ],
+      "correct": 1,
+      "correctLabel": "𐑯𐑲𐑑",
+      "stops": [
+        8
+      ]
+    },
+    {
+      "type": "transcribe",
+      "passage": "·𐑥𐑧𐑜 𐑣𐑨𐑟 𐑩 𐑤𐑦𐑑𐑩𐑤 𐑛𐑪𐑜.",
+      "caption": "Read the passage, then write it out in English",
+      "correct": "meg has a little dog",
+      "correctLabel": "meg has a little dog"
+    },
+    {
       "type": "teach",
       "title": "Part two",
       "body": "{{𐑖𐑰 𐑤𐑫𐑒𐑑 𐑳𐑯𐑛𐑼 𐑞 𐑕𐑴𐑓𐑩. 𐑖𐑰 𐑤𐑫𐑒𐑑 𐑦𐑯 𐑞 𐑜𐑸𐑛𐑩𐑯. 𐑞𐑧𐑯 𐑖𐑰 𐑣𐑻𐑛 𐑦𐑑 — 𐑞 𐑛𐑪𐑜 𐑢𐑪𐑟 𐑚𐑸𐑒𐑦𐑙 𐑨𐑑 𐑞 𐑥𐑵𐑯.}}"
@@ -85,6 +112,22 @@
     },
     {
       "type": "spot",
+      "prompt": "sofa",
+      "words": [
+        "𐑖𐑰",
+        "𐑤𐑫𐑒𐑑",
+        "𐑳𐑯𐑛𐑼",
+        "𐑞",
+        "𐑕𐑴𐑓𐑩"
+      ],
+      "correct": 4,
+      "correctLabel": "𐑕𐑴𐑓𐑩",
+      "stops": [
+        4
+      ]
+    },
+    {
+      "type": "spot",
       "prompt": "heard",
       "words": [
         "𐑞𐑧𐑯",
@@ -112,6 +155,13 @@
       ],
       "correct": "barking at the moon",
       "correctLabel": "barking at the moon"
+    },
+    {
+      "type": "transcribe",
+      "passage": "𐑞 𐑛𐑪𐑜 𐑢𐑪𐑟 𐑚𐑸𐑒𐑦𐑙 𐑨𐑑 𐑞 𐑥𐑵𐑯.",
+      "caption": "Read the passage, then write it out in English",
+      "correct": "the dog was barking at the moon",
+      "correctLabel": "the dog was barking at the moon"
     },
     {
       "type": "arrange",
@@ -207,6 +257,126 @@
       ],
       "translation": "She looked under the sofa. Then she heard it. The dog was barking at the moon.",
       "caption": "Read part two and fill the gaps"
+    },
+    {
+      "type": "teach",
+      "title": "Part three",
+      "body": "{{𐑖𐑰 𐑑𐑫𐑒 𐑞 𐑛𐑪𐑜 𐑚𐑨𐑒 𐑦𐑯𐑕𐑲𐑛. 𐑦𐑑 𐑢𐑪𐑟 𐑝𐑧𐑮𐑦 𐑤𐑱𐑑, 𐑯 𐑞𐑱 𐑚𐑴𐑔 𐑢𐑧𐑯𐑑 𐑑 𐑕𐑤𐑰𐑐.}} No help this time — no word bank, no translation underneath. Just read it."
+    },
+    {
+      "type": "transcribe",
+      "passage": "𐑖𐑰 𐑑𐑫𐑒 𐑞 𐑛𐑪𐑜 𐑚𐑨𐑒 𐑦𐑯𐑕𐑲𐑛.",
+      "caption": "Read the passage, then write it out in English",
+      "correct": "she took the dog back inside",
+      "correctLabel": "she took the dog back inside"
+    },
+    {
+      "type": "spot",
+      "prompt": "late",
+      "words": [
+        "𐑦𐑑",
+        "𐑢𐑪𐑟",
+        "𐑝𐑧𐑮𐑦",
+        "𐑤𐑱𐑑"
+      ],
+      "correct": 3,
+      "correctLabel": "𐑤𐑱𐑑",
+      "stops": [
+        3
+      ]
+    },
+    {
+      "type": "choice",
+      "promptIsGlyph": false,
+      "prompt": "How does the story end?",
+      "caption": "",
+      "optionIsGlyph": false,
+      "options": [
+        "they both went to sleep",
+        "the dog ran away again",
+        "Meg looked in the garden",
+        "the dog stayed outside"
+      ],
+      "correct": "they both went to sleep",
+      "correctLabel": "they both went to sleep"
+    },
+    {
+      "type": "cloze",
+      "blanks": [
+        5,
+        9,
+        14
+      ],
+      "bank": [
+        "𐑦𐑯𐑕𐑲𐑛",
+        "𐑤𐑱𐑑",
+        "𐑕𐑤𐑰𐑐",
+        "𐑥𐑵𐑯"
+      ],
+      "correctLabel": "𐑖𐑰 𐑑𐑫𐑒 𐑞 𐑛𐑪𐑜 𐑚𐑨𐑒 𐑦𐑯𐑕𐑲𐑛 𐑦𐑑 𐑢𐑪𐑟 𐑝𐑧𐑮𐑦 𐑤𐑱𐑑 𐑞𐑱 𐑚𐑴𐑔 𐑢𐑧𐑯𐑑 𐑑 𐑕𐑤𐑰𐑐",
+      "words": [
+        "𐑖𐑰",
+        "𐑑𐑫𐑒",
+        "𐑞",
+        "𐑛𐑪𐑜",
+        "𐑚𐑨𐑒",
+        "𐑦𐑯𐑕𐑲𐑛",
+        "𐑦𐑑",
+        "𐑢𐑪𐑟",
+        "𐑝𐑧𐑮𐑦",
+        "𐑤𐑱𐑑",
+        "𐑞𐑱",
+        "𐑚𐑴𐑔",
+        "𐑢𐑧𐑯𐑑",
+        "𐑑",
+        "𐑕𐑤𐑰𐑐"
+      ],
+      "stops": [
+        5,
+        9,
+        14
+      ],
+      "translation": "She took the dog back inside. It was very late. They both went to sleep.",
+      "caption": "Now with the gaps back in — read part three again"
+    },
+    {
+      "type": "arrange",
+      "promptEn": "it was very late",
+      "tiles": [
+        "𐑦𐑑",
+        "𐑢𐑪𐑟",
+        "𐑝𐑧𐑮𐑦",
+        "𐑤𐑱𐑑",
+        "𐑯𐑲𐑑"
+      ],
+      "answer": [
+        "𐑦𐑑",
+        "𐑢𐑪𐑟",
+        "𐑝𐑧𐑮𐑦",
+        "𐑤𐑱𐑑"
+      ],
+      "correctLabel": "𐑦𐑑 𐑢𐑪𐑟 𐑝𐑧𐑮𐑦 𐑤𐑱𐑑"
+    },
+    {
+      "type": "match",
+      "pairs": {
+        "𐑤𐑦𐑑𐑩𐑤": "little",
+        "𐑜𐑸𐑛𐑩𐑯": "garden",
+        "𐑥𐑵𐑯": "moon",
+        "𐑕𐑤𐑰𐑐": "sleep"
+      },
+      "leftOrder": [
+        "𐑤𐑦𐑑𐑩𐑤",
+        "𐑜𐑸𐑛𐑩𐑯",
+        "𐑥𐑵𐑯",
+        "𐑕𐑤𐑰𐑐"
+      ],
+      "rightOrder": [
+        "garden",
+        "sleep",
+        "little",
+        "moon"
+      ]
     },
     {
       "type": "teach",
