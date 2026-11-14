@@ -1,5 +1,6 @@
-import { Landmark } from 'lucide-react';
-import { AlphabetReferenceTable } from '@/components/AlphabetChart';
+import { ArrowRight, ArrowDown, ChevronDown } from 'lucide-react';
+import { AlphabetExplorer } from '@/components/AlphabetExplorer';
+import { PageIntro } from '@/components/PageIntro';
 import { SectionLabel } from '@/components/SectionLabel';
 import { Button } from '@/components/Button';
 
@@ -109,159 +110,129 @@ function SourceNote({ href, label }: { href: string; label: string }) {
   );
 }
 
+function Contents() {
+  return (
+    <nav aria-label="About page sections">
+      <ul className="grid gap-1">
+        {TOC.map((item) => (
+          <li key={item.id}>
+            <a href={`#${item.id}`} onClick={(event) => event.currentTarget.closest('details')?.removeAttribute('open')} className="block rounded-btn px-3 py-2.5 text-sm leading-snug text-muted-foreground hover:bg-accent-soft hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">{item.label}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
 export function About({ onOpenApp }: { onOpenApp: () => void }) {
   return (
-    <div className="max-w-[960px] mx-auto px-6 pt-14 sm:pt-[72px] pb-24 flex flex-col gap-5">
-      <div className="flex items-center gap-4">
-        <div className="w-[52px] h-[52px] flex-none rounded-btn bg-accent-soft text-accent flex items-center justify-center">
-          <Landmark size={26} />
-        </div>
-        <h1 className="text-3xl sm:text-[40px] font-extrabold tracking-tight text-foreground m-0">
-          About Shavian
-        </h1>
-      </div>
-      <p className="text-lg leading-relaxed text-muted-foreground m-0 max-w-[720px]">
-        A brief introduction to the alphabet you are learning — where it comes from, how
-        it works, and a full reference to come back to any time.
-      </p>
+    <main>
+      <PageIntro eyebrow="A guide to the alphabet" title="About Shavian" actions={
+        <>
+          <a href="#alphabet-reference" className="inline-flex min-h-11 items-center gap-2 rounded-btn border border-accent-border bg-card px-4 py-2 text-sm font-semibold text-accent hover:bg-accent-soft focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">Find a letter<ArrowDown size={16} aria-hidden="true" /></a>
+          <a href="#spelling" className="inline-flex min-h-11 items-center rounded-btn px-3 text-sm font-semibold text-foreground hover:underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">How spelling works</a>
+        </>
+      }>
+        The same English, a different alphabet. Get to know the shapes, explore its story,
+        or look up a letter whenever you need a reminder.
+      </PageIntro>
 
-      <nav className="mt-4 p-5 rounded-card bg-card border border-border shadow-sm max-w-[720px]">
-        <SectionLabel className="mb-3">On this page</SectionLabel>
-        <ul className="m-0 p-0 list-none flex flex-col sm:flex-row sm:flex-wrap gap-x-5 gap-y-0.5 sm:gap-y-2">
-          {TOC.map((t) => (
-            <li key={t.id} className="sm:whitespace-nowrap border-b border-border/60 last:border-b-0 sm:border-b-0">
-              <a
-                href={`#${t.id}`}
-                className="block py-2 sm:py-0 text-sm text-accent hover:underline"
-              >
-                {t.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <div className="mx-auto grid max-w-[1120px] items-start gap-10 px-6 py-8 sm:px-8 sm:py-12 lg:grid-cols-[200px_minmax(0,1fr)] lg:gap-12">
+        <aside className="hidden lg:sticky lg:top-24 lg:block">
+          <SectionLabel className="mb-3 px-3">On this page</SectionLabel>
+          <Contents />
+        </aside>
+        <div className="min-w-0">
+          <details className="group mb-10 rounded-xl border border-border bg-card lg:hidden">
+            <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-foreground [&::-webkit-details-marker]:hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">On this page<ChevronDown size={17} aria-hidden="true" className="transition-transform group-open:rotate-180 motion-reduce:transition-none" /></summary>
+            <div className="border-t border-border p-2"><Contents /></div>
+          </details>
 
-      <div className="flex flex-col gap-9 mt-6 max-w-[720px]">
-        {ABOUT_SECTIONS.map((s) => (
-          <div key={s.h} id={s.id} className="flex flex-col gap-2.5 scroll-mt-24">
-            <h2 className="text-xl font-bold tracking-tight text-foreground m-0">{s.h}</h2>
-            <p className="text-base leading-loose text-muted-foreground m-0">{s.p}</p>
+          <div className="grid gap-9">
+            {ABOUT_SECTIONS.map((section) => (
+              <section key={section.id} id={section.id} className="scroll-mt-24">
+                <h2 className="text-2xl font-bold tracking-tight text-foreground">{section.h}</h2>
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground">{section.p}</p>
+              </section>
+            ))}
           </div>
-        ))}
-      </div>
 
-      <div id="three-shapes" className="mt-7 max-w-[720px] scroll-mt-24">
-        <h2 className="text-xl font-bold tracking-tight text-foreground mb-4">
-          The three shapes
-        </h2>
-        <div className="flex gap-3.5 flex-wrap">
-          {LETTER_GROUPS.map((g) => (
-            <div
-              key={g.label}
-              className="flex-1 min-w-[180px] p-5 rounded-card bg-card border border-border shadow-sm flex flex-col gap-2 items-center text-center"
-            >
-              <div className="text-xs font-semibold tracking-wide uppercase text-accent">
-                {g.label}
-              </div>
-              <div className="text-[32px] font-bold text-foreground">{g.glyphs}</div>
-              <div className="text-[13px] leading-relaxed text-muted-foreground">
-                {g.note}
-              </div>
+          <section id="three-shapes" className="mt-12 scroll-mt-24 border-t border-border pt-10">
+            <h2 className="mb-5 text-2xl font-bold tracking-tight text-foreground">The three shapes</h2>
+            <div className="grid gap-3 sm:grid-cols-3">
+              {LETTER_GROUPS.map((group) => (
+                <div key={group.label} className="flex flex-col items-center gap-2 rounded-xl border border-border bg-card p-5 text-center">
+                  <div className="text-xs font-semibold uppercase tracking-wide text-accent">{group.label}</div>
+                  <div className="text-[32px] text-foreground">{group.glyphs}</div>
+                  <div className="text-sm leading-relaxed text-muted-foreground">{group.note}</div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <p className="text-sm leading-relaxed text-muted-foreground mt-4">
-          Kingsley Read gave each word a distinctive silhouette, so that with practice you
-          recognize shapes on sight instead of sounding out every letter — and the whole
-          system reads in roughly two-thirds the space traditional English spelling takes.
-        </p>
-        <SourceNote href="https://shavian.info/alphabet/" label="shavian.info/alphabet" />
-      </div>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">Kingsley Read gave each word a distinctive silhouette, so that with practice you recognize shapes on sight instead of sounding out every letter — and the whole system reads in roughly two-thirds the space traditional English spelling takes.</p>
+            <SourceNote href="https://shavian.info/alphabet/" label="shavian.info/alphabet" />
+          </section>
 
-      <div id="history" className="mt-7 max-w-[720px] scroll-mt-24">
-        <h2 className="text-xl font-bold tracking-tight text-foreground mb-4">
-          A short history
-        </h2>
-        <div className="flex flex-col gap-[18px]">
-          {TIMELINE.map((t) => (
-            <div key={t.year} className="flex gap-4 items-start">
-              <div className="flex-none font-mono text-[13px] font-semibold text-accent bg-accent-soft px-2.5 py-1.5 rounded-btn">
-                {t.year}
-              </div>
-              <div className="text-sm leading-relaxed text-muted-foreground pt-[3px]">
-                {t.text}
-              </div>
+          <section id="history" className="mt-12 scroll-mt-24 border-t border-border pt-10">
+            <h2 className="mb-6 text-2xl font-bold tracking-tight text-foreground">A short history</h2>
+            <ol className="ml-2 border-l border-accent-border">
+              {TIMELINE.map((item) => (
+                <li key={item.year} className="relative pb-6 pl-6 last:pb-0">
+                  <span aria-hidden="true" className="absolute -left-[5px] top-1.5 h-[9px] w-[9px] rounded-full border-2 border-accent bg-background" />
+                  <div className="font-mono text-sm font-semibold text-accent">{item.year}</div>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
+                </li>
+              ))}
+            </ol>
+            <SourceNote href="https://shavian.info/" label="shavian.info" />
+          </section>
+
+          <section id="spelling" className="mt-12 scroll-mt-24 border-t border-border pt-10">
+            <h2 className="mb-5 text-2xl font-bold tracking-tight text-foreground">How spelling works</h2>
+            <div className="grid gap-6">
+              {SPELLING_NOTES.map((note) => (
+                <div key={note.h}>
+                  <h3 className="text-base font-semibold text-foreground">{note.h}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{note.p}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <SourceNote href="https://shavian.info/" label="shavian.info" />
-      </div>
+            <SourceNote href="https://shavian.info/spelling/" label="shavian.info/spelling" />
+          </section>
 
-      <div id="spelling" className="mt-7 max-w-[720px] scroll-mt-24">
-        <h2 className="text-xl font-bold tracking-tight text-foreground mb-4">
-          How spelling works
-        </h2>
-        <div className="flex flex-col gap-6">
-          {SPELLING_NOTES.map((s) => (
-            <div key={s.h} className="flex flex-col gap-1.5">
-              <h3 className="text-base font-semibold text-foreground m-0">{s.h}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground m-0">{s.p}</p>
+          <section id="accents" className="mt-12 scroll-mt-24 border-t border-border pt-10">
+            <h2 className="mb-5 text-2xl font-bold tracking-tight text-foreground">One alphabet, many accents</h2>
+            <div className="grid gap-3">
+              {ACCENT_NOTES.map((paragraph) => <p key={paragraph} className="text-sm leading-relaxed text-muted-foreground">{paragraph}</p>)}
             </div>
-          ))}
-        </div>
-        <SourceNote href="https://shavian.info/spelling/" label="shavian.info/spelling" />
-      </div>
+            <SourceNote href="https://shavian.info/accents/" label="shavian.info/accents" />
+          </section>
 
-      <div id="accents" className="mt-7 max-w-[720px] scroll-mt-24">
-        <h2 className="text-xl font-bold tracking-tight text-foreground mb-4">
-          One alphabet, many accents
-        </h2>
-        <div className="flex flex-col gap-3">
-          {ACCENT_NOTES.map((p, i) => (
-            <p key={i} className="text-sm leading-relaxed text-muted-foreground m-0">
-              {p}
-            </p>
-          ))}
-        </div>
-        <SourceNote href="https://shavian.info/accents/" label="shavian.info/accents" />
-      </div>
+          <section id="alphabet-reference" className="mt-12 scroll-mt-24 border-t border-border pt-10">
+            <h2 className="text-2xl font-bold tracking-tight text-foreground">The full alphabet, with examples</h2>
+            <p className="mb-6 mt-3 max-w-[560px] text-sm leading-relaxed text-muted-foreground">All 48 letters, with their naming words, IPA sounds and example words. The highlighted part of each name tells you the letter’s sound.</p>
+            <AlphabetExplorer />
+          </section>
 
-      <div id="alphabet-reference" className="mt-7 scroll-mt-24">
-        <h2 className="text-xl font-bold tracking-tight text-foreground mb-4">
-          The full alphabet, with examples
-        </h2>
-        <p className="text-sm leading-relaxed text-muted-foreground max-w-[560px] mb-7">
-          All 48 letters, each with its naming word, IPA value and a short example word
-          spelled in Shavian — the place to come back to when a sound slips your mind.
-        </p>
-        <AlphabetReferenceTable className="w-full" speak />
-      </div>
-
-      <div id="sentences" className="mt-7 max-w-[720px] scroll-mt-24">
-        <h2 className="text-xl font-bold tracking-tight text-foreground mb-4">
-          Sentences in Shavian
-        </h2>
-        <p className="text-sm leading-relaxed text-muted-foreground mb-4">
-          Sentences read left to right, word by word, spelled exactly as they sound. A
-          small dot before a word — like ·Sam — marks it as a name in place of a capital
-          letter.
-        </p>
-        <div className="flex flex-col gap-3">
-          {SENTENCE_EXAMPLES.map((s, i) => (
-            <div
-              key={i}
-              className="p-5 rounded-card bg-card border border-border shadow-sm flex flex-col gap-1.5"
-            >
-              <span className="text-2xl font-bold text-foreground">{s.glyph}</span>
-              <span className="text-sm text-muted-foreground">“{s.en}”</span>
+          <section id="sentences" className="mt-12 scroll-mt-24 border-t border-border pt-10">
+            <h2 className="text-2xl font-bold tracking-tight text-foreground">Sentences in Shavian</h2>
+            <p className="mb-5 mt-3 text-sm leading-relaxed text-muted-foreground">Sentences read left to right, word by word, spelled exactly as they sound. A small dot before a word — like ·Sam — marks it as a name in place of a capital letter.</p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {SENTENCE_EXAMPLES.map((sentence) => (
+                <div key={sentence.en} className="rounded-xl border border-border bg-card p-5">
+                  <p className="text-2xl leading-relaxed text-foreground">{sentence.glyph}</p>
+                  <p className="mt-2 text-sm text-muted-foreground">{sentence.en}</p>
+                </div>
+              ))}
             </div>
-          ))}
+          </section>
+
+          <div className="mb-4 mt-12 rounded-xl border border-accent-border bg-accent-soft p-6 sm:p-8">
+            <h2 className="text-xl font-bold tracking-tight text-foreground">Put a few letters into practice.</h2>
+            <p className="mb-5 mt-2 text-sm leading-relaxed text-muted-foreground">The lessons introduce a little at a time. You can return to this reference whenever you like.</p>
+            <Button onClick={onOpenApp} className="inline-flex items-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">Explore the lessons<ArrowRight size={17} aria-hidden="true" /></Button>
+          </div>
         </div>
       </div>
-
-      <Button className="self-start mt-4" onClick={onOpenApp}>
-        Start learning
-      </Button>
-    </div>
+    </main>
   );
 }

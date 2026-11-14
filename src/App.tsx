@@ -168,10 +168,12 @@ export default function App() {
           completedCount={completedCount}
           totalLessons={SPINE_META.length}
           onSetView={setView}
+          onStartLearning={continueCurrent}
           onToggleDark={toggleMode}
         />
       )}
 
+      <div id="page-content" tabIndex={-1} className="scroll-mt-24 focus:outline-none">
       {view === 'landing' && (
         <Landing
           hasProgress={completedCount > 0}
@@ -245,6 +247,7 @@ export default function App() {
         />
       )}
 
+      </div>
       {view !== 'lesson' && <Footer onSetView={setView} />}
     </div>
   );
