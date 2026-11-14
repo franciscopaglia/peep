@@ -87,7 +87,7 @@ export function Nav({
               className="hidden md:inline-flex h-[38px] box-border items-center px-[18px] rounded-btn border-none bg-accent text-card text-[13px] font-semibold cursor-pointer"
               onClick={() => onSetView('dashboard')}
             >
-              Start learning
+              {completedCount > 0 ? 'Continue learning' : 'Start learning'}
             </button>
           )}
           {isDashboardArea && !isLanding && (
@@ -151,7 +151,7 @@ export function Nav({
                 className="flex-1 h-[42px] inline-flex items-center justify-center rounded-btn border-none bg-accent text-card text-sm font-semibold cursor-pointer"
                 onClick={() => onSetView('dashboard')}
               >
-                Start learning
+                {completedCount > 0 ? 'Continue learning' : 'Start learning'}
               </button>
             )}
             {isDashboardArea && !isLanding && (

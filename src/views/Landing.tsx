@@ -1,199 +1,208 @@
-import { BookOpen, Zap, Route } from 'lucide-react';
-import { useHeroCanvas } from '@/hooks/useHeroCanvas';
+import { useState } from 'react';
+import { ArrowRight, ArrowUpRight, Check, ChevronDown } from 'lucide-react';
 import { AlphabetChart } from '@/components/AlphabetChart';
 import { SectionLabel } from '@/components/SectionLabel';
 import { Button } from '@/components/Button';
+import { lettersFor } from '@/lib/shavian-alphabet';
 
-const FEATURE_CARDS = [
+const PREVIEW_WORDS = [
+  { english: 'cat', shavian: '𐑒𐑨𐑑' },
+  { english: 'dog', shavian: '𐑛𐑪𐑜' },
+  { english: 'sun', shavian: '𐑕𐑳𐑯' },
+];
+
+const STEPS = [
   {
-    title: 'Spelling that never lies',
-    body: '48 letters, each standing for exactly one English sound. No capitals, no silent letters, no exceptions.',
-    icon: BookOpen,
+    title: 'Meet a few letters',
+    body: 'Start with a pair of shapes and the sounds they stand for. There’s no need to memorise a chart.',
   },
   {
-    title: 'Bite-sized lessons',
-    body: 'Five-minute exercises with instant feedback — and a skip button when you get stuck.',
-    icon: Zap,
+    title: 'Try them for yourself',
+    body: 'Tap, match and build words. Get feedback as you go, and skip a question whenever you need to.',
   },
   {
-    title: 'Calm by design',
-    body: 'No streaks, no leaderboards, no pressure. Just a clear path that unlocks as you learn.',
-    icon: Route,
+    title: 'Watch the words add up',
+    body: 'Each lesson builds on what you know, from your first word to reading passages and writing sentences.',
   },
 ];
 
-const STEP_CARDS = [
+const QUESTIONS = [
   {
-    n: '1',
-    title: 'Meet the letters',
-    body: 'Start with six consonants and see how each shape maps to a single sound.',
+    question: 'Is Shavian a different language?',
+    answer: 'It’s still English, written with a different alphabet. You already know the words; you’re learning a new way to read and write them.',
   },
   {
-    n: '2',
-    title: 'Practice as you go',
-    body: 'Every lesson mixes tapping, matching and typing, so recall sticks without drilling.',
+    question: 'Do I need a special keyboard?',
+    answer: 'No. Peep gives you letter tiles and an on-screen Shavian keyboard for writing practice. For English answers, use your usual keyboard.',
   },
   {
-    n: '3',
-    title: 'Read real words',
-    body: 'Combine what you know into everyday words and, before long, whole sentences.',
+    question: 'Where is my progress saved?',
+    answer: 'Your progress is saved automatically in this browser, on this device. There’s no account to create. Clearing your browser’s site data will clear your progress too.',
   },
 ];
 
-const SHOWCASE_WORDS = [
-  { glyph: '𐑞', en: 'the' },
-  { glyph: '𐑒𐑨𐑑', en: 'cat' },
-  { glyph: '𐑯', en: 'and' },
-  { glyph: '𐑞', en: 'the' },
-  { glyph: '𐑛𐑪𐑜', en: 'dog' },
-];
-
-export function Landing({
-  dark,
-  onOpenApp,
-  onOpenAbout,
-}: {
-  dark: boolean;
-  onOpenApp: () => void;
-  onOpenAbout: () => void;
-}) {
-  const canvasRef = useHeroCanvas(true, dark);
+function WordPreview() {
+  const [wordIndex, setWordIndex] = useState(0);
+  const word = PREVIEW_WORDS[wordIndex];
+  const letters = lettersFor(Array.from(word.shavian));
 
   return (
-    <div>
-      <div className="relative overflow-hidden" style={{ background: 'var(--hero-bg)' }}>
-        {/* Engraved hairline grid — a faint texture that fades out toward the
-            edges, so the ground reads as designed rather than a flat wash.
-            Sits below the glyph canvas so the drifting letters float over it. */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              'linear-gradient(to right, var(--hairline) 1px, transparent 1px), linear-gradient(to bottom, var(--hairline) 1px, transparent 1px)',
-            backgroundSize: '48px 48px',
-            maskImage: 'radial-gradient(120% 90% at 50% 0%, black, transparent 70%)',
-            WebkitMaskImage: 'radial-gradient(120% 90% at 50% 0%, black, transparent 70%)',
-            opacity: 0.7,
-          }}
-        />
-        <canvas
-          ref={canvasRef}
-          className="absolute inset-0 w-full h-full pointer-events-none"
-        />
-        <div
-          className="absolute inset-x-0 bottom-0 h-40 pointer-events-none"
-          style={{
-            zIndex: 5,
-            backdropFilter: 'blur(6px)',
-            WebkitBackdropFilter: 'blur(6px)',
-            maskImage: 'linear-gradient(to bottom, transparent, black)',
-            WebkitMaskImage: 'linear-gradient(to bottom, transparent, black)',
-            background: 'linear-gradient(to bottom, transparent, var(--background))',
-          }}
-        />
-        <div className="relative z-10 max-w-[960px] mx-auto px-6 pt-8 sm:pt-14 pb-16 sm:pb-20 flex flex-col items-center text-center gap-6">
-          <div className="text-[13px] font-semibold tracking-wide uppercase text-accent bg-accent-soft px-3.5 py-1.5 rounded-full">
-            A phonetic alphabet for English
-          </div>
-          <h1 className="text-[34px] sm:text-[52px] leading-[1.08] sm:leading-[1.05] font-extrabold tracking-tight text-foreground m-0 max-w-[720px] text-balance">
-            Read &amp; write English in Shavian
-          </h1>
-          <p className="text-lg leading-snug text-muted-foreground m-0 max-w-[560px]">
-            One symbol per sound. Learn the alphabet Bernard Shaw dreamed of — through
-            short, interactive lessons that actually stick.
-          </p>
-          <div className="flex gap-3 mt-2 flex-wrap justify-center">
-            <Button onClick={onOpenApp}>Start learning</Button>
-            <Button variant="outline" onClick={onOpenAbout}>
-              About Shavian
-            </Button>
-          </div>
-          <div
-            className="mt-7 w-full max-w-[560px] p-6 sm:p-10 rounded-card border flex flex-col items-center gap-4"
-            style={{
-              background: 'color-mix(in srgb, var(--card) 55%, transparent)',
-              borderColor: 'color-mix(in srgb, var(--border) 60%, transparent)',
-              backdropFilter: 'blur(16px)',
-              WebkitBackdropFilter: 'blur(16px)',
-              boxShadow: '0 8px 32px color-mix(in srgb, var(--foreground) 8%, transparent)',
-            }}
-          >
-            <SectionLabel>See it in Shavian</SectionLabel>
-            <div className="flex gap-4 sm:gap-5 flex-wrap justify-center items-end">
-              {SHOWCASE_WORDS.map((w, i) => (
-                <div key={i} className="flex flex-col items-center gap-2">
-                  <span className="text-[34px] sm:text-[44px] font-bold text-foreground">{w.glyph}</span>
-                  <span className="font-mono text-[13px] text-muted-foreground">{w.en}</span>
-                </div>
-              ))}
-            </div>
-            <div className="text-sm text-muted-foreground">
-              “the cat and the dog” — spelled exactly as it sounds, and the most common
-              little words, like “the” and “and”, shrink to a single letter.
-            </div>
-          </div>
+    <div className="relative w-full max-w-[440px] justify-self-center lg:justify-self-end">
+      <div aria-hidden="true" className="absolute -inset-3 rotate-3 rounded-[24px] border border-accent-border bg-accent-soft" />
+      <div className="relative rounded-[20px] border border-border bg-card p-6 sm:p-8 shadow-sm">
+        <div className="flex items-center justify-between gap-3 border-b border-border pb-5">
+          <SectionLabel>A little preview</SectionLabel>
+          <span className="text-xs text-muted-foreground">English → Shavian</span>
         </div>
-      </div>
-
-      <div className="max-w-[960px] mx-auto px-6">
-        <SectionLabel className="pt-16 sm:pt-20 text-center">About Shavian & Peep</SectionLabel>
-        <div className="flex gap-4 pt-7 flex-wrap justify-center">
-          {FEATURE_CARDS.map((f) => (
-            <div
-              key={f.title}
-              className="flex-1 min-w-[240px] p-6 rounded-card bg-card border border-border shadow-sm flex flex-col items-center text-center gap-2.5"
+        <h2 className="mt-6 text-xl font-semibold tracking-tight text-foreground">You already know the sounds.</h2>
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Pick a word. Meet its new letters.</p>
+        <div role="group" aria-label="Choose a preview word" className="mt-5 flex gap-2">
+          {PREVIEW_WORDS.map((item, index) => (
+            <button
+              key={item.english}
+              type="button"
+              aria-pressed={index === wordIndex}
+              onClick={() => setWordIndex(index)}
+              className={`min-h-11 flex-1 rounded-btn border px-3 text-sm font-semibold cursor-pointer transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent ${index === wordIndex ? 'border-accent bg-accent-soft text-accent' : 'border-border bg-card text-muted-foreground hover:border-accent-border hover:text-foreground'}`}
             >
-              <div className="w-11 h-11 flex-none rounded-btn bg-accent-soft text-accent flex items-center justify-center mb-1">
-                <f.icon size={22} />
-              </div>
-              <div className="text-[17px] font-semibold text-foreground">{f.title}</div>
-              <div className="text-sm leading-relaxed text-muted-foreground">{f.body}</div>
-            </div>
+              {item.english}
+            </button>
           ))}
         </div>
-
-        <div className="pt-16 sm:pt-[88px] flex flex-col items-center text-center">
-          <SectionLabel className="mb-7">How it works</SectionLabel>
-          <div className="flex gap-4 flex-wrap justify-center">
-            {STEP_CARDS.map((s) => (
-              <div key={s.n} className="flex-1 min-w-[220px] flex flex-col items-center gap-3">
-                <div className="w-9 h-9 flex-none rounded-full bg-accent-soft text-accent flex items-center justify-center font-bold text-base">
-                  {s.n}
-                </div>
-                <div className="text-base font-semibold text-foreground">{s.title}</div>
-                <div className="text-sm leading-relaxed text-muted-foreground">{s.body}</div>
+        <div aria-live="polite" aria-atomic="true" className="mt-6">
+          <div role="img" aria-label={`${word.english} in Shavian: ${word.shavian}`} className="grid grid-cols-3 gap-3">
+            {letters.map((letter, index) => (
+              <div key={index} className="flex flex-col items-center rounded-xl border border-border bg-background py-5 sm:py-6">
+                <span aria-hidden="true" className="text-5xl sm:text-6xl leading-none text-foreground">{letter.glyph}</span>
+                <span className="mt-4 text-sm text-muted-foreground">{letter.key}</span>
               </div>
             ))}
           </div>
+          <p className="mt-5 text-center text-lg text-foreground">
+            <span className="font-semibold">{word.shavian}</span>
+            <span className="px-3 text-muted-foreground">=</span>
+            {word.english}
+          </p>
         </div>
-
-        <div className="pt-16 sm:pt-[88px] flex flex-col items-center text-center">
-          <SectionLabel className="mb-7">Meet the letters</SectionLabel>
-          <AlphabetChart />
-        </div>
-
-        <div className="pt-16 sm:pt-[88px] flex flex-col items-center text-center gap-[18px]">
-          <div className="text-[64px] font-bold text-accent leading-none">𐑖</div>
-          <blockquote className="text-2xl leading-snug font-semibold tracking-tight text-foreground m-0 max-w-[640px] text-balance">
-            “The English have no respect for their language, and will not teach their
-            children to speak it.”
-          </blockquote>
-          <div className="text-sm text-muted-foreground">
-            George Bernard Shaw — whose will paid for this alphabet
-          </div>
-        </div>
-
-        <div className="pt-16 sm:pt-[88px] pb-24">
-          <div className="bg-accent rounded-card p-8 sm:p-14 flex flex-col items-center gap-5 text-center">
-            <h2 className="text-[26px] sm:text-[32px] font-extrabold tracking-tight text-card m-0 max-w-[520px] text-balance">
-              Ready to read your first Shavian word?
-            </h2>
-            <Button variant="inverted" onClick={onOpenApp}>
-              Start learning
-            </Button>
-          </div>
-        </div>
+        <p className="mt-5 border-t border-border pt-4 text-center text-xs leading-relaxed text-muted-foreground">Three sounds. Three letters. That’s the idea.</p>
       </div>
     </div>
+  );
+}
+
+export function Landing({
+  hasProgress,
+  onStartLearning,
+  onOpenApp,
+  onOpenAbout,
+}: {
+  hasProgress: boolean;
+  onStartLearning: () => void;
+  onOpenApp: () => void;
+  onOpenAbout: () => void;
+}) {
+  const startLabel = hasProgress ? 'Continue learning' : 'Try the first lesson';
+
+  return (
+    <main>
+      <section aria-labelledby="welcome-title" className="relative overflow-hidden border-b border-border bg-[image:var(--hero-bg)]">
+        <div className="relative mx-auto grid max-w-[1120px] items-center gap-12 px-6 py-12 sm:px-8 sm:py-20 lg:grid-cols-[1.15fr_1fr] lg:gap-16 lg:py-24">
+          <div>
+            <SectionLabel className="text-accent">A fresh way to write English</SectionLabel>
+            <h1 id="welcome-title" className="mt-5 max-w-[620px] text-[40px] font-extrabold leading-[1.08] tracking-tight text-foreground sm:text-[56px] lg:text-[60px] text-balance">
+              Familiar sounds.<br />
+              <span className="text-accent">A whole new alphabet.</span>
+            </h1>
+            <p className="mt-6 max-w-[470px] text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Shavian is an alphabet for English, built around sounds.
+              Peep helps you learn to read and write it, one short lesson at a time.
+            </p>
+            <div className="mt-8 flex flex-col items-stretch gap-3 min-[400px]:flex-row min-[400px]:items-center">
+              <Button onClick={onStartLearning} className="inline-flex min-h-12 items-center justify-center gap-3 hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+                {startLabel}<ArrowRight size={18} aria-hidden="true" />
+              </Button>
+              <button onClick={onOpenApp} className="min-h-12 cursor-pointer rounded-btn px-3 text-sm font-semibold text-foreground underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+                Explore the lessons
+              </button>
+            </div>
+            {hasProgress && <p className="mt-3 text-sm text-accent">Welcome back. Your progress is saved on this device.</p>}
+            <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs text-muted-foreground sm:text-[13px]" aria-label="Learning with Peep">
+              {['Free to learn', 'No account needed', 'At your own pace'].map((item) => (
+                <li key={item} className="flex items-center gap-1.5"><Check size={14} className="text-accent" aria-hidden="true" />{item}</li>
+              ))}
+            </ul>
+          </div>
+          <WordPreview />
+        </div>
+      </section>
+
+      <div className="mx-auto max-w-[1120px] px-6 sm:px-8">
+        <section aria-labelledby="how-title" className="py-14 sm:py-20">
+          <SectionLabel>The learning path</SectionLabel>
+          <h2 id="how-title" className="mt-3 max-w-[550px] text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl text-balance">A small beginning.<br />A little more with every lesson.</h2>
+          <ol className="mt-9 grid gap-8 sm:grid-cols-3 sm:gap-7">
+            {STEPS.map((step, index) => (
+              <li key={step.title} className="border-t border-border pt-5">
+                <span aria-hidden="true" className="font-mono text-sm text-accent">0{index + 1}</span>
+                <h3 className="mt-3 text-lg font-semibold text-foreground">{step.title}</h3>
+                <p className="mt-2 max-w-[340px] text-sm leading-relaxed text-muted-foreground">{step.body}</p>
+              </li>
+            ))}
+          </ol>
+          <div className="mt-10 flex flex-col gap-3 rounded-xl bg-accent-soft p-6 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:px-8">
+            <h3 className="shrink-0 text-base font-semibold text-foreground">Room to learn at your own pace.</h3>
+            <p className="max-w-[630px] text-sm leading-relaxed text-muted-foreground">No streaks, scores to compete over or catching up. Take a lesson, come back when you like, and pick up where you left off.</p>
+          </div>
+        </section>
+
+        <section aria-labelledby="alphabet-title" className="border-t border-border py-14 sm:py-20">
+          <div className="grid items-center gap-8 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
+            <div>
+              <SectionLabel>Meet the alphabet</SectionLabel>
+              <h2 id="alphabet-title" className="mt-3 text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl">48 letters.<br />One pair at a time.</h2>
+              <p className="mt-4 max-w-[410px] text-sm leading-relaxed text-muted-foreground">New shapes, familiar sounds. The highlighted part of each letter’s name tells you its sound. You’ll meet these first.</p>
+              <button onClick={onOpenAbout} className="mt-5 inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-btn text-sm font-semibold text-accent hover:underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+                More about Shavian<ArrowUpRight size={16} aria-hidden="true" />
+              </button>
+            </div>
+            <AlphabetChart glyphs={['𐑐', '𐑚', '𐑑', '𐑛', '𐑒', '𐑜']} className="mx-auto grid grid-flow-col grid-rows-2 gap-3" />
+          </div>
+          <details className="group mt-8 rounded-xl border border-border bg-card">
+            <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-3 rounded-xl px-5 py-4 text-sm font-semibold text-foreground [&::-webkit-details-marker]:hidden focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+              Explore all 48 letters
+              <ChevronDown size={18} aria-hidden="true" className="transition-transform group-open:rotate-180 motion-reduce:transition-none" />
+            </summary>
+            <div className="border-t border-border px-3 py-6 sm:px-6"><AlphabetChart /></div>
+          </details>
+        </section>
+
+        <section aria-labelledby="questions-title" className="grid gap-6 border-t border-border py-14 sm:py-20 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
+          <div>
+            <SectionLabel>Before you begin</SectionLabel>
+            <h2 id="questions-title" className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">A few good questions.</h2>
+          </div>
+          <div>
+            {QUESTIONS.map((item) => (
+              <details key={item.question} className="group border-b border-border first:border-t">
+                <summary className="flex min-h-16 cursor-pointer list-none items-center justify-between gap-4 py-4 text-sm font-semibold text-foreground [&::-webkit-details-marker]:hidden focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+                  {item.question}<ChevronDown size={16} aria-hidden="true" className="shrink-0 transition-transform group-open:rotate-180 motion-reduce:transition-none" />
+                </summary>
+                <p className="pb-5 pr-5 text-sm leading-relaxed text-muted-foreground">{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section aria-labelledby="start-title" className="mb-14 flex flex-col items-start justify-between gap-6 rounded-[20px] border border-accent-border bg-accent-soft p-7 sm:mb-20 sm:flex-row sm:items-center sm:p-10">
+          <div>
+            <h2 id="start-title" className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">{hasProgress ? 'Your next small step is waiting.' : 'Your first two letters are waiting.'}</h2>
+            <p className="mt-2 text-sm text-muted-foreground">{hasProgress ? 'Come back to your learning path, just where you left it.' : 'No preparation needed. Just a little curiosity.'}</p>
+          </div>
+          <Button onClick={onStartLearning} className="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+            {startLabel}<ArrowRight size={18} aria-hidden="true" />
+          </Button>
+        </section>
+      </div>
+    </main>
   );
 }

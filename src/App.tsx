@@ -174,7 +174,8 @@ export default function App() {
 
       {view === 'landing' && (
         <Landing
-          dark={dark}
+          hasProgress={completedCount > 0}
+          onStartLearning={continueCurrent}
           onOpenApp={() => setView('dashboard')}
           onOpenAbout={() => setView('about')}
         />
