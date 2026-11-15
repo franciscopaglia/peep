@@ -1,6 +1,7 @@
-import { BookOpen, Keyboard, Users, Zap, ExternalLink, Landmark, Mic2 } from 'lucide-react';
+import { BookOpen, Keyboard, Users, Zap, Landmark, Mic2, ArrowUpRight } from 'lucide-react';
 import type { ComponentType } from 'react';
 import { SectionLabel } from '@/components/SectionLabel';
+import { PageIntro } from '@/components/PageIntro';
 
 type Resource = {
   title: string;
@@ -91,48 +92,81 @@ const RESOURCE_GROUPS: { id: string; label: string; items: Resource[] }[] = [
   },
 ];
 
+const STARTING_POINTS = [
+  { title: 'Look up a word', resourceTitle: 'ReadLex dictionary', note: 'Check a spelling or explore a pronunciation.' },
+  { title: 'Set up your keyboard', resourceTitle: 'Type in Shavian', note: 'Take Shavian beyond the lessons.' },
+  { title: 'Find fellow learners', resourceTitle: 'r/shavian', note: 'Ask a question or share a little practice.' },
+];
+
+const GROUP_DESCRIPTIONS: Record<string, string> = {
+  'learn-more': 'Understand the spelling, sounds and story behind the alphabet.',
+  tools: 'Look up spellings, type your own words and find a font.',
+  community: 'Make room for Shavian in everyday conversation.',
+};
+
+const RESOURCES = RESOURCE_GROUPS.flatMap((group) => group.items);
+
+function ResourceLink({ resource }: { resource: Resource }) {
+  return (
+    <a href={resource.url} target="_blank" rel="noopener" className="group flex h-full items-start gap-3 rounded-xl border border-border bg-card p-5 no-underline transition-colors hover:border-accent-border hover:bg-accent-soft/40 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+      <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-btn bg-accent-soft text-accent"><resource.icon size={19} /></div>
+      <div className="min-w-0 flex-1">
+        <h3 className="text-base font-semibold text-foreground group-hover:text-accent">{resource.title}</h3>
+        <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{resource.desc}</p>
+        <p className="mt-3 break-words text-xs text-muted-foreground">{new URL(resource.url).hostname.replace(/^www\./, '')}</p>
+      </div>
+      <ArrowUpRight size={17} aria-hidden="true" className="mt-0.5 shrink-0 text-muted-foreground group-hover:text-accent" />
+      <span className="sr-only"> (opens in a new tab)</span>
+    </a>
+  );
+}
+
 export function Resources() {
   return (
-    <div className="max-w-[720px] mx-auto px-6 pt-14 sm:pt-[72px] pb-24 flex flex-col gap-4">
-      <h1 className="text-3xl sm:text-[40px] font-extrabold tracking-tight text-foreground m-0">
-        Resources
-      </h1>
-      <p className="text-lg leading-relaxed text-muted-foreground m-0 mb-3">
-        Handpicked places to go deeper — communities, references and tools for reading
-        and writing Shavian.
-      </p>
-      {RESOURCE_GROUPS.map((group) => (
-        <div key={group.label} id={group.id} className="mt-4 scroll-mt-24">
-          <SectionLabel as="h2" className="mb-3">
-            {group.label}
-          </SectionLabel>
-          <div
-            className="grid gap-3.5"
-            style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))' }}
-          >
-            {group.items.map((r) => (
-              <a
-                key={r.title}
-                href={r.url}
-                target="_blank"
-                rel="noopener"
-                className="flex gap-4 items-start p-[22px] rounded-card bg-card border border-border shadow-sm no-underline"
-              >
-                <div className="w-11 h-11 flex-none rounded-btn bg-accent-soft text-accent flex items-center justify-center">
-                  <r.icon size={22} />
-                </div>
-                <div className="flex-1 min-w-0 flex flex-col gap-1.5">
-                  <div className="text-base font-semibold text-foreground">{r.title}</div>
-                  <div className="text-sm leading-relaxed text-muted-foreground">{r.desc}</div>
-                </div>
-                <div className="text-muted-foreground flex-none mt-0.5">
-                  <ExternalLink size={16} />
-                </div>
-              </a>
-            ))}
+    <main>
+      <PageIntro eyebrow="Keep exploring" title="Resources">
+        A few good places to go next. Find a word, start typing, or meet the people
+        keeping Shavian in everyday use.
+      </PageIntro>
+      <div className="mx-auto max-w-[1120px] px-6 py-10 sm:px-8 sm:py-12">
+        <nav aria-label="Resource categories" className="mb-8 flex flex-wrap gap-2 border-y border-border py-4">
+          {RESOURCE_GROUPS.map((group) => <a key={group.id} href={`#${group.id}`} className="inline-flex min-h-11 items-center gap-2 rounded-btn px-4 text-sm font-semibold text-muted-foreground hover:bg-accent-soft hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">{group.label}<span className="text-xs font-normal">{group.items.length}</span></a>)}
+        </nav>
+        <section aria-labelledby="starting-points-title" className="mb-10">
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <SectionLabel as="h2" id="starting-points-title">A useful place to start</SectionLabel>
+            <p className="text-xs text-muted-foreground">External links open in a new tab.</p>
           </div>
+          <div className="mt-5 grid gap-3 sm:grid-cols-3">
+            {STARTING_POINTS.map((item) => {
+              const resource = RESOURCES.find((entry) => entry.title === item.resourceTitle)!;
+              return (
+                <a key={item.title} href={resource.url} target="_blank" rel="noopener" className="group rounded-xl border border-accent-border bg-accent-soft p-5 no-underline hover:border-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent sm:p-6">
+                  <div className="flex items-start justify-between gap-3"><resource.icon size={22} /><ArrowUpRight size={18} aria-hidden="true" className="text-accent" /></div>
+                  <h3 className="mt-5 text-lg font-semibold tracking-tight text-foreground group-hover:text-accent">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.note}</p>
+                  <p className="mt-4 text-xs font-semibold text-accent">{resource.title}</p>
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+              );
+            })}
+          </div>
+        </section>
+
+        <div className="grid gap-12 pb-6 sm:pb-10">
+          {RESOURCE_GROUPS.map((group) => (
+            <section key={group.id} id={group.id} aria-labelledby={`${group.id}-title`} className="grid scroll-mt-24 items-start gap-5 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-10">
+              <div>
+                <h2 id={`${group.id}-title`} className="text-2xl font-bold tracking-tight text-foreground">{group.label}</h2>
+                <p className="mt-2 max-w-[420px] text-sm leading-relaxed text-muted-foreground">{GROUP_DESCRIPTIONS[group.id]}</p>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {group.items.map((resource) => <ResourceLink key={resource.title} resource={resource} />)}
+              </div>
+            </section>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    </main>
   );
 }
